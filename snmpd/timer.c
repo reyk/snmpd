@@ -2,3 +2,4 @@
 
 /*
  * Copyright (c) 2008 Reyk Floeter <reyk@openbsd.org>
+ *
