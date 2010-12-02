@@ -3,3 +3,4 @@
 /*
  * Copyright (c) 2012 GeNUA mbH
  *
+ * Permission to use, copy, modify, and distribute this software for any
