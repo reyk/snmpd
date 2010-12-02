@@ -3,3 +3,4 @@
 /*
  * Copyright (c) 2012 Joel Knight <joel@openbsd.org>
  * Copyright (c) 2007, 2008, 2012 Reyk Floeter <reyk@openbsd.org>
+ *
