@@ -4,3 +4,4 @@
  * Copyright (c) 2007, 2012 Reyk Floeter <reyk@openbsd.org>
  * Copyright (c) 2006, 2007 Claudio Jeker <claudio@openbsd.org>
  *
+ * Permission to use, copy, modify, and distribute this software for any
