@@ -3,3 +3,4 @@
 /*
  * Copyright (c) 2008 Reyk Floeter <reyk@openbsd.org>
  *
+ * Permission to use, copy, modify, and distribute this software for any
