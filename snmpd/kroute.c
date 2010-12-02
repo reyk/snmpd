@@ -3,3 +3,4 @@
 /*
  * Copyright (c) 2007, 2008 Reyk Floeter <reyk@openbsd.org>
  * Copyright (c) 2004 Esben Norby <norby@openbsd.org>
+ * Copyright (c) 2003, 2004 Henning Brauer <henning@openbsd.org>
