@@ -5,3 +5,4 @@
  * Copyright (c) 2004 Esben Norby <norby@openbsd.org>
  * Copyright (c) 2003, 2004 Henning Brauer <henning@openbsd.org>
  *
+ * Permission to use, copy, modify, and distribute this software for any
