@@ -7,3 +7,4 @@ SRCS=		parse.y ber.c log.c control.c snmpe.c \
 		    pf.c usm.c
 
 LDADD=		-levent -lutil -lkvm -lcrypto
+DPADD=		${LIBEVENT} ${LIBUTIL}
