@@ -5,3 +5,4 @@ MAN=		snmpd.8 snmpd.conf.5
 SRCS=		parse.y ber.c log.c control.c snmpe.c \
 		    mps.c trap.c mib.c smi.c kroute.c snmpd.c timer.c \
 		    pf.c usm.c
+
