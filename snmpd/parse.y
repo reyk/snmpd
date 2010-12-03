@@ -6,3 +6,4 @@
  * Copyright (c) 2004 Ryan McBride <mcbride@openbsd.org>
  * Copyright (c) 2002, 2003, 2004 Henning Brauer <henning@openbsd.org>
  * Copyright (c) 2001 Markus Friedl.  All rights reserved.
+ * Copyright (c) 2001 Daniel Hartmeier.  All rights reserved.
