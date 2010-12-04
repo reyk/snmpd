@@ -10,3 +10,4 @@ LDADD=		-levent -lutil -lkvm -lcrypto
 DPADD=		${LIBEVENT} ${LIBUTIL}
 CFLAGS+=	-Wall -I${.CURDIR}
 CFLAGS+=	-Wstrict-prototypes -Wmissing-prototypes
+CFLAGS+=	-Wmissing-declarations
