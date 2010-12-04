@@ -10,3 +10,4 @@
  * Copyright (c) 2001 Theo de Raadt.  All rights reserved.
  *
  * Permission to use, copy, modify, and distribute this software for any
+ * purpose with or without fee is hereby granted, provided that the above
