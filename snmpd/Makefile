@@ -9,3 +9,4 @@ SRCS=		parse.y ber.c log.c control.c snmpe.c \
 LDADD=		-levent -lutil -lkvm -lcrypto
 DPADD=		${LIBEVENT} ${LIBUTIL}
 CFLAGS+=	-Wall -I${.CURDIR}
+CFLAGS+=	-Wstrict-prototypes -Wmissing-prototypes
