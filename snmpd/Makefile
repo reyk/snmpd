@@ -11,3 +11,4 @@ DPADD=		${LIBEVENT} ${LIBUTIL}
 CFLAGS+=	-Wall -I${.CURDIR}
 CFLAGS+=	-Wstrict-prototypes -Wmissing-prototypes
 CFLAGS+=	-Wmissing-declarations
+CFLAGS+=	-Wshadow -Wpointer-arith -Wcast-qual
