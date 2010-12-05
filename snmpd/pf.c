@@ -16,3 +16,4 @@
  *      disclaimer in the documentation and/or other materials provided
  *      with the distribution.
  *
+ * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
