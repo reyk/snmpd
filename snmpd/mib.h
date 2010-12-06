@@ -20,3 +20,4 @@
 #define _SNMPD_MIB_H
 
 /*
+ * Adding new MIBs:
