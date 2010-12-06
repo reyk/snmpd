@@ -20,3 +20,4 @@
 #ifndef _SNMPD_H
 #define _SNMPD_H
 
+#include <netinet/in.h>
