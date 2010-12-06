@@ -17,3 +17,4 @@
  */
 
 #ifndef _SNMPD_MIB_H
+#define _SNMPD_MIB_H
