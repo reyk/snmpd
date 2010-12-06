@@ -17,3 +17,4 @@
  */
 
 #include <sys/types.h>
+#include <sys/queue.h>
