@@ -20,3 +20,4 @@
 #include <sys/queue.h>
 #include <sys/param.h>
 #include <sys/proc.h>
+#include <sys/types.h>
