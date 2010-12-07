@@ -21,3 +21,4 @@
 #define _BER_H
 
 struct ber_element {
+	struct ber_element	*be_next;
