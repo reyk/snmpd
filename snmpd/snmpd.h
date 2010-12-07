@@ -21,3 +21,4 @@
 #define _SNMPD_H
 
 #include <netinet/in.h>
+#include <netinet/if_ether.h>
