@@ -24,3 +24,4 @@
 #include <errno.h>
 #include <limits.h>
 #include <stdlib.h>
+#include <err.h>	/* XXX for debug output */
