@@ -22,3 +22,4 @@
 
 struct ber_element {
 	struct ber_element	*be_next;
+	unsigned long		 be_type;
