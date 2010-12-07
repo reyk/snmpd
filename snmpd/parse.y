@@ -23,3 +23,4 @@
  */
 
 %{
+#include <sys/types.h>
