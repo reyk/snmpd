@@ -22,3 +22,4 @@
 #include <sys/param.h>
 
 #include <errno.h>
+#include <limits.h>
