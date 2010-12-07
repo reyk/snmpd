@@ -23,3 +23,4 @@
 #include <sys/tree.h>
 
 #include <netinet/in_systm.h>
+#include <netinet/in.h>
