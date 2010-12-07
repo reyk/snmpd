@@ -24,3 +24,4 @@
 #include <sys/sysctl.h>
 
 #include <net/if.h>
+#include <net/if_types.h>
