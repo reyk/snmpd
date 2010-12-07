@@ -23,3 +23,4 @@
 #include <sys/wait.h>
 #include <sys/tree.h>
 
+#include <net/if.h>
