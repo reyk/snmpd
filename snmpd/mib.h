@@ -21,3 +21,4 @@
 
 /*
  * Adding new MIBs:
+ * - add the OID definitions below
