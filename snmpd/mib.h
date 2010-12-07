@@ -23,3 +23,4 @@
  * Adding new MIBs:
  * - add the OID definitions below
  * - add the OIDs to the MIB_TREE table at the end of this file
+ * - optional: write the implementation in mib.c
