@@ -23,3 +23,4 @@
 #include <sys/socket.h>
 #include <sys/sysctl.h>
 #include <sys/tree.h>
+#include <sys/uio.h>
