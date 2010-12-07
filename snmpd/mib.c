@@ -21,3 +21,4 @@
 #include <sys/param.h>
 #include <sys/proc.h>
 #include <sys/types.h>
+#include <sys/stat.h>
