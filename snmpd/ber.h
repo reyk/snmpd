@@ -24,3 +24,4 @@ struct ber_element {
 	struct ber_element	*be_next;
 	unsigned long		 be_type;
 	unsigned long		 be_encoding;
+	size_t			 be_len;
