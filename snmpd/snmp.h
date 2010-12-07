@@ -23,3 +23,4 @@
  * SNMP IMSG interface
  */
 
+#define SNMP_MAX_OID_LEN	128	/* max size of the OID _string_ */
