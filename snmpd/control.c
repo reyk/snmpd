@@ -24,3 +24,4 @@
 #include <sys/un.h>
 #include <sys/tree.h>
 
+#include <net/if.h>
