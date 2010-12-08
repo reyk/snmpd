@@ -27,3 +27,4 @@
 #include <sys/time.h>
 #include <sys/tree.h>
 #include <sys/utsname.h>
+#include <sys/sysctl.h>
