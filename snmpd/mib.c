@@ -28,3 +28,4 @@
 #include <sys/tree.h>
 #include <sys/utsname.h>
 #include <sys/sysctl.h>
+#include <sys/sensors.h>
