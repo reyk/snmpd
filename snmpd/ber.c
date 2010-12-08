@@ -28,3 +28,4 @@
 #include <stdio.h>	/* XXX for debug output */
 #include <strings.h>
 #include <unistd.h>
+#include <stdarg.h>
