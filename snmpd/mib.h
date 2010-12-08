@@ -28,3 +28,4 @@
 
 /* From the SNMPv2-SMI MIB */
 #define MIB_iso				1
+#define MIB_org				MIB_iso, 3
