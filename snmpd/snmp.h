@@ -27,3 +27,4 @@
 #define SNMP_SOCKET		"/var/run/snmpd.sock"
 
 enum snmp_type {
+	SNMP_IPADDR		= 0,
