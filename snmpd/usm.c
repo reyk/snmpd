@@ -26,3 +26,4 @@
 
 #include <net/if.h>
 
+#include <errno.h>
