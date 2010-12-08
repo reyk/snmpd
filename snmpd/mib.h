@@ -26,3 +26,4 @@
  * - optional: write the implementation in mib.c
  */
 
+/* From the SNMPv2-SMI MIB */
