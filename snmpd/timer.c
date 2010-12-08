@@ -26,3 +26,4 @@
 #include <net/if.h>
 #include <net/if_types.h>
 #include <netinet/in.h>
+#include <netinet/in_systm.h>
