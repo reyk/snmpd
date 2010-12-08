@@ -28,3 +28,4 @@
 
 #include <errno.h>
 #include <event.h>
+#include <fcntl.h>
