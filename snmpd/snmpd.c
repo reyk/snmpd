@@ -25,3 +25,4 @@
 
 #include <net/if.h>
 
+#include <string.h>
