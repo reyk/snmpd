@@ -25,3 +25,4 @@
 #include <net/pfvar.h>
 #include <net/route.h>
 
+#include "ber.h"
