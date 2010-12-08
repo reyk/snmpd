@@ -25,3 +25,4 @@
 #include <sys/tree.h>
 #include <sys/sysctl.h>
 
+#include <net/if.h>
