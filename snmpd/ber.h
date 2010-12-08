@@ -26,3 +26,4 @@ struct ber_element {
 	unsigned long		 be_encoding;
 	size_t			 be_len;
 	off_t			 be_offs;
+	int			 be_free;
