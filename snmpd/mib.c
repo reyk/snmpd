@@ -26,3 +26,4 @@
 #include <sys/un.h>
 #include <sys/time.h>
 #include <sys/tree.h>
+#include <sys/utsname.h>
