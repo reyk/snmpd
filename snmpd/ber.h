@@ -27,3 +27,4 @@ struct ber_element {
 	size_t			 be_len;
 	off_t			 be_offs;
 	int			 be_free;
+	u_int8_t		 be_class;
