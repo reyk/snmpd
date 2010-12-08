@@ -27,3 +27,4 @@
 #include <err.h>	/* XXX for debug output */
 #include <stdio.h>	/* XXX for debug output */
 #include <strings.h>
+#include <unistd.h>
