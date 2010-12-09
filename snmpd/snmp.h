@@ -32,3 +32,4 @@ enum snmp_type {
 	SNMP_GAUGE32		= 2,
 	SNMP_UNSIGNED32		= 2,
 	SNMP_TIMETICKS		= 3,
+	SNMP_OPAQUE		= 4,
