@@ -29,3 +29,4 @@ struct ber_element {
 	int			 be_free;
 	u_int8_t		 be_class;
 	void			(*be_cb)(void *, size_t);
+	void			*be_cbarg;
