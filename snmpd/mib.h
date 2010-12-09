@@ -31,3 +31,4 @@
 #define MIB_org				MIB_iso, 3
 #define MIB_dod				MIB_org, 6
 #define MIB_internet			MIB_dod, 1
+#define MIB_directory			MIB_internet, 1
