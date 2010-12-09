@@ -30,3 +30,4 @@
 #include <event.h>
 #include <fcntl.h>
 #include <stdlib.h>
+#include <string.h>
