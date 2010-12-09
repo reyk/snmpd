@@ -30,3 +30,4 @@
 #include <sys/sysctl.h>
 #include <sys/sensors.h>
 #include <sys/sched.h>
+#include <sys/socket.h>
