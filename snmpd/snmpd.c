@@ -32,3 +32,4 @@
 #include <err.h>
 #include <errno.h>
 #include <event.h>
+#include <signal.h>
