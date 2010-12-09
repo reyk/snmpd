@@ -31,3 +31,4 @@
 #include <net/if_media.h>
 #include <net/route.h>
 #include <netinet/in.h>
+#include <netinet/if_ether.h>
