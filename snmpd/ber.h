@@ -30,3 +30,4 @@ struct ber_element {
 	u_int8_t		 be_class;
 	void			(*be_cb)(void *, size_t);
 	void			*be_cbarg;
+	union {
