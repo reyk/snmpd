@@ -30,3 +30,4 @@
 #include <net/if_arp.h>
 #include <net/if_media.h>
 #include <net/route.h>
+#include <netinet/in.h>
