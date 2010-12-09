@@ -29,3 +29,4 @@
 enum snmp_type {
 	SNMP_IPADDR		= 0,
 	SNMP_COUNTER32		= 1,
+	SNMP_GAUGE32		= 2,
