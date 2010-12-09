@@ -31,3 +31,4 @@
 #include <imsg.h>
 
 /*
+ * common definitions for snmpd
