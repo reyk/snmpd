@@ -31,3 +31,4 @@ struct ber_element {
 	void			(*be_cb)(void *, size_t);
 	void			*be_cbarg;
 	union {
+		struct ber_element	*bv_sub;
