@@ -29,3 +29,4 @@
 #include <sys/utsname.h>
 #include <sys/sysctl.h>
 #include <sys/sensors.h>
+#include <sys/sched.h>
