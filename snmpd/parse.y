@@ -30,3 +30,4 @@
 #include <sys/tree.h>
 
 #include <netinet/in.h>
+#include <net/if.h>
