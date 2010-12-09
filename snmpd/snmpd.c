@@ -31,3 +31,4 @@
 #include <getopt.h>
 #include <err.h>
 #include <errno.h>
+#include <event.h>
