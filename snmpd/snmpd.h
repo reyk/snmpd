@@ -32,3 +32,4 @@
 
 /*
  * common definitions for snmpd
+ */
