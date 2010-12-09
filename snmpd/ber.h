@@ -32,3 +32,4 @@ struct ber_element {
 	void			*be_cbarg;
 	union {
 		struct ber_element	*bv_sub;
+		void			*bv_val;
