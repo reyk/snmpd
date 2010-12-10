@@ -34,3 +34,4 @@
 #include <event.h>
 #include <signal.h>
 #include <unistd.h>
+#include <pwd.h>
