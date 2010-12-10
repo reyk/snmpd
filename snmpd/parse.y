@@ -36,3 +36,4 @@
 #include <arpa/nameser.h>
 
 #include <ctype.h>
+#include <unistd.h>
