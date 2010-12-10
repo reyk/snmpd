@@ -34,3 +34,4 @@
 #include <unistd.h>
 #include <signal.h>
 #ifdef DEBUG
+#include <assert.h>
