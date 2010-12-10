@@ -33,3 +33,4 @@
 #include "ber.h"
 
 
+#define BER_TYPE_CONSTRUCTED	0x20	/* otherwise primitive */
