@@ -35,3 +35,4 @@
 #include <sys/ioctl.h>
 #include <sys/disk.h>
 
+#include <net/if.h>
