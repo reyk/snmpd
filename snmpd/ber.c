@@ -34,3 +34,4 @@
 
 
 #define BER_TYPE_CONSTRUCTED	0x20	/* otherwise primitive */
+#define BER_TYPE_SINGLE_MAX	30
