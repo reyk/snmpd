@@ -34,3 +34,4 @@
  * common definitions for snmpd
  */
 
+#define CONF_FILE		"/etc/snmpd.conf"
