@@ -34,3 +34,4 @@
 #include <unistd.h>
 #include <signal.h>
 
+#include "snmpd.h"
