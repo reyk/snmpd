@@ -35,3 +35,4 @@
 #define MIB_mgmt			MIB_internet, 2
 #define MIB_mib_2			MIB_mgmt, 1	/* XXX mib-2 */
 #define MIB_system			MIB_mib_2, 1
+#define OIDIDX_system			7
