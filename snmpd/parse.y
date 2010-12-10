@@ -33,3 +33,4 @@
 #include <net/if.h>
 
 #include <arpa/inet.h>
+#include <arpa/nameser.h>
