@@ -36,3 +36,4 @@
 #define BER_TYPE_CONSTRUCTED	0x20	/* otherwise primitive */
 #define BER_TYPE_SINGLE_MAX	30
 #define BER_TAG_MASK		0x1f
+#define BER_TAG_MORE		0x80	/* more subsequent octets */
