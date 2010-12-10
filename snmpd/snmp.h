@@ -34,3 +34,4 @@ enum snmp_type {
 	SNMP_TIMETICKS		= 3,
 	SNMP_OPAQUE		= 4,
 	SNMP_NSAPADDR		= 5,
+	SNMP_COUNTER64		= 6,
