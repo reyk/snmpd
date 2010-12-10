@@ -36,3 +36,4 @@
 #include <string.h>
 #include <syslog.h>
 #include <event.h>
+#include <netdb.h>
