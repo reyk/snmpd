@@ -35,3 +35,4 @@
 #include <signal.h>
 #ifdef DEBUG
 #include <assert.h>
+#endif
