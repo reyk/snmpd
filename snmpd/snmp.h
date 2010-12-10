@@ -35,3 +35,4 @@ enum snmp_type {
 	SNMP_OPAQUE		= 4,
 	SNMP_NSAPADDR		= 5,
 	SNMP_COUNTER64		= 6,
+	SNMP_UINTEGER32		= 7,
