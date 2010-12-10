@@ -33,3 +33,4 @@
 #include <errno.h>
 #include <event.h>
 #include <signal.h>
+#include <unistd.h>
