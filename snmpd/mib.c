@@ -36,3 +36,4 @@
 #include <sys/disk.h>
 
 #include <net/if.h>
+#include <net/if_types.h>
