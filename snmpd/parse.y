@@ -35,3 +35,4 @@
 #include <arpa/inet.h>
 #include <arpa/nameser.h>
 
+#include <ctype.h>
