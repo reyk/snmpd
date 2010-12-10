@@ -33,3 +33,4 @@
 #define MIB_internet			MIB_dod, 1
 #define MIB_directory			MIB_internet, 1
 #define MIB_mgmt			MIB_internet, 2
+#define MIB_mib_2			MIB_mgmt, 1	/* XXX mib-2 */
