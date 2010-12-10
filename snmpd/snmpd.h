@@ -35,3 +35,4 @@
  */
 
 #define CONF_FILE		"/etc/snmpd.conf"
+#define SNMPD_SOCKET		"/var/run/snmpd.sock"
