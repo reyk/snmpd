@@ -37,3 +37,4 @@ struct ber_element {
 	} be_union;
 #define be_sub		be_union.bv_sub
 #define be_val		be_union.bv_val
+#define be_numeric	be_union.bv_numeric
