@@ -40,3 +40,4 @@
 #define SNMPD_PORT		161
 #define SNMPD_TRAPPORT		162
 
+#define SNMPD_MAXSTRLEN		484
