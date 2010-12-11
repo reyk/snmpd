@@ -39,3 +39,4 @@ enum snmp_type {
 
 	SNMP_INTEGER32		= 100,
 	SNMP_BITSTRING		= 101,
+	SNMP_OCTETSTRING	= 102,
