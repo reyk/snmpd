@@ -37,3 +37,4 @@
 
 #include <ctype.h>
 #include <unistd.h>
+#include <err.h>
