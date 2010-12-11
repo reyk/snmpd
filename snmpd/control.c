@@ -39,3 +39,4 @@
 #define	CONTROL_BACKLOG	5
 
 struct ctl_connlist ctl_conns;
+
