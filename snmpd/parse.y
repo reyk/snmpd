@@ -40,3 +40,4 @@
 #include <err.h>
 #include <errno.h>
 #include <event.h>
+#include <limits.h>
