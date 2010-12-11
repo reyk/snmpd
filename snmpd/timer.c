@@ -40,3 +40,4 @@
 #include <unistd.h>
 #include <pwd.h>
 
+#include "snmpd.h"
