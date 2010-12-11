@@ -37,3 +37,4 @@
 #define BER_TYPE_SINGLE_MAX	30
 #define BER_TAG_MASK		0x1f
 #define BER_TAG_MORE		0x80	/* more subsequent octets */
+#define BER_TAG_TYPE_MASK	0x7f
