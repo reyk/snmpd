@@ -40,3 +40,4 @@
 #include <net/pfvar.h>
 #include <arpa/inet.h>
 
+#include <err.h>
