@@ -39,3 +39,4 @@ struct ber_element {
 #define be_val		be_union.bv_val
 #define be_numeric	be_union.bv_numeric
 };
+
