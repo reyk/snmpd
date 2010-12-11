@@ -39,3 +39,4 @@
 #include <vis.h>
 
 #include "snmpd.h"
+#include "mib.h"
