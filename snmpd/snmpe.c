@@ -38,3 +38,4 @@
 #include <pwd.h>
 #include <vis.h>
 
+#include "snmpd.h"
