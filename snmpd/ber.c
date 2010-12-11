@@ -40,3 +40,4 @@
 #define BER_TAG_TYPE_MASK	0x7f
 #define BER_CLASS_SHIFT		6
 
+static int	ber_dump_element(struct ber *ber, struct ber_element *root);
