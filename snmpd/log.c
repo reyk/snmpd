@@ -38,3 +38,4 @@
 #include <event.h>
 #include <netdb.h>
 
+#include <openssl/ssl.h>
