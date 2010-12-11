@@ -39,3 +39,4 @@
 #include "snmpd.h"
 #include "mib.h"
 
+__dead void	 usage(void);
