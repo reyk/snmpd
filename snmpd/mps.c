@@ -39,3 +39,4 @@
 #include <errno.h>
 #include <event.h>
 #include <fcntl.h>
+#include <string.h>
