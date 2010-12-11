@@ -40,3 +40,4 @@
 #include "mib.h"
 
 __dead void	 usage(void);
+
