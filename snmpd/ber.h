@@ -40,3 +40,4 @@ struct ber_element {
 #define be_numeric	be_union.bv_numeric
 };
 
+struct ber {
