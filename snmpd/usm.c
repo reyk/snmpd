@@ -37,3 +37,4 @@
 #include <assert.h>
 #endif
 
+#include <openssl/evp.h>
