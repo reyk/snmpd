@@ -40,3 +40,4 @@
 #include <net/pfvar.h>
 #include <net/if_pfsync.h>
 #include <netinet/in.h>
+#include <netinet/in_systm.h>
