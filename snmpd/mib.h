@@ -37,3 +37,4 @@
 #define MIB_system			MIB_mib_2, 1
 #define OIDIDX_system			7
 #define MIB_sysDescr			MIB_system, 1
+#define MIB_sysOID			MIB_system, 2
