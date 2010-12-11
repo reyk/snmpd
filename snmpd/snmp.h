@@ -37,3 +37,4 @@ enum snmp_type {
 	SNMP_COUNTER64		= 6,
 	SNMP_UINTEGER32		= 7,
 
+	SNMP_INTEGER32		= 100,
