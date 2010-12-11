@@ -39,3 +39,4 @@
 #define MIB_sysDescr			MIB_system, 1
 #define MIB_sysOID			MIB_system, 2
 #define MIB_sysUpTime			MIB_system, 3
+#define MIB_sysContact			MIB_system, 4
