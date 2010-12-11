@@ -38,3 +38,4 @@
 #define BER_TAG_MASK		0x1f
 #define BER_TAG_MORE		0x80	/* more subsequent octets */
 #define BER_TAG_TYPE_MASK	0x7f
+#define BER_CLASS_SHIFT		6
