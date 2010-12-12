@@ -42,3 +42,4 @@
 
 #include "snmpd.h"
 
+int	 debug;
