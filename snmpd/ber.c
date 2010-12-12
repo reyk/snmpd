@@ -43,3 +43,4 @@
 static int	ber_dump_element(struct ber *ber, struct ber_element *root);
 static void	ber_dump_header(struct ber *ber, struct ber_element *root);
 static void	ber_putc(struct ber *ber, u_char c);
+static void	ber_write(struct ber *ber, void *buf, size_t len);
