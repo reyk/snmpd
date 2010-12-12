@@ -42,3 +42,4 @@ enum snmp_type {
 	SNMP_OCTETSTRING	= 102,
 	SNMP_NULL		= 103,
 	SNMP_OBJECT		= 104
+};
