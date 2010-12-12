@@ -43,3 +43,4 @@
 extern struct snmpd	*env;
 
 void
+trap_init(void)
