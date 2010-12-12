@@ -41,3 +41,4 @@
 #include "snmpd.h"
 #include "mib.h"
 
+int	 snmpe_parse(struct sockaddr_storage *,
