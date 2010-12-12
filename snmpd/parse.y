@@ -44,3 +44,4 @@
 #include <stdint.h>
 #include <stdarg.h>
 #include <stdio.h>
+#include <netdb.h>
