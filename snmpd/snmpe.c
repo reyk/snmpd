@@ -42,3 +42,4 @@
 #include "mib.h"
 
 int	 snmpe_parse(struct sockaddr_storage *,
+	    struct ber_element *, struct snmp_message *);
