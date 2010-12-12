@@ -43,3 +43,4 @@
 #define MIB_sysName			MIB_system, 5
 #define MIB_sysLocation			MIB_system, 6
 #define MIB_sysServices			MIB_system, 7
+#define MIB_sysORLastChange		MIB_system, 8
