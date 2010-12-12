@@ -43,3 +43,4 @@ enum snmp_type {
 	SNMP_NULL		= 103,
 	SNMP_OBJECT		= 104
 };
+
