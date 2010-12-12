@@ -41,3 +41,4 @@
 #include <arpa/inet.h>
 
 #include <err.h>
+#include <errno.h>
