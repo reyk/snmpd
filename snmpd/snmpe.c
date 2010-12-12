@@ -44,3 +44,4 @@
 int	 snmpe_parse(struct sockaddr_storage *,
 	    struct ber_element *, struct snmp_message *);
 unsigned long
+	 snmpe_application(struct ber_element *);
