@@ -42,3 +42,4 @@
 #include <event.h>
 #include <limits.h>
 #include <stdint.h>
+#include <stdarg.h>
