@@ -44,3 +44,4 @@
 
 int	 debug;
 
+void	 vlog(int, const char *, va_list);
