@@ -41,3 +41,4 @@
 
 __dead void	 usage(void);
 
+void		 snmpd_sig_handler(int, short, void *);
