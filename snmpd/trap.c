@@ -42,3 +42,4 @@
 
 extern struct snmpd	*env;
 
+void
