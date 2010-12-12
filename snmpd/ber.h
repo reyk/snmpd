@@ -41,3 +41,4 @@ struct ber_element {
 };
 
 struct ber {
+	int	 fd;
