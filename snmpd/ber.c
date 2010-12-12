@@ -41,3 +41,4 @@
 #define BER_CLASS_SHIFT		6
 
 static int	ber_dump_element(struct ber *ber, struct ber_element *root);
+static void	ber_dump_header(struct ber *ber, struct ber_element *root);
