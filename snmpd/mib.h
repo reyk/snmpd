@@ -41,3 +41,4 @@
 #define MIB_sysUpTime			MIB_system, 3
 #define MIB_sysContact			MIB_system, 4
 #define MIB_sysName			MIB_system, 5
+#define MIB_sysLocation			MIB_system, 6
