@@ -43,3 +43,4 @@ __dead void	 usage(void);
 
 void		 snmpd_sig_handler(int, short, void *);
 void		 snmpd_shutdown(struct snmpd *);
+void		 snmpd_dispatch_snmpe(int, short, void *);
