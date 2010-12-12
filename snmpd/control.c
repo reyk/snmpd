@@ -41,3 +41,4 @@
 struct ctl_connlist ctl_conns;
 
 struct ctl_conn	*control_connbyfd(int);
+void		 control_close(int, struct control_sock *);
