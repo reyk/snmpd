@@ -41,3 +41,4 @@
 #include <net/if_pfsync.h>
 #include <netinet/in.h>
 #include <netinet/in_systm.h>
+#include <netinet/ip.h>
