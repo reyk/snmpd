@@ -41,3 +41,4 @@
 #include <openssl/hmac.h>
 
 #include "snmpd.h"
+#include "mib.h"
