@@ -44,3 +44,4 @@
 #include <pwd.h>
 
 #include "snmpd.h"
+#include "mib.h"
