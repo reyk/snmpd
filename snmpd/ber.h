@@ -43,3 +43,4 @@ struct ber_element {
 struct ber {
 	int	 fd;
 	off_t	 br_offs;
+	u_char	*br_wbuf;
