@@ -44,3 +44,4 @@ enum snmp_type {
 	SNMP_OBJECT		= 104
 };
 
+enum snmp_imsg_ctl {
