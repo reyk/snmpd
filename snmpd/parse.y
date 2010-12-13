@@ -46,3 +46,4 @@
 #include <stdio.h>
 #include <netdb.h>
 #include <string.h>
+#include <syslog.h>
