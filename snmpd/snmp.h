@@ -48,3 +48,4 @@ enum snmp_imsg_ctl {
 	IMSG_SNMP_TRAP		= 1000,	/* something that works everywhere */
 	IMSG_SNMP_ELEMENT,
 	IMSG_SNMP_END,
+	IMSG_SNMP_LOCK			/* enable restricted mode */
