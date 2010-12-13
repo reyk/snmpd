@@ -45,3 +45,4 @@
 
 #include "snmpd.h"
 
+extern struct snmpd	*env;
