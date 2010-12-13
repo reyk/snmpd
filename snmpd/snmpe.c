@@ -47,3 +47,4 @@ unsigned long
 	 snmpe_application(struct ber_element *);
 void	 snmpe_sig_handler(int sig, short, void *);
 void	 snmpe_shutdown(void);
+void	 snmpe_dispatch_parent(int, short, void *);
