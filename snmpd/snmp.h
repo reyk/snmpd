@@ -45,3 +45,4 @@ enum snmp_type {
 };
 
 enum snmp_imsg_ctl {
+	IMSG_SNMP_TRAP		= 1000,	/* something that works everywhere */
