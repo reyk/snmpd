@@ -48,3 +48,4 @@ int		 check_child(pid_t, const char *);
 void		 snmpd_generate_engineid(struct snmpd *);
 
 struct snmpd	*snmpd_env;
+
