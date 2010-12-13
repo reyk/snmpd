@@ -48,3 +48,4 @@
 #define MIB_sysOREntry			MIB_sysORTable, 1
 #define OIDIDX_sysOR			9
 #define OIDIDX_sysOREntry		10
+#define MIB_sysORIndex			MIB_sysOREntry, 1
