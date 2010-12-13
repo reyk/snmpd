@@ -46,3 +46,4 @@
 #include "snmpd.h"
 #include "mib.h"
 
+extern struct snmpd *env;
