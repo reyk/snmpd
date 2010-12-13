@@ -46,3 +46,4 @@
 extern struct snmpd	*env;
 
 SLIST_HEAD(, usmuser)	usmuserlist;
+
