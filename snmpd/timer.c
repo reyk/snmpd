@@ -45,3 +45,4 @@
 
 extern struct snmpd	*env;
 
+void	 timer_cpu(int, short, void *);
