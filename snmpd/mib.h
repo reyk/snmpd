@@ -45,3 +45,4 @@
 #define MIB_sysServices			MIB_system, 7
 #define MIB_sysORLastChange		MIB_system, 8
 #define MIB_sysORTable			MIB_system, 9
+#define MIB_sysOREntry			MIB_sysORTable, 1
