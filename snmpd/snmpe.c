@@ -46,3 +46,4 @@ int	 snmpe_parse(struct sockaddr_storage *,
 unsigned long
 	 snmpe_application(struct ber_element *);
 void	 snmpe_sig_handler(int sig, short, void *);
+void	 snmpe_shutdown(void);
