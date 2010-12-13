@@ -48,3 +48,4 @@ unsigned long
 void	 snmpe_sig_handler(int sig, short, void *);
 void	 snmpe_shutdown(void);
 void	 snmpe_dispatch_parent(int, short, void *);
+int	 snmpe_bind(struct address *);
