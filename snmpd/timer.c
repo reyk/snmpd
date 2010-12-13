@@ -48,3 +48,4 @@ extern struct snmpd	*env;
 void	 timer_cpu(int, short, void *);
 int	 percentages(int, int64_t *, int64_t *, int64_t *, int64_t *);
 
+static int64_t	**cp_time;
