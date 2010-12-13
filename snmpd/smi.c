@@ -48,3 +48,4 @@
 
 extern struct snmpd *env;
 
+RB_HEAD(oidtree, oid);
