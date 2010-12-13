@@ -47,3 +47,4 @@
 
 extern struct snmpd	*env;
 
+struct {
