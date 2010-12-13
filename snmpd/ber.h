@@ -45,3 +45,4 @@ struct ber {
 	off_t	 br_offs;
 	u_char	*br_wbuf;
 	u_char	*br_wptr;
+	u_char	*br_wend;
