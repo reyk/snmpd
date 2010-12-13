@@ -48,3 +48,4 @@
 
 extern struct snmpd *env;
 
+struct ber_oid *
