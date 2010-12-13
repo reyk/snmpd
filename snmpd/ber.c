@@ -45,3 +45,4 @@ static void	ber_dump_header(struct ber *ber, struct ber_element *root);
 static void	ber_putc(struct ber *ber, u_char c);
 static void	ber_write(struct ber *ber, void *buf, size_t len);
 static ssize_t	get_id(struct ber *b, unsigned long *tag, int *class,
+    int *cstruct);
