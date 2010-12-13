@@ -45,3 +45,4 @@ void		 control_close(int, struct control_sock *);
 
 int
 control_init(struct control_sock *cs)
+{
