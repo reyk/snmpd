@@ -45,3 +45,4 @@ extern struct snmpd	*env;
 void
 trap_init(void)
 {
+	struct ber_oid	 trapoid = OID(MIB_coldStart);
