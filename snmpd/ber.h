@@ -46,3 +46,4 @@ struct ber {
 	u_char	*br_wbuf;
 	u_char	*br_wptr;
 	u_char	*br_wend;
+	u_char	*br_rbuf;
