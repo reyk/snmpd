@@ -47,3 +47,4 @@ static void	ber_write(struct ber *ber, void *buf, size_t len);
 static ssize_t	get_id(struct ber *b, unsigned long *tag, int *class,
     int *cstruct);
 static ssize_t	get_len(struct ber *b, ssize_t *len);
+static ssize_t	ber_read_element(struct ber *ber, struct ber_element *elm);
