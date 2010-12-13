@@ -47,3 +47,4 @@ extern struct snmpd	*env;
 
 SLIST_HEAD(, usmuser)	usmuserlist;
 
+const EVP_MD		*usm_get_md(enum usmauth);
