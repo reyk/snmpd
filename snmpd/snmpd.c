@@ -46,3 +46,4 @@ void		 snmpd_shutdown(struct snmpd *);
 void		 snmpd_dispatch_snmpe(int, short, void *);
 int		 check_child(pid_t, const char *);
 void		 snmpd_generate_engineid(struct snmpd *);
+
