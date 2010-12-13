@@ -47,3 +47,4 @@
 #define MIB_sysORTable			MIB_system, 9
 #define MIB_sysOREntry			MIB_sysORTable, 1
 #define OIDIDX_sysOR			9
+#define OIDIDX_sysOREntry		10
