@@ -46,3 +46,4 @@ int	 debug;
 
 void	 vlog(int, const char *, va_list);
 void	 logit(int, const char *, ...);
+
