@@ -51,3 +51,4 @@ struct ber {
 	u_char	*br_rend;
 
 	unsigned long	(*br_application)(struct ber_element *);
+};
