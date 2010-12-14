@@ -51,3 +51,4 @@ enum snmp_imsg_ctl {
 	IMSG_SNMP_LOCK			/* enable restricted mode */
 };
 
+struct snmp_imsg_hdr {
