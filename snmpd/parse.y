@@ -49,3 +49,4 @@
 #include <syslog.h>
 
 #include "snmpd.h"
+#include "mib.h"
