@@ -52,3 +52,4 @@ enum snmp_imsg_ctl {
 };
 
 struct snmp_imsg_hdr {
+	u_int32_t	 imsg_type;
