@@ -49,3 +49,4 @@ static ssize_t	get_id(struct ber *b, unsigned long *tag, int *class,
 static ssize_t	get_len(struct ber *b, ssize_t *len);
 static ssize_t	ber_read_element(struct ber *ber, struct ber_element *elm);
 static ssize_t	ber_readbuf(struct ber *b, void *buf, size_t nbytes);
+static ssize_t	ber_getc(struct ber *b, u_char *c);
