@@ -52,3 +52,4 @@ struct snmpd	*snmpd_env;
 int		 pipe_parent2snmpe[2];
 struct imsgev	*iev_snmpe;
 pid_t		 snmpe_pid = 0;
+
