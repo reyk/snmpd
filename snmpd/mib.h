@@ -51,3 +51,4 @@
 #define MIB_sysORIndex			MIB_sysOREntry, 1
 #define MIB_sysORID			MIB_sysOREntry, 2
 #define MIB_sysORDescr			MIB_sysOREntry, 3
+#define MIB_sysORUpTime			MIB_sysOREntry, 4
