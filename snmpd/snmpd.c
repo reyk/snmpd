@@ -49,3 +49,4 @@ void		 snmpd_generate_engineid(struct snmpd *);
 
 struct snmpd	*snmpd_env;
 
+int		 pipe_parent2snmpe[2];
