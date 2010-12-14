@@ -52,3 +52,4 @@ struct {
 	u_long			 ks_iflastchange;
 	u_long			 ks_nroutes;	/* 4 billions enough? */
 	int			 ks_fd;
+	int			 ks_ifd;
