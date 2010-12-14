@@ -49,3 +49,4 @@
 #include <unistd.h>
 #include <event.h>
 
+#include "snmpd.h"
