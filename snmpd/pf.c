@@ -51,3 +51,4 @@
 
 #include "snmpd.h"
 
+int	 devpf = 0;
