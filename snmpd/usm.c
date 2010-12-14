@@ -50,3 +50,4 @@ SLIST_HEAD(, usmuser)	usmuserlist;
 const EVP_MD		*usm_get_md(enum usmauth);
 const EVP_CIPHER	*usm_get_cipher(enum usmpriv);
 void			 usm_cb_digest(void *, size_t);
+int			 usm_valid_digest(struct snmp_message *, off_t, char *,
