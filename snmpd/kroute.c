@@ -50,3 +50,4 @@ extern struct snmpd	*env;
 struct {
 	struct event		 ks_ev;
 	u_long			 ks_iflastchange;
+	u_long			 ks_nroutes;	/* 4 billions enough? */
