@@ -51,3 +51,4 @@ void	 snmpe_dispatch_parent(int, short, void *);
 int	 snmpe_bind(struct address *);
 void	 snmpe_recvmsg(int fd, short, void *);
 int	 snmpe_encode(struct snmp_message *);
+
