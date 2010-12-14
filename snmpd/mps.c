@@ -51,3 +51,4 @@ extern struct snmpd *env;
 struct ber_oid *
 	 mps_table(struct oid *, struct ber_oid *, struct ber_oid *);
 
+int
