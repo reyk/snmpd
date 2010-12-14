@@ -50,3 +50,4 @@
 
 #define SNMP_USM_DIGESTLEN	12
 #define SNMP_USM_SALTLEN	8
+#define SNMP_USM_KEYLEN		64
