@@ -52,3 +52,4 @@ trap_init(void)
 	 * started and re-initialized.
 	 */
 	trap_send(&trapoid, NULL);
+}
