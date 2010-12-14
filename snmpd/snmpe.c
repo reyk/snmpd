@@ -52,3 +52,4 @@ int	 snmpe_bind(struct address *);
 void	 snmpe_recvmsg(int fd, short, void *);
 int	 snmpe_encode(struct snmp_message *);
 
+struct snmpd	*env = NULL;
