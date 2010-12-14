@@ -50,3 +50,4 @@ trap_init(void)
 	/*
 	 * Send a coldStart to notify that the daemon has been
 	 * started and re-initialized.
+	 */
