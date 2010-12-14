@@ -51,3 +51,4 @@ control_init(struct control_sock *cs)
 	mode_t			 old_umask, mode;
 
 	if (cs->cs_name == NULL)
+		return (0);
