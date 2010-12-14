@@ -51,3 +51,4 @@ int	 percentages(int, int64_t *, int64_t *, int64_t *, int64_t *);
 static int64_t	**cp_time;
 static int64_t	**cp_old;
 static int64_t	**cp_diff;
+struct event	  cpu_ev;
