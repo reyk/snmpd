@@ -49,3 +49,4 @@ control_init(struct control_sock *cs)
 	struct sockaddr_un	 sun;
 	int			 fd;
 	mode_t			 old_umask, mode;
+
