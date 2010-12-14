@@ -52,3 +52,4 @@ struct ber {
 
 	unsigned long	(*br_application)(struct ber_element *);
 };
+
