@@ -52,3 +52,4 @@ log_init(int n_debug)
 {
 	extern char	*__progname;
 
+	debug = n_debug;
