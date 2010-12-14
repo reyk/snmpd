@@ -49,3 +49,4 @@
 extern struct snmpd *env;
 
 RB_HEAD(oidtree, oid);
+RB_PROTOTYPE(oidtree, oid, o_element, smi_oid_cmp);
