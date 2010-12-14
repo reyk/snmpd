@@ -52,3 +52,4 @@ const EVP_CIPHER	*usm_get_cipher(enum usmpriv);
 void			 usm_cb_digest(void *, size_t);
 int			 usm_valid_digest(struct snmp_message *, off_t, char *,
 			    size_t);
+struct ber_element	*usm_decrypt(struct snmp_message *,
