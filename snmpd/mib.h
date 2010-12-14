@@ -49,3 +49,4 @@
 #define OIDIDX_sysOR			9
 #define OIDIDX_sysOREntry		10
 #define MIB_sysORIndex			MIB_sysOREntry, 1
+#define MIB_sysORID			MIB_sysOREntry, 2
