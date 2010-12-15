@@ -55,3 +55,4 @@ struct snmp_imsg_hdr {
 	u_int32_t	 imsg_type;
 	u_int16_t	 imsg_len;
 	u_int16_t	 imsg_flags;
+	u_int32_t	 imsg_peerid;
