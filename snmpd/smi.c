@@ -53,3 +53,4 @@ RB_PROTOTYPE(oidtree, oid, o_element, smi_oid_cmp);
 struct oidtree smi_oidtree;
 
 u_long
+smi_getticks(void)
