@@ -54,3 +54,4 @@
 #define MIB_sysORUpTime			MIB_sysOREntry, 4
 #define MIB_transmission		MIB_mib_2, 10
 #define MIB_snmp			MIB_mib_2, 11
+#define OIDIDX_snmp			7
