@@ -55,3 +55,4 @@
 
 #define SMALL_READ_BUF_SIZE	1024
 #define READ_BUF_SIZE		65535
+#define	RT_BUF_SIZE		16384
