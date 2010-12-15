@@ -56,3 +56,4 @@ trap_init(void)
 
 int
 trap_imsg(struct imsgev *iev, pid_t pid)
+{
