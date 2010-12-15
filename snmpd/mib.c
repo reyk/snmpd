@@ -56,3 +56,4 @@
 #include <unistd.h>
 #include <pwd.h>
 #include <limits.h>
+#include <kvm.h>
