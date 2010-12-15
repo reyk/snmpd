@@ -53,3 +53,4 @@
 
 int	 devpf = 0;
 
+size_t 	 buf_esize[PFRB_MAX] = { 0,
