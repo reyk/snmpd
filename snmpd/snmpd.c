@@ -56,3 +56,4 @@ pid_t		 snmpe_pid = 0;
 void
 snmpd_sig_handler(int sig, short event, void *arg)
 {
+	struct snmpd	*env = arg;
