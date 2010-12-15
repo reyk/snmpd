@@ -55,3 +55,4 @@ struct oidtree smi_oidtree;
 u_long
 smi_getticks(void)
 {
+	struct timeval	 now, run;
