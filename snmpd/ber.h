@@ -53,3 +53,4 @@ struct ber {
 	unsigned long	(*br_application)(struct ber_element *);
 };
 
+/* well-known ber_element types */
