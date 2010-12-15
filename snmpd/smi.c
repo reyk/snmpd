@@ -56,3 +56,4 @@ u_long
 smi_getticks(void)
 {
 	struct timeval	 now, run;
+	u_long		 ticks;
