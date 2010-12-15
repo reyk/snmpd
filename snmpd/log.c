@@ -54,3 +54,4 @@ log_init(int n_debug)
 
 	debug = n_debug;
 
+	if (!debug)
