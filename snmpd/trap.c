@@ -54,3 +54,4 @@ trap_init(void)
 	trap_send(&trapoid, NULL);
 }
 
+int
