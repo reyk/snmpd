@@ -56,3 +56,4 @@ struct ber {
 /* well-known ber_element types */
 #define BER_TYPE_DEFAULT	((unsigned long)-1)
 #define BER_TYPE_EOC		0
+#define BER_TYPE_BOOLEAN	1
