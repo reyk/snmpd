@@ -56,3 +56,4 @@ mps_getstr(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 {
 	char			*s = oid->o_data;
 
+	if (s == NULL)
