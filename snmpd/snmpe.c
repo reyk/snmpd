@@ -54,3 +54,4 @@ int	 snmpe_encode(struct snmp_message *);
 
 struct snmpd	*env = NULL;
 
+struct imsgev	*iev_parent;
