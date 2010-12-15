@@ -54,3 +54,4 @@ static int64_t	**cp_diff;
 struct event	  cpu_ev;
 
 void
+timer_cpu(int fd, short event, void *arg)
