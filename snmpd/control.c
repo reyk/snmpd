@@ -56,3 +56,4 @@ control_init(struct control_sock *cs)
 	if ((fd = socket(AF_UNIX, SOCK_STREAM, 0)) == -1) {
 		log_warn("control_init: socket");
 		return (-1);
+	}
