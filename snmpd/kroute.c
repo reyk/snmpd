@@ -56,3 +56,4 @@ struct {
 	u_short			 ks_nkif;
 } kr_state;
 
+struct kroute_node {
