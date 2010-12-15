@@ -54,3 +54,4 @@ struct {
 	int			 ks_fd;
 	int			 ks_ifd;
 	u_short			 ks_nkif;
+} kr_state;
