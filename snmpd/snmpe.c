@@ -56,3 +56,4 @@ struct snmpd	*env = NULL;
 
 struct imsgev	*iev_parent;
 
+void
