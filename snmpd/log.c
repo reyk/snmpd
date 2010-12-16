@@ -57,3 +57,4 @@ log_init(int n_debug)
 	if (!debug)
 		openlog(__progname, LOG_PID | LOG_NDELAY, LOG_DAEMON);
 
+	tzset();
