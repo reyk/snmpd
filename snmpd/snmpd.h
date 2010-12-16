@@ -58,3 +58,4 @@
 #define	RT_BUF_SIZE		16384
 #define	MAX_RTSOCK_BUF		(128 * 1024)
 
+#define SNMP_ENGINEID_OLD	0x00
