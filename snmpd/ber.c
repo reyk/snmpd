@@ -57,3 +57,4 @@ static ssize_t	ber_read(struct ber *ber, void *buf, size_t len);
 #else
 #define DPRINTF(...)	do { } while (0)
 #endif
+
