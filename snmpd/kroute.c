@@ -58,3 +58,4 @@ struct {
 
 struct kroute_node {
 	RB_ENTRY(kroute_node)	 entry;
+	struct kroute		 r;
