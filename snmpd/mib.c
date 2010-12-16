@@ -59,3 +59,4 @@
 #include <kvm.h>
 
 #include "snmpd.h"
+#include "mib.h"
