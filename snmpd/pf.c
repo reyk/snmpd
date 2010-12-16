@@ -60,3 +60,4 @@ size_t 	 buf_esize[PFRB_MAX] = { 0,
 };
 
 void
+pf_init(void)
