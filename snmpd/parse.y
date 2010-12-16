@@ -59,3 +59,4 @@ static struct file {
 	int			 lineno;
 	int			 errors;
 } *file, *topfile;
+struct file	*pushfile(const char *, int);
