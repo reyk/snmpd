@@ -57,3 +57,4 @@ void
 timer_cpu(int fd, short event, void *arg)
 {
 	struct event	*ev = (struct event *)arg;
+	struct timeval	 tv = { 60, 0 };	/* every 60 seconds */
