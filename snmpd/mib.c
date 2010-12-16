@@ -58,3 +58,4 @@
 #include <limits.h>
 #include <kvm.h>
 
+#include "snmpd.h"
