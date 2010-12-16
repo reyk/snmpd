@@ -57,3 +57,4 @@
 #define OIDIDX_snmp			7
 #define MIB_snmpInPkts			MIB_snmp, 1
 #define MIB_snmpOutPkts			MIB_snmp, 2
+#define MIB_snmpInBadVersions		MIB_snmp, 3
