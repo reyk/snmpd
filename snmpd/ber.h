@@ -58,3 +58,4 @@ struct ber {
 #define BER_TYPE_EOC		0
 #define BER_TYPE_BOOLEAN	1
 #define BER_TYPE_INTEGER	2
+#define BER_TYPE_BITSTRING	3
