@@ -58,3 +58,4 @@
 #define MIB_snmpInPkts			MIB_snmp, 1
 #define MIB_snmpOutPkts			MIB_snmp, 2
 #define MIB_snmpInBadVersions		MIB_snmp, 3
+#define MIB_snmpInBadCommunityNames	MIB_snmp, 4
