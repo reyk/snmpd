@@ -57,3 +57,4 @@ struct snmpd	*env = NULL;
 struct imsgev	*iev_parent;
 
 void
+snmpe_sig_handler(int sig, short event, void *arg)
