@@ -57,3 +57,4 @@ control_init(struct control_sock *cs)
 		log_warn("control_init: socket");
 		return (-1);
 	}
+
