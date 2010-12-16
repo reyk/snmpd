@@ -60,3 +60,4 @@ static struct file {
 	int			 errors;
 } *file, *topfile;
 struct file	*pushfile(const char *, int);
+int		 popfile(void);
