@@ -57,3 +57,4 @@ void
 snmpd_sig_handler(int sig, short event, void *arg)
 {
 	struct snmpd	*env = arg;
+	int			 die = 0;
