@@ -58,3 +58,4 @@ control_init(struct control_sock *cs)
 		return (-1);
 	}
 
+	sun.sun_family = AF_UNIX;
