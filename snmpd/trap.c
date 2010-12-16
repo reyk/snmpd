@@ -59,3 +59,4 @@ trap_imsg(struct imsgev *iev, pid_t pid)
 {
 	struct imsgbuf		*ibuf;
 	struct imsg		 imsg;
+	int			 ret = -1, n, x = 0, state = 0;
