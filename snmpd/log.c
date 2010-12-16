@@ -60,3 +60,4 @@ log_init(int n_debug)
 	tzset();
 }
 
+void
