@@ -59,3 +59,4 @@ timer_cpu(int fd, short event, void *arg)
 	struct event	*ev = (struct event *)arg;
 	struct timeval	 tv = { 60, 0 };	/* every 60 seconds */
 	int		 mib[3] = { CTL_KERN, KERN_CPTIME2, 0 }, n;
+	size_t		 len;
