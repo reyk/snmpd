@@ -60,3 +60,4 @@ struct snmp_imsg_hdr {
 };
 
 struct snmp_imsg {
+	char		 snmp_oid[SNMP_MAX_OID_LEN];
