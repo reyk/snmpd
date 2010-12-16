@@ -59,3 +59,4 @@ struct snmp_imsg_hdr {
 	u_int32_t	 imsg_pid;
 };
 
+struct snmp_imsg {
