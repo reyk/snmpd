@@ -60,3 +60,4 @@
 
 #define SNMP_ENGINEID_OLD	0x00
 #define SNMP_ENGINEID_NEW	0x80	/* RFC3411 */
+
