@@ -57,3 +57,4 @@ static struct file {
 	FILE			*stream;
 	char			*name;
 	int			 lineno;
+	int			 errors;
