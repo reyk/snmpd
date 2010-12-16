@@ -58,3 +58,4 @@ static struct file {
 	char			*name;
 	int			 lineno;
 	int			 errors;
+} *file, *topfile;
