@@ -57,3 +57,4 @@ struct {
 } kr_state;
 
 struct kroute_node {
+	RB_ENTRY(kroute_node)	 entry;
