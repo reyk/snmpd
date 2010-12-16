@@ -58,3 +58,4 @@ mps_getstr(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 
 	if (s == NULL)
 		return (-1);
+	*elm = ber_add_string(*elm, s);
