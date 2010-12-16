@@ -58,3 +58,4 @@ ssize_t			 usm_crypt(struct snmp_message *, u_char *, int,
 			    u_char *, int);
 char			*usm_passwd2key(const EVP_MD *, char *, int *);
 
+void
