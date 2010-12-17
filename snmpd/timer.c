@@ -64,3 +64,4 @@ timer_cpu(int fd, short event, void *arg)
 
 	len = CPUSTATES * sizeof(int64_t);
 	for (n = 0; n < env->sc_ncpu; n++) {
+		mib[2] = n;
