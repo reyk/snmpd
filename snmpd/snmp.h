@@ -63,3 +63,4 @@ struct snmp_imsg {
 	char		 snmp_oid[SNMP_MAX_OID_LEN];
 	u_int8_t	 snmp_type;
 	u_int16_t	 snmp_len;
+};
