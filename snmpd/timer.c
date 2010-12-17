@@ -63,3 +63,4 @@ timer_cpu(int fd, short event, void *arg)
 	int64_t		*cptime2;
 
 	len = CPUSTATES * sizeof(int64_t);
+	for (n = 0; n < env->sc_ncpu; n++) {
