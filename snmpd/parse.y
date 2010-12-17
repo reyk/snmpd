@@ -64,3 +64,4 @@ int		 popfile(void);
 int		 check_file_secrecy(int, const char *);
 int		 yyparse(void);
 int		 yylex(void);
+int		 yyerror(const char *, ...);
