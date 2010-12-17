@@ -62,3 +62,4 @@ control_init(struct control_sock *cs)
 	if (strlcpy(sun.sun_path, cs->cs_name,
 	    sizeof(sun.sun_path)) >= sizeof(sun.sun_path)) {
 		log_warn("control_init: %s name too long", cs->cs_name);
+		close(fd);
