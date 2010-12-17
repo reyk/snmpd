@@ -61,3 +61,4 @@ static ssize_t	ber_read(struct ber *ber, void *buf, size_t len);
 struct ber_element *
 ber_get_element(unsigned long encoding)
 {
+	struct ber_element *elm;
