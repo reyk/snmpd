@@ -64,3 +64,4 @@
 #define MIB_snmpInTooBigs		MIB_snmp, 8
 #define MIB_snmpInNoSuchNames		MIB_snmp, 9
 #define MIB_snmpInBadValues		MIB_snmp, 10
+#define MIB_snmpInReadOnlys		MIB_snmp, 11
