@@ -62,3 +62,4 @@ size_t 	 buf_esize[PFRB_MAX] = { 0,
 void
 pf_init(void)
 {
+	if ((devpf = open("/dev/pf", O_RDONLY)) == -1)
