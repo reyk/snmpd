@@ -61,3 +61,4 @@ log_init(int n_debug)
 }
 
 void
+logit(int pri, const char *fmt, ...)
