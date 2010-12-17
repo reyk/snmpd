@@ -62,3 +62,4 @@ static struct file {
 struct file	*pushfile(const char *, int);
 int		 popfile(void);
 int		 check_file_secrecy(int, const char *);
+int		 yyparse(void);
