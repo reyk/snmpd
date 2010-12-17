@@ -62,3 +62,4 @@ struct kroute_node {
 	struct kroute_node	*next;
 };
 
+struct kroute6_node {
