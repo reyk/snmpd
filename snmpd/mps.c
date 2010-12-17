@@ -64,3 +64,4 @@ mps_getstr(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 
 int
 mps_setstr(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
+{
