@@ -64,3 +64,4 @@ control_init(struct control_sock *cs)
 		log_warn("control_init: %s name too long", cs->cs_name);
 		close(fd);
 		return (-1);
+	}
