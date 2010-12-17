@@ -62,3 +62,4 @@
 #define MIB_snmpInBadCommunityUses	MIB_snmp, 5
 #define MIB_snmpInASNParseErrs		MIB_snmp, 6
 #define MIB_snmpInTooBigs		MIB_snmp, 8
+#define MIB_snmpInNoSuchNames		MIB_snmp, 9
