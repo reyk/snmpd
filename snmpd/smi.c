@@ -61,3 +61,4 @@ smi_getticks(void)
 	gettimeofday(&now, NULL);
 	if (timercmp(&now, &env->sc_starttime, <=))
 		return (0);
+	timersub(&now, &env->sc_starttime, &run);
