@@ -63,3 +63,4 @@ struct ber {
 #define BER_TYPE_NULL		5
 #define BER_TYPE_OBJECT		6
 #define BER_TYPE_ENUMERATED	10
+#define BER_TYPE_SEQUENCE	16
