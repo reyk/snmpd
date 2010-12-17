@@ -61,3 +61,4 @@ struct ber {
 #define BER_TYPE_BITSTRING	3
 #define BER_TYPE_OCTETSTRING	4
 #define BER_TYPE_NULL		5
+#define BER_TYPE_OBJECT		6
