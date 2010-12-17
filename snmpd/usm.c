@@ -62,3 +62,4 @@ void
 usm_generate_keys(void)
 {
 	struct usmuser	*up;
+	const EVP_MD	*md;
