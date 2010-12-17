@@ -63,3 +63,4 @@ snmpe_sig_handler(int sig, short event, void *arg)
 	case SIGINT:
 	case SIGTERM:
 		snmpe_shutdown();
+		break;
