@@ -63,3 +63,4 @@ trap_imsg(struct imsgev *iev, pid_t pid)
 	int			 done = 0;
 	struct snmp_imsg	*sm;
 	u_int32_t		 d;
+	u_int64_t		 l;
