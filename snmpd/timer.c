@@ -61,3 +61,4 @@ timer_cpu(int fd, short event, void *arg)
 	int		 mib[3] = { CTL_KERN, KERN_CPTIME2, 0 }, n;
 	size_t		 len;
 	int64_t		*cptime2;
+
