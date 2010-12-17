@@ -61,3 +61,4 @@ snmpd_sig_handler(int sig, short event, void *arg)
 
 	switch (sig) {
 	case SIGTERM:
+	case SIGINT:
