@@ -61,3 +61,4 @@ char			*usm_passwd2key(const EVP_MD *, char *, int *);
 void
 usm_generate_keys(void)
 {
+	struct usmuser	*up;
