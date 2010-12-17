@@ -63,3 +63,4 @@ struct kroute_node {
 };
 
 struct kroute6_node {
+	RB_ENTRY(kroute6_node)	 entry;
