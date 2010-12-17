@@ -64,3 +64,4 @@ ber_get_element(unsigned long encoding)
 	struct ber_element *elm;
 
 	if ((elm = calloc(1, sizeof(*elm))) == NULL)
+		return NULL;
