@@ -63,3 +63,4 @@ snmpd_sig_handler(int sig, short event, void *arg)
 	case SIGTERM:
 	case SIGINT:
 		die = 1;
+		/* FALLTHROUGH */
