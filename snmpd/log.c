@@ -64,3 +64,4 @@ void
 logit(int pri, const char *fmt, ...)
 {
 	va_list	ap;
+
