@@ -63,3 +63,4 @@ smi_getticks(void)
 		return (0);
 	timersub(&now, &env->sc_starttime, &run);
 	ticks = run.tv_sec * 100;
+	if (run.tv_usec)
