@@ -66,3 +66,4 @@ struct snmp_imsg {
 };
 
 /*
+ * SNMP BER types
