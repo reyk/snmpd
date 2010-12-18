@@ -66,3 +66,4 @@ control_init(struct control_sock *cs)
 		return (-1);
 	}
 
+	if (unlink(cs->cs_name) == -1)
