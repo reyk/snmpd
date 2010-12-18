@@ -67,3 +67,4 @@ logit(int pri, const char *fmt, ...)
 
 	va_start(ap, fmt);
 	vlog(pri, fmt, ap);
+	va_end(ap);
