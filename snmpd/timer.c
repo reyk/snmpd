@@ -68,3 +68,4 @@ timer_cpu(int fd, short event, void *arg)
 		cptime2 = env->sc_cpustates + (CPUSTATES * n);
 		if (sysctl(mib, 3, cp_time[n], &len, NULL, 0) == -1)
 			continue;
+		(void)percentages(CPUSTATES, cptime2, cp_time[n],
