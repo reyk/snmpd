@@ -66,3 +66,4 @@ trap_imsg(struct imsgev *iev, pid_t pid)
 	u_int64_t		 l;
 	u_int8_t		*c;
 	char			 ostr[SNMP_MAX_OID_LEN];
+	struct ber_element	*ber = NULL, *varbind = NULL, *a;
