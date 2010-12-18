@@ -65,3 +65,4 @@ usm_generate_keys(void)
 	const EVP_MD	*md;
 	char		*key;
 	int		 len;
+
