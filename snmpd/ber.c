@@ -67,3 +67,4 @@ ber_get_element(unsigned long encoding)
 		return NULL;
 
 	elm->be_encoding = encoding;
+	ber_set_header(elm, BER_CLASS_UNIVERSAL, BER_TYPE_DEFAULT);
