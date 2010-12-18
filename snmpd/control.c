@@ -68,3 +68,4 @@ control_init(struct control_sock *cs)
 
 	if (unlink(cs->cs_name) == -1)
 		if (errno != ENOENT) {
+			log_warn("control_init: unlink %s", cs->cs_name);
