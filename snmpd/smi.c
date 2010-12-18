@@ -68,3 +68,4 @@ smi_getticks(void)
 
 	return (ticks);
 }
+
