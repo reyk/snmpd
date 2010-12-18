@@ -67,3 +67,4 @@ int		 yylex(void);
 int		 yyerror(const char *, ...);
 int		 kw_cmp(const void *, const void *);
 int		 lookup(char *);
+int		 lgetc(int);
