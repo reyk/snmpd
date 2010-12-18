@@ -67,3 +67,4 @@ timer_cpu(int fd, short event, void *arg)
 		mib[2] = n;
 		cptime2 = env->sc_cpustates + (CPUSTATES * n);
 		if (sysctl(mib, 3, cp_time[n], &len, NULL, 0) == -1)
+			continue;
