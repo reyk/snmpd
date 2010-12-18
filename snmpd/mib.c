@@ -65,3 +65,4 @@ extern struct snmpd	*env;
 
 /*
  * Defined in SNMPv2-MIB.txt (RFC 3418)
+ */
