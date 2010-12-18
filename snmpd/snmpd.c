@@ -65,3 +65,4 @@ snmpd_sig_handler(int sig, short event, void *arg)
 		die = 1;
 		/* FALLTHROUGH */
 	case SIGCHLD:
+		if (check_child(snmpe_pid, "snmp engine")) {
