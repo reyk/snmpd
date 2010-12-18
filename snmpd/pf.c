@@ -65,3 +65,4 @@ pf_init(void)
 	if ((devpf = open("/dev/pf", O_RDONLY)) == -1)
 		fatal("pf_init");
 }
+
