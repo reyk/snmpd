@@ -65,3 +65,4 @@ ber_get_element(unsigned long encoding)
 
 	if ((elm = calloc(1, sizeof(*elm))) == NULL)
 		return NULL;
+
