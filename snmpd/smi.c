@@ -65,3 +65,4 @@ smi_getticks(void)
 	ticks = run.tv_sec * 100;
 	if (run.tv_usec)
 		ticks += run.tv_usec / 10000;
+
