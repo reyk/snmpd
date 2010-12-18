@@ -66,3 +66,4 @@ struct ber {
 #define BER_TYPE_SEQUENCE	16
 #define BER_TYPE_SET		17
 
+/* ber classes */
