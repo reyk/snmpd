@@ -66,3 +66,4 @@ pf_init(void)
 		fatal("pf_init");
 }
 
+int
