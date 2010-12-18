@@ -68,3 +68,4 @@
 #define SNMP_ENGINEID_FMT_OCT	5
 #define SNMP_ENGINEID_FMT_EID	128
 
+enum imsg_type {
