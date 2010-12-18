@@ -66,3 +66,4 @@ usm_generate_keys(void)
 	char		*key;
 	int		 len;
 
+	SLIST_FOREACH(up, &usmuserlist, uu_next) {
