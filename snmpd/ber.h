@@ -67,3 +67,4 @@ struct ber {
 #define BER_TYPE_SET		17
 
 /* ber classes */
+#define BER_CLASS_UNIVERSAL	0x0
