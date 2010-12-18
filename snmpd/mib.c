@@ -67,3 +67,4 @@ extern struct snmpd	*env;
  * Defined in SNMPv2-MIB.txt (RFC 3418)
  */
 
+int	 mib_getsys(struct oid *, struct ber_oid *, struct ber_element **);
