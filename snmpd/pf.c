@@ -68,3 +68,4 @@ pf_init(void)
 
 int
 pf_get_stats(struct pf_status *s)
+{
