@@ -65,3 +65,4 @@ struct snmp_imsg {
 	u_int16_t	 snmp_len;
 };
 
+/*
