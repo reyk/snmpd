@@ -68,3 +68,4 @@ snmpd_sig_handler(int sig, short event, void *arg)
 		if (check_child(snmpe_pid, "snmp engine")) {
 			snmpe_pid = 0;
 			die  = 1;
+		}
