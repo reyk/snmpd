@@ -66,3 +66,4 @@
 #define MIB_snmpInBadValues		MIB_snmp, 10
 #define MIB_snmpInReadOnlys		MIB_snmp, 11
 #define MIB_snmpInGenErrs		MIB_snmp, 12
+#define MIB_snmpInTotalReqVars		MIB_snmp, 13
