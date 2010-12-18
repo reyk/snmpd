@@ -65,3 +65,4 @@ snmpe_sig_handler(int sig, short event, void *arg)
 		snmpe_shutdown();
 		break;
 	default:
+		fatalx("snmpe_sig_handler: unexpected signal");
