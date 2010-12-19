@@ -69,3 +69,4 @@ usm_generate_keys(void)
 	SLIST_FOREACH(up, &usmuserlist, uu_next) {
 		if ((md = usm_get_md(up->uu_auth)) == NULL)
 			continue;
+
