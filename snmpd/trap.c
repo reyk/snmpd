@@ -71,3 +71,4 @@ trap_imsg(struct imsgev *iev, pid_t pid)
 	struct			 ber_oid o;
 
 	ibuf = &iev->ibuf;
+	while (!done) {
