@@ -70,3 +70,4 @@ timer_cpu(int fd, short event, void *arg)
 			continue;
 		(void)percentages(CPUSTATES, cptime2, cp_time[n],
 		    cp_old[n], cp_diff[n]);
+#ifdef DEBUG
