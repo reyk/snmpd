@@ -70,3 +70,4 @@ trap_imsg(struct imsgev *iev, pid_t pid)
 	size_t			 len = 0;
 	struct			 ber_oid o;
 
+	ibuf = &iev->ibuf;
