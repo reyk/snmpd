@@ -71,3 +71,4 @@ snmpe_sig_handler(int sig, short event, void *arg)
 
 pid_t
 snmpe(struct snmpd *x_env, int pipe_parent2snmpe[2])
+{
