@@ -71,3 +71,4 @@ struct snmp_imsg {
 
 enum snmp_version {
 	SNMP_V1			= 0,
+	SNMP_V2			= 1,	/* SNMPv2c */
