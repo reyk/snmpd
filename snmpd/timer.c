@@ -72,3 +72,4 @@ timer_cpu(int fd, short event, void *arg)
 		    cp_old[n], cp_diff[n]);
 #ifdef DEBUG
 		log_debug("timer_cpu: cpu%d %d%% idle in %ds", n,
+		    (cptime2[CP_IDLE] > 1000 ?
