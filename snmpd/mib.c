@@ -71,3 +71,4 @@ int	 mib_getsys(struct oid *, struct ber_oid *, struct ber_element **);
 int	 mib_getsnmp(struct oid *, struct ber_oid *, struct ber_element **);
 int	 mib_sysor(struct oid *, struct ber_oid *, struct ber_element **);
 int	 mib_setsnmp(struct oid *, struct ber_oid *, struct ber_element **);
+
