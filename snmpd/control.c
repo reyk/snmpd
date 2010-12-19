@@ -72,3 +72,4 @@ control_init(struct control_sock *cs)
 			close(fd);
 			return (-1);
 		}
+
