@@ -72,3 +72,4 @@ trap_imsg(struct imsgev *iev, pid_t pid)
 
 	ibuf = &iev->ibuf;
 	while (!done) {
+		while (!done) {
