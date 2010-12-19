@@ -69,3 +69,4 @@ logit(int pri, const char *fmt, ...)
 	vlog(pri, fmt, ap);
 	va_end(ap);
 }
+
