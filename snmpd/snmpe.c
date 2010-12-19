@@ -69,3 +69,4 @@ snmpe_sig_handler(int sig, short event, void *arg)
 	}
 }
 
+pid_t
