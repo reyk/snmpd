@@ -69,3 +69,4 @@ struct kroute6_node {
 };
 
 struct kif_node {
+	RB_ENTRY(kif_node)	 entry;
