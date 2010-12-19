@@ -70,3 +70,4 @@ snmpd_sig_handler(int sig, short event, void *arg)
 			die  = 1;
 		}
 		if (die)
+			snmpd_shutdown(env);
