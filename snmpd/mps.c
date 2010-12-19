@@ -69,3 +69,4 @@ mps_setstr(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 	char			*s, *v;
 
 	if ((oid->o_flags & OID_WR) == 0)
+		return (-1);
