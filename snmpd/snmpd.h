@@ -69,3 +69,4 @@
 #define SNMP_ENGINEID_FMT_EID	128
 
 enum imsg_type {
+	IMSG_NONE,
