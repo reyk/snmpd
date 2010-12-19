@@ -71,3 +71,4 @@ logit(int pri, const char *fmt, ...)
 }
 
 void
+vlog(int pri, const char *fmt, va_list ap)
