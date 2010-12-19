@@ -70,3 +70,4 @@ logit(int pri, const char *fmt, ...)
 	va_end(ap);
 }
 
+void
