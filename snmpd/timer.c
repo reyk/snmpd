@@ -69,3 +69,4 @@ timer_cpu(int fd, short event, void *arg)
 		if (sysctl(mib, 3, cp_time[n], &len, NULL, 0) == -1)
 			continue;
 		(void)percentages(CPUSTATES, cptime2, cp_time[n],
+		    cp_old[n], cp_diff[n]);
