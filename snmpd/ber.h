@@ -69,3 +69,4 @@ struct ber {
 /* ber classes */
 #define BER_CLASS_UNIVERSAL	0x0
 #define BER_CLASS_UNIV		BER_CLASS_UNIVERSAL
+#define BER_CLASS_APPLICATION	0x1
