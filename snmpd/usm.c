@@ -71,3 +71,4 @@ usm_generate_keys(void)
 			continue;
 
 		/* convert auth password to key */
+		len = 0;
