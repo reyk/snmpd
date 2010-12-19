@@ -72,3 +72,4 @@ snmpd_sig_handler(int sig, short event, void *arg)
 		if (die)
 			snmpd_shutdown(env);
 		break;
+	case SIGHUP:
