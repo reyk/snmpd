@@ -69,3 +69,4 @@ struct snmp_imsg {
  * SNMP BER types
  */
 
+enum snmp_version {
