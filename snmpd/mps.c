@@ -72,3 +72,4 @@ mps_setstr(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 		return (-1);
 
 	if (ber->be_class != BER_CLASS_UNIVERSAL ||
+	    ber->be_type != BER_TYPE_OCTETSTRING)
