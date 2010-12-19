@@ -69,3 +69,4 @@ int		 kw_cmp(const void *, const void *);
 int		 lookup(char *);
 int		 lgetc(int);
 int		 lungetc(int);
+int		 findeol(void);
