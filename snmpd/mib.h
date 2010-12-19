@@ -70,3 +70,4 @@
 #define MIB_snmpInTotalSetVars		MIB_snmp, 14
 #define MIB_snmpInGetRequests		MIB_snmp, 15
 #define MIB_snmpInGetNexts		MIB_snmp, 16
+#define MIB_snmpInSetRequests		MIB_snmp, 17
