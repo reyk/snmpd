@@ -69,3 +69,4 @@ trap_imsg(struct imsgev *iev, pid_t pid)
 	struct ber_element	*ber = NULL, *varbind = NULL, *a;
 	size_t			 len = 0;
 	struct			 ber_oid o;
+
