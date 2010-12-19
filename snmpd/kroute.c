@@ -71,3 +71,4 @@ struct kroute6_node {
 struct kif_node {
 	RB_ENTRY(kif_node)	 entry;
 	TAILQ_HEAD(, kif_addr)	 addrs;
+	struct kif		 k;
