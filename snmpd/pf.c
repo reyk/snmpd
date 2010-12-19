@@ -71,3 +71,4 @@ pf_get_stats(struct pf_status *s)
 {
 	extern int	 devpf;
 
+	memset(s, 0, sizeof(*s));
