@@ -69,3 +69,4 @@ snmpd_sig_handler(int sig, short event, void *arg)
 			snmpe_pid = 0;
 			die  = 1;
 		}
+		if (die)
