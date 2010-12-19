@@ -70,3 +70,4 @@ usm_generate_keys(void)
 		if ((md = usm_get_md(up->uu_auth)) == NULL)
 			continue;
 
+		/* convert auth password to key */
