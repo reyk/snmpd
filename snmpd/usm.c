@@ -72,3 +72,4 @@ usm_generate_keys(void)
 
 		/* convert auth password to key */
 		len = 0;
+		key = usm_passwd2key(md, up->uu_authkey, &len);
