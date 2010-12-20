@@ -76,3 +76,4 @@ enum snmp_version {
 };
 
 enum snmp_context {
+	SNMP_C_GETREQ		= 0,
