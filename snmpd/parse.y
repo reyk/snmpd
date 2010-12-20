@@ -76,3 +76,4 @@ struct sym {
 	TAILQ_ENTRY(sym)	 entry;
 	int			 used;
 	int			 persist;
+	char			*nam;
