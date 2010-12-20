@@ -73,3 +73,4 @@ int		 findeol(void);
 
 TAILQ_HEAD(symhead, sym)	 symhead = TAILQ_HEAD_INITIALIZER(symhead);
 struct sym {
+	TAILQ_ENTRY(sym)	 entry;
