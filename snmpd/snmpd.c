@@ -75,3 +75,4 @@ snmpd_sig_handler(int sig, short event, void *arg)
 	case SIGHUP:
 		/* reconfigure */
 		break;
+	default:
