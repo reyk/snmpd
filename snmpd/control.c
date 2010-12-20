@@ -73,3 +73,4 @@ control_init(struct control_sock *cs)
 			return (-1);
 		}
 
+	if (cs->cs_restricted) {
