@@ -76,3 +76,4 @@ snmpe(struct snmpd *x_env, int pipe_parent2snmpe[2])
 	struct passwd	*pw;
 	struct event	 ev_sigint;
 	struct event	 ev_sigterm;
+#ifdef DEBUG
