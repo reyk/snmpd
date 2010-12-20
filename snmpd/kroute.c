@@ -74,3 +74,4 @@ struct kif_node {
 	struct kif		 k;
 };
 
+int	kroute_compare(struct kroute_node *, struct kroute_node *);
