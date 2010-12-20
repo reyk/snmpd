@@ -74,3 +74,4 @@ timer_cpu(int fd, short event, void *arg)
 		log_debug("timer_cpu: cpu%d %d%% idle in %ds", n,
 		    (cptime2[CP_IDLE] > 1000 ?
 		    1000 : (cptime2[CP_IDLE] / 10)), tv.tv_sec);
+#endif
