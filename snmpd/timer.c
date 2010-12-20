@@ -76,3 +76,4 @@ timer_cpu(int fd, short event, void *arg)
 		    1000 : (cptime2[CP_IDLE] / 10)), tv.tv_sec);
 #endif
 	}
+
