@@ -76,3 +76,4 @@ trap_imsg(struct imsgev *iev, pid_t pid)
 			if ((n = imsg_get(ibuf, &imsg)) == -1)
 				goto done;
 			if (n == 0)
+				break;
