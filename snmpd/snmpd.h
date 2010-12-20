@@ -76,3 +76,4 @@ enum imsg_type {
 	IMSG_CTL_NOTIFY
 };
 
+enum {
