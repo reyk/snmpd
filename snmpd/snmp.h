@@ -74,3 +74,4 @@ enum snmp_version {
 	SNMP_V2			= 1,	/* SNMPv2c */
 	SNMP_V3			= 3
 };
+
