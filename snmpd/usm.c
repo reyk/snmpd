@@ -76,3 +76,4 @@ usm_generate_keys(void)
 		free(up->uu_authkey);
 		up->uu_authkey = key;
 		up->uu_authkeylen = len;
+
