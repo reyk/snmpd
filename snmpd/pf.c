@@ -75,3 +75,4 @@ pf_get_stats(struct pf_status *s)
 	if (ioctl(devpf, DIOCGETSTATUS, s)) {
 		log_warn("DIOCGETSTATUS");
 		return (-1);
+	}
