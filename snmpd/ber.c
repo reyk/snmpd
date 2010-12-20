@@ -75,3 +75,4 @@ ber_get_element(unsigned long encoding)
 void
 ber_set_header(struct ber_element *elm, int class, unsigned long type)
 {
+	elm->be_class = class & BER_CLASS_MASK;
