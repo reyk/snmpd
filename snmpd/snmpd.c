@@ -73,3 +73,4 @@ snmpd_sig_handler(int sig, short event, void *arg)
 			snmpd_shutdown(env);
 		break;
 	case SIGHUP:
+		/* reconfigure */
