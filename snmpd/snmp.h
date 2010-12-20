@@ -75,3 +75,4 @@ enum snmp_version {
 	SNMP_V3			= 3
 };
 
+enum snmp_context {
