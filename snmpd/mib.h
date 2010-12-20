@@ -73,3 +73,4 @@
 #define MIB_snmpInSetRequests		MIB_snmp, 17
 #define MIB_snmpInGetResponses		MIB_snmp, 18
 #define MIB_snmpInTraps			MIB_snmp, 19
+#define MIB_snmpOutTooBigs		MIB_snmp, 20
