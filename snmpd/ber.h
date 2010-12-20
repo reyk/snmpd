@@ -76,3 +76,4 @@ struct ber {
 #define BER_CLASS_MASK		0x3
 
 /* common definitions */
+#define BER_MIN_OID_LEN		2	/* OBJECT */
