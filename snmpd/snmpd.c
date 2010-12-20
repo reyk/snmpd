@@ -76,3 +76,4 @@ snmpd_sig_handler(int sig, short event, void *arg)
 		/* reconfigure */
 		break;
 	default:
+		fatalx("unexpected signal");
