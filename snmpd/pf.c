@@ -76,3 +76,4 @@ pf_get_stats(struct pf_status *s)
 		log_warn("DIOCGETSTATUS");
 		return (-1);
 	}
+
