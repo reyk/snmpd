@@ -73,3 +73,4 @@ struct kif_node {
 	TAILQ_HEAD(, kif_addr)	 addrs;
 	struct kif		 k;
 };
+
