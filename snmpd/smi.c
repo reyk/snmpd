@@ -74,3 +74,4 @@ smi_oidlen(struct ber_oid *o)
 {
 	size_t	 i;
 
+	for (i = 0; i < BER_MAX_OID_LEN && o->bo_id[i] != 0; i++)
