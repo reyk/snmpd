@@ -73,3 +73,4 @@ int	 mib_sysor(struct oid *, struct ber_oid *, struct ber_element **);
 int	 mib_setsnmp(struct oid *, struct ber_oid *, struct ber_element **);
 
 static struct oid mib_tree[] = MIB_TREE;
+static struct ber_oid zerodotzero = { { 0, 0 }, 2 };
