@@ -75,3 +75,4 @@ usm_generate_keys(void)
 		key = usm_passwd2key(md, up->uu_authkey, &len);
 		free(up->uu_authkey);
 		up->uu_authkey = key;
+		up->uu_authkeylen = len;
