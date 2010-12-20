@@ -73,3 +73,4 @@ enum imsg_type {
 	IMSG_CTL_OK,		/* answer to snmpctl requests */
 	IMSG_CTL_FAIL,
 	IMSG_CTL_END,
+	IMSG_CTL_NOTIFY
