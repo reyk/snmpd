@@ -75,3 +75,4 @@ struct ber {
 #define BER_CLASS_PRIVATE	0x3
 #define BER_CLASS_MASK		0x3
 
+/* common definitions */
