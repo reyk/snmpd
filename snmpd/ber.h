@@ -73,3 +73,4 @@ struct ber {
 #define BER_CLASS_APP		BER_CLASS_APPLICATION
 #define BER_CLASS_CONTEXT	0x2
 #define BER_CLASS_PRIVATE	0x3
+#define BER_CLASS_MASK		0x3
