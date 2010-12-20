@@ -75,3 +75,4 @@
 #define MIB_snmpInTraps			MIB_snmp, 19
 #define MIB_snmpOutTooBigs		MIB_snmp, 20
 #define MIB_snmpOutNoSuchNames		MIB_snmp, 21
+#define MIB_snmpOutBadValues		MIB_snmp, 22
