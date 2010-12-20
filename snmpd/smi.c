@@ -73,3 +73,4 @@ void
 smi_oidlen(struct ber_oid *o)
 {
 	size_t	 i;
+
