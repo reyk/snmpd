@@ -77,3 +77,4 @@ struct ber {
 
 /* common definitions */
 #define BER_MIN_OID_LEN		2	/* OBJECT */
+#define BER_MAX_OID_LEN		32	/* OBJECT */
