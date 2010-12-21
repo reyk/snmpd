@@ -80,3 +80,4 @@ static struct ber_oid zerodotzero = { { 0, 0 }, 2 };
 /* base MIB tree */
 static struct oid base_mib[] = {
 	{ MIB(mib_2),			OID_MIB },
+	{ MIB(sysDescr),		OID_RD, mib_getsys },
