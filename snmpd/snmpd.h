@@ -80,3 +80,4 @@ enum {
 	PROC_PARENT,	/* Parent process and application interface */
 	PROC_SNMPE	/* SNMP engine */
 } snmpd_process;
+
