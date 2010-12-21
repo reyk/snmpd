@@ -78,3 +78,4 @@ snmpd_sig_handler(int sig, short event, void *arg)
 	default:
 		fatalx("unexpected signal");
 	}
+}
