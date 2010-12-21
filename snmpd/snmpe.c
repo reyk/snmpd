@@ -77,3 +77,4 @@ snmpe(struct snmpd *x_env, int pipe_parent2snmpe[2])
 	struct event	 ev_sigint;
 	struct event	 ev_sigterm;
 #ifdef DEBUG
+	struct oid	*oid;
