@@ -77,3 +77,4 @@ struct sym {
 	int			 used;
 	int			 persist;
 	char			*nam;
+	char			*val;
