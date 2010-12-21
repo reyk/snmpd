@@ -78,3 +78,4 @@ smi_oidlen(struct ber_oid *o)
 		;
 	o->bo_n = i;
 }
+
