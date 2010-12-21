@@ -79,3 +79,4 @@ trap_imsg(struct imsgev *iev, pid_t pid)
 				break;
 
 			switch (imsg.hdr.type) {
+			case IMSG_SNMP_ELEMENT:
