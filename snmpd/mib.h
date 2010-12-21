@@ -80,3 +80,4 @@
 #define MIB_snmpOutGetRequests		MIB_snmp, 25
 #define MIB_snmpOutGetNexts		MIB_snmp, 26
 #define MIB_snmpOutSetRequests		MIB_snmp, 27
+#define MIB_snmpOutGetResponses		MIB_snmp, 28
