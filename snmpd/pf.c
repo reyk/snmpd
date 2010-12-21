@@ -80,3 +80,4 @@ pf_get_stats(struct pf_status *s)
 	return (0);
 }
 
+int
