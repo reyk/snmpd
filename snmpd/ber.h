@@ -80,3 +80,4 @@ struct ber {
 #define BER_MAX_OID_LEN		32	/* OBJECT */
 
 struct ber_oid {
+	u_int32_t	bo_id[BER_MAX_OID_LEN + 1];
