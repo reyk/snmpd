@@ -80,3 +80,4 @@ ber_set_header(struct ber_element *elm, int class, unsigned long type)
 		type = elm->be_encoding;
 	elm->be_type = type;
 }
+
