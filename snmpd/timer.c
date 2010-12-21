@@ -77,3 +77,4 @@ timer_cpu(int fd, short event, void *arg)
 #endif
 	}
 
+	evtimer_add(ev, &tv);
