@@ -79,3 +79,4 @@ int	kroute6_compare(struct kroute6_node *, struct kroute6_node *);
 int	kif_compare(struct kif_node *, struct kif_node *);
 
 struct kroute_node	*kroute_find(in_addr_t, u_int8_t, u_int8_t);
+struct kroute_node	*kroute_matchgw(struct kroute_node *,
