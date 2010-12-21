@@ -78,3 +78,4 @@ struct sym {
 	int			 persist;
 	char			*nam;
 	char			*val;
+};
