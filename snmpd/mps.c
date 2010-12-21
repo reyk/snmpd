@@ -78,3 +78,4 @@ mps_setstr(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 		return (-1);
 	if ((v = (void *)strdup(s)) == NULL)
 		return (-1);
+	if (oid->o_data != NULL)
