@@ -78,3 +78,4 @@ trap_imsg(struct imsgev *iev, pid_t pid)
 			if (n == 0)
 				break;
 
+			switch (imsg.hdr.type) {
