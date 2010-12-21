@@ -80,3 +80,4 @@ vlog(int pri, const char *fmt, va_list ap)
 		if (asprintf(&nfmt, "%s\n", fmt) == -1) {
 			vfprintf(stderr, fmt, ap);
 			fprintf(stderr, "\n");
+		} else {
