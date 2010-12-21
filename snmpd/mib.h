@@ -78,3 +78,4 @@
 #define MIB_snmpOutBadValues		MIB_snmp, 22
 #define MIB_snmpOutGenErrs		MIB_snmp, 24
 #define MIB_snmpOutGetRequests		MIB_snmp, 25
+#define MIB_snmpOutGetNexts		MIB_snmp, 26
