@@ -80,3 +80,4 @@ control_init(struct control_sock *cs)
 		old_umask = umask(S_IXUSR|S_IXGRP|S_IWOTH|S_IROTH|S_IXOTH);
 		mode = S_IRUSR|S_IWUSR|S_IRGRP|S_IWGRP;
 	}
+
