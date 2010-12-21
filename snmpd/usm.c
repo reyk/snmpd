@@ -78,3 +78,4 @@ usm_generate_keys(void)
 		up->uu_authkeylen = len;
 
 		/* optionally convert privacy password to key */
+		if (up->uu_priv != PRIV_NONE) {
