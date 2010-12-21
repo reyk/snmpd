@@ -77,3 +77,4 @@
 #define MIB_snmpOutNoSuchNames		MIB_snmp, 21
 #define MIB_snmpOutBadValues		MIB_snmp, 22
 #define MIB_snmpOutGenErrs		MIB_snmp, 24
+#define MIB_snmpOutGetRequests		MIB_snmp, 25
