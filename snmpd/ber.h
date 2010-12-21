@@ -79,3 +79,4 @@ struct ber {
 #define BER_MIN_OID_LEN		2	/* OBJECT */
 #define BER_MAX_OID_LEN		32	/* OBJECT */
 
+struct ber_oid {
