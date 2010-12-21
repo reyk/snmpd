@@ -77,3 +77,4 @@ usm_generate_keys(void)
 		up->uu_authkey = key;
 		up->uu_authkeylen = len;
 
+		/* optionally convert privacy password to key */
