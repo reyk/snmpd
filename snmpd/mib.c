@@ -77,3 +77,4 @@ static struct ber_oid zerodotzero = { { 0, 0 }, 2 };
 
 #define sizeofa(_a) (sizeof(_a) / sizeof((_a)[0]))
 
+/* base MIB tree */
