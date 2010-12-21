@@ -79,3 +79,4 @@ struct sym {
 	char			*nam;
 	char			*val;
 };
+int		 symset(const char *, const char *, int);
