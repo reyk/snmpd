@@ -80,3 +80,4 @@ snmpe(struct snmpd *x_env, int pipe_parent2snmpe[2])
 	struct oid	*oid;
 #endif
 
+	switch (pid = fork()) {
