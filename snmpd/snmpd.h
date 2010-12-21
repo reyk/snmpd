@@ -78,3 +78,4 @@ enum imsg_type {
 
 enum {
 	PROC_PARENT,	/* Parent process and application interface */
+	PROC_SNMPE	/* SNMP engine */
