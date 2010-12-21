@@ -80,3 +80,4 @@ usm_generate_keys(void)
 		/* optionally convert privacy password to key */
 		if (up->uu_priv != PRIV_NONE) {
 			arc4random_buf(&up->uu_salt, sizeof(up->uu_salt));
+
