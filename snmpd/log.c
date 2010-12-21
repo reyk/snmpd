@@ -77,3 +77,4 @@ vlog(int pri, const char *fmt, va_list ap)
 
 	if (debug) {
 		/* best effort in out of mem situations */
+		if (asprintf(&nfmt, "%s\n", fmt) == -1) {
