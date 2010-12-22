@@ -82,3 +82,4 @@
 #define MIB_snmpOutSetRequests		MIB_snmp, 27
 #define MIB_snmpOutGetResponses		MIB_snmp, 28
 #define MIB_snmpOutTraps		MIB_snmp, 29
+#define MIB_snmpEnableAuthenTraps	MIB_snmp, 30
