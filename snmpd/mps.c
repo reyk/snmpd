@@ -82,3 +82,4 @@ mps_setstr(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 		free(oid->o_data);
 	oid->o_data = v;
 	oid->o_val = strlen(v);
+
