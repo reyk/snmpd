@@ -82,3 +82,4 @@ control_init(struct control_sock *cs)
 	}
 
 	if (bind(fd, (struct sockaddr *)&sun, sizeof(sun)) == -1) {
+		log_warn("control_init: bind: %s", cs->cs_name);
