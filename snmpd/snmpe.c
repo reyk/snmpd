@@ -84,3 +84,4 @@ snmpe(struct snmpd *x_env, int pipe_parent2snmpe[2])
 	case -1:
 		fatal("snmpe: cannot fork");
 	case 0:
+		break;
