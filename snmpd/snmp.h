@@ -81,3 +81,4 @@ enum snmp_context {
 	SNMP_C_GETRESP		= 2,
 	SNMP_C_SETREQ		= 3,
 	SNMP_C_TRAP		= 4,
+
