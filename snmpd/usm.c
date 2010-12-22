@@ -81,3 +81,4 @@ usm_generate_keys(void)
 		if (up->uu_priv != PRIV_NONE) {
 			arc4random_buf(&up->uu_salt, sizeof(up->uu_salt));
 
+			len = SNMP_CIPHER_KEYLEN;
