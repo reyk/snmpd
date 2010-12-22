@@ -81,3 +81,4 @@ control_init(struct control_sock *cs)
 		mode = S_IRUSR|S_IWUSR|S_IRGRP|S_IWGRP;
 	}
 
+	if (bind(fd, (struct sockaddr *)&sun, sizeof(sun)) == -1) {
