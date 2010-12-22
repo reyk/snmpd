@@ -83,3 +83,4 @@ trap_imsg(struct imsgev *iev, pid_t pid)
 				if (imsg.hdr.len < (IMSG_HEADER_SIZE +
 				    sizeof(struct snmp_imsg)))
 					goto imsgdone;
+
