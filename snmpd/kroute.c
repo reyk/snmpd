@@ -82,3 +82,4 @@ struct kroute_node	*kroute_find(in_addr_t, u_int8_t, u_int8_t);
 struct kroute_node	*kroute_matchgw(struct kroute_node *,
 			    struct sockaddr_in *);
 int			 kroute_insert(struct kroute_node *);
+int			 kroute_remove(struct kroute_node *);
