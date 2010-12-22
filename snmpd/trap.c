@@ -84,3 +84,4 @@ trap_imsg(struct imsgev *iev, pid_t pid)
 				    sizeof(struct snmp_imsg)))
 					goto imsgdone;
 
+				sm = (struct snmp_imsg *)imsg.data;
