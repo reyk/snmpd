@@ -84,3 +84,4 @@ int
 pfr_get_astats(struct pfr_table *tbl, struct pfr_astats *addr, int *size,
 		int flags)
 {
+	struct pfioc_table	 io;
