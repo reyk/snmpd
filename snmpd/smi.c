@@ -84,3 +84,4 @@ smi_scalar_oidlen(struct ber_oid *o)
 {
 	smi_oidlen(o);
 
+	/* Append .0. */
