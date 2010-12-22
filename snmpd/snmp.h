@@ -82,3 +82,4 @@ enum snmp_context {
 	SNMP_C_SETREQ		= 3,
 	SNMP_C_TRAP		= 4,
 
+	/* SNMPv2 */
