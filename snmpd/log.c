@@ -84,3 +84,4 @@ vlog(int pri, const char *fmt, va_list ap)
 			vfprintf(stderr, nfmt, ap);
 			free(nfmt);
 		}
+		fflush(stderr);
