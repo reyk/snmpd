@@ -83,3 +83,4 @@ timer_cpu(int fd, short event, void *arg)
 void
 timer_init(void)
 {
+	int	 mib[] = { CTL_HW, HW_NCPU }, i;
