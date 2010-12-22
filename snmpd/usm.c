@@ -82,3 +82,4 @@ usm_generate_keys(void)
 			arc4random_buf(&up->uu_salt, sizeof(up->uu_salt));
 
 			len = SNMP_CIPHER_KEYLEN;
+			key = usm_passwd2key(md, up->uu_privkey, &len);
