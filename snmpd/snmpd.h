@@ -81,3 +81,4 @@ enum {
 	PROC_SNMPE	/* SNMP engine */
 } snmpd_process;
 
+/* initially control.h */
