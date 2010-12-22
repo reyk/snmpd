@@ -82,3 +82,4 @@ smi_oidlen(struct ber_oid *o)
 void
 smi_scalar_oidlen(struct ber_oid *o)
 {
+	smi_oidlen(o);
