@@ -83,3 +83,4 @@ struct ber_oid {
 	u_int32_t	bo_id[BER_MAX_OID_LEN + 1];
 	size_t		bo_n;
 };
+
