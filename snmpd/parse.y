@@ -83,3 +83,4 @@ int		 symset(const char *, const char *, int);
 char		*symget(const char *);
 
 struct snmpd			*conf = NULL;
+static int			 errors = 0;
