@@ -84,3 +84,4 @@ char		*symget(const char *);
 
 struct snmpd			*conf = NULL;
 static int			 errors = 0;
+static struct addresslist	*hlist;
