@@ -83,3 +83,4 @@ enum snmp_context {
 	SNMP_C_TRAP		= 4,
 
 	/* SNMPv2 */
+	SNMP_C_GETBULKREQ	= 5,
