@@ -83,3 +83,4 @@ pf_get_stats(struct pf_status *s)
 int
 pfr_get_astats(struct pfr_table *tbl, struct pfr_astats *addr, int *size,
 		int flags)
+{
