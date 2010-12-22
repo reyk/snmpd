@@ -84,3 +84,4 @@ ber_set_header(struct ber_element *elm, int class, unsigned long type)
 void
 ber_link_elements(struct ber_element *prev, struct ber_element *elm)
 {
+	if (prev != NULL) {
