@@ -81,3 +81,4 @@ trap_imsg(struct imsgev *iev, pid_t pid)
 			switch (imsg.hdr.type) {
 			case IMSG_SNMP_ELEMENT:
 				if (imsg.hdr.len < (IMSG_HEADER_SIZE +
+				    sizeof(struct snmp_imsg)))
