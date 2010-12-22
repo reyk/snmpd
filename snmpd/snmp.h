@@ -84,3 +84,4 @@ enum snmp_context {
 
 	/* SNMPv2 */
 	SNMP_C_GETBULKREQ	= 5,
+	SNMP_C_INFORMREQ	= 6,
