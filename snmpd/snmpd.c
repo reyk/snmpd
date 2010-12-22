@@ -84,3 +84,4 @@ snmpd_sig_handler(int sig, short event, void *arg)
 __dead void
 usage(void)
 {
+	extern char	*__progname;
