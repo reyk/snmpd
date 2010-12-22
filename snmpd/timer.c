@@ -82,3 +82,4 @@ timer_cpu(int fd, short event, void *arg)
 
 void
 timer_init(void)
+{
