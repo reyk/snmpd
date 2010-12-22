@@ -82,3 +82,4 @@ enum {
 } snmpd_process;
 
 /* initially control.h */
+struct control_sock {
