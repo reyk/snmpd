@@ -84,3 +84,4 @@
 #define MIB_snmpOutTraps		MIB_snmp, 29
 #define MIB_snmpEnableAuthenTraps	MIB_snmp, 30
 #define MIB_snmpSilentDrops		MIB_snmp, 31
+#define MIB_snmpProxyDrops		MIB_snmp, 32
