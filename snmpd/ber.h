@@ -84,3 +84,4 @@ struct ber_oid {
 	size_t		bo_n;
 };
 
+__BEGIN_DECLS
