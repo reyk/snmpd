@@ -83,3 +83,4 @@ enum {
 
 /* initially control.h */
 struct control_sock {
+	const char	*cs_name;
