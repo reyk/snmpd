@@ -81,3 +81,4 @@ struct sym {
 };
 int		 symset(const char *, const char *, int);
 char		*symget(const char *);
+
