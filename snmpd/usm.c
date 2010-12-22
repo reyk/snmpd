@@ -83,3 +83,4 @@ usm_generate_keys(void)
 
 			len = SNMP_CIPHER_KEYLEN;
 			key = usm_passwd2key(md, up->uu_privkey, &len);
+			free(up->uu_privkey);
