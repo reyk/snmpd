@@ -86,3 +86,4 @@ struct control_sock {
 	const char	*cs_name;
 	struct event	 cs_ev;
 	struct event	 cs_evt;
+	int		 cs_fd;
