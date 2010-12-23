@@ -87,3 +87,4 @@ ber_link_elements(struct ber_element *prev, struct ber_element *elm)
 	if (prev != NULL) {
 		if ((prev->be_encoding == BER_TYPE_SEQUENCE ||
 		    prev->be_encoding == BER_TYPE_SET) &&
+		    prev->be_sub == NULL)
