@@ -87,3 +87,4 @@ enum snmp_context {
 	SNMP_C_INFORMREQ	= 6,
 	SNMP_C_TRAPV2		= 7,
 	SNMP_C_REPORT		= 8
+};
