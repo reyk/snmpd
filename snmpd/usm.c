@@ -88,3 +88,4 @@ usm_generate_keys(void)
 		}
 	}
 	return;
+}
