@@ -87,3 +87,4 @@ pfr_get_astats(struct pfr_table *tbl, struct pfr_astats *addr, int *size,
 	struct pfioc_table	 io;
 	extern int		 devpf;
 
+	if (tbl == NULL || size == NULL || *size < 0 ||
