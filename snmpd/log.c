@@ -86,3 +86,4 @@ vlog(int pri, const char *fmt, va_list ap)
 		}
 		fflush(stderr);
 	} else
+		vsyslog(pri, fmt, ap);
