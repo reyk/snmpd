@@ -85,3 +85,4 @@ struct ber_oid {
 };
 
 __BEGIN_DECLS
+struct ber_element	*ber_get_element(unsigned long);
