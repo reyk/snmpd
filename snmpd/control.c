@@ -88,3 +88,4 @@ control_init(struct control_sock *cs)
 		return (-1);
 	}
 	(void)umask(old_umask);
+
