@@ -87,3 +87,4 @@ usm_generate_keys(void)
 			up->uu_privkey = key;
 		}
 	}
+	return;
