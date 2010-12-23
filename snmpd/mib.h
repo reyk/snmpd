@@ -88,3 +88,4 @@
 #define MIB_experimental		MIB_internet, 3
 #define MIB_private			MIB_internet, 4
 #define MIB_enterprises			MIB_private, 1
+#define MIB_security			MIB_internet, 5
