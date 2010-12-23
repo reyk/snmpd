@@ -88,3 +88,4 @@ smi_scalar_oidlen(struct ber_oid *o)
 	if (o->bo_n < BER_MAX_OID_LEN)
 		o->bo_n++;
 }
+
