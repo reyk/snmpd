@@ -85,3 +85,4 @@ int			 kroute_insert(struct kroute_node *);
 int			 kroute_remove(struct kroute_node *);
 void			 kroute_clear(void);
 
+struct kroute6_node	*kroute6_find(const struct in6_addr *, u_int8_t,
