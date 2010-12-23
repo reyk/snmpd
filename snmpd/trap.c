@@ -86,3 +86,4 @@ trap_imsg(struct imsgev *iev, pid_t pid)
 
 				sm = (struct snmp_imsg *)imsg.data;
 
+				if (!state++) {
