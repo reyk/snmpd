@@ -86,3 +86,4 @@ struct ber_oid {
 
 __BEGIN_DECLS
 struct ber_element	*ber_get_element(unsigned long);
+void			 ber_set_header(struct ber_element *, int,
