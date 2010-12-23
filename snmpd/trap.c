@@ -87,3 +87,4 @@ trap_imsg(struct imsgev *iev, pid_t pid)
 				sm = (struct snmp_imsg *)imsg.data;
 
 				if (!state++) {
+					/* First element must be the trap OID */
