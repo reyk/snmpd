@@ -86,3 +86,4 @@ snmpe(struct snmpd *x_env, int pipe_parent2snmpe[2])
 	case 0:
 		break;
 	default:
+		return (pid);
