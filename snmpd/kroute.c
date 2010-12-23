@@ -88,3 +88,4 @@ void			 kroute_clear(void);
 struct kroute6_node	*kroute6_find(const struct in6_addr *, u_int8_t,
 			     u_int8_t);
 struct kroute6_node	*kroute6_matchgw(struct kroute6_node *,
+			    struct sockaddr_in6 *);
