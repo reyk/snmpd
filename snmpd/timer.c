@@ -87,3 +87,4 @@ timer_init(void)
 	size_t	 len;
 
 	len = sizeof(env->sc_ncpu);
+	if (sysctl(mib, 2, &env->sc_ncpu, &len, NULL, 0) == -1)
