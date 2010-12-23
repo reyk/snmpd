@@ -85,3 +85,4 @@ control_init(struct control_sock *cs)
 		log_warn("control_init: bind: %s", cs->cs_name);
 		close(fd);
 		(void)umask(old_umask);
+		return (-1);
