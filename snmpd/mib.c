@@ -85,3 +85,4 @@ static struct oid base_mib[] = {
 	{ MIB(sysUpTime),		OID_RD, mib_getsys },
 	{ MIB(sysContact),		OID_RW, mib_getsys, mps_setstr },
 	{ MIB(sysName),			OID_RW, mib_getsys, mps_setstr },
+	{ MIB(sysLocation),		OID_RW, mib_getsys, mps_setstr },
