@@ -88,3 +88,4 @@ static struct addresslist	*hlist;
 static struct usmuser		*user = NULL;
 
 struct address	*host_v4(const char *);
+struct address	*host_v6(const char *);
