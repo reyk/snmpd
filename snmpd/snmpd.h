@@ -87,3 +87,4 @@ struct control_sock {
 	struct event	 cs_ev;
 	struct event	 cs_evt;
 	int		 cs_fd;
+	int		 cs_restricted;
