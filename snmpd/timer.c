@@ -86,3 +86,4 @@ timer_init(void)
 	int	 mib[] = { CTL_HW, HW_NCPU }, i;
 	size_t	 len;
 
+	len = sizeof(env->sc_ncpu);
