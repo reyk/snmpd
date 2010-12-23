@@ -86,3 +86,4 @@
 #define MIB_snmpSilentDrops		MIB_snmp, 31
 #define MIB_snmpProxyDrops		MIB_snmp, 32
 #define MIB_experimental		MIB_internet, 3
+#define MIB_private			MIB_internet, 4
