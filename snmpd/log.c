@@ -89,3 +89,4 @@ vlog(int pri, const char *fmt, va_list ap)
 		vsyslog(pri, fmt, ap);
 }
 
+
