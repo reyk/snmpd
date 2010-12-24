@@ -92,3 +92,4 @@
 #define MIB_snmpV2			MIB_internet, 6
 #define MIB_snmpDomains			MIB_snmpV2, 1
 #define MIB_snmpProxies			MIB_snmpV2, 2
+#define MIB_snmpModules			MIB_snmpV2, 3
