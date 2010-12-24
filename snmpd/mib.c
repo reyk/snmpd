@@ -90,3 +90,4 @@ static struct oid base_mib[] = {
 	{ MIB(sysORLastChange),		OID_RD, mps_getts },
 	{ MIB(sysORIndex),		OID_TRD, mib_sysor },
 	{ MIB(sysORID),			OID_TRD, mib_sysor },
+	{ MIB(sysORDescr),		OID_TRD, mib_sysor },
