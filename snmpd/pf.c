@@ -91,3 +91,4 @@ pfr_get_astats(struct pfr_table *tbl, struct pfr_astats *addr, int *size,
 	    (*size && addr == NULL)) 
 		return (-1);
 
+	bzero(&io, sizeof io);
