@@ -89,3 +89,4 @@ trap_imsg(struct imsgev *iev, pid_t pid)
 				if (!state++) {
 					/* First element must be the trap OID */
 					if (sm->snmp_type != SNMP_NULL)
+						goto imsgdone;
