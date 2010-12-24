@@ -89,3 +89,4 @@ usage(void)
 	fprintf(stderr, "usage: %s [-dNnv] [-D macro=value] "
 	    "[-f file] [-r path]\n", __progname);
 	exit(1);
+}
