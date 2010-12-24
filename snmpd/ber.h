@@ -89,3 +89,4 @@ struct ber_element	*ber_get_element(unsigned long);
 void			 ber_set_header(struct ber_element *, int,
 			    unsigned long);
 void			 ber_link_elements(struct ber_element *,
+			    struct ber_element *);
