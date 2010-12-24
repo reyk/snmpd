@@ -91,3 +91,4 @@ struct kroute6_node	*kroute6_matchgw(struct kroute6_node *,
 			    struct sockaddr_in6 *);
 int			 kroute6_insert(struct kroute6_node *);
 int			 kroute6_remove(struct kroute6_node *);
+void			 kroute6_clear(void);
