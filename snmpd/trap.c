@@ -91,3 +91,4 @@ trap_imsg(struct imsgev *iev, pid_t pid)
 					if (sm->snmp_type != SNMP_NULL)
 						goto imsgdone;
 					ber_string2oid(sm->snmp_oid, &o);
+					break;
