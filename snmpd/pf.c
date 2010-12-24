@@ -92,3 +92,4 @@ pfr_get_astats(struct pfr_table *tbl, struct pfr_astats *addr, int *size,
 		return (-1);
 
 	bzero(&io, sizeof io);
+	io.pfrio_flags = flags;
