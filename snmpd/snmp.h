@@ -89,3 +89,4 @@ enum snmp_context {
 	SNMP_C_REPORT		= 8
 };
 
+enum snmp_application {
