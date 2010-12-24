@@ -92,3 +92,4 @@ smi_scalar_oidlen(struct ber_oid *o)
 char *
 smi_oidstring(struct ber_oid *o, char *buf, size_t len)
 {
+	char		 str[256];
