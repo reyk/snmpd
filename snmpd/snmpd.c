@@ -91,3 +91,4 @@ usage(void)
 	exit(1);
 }
 
+int
