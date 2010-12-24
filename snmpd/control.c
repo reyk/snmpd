@@ -91,3 +91,4 @@ control_init(struct control_sock *cs)
 
 	if (chmod(cs->cs_name, mode) == -1) {
 		log_warn("control_init: chmod");
+		close(fd);
