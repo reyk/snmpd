@@ -92,3 +92,4 @@ snmpe(struct snmpd *x_env, int pipe_parent2snmpe[2])
 	env = x_env;
 
 	if (control_init(&env->sc_csock) == -1)
+		fatalx("snmpe: control socket setup failed");
