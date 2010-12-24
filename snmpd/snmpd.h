@@ -89,3 +89,4 @@ struct control_sock {
 	int		 cs_fd;
 	int		 cs_restricted;
 };
+
