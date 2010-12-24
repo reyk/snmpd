@@ -90,3 +90,4 @@ usm_generate_keys(void)
 	return;
 }
 
+const EVP_MD *
