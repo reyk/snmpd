@@ -89,3 +89,4 @@ control_init(struct control_sock *cs)
 	}
 	(void)umask(old_umask);
 
+	if (chmod(cs->cs_name, mode) == -1) {
