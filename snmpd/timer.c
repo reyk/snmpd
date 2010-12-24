@@ -90,3 +90,4 @@ timer_init(void)
 	if (sysctl(mib, 2, &env->sc_ncpu, &len, NULL, 0) == -1)
 		fatal("sysctl");
 
+	env->sc_cpustates = calloc(env->sc_ncpu, CPUSTATES * sizeof(int64_t));
