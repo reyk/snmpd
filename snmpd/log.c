@@ -92,3 +92,4 @@ vlog(int pri, const char *fmt, va_list ap)
 
 void
 log_warn(const char *emsg, ...)
+{
