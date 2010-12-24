@@ -91,3 +91,4 @@ usm_generate_keys(void)
 }
 
 const EVP_MD *
+usm_get_md(enum usmauth ua)
