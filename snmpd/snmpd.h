@@ -90,3 +90,4 @@ struct control_sock {
 	int		 cs_restricted;
 };
 
+enum blockmodes {
