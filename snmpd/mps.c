@@ -92,3 +92,4 @@ mps_getint(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 	*elm = ber_add_integer(*elm, oid->o_val);
 	return (0);
 }
+
