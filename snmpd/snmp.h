@@ -90,3 +90,4 @@ enum snmp_context {
 };
 
 enum snmp_application {
+	SNMP_T_IPADDR		= 0,
