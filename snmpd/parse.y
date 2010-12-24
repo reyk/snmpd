@@ -91,3 +91,4 @@ struct address	*host_v4(const char *);
 struct address	*host_v6(const char *);
 int		 host_dns(const char *, struct addresslist *,
 		    int, in_port_t, struct ber_oid *, char *);
+int		 host(const char *, struct addresslist *,
