@@ -90,3 +90,4 @@ ber_link_elements(struct ber_element *prev, struct ber_element *elm)
 		    prev->be_sub == NULL)
 			prev->be_sub = elm;
 		else
+			prev->be_next = elm;
