@@ -89,3 +89,4 @@ static struct usmuser		*user = NULL;
 
 struct address	*host_v4(const char *);
 struct address	*host_v6(const char *);
+int		 host_dns(const char *, struct addresslist *,
