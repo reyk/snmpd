@@ -89,3 +89,4 @@ smi_scalar_oidlen(struct ber_oid *o)
 		o->bo_n++;
 }
 
+char *
