@@ -90,3 +90,4 @@
 #define MIB_enterprises			MIB_private, 1
 #define MIB_security			MIB_internet, 5
 #define MIB_snmpV2			MIB_internet, 6
+#define MIB_snmpDomains			MIB_snmpV2, 1
