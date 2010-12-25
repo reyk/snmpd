@@ -95,3 +95,4 @@ timer_init(void)
 	cp_old = calloc(env->sc_ncpu, sizeof(int64_t *));
 	cp_diff = calloc(env->sc_ncpu, sizeof(int64_t *));
 	if (env->sc_cpustates == NULL ||
+	    cp_time == NULL || cp_old == NULL || cp_diff == NULL)
