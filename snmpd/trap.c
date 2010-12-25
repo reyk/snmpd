@@ -94,3 +94,4 @@ trap_imsg(struct imsgev *iev, pid_t pid)
 					break;
 				}
 
+				ber = ber_add_sequence(ber);
