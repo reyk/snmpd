@@ -93,3 +93,4 @@ timer_init(void)
 	env->sc_cpustates = calloc(env->sc_ncpu, CPUSTATES * sizeof(int64_t));
 	cp_time = calloc(env->sc_ncpu, sizeof(int64_t *));
 	cp_old = calloc(env->sc_ncpu, sizeof(int64_t *));
+	cp_diff = calloc(env->sc_ncpu, sizeof(int64_t *));
