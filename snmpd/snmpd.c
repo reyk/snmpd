@@ -95,3 +95,4 @@ int
 main(int argc, char *argv[])
 {
 	int			 c;
+	struct snmpd		*env;
