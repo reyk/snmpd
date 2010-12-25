@@ -94,3 +94,4 @@ ber_link_elements(struct ber_element *prev, struct ber_element *elm)
 	}
 }
 
+struct ber_element *
