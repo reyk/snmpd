@@ -93,3 +93,4 @@ int		 host_dns(const char *, struct addresslist *,
 		    int, in_port_t, struct ber_oid *, char *);
 int		 host(const char *, struct addresslist *,
 		    int, in_port_t, struct ber_oid *, char *);
+
