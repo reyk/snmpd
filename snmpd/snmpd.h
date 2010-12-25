@@ -96,3 +96,4 @@ enum blockmodes {
 };
 
 struct imsgev {
+	struct imsgbuf		 ibuf;
