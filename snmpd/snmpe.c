@@ -94,3 +94,4 @@ snmpe(struct snmpd *x_env, int pipe_parent2snmpe[2])
 	if (control_init(&env->sc_csock) == -1)
 		fatalx("snmpe: control socket setup failed");
 	if (control_init(&env->sc_rcsock) == -1)
+		fatalx("snmpe: restricted control socket setup failed");
