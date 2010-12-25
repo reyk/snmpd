@@ -94,3 +94,4 @@ const EVP_MD *
 usm_get_md(enum usmauth ua)
 {
 	switch (ua) {
+	case AUTH_MD5:
