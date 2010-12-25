@@ -96,3 +96,4 @@ log_warn(const char *emsg, ...)
 	char	*nfmt;
 	va_list	 ap;
 
+	/* best effort to even work in out of memory situations */
