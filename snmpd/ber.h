@@ -96,3 +96,4 @@ void			 ber_replace_elements(struct ber_element *,
 struct ber_element	*ber_add_sequence(struct ber_element *);
 struct ber_element	*ber_add_set(struct ber_element *);
 struct ber_element	*ber_add_integer(struct ber_element *, long long);
+int			 ber_get_integer(struct ber_element *, long long *);
