@@ -95,3 +95,4 @@ log_warn(const char *emsg, ...)
 {
 	char	*nfmt;
 	va_list	 ap;
+
