@@ -93,3 +93,4 @@ enum snmp_application {
 	SNMP_T_IPADDR		= 0,
 	SNMP_T_COUNTER32	= 1,
 	SNMP_T_GAUGE32		= 2,
+	SNMP_T_UNSIGNED32	= 2,
