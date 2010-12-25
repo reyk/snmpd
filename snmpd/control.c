@@ -94,3 +94,4 @@ control_init(struct control_sock *cs)
 		close(fd);
 		(void)unlink(cs->cs_name);
 		return (-1);
+	}
