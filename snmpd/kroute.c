@@ -95,3 +95,4 @@ void			 kroute6_clear(void);
 
 struct kif_node		*kif_find(u_short);
 struct kif_node		*kif_insert(u_short);
+int			 kif_remove(struct kif_node *);
