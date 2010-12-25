@@ -96,3 +96,4 @@ smi_oidstring(struct ber_oid *o, char *buf, size_t len)
 	struct oid	*value, key;
 	size_t		 i, lookup = 1;
 
+	bzero(buf, len);
