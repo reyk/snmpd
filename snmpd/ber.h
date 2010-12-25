@@ -94,3 +94,4 @@ struct ber_element	*ber_unlink_elements(struct ber_element *);
 void			 ber_replace_elements(struct ber_element *,
 			    struct ber_element *);
 struct ber_element	*ber_add_sequence(struct ber_element *);
+struct ber_element	*ber_add_set(struct ber_element *);
