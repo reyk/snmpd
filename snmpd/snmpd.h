@@ -95,3 +95,4 @@ enum blockmodes {
 	BM_NONBLOCK
 };
 
+struct imsgev {
