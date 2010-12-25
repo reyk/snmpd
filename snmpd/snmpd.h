@@ -93,3 +93,4 @@ struct control_sock {
 enum blockmodes {
 	BM_NORMAL,
 	BM_NONBLOCK
+};
