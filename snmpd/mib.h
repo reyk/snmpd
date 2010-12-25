@@ -96,3 +96,4 @@
 #define MIB_snmpMIB			MIB_snmpModules, 1
 #define MIB_snmpMIBObjects		MIB_snmpMIB, 1
 #define MIB_snmpTrap			MIB_snmpMIBObjects, 4
+#define MIB_snmpTrapOID			MIB_snmpTrap, 1
