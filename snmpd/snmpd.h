@@ -94,3 +94,4 @@ enum blockmodes {
 	BM_NORMAL,
 	BM_NONBLOCK
 };
+
