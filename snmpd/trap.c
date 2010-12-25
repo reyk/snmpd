@@ -96,3 +96,4 @@ trap_imsg(struct imsgev *iev, pid_t pid)
 
 				ber = ber_add_sequence(ber);
 				if (varbind == NULL)
+					varbind = ber;
