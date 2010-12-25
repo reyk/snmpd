@@ -96,3 +96,4 @@ control_init(struct control_sock *cs)
 		return (-1);
 	}
 
+	session_socket_blockmode(fd, BM_NONBLOCK);
