@@ -94,3 +94,4 @@ enum snmp_application {
 	SNMP_T_COUNTER32	= 1,
 	SNMP_T_GAUGE32		= 2,
 	SNMP_T_UNSIGNED32	= 2,
+	SNMP_T_TIMETICKS	= 3,
