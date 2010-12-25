@@ -93,3 +93,4 @@ control_init(struct control_sock *cs)
 		log_warn("control_init: chmod");
 		close(fd);
 		(void)unlink(cs->cs_name);
+		return (-1);
