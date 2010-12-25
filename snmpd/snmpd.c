@@ -96,3 +96,4 @@ main(int argc, char *argv[])
 {
 	int			 c;
 	struct snmpd		*env;
+	struct event		 ev_sigint;
