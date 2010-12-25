@@ -93,3 +93,4 @@ mps_getint(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 	return (0);
 }
 
+int
