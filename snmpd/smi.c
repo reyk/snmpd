@@ -98,3 +98,4 @@ smi_oidstring(struct ber_oid *o, char *buf, size_t len)
 
 	bzero(buf, len);
 	bzero(&key, sizeof(key));
+	bcopy(o, &key.o_id, sizeof(struct ber_oid));
