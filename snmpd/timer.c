@@ -98,3 +98,4 @@ timer_init(void)
 	    cp_time == NULL || cp_old == NULL || cp_diff == NULL)
 		fatal("calloc");
 	for (i = 0; i < env->sc_ncpu; i++) {
+		cp_time[i] = calloc(CPUSTATES, sizeof(int64_t));
