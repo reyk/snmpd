@@ -99,3 +99,4 @@ main(int argc, char *argv[])
 	struct event		 ev_sigint;
 	struct event		 ev_sigterm;
 	struct event		 ev_sigchld;
+	struct event		 ev_sighup;
