@@ -98,3 +98,4 @@ main(int argc, char *argv[])
 	struct snmpd		*env;
 	struct event		 ev_sigint;
 	struct event		 ev_sigterm;
+	struct event		 ev_sigchld;
