@@ -100,3 +100,4 @@ typedef struct {
 		char		*string;
 		struct host	*host;
 		struct timeval	 tv;
+		struct ber_oid	*oid;
