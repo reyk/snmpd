@@ -100,3 +100,4 @@ usm_get_md(enum usmauth ua)
 		return EVP_sha1();
 	case AUTH_NONE:
 	default:
+		return NULL;
