@@ -100,3 +100,4 @@ void			 kif_clear(void);
 struct kif		*kif_update(u_short, int, struct if_data *,
 			    struct sockaddr_dl *);
 
+int			 ka_compare(struct kif_addr *, struct kif_addr *);
