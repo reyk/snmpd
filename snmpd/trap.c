@@ -100,3 +100,4 @@ trap_imsg(struct imsgev *iev, pid_t pid)
 				a = ber_add_oidstring(ber, sm->snmp_oid);
 
 				switch (sm->snmp_type) {
+				case SNMP_OBJECT:
