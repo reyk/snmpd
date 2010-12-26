@@ -100,3 +100,4 @@ timer_init(void)
 	for (i = 0; i < env->sc_ncpu; i++) {
 		cp_time[i] = calloc(CPUSTATES, sizeof(int64_t));
 		cp_old[i] = calloc(CPUSTATES, sizeof(int64_t));
+		cp_diff[i] = calloc(CPUSTATES, sizeof(int64_t));
