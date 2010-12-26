@@ -98,3 +98,4 @@ typedef struct {
 	union {
 		int64_t		 number;
 		char		*string;
+		struct host	*host;
