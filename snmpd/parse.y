@@ -97,3 +97,4 @@ int		 host(const char *, struct addresslist *,
 typedef struct {
 	union {
 		int64_t		 number;
+		char		*string;
