@@ -97,3 +97,4 @@ timer_init(void)
 	if (env->sc_cpustates == NULL ||
 	    cp_time == NULL || cp_old == NULL || cp_diff == NULL)
 		fatal("calloc");
+	for (i = 0; i < env->sc_ncpu; i++) {
