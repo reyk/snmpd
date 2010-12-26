@@ -99,3 +99,4 @@ control_init(struct control_sock *cs)
 	session_socket_blockmode(fd, BM_NONBLOCK);
 	cs->cs_fd = fd;
 
+	return (0);
