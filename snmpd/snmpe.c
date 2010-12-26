@@ -99,3 +99,4 @@ snmpe(struct snmpd *x_env, int pipe_parent2snmpe[2])
 	if ((env->sc_sock = snmpe_bind(&env->sc_address)) == -1)
 		fatalx("snmpe: failed to bind SNMP UDP socket");
 
+	if ((pw = getpwnam(SNMPD_USER)) == NULL)
