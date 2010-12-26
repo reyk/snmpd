@@ -100,3 +100,4 @@ struct imsgev {
 	void			(*handler)(int, short, void *);
 	struct event		 ev;
 	void			*data;
+	short			 events;
