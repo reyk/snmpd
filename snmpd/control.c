@@ -100,3 +100,4 @@ control_init(struct control_sock *cs)
 	cs->cs_fd = fd;
 
 	return (0);
+}
