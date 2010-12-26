@@ -99,3 +99,4 @@ typedef struct {
 		int64_t		 number;
 		char		*string;
 		struct host	*host;
+		struct timeval	 tv;
