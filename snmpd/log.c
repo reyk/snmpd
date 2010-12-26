@@ -97,3 +97,4 @@ log_warn(const char *emsg, ...)
 	va_list	 ap;
 
 	/* best effort to even work in out of memory situations */
+	if (emsg == NULL)
