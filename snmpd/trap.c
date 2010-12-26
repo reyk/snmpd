@@ -98,3 +98,4 @@ trap_imsg(struct imsgev *iev, pid_t pid)
 				if (varbind == NULL)
 					varbind = ber;
 				a = ber_add_oidstring(ber, sm->snmp_oid);
+
