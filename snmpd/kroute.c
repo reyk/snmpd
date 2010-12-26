@@ -98,3 +98,4 @@ struct kif_node		*kif_insert(u_short);
 int			 kif_remove(struct kif_node *);
 void			 kif_clear(void);
 struct kif		*kif_update(u_short, int, struct if_data *,
+			    struct sockaddr_dl *);
