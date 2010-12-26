@@ -98,3 +98,4 @@ pfr_get_astats(struct pfr_table *tbl, struct pfr_astats *addr, int *size,
 	io.pfrio_esize = sizeof(*addr);
 	io.pfrio_size = *size;
 	if (ioctl(devpf, DIOCRGETASTATS, &io)) 
+		return (-1);
