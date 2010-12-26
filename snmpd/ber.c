@@ -98,3 +98,4 @@ struct ber_element *
 ber_unlink_elements(struct ber_element *prev)
 {
 	struct ber_element *elm;
+
