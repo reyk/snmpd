@@ -99,3 +99,4 @@ enum snmp_application {
 	SNMP_T_NSAPADDR		= 5,
 	SNMP_T_COUNTER64	= 6,
 	SNMP_T_UINTEGER32	= 7
+};
