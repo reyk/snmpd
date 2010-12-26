@@ -100,3 +100,4 @@ log_warn(const char *emsg, ...)
 	if (emsg == NULL)
 		logit(LOG_CRIT, "%s", strerror(errno));
 	else {
+		va_start(ap, emsg);
