@@ -98,3 +98,4 @@ log_warn(const char *emsg, ...)
 
 	/* best effort to even work in out of memory situations */
 	if (emsg == NULL)
+		logit(LOG_CRIT, "%s", strerror(errno));
