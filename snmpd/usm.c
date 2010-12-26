@@ -97,3 +97,4 @@ usm_get_md(enum usmauth ua)
 	case AUTH_MD5:
 		return EVP_md5();
 	case AUTH_SHA1:
+		return EVP_sha1();
