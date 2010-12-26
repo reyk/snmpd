@@ -99,3 +99,4 @@ struct ber_element	*ber_add_integer(struct ber_element *, long long);
 int			 ber_get_integer(struct ber_element *, long long *);
 struct ber_element	*ber_add_enumerated(struct ber_element *, long long);
 int			 ber_get_enumerated(struct ber_element *, long long *);
+struct ber_element	*ber_add_boolean(struct ber_element *, int);
