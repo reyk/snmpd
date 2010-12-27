@@ -102,3 +102,4 @@ pfr_get_astats(struct pfr_table *tbl, struct pfr_astats *addr, int *size,
 	*size = io.pfrio_size;
 	return (0);
 }
+
