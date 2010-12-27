@@ -104,3 +104,4 @@ control_init(struct control_sock *cs)
 
 int
 control_listen(struct control_sock *cs)
+{
