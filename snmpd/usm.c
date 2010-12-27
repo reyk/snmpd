@@ -102,3 +102,4 @@ usm_get_md(enum usmauth ua)
 	default:
 		return NULL;
 	}
+}
