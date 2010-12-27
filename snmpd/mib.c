@@ -101,3 +101,4 @@ static struct oid base_mib[] = {
 	{ MIB(snmpInASNParseErrs),	OID_RD, mib_getsnmp },
 	{ MIB(snmpInTooBigs),		OID_RD,	mib_getsnmp },
 	{ MIB(snmpInNoSuchNames),	OID_RD, mib_getsnmp },
+	{ MIB(snmpInBadValues),		OID_RD, mib_getsnmp },
