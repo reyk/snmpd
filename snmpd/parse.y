@@ -103,3 +103,4 @@ typedef struct {
 		struct ber_oid	*oid;
 		struct {
 			int		 type;
+			void		*data;
