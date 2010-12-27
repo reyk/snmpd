@@ -104,3 +104,4 @@ enum snmp_application {
 enum snmp_generic_trap {
 	SNMP_TRAP_COLDSTART	= 0,
 	SNMP_TRAP_WARMSTART	= 1,
+	SNMP_TRAP_LINKDOWN	= 2,
