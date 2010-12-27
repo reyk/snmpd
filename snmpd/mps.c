@@ -103,3 +103,4 @@ mps_setint(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 	oid->o_val = i;
 
 	return (0);
+}
