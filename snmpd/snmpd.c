@@ -103,3 +103,4 @@ main(int argc, char *argv[])
 	int			 debug = 0;
 	u_int			 flags = 0;
 	int			 noaction = 0;
+	const char		*conffile = CONF_FILE;
