@@ -104,3 +104,4 @@ timer_init(void)
 		if (cp_time[i] == NULL || cp_old[i] == NULL ||
 		    cp_diff[i] == NULL)
 			fatal("calloc");
+	}
