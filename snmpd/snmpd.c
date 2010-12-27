@@ -101,3 +101,4 @@ main(int argc, char *argv[])
 	struct event		 ev_sigchld;
 	struct event		 ev_sighup;
 	int			 debug = 0;
+	u_int			 flags = 0;
