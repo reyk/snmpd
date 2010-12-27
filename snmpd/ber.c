@@ -101,3 +101,4 @@ ber_unlink_elements(struct ber_element *prev)
 
 	if ((prev->be_encoding == BER_TYPE_SEQUENCE ||
 	    prev->be_encoding == BER_TYPE_SET) &&
+	    prev->be_sub != NULL) {
