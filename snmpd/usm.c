@@ -101,3 +101,4 @@ usm_get_md(enum usmauth ua)
 	case AUTH_NONE:
 	default:
 		return NULL;
+	}
