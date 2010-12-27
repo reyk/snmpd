@@ -104,3 +104,4 @@ trap_imsg(struct imsgev *iev, pid_t pid)
 					if (sm->snmp_len != sizeof(ostr))
 						goto imsgdone;
 					bcopy(sm + 1, &ostr, sm->snmp_len);
+					a = ber_add_oidstring(a, ostr);
