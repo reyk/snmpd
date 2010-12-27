@@ -102,3 +102,4 @@ typedef struct {
 		struct timeval	 tv;
 		struct ber_oid	*oid;
 		struct {
+			int		 type;
