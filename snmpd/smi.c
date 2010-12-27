@@ -104,3 +104,4 @@ smi_oidstring(struct ber_oid *o, char *buf, size_t len)
 	if (env->sc_flags & SNMPD_F_NONAMES)
 		lookup = 0;
 
+	for (i = 0; i < o->bo_n; i++) {
