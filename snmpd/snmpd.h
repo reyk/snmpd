@@ -101,3 +101,4 @@ struct imsgev {
 	struct event		 ev;
 	void			*data;
 	short			 events;
+};
