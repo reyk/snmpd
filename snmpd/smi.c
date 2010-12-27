@@ -102,3 +102,4 @@ smi_oidstring(struct ber_oid *o, char *buf, size_t len)
 	key.o_flags |= OID_KEY;		/* do not match wildcards */
 
 	if (env->sc_flags & SNMPD_F_NONAMES)
+		lookup = 0;
