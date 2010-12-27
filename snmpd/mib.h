@@ -101,3 +101,4 @@
 #define MIB_snmpTraps			MIB_snmpMIBObjects, 5
 #define MIB_coldStart			MIB_snmpTraps, 1
 #define MIB_warmStart			MIB_snmpTraps, 2
+#define MIB_linkDown			MIB_snmpTraps, 3
