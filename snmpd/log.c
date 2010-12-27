@@ -104,3 +104,4 @@ log_warn(const char *emsg, ...)
 
 		if (asprintf(&nfmt, "%s: %s", emsg, strerror(errno)) == -1) {
 			/* we tried it... */
+			vlog(LOG_CRIT, emsg, ap);
