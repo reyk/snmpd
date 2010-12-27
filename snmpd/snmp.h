@@ -101,3 +101,4 @@ enum snmp_application {
 	SNMP_T_UINTEGER32	= 7
 };
 
+enum snmp_generic_trap {
