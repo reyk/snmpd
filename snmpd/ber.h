@@ -102,3 +102,4 @@ int			 ber_get_enumerated(struct ber_element *, long long *);
 struct ber_element	*ber_add_boolean(struct ber_element *, int);
 int			 ber_get_boolean(struct ber_element *, int *);
 struct ber_element	*ber_add_string(struct ber_element *, const char *);
+struct ber_element	*ber_add_nstring(struct ber_element *, const char *,
