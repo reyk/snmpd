@@ -102,3 +102,4 @@ trap_imsg(struct imsgev *iev, pid_t pid)
 				switch (sm->snmp_type) {
 				case SNMP_OBJECT:
 					if (sm->snmp_len != sizeof(ostr))
+						goto imsgdone;
