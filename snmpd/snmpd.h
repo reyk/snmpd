@@ -103,3 +103,4 @@ struct imsgev {
 	short			 events;
 };
 
+struct ctl_conn {
