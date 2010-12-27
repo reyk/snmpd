@@ -104,3 +104,4 @@ int			 ka_compare(struct kif_addr *, struct kif_addr *);
 void			 ka_insert(u_short, struct kif_addr *);
 struct kif_addr		*ka_find(struct sockaddr *);
 int			 ka_remove(struct kif_addr *);
+
