@@ -101,3 +101,4 @@ timer_init(void)
 		cp_time[i] = calloc(CPUSTATES, sizeof(int64_t));
 		cp_old[i] = calloc(CPUSTATES, sizeof(int64_t));
 		cp_diff[i] = calloc(CPUSTATES, sizeof(int64_t));
+		if (cp_time[i] == NULL || cp_old[i] == NULL ||
