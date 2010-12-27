@@ -104,3 +104,4 @@ struct imsgev {
 };
 
 struct ctl_conn {
+	TAILQ_ENTRY(ctl_conn)	 entry;
