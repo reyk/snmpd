@@ -104,3 +104,4 @@ usm_get_md(enum usmauth ua)
 	}
 }
 
+const EVP_CIPHER *
