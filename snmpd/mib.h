@@ -103,3 +103,4 @@
 #define MIB_warmStart			MIB_snmpTraps, 2
 #define MIB_linkDown			MIB_snmpTraps, 3
 #define MIB_linkUp			MIB_snmpTraps, 4
+#define MIB_authenticationFailure	MIB_snmpTraps, 5
