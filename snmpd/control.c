@@ -102,3 +102,4 @@ control_init(struct control_sock *cs)
 	return (0);
 }
 
+int
