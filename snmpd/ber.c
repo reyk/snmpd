@@ -103,3 +103,4 @@ ber_unlink_elements(struct ber_element *prev)
 	    prev->be_encoding == BER_TYPE_SET) &&
 	    prev->be_sub != NULL) {
 		elm = prev->be_sub;
+		prev->be_sub = NULL;
