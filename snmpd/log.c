@@ -103,3 +103,4 @@ log_warn(const char *emsg, ...)
 		va_start(ap, emsg);
 
 		if (asprintf(&nfmt, "%s: %s", emsg, strerror(errno)) == -1) {
+			/* we tried it... */
