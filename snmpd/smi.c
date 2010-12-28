@@ -105,3 +105,4 @@ smi_oidstring(struct ber_oid *o, char *buf, size_t len)
 		lookup = 0;
 
 	for (i = 0; i < o->bo_n; i++) {
+		key.o_oidlen = i + 1;
