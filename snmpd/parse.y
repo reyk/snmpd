@@ -107,3 +107,4 @@ typedef struct {
 			long long	 value;
 		}		 data;
 		enum usmauth	 auth;
+		enum usmpriv	 enc;
