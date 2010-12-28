@@ -106,3 +106,4 @@
 #define MIB_authenticationFailure	MIB_snmpTraps, 5
 #define MIB_egpNeighborLoss		MIB_snmpTraps, 6
 
+/* SNMP-USER-BASED-SM-MIB */
