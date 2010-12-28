@@ -107,3 +107,4 @@ main(int argc, char *argv[])
 	const char		*rcsock = NULL;
 
 	smi_init();
+
