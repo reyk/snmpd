@@ -108,3 +108,4 @@ main(int argc, char *argv[])
 
 	smi_init();
 
+	log_init(1);	/* log to stderr until daemonized */
