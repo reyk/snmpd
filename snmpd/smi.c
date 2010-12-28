@@ -107,3 +107,4 @@ smi_oidstring(struct ber_oid *o, char *buf, size_t len)
 	for (i = 0; i < o->bo_n; i++) {
 		key.o_oidlen = i + 1;
 		if (lookup &&
+		    (value = RB_FIND(oidtree, &smi_oidtree, &key)) != NULL)
