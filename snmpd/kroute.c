@@ -106,3 +106,4 @@ struct kif_addr		*ka_find(struct sockaddr *);
 int			 ka_remove(struct kif_addr *);
 
 u_int8_t	prefixlen_classful(in_addr_t);
+u_int8_t	mask2prefixlen(in_addr_t);
