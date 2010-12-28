@@ -107,3 +107,4 @@ struct ctl_conn {
 	TAILQ_ENTRY(ctl_conn)	 entry;
 	u_int8_t		 flags;
 #define CTL_CONN_NOTIFY		 0x01
+#define CTL_CONN_LOCKED		 0x02	/* restricted mode */
