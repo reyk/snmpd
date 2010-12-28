@@ -107,3 +107,4 @@ log_warn(const char *emsg, ...)
 			vlog(LOG_CRIT, emsg, ap);
 			logit(LOG_CRIT, "%s", strerror(errno));
 		} else {
+			vlog(LOG_CRIT, nfmt, ap);
