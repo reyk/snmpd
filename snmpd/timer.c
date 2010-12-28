@@ -105,3 +105,4 @@ timer_init(void)
 		    cp_diff[i] == NULL)
 			fatal("calloc");
 	}
+
