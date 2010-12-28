@@ -106,3 +106,4 @@ ber_unlink_elements(struct ber_element *prev)
 		prev->be_sub = NULL;
 	} else {
 		elm = prev->be_next;
+		prev->be_next = NULL;
