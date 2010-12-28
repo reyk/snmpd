@@ -105,3 +105,4 @@ void			 ka_insert(u_short, struct kif_addr *);
 struct kif_addr		*ka_find(struct sockaddr *);
 int			 ka_remove(struct kif_addr *);
 
+u_int8_t	prefixlen_classful(in_addr_t);
