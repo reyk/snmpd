@@ -105,3 +105,4 @@ typedef struct {
 			int		 type;
 			void		*data;
 			long long	 value;
+		}		 data;
