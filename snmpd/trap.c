@@ -107,3 +107,4 @@ trap_imsg(struct imsgev *iev, pid_t pid)
 					a = ber_add_oidstring(a, ostr);
 					break;
 				case SNMP_BITSTRING:
+				case SNMP_OCTETSTRING:
