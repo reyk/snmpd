@@ -108,3 +108,4 @@ struct ctl_conn {
 	u_int8_t		 flags;
 #define CTL_CONN_NOTIFY		 0x01
 #define CTL_CONN_LOCKED		 0x02	/* restricted mode */
+	struct imsgev		 iev;
