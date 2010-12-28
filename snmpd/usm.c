@@ -107,3 +107,4 @@ usm_get_md(enum usmauth ua)
 const EVP_CIPHER *
 usm_get_cipher(enum usmpriv up)
 {
+	switch (up) {
