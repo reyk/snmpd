@@ -106,3 +106,4 @@ pfr_get_astats(struct pfr_table *tbl, struct pfr_astats *addr, int *size,
 int
 pfr_get_tstats(struct pfr_table *filter, struct pfr_tstats *tbl, int *size,
 	int flags)
+{
