@@ -107,3 +107,4 @@ int
 pfr_get_tstats(struct pfr_table *filter, struct pfr_tstats *tbl, int *size,
 	int flags)
 {
+	struct pfioc_table	 io;
