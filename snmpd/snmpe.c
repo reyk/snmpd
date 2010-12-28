@@ -105,3 +105,4 @@ snmpe(struct snmpd *x_env, int pipe_parent2snmpe[2])
 #ifndef DEBUG
 	if (chroot(pw->pw_dir) == -1)
 		fatal("snmpe: chroot");
+	if (chdir("/") == -1)
