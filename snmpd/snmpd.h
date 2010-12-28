@@ -106,3 +106,4 @@ struct imsgev {
 struct ctl_conn {
 	TAILQ_ENTRY(ctl_conn)	 entry;
 	u_int8_t		 flags;
+#define CTL_CONN_NOTIFY		 0x01
