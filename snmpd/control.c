@@ -108,3 +108,4 @@ control_listen(struct control_sock *cs)
 	if (cs->cs_name == NULL)
 		return (0);
 
+	if (listen(cs->cs_fd, CONTROL_BACKLOG) == -1) {
