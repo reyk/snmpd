@@ -107,3 +107,4 @@
 #define MIB_egpNeighborLoss		MIB_snmpTraps, 6
 
 /* SNMP-USER-BASED-SM-MIB */
+#define MIB_framework			MIB_snmpModules, 10
