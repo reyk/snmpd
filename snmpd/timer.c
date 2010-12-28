@@ -106,3 +106,4 @@ timer_init(void)
 			fatal("calloc");
 	}
 
+	evtimer_set(&cpu_ev, timer_cpu, &cpu_ev);
