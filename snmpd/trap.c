@@ -105,3 +105,4 @@ trap_imsg(struct imsgev *iev, pid_t pid)
 						goto imsgdone;
 					bcopy(sm + 1, &ostr, sm->snmp_len);
 					a = ber_add_oidstring(a, ostr);
+					break;
