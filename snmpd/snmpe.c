@@ -107,3 +107,4 @@ snmpe(struct snmpd *x_env, int pipe_parent2snmpe[2])
 		fatal("snmpe: chroot");
 	if (chdir("/") == -1)
 		fatal("snmpe: chdir(\"/\")");
+#else
