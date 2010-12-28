@@ -105,3 +105,4 @@
 #define MIB_linkUp			MIB_snmpTraps, 4
 #define MIB_authenticationFailure	MIB_snmpTraps, 5
 #define MIB_egpNeighborLoss		MIB_snmpTraps, 6
+
