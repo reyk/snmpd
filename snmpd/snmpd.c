@@ -105,3 +105,4 @@ main(int argc, char *argv[])
 	int			 noaction = 0;
 	const char		*conffile = CONF_FILE;
 	const char		*rcsock = NULL;
+
