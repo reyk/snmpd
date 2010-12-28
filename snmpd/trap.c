@@ -108,3 +108,4 @@ trap_imsg(struct imsgev *iev, pid_t pid)
 					break;
 				case SNMP_BITSTRING:
 				case SNMP_OCTETSTRING:
+				case SNMP_IPADDR:
