@@ -106,3 +106,4 @@ main(int argc, char *argv[])
 	const char		*conffile = CONF_FILE;
 	const char		*rcsock = NULL;
 
+	smi_init();
