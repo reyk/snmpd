@@ -108,3 +108,4 @@ const EVP_CIPHER *
 usm_get_cipher(enum usmpriv up)
 {
 	switch (up) {
+	case PRIV_DES:
