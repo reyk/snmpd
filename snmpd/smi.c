@@ -109,3 +109,4 @@ smi_oidstring(struct ber_oid *o, char *buf, size_t len)
 		if (lookup &&
 		    (value = RB_FIND(oidtree, &smi_oidtree, &key)) != NULL)
 			snprintf(str, sizeof(str), "%s", value->o_name);
+		else
