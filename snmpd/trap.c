@@ -109,3 +109,4 @@ trap_imsg(struct imsgev *iev, pid_t pid)
 				case SNMP_BITSTRING:
 				case SNMP_OCTETSTRING:
 				case SNMP_IPADDR:
+					if ((sm->snmp_len < 1) ||
