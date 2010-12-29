@@ -110,3 +110,4 @@ log_warn(const char *emsg, ...)
 			vlog(LOG_CRIT, nfmt, ap);
 			free(nfmt);
 		}
+		va_end(ap);
