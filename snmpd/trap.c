@@ -111,3 +111,4 @@ trap_imsg(struct imsgev *iev, pid_t pid)
 				case SNMP_IPADDR:
 					if ((sm->snmp_len < 1) ||
 					    (sm->snmp_len >= SNMPD_MAXSTRLEN))
+						goto imsgdone;
