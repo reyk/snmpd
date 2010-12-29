@@ -112,3 +112,4 @@ u_int8_t	mask2prefixlen6(struct sockaddr_in6 *);
 struct in6_addr *prefixlen2mask6(u_int8_t);
 void		get_rtaddrs(int, struct sockaddr *, struct sockaddr **);
 void		if_change(u_short, int, struct if_data *, struct sockaddr_dl *);
+void		if_newaddr(u_short, struct sockaddr *, struct sockaddr *,
