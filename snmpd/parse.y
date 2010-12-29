@@ -110,3 +110,4 @@ typedef struct {
 		enum usmpriv	 enc;
 	} v;
 	int lineno;
+} YYSTYPE;
