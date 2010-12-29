@@ -109,3 +109,4 @@ int			 ber_get_nstring(struct ber_element *, void **,
 			    size_t *);
 struct ber_element	*ber_add_bitstring(struct ber_element *, const void *,
 			    size_t);
+int			 ber_get_bitstring(struct ber_element *, void **,
