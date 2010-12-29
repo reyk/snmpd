@@ -112,3 +112,4 @@ trap_imsg(struct imsgev *iev, pid_t pid)
 					if ((sm->snmp_len < 1) ||
 					    (sm->snmp_len >= SNMPD_MAXSTRLEN))
 						goto imsgdone;
+					c = (u_int8_t *)(sm + 1);
