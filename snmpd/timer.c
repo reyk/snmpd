@@ -109,3 +109,4 @@ timer_init(void)
 	evtimer_set(&cpu_ev, timer_cpu, &cpu_ev);
 	timer_cpu(0, EV_TIMEOUT, &cpu_ev);
 }
+
