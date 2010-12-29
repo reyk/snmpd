@@ -112,3 +112,4 @@ struct ctl_conn {
 
 };
 TAILQ_HEAD(ctl_connlist, ctl_conn);
+extern  struct ctl_connlist ctl_conns;
