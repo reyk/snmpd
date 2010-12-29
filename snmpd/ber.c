@@ -111,3 +111,4 @@ ber_unlink_elements(struct ber_element *prev)
 
 	return (elm);
 }
+
