@@ -112,3 +112,4 @@ log_warn(const char *emsg, ...)
 		}
 		va_end(ap);
 	}
+}
