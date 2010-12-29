@@ -111,3 +111,4 @@ enum snmp_generic_trap {
 	SNMP_TRAP_ENTERPRISE	= 6
 };
 
+enum snmp_error {
