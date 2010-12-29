@@ -110,3 +110,4 @@ enum snmp_generic_trap {
 	SNMP_TRAP_EGPNEIGHLOSS	= 5,
 	SNMP_TRAP_ENTERPRISE	= 6
 };
+
