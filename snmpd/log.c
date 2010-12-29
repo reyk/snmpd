@@ -109,3 +109,4 @@ log_warn(const char *emsg, ...)
 		} else {
 			vlog(LOG_CRIT, nfmt, ap);
 			free(nfmt);
+		}
