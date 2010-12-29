@@ -111,3 +111,4 @@ struct ctl_conn {
 	struct imsgev		 iev;
 
 };
+TAILQ_HEAD(ctl_connlist, ctl_conn);
