@@ -109,3 +109,4 @@ control_listen(struct control_sock *cs)
 		return (0);
 
 	if (listen(cs->cs_fd, CONTROL_BACKLOG) == -1) {
+		log_warn("control_listen: listen");
