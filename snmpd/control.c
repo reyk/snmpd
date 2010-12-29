@@ -112,3 +112,4 @@ control_listen(struct control_sock *cs)
 		log_warn("control_listen: listen");
 		return (-1);
 	}
+
