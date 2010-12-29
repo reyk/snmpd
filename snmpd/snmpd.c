@@ -112,3 +112,4 @@ main(int argc, char *argv[])
 
 	while ((c = getopt(argc, argv, "dD:nNf:r:v")) != -1) {
 		switch (c) {
+		case 'd':
