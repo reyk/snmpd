@@ -109,3 +109,4 @@ snmpe(struct snmpd *x_env, int pipe_parent2snmpe[2])
 		fatal("snmpe: chdir(\"/\")");
 #else
 #warning disabling privilege revocation and chroot in DEBUG mode
+#endif
