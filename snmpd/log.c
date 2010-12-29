@@ -111,3 +111,4 @@ log_warn(const char *emsg, ...)
 			free(nfmt);
 		}
 		va_end(ap);
+	}
