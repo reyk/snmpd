@@ -110,3 +110,4 @@ pfr_get_tstats(struct pfr_table *filter, struct pfr_tstats *tbl, int *size,
 	struct pfioc_table	 io;
 	extern int		 devpf;
 
+	if (size == NULL || *size < 0 || (*size && tbl == NULL))
