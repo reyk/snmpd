@@ -109,3 +109,4 @@ static struct oid base_mib[] = {
 	{ MIB(snmpInGetRequests),	OID_RD, mib_getsnmp },
 	{ MIB(snmpInGetNexts),		OID_RD, mib_getsnmp },
 	{ MIB(snmpInSetRequests),	OID_RD, mib_getsnmp },
+	{ MIB(snmpInGetResponses),	OID_RD, mib_getsnmp },
