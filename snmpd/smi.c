@@ -111,3 +111,4 @@ smi_oidstring(struct ber_oid *o, char *buf, size_t len)
 			snprintf(str, sizeof(str), "%s", value->o_name);
 		else
 			snprintf(str, sizeof(str), "%d", key.o_oid[i]);
+		strlcat(buf, str, len);
