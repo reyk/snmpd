@@ -109,3 +109,4 @@ typedef struct {
 		enum usmauth	 auth;
 		enum usmpriv	 enc;
 	} v;
+	int lineno;
