@@ -109,3 +109,4 @@ u_int8_t	prefixlen_classful(in_addr_t);
 u_int8_t	mask2prefixlen(in_addr_t);
 in_addr_t	prefixlen2mask(u_int8_t);
 u_int8_t	mask2prefixlen6(struct sockaddr_in6 *);
+struct in6_addr *prefixlen2mask6(u_int8_t);
