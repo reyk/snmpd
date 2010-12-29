@@ -112,3 +112,4 @@ timer_init(void)
 
 /*
  * percentages() function to calculate CPU utilization.
+ * Source code derived from the top(1) utility:
