@@ -110,3 +110,4 @@ smi_oidstring(struct ber_oid *o, char *buf, size_t len)
 		    (value = RB_FIND(oidtree, &smi_oidtree, &key)) != NULL)
 			snprintf(str, sizeof(str), "%s", value->o_name);
 		else
+			snprintf(str, sizeof(str), "%d", key.o_oid[i]);
