@@ -109,3 +109,4 @@ usm_get_cipher(enum usmpriv up)
 {
 	switch (up) {
 	case PRIV_DES:
+		return EVP_des_cbc();
