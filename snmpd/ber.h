@@ -112,3 +112,4 @@ struct ber_element	*ber_add_bitstring(struct ber_element *, const void *,
 int			 ber_get_bitstring(struct ber_element *, void **,
 			    size_t *);
 struct ber_element	*ber_add_null(struct ber_element *);
+int			 ber_get_null(struct ber_element *);
