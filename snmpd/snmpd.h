@@ -110,3 +110,4 @@ struct ctl_conn {
 #define CTL_CONN_LOCKED		 0x02	/* restricted mode */
 	struct imsgev		 iev;
 
+};
