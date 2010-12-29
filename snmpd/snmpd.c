@@ -110,3 +110,4 @@ main(int argc, char *argv[])
 
 	log_init(1);	/* log to stderr until daemonized */
 
+	while ((c = getopt(argc, argv, "dD:nNf:r:v")) != -1) {
