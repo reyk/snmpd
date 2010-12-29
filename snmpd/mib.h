@@ -110,3 +110,4 @@
 #define MIB_framework			MIB_snmpModules, 10
 #define MIB_frameworkObjects		MIB_framework, 2
 #define OIDIDX_snmpEngine		9
+#define MIB_snmpEngine			MIB_frameworkObjects, 1
