@@ -111,3 +111,4 @@ usm_get_cipher(enum usmpriv up)
 	case PRIV_DES:
 		return EVP_des_cbc();
 	case PRIV_AES:
+		return EVP_aes_128_cfb128();
