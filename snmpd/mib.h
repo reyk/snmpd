@@ -114,3 +114,4 @@
 #define MIB_snmpEngineID		MIB_snmpEngine, 1
 #define MIB_snmpEngineBoots		MIB_snmpEngine, 2
 #define MIB_snmpEngineTime		MIB_snmpEngine, 3
+#define MIB_snmpEngineMaxMsgSize	MIB_snmpEngine, 4
