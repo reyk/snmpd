@@ -114,3 +114,4 @@ usm_get_cipher(enum usmpriv up)
 		return EVP_aes_128_cfb128();
 	case PRIV_NONE:
 	default:
+		return NULL;
