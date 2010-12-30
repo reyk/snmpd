@@ -116,3 +116,4 @@ int			 ber_get_null(struct ber_element *);
 struct ber_element	*ber_add_eoc(struct ber_element *);
 int			 ber_get_eoc(struct ber_element *);
 struct ber_element	*ber_add_oid(struct ber_element *, struct ber_oid *);
+struct ber_element	*ber_add_noid(struct ber_element *, struct ber_oid *, int);
