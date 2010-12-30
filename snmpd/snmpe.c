@@ -116,3 +116,4 @@ snmpe(struct snmpd *x_env, int pipe_parent2snmpe[2])
 
 #ifndef DEBUG
 	if (setgroups(1, &pw->pw_gid) ||
+	    setresgid(pw->pw_gid, pw->pw_gid, pw->pw_gid) ||
