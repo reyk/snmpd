@@ -116,3 +116,4 @@ control_listen(struct control_sock *cs)
 	event_set(&cs->cs_ev, cs->cs_fd, EV_READ,
 	    control_accept, cs);
 	event_add(&cs->cs_ev, NULL);
+	evtimer_set(&cs->cs_evt, control_accept, cs);
