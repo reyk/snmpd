@@ -115,3 +115,4 @@ timer_init(void)
  * Source code derived from the top(1) utility:
  *
  * Copyright (c) 1984, 1989, William LeFebvre, Rice University
+ * Copyright (c) 1989, 1990, 1992, William LeFebvre, Northwestern University
