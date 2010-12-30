@@ -115,3 +115,4 @@ trap_imsg(struct imsgev *iev, pid_t pid)
 					c = (u_int8_t *)(sm + 1);
 					if (sm->snmp_type == SNMP_BITSTRING)
 						a = ber_add_bitstring(a, c,
+						    sm->snmp_len);
