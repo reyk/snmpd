@@ -116,3 +116,4 @@ void		if_newaddr(u_short, struct sockaddr *, struct sockaddr *,
 		    struct sockaddr *);
 void		if_deladdr(u_short, struct sockaddr *, struct sockaddr *,
 		    struct sockaddr *);
+void		if_announce(void *);
