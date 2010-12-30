@@ -114,3 +114,4 @@ enum snmp_generic_trap {
 enum snmp_error {
 	SNMP_ERROR_NONE		= 0,
 	SNMP_ERROR_TOOBIG	= 1,
+	SNMP_ERROR_NOSUCHNAME	= 2,
