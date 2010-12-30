@@ -113,3 +113,4 @@ trap_imsg(struct imsgev *iev, pid_t pid)
 					    (sm->snmp_len >= SNMPD_MAXSTRLEN))
 						goto imsgdone;
 					c = (u_int8_t *)(sm + 1);
+					if (sm->snmp_type == SNMP_BITSTRING)
