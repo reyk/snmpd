@@ -114,3 +114,4 @@ int			 ber_get_bitstring(struct ber_element *, void **,
 struct ber_element	*ber_add_null(struct ber_element *);
 int			 ber_get_null(struct ber_element *);
 struct ber_element	*ber_add_eoc(struct ber_element *);
+int			 ber_get_eoc(struct ber_element *);
