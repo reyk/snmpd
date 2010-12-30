@@ -114,3 +114,4 @@ log_warn(const char *emsg, ...)
 	}
 }
 
+void
