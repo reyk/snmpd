@@ -113,3 +113,4 @@ control_listen(struct control_sock *cs)
 		return (-1);
 	}
 
+	event_set(&cs->cs_ev, cs->cs_fd, EV_READ,
