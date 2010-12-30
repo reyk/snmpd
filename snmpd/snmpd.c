@@ -114,3 +114,4 @@ main(int argc, char *argv[])
 		switch (c) {
 		case 'd':
 			debug = 1;
+			break;
