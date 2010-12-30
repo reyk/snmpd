@@ -115,3 +115,4 @@ snmpe(struct snmpd *x_env, int pipe_parent2snmpe[2])
 	snmpd_process = PROC_SNMPE;
 
 #ifndef DEBUG
+	if (setgroups(1, &pw->pw_gid) ||
