@@ -116,3 +116,4 @@ smi_oidstring(struct ber_oid *o, char *buf, size_t len)
 			strlcat(buf, ".", len);
 	}
 
+	return (buf);
