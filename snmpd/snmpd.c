@@ -115,3 +115,4 @@ main(int argc, char *argv[])
 		case 'd':
 			debug = 1;
 			break;
+		case 'D':
