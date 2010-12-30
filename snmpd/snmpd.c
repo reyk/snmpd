@@ -116,3 +116,4 @@ main(int argc, char *argv[])
 			debug = 1;
 			break;
 		case 'D':
+			if (cmdline_symset(optarg) < 0)
