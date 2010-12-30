@@ -115,3 +115,4 @@ usm_get_cipher(enum usmpriv up)
 	case PRIV_NONE:
 	default:
 		return NULL;
+	}
