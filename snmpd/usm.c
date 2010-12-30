@@ -116,3 +116,4 @@ usm_get_cipher(enum usmpriv up)
 	default:
 		return NULL;
 	}
+}
