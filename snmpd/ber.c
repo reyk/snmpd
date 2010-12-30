@@ -116,3 +116,4 @@ void
 ber_replace_elements(struct ber_element *prev, struct ber_element *new)
 {
 	struct ber_element *ber, *next;
+
