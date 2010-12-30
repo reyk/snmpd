@@ -113,3 +113,4 @@ snmpe(struct snmpd *x_env, int pipe_parent2snmpe[2])
 
 	setproctitle("snmp engine");
 	snmpd_process = PROC_SNMPE;
+
