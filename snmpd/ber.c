@@ -113,3 +113,4 @@ ber_unlink_elements(struct ber_element *prev)
 }
 
 void
+ber_replace_elements(struct ber_element *prev, struct ber_element *new)
