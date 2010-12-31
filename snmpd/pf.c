@@ -117,3 +117,4 @@ pfr_get_tstats(struct pfr_table *filter, struct pfr_tstats *tbl, int *size,
 	if (filter != NULL)
 		io.pfrio_table = *filter;
 	io.pfrio_buffer = tbl;
+	io.pfrio_esize = sizeof(*tbl);
