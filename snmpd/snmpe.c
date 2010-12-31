@@ -120,3 +120,4 @@ snmpe(struct snmpd *x_env, int pipe_parent2snmpe[2])
 	    setresuid(pw->pw_uid, pw->pw_uid, pw->pw_uid))
 		fatal("snmpe: cannot drop privileges");
 #endif
+
