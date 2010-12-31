@@ -119,3 +119,4 @@ log_warnx(const char *emsg, ...)
 {
 	va_list	 ap;
 
+	va_start(ap, emsg);
