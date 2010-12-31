@@ -119,3 +119,4 @@ void		if_deladdr(u_short, struct sockaddr *, struct sockaddr *,
 void		if_announce(void *);
 
 int		fetchtable(void);
+int		fetchifs(u_short);
