@@ -120,3 +120,4 @@ usm_get_cipher(enum usmpriv up)
 
 struct usmuser *
 usm_newuser(char *name, const char **errp)
+{
