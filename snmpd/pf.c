@@ -120,3 +120,4 @@ pfr_get_tstats(struct pfr_table *filter, struct pfr_tstats *tbl, int *size,
 	io.pfrio_esize = sizeof(*tbl);
 	io.pfrio_size = *size;
 	if (ioctl(devpf, DIOCRGETTSTATS, &io))
+		return (-1);
