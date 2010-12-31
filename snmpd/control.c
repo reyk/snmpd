@@ -119,3 +119,4 @@ control_listen(struct control_sock *cs)
 	evtimer_set(&cs->cs_evt, control_accept, cs);
 
 	return (0);
+}
