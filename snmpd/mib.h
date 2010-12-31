@@ -119,3 +119,4 @@
 #define MIB_usmObjects			MIB_usm, 1
 #define MIB_usmStats			MIB_usmObjects, 1
 #define OIDIDX_usmStats			9
+#define OIDVAL_usmErrSecLevel		1
