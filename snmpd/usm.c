@@ -118,3 +118,4 @@ usm_get_cipher(enum usmpriv up)
 	}
 }
 
+struct usmuser *
