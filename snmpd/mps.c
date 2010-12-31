@@ -119,3 +119,4 @@ mps_getreq(struct ber_element *root, struct ber_oid *o, u_int sm_version)
 	struct ber_element	*elm = root;
 	struct oid		 key, *value;
 	unsigned long		 error_type = 0;	/* noSuchObject */
+
