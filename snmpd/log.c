@@ -120,3 +120,4 @@ log_warnx(const char *emsg, ...)
 	va_list	 ap;
 
 	va_start(ap, emsg);
+	vlog(LOG_CRIT, emsg, ap);
