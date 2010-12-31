@@ -118,3 +118,4 @@ timer_init(void)
  * Copyright (c) 1989, 1990, 1992, William LeFebvre, Northwestern University
  *
  * Redistribution and use in source and binary forms, with or without
+ * modification, are permitted provided that the following conditions
