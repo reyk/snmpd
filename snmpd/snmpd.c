@@ -120,3 +120,4 @@ main(int argc, char *argv[])
 				log_warnx("could not parse macro definition %s",
 				    optarg);
 			break;
+		case 'n':
