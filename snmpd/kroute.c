@@ -120,3 +120,4 @@ void		if_announce(void *);
 
 int		fetchtable(void);
 int		fetchifs(u_short);
+void		dispatch_rtmsg(int, short, void *);
