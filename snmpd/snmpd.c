@@ -119,3 +119,4 @@ main(int argc, char *argv[])
 			if (cmdline_symset(optarg) < 0)
 				log_warnx("could not parse macro definition %s",
 				    optarg);
+			break;
