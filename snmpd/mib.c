@@ -120,3 +120,4 @@ static struct oid base_mib[] = {
 	{ MIB(snmpOutSetRequests),	OID_RD, mib_getsnmp },
 	{ MIB(snmpOutGetResponses),	OID_RD, mib_getsnmp },
 	{ MIB(snmpOutTraps),		OID_RD, mib_getsnmp },
+	{ MIB(snmpEnableAuthenTraps),	OID_RW, mib_getsnmp, mib_setsnmp },
