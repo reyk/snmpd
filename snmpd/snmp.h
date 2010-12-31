@@ -119,3 +119,4 @@ enum snmp_error {
 	SNMP_ERROR_READONLY	= 4,
 	SNMP_ERROR_GENERR	= 5,
 
+	/* SNMPv2 */
