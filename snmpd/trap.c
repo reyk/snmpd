@@ -118,3 +118,4 @@ trap_imsg(struct imsgev *iev, pid_t pid)
 						    sm->snmp_len);
 					else
 						a = ber_add_nstring(a, c,
+						    sm->snmp_len);
