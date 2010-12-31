@@ -118,3 +118,4 @@
 #define MIB_usm				MIB_snmpModules, 15
 #define MIB_usmObjects			MIB_usm, 1
 #define MIB_usmStats			MIB_usmObjects, 1
+#define OIDIDX_usmStats			9
