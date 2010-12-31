@@ -120,3 +120,4 @@ extern  struct ctl_connlist ctl_conns;
 
 union kaddr {
 	struct sockaddr		sa;
+	struct sockaddr_in	sin;
