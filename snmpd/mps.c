@@ -122,3 +122,4 @@ mps_getreq(struct ber_element *root, struct ber_oid *o, u_int sm_version)
 
 	if (o->bo_n > BER_MAX_OID_LEN)
 		return (NULL);
+	bzero(&key, sizeof(key));
