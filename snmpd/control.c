@@ -121,3 +121,4 @@ control_listen(struct control_sock *cs)
 	return (0);
 }
 
+void
