@@ -124,3 +124,4 @@ typedef struct {
 %type	<v.string>	hostcmn
 %type	<v.number>	optwrite yesno seclevel
 %type	<v.data>	objtype
+%type	<v.oid>		oid hostoid
