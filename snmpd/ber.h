@@ -121,3 +121,4 @@ struct ber_element	*ber_add_oidstring(struct ber_element *, const char *);
 int			 ber_get_oid(struct ber_element *, struct ber_oid *);
 size_t			 ber_oid2ber(struct ber_oid *, u_int8_t *, size_t);
 int			 ber_string2oid(const char *, struct ber_oid *);
+struct ber_element	*ber_printf_elements(struct ber_element *, char *, ...);
