@@ -124,3 +124,4 @@ usm_newuser(char *name, const char **errp)
 	struct usmuser *up = usm_finduser(name);
 	if (up != NULL) {
 		*errp = "user redefined";
+		return NULL;
