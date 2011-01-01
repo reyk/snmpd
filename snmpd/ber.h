@@ -124,3 +124,4 @@ int			 ber_string2oid(const char *, struct ber_oid *);
 struct ber_element	*ber_printf_elements(struct ber_element *, char *, ...);
 int			 ber_scanf_elements(struct ber_element *, char *, ...);
 ssize_t			 ber_get_writebuf(struct ber *, void **);
+int			 ber_write_elements(struct ber *, struct ber_element *);
