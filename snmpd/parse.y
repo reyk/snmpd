@@ -121,3 +121,4 @@ typedef struct {
 %token	SECLEVEL NONE AUTH ENC USER AUTHKEY ENCKEY ERROR DISABLED
 %token	<v.string>	STRING
 %token  <v.number>	NUMBER
+%type	<v.string>	hostcmn
