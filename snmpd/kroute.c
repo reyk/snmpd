@@ -124,3 +124,4 @@ void		dispatch_rtmsg(int, short, void *);
 int		rtmsg_process(char *, int);
 int		dispatch_rtmsg_addr(struct rt_msghdr *,
 		    struct sockaddr *[RTAX_MAX]);
+
