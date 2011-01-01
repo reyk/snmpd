@@ -123,3 +123,4 @@ typedef struct {
 %token  <v.number>	NUMBER
 %type	<v.string>	hostcmn
 %type	<v.number>	optwrite yesno seclevel
+%type	<v.data>	objtype
