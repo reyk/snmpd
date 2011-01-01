@@ -123,3 +123,4 @@ control_listen(struct control_sock *cs)
 
 void
 control_cleanup(struct control_sock *cs)
+{
