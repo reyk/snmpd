@@ -121,3 +121,4 @@ main(int argc, char *argv[])
 				    optarg);
 			break;
 		case 'n':
+			noaction++;
