@@ -122,3 +122,4 @@ smi_oidstring(struct ber_oid *o, char *buf, size_t len)
 void
 smi_delete(struct oid *oid)
 {
+	struct oid	 key, *value;
