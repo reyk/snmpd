@@ -121,3 +121,4 @@
 #define OIDIDX_usmStats			9
 #define OIDVAL_usmErrSecLevel		1
 #define OIDVAL_usmErrTimeWindow		2
+#define OIDVAL_usmErrUserName		3
