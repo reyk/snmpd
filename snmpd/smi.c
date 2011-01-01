@@ -123,3 +123,4 @@ void
 smi_delete(struct oid *oid)
 {
 	struct oid	 key, *value;
+
