@@ -121,3 +121,4 @@ snmpe(struct snmpd *x_env, int pipe_parent2snmpe[2])
 		fatal("snmpe: cannot drop privileges");
 #endif
 
+#ifdef DEBUG
