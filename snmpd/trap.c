@@ -121,3 +121,4 @@ trap_imsg(struct imsgev *iev, pid_t pid)
 						    sm->snmp_len);
 					break;
 				case SNMP_NULL:
+					a = ber_add_null(a);
