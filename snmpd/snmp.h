@@ -121,3 +121,4 @@ enum snmp_error {
 
 	/* SNMPv2 */
 	SNMP_ERROR_NOACCESS	= 6,
+	SNMP_ERROR_WRONGTYPE	= 7,
