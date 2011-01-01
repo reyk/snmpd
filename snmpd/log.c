@@ -122,3 +122,4 @@ log_warnx(const char *emsg, ...)
 	va_start(ap, emsg);
 	vlog(LOG_CRIT, emsg, ap);
 	va_end(ap);
+}
