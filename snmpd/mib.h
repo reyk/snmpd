@@ -122,3 +122,4 @@
 #define OIDVAL_usmErrSecLevel		1
 #define OIDVAL_usmErrTimeWindow		2
 #define OIDVAL_usmErrUserName		3
+#define OIDVAL_usmErrEngineId		4
