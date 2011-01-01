@@ -122,3 +122,4 @@ union kaddr {
 	struct sockaddr		sa;
 	struct sockaddr_in	sin;
 	struct sockaddr_in6	sin6;
+	char			pad[32];
