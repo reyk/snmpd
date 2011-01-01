@@ -122,3 +122,4 @@ ber_replace_elements(struct ber_element *prev, struct ber_element *new)
 	ber_link_elements(new, next);
 	ber_link_elements(prev, new);
 
+	/* cleanup old element */
