@@ -124,3 +124,4 @@
 #define OIDVAL_usmErrUserName		3
 #define OIDVAL_usmErrEngineId		4
 #define OIDVAL_usmErrDigest		5
+#define OIDVAL_usmErrDecrypt		6
