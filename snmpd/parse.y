@@ -122,3 +122,4 @@ typedef struct {
 %token	<v.string>	STRING
 %token  <v.number>	NUMBER
 %type	<v.string>	hostcmn
+%type	<v.number>	optwrite yesno seclevel
