@@ -124,3 +124,4 @@ ber_replace_elements(struct ber_element *prev, struct ber_element *new)
 
 	/* cleanup old element */
 	ber_free_elements(ber);
+}
