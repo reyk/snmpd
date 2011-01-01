@@ -122,3 +122,4 @@ main(int argc, char *argv[])
 			break;
 		case 'n':
 			noaction++;
+			break;
