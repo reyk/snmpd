@@ -124,3 +124,4 @@ trap_imsg(struct imsgev *iev, pid_t pid)
 					a = ber_add_null(a);
 					break;
 				case SNMP_INTEGER32:
+				case SNMP_COUNTER32:
