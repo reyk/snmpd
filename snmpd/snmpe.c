@@ -123,3 +123,4 @@ snmpe(struct snmpd *x_env, int pipe_parent2snmpe[2])
 
 #ifdef DEBUG
 	for (oid = NULL; (oid = smi_foreach(oid, 0)) != NULL;) {
+		char	 buf[BUFSIZ];
