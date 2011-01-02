@@ -126,3 +126,4 @@
 #define OIDVAL_usmErrDigest		5
 #define OIDVAL_usmErrDecrypt		6
 #define MIB_usmStatsUnsupportedSecLevels MIB_usmStats, OIDVAL_usmErrSecLevel
+#define MIB_usmStatsNotInTimeWindow	MIB_usmStats, OIDVAL_usmErrTimeWindow
