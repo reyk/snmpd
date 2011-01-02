@@ -128,3 +128,4 @@ control_cleanup(struct control_sock *cs)
 		return;
 	event_del(&cs->cs_ev);
 	event_del(&cs->cs_evt);
+	(void)unlink(cs->cs_name);
