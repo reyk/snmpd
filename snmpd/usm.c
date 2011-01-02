@@ -125,3 +125,4 @@ usm_newuser(char *name, const char **errp)
 	if (up != NULL) {
 		*errp = "user redefined";
 		return NULL;
+	}
