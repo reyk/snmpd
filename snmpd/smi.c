@@ -126,3 +126,4 @@ smi_delete(struct oid *oid)
 
 	bcopy(&oid->o_id, &key.o_id, sizeof(struct ber_oid));
 	if ((value = RB_FIND(oidtree, &smi_oidtree, &key)) != NULL &&
+	    value == oid)
