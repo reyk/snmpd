@@ -128,3 +128,4 @@ trap_imsg(struct imsgev *iev, pid_t pid)
 				case SNMP_GAUGE32:
 				case SNMP_TIMETICKS:
 				case SNMP_OPAQUE:
+				case SNMP_UINTEGER32:
