@@ -125,3 +125,4 @@ trap_imsg(struct imsgev *iev, pid_t pid)
 					break;
 				case SNMP_INTEGER32:
 				case SNMP_COUNTER32:
+				case SNMP_GAUGE32:
