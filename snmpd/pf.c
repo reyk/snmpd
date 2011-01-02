@@ -127,3 +127,4 @@ pfr_get_tstats(struct pfr_table *filter, struct pfr_tstats *tbl, int *size,
 
 int
 pfr_buf_grow(struct pfr_buffer *b, int minsize)
+{
