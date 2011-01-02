@@ -125,3 +125,4 @@ int		rtmsg_process(char *, int);
 int		dispatch_rtmsg_addr(struct rt_msghdr *,
 		    struct sockaddr *[RTAX_MAX]);
 
+RB_HEAD(kroute_tree, kroute_node)	krt;
