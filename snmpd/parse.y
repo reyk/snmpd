@@ -126,3 +126,4 @@ typedef struct {
 %type	<v.data>	objtype
 %type	<v.oid>		oid hostoid
 %type	<v.auth>	auth
+%type	<v.enc>		enc
