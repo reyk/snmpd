@@ -125,3 +125,4 @@ main(int argc, char *argv[])
 			break;
 		case 'N':
 			flags |= SNMPD_F_NONAMES;
+			break;
