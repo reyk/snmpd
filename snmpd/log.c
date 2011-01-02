@@ -127,3 +127,4 @@ log_warnx(const char *emsg, ...)
 void
 log_info(const char *emsg, ...)
 {
+	va_list	 ap;
