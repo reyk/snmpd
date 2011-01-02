@@ -125,3 +125,4 @@ static struct oid base_mib[] = {
 	{ MIB(snmpProxyDrops),		OID_RD, mib_getsnmp },
 	{ MIBEND }
 };
+
