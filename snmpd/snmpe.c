@@ -125,3 +125,4 @@ snmpe(struct snmpd *x_env, int pipe_parent2snmpe[2])
 	for (oid = NULL; (oid = smi_foreach(oid, 0)) != NULL;) {
 		char	 buf[BUFSIZ];
 		smi_oidstring(&oid->o_id, buf, sizeof(buf));
+		log_debug("oid %s", buf);
