@@ -128,3 +128,4 @@ main(int argc, char *argv[])
 			break;
 		case 'f':
 			conffile = optarg;
+			break;
