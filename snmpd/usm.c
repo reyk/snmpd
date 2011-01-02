@@ -128,3 +128,4 @@ usm_newuser(char *name, const char **errp)
 	}
 	if ((up = calloc(1, sizeof(*up))) == NULL)
 		fatal("usm");
+	up->uu_name = name;
