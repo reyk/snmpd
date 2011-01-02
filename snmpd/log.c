@@ -128,3 +128,4 @@ void
 log_info(const char *emsg, ...)
 {
 	va_list	 ap;
+
