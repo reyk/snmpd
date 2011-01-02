@@ -128,3 +128,4 @@ typedef struct {
 %type	<v.auth>	auth
 %type	<v.enc>		enc
 
+%%
