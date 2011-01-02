@@ -127,3 +127,4 @@ usm_newuser(char *name, const char **errp)
 		return NULL;
 	}
 	if ((up = calloc(1, sizeof(*up))) == NULL)
+		fatal("usm");
