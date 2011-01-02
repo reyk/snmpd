@@ -128,3 +128,4 @@ smi_delete(struct oid *oid)
 	if ((value = RB_FIND(oidtree, &smi_oidtree, &key)) != NULL &&
 	    value == oid)
 		RB_REMOVE(oidtree, &smi_oidtree, value);
+
