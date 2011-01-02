@@ -125,3 +125,4 @@ pfr_get_tstats(struct pfr_table *filter, struct pfr_tstats *tbl, int *size,
 	return (0);
 }
 
+int
