@@ -126,3 +126,4 @@ int		dispatch_rtmsg_addr(struct rt_msghdr *,
 		    struct sockaddr *[RTAX_MAX]);
 
 RB_HEAD(kroute_tree, kroute_node)	krt;
+RB_PROTOTYPE(kroute_tree, kroute_node, entry, kroute_compare)
