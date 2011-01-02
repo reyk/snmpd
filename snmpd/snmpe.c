@@ -127,3 +127,4 @@ snmpe(struct snmpd *x_env, int pipe_parent2snmpe[2])
 		smi_oidstring(&oid->o_id, buf, sizeof(buf));
 		log_debug("oid %s", buf);
 	}
+#endif
