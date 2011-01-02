@@ -127,3 +127,4 @@ int		dispatch_rtmsg_addr(struct rt_msghdr *,
 
 RB_HEAD(kroute_tree, kroute_node)	krt;
 RB_PROTOTYPE(kroute_tree, kroute_node, entry, kroute_compare)
+RB_GENERATE(kroute_tree, kroute_node, entry, kroute_compare)
