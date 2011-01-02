@@ -125,3 +125,4 @@ typedef struct {
 %type	<v.number>	optwrite yesno seclevel
 %type	<v.data>	objtype
 %type	<v.oid>		oid hostoid
+%type	<v.auth>	auth
