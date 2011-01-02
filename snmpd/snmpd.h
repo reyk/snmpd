@@ -125,3 +125,4 @@ union kaddr {
 	char			pad[32];
 };
 
+struct kroute {
