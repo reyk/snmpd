@@ -126,3 +126,4 @@ int			 ber_scanf_elements(struct ber_element *, char *, ...);
 ssize_t			 ber_get_writebuf(struct ber *, void **);
 int			 ber_write_elements(struct ber *, struct ber_element *);
 void			 ber_set_readbuf(struct ber *, void *, size_t);
+struct ber_element	*ber_read_elements(struct ber *, struct ber_element *);
