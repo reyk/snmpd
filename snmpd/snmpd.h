@@ -127,3 +127,4 @@ union kaddr {
 
 struct kroute {
 	struct in_addr	prefix;
+	struct in_addr	nexthop;
