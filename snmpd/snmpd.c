@@ -130,3 +130,4 @@ main(int argc, char *argv[])
 			conffile = optarg;
 			break;
 		case 'r':
+			rcsock = optarg;
