@@ -130,3 +130,4 @@
 #define MIB_usmStatsUnknownUserNames	MIB_usmStats, OIDVAL_usmErrUserName
 #define MIB_usmStatsUnknownEngineId	MIB_usmStats, OIDVAL_usmErrEngineId
 #define MIB_usmStatsWrongDigests	MIB_usmStats, OIDVAL_usmErrDigest
+#define MIB_usmStatsDecryptionErrors	MIB_usmStats, OIDVAL_usmErrDecrypt
