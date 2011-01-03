@@ -131,3 +131,4 @@ log_info(const char *emsg, ...)
 
 	va_start(ap, emsg);
 	vlog(LOG_INFO, emsg, ap);
+	va_end(ap);
