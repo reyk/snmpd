@@ -130,3 +130,4 @@ int
 mib_getsys(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 {
 	struct ber_oid		 sysoid = OID(MIB_SYSOID_DEFAULT);
+	char			*s = oid->o_data;
