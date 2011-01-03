@@ -131,3 +131,4 @@ main(int argc, char *argv[])
 			break;
 		case 'r':
 			rcsock = optarg;
+			break;
