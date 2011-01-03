@@ -132,3 +132,4 @@ control_cleanup(struct control_sock *cs)
 }
 
 /* ARGSUSED */
+void
