@@ -129,3 +129,4 @@ static struct oid base_mib[] = {
 int
 mib_getsys(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 {
+	struct ber_oid		 sysoid = OID(MIB_SYSOID_DEFAULT);
