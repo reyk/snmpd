@@ -129,3 +129,4 @@ int
 pfr_buf_grow(struct pfr_buffer *b, int minsize)
 {
 	caddr_t	 p;
+	size_t 	 bs;
