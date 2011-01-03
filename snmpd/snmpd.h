@@ -130,3 +130,4 @@ struct kroute {
 	struct in_addr	nexthop;
 	u_long		ticks;
 	u_int16_t	flags;
+	u_short		if_index;
