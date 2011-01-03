@@ -130,3 +130,4 @@ smi_delete(struct oid *oid)
 		RB_REMOVE(oidtree, &smi_oidtree, value);
 
 	if (oid->o_data != NULL)
+		free(oid->o_data);
