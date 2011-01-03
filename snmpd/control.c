@@ -131,3 +131,4 @@ control_cleanup(struct control_sock *cs)
 	(void)unlink(cs->cs_name);
 }
 
+/* ARGSUSED */
