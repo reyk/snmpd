@@ -132,3 +132,4 @@ typedef struct {
 
 grammar		: /* empty */
 		| grammar include '\n'
+		| grammar '\n'
