@@ -130,3 +130,4 @@ mps_getreq(struct ber_element *root, struct ber_oid *o, u_int sm_version)
 		return (NULL);
 	if (OID_NOTSET(value))
 		return (NULL);
+
