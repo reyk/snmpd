@@ -132,3 +132,4 @@ usm_newuser(char *name, const char **errp)
 	SLIST_INSERT_HEAD(&usmuserlist, up, uu_next);
 	return up;
 }
+
