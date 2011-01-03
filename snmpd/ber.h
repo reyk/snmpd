@@ -129,3 +129,4 @@ void			 ber_set_readbuf(struct ber *, void *, size_t);
 struct ber_element	*ber_read_elements(struct ber *, struct ber_element *);
 off_t			 ber_getpos(struct ber_element *);
 void			 ber_free_elements(struct ber_element *);
+size_t			 ber_calc_len(struct ber_element *);
