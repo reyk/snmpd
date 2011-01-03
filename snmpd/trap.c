@@ -130,3 +130,4 @@ trap_imsg(struct imsgev *iev, pid_t pid)
 				case SNMP_OPAQUE:
 				case SNMP_UINTEGER32:
 					if (sm->snmp_len != sizeof(d))
+						goto imsgdone;
