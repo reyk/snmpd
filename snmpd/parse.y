@@ -130,3 +130,4 @@ typedef struct {
 
 %%
 
+grammar		: /* empty */
