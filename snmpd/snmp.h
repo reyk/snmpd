@@ -135,3 +135,4 @@ enum snmp_error {
 	SNMP_ERROR_INCONNAME	= 18
 };
 
+enum snmp_security_model {
