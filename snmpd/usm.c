@@ -135,3 +135,4 @@ usm_newuser(char *name, const char **errp)
 
 struct usmuser *
 usm_finduser(char *name)
+{
