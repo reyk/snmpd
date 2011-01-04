@@ -133,3 +133,4 @@ usm_newuser(char *name, const char **errp)
 	return up;
 }
 
+struct usmuser *
