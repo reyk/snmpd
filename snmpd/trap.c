@@ -135,3 +135,4 @@ trap_imsg(struct imsgev *iev, pid_t pid)
 					a = ber_add_integer(a, d);
 					break;
 				case SNMP_COUNTER64:
+					if (sm->snmp_len != sizeof(l))
