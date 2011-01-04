@@ -136,3 +136,4 @@ pfr_buf_grow(struct pfr_buffer *b, int minsize)
 	bs = buf_esize[b->pfrb_type];
 	if (!b->pfrb_msize) {
 		if (minsize < 64)
+			minsize = 64;
