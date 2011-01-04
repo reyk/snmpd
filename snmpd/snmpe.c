@@ -134,3 +134,4 @@ snmpe(struct snmpd *x_env, int pipe_parent2snmpe[2])
 	signal_set(&ev_sigint, SIGINT, snmpe_sig_handler, NULL);
 	signal_set(&ev_sigterm, SIGTERM, snmpe_sig_handler, NULL);
 	signal_add(&ev_sigint, NULL);
+	signal_add(&ev_sigterm, NULL);
