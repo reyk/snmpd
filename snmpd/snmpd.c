@@ -136,3 +136,4 @@ main(int argc, char *argv[])
 			flags |= SNMPD_F_VERBOSE;
 			break;
 		default:
+			usage();
