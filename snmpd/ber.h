@@ -133,3 +133,4 @@ size_t			 ber_calc_len(struct ber_element *);
 void			 ber_set_application(struct ber *,
 			    unsigned long (*)(struct ber_element *));
 void			 ber_set_writecallback(struct ber_element *,
+			    void (*)(void *, size_t), void *);
