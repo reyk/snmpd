@@ -133,3 +133,4 @@ main(int argc, char *argv[])
 			rcsock = optarg;
 			break;
 		case 'v':
+			flags |= SNMPD_F_VERBOSE;
