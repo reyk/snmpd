@@ -135,3 +135,4 @@ void			 ber_set_application(struct ber *,
 void			 ber_set_writecallback(struct ber_element *,
 			    void (*)(void *, size_t), void *);
 void			 ber_free(struct ber *);
+__END_DECLS
