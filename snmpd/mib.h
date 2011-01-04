@@ -134,3 +134,4 @@
 
 /* HOST-RESOURCES-MIB */
 #define MIB_host			MIB_mib_2, 25
+#define MIB_hrSystem			MIB_host, 1
