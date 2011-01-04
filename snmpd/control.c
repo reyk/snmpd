@@ -134,3 +134,4 @@ control_cleanup(struct control_sock *cs)
 /* ARGSUSED */
 void
 control_accept(int listenfd, short event, void *arg)
+{
