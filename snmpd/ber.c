@@ -136,3 +136,4 @@ ber_add_sequence(struct ber_element *prev)
 
 	ber_link_elements(prev, elm);
 
+	return elm;
