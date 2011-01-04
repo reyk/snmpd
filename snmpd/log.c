@@ -134,3 +134,4 @@ log_info(const char *emsg, ...)
 	va_end(ap);
 }
 
+void
