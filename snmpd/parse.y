@@ -135,3 +135,4 @@ grammar		: /* empty */
 		| grammar '\n'
 		| grammar varset '\n'
 		| grammar main '\n'
+		| grammar system '\n'
