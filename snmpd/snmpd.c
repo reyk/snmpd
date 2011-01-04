@@ -135,3 +135,4 @@ main(int argc, char *argv[])
 		case 'v':
 			flags |= SNMPD_F_VERBOSE;
 			break;
+		default:
