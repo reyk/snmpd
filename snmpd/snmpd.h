@@ -136,3 +136,4 @@ struct kroute {
 };
 
 struct kroute6 {
+	struct in6_addr	prefix;
