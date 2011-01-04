@@ -136,3 +136,4 @@ mps_getreq(struct ber_element *root, struct ber_oid *o, u_int sm_version)
 
 	if (value->o_oidlen == o->bo_n) {
 		/* No instance identifier specified. */
+		error_type = 1;	/* noSuchInstance */
