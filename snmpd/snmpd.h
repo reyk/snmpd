@@ -134,3 +134,4 @@ struct kroute {
 	u_int8_t	prefixlen;
 	u_int8_t	priority;
 };
+
