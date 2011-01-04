@@ -135,3 +135,4 @@ control_cleanup(struct control_sock *cs)
 void
 control_accept(int listenfd, short event, void *arg)
 {
+	struct control_sock	*cs = (struct control_sock *)arg;
