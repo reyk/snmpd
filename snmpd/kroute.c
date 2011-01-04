@@ -133,3 +133,4 @@ RB_HEAD(kroute6_tree, kroute6_node)	krt6;
 RB_PROTOTYPE(kroute6_tree, kroute6_node, entry, kroute6_compare)
 RB_GENERATE(kroute6_tree, kroute6_node, entry, kroute6_compare)
 
+RB_HEAD(kif_tree, kif_node)		kit;
