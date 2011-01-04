@@ -136,3 +136,4 @@ log_info(const char *emsg, ...)
 
 void
 log_debug(const char *emsg, ...)
+{
