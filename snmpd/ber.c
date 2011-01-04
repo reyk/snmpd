@@ -134,3 +134,4 @@ ber_add_sequence(struct ber_element *prev)
 	if ((elm = ber_get_element(BER_TYPE_SEQUENCE)) == NULL)
 		return NULL;
 
+	ber_link_elements(prev, elm);
