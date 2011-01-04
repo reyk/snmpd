@@ -134,3 +134,4 @@ enum snmp_error {
 	SNMP_ERROR_NOTWRITABLE	= 17,
 	SNMP_ERROR_INCONNAME	= 18
 };
+
