@@ -136,3 +136,4 @@
 #define MIB_host			MIB_mib_2, 25
 #define MIB_hrSystem			MIB_host, 1
 #define OIDIDX_hrsystem			8
+#define MIB_hrSystemUptime		MIB_hrSystem, 1
