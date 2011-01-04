@@ -135,3 +135,4 @@ mib_getsys(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 	struct utsname		 u;
 	long long		 ticks;
 
+	if (uname(&u) == -1)
