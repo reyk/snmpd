@@ -133,3 +133,4 @@
 #define MIB_usmStatsDecryptionErrors	MIB_usmStats, OIDVAL_usmErrDecrypt
 
 /* HOST-RESOURCES-MIB */
+#define MIB_host			MIB_mib_2, 25
