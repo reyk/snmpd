@@ -133,3 +133,4 @@ smi_delete(struct oid *oid)
 		free(oid->o_data);
 	if (oid->o_flags & OID_DYNAMIC) {
 		free(oid->o_name);
+		free(oid);
