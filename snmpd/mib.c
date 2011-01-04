@@ -134,3 +134,4 @@ mib_getsys(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 	struct ber_oid		*so = oid->o_data;
 	struct utsname		 u;
 	long long		 ticks;
+
