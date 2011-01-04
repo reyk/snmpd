@@ -135,3 +135,4 @@ smi_delete(struct oid *oid)
 		free(oid->o_name);
 		free(oid);
 	}
+}
