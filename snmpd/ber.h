@@ -137,3 +137,4 @@ void			 ber_set_writecallback(struct ber_element *,
 void			 ber_free(struct ber *);
 __END_DECLS
 
+#endif /* _BER_H */
