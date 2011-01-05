@@ -137,3 +137,4 @@ RB_HEAD(kif_tree, kif_node)		kit;
 RB_PROTOTYPE(kif_tree, kif_node, entry, kif_compare)
 RB_GENERATE(kif_tree, kif_node, entry, kif_compare)
 
+RB_HEAD(ka_tree, kif_addr)		kat;
