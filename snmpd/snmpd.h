@@ -139,3 +139,4 @@ struct kroute6 {
 	struct in6_addr	prefix;
 	struct in6_addr	nexthop;
 	u_long		ticks;
+	u_int16_t	flags;
