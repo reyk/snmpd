@@ -137,3 +137,4 @@ enum snmp_error {
 
 enum snmp_security_model {
 	SNMP_SEC_ANY = 0,
+	SNMP_SEC_SNMPv1 = 1,
