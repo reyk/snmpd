@@ -140,3 +140,4 @@ grammar		: /* empty */
 		| grammar error '\n'		{ file->errors++; }
 		;
 
+include		: INCLUDE STRING		{
