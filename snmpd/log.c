@@ -137,3 +137,4 @@ log_info(const char *emsg, ...)
 void
 log_debug(const char *emsg, ...)
 {
+	va_list	 ap;
