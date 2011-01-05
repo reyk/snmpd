@@ -138,3 +138,4 @@
 #define OIDIDX_hrsystem			8
 #define MIB_hrSystemUptime		MIB_hrSystem, 1
 #define MIB_hrSystemDate		MIB_hrSystem, 2
+#define MIB_hrSystemInitialLoadDevice	MIB_hrSystem, 3
