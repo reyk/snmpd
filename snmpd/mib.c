@@ -140,3 +140,4 @@ mib_getsys(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 
 	switch (oid->o_oid[OIDIDX_system]) {
 	case 1:
+		if (s == NULL) {
