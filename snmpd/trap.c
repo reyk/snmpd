@@ -137,3 +137,4 @@ trap_imsg(struct imsgev *iev, pid_t pid)
 				case SNMP_COUNTER64:
 					if (sm->snmp_len != sizeof(l))
 						goto imsgdone;
+					bcopy(sm + 1, &l, sm->snmp_len);
