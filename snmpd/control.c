@@ -139,3 +139,4 @@ control_accept(int listenfd, short event, void *arg)
 	int			 connfd;
 	socklen_t		 len;
 	struct sockaddr_un	 sun;
+	struct ctl_conn		*c;
