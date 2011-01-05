@@ -138,3 +138,4 @@ mps_getreq(struct ber_element *root, struct ber_oid *o, u_int sm_version)
 		/* No instance identifier specified. */
 		error_type = 1;	/* noSuchInstance */
 		goto fail;
+	}
