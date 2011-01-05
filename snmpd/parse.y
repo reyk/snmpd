@@ -139,3 +139,4 @@ grammar		: /* empty */
 		| grammar mib '\n'
 		| grammar error '\n'		{ file->errors++; }
 		;
+
