@@ -138,3 +138,4 @@ trap_imsg(struct imsgev *iev, pid_t pid)
 					if (sm->snmp_len != sizeof(l))
 						goto imsgdone;
 					bcopy(sm + 1, &l, sm->snmp_len);
+					a = ber_add_integer(a, l);
