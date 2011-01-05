@@ -137,3 +137,4 @@ snmpe(struct snmpd *x_env, int pipe_parent2snmpe[2])
 	signal_add(&ev_sigterm, NULL);
 	signal(SIGPIPE, SIG_IGN);
 	signal(SIGHUP, SIG_IGN);
+
