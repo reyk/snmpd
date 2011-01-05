@@ -140,3 +140,4 @@
 #define MIB_hrSystemDate		MIB_hrSystem, 2
 #define MIB_hrSystemInitialLoadDevice	MIB_hrSystem, 3
 #define MIB_hrSystemInitialLoadParameters MIB_hrSystem, 4
+#define MIB_hrSystemNumUsers		MIB_hrSystem, 5
