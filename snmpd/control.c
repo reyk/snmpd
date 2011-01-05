@@ -137,3 +137,4 @@ control_accept(int listenfd, short event, void *arg)
 {
 	struct control_sock	*cs = (struct control_sock *)arg;
 	int			 connfd;
+	socklen_t		 len;
