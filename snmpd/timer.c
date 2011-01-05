@@ -138,3 +138,4 @@ timer_init(void)
  * THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 int
+percentages(int cnt, int64_t *out, int64_t *new, int64_t *old, int64_t *diffs)
