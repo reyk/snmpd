@@ -138,3 +138,4 @@ usm_finduser(char *name)
 {
 	struct usmuser *up;
 
+	SLIST_FOREACH(up, &usmuserlist, uu_next) {
