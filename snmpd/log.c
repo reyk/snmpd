@@ -140,3 +140,4 @@ log_debug(const char *emsg, ...)
 	va_list	 ap;
 
 	if (debug) {
+		va_start(ap, emsg);
