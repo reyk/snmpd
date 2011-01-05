@@ -140,3 +140,4 @@ trap_imsg(struct imsgev *iev, pid_t pid)
 					bcopy(sm + 1, &l, sm->snmp_len);
 					a = ber_add_integer(a, l);
 					break;
+				default:
