@@ -140,3 +140,4 @@ pfr_buf_grow(struct pfr_buffer *b, int minsize)
 		b->pfrb_caddr = calloc(bs, minsize);
 		if (b->pfrb_caddr == NULL)
 			return (-1);
+		b->pfrb_msize = minsize;
