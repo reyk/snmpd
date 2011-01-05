@@ -138,3 +138,4 @@ smi_delete(struct oid *oid)
 }
 
 void
+smi_insert(struct oid *oid)
