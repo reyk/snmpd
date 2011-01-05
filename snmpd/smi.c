@@ -137,3 +137,4 @@ smi_delete(struct oid *oid)
 	}
 }
 
+void
