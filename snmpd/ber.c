@@ -138,3 +138,4 @@ ber_add_sequence(struct ber_element *prev)
 
 	return elm;
 }
+
