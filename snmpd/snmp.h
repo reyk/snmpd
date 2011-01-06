@@ -143,3 +143,4 @@ enum snmp_security_model {
 	SNMP_SEC_TSM = 4
 };
 
+#define SNMP_MSGFLAG_AUTH	0x01
