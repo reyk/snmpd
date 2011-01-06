@@ -144,3 +144,4 @@ mps_getreq(struct ber_element *root, struct ber_oid *o, u_int sm_version)
 		elm = ber_add_oid(elm, o);
 	if (value->o_get(value, o, &elm) != 0)
 		return (NULL);
+
