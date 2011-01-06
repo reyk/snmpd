@@ -141,3 +141,4 @@
 #define MIB_hrSystemInitialLoadDevice	MIB_hrSystem, 3
 #define MIB_hrSystemInitialLoadParameters MIB_hrSystem, 4
 #define MIB_hrSystemNumUsers		MIB_hrSystem, 5
+#define MIB_hrSystemProcesses		MIB_hrSystem, 6
