@@ -142,3 +142,4 @@ trap_imsg(struct imsgev *iev, pid_t pid)
 					break;
 				default:
 					log_debug("trap_imsg: illegal type %d",
+					    sm->snmp_type);
