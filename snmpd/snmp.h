@@ -144,3 +144,4 @@ enum snmp_security_model {
 };
 
 #define SNMP_MSGFLAG_AUTH	0x01
+#define SNMP_MSGFLAG_PRIV	0x02
