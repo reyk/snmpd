@@ -143,3 +143,4 @@ usm_finduser(char *name)
 			return up;
 	}
 	return NULL;
+}
