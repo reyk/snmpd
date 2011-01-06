@@ -143,3 +143,4 @@ mib_getsys(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 		if (s == NULL) {
 			if (asprintf(&s, "%s %s %s %s %s",
 			    u.sysname, u.nodename, u.release,
+			    u.version, u.machine) == -1)
