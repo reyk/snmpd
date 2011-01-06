@@ -143,3 +143,4 @@
 #define MIB_hrSystemNumUsers		MIB_hrSystem, 5
 #define MIB_hrSystemProcesses		MIB_hrSystem, 6
 #define MIB_hrSystemMaxProcesses	MIB_hrSystem, 7
+#define MIB_hrStorage			MIB_host, 2
