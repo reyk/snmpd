@@ -144,3 +144,4 @@ trap_imsg(struct imsgev *iev, pid_t pid)
 					log_debug("trap_imsg: illegal type %d",
 					    sm->snmp_type);
 					imsg_free(&imsg);
+					goto imsgdone;
