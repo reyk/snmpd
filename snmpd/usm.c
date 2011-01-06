@@ -142,3 +142,4 @@ usm_finduser(char *name)
 		if (!strcmp(up->uu_name, name))
 			return up;
 	}
+	return NULL;
