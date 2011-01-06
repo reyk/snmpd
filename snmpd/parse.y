@@ -144,3 +144,4 @@ include		: INCLUDE STRING		{
 			struct file	*nfile;
 
 			if ((nfile = pushfile($2, 0)) == NULL) {
+				yyerror("failed to include file %s", $2);
