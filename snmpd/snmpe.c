@@ -144,3 +144,4 @@ snmpe(struct snmpd *x_env, int pipe_parent2snmpe[2])
 		fatal("snmpe");
 
 	imsg_init(&iev_parent->ibuf, pipe_parent2snmpe[1]);
+	iev_parent->handler = snmpe_dispatch_parent;
