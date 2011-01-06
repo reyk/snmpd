@@ -141,3 +141,4 @@ control_accept(int listenfd, short event, void *arg)
 	struct sockaddr_un	 sun;
 	struct ctl_conn		*c;
 
+	event_add(&cs->cs_ev, NULL);
