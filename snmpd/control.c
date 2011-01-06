@@ -143,3 +143,4 @@ control_accept(int listenfd, short event, void *arg)
 
 	event_add(&cs->cs_ev, NULL);
 	if ((event & EV_TIMEOUT))
+		return;
