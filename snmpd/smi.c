@@ -141,3 +141,4 @@ void
 smi_insert(struct oid *oid)
 {
 	struct oid		 key, *value;
+
