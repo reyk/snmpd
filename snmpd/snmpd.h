@@ -142,3 +142,4 @@ struct kroute6 {
 	u_int16_t	flags;
 	u_short		if_index;
 	u_int8_t	prefixlen;
+	u_int8_t	priority;
