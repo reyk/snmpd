@@ -142,3 +142,4 @@ smi_insert(struct oid *oid)
 {
 	struct oid		 key, *value;
 
+	if ((oid->o_flags & OID_TABLE) && oid->o_get == NULL)
