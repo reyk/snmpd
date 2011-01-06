@@ -141,3 +141,4 @@ usm_finduser(char *name)
 	SLIST_FOREACH(up, &usmuserlist, uu_next) {
 		if (!strcmp(up->uu_name, name))
 			return up;
+	}
