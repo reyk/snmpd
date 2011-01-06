@@ -143,3 +143,4 @@ log_debug(const char *emsg, ...)
 		va_start(ap, emsg);
 		vlog(LOG_DEBUG, emsg, ap);
 		va_end(ap);
+	}
