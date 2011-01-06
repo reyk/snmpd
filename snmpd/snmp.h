@@ -141,3 +141,4 @@ enum snmp_security_model {
 	SNMP_SEC_SNMPv2c = 2,
 	SNMP_SEC_USM = 3,
 	SNMP_SEC_TSM = 4
+};
