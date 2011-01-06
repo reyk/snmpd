@@ -142,3 +142,4 @@ snmpe(struct snmpd *x_env, int pipe_parent2snmpe[2])
 
 	if ((iev_parent = calloc(1, sizeof(struct imsgev))) == NULL)
 		fatal("snmpe");
+
