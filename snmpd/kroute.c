@@ -142,3 +142,4 @@ RB_PROTOTYPE(ka_tree, kif_addr, node, ka_compare)
 RB_GENERATE(ka_tree, kif_addr, node, ka_compare)
 
 void
+kr_init(void)
