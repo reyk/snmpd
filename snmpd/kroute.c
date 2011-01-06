@@ -144,3 +144,4 @@ RB_GENERATE(ka_tree, kif_addr, node, ka_compare)
 void
 kr_init(void)
 {
+	int		opt = 0, rcvbuf, default_rcvbuf;
