@@ -142,3 +142,4 @@ percentages(int cnt, int64_t *out, int64_t *new, int64_t *old, int64_t *diffs)
 {
 	int64_t change, total_change, *dp, half_total;
 	int i;
+
