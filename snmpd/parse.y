@@ -141,3 +141,4 @@ grammar		: /* empty */
 		;
 
 include		: INCLUDE STRING		{
+			struct file	*nfile;
