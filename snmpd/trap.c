@@ -141,3 +141,4 @@ trap_imsg(struct imsgev *iev, pid_t pid)
 					a = ber_add_integer(a, l);
 					break;
 				default:
+					log_debug("trap_imsg: illegal type %d",
