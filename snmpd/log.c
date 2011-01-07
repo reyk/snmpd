@@ -147,3 +147,4 @@ log_debug(const char *emsg, ...)
 }
 
 void
+fatal(const char *emsg)
