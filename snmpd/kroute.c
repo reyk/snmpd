@@ -145,3 +145,4 @@ void
 kr_init(void)
 {
 	int		opt = 0, rcvbuf, default_rcvbuf;
+	socklen_t	optlen;
