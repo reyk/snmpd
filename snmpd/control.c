@@ -148,3 +148,4 @@ control_accept(int listenfd, short event, void *arg)
 	len = sizeof(sun);
 	if ((connfd = accept(listenfd,
 	    (struct sockaddr *)&sun, &len)) == -1) {
+		/*
