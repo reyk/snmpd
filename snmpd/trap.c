@@ -147,3 +147,4 @@ trap_imsg(struct imsgev *iev, pid_t pid)
 					goto imsgdone;
 				}
 				switch (sm->snmp_type) {
+				case SNMP_INTEGER32:
