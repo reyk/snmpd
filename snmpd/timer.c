@@ -147,3 +147,4 @@ percentages(int cnt, int64_t *out, int64_t *new, int64_t *old, int64_t *diffs)
 	total_change = 0;
 	dp = diffs;
 
+	/* calculate changes for each state and the overall change */
