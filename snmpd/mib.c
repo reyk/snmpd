@@ -146,3 +146,4 @@ mib_getsys(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 			    u.version, u.machine) == -1)
 				return (-1);
 			oid->o_data = s;
+			oid->o_val = strlen(s);
