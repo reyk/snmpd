@@ -145,3 +145,4 @@ pfr_buf_grow(struct pfr_buffer *b, int minsize)
 		if (minsize == 0)
 			minsize = b->pfrb_msize * 2;
 		if (minsize < 0 || (size_t)minsize >= SIZE_T_MAX / bs) {
+			/* msize overflow */
