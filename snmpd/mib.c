@@ -145,3 +145,4 @@ mib_getsys(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 			    u.sysname, u.nodename, u.release,
 			    u.version, u.machine) == -1)
 				return (-1);
+			oid->o_data = s;
