@@ -147,3 +147,4 @@ struct kroute6 {
 
 struct kif_addr {
 	u_short			 if_index;
+	union kaddr		 addr;
