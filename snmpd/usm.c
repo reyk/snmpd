@@ -146,3 +146,4 @@ usm_finduser(char *name)
 }
 
 int
+usm_checkuser(struct usmuser *up, const char **errp)
