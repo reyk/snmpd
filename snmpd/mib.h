@@ -145,3 +145,4 @@
 #define MIB_hrSystemMaxProcesses	MIB_hrSystem, 7
 #define MIB_hrStorage			MIB_host, 2
 #define MIB_hrStorageTypes		MIB_hrStorage, 1
+#define MIB_hrStorageOther		MIB_hrStorageTypes, 1
