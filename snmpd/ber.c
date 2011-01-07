@@ -146,3 +146,4 @@ ber_add_set(struct ber_element *prev)
 
 	if ((elm = ber_get_element(BER_TYPE_SET)) == NULL)
 		return NULL;
+
