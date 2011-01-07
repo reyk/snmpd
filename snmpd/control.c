@@ -146,3 +146,4 @@ control_accept(int listenfd, short event, void *arg)
 		return;
 
 	len = sizeof(sun);
+	if ((connfd = accept(listenfd,
