@@ -148,3 +148,4 @@ kr_init(void)
 	socklen_t	optlen;
 
 	if ((kr_state.ks_ifd = socket(AF_INET, SOCK_DGRAM, 0)) == -1)
+		fatal("kr_init: ioctl socket");
