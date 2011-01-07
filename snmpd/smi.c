@@ -145,3 +145,4 @@ smi_insert(struct oid *oid)
 	if ((oid->o_flags & OID_TABLE) && oid->o_get == NULL)
 		fatalx("smi_insert: invalid MIB table");
 
+	bcopy(&oid->o_id, &key.o_id, sizeof(struct ber_oid));
