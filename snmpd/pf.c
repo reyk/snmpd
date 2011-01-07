@@ -148,3 +148,4 @@ pfr_buf_grow(struct pfr_buffer *b, int minsize)
 			/* msize overflow */
 			return (-1);
 		}
+		p = realloc(b->pfrb_caddr, minsize * bs);
