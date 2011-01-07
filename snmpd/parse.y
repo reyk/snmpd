@@ -147,3 +147,4 @@ include		: INCLUDE STRING		{
 				yyerror("failed to include file %s", $2);
 				free($2);
 				YYERROR;
+			}
