@@ -148,3 +148,4 @@ mib_getsys(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 			oid->o_data = s;
 			oid->o_val = strlen(s);
 		}
+		*elm = ber_add_string(*elm, s);
