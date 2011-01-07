@@ -148,3 +148,4 @@ trap_imsg(struct imsgev *iev, pid_t pid)
 				}
 				switch (sm->snmp_type) {
 				case SNMP_INTEGER32:
+				case SNMP_BITSTRING:
