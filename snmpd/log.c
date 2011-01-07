@@ -146,3 +146,4 @@ log_debug(const char *emsg, ...)
 	}
 }
 
+void
