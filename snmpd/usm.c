@@ -145,3 +145,4 @@ usm_finduser(char *name)
 	return NULL;
 }
 
+int
