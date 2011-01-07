@@ -148,3 +148,4 @@ ber_add_set(struct ber_element *prev)
 		return NULL;
 
 	ber_link_elements(prev, elm);
+
