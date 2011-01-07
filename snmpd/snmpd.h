@@ -145,3 +145,4 @@ struct kroute6 {
 	u_int8_t	priority;
 };
 
+struct kif_addr {
