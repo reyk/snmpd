@@ -145,3 +145,4 @@ log_debug(const char *emsg, ...)
 		va_end(ap);
 	}
 }
+
