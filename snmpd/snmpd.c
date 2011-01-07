@@ -147,3 +147,4 @@ main(int argc, char *argv[])
 
 	if ((env = parse_config(conffile, flags)) == NULL)
 		exit(1);
+	snmpd_env = env;
