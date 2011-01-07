@@ -145,3 +145,4 @@ trap_imsg(struct imsgev *iev, pid_t pid)
 					    sm->snmp_type);
 					imsg_free(&imsg);
 					goto imsgdone;
+				}
