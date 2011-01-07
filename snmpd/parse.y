@@ -148,3 +148,4 @@ include		: INCLUDE STRING		{
 				free($2);
 				YYERROR;
 			}
+			free($2);
