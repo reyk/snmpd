@@ -147,3 +147,4 @@
 #define MIB_hrStorageTypes		MIB_hrStorage, 1
 #define MIB_hrStorageOther		MIB_hrStorageTypes, 1
 #define MIB_hrStorageRam		MIB_hrStorageTypes, 2
+#define MIB_hrStorageVirtualMemory	MIB_hrStorageTypes, 3
