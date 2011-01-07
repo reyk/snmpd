@@ -145,3 +145,4 @@ include		: INCLUDE STRING		{
 
 			if ((nfile = pushfile($2, 0)) == NULL) {
 				yyerror("failed to include file %s", $2);
+				free($2);
