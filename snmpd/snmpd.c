@@ -145,3 +145,4 @@ main(int argc, char *argv[])
 	if (argc > 0)
 		usage();
 
+	if ((env = parse_config(conffile, flags)) == NULL)
