@@ -148,3 +148,4 @@ snmpe(struct snmpd *x_env, int pipe_parent2snmpe[2])
 	iev_parent->data = iev_parent;
 
 	iev_parent->events = EV_READ;
+	event_set(&iev_parent->ev, iev_parent->ibuf.fd, iev_parent->events,
