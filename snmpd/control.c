@@ -145,3 +145,4 @@ control_accept(int listenfd, short event, void *arg)
 	if ((event & EV_TIMEOUT))
 		return;
 
+	len = sizeof(sun);
