@@ -147,3 +147,4 @@ smi_insert(struct oid *oid)
 
 	bcopy(&oid->o_id, &key.o_id, sizeof(struct ber_oid));
 	value = RB_FIND(oidtree, &smi_oidtree, &key);
+	if (value != NULL)
