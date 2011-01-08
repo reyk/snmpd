@@ -149,3 +149,4 @@ smi_insert(struct oid *oid)
 	value = RB_FIND(oidtree, &smi_oidtree, &key);
 	if (value != NULL)
 		smi_delete(value);
+
