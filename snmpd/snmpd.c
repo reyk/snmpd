@@ -149,3 +149,4 @@ main(int argc, char *argv[])
 		exit(1);
 	snmpd_env = env;
 
+	if (noaction) {
