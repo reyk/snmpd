@@ -149,3 +149,4 @@ pfr_buf_grow(struct pfr_buffer *b, int minsize)
 			return (-1);
 		}
 		p = realloc(b->pfrb_caddr, minsize * bs);
+		if (p == NULL)
