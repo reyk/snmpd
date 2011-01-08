@@ -151,3 +151,4 @@ struct kif_addr {
 	union kaddr		 mask;
 	union kaddr		 dstbrd;
 
+	TAILQ_ENTRY(kif_addr)	 entry;
