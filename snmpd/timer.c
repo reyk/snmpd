@@ -151,3 +151,4 @@ percentages(int cnt, int64_t *out, int64_t *new, int64_t *old, int64_t *diffs)
 	for (i = 0; i < cnt; i++) {
 		if ((change = *new - *old) < 0) {
 			/* this only happens when the counter wraps */
+			change = (*new - *old);
