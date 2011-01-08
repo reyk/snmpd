@@ -149,3 +149,4 @@ control_accept(int listenfd, short event, void *arg)
 	if ((connfd = accept(listenfd,
 	    (struct sockaddr *)&sun, &len)) == -1) {
 		/*
+		 * Pause accept if we are out of file descriptors, or
