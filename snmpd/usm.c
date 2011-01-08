@@ -149,3 +149,4 @@ int
 usm_checkuser(struct usmuser *up, const char **errp)
 {
 	char	*auth = NULL, *priv = NULL;
+
