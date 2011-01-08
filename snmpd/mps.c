@@ -152,3 +152,4 @@ fail:
 		return NULL;
 
 	/* Set SNMPv2 extended error response. */
+	elm = ber_add_oid(elm, o);
