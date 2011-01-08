@@ -152,3 +152,4 @@ kr_init(void)
 
 	if ((kr_state.ks_fd = socket(AF_ROUTE, SOCK_RAW, 0)) == -1)
 		fatal("kr_init: route socket");
+
