@@ -151,3 +151,4 @@ main(int argc, char *argv[])
 
 	if (noaction) {
 		fprintf(stderr, "configuration ok\n");
+		exit(0);
