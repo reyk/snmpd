@@ -152,3 +152,4 @@ usm_checkuser(struct usmuser *up, const char **errp)
 
 	if (up->uu_auth != AUTH_NONE && up->uu_authkey == NULL) {
 		*errp = "missing auth passphrase";
+		goto fail;
