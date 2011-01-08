@@ -152,3 +152,4 @@ control_accept(int listenfd, short event, void *arg)
 		 * Pause accept if we are out of file descriptors, or
 		 * libevent will haunt us here too.
 		 */
+		if (errno == ENFILE || errno == EMFILE) {
