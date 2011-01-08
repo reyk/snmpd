@@ -150,3 +150,4 @@ snmpe(struct snmpd *x_env, int pipe_parent2snmpe[2])
 	iev_parent->events = EV_READ;
 	event_set(&iev_parent->ev, iev_parent->ibuf.fd, iev_parent->events,
 	    iev_parent->handler, iev_parent);
+	event_add(&iev_parent->ev, NULL);
