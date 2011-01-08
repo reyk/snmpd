@@ -150,3 +150,4 @@ void
 fatal(const char *emsg)
 {
 	if (emsg == NULL)
+		logit(LOG_CRIT, "fatal: %s", strerror(errno));
