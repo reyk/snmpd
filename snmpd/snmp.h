@@ -149,3 +149,4 @@ enum snmp_security_model {
 #define SNMP_MSGFLAG_REPORT	0x04
 
 #define SNMP_MAX_TIMEWINDOW	150	/* RFC3414 */
+
