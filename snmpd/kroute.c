@@ -150,3 +150,4 @@ kr_init(void)
 	if ((kr_state.ks_ifd = socket(AF_INET, SOCK_DGRAM, 0)) == -1)
 		fatal("kr_init: ioctl socket");
 
+	if ((kr_state.ks_fd = socket(AF_ROUTE, SOCK_RAW, 0)) == -1)
