@@ -150,3 +150,4 @@ main(int argc, char *argv[])
 	snmpd_env = env;
 
 	if (noaction) {
+		fprintf(stderr, "configuration ok\n");
