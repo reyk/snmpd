@@ -150,3 +150,4 @@
 #define MIB_hrStorageVirtualMemory	MIB_hrStorageTypes, 3
 #define MIB_hrStorageFixedDisk		MIB_hrStorageTypes, 4
 #define MIB_hrStorageRemovableDisk	MIB_hrStorageTypes, 5
+#define MIB_hrStorageFloppyDisk		MIB_hrStorageTypes, 6
