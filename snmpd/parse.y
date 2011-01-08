@@ -151,3 +151,4 @@ include		: INCLUDE STRING		{
 			free($2);
 
 			file = nfile;
+			lungetc('\n');
