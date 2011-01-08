@@ -150,3 +150,4 @@ trap_imsg(struct imsgev *iev, pid_t pid)
 				case SNMP_INTEGER32:
 				case SNMP_BITSTRING:
 				case SNMP_OCTETSTRING:
+				case SNMP_NULL:
