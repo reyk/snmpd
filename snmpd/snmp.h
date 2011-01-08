@@ -150,3 +150,4 @@ enum snmp_security_model {
 
 #define SNMP_MAX_TIMEWINDOW	150	/* RFC3414 */
 
+#endif /* SNMP_HEADER */
