@@ -152,3 +152,4 @@ ber_add_set(struct ber_element *prev)
 	return elm;
 }
 
+struct ber_element *
