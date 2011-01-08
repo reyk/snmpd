@@ -150,3 +150,4 @@ struct kif_addr {
 	union kaddr		 addr;
 	union kaddr		 mask;
 	union kaddr		 dstbrd;
+
