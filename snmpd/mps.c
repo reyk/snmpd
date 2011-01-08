@@ -151,3 +151,4 @@ fail:
 	if (sm_version == 0)
 		return NULL;
 
+	/* Set SNMPv2 extended error response. */
