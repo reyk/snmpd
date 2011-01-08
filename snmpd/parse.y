@@ -152,3 +152,4 @@ include		: INCLUDE STRING		{
 
 			file = nfile;
 			lungetc('\n');
+		}
