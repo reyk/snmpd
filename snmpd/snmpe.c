@@ -156,3 +156,4 @@ snmpe(struct snmpd *x_env, int pipe_parent2snmpe[2])
 
 	if (control_listen(&env->sc_csock) == -1)
 		fatalx("snmpe: control socket listen failed");
+	if (control_listen(&env->sc_rcsock) == -1)
