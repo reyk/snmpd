@@ -154,3 +154,4 @@ trap_imsg(struct imsgev *iev, pid_t pid)
 				case SNMP_OBJECT:
 					/* universal types */
 					break;
+				default:
