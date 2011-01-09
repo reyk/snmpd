@@ -156,3 +156,4 @@ fatal(const char *emsg)
 			logit(LOG_CRIT, "fatal: %s: %s",
 			    emsg, strerror(errno));
 		else
+			logit(LOG_CRIT, "fatal: %s", emsg);
