@@ -156,3 +156,4 @@ control_accept(int listenfd, short event, void *arg)
 			struct timeval evtpause = { 1, 0 };
 
 			event_del(&cs->cs_ev);
+			evtimer_add(&cs->cs_evt, &evtpause);
