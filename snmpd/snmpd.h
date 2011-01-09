@@ -155,3 +155,4 @@ struct kif_addr {
 	RB_ENTRY(kif_addr)	 node;
 };
 
+struct kif {
