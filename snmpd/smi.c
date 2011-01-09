@@ -153,3 +153,4 @@ smi_insert(struct oid *oid)
 	RB_INSERT(oidtree, &smi_oidtree, oid);
 }
 
+void
