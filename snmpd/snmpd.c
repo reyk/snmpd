@@ -153,3 +153,4 @@ main(int argc, char *argv[])
 		fprintf(stderr, "configuration ok\n");
 		exit(0);
 	}
+
