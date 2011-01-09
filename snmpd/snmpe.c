@@ -155,3 +155,4 @@ snmpe(struct snmpd *x_env, int pipe_parent2snmpe[2])
 	TAILQ_INIT(&ctl_conns);
 
 	if (control_listen(&env->sc_csock) == -1)
+		fatalx("snmpe: control socket listen failed");
