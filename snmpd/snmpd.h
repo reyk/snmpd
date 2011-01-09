@@ -153,3 +153,4 @@ struct kif_addr {
 
 	TAILQ_ENTRY(kif_addr)	 entry;
 	RB_ENTRY(kif_addr)	 node;
+};
