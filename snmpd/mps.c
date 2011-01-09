@@ -155,3 +155,4 @@ fail:
 	elm = ber_add_oid(elm, o);
 	elm = ber_add_null(elm);
 	ber_set_header(elm, BER_CLASS_CONTEXT, error_type);
+	return (elm);
