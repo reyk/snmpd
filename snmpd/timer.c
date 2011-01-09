@@ -153,3 +153,4 @@ percentages(int cnt, int64_t *out, int64_t *new, int64_t *old, int64_t *diffs)
 			/* this only happens when the counter wraps */
 			change = (*new - *old);
 		}
+		total_change += (*dp++ = change);
