@@ -154,3 +154,4 @@ kr_init(void)
 		fatal("kr_init: route socket");
 
 	/* not interested in my own messages */
+	if (setsockopt(kr_state.ks_fd, SOL_SOCKET, SO_USELOOPBACK,
