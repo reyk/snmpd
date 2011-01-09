@@ -156,3 +156,4 @@ include		: INCLUDE STRING		{
 		;
 
 varset		: STRING '=' STRING	{
+			if (symset($1, $3, 0) == -1)
