@@ -154,3 +154,4 @@
 #define MIB_hrStorageCompactDisc	MIB_hrStorageTypes, 7
 #define MIB_hrStorageRamDisk		MIB_hrStorageTypes, 8
 #define MIB_hrStorageFlashMemory	MIB_hrStorageTypes, 9
+#define MIB_hrStorageNetworkDisk	MIB_hrStorageTypes, 10
