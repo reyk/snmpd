@@ -153,3 +153,4 @@ mib_getsys(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 	case 2:
 		if (so == NULL)
 			so = &sysoid;
+		smi_oidlen(so);
