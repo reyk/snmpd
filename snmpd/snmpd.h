@@ -156,3 +156,4 @@ struct kif_addr {
 };
 
 struct kif {
+	char			 if_name[IF_NAMESIZE];
