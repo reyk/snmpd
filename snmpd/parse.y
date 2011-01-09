@@ -155,3 +155,4 @@ include		: INCLUDE STRING		{
 		}
 		;
 
+varset		: STRING '=' STRING	{
