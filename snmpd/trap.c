@@ -155,3 +155,4 @@ trap_imsg(struct imsgev *iev, pid_t pid)
 					/* universal types */
 					break;
 				default:
+					/* application-specific types */
