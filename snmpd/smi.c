@@ -154,3 +154,4 @@ smi_insert(struct oid *oid)
 }
 
 void
+smi_mibtree(struct oid *oids)
