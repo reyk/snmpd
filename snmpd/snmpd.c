@@ -156,3 +156,4 @@ main(int argc, char *argv[])
 
 	if (geteuid())
 		errx(1, "need root privileges");
+
