@@ -156,3 +156,4 @@ trap_imsg(struct imsgev *iev, pid_t pid)
 					break;
 				default:
 					/* application-specific types */
+					ber_set_header(a, BER_CLASS_APPLICATION,
