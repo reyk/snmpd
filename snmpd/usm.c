@@ -156,3 +156,4 @@ usm_checkuser(struct usmuser *up, const char **errp)
 	} else if (up->uu_auth == AUTH_NONE && up->uu_authkey != NULL)
 		up->uu_auth = AUTH_DEFAULT;
 
+	if (up->uu_priv != PRIV_NONE && up->uu_privkey == NULL) {
