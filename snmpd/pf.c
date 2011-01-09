@@ -154,3 +154,4 @@ pfr_buf_grow(struct pfr_buffer *b, int minsize)
 		bzero(p + b->pfrb_msize * bs, (minsize - b->pfrb_msize) * bs);
 		b->pfrb_caddr = p;
 		b->pfrb_msize = minsize;
+	}
