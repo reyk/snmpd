@@ -156,3 +156,4 @@ pfr_buf_grow(struct pfr_buffer *b, int minsize)
 		b->pfrb_msize = minsize;
 	}
 	return (0);
+}
