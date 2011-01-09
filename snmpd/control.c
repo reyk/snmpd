@@ -155,3 +155,4 @@ control_accept(int listenfd, short event, void *arg)
 		if (errno == ENFILE || errno == EMFILE) {
 			struct timeval evtpause = { 1, 0 };
 
+			event_del(&cs->cs_ev);
