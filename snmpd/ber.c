@@ -154,3 +154,4 @@ ber_add_set(struct ber_element *prev)
 
 struct ber_element *
 ber_add_enumerated(struct ber_element *prev, long long val)
+{
