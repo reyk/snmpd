@@ -153,3 +153,4 @@ snmpe(struct snmpd *x_env, int pipe_parent2snmpe[2])
 	event_add(&iev_parent->ev, NULL);
 
 	TAILQ_INIT(&ctl_conns);
+
