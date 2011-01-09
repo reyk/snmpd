@@ -154,3 +154,4 @@ percentages(int cnt, int64_t *out, int64_t *new, int64_t *old, int64_t *diffs)
 			change = (*new - *old);
 		}
 		total_change += (*dp++ = change);
+		*old++ = *new++;
