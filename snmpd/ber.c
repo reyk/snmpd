@@ -159,3 +159,4 @@ ber_add_enumerated(struct ber_element *prev, long long val)
 	u_int i, len = 0;
 	u_char cur, last = 0;
 
+	if ((elm = ber_get_element(BER_TYPE_ENUMERATED)) == NULL)
