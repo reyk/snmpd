@@ -160,3 +160,4 @@ fatal(const char *emsg)
 
 	exit(1);
 }
+
