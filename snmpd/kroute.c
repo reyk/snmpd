@@ -158,3 +158,4 @@ kr_init(void)
 	    &opt, sizeof(opt)) == -1)
 		log_warn("kr_init: setsockopt");	/* not fatal */
 
+	if (env->sc_rtfilter && setsockopt(kr_state.ks_fd, PF_ROUTE,
