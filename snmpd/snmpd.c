@@ -158,3 +158,4 @@ main(int argc, char *argv[])
 		errx(1, "need root privileges");
 
 	if (getpwnam(SNMPD_USER) == NULL)
+		errx(1, "unknown user %s", SNMPD_USER);
