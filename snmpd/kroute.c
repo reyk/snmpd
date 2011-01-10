@@ -157,3 +157,4 @@ kr_init(void)
 	if (setsockopt(kr_state.ks_fd, SOL_SOCKET, SO_USELOOPBACK,
 	    &opt, sizeof(opt)) == -1)
 		log_warn("kr_init: setsockopt");	/* not fatal */
+
