@@ -159,3 +159,4 @@ trap_imsg(struct imsgev *iev, pid_t pid)
 					ber_set_header(a, BER_CLASS_APPLICATION,
 					    sm->snmp_type);
 					break;
+				}
