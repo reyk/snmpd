@@ -159,3 +159,4 @@ fatal(const char *emsg)
 			logit(LOG_CRIT, "fatal: %s", emsg);
 
 	exit(1);
+}
