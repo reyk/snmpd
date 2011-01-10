@@ -157,3 +157,4 @@ fail:
 	ber_set_header(elm, BER_CLASS_CONTEXT, error_type);
 	return (elm);
 }
+
