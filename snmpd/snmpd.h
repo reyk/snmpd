@@ -159,3 +159,4 @@ struct kif {
 	char			 if_name[IF_NAMESIZE];
 	char			 if_descr[IFDESCRSIZE];
 	u_int8_t		 if_lladdr[ETHER_ADDR_LEN];
+	struct if_data		 if_data;
