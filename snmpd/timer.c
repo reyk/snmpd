@@ -157,3 +157,4 @@ percentages(int cnt, int64_t *out, int64_t *new, int64_t *old, int64_t *diffs)
 		*old++ = *new++;
 	}
 
+	/* avoid divide by zero potential */
