@@ -159,3 +159,4 @@ control_accept(int listenfd, short event, void *arg)
 			evtimer_add(&cs->cs_evt, &evtpause);
 		} else if (errno != EWOULDBLOCK && errno != EINTR &&
 		    errno != ECONNABORTED)
+			log_warn("control_accept: accept");
