@@ -159,3 +159,4 @@ smi_mibtree(struct oid *oids)
 	struct oid	*oid, *decl;
 	size_t		 i;
 
+	for (i = 0; oids[i].o_oid[0] != 0; i++) {
