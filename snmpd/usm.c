@@ -159,3 +159,4 @@ usm_checkuser(struct usmuser *up, const char **errp)
 	if (up->uu_priv != PRIV_NONE && up->uu_privkey == NULL) {
 		*errp = "missing priv passphrase";
 		goto fail;
+	} else if (up->uu_priv == PRIV_NONE && up->uu_privkey != NULL)
