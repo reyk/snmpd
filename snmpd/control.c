@@ -158,3 +158,4 @@ control_accept(int listenfd, short event, void *arg)
 			event_del(&cs->cs_ev);
 			evtimer_add(&cs->cs_evt, &evtpause);
 		} else if (errno != EWOULDBLOCK && errno != EINTR &&
+		    errno != ECONNABORTED)
