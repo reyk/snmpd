@@ -157,3 +157,4 @@ usm_checkuser(struct usmuser *up, const char **errp)
 		up->uu_auth = AUTH_DEFAULT;
 
 	if (up->uu_priv != PRIV_NONE && up->uu_privkey == NULL) {
+		*errp = "missing priv passphrase";
