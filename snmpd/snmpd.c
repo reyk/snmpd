@@ -159,3 +159,4 @@ main(int argc, char *argv[])
 
 	if (getpwnam(SNMPD_USER) == NULL)
 		errx(1, "unknown user %s", SNMPD_USER);
+
