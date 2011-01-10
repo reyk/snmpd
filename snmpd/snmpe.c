@@ -159,3 +159,4 @@ snmpe(struct snmpd *x_env, int pipe_parent2snmpe[2])
 	if (control_listen(&env->sc_rcsock) == -1)
 		fatalx("snmpe: restricted control socket listen failed");
 
+	event_set(&env->sc_ev, env->sc_sock, EV_READ|EV_PERSIST,
