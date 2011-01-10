@@ -157,3 +157,4 @@
 #define MIB_hrStorageNetworkDisk	MIB_hrStorageTypes, 10
 #define MIB_hrMemorySize		MIB_hrStorage, 2
 #define MIB_hrStorageTable		MIB_hrStorage, 3
+#define MIB_hrStorageEntry		MIB_hrStorageTable, 1
