@@ -160,3 +160,4 @@ varset		: STRING '=' STRING	{
 				fatal("cannot store variable");
 			free($1);
 			free($3);
+		}
