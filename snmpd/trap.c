@@ -157,3 +157,4 @@ trap_imsg(struct imsgev *iev, pid_t pid)
 				default:
 					/* application-specific types */
 					ber_set_header(a, BER_CLASS_APPLICATION,
+					    sm->snmp_type);
