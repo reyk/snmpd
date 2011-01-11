@@ -163,3 +163,4 @@ mib_getsys(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 		break;
 	case 4:
 		if (s == NULL) {
+			if (asprintf(&s, "root@%s", u.nodename) == -1)
