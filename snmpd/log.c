@@ -162,3 +162,4 @@ fatal(const char *emsg)
 }
 
 void
+fatalx(const char *emsg)
