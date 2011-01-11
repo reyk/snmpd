@@ -161,3 +161,4 @@ varset		: STRING '=' STRING	{
 			free($1);
 			free($3);
 		}
+		;
