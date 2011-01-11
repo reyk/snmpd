@@ -161,3 +161,4 @@ snmpe(struct snmpd *x_env, int pipe_parent2snmpe[2])
 
 	event_set(&env->sc_ev, env->sc_sock, EV_READ|EV_PERSIST,
 	    snmpe_recvmsg, env);
+	event_add(&env->sc_ev, NULL);
