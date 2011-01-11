@@ -163,3 +163,4 @@ struct kif {
 	u_long			 if_ticks;
 	int			 if_flags;
 	u_short			 if_index;
+};
