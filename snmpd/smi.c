@@ -163,3 +163,4 @@ smi_mibtree(struct oid *oids)
 		oid = &oids[i];
 		smi_oidlen(&oid->o_id);
 		if (oid->o_name != NULL) {
+			if ((oid->o_flags & OID_TABLE) && oid->o_get == NULL)
