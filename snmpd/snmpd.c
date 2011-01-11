@@ -161,3 +161,4 @@ main(int argc, char *argv[])
 		errx(1, "unknown user %s", SNMPD_USER);
 
 	/* Configure the control sockets */
+	env->sc_csock.cs_name = SNMPD_SOCKET;
