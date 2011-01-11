@@ -161,3 +161,4 @@ control_accept(int listenfd, short event, void *arg)
 		    errno != ECONNABORTED)
 			log_warn("control_accept: accept");
 		return;
+	}
