@@ -161,3 +161,4 @@ pfr_buf_grow(struct pfr_buffer *b, int minsize)
 const void *
 pfr_buf_next(struct pfr_buffer *b, const void *prev)
 {
+	size_t	 bs;
