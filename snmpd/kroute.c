@@ -161,3 +161,4 @@ kr_init(void)
 	if (env->sc_rtfilter && setsockopt(kr_state.ks_fd, PF_ROUTE,
 	    ROUTE_MSGFILTER, &env->sc_rtfilter, sizeof(env->sc_rtfilter)) == -1)
 		log_warn("kr_init: setsockopt(ROUTE_MSGFILTER)");
+
