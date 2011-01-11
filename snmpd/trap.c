@@ -161,3 +161,4 @@ trap_imsg(struct imsgev *iev, pid_t pid)
 					break;
 				}
 				x++;
+				break;
