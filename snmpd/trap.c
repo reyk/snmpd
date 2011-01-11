@@ -163,3 +163,4 @@ trap_imsg(struct imsgev *iev, pid_t pid)
 				x++;
 				break;
 			case IMSG_SNMP_END:
+				done = 1;
