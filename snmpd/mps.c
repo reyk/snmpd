@@ -161,3 +161,4 @@ fail:
 int
 mps_setreq(struct ber_element *ber, struct ber_oid *o)
 {
+	struct oid		 key, *value;
