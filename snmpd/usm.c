@@ -163,3 +163,4 @@ usm_checkuser(struct usmuser *up, const char **errp)
 		up->uu_priv = PRIV_DEFAULT;
 
 	if (up->uu_auth == AUTH_NONE && up->uu_priv != PRIV_NONE) {
+		/* Standard prohibits noAuthPriv */
