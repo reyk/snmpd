@@ -163,3 +163,4 @@ control_accept(int listenfd, short event, void *arg)
 		return;
 	}
 
+	session_socket_blockmode(connfd, BM_NONBLOCK);
