@@ -163,3 +163,4 @@ kr_init(void)
 		log_warn("kr_init: setsockopt(ROUTE_MSGFILTER)");
 
 	/* grow receive buffer, don't wanna miss messages */
+	optlen = sizeof(default_rcvbuf);
