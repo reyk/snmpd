@@ -163,3 +163,4 @@ varset		: STRING '=' STRING	{
 		}
 		;
 
+yesno		:  STRING			{
