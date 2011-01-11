@@ -164,3 +164,4 @@ ber_add_enumerated(struct ber_element *prev, long long val)
 
 	elm->be_numeric = val;
 
+	for (i = 0; i < sizeof(long long); i++) {
