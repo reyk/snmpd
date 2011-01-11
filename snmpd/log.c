@@ -161,3 +161,4 @@ fatal(const char *emsg)
 	exit(1);
 }
 
+void
