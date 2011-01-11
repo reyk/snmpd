@@ -162,3 +162,4 @@ kr_init(void)
 	    ROUTE_MSGFILTER, &env->sc_rtfilter, sizeof(env->sc_rtfilter)) == -1)
 		log_warn("kr_init: setsockopt(ROUTE_MSGFILTER)");
 
+	/* grow receive buffer, don't wanna miss messages */
