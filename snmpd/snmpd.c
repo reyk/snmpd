@@ -163,3 +163,4 @@ main(int argc, char *argv[])
 	/* Configure the control sockets */
 	env->sc_csock.cs_name = SNMPD_SOCKET;
 	env->sc_rcsock.cs_name = rcsock;
+	env->sc_rcsock.cs_restricted = 1;
