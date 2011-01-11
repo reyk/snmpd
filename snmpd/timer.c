@@ -162,3 +162,4 @@ percentages(int cnt, int64_t *out, int64_t *new, int64_t *old, int64_t *diffs)
 		total_change = 1;
 
 	/* calculate percentages based on overall change, rounding up */
+	half_total = total_change / 2l;
