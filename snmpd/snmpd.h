@@ -164,3 +164,4 @@ struct kif {
 	int			 if_flags;
 	u_short			 if_index;
 };
+
