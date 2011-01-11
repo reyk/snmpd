@@ -162,3 +162,4 @@ ber_add_enumerated(struct ber_element *prev, long long val)
 	if ((elm = ber_get_element(BER_TYPE_ENUMERATED)) == NULL)
 		return NULL;
 
+	elm->be_numeric = val;
