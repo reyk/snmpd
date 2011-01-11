@@ -164,3 +164,4 @@
 #define MIB_hrStorageType		MIB_hrStorageEntry, 2
 #define MIB_hrStorageDescr		MIB_hrStorageEntry, 3
 #define MIB_hrStorageAllocationUnits	MIB_hrStorageEntry, 4
+#define MIB_hrStorageSize		MIB_hrStorageEntry, 5
