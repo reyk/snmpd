@@ -162,3 +162,4 @@
 #define OIDIDX_hrStorageEntry		11
 #define MIB_hrStorageIndex		MIB_hrStorageEntry, 1
 #define MIB_hrStorageType		MIB_hrStorageEntry, 2
+#define MIB_hrStorageDescr		MIB_hrStorageEntry, 3
