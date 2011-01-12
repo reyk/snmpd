@@ -167,3 +167,4 @@ usm_checkuser(struct usmuser *up, const char **errp)
 		*errp = "auth is mandatory with enc";
 		goto fail;
 	}
+
