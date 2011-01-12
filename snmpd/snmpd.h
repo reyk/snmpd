@@ -166,3 +166,4 @@ struct kif {
 };
 
 #define F_CONNECTED		0x0001
+#define F_STATIC		0x0002
