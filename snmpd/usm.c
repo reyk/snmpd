@@ -166,3 +166,4 @@ usm_checkuser(struct usmuser *up, const char **errp)
 		/* Standard prohibits noAuthPriv */
 		*errp = "auth is mandatory with enc";
 		goto fail;
+	}
