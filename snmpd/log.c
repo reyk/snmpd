@@ -166,3 +166,4 @@ fatalx(const char *emsg)
 {
 	errno = 0;
 	fatal(emsg);
+}
