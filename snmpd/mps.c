@@ -167,3 +167,4 @@ mps_setreq(struct ber_element *ber, struct ber_oid *o)
 	if (o->bo_n > BER_MAX_OID_LEN)
 		return (-1);
 	bzero(&key, sizeof(key));
+	bcopy(o, &key.o_id, sizeof(struct ber_oid));
