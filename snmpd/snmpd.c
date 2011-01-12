@@ -167,3 +167,4 @@ main(int argc, char *argv[])
 
 	log_init(debug);
 
+	if (!debug) {
