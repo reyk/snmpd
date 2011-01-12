@@ -168,3 +168,4 @@ control_accept(int listenfd, short event, void *arg)
 	if ((c = calloc(1, sizeof(struct ctl_conn))) == NULL) {
 		log_warn("control_accept");
 		close(connfd);
+		return;
