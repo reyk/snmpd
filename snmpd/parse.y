@@ -166,3 +166,4 @@ varset		: STRING '=' STRING	{
 yesno		:  STRING			{
 			if (!strcmp($1, "yes"))
 				$$ = 1;
+			else if (!strcmp($1, "no"))
