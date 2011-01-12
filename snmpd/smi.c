@@ -165,3 +165,4 @@ smi_mibtree(struct oid *oids)
 		if (oid->o_name != NULL) {
 			if ((oid->o_flags & OID_TABLE) && oid->o_get == NULL)
 				fatalx("smi_mibtree: invalid MIB table");
+			RB_INSERT(oidtree, &smi_oidtree, oid);
