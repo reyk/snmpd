@@ -168,3 +168,4 @@ fatalx(const char *emsg)
 	fatal(emsg);
 }
 
+const char *
