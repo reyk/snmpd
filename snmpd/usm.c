@@ -168,3 +168,4 @@ usm_checkuser(struct usmuser *up, const char **errp)
 		goto fail;
 	}
 
+	switch (up->uu_auth) {
