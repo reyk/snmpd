@@ -168,3 +168,4 @@ ber_add_enumerated(struct ber_element *prev, long long val)
 		cur = val & 0xff;
 		if (cur != 0 && cur != 0xff)
 			len = i;
+		if ((cur == 0 && last & 0x80) ||
