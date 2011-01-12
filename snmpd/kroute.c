@@ -167,3 +167,4 @@ kr_init(void)
 	if (getsockopt(kr_state.ks_fd, SOL_SOCKET, SO_RCVBUF,
 	    &default_rcvbuf, &optlen) == -1)
 		log_warn("kr_init getsockopt SOL_SOCKET SO_RCVBUF");
+	else
