@@ -168,3 +168,4 @@
 #define MIB_hrStorageUsed		MIB_hrStorageEntry, 6
 #define MIB_hrStorageAllocationFailures	MIB_hrStorageEntry, 7
 #define MIB_hrDevice			MIB_host, 3
+#define MIB_hrDeviceTypes		MIB_hrDevice, 1
