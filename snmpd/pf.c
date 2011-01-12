@@ -165,3 +165,4 @@ pfr_buf_next(struct pfr_buffer *b, const void *prev)
 
 	if (b == NULL)
 		return (NULL);
+	if (b->pfrb_size == 0)
