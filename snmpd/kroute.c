@@ -165,3 +165,4 @@ kr_init(void)
 	/* grow receive buffer, don't wanna miss messages */
 	optlen = sizeof(default_rcvbuf);
 	if (getsockopt(kr_state.ks_fd, SOL_SOCKET, SO_RCVBUF,
+	    &default_rcvbuf, &optlen) == -1)
