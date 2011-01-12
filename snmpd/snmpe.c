@@ -165,3 +165,4 @@ snmpe(struct snmpd *x_env, int pipe_parent2snmpe[2])
 
 	kr_init();
 	trap_init();
+	timer_init();
