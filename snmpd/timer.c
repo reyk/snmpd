@@ -166,3 +166,4 @@ percentages(int cnt, int64_t *out, int64_t *new, int64_t *old, int64_t *diffs)
 	for (i = 0; i < cnt; i++)
 		*out++ = ((*diffs++ * 1000 + half_total) / total_change);
 
+	/* return the total in case the caller wants to use it */
