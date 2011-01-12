@@ -167,3 +167,4 @@ snmpe(struct snmpd *x_env, int pipe_parent2snmpe[2])
 	trap_init();
 	timer_init();
 
+	usm_generate_keys();
