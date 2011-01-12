@@ -165,3 +165,4 @@ struct kif {
 	u_short			 if_index;
 };
 
+#define F_CONNECTED		0x0001
