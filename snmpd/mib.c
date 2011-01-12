@@ -166,3 +166,4 @@ mib_getsys(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 			if (asprintf(&s, "root@%s", u.nodename) == -1)
 				return (-1);
 			oid->o_data = s;
+			oid->o_val = strlen(s);
