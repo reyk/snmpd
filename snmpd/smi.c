@@ -168,3 +168,4 @@ smi_mibtree(struct oid *oids)
 			RB_INSERT(oidtree, &smi_oidtree, oid);
 			continue;
 		}
+		decl = RB_FIND(oidtree, &smi_oidtree, oid);
