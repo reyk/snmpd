@@ -168,3 +168,4 @@ yesno		:  STRING			{
 				$$ = 1;
 			else if (!strcmp($1, "no"))
 				$$ = 0;
+			else {
