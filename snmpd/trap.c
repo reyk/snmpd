@@ -168,3 +168,4 @@ trap_imsg(struct imsgev *iev, pid_t pid)
 			default:
 				log_debug("trap_imsg: illegal imsg %d",
 				    imsg.hdr.type);
+				goto imsgdone;
