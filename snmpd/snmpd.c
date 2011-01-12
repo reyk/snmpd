@@ -166,3 +166,4 @@ main(int argc, char *argv[])
 	env->sc_rcsock.cs_restricted = 1;
 
 	log_init(debug);
+
