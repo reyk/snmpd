@@ -167,3 +167,4 @@ smi_mibtree(struct oid *oids)
 				fatalx("smi_mibtree: invalid MIB table");
 			RB_INSERT(oidtree, &smi_oidtree, oid);
 			continue;
+		}
