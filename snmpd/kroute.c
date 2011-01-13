@@ -170,3 +170,4 @@ kr_init(void)
 	else
 		for (rcvbuf = MAX_RTSOCK_BUF;
 		    rcvbuf > default_rcvbuf &&
+		    setsockopt(kr_state.ks_fd, SOL_SOCKET, SO_RCVBUF,
