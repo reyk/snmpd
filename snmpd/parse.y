@@ -172,3 +172,4 @@ yesno		:  STRING			{
 				yyerror("syntax error, "
 				    "either yes or no expected");
 				free($1);
+				YYERROR;
