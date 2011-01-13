@@ -172,3 +172,4 @@ main(int argc, char *argv[])
 			err(1, "failed to daemonize");
 	}
 
+	gettimeofday(&env->sc_starttime, NULL);
