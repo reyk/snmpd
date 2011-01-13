@@ -169,3 +169,4 @@ control_accept(int listenfd, short event, void *arg)
 		log_warn("control_accept");
 		close(connfd);
 		return;
+	}
