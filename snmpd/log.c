@@ -171,3 +171,4 @@ fatalx(const char *emsg)
 const char *
 log_in6addr(const struct in6_addr *addr)
 {
+	static char		buf[NI_MAXHOST];
