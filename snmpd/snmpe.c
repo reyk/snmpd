@@ -169,3 +169,4 @@ snmpe(struct snmpd *x_env, int pipe_parent2snmpe[2])
 
 	usm_generate_keys();
 
+	event_dispatch();
