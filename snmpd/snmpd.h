@@ -169,3 +169,4 @@ struct kif {
 #define F_STATIC		0x0002
 #define F_BLACKHOLE		0x0004
 #define F_REJECT		0x0008
+#define F_DYNAMIC		0x0010
