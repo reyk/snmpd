@@ -170,3 +170,4 @@ main(int argc, char *argv[])
 	if (!debug) {
 		if (daemon(1, 0) == -1)
 			err(1, "failed to daemonize");
+	}
