@@ -172,3 +172,4 @@ usm_checkuser(struct usmuser *up, const char **errp)
 	case AUTH_NONE:
 		auth = "none";
 		break;
+	case AUTH_MD5:
