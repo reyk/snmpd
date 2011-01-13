@@ -171,3 +171,4 @@ trap_imsg(struct imsgev *iev, pid_t pid)
 				goto imsgdone;
 			}
 			imsg_free(&imsg);
+		}
