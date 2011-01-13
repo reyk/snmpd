@@ -169,3 +169,4 @@ smi_mibtree(struct oid *oids)
 			continue;
 		}
 		decl = RB_FIND(oidtree, &smi_oidtree, oid);
+		if (decl == NULL)
