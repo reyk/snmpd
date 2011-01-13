@@ -172,3 +172,4 @@ control_accept(int listenfd, short event, void *arg)
 	}
 
 	imsg_init(&c->iev.ibuf, connfd);
+	c->iev.handler = control_dispatch_imsg;
