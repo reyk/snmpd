@@ -170,3 +170,4 @@ mps_setreq(struct ber_element *ber, struct ber_oid *o)
 	bcopy(o, &key.o_id, sizeof(struct ber_oid));
 	value = smi_find(&key);
 	if (value == NULL)
+		return (-1);
