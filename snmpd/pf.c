@@ -170,3 +170,4 @@ pfr_buf_next(struct pfr_buffer *b, const void *prev)
 	if (prev == NULL) 
 		return (b->pfrb_caddr);
 	bs = buf_esize[b->pfrb_type];
+	if ((((const char *)prev)-((char *)b->pfrb_caddr)) / bs >=
