@@ -171,3 +171,4 @@ smi_mibtree(struct oid *oids)
 		decl = RB_FIND(oidtree, &smi_oidtree, oid);
 		if (decl == NULL)
 			fatalx("smi_mibtree: undeclared MIB");
+		decl->o_flags = oid->o_flags;
