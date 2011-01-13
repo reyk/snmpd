@@ -170,3 +170,4 @@ yesno		:  STRING			{
 				$$ = 0;
 			else {
 				yyerror("syntax error, "
+				    "either yes or no expected");
