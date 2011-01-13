@@ -172,3 +172,4 @@ mps_setreq(struct ber_element *ber, struct ber_oid *o)
 	if (value == NULL)
 		return (-1);
 	if ((value->o_flags & OID_WR) == 0 ||
+	    value->o_set == NULL)
