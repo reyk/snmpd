@@ -169,3 +169,4 @@ kr_init(void)
 		log_warn("kr_init getsockopt SOL_SOCKET SO_RCVBUF");
 	else
 		for (rcvbuf = MAX_RTSOCK_BUF;
+		    rcvbuf > default_rcvbuf &&
