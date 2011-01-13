@@ -172,3 +172,4 @@ smi_mibtree(struct oid *oids)
 		if (decl == NULL)
 			fatalx("smi_mibtree: undeclared MIB");
 		decl->o_flags = oid->o_flags;
+		decl->o_get = oid->o_get;
