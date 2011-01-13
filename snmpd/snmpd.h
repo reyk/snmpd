@@ -172,3 +172,4 @@ struct kif {
 #define F_DYNAMIC		0x0010
 
 /*
+ * Message Processing Subsystem (mps)
