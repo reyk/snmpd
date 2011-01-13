@@ -171,3 +171,4 @@ control_accept(int listenfd, short event, void *arg)
 		return;
 	}
 
+	imsg_init(&c->iev.ibuf, connfd);
