@@ -171,3 +171,4 @@ mib_getsys(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 		*elm = ber_add_string(*elm, s);
 		break;
 	case 5:
+		if (s == NULL) {
