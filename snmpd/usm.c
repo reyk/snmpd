@@ -169,3 +169,4 @@ usm_checkuser(struct usmuser *up, const char **errp)
 	}
 
 	switch (up->uu_auth) {
+	case AUTH_NONE:
