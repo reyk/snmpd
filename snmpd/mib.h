@@ -175,3 +175,4 @@
 #define MIB_hrDeviceNetwork		MIB_hrDeviceTypes, 4
 #define MIB_hrDevicePrinter		MIB_hrDeviceTypes, 5
 #define MIB_hrDeviceDiskStorage		MIB_hrDeviceTypes, 6
+#define MIB_hrDeviceVideo		MIB_hrDeviceTypes, 10
