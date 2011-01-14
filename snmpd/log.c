@@ -174,3 +174,4 @@ log_in6addr(const struct in6_addr *addr)
 	static char		buf[NI_MAXHOST];
 	struct sockaddr_in6	sa_in6;
 	u_int16_t		tmp16;
+
