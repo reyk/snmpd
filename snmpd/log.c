@@ -175,3 +175,4 @@ log_in6addr(const struct in6_addr *addr)
 	struct sockaddr_in6	sa_in6;
 	u_int16_t		tmp16;
 
+	bzero(&sa_in6, sizeof(sa_in6));
