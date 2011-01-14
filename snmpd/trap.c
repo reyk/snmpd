@@ -173,3 +173,4 @@ trap_imsg(struct imsgev *iev, pid_t pid)
 			imsg_free(&imsg);
 		}
 		if (done)
+			break;
