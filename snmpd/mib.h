@@ -176,3 +176,4 @@
 #define MIB_hrDevicePrinter		MIB_hrDeviceTypes, 5
 #define MIB_hrDeviceDiskStorage		MIB_hrDeviceTypes, 6
 #define MIB_hrDeviceVideo		MIB_hrDeviceTypes, 10
+#define MIB_hrDeviceAudio		MIB_hrDeviceTypes, 11
