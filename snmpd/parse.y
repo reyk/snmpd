@@ -175,3 +175,4 @@ yesno		:  STRING			{
 				YYERROR;
 			}
 			free($1);
+		}
