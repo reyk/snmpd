@@ -175,3 +175,4 @@ struct kif {
  * Message Processing Subsystem (mps)
  */
 
+struct oid {
