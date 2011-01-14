@@ -175,3 +175,4 @@ mps_setreq(struct ber_element *ber, struct ber_oid *o)
 	    value->o_set == NULL)
 		return (-1);
 	return (value->o_set(value, o, &ber));
+}
