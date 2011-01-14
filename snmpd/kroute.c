@@ -173,3 +173,4 @@ kr_init(void)
 		    setsockopt(kr_state.ks_fd, SOL_SOCKET, SO_RCVBUF,
 		    &rcvbuf, sizeof(rcvbuf)) == -1 && errno == ENOBUFS;
 		    rcvbuf /= 2)
+			;	/* nothing */
