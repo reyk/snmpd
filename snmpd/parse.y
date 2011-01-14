@@ -173,3 +173,4 @@ yesno		:  STRING			{
 				    "either yes or no expected");
 				free($1);
 				YYERROR;
+			}
