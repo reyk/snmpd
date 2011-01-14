@@ -173,3 +173,4 @@ pfr_buf_next(struct pfr_buffer *b, const void *prev)
 	if ((((const char *)prev)-((char *)b->pfrb_caddr)) / bs >=
 	    (size_t)b->pfrb_size-1)
 		return (NULL);
+
