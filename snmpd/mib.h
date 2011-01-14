@@ -173,3 +173,4 @@
 #define MIB_hrDeviceUnknown		MIB_hrDeviceTypes, 2
 #define MIB_hrDeviceProcessor		MIB_hrDeviceTypes, 3
 #define MIB_hrDeviceNetwork		MIB_hrDeviceTypes, 4
+#define MIB_hrDevicePrinter		MIB_hrDeviceTypes, 5
