@@ -175,3 +175,4 @@ kr_init(void)
 		    rcvbuf /= 2)
 			;	/* nothing */
 
+	RB_INIT(&krt);
