@@ -176,3 +176,4 @@ struct kif {
  */
 
 struct oid {
+	struct ber_oid		 o_id;
