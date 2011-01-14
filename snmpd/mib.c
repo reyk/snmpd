@@ -173,3 +173,4 @@ mib_getsys(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 	case 5:
 		if (s == NULL) {
 			if ((s = strdup(u.nodename)) == NULL)
+				return (-1);
