@@ -174,3 +174,4 @@ main(int argc, char *argv[])
 
 	gettimeofday(&env->sc_starttime, NULL);
 	env->sc_engine_boots = 0;
+
