@@ -175,3 +175,4 @@ control_accept(int listenfd, short event, void *arg)
 	c->iev.handler = control_dispatch_imsg;
 	c->iev.events = EV_READ;
 	c->iev.data = cs;
+	event_set(&c->iev.ev, c->iev.ibuf.fd, c->iev.events,
