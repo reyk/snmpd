@@ -176,3 +176,4 @@ main(int argc, char *argv[])
 	env->sc_engine_boots = 0;
 
 	log_info("startup");
+
