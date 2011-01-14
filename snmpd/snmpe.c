@@ -173,3 +173,4 @@ snmpe(struct snmpd *x_env, int pipe_parent2snmpe[2])
 
 	snmpe_shutdown();
 	kr_shutdown();
+
