@@ -176,3 +176,4 @@ kr_init(void)
 			;	/* nothing */
 
 	RB_INIT(&krt);
+	RB_INIT(&krt6);
