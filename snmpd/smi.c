@@ -177,3 +177,4 @@ smi_mibtree(struct oid *oids)
 		decl->o_table = oid->o_table;
 		decl->o_val = oid->o_val;
 		decl->o_data = oid->o_data;
+	}
