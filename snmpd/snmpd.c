@@ -179,3 +179,4 @@ main(int argc, char *argv[])
 
 	pf_init();
 
+	if (socketpair(AF_UNIX, SOCK_STREAM, PF_UNSPEC,
