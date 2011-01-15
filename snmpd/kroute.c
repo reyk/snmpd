@@ -179,3 +179,4 @@ kr_init(void)
 	RB_INIT(&krt6);
 	RB_INIT(&kit);
 	RB_INIT(&kat);
+
