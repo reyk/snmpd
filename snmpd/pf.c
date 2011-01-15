@@ -179,3 +179,4 @@ pfr_buf_next(struct pfr_buffer *b, const void *prev)
 
 int
 pfi_get_ifaces(const char *filter, struct pfi_kif *buf, int *size)
+{
