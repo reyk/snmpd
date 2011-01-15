@@ -180,3 +180,4 @@ snmpe(struct snmpd *x_env, int pipe_parent2snmpe[2])
 void
 snmpe_shutdown(void)
 {
+	log_info("snmp engine exiting");
