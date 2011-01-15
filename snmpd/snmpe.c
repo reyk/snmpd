@@ -177,3 +177,4 @@ snmpe(struct snmpd *x_env, int pipe_parent2snmpe[2])
 	return (0);
 }
 
+void
