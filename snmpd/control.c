@@ -180,3 +180,4 @@ control_accept(int listenfd, short event, void *arg)
 	event_add(&c->iev.ev, NULL);
 
 	TAILQ_INSERT_TAIL(&ctl_conns, c, entry);
+}
