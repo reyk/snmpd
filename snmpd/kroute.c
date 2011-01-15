@@ -180,3 +180,4 @@ kr_init(void)
 	RB_INIT(&kit);
 	RB_INIT(&kat);
 
+	if (fetchifs(0) == -1)
