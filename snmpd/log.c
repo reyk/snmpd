@@ -180,3 +180,4 @@ log_in6addr(const struct in6_addr *addr)
 	sa_in6.sin6_family = AF_INET6;
 	memcpy(&sa_in6.sin6_addr, addr, sizeof(sa_in6.sin6_addr));
 
+	/* XXX thanks, KAME, for this ugliness... adopted from route/show.c */
