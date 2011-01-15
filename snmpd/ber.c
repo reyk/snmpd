@@ -178,3 +178,4 @@ ber_add_enumerated(struct ber_element *prev, long long val)
 
 	ber_link_elements(prev, elm);
 
+	return elm;
