@@ -179,3 +179,4 @@
 #define MIB_hrDeviceAudio		MIB_hrDeviceTypes, 11
 #define MIB_hrDeviceCoprocessor		MIB_hrDeviceTypes, 12
 #define MIB_hrDeviceKeyboard		MIB_hrDeviceTypes, 13
+#define MIB_hrDeviceModem		MIB_hrDeviceTypes, 14
