@@ -177,3 +177,4 @@ pfr_buf_next(struct pfr_buffer *b, const void *prev)
 	return (((const char *)prev) + bs);
 }
 
+int
