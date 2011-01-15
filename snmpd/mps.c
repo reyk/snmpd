@@ -178,3 +178,4 @@ mps_setreq(struct ber_element *ber, struct ber_oid *o)
 }
 
 struct ber_element *
+mps_getnextreq(struct ber_element *root, struct ber_oid *o)
