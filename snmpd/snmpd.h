@@ -178,3 +178,4 @@ struct kif {
 struct oid {
 	struct ber_oid		 o_id;
 #define o_oid			 o_id.bo_id
+#define o_oidlen		 o_id.bo_n
