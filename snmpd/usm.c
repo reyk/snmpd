@@ -177,3 +177,4 @@ usm_checkuser(struct usmuser *up, const char **errp)
 		auth = "HMAC-MD5-96";
 		break;
 	case AUTH_SHA1:
+		up->uu_seclevel |= SNMP_MSGFLAG_AUTH;
