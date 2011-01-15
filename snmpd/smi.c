@@ -180,3 +180,4 @@ smi_mibtree(struct oid *oids)
 	}
 }
 
+int
