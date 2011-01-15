@@ -179,3 +179,4 @@ trap_imsg(struct imsgev *iev, pid_t pid)
 		if (n == 0)
 			goto done;
 	}
+
