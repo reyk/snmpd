@@ -180,3 +180,4 @@ struct oid {
 #define o_oid			 o_id.bo_id
 #define o_oidlen		 o_id.bo_n
 
+	char			*o_name;
