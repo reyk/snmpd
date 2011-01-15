@@ -177,3 +177,4 @@ main(int argc, char *argv[])
 
 	log_info("startup");
 
+	pf_init();
