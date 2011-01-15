@@ -180,3 +180,4 @@ trap_imsg(struct imsgev *iev, pid_t pid)
 			goto done;
 	}
 
+	if (varbind != NULL)
