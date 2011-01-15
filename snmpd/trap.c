@@ -177,3 +177,4 @@ trap_imsg(struct imsgev *iev, pid_t pid)
 		if ((n = imsg_read(ibuf)) == -1)
 			goto done;
 		if (n == 0)
+			goto done;
