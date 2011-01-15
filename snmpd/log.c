@@ -178,3 +178,4 @@ log_in6addr(const struct in6_addr *addr)
 	bzero(&sa_in6, sizeof(sa_in6));
 	sa_in6.sin6_len = sizeof(sa_in6);
 	sa_in6.sin6_family = AF_INET6;
+	memcpy(&sa_in6.sin6_addr, addr, sizeof(sa_in6.sin6_addr));
