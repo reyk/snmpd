@@ -179,3 +179,4 @@ yesno		:  STRING			{
 		;
 
 main		: LISTEN ON STRING		{
+			struct addresslist	 al;
