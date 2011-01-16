@@ -181,3 +181,4 @@ smi_mibtree(struct oid *oids)
 }
 
 int
+smi_init(void)
