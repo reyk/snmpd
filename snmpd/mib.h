@@ -182,3 +182,4 @@
 #define MIB_hrDeviceModem		MIB_hrDeviceTypes, 14
 #define MIB_hrDeviceParallelPort	MIB_hrDeviceTypes, 15
 #define MIB_hrDevicePointing		MIB_hrDeviceTypes, 16
+#define MIB_hrDeviceSerialPort		MIB_hrDeviceTypes, 17
