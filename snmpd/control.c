@@ -182,3 +182,4 @@ control_accept(int listenfd, short event, void *arg)
 	TAILQ_INSERT_TAIL(&ctl_conns, c, entry);
 }
 
+struct ctl_conn *
