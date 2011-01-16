@@ -184,3 +184,4 @@ control_accept(int listenfd, short event, void *arg)
 
 struct ctl_conn *
 control_connbyfd(int fd)
+{
