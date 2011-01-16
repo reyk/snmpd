@@ -184,3 +184,4 @@ snmpe_shutdown(void)
 	_exit(0);
 }
 
+void
