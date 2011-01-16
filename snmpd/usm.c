@@ -184,3 +184,4 @@ usm_checkuser(struct usmuser *up, const char **errp)
 
 	switch (up->uu_priv) {
 	case PRIV_NONE:
+		priv = "none";
