@@ -181,3 +181,4 @@ trap_imsg(struct imsgev *iev, pid_t pid)
 	}
 
 	if (varbind != NULL)
+		len = ber_calc_len(varbind);
