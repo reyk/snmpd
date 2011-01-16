@@ -183,3 +183,4 @@ main(int argc, char *argv[])
 	    pipe_parent2snmpe) == -1)
 		fatal("socketpair");
 
+	session_socket_blockmode(pipe_parent2snmpe[0], BM_NONBLOCK);
