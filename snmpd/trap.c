@@ -184,3 +184,4 @@ trap_imsg(struct imsgev *iev, pid_t pid)
 		len = ber_calc_len(varbind);
 	log_debug("trap_imsg: from pid %u len %d elements %d",
 	    pid, len, x);
+	trap_send(&o, varbind);
