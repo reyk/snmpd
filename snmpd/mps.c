@@ -183,3 +183,4 @@ mps_getnextreq(struct ber_element *root, struct ber_oid *o)
 	struct oid		*next = NULL;
 	struct ber_element	*ber = root;
 	struct oid		 key, *value;
+	int			 ret;
