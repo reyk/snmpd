@@ -182,3 +182,4 @@ usm_checkuser(struct usmuser *up, const char **errp)
 		break;
 	}
 
+	switch (up->uu_priv) {
