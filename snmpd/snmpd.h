@@ -182,3 +182,4 @@ struct oid {
 
 	char			*o_name;
 
+	u_int			 o_flags;
