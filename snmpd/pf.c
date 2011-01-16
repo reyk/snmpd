@@ -184,3 +184,4 @@ pfi_get_ifaces(const char *filter, struct pfi_kif *buf, int *size)
 	extern int		 devpf;
 
 	if (size == NULL || *size < 0 || (*size && buf == NULL)) {
+		errno = EINVAL;
