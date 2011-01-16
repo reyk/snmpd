@@ -182,3 +182,4 @@ kr_init(void)
 
 	if (fetchifs(0) == -1)
 		fatalx("kr_init fetchifs");
+	if (fetchtable() == -1)
