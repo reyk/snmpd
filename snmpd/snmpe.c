@@ -181,3 +181,4 @@ void
 snmpe_shutdown(void)
 {
 	log_info("snmp engine exiting");
+	_exit(0);
