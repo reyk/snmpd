@@ -181,3 +181,4 @@ int
 pfi_get_ifaces(const char *filter, struct pfi_kif *buf, int *size)
 {
 	struct pfioc_iface	 io;
+	extern int		 devpf;
