@@ -181,3 +181,4 @@ usm_checkuser(struct usmuser *up, const char **errp)
 		auth = "HMAC-SHA1-96";
 		break;
 	}
+
