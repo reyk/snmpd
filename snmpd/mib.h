@@ -183,3 +183,4 @@
 #define MIB_hrDeviceParallelPort	MIB_hrDeviceTypes, 15
 #define MIB_hrDevicePointing		MIB_hrDeviceTypes, 16
 #define MIB_hrDeviceSerialPort		MIB_hrDeviceTypes, 17
+#define MIB_hrDeviceTape		MIB_hrDeviceTypes, 18
