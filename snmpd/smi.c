@@ -184,3 +184,4 @@ int
 smi_init(void)
 {
 	RB_INIT(&smi_oidtree);
+	mib_init();
