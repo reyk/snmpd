@@ -182,3 +182,4 @@ main		: LISTEN ON STRING		{
 			struct addresslist	 al;
 			struct address		*h;
 
+			TAILQ_INIT(&al);
