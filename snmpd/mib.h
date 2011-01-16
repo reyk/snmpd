@@ -181,3 +181,4 @@
 #define MIB_hrDeviceKeyboard		MIB_hrDeviceTypes, 13
 #define MIB_hrDeviceModem		MIB_hrDeviceTypes, 14
 #define MIB_hrDeviceParallelPort	MIB_hrDeviceTypes, 15
+#define MIB_hrDevicePointing		MIB_hrDeviceTypes, 16
