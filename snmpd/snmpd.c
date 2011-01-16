@@ -182,3 +182,4 @@ main(int argc, char *argv[])
 	if (socketpair(AF_UNIX, SOCK_STREAM, PF_UNSPEC,
 	    pipe_parent2snmpe) == -1)
 		fatal("socketpair");
+
