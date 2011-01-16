@@ -181,3 +181,4 @@ struct oid {
 #define o_oidlen		 o_id.bo_n
 
 	char			*o_name;
+
