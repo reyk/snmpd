@@ -183,3 +183,4 @@ main		: LISTEN ON STRING		{
 			struct address		*h;
 
 			TAILQ_INIT(&al);
+			if (host($3, &al, 1, SNMPD_PORT, NULL, NULL) <= 0) {
