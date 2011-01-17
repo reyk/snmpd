@@ -186,3 +186,4 @@ struct oid {
 
 	int			 (*o_get)(struct oid *, struct ber_oid *,
 				    struct ber_element **);
+	int			 (*o_set)(struct oid *, struct ber_oid *,
