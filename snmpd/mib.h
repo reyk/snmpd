@@ -186,3 +186,4 @@
 #define MIB_hrDeviceTape		MIB_hrDeviceTypes, 18
 #define MIB_hrDeviceClock		MIB_hrDeviceTypes, 19
 #define MIB_hrDeviceVolatileMemory	MIB_hrDeviceTypes, 20
+#define MIB_hrDeviceNonVolatileMemory	MIB_hrDeviceTypes, 21
