@@ -188,3 +188,4 @@ pfi_get_ifaces(const char *filter, struct pfi_kif *buf, int *size)
 		return (-1);
 	}
 	bzero(&io, sizeof io);
+	if (filter != NULL)
