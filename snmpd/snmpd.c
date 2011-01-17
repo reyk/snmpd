@@ -187,3 +187,4 @@ main(int argc, char *argv[])
 	session_socket_blockmode(pipe_parent2snmpe[1], BM_NONBLOCK);
 
 	snmpd_generate_engineid(env);
+
