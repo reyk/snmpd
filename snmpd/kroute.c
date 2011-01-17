@@ -187,3 +187,4 @@ kr_init(void)
 
 	event_set(&kr_state.ks_ev, kr_state.ks_fd, EV_READ | EV_PERSIST,
 	    dispatch_rtmsg, NULL);
+	event_add(&kr_state.ks_ev, NULL);
