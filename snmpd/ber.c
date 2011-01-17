@@ -185,3 +185,4 @@ struct ber_element *
 ber_add_integer(struct ber_element *prev, long long val)
 {
 	struct ber_element *elm;
+	u_int i, len = 0;
