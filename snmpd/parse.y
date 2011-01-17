@@ -186,3 +186,4 @@ main		: LISTEN ON STRING		{
 			if (host($3, &al, 1, SNMPD_PORT, NULL, NULL) <= 0) {
 				yyerror("invalid ip address: %s", $3);
 				free($3);
+				YYERROR;
