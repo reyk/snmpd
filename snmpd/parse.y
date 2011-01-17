@@ -187,3 +187,4 @@ main		: LISTEN ON STRING		{
 				yyerror("invalid ip address: %s", $3);
 				free($3);
 				YYERROR;
+			}
