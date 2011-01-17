@@ -185,3 +185,4 @@ kr_init(void)
 	if (fetchtable() == -1)
 		fatalx("kr_init fetchtable");
 
+	event_set(&kr_state.ks_ev, kr_state.ks_fd, EV_READ | EV_PERSIST,
