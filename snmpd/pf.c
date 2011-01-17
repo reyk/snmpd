@@ -186,3 +186,4 @@ pfi_get_ifaces(const char *filter, struct pfi_kif *buf, int *size)
 	if (size == NULL || *size < 0 || (*size && buf == NULL)) {
 		errno = EINVAL;
 		return (-1);
+	}
