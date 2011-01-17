@@ -188,3 +188,4 @@ void
 snmpe_dispatch_parent(int fd, short event, void * ptr)
 {
 	struct imsgev	*iev;
+	struct imsgbuf	*ibuf;
