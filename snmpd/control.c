@@ -187,3 +187,4 @@ control_connbyfd(int fd)
 {
 	struct ctl_conn	*c;
 
+	for (c = TAILQ_FIRST(&ctl_conns); c != NULL && c->iev.ibuf.fd != fd;
