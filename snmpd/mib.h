@@ -187,3 +187,4 @@
 #define MIB_hrDeviceClock		MIB_hrDeviceTypes, 19
 #define MIB_hrDeviceVolatileMemory	MIB_hrDeviceTypes, 20
 #define MIB_hrDeviceNonVolatileMemory	MIB_hrDeviceTypes, 21
+#define MIB_hrDeviceTable		MIB_hrDevice, 2
