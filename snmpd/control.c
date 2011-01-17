@@ -186,3 +186,4 @@ struct ctl_conn *
 control_connbyfd(int fd)
 {
 	struct ctl_conn	*c;
+
