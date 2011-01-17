@@ -186,3 +186,4 @@ log_in6addr(const struct in6_addr *addr)
 		memcpy(&tmp16, &sa_in6.sin6_addr.s6_addr[2], sizeof(tmp16));
 		sa_in6.sin6_scope_id = ntohs(tmp16);
 		sa_in6.sin6_addr.s6_addr[2] = 0;
+		sa_in6.sin6_addr.s6_addr[3] = 0;
