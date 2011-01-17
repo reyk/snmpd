@@ -185,3 +185,4 @@ snmpe_shutdown(void)
 }
 
 void
+snmpe_dispatch_parent(int fd, short event, void * ptr)
