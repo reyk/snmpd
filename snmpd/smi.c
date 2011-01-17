@@ -187,3 +187,4 @@ smi_init(void)
 	mib_init();
 	return (0);
 }
+
