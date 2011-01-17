@@ -186,3 +186,4 @@ kr_init(void)
 		fatalx("kr_init fetchtable");
 
 	event_set(&kr_state.ks_ev, kr_state.ks_fd, EV_READ | EV_PERSIST,
+	    dispatch_rtmsg, NULL);
