@@ -187,3 +187,4 @@ trap_imsg(struct imsgev *iev, pid_t pid)
 	trap_send(&o, varbind);
 	return (0);
 
+ imsgdone:
