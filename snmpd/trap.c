@@ -188,3 +188,4 @@ trap_imsg(struct imsgev *iev, pid_t pid)
 	return (0);
 
  imsgdone:
+	imsg_free(&imsg);
