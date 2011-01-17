@@ -185,3 +185,4 @@ struct oid {
 	u_int			 o_flags;
 
 	int			 (*o_get)(struct oid *, struct ber_oid *,
+				    struct ber_element **);
