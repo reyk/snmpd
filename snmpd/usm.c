@@ -186,3 +186,4 @@ usm_checkuser(struct usmuser *up, const char **errp)
 	case PRIV_NONE:
 		priv = "none";
 		break;
+	case PRIV_DES:
