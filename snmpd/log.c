@@ -188,3 +188,4 @@ log_in6addr(const struct in6_addr *addr)
 		sa_in6.sin6_addr.s6_addr[2] = 0;
 		sa_in6.sin6_addr.s6_addr[3] = 0;
 	}
+
