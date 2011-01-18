@@ -191,3 +191,4 @@ struct oid {
 	struct ber_oid		*(*o_table)(struct oid *, struct ber_oid *,
 				    struct ber_oid *);
 
+	long long		 o_val;
