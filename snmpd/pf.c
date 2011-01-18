@@ -190,3 +190,4 @@ pfi_get_ifaces(const char *filter, struct pfi_kif *buf, int *size)
 	bzero(&io, sizeof io);
 	if (filter != NULL)
 		if (strlcpy(io.pfiio_name, filter, sizeof(io.pfiio_name)) >=
+		    sizeof(io.pfiio_name)) {
