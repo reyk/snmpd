@@ -191,3 +191,4 @@ mps_getnextreq(struct ber_element *root, struct ber_oid *o)
 	bzero(&key, sizeof(key));
 	bcopy(o, &key.o_id, sizeof(struct ber_oid));
 	smi_oidlen(&key.o_id);	/* Strip off any trailing .0. */
+	value = smi_find(&key);
