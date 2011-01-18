@@ -189,3 +189,4 @@ control_connbyfd(int fd)
 
 	for (c = TAILQ_FIRST(&ctl_conns); c != NULL && c->iev.ibuf.fd != fd;
 	    c = TAILQ_NEXT(c, entry))
+		;	/* nothing */
