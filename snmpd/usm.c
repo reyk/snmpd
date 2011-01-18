@@ -190,3 +190,4 @@ usm_checkuser(struct usmuser *up, const char **errp)
 		up->uu_seclevel |= SNMP_MSGFLAG_PRIV;
 		priv = "CBC-DES";
 		break;
+	case PRIV_AES:
