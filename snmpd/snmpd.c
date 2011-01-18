@@ -192,3 +192,4 @@ main(int argc, char *argv[])
 	setproctitle("parent");
 
 	event_init();
+
