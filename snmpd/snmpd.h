@@ -189,3 +189,4 @@ struct oid {
 	int			 (*o_set)(struct oid *, struct ber_oid *,
 				    struct ber_element **);
 	struct ber_oid		*(*o_table)(struct oid *, struct ber_oid *,
+				    struct ber_oid *);
