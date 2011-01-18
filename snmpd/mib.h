@@ -191,3 +191,4 @@
 #define MIB_hrDeviceEntry		MIB_hrDeviceTable, 1
 #define OIDIDX_hrDevice			10
 #define OIDIDX_hrDeviceEntry		11
+#define MIB_hrDeviceIndex		MIB_hrDeviceEntry, 1
