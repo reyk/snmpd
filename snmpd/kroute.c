@@ -190,3 +190,4 @@ kr_init(void)
 	event_add(&kr_state.ks_ev, NULL);
 }
 
+void
