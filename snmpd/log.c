@@ -189,3 +189,4 @@ log_in6addr(const struct in6_addr *addr)
 		sa_in6.sin6_addr.s6_addr[3] = 0;
 	}
 
+	return (print_host((struct sockaddr_storage *)&sa_in6, buf,
