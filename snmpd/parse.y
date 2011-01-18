@@ -190,3 +190,4 @@ main		: LISTEN ON STRING		{
 			}
 			free($3);
 			h = TAILQ_FIRST(&al);
+			bcopy(&h->ss, &conf->sc_address.ss, sizeof(*h));
