@@ -189,3 +189,4 @@ main(int argc, char *argv[])
 	snmpd_generate_engineid(env);
 
 	snmpe_pid = snmpe(env, pipe_parent2snmpe);
+	setproctitle("parent");
