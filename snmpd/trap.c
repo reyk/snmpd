@@ -190,3 +190,4 @@ trap_imsg(struct imsgev *iev, pid_t pid)
  imsgdone:
 	imsg_free(&imsg);
  done:
+	if (varbind != NULL)
