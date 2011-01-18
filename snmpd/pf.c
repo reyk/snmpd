@@ -191,3 +191,4 @@ pfi_get_ifaces(const char *filter, struct pfi_kif *buf, int *size)
 	if (filter != NULL)
 		if (strlcpy(io.pfiio_name, filter, sizeof(io.pfiio_name)) >=
 		    sizeof(io.pfiio_name)) {
+			errno = EINVAL;
