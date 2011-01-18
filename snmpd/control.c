@@ -192,3 +192,4 @@ control_connbyfd(int fd)
 		;	/* nothing */
 
 	return (c);
+}
