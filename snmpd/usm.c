@@ -192,3 +192,4 @@ usm_checkuser(struct usmuser *up, const char **errp)
 		break;
 	case PRIV_AES:
 		up->uu_seclevel |= SNMP_MSGFLAG_PRIV;
+		priv = "CFB128-AES-128";
