@@ -190,3 +190,4 @@ main(int argc, char *argv[])
 
 	snmpe_pid = snmpe(env, pipe_parent2snmpe);
 	setproctitle("parent");
+
