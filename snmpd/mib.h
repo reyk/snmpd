@@ -190,3 +190,4 @@
 #define MIB_hrDeviceTable		MIB_hrDevice, 2
 #define MIB_hrDeviceEntry		MIB_hrDeviceTable, 1
 #define OIDIDX_hrDevice			10
+#define OIDIDX_hrDeviceEntry		11
