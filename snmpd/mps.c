@@ -189,3 +189,4 @@ mps_getnextreq(struct ber_element *root, struct ber_oid *o)
 	if (o->bo_n > BER_MAX_OID_LEN)
 		return (NULL);
 	bzero(&key, sizeof(key));
+	bcopy(o, &key.o_id, sizeof(struct ber_oid));
