@@ -191,3 +191,4 @@ trap_imsg(struct imsgev *iev, pid_t pid)
 	imsg_free(&imsg);
  done:
 	if (varbind != NULL)
+		ber_free_elements(varbind);
