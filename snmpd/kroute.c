@@ -192,3 +192,4 @@ kr_init(void)
 
 void
 kr_shutdown(void)
+{
