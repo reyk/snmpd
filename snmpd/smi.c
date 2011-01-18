@@ -190,3 +190,4 @@ smi_init(void)
 
 struct oid *
 smi_find(struct oid *oid)
+{
