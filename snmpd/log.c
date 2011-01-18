@@ -190,3 +190,4 @@ log_in6addr(const struct in6_addr *addr)
 	}
 
 	return (print_host((struct sockaddr_storage *)&sa_in6, buf,
+	    NI_MAXHOST));
