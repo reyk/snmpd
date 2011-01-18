@@ -192,3 +192,4 @@ snmpe_dispatch_parent(int fd, short event, void * ptr)
 	struct imsg	 imsg;
 	ssize_t		 n;
 
+	iev = ptr;
