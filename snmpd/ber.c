@@ -190,3 +190,4 @@ ber_add_integer(struct ber_element *prev, long long val)
 
 	if ((elm = ber_get_element(BER_TYPE_INTEGER)) == NULL)
 		return NULL;
+
