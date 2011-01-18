@@ -192,3 +192,4 @@ ber_add_integer(struct ber_element *prev, long long val)
 		return NULL;
 
 	elm->be_numeric = val;
+
