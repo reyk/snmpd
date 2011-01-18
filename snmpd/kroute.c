@@ -189,3 +189,4 @@ kr_init(void)
 	    dispatch_rtmsg, NULL);
 	event_add(&kr_state.ks_ev, NULL);
 }
+
