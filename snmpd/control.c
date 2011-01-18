@@ -191,3 +191,4 @@ control_connbyfd(int fd)
 	    c = TAILQ_NEXT(c, entry))
 		;	/* nothing */
 
+	return (c);
