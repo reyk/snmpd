@@ -189,3 +189,4 @@ main		: LISTEN ON STRING		{
 				YYERROR;
 			}
 			free($3);
+			h = TAILQ_FIRST(&al);
