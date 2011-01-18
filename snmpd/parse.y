@@ -192,3 +192,4 @@ main		: LISTEN ON STRING		{
 			h = TAILQ_FIRST(&al);
 			bcopy(&h->ss, &conf->sc_address.ss, sizeof(*h));
 			conf->sc_address.port = h->port;
+
