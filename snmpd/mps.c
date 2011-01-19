@@ -194,3 +194,4 @@ mps_getnextreq(struct ber_element *root, struct ber_oid *o)
 	value = smi_find(&key);
 	if (value == NULL)
 		return (NULL);
+	if (value->o_flags & OID_TABLE) {
