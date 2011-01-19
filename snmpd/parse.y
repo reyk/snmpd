@@ -194,3 +194,4 @@ main		: LISTEN ON STRING		{
 			conf->sc_address.port = h->port;
 
 			while ((h = TAILQ_FIRST(&al)) != NULL) {
+				TAILQ_REMOVE(&al, h, entry);
