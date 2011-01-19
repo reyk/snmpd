@@ -195,3 +195,4 @@ trap_imsg(struct imsgev *iev, pid_t pid)
 	return (ret);
 }
 
+int
