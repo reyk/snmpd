@@ -196,3 +196,4 @@ smi_find(struct oid *oid)
 
 struct oid *
 smi_next(struct oid *oid)
+{
