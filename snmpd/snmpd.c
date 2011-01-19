@@ -194,3 +194,4 @@ main(int argc, char *argv[])
 	event_init();
 
 	signal_set(&ev_sigint, SIGINT, snmpd_sig_handler, env);
+	signal_set(&ev_sigterm, SIGTERM, snmpd_sig_handler, env);
