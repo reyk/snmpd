@@ -193,3 +193,4 @@ mps_getnextreq(struct ber_element *root, struct ber_oid *o)
 	smi_oidlen(&key.o_id);	/* Strip off any trailing .0. */
 	value = smi_find(&key);
 	if (value == NULL)
+		return (NULL);
