@@ -196,3 +196,4 @@ kr_shutdown(void)
 	kroute_clear();
 	kif_clear();
 }
+
