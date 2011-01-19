@@ -193,3 +193,4 @@ log_in6addr(const struct in6_addr *addr)
 	    NI_MAXHOST));
 }
 
+const char *
