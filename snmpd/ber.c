@@ -195,3 +195,4 @@ ber_add_integer(struct ber_element *prev, long long val)
 
 	for (i = 0; i < sizeof(long long); i++) {
 		cur = val & 0xff;
+		if (cur != 0 && cur != 0xff)
