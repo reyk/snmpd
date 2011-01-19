@@ -196,3 +196,4 @@ snmpe_dispatch_parent(int fd, short event, void * ptr)
 	ibuf = &iev->ibuf;
 	switch (event) {
 	case EV_READ:
+		if ((n = imsg_read(ibuf)) == -1)
