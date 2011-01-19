@@ -194,3 +194,4 @@ snmpe_dispatch_parent(int fd, short event, void * ptr)
 
 	iev = ptr;
 	ibuf = &iev->ibuf;
+	switch (event) {
