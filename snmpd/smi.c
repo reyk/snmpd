@@ -193,3 +193,4 @@ smi_find(struct oid *oid)
 {
 	return (RB_FIND(oidtree, &smi_oidtree, oid));
 }
+
