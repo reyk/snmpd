@@ -194,3 +194,4 @@ pfi_get_ifaces(const char *filter, struct pfi_kif *buf, int *size)
 			errno = EINVAL;
 			return (-1);
 		}
+	io.pfiio_buffer = buf;
