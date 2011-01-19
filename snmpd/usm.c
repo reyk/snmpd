@@ -195,3 +195,4 @@ usm_checkuser(struct usmuser *up, const char **errp)
 		priv = "CFB128-AES-128";
 		break;
 	}
+
