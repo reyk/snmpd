@@ -194,3 +194,4 @@ trap_imsg(struct imsgev *iev, pid_t pid)
 		ber_free_elements(varbind);
 	return (ret);
 }
+
