@@ -195,3 +195,4 @@ pfi_get_ifaces(const char *filter, struct pfi_kif *buf, int *size)
 			return (-1);
 		}
 	io.pfiio_buffer = buf;
+	io.pfiio_esize = sizeof(*buf);
