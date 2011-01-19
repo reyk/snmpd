@@ -195,3 +195,4 @@ mps_getnextreq(struct ber_element *root, struct ber_oid *o)
 	if (value == NULL)
 		return (NULL);
 	if (value->o_flags & OID_TABLE) {
+		/* Get the next table row for this column */
