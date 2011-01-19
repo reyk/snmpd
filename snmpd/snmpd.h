@@ -193,3 +193,4 @@ struct oid {
 
 	long long		 o_val;
 	void			*o_data;
+
