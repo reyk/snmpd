@@ -194,3 +194,4 @@ struct oid {
 	long long		 o_val;
 	void			*o_data;
 
+	RB_ENTRY(oid)		 o_element;
