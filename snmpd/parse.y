@@ -196,3 +196,4 @@ main		: LISTEN ON STRING		{
 			while ((h = TAILQ_FIRST(&al)) != NULL) {
 				TAILQ_REMOVE(&al, h, entry);
 				free(h);
+			}
