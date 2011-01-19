@@ -196,3 +196,4 @@ usm_checkuser(struct usmuser *up, const char **errp)
 		break;
 	}
 
+	log_debug("user \"%s\" auth %s enc %s", up->uu_name, auth, priv);
