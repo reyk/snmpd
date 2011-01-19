@@ -194,3 +194,4 @@ ber_add_integer(struct ber_element *prev, long long val)
 	elm->be_numeric = val;
 
 	for (i = 0; i < sizeof(long long); i++) {
+		cur = val & 0xff;
