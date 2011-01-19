@@ -195,3 +195,4 @@
 #define MIB_hrDeviceType		MIB_hrDeviceEntry, 2
 #define MIB_hrDeviceDescr		MIB_hrDeviceEntry, 3
 #define MIB_hrDeviceID			MIB_hrDeviceEntry, 4
+#define MIB_hrDeviceStatus		MIB_hrDeviceEntry, 5
