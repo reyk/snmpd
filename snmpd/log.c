@@ -195,3 +195,4 @@ log_in6addr(const struct in6_addr *addr)
 
 const char *
 print_host(struct sockaddr_storage *ss, char *buf, size_t len)
+{
