@@ -193,3 +193,4 @@ pfi_get_ifaces(const char *filter, struct pfi_kif *buf, int *size)
 		    sizeof(io.pfiio_name)) {
 			errno = EINVAL;
 			return (-1);
+		}
