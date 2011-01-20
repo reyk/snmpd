@@ -198,3 +198,4 @@ struct oid {
 };
 
 #define OID_ROOT		0x00
+#define OID_RD			0x01
