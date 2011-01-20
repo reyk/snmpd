@@ -200,3 +200,4 @@ ber_add_integer(struct ber_element *prev, long long val)
 		if ((cur == 0 && last & 0x80) ||
 		    (cur == 0xff && (last & 0x80) == 0))
 			len = i;
+		val >>= 8;
