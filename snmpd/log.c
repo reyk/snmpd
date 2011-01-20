@@ -197,3 +197,4 @@ const char *
 print_host(struct sockaddr_storage *ss, char *buf, size_t len)
 {
 	if (getnameinfo((struct sockaddr *)ss, ss->ss_len,
+	    buf, len, NULL, 0, NI_NUMERICHOST) != 0) {
