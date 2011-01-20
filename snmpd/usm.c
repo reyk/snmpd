@@ -199,3 +199,4 @@ usm_checkuser(struct usmuser *up, const char **errp)
 	log_debug("user \"%s\" auth %s enc %s", up->uu_name, auth, priv);
 	return 0;
 
+fail:
