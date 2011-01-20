@@ -197,3 +197,4 @@ control_connbyfd(int fd)
 void
 control_close(int fd, struct control_sock *cs)
 {
+	struct ctl_conn	*c;
