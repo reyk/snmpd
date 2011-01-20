@@ -198,3 +198,4 @@ snmpe_dispatch_parent(int fd, short event, void * ptr)
 	case EV_READ:
 		if ((n = imsg_read(ibuf)) == -1)
 			fatal("imsg_read error");
+		if (n == 0) {
