@@ -197,3 +197,4 @@ kr_shutdown(void)
 	kif_clear();
 }
 
+u_int
