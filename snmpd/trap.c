@@ -199,3 +199,4 @@ int
 trap_send(struct ber_oid *oid, struct ber_element *elm)
 {
 	int			 ret = 0, s;
+	struct address		*tr;
