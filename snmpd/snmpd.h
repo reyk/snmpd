@@ -197,3 +197,4 @@ struct oid {
 	RB_ENTRY(oid)		 o_element;
 };
 
+#define OID_ROOT		0x00
