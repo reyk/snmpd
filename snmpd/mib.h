@@ -198,3 +198,4 @@
 #define MIB_hrDeviceStatus		MIB_hrDeviceEntry, 5
 #define MIB_hrDeviceErrors		MIB_hrDeviceEntry, 6
 #define MIB_hrProcessorTable		MIB_hrDevice, 3
+#define MIB_hrProcessorEntry		MIB_hrProcessorTable, 1
