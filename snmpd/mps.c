@@ -200,3 +200,4 @@ mps_getnextreq(struct ber_element *root, struct ber_oid *o)
 			bcopy(&no, o, sizeof(*o));
 			ret = value->o_get(value, o, &ber);
 		} else
+			ret = 1;
