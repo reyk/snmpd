@@ -198,3 +198,4 @@ mps_getnextreq(struct ber_element *root, struct ber_oid *o)
 		/* Get the next table row for this column */
 		if (mps_table(value, o, &no) != NULL) {
 			bcopy(&no, o, sizeof(*o));
+			ret = value->o_get(value, o, &ber);
