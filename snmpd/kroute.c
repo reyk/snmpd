@@ -199,3 +199,4 @@ kr_shutdown(void)
 
 u_int
 kr_ifnumber(void)
+{
