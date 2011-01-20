@@ -198,3 +198,4 @@ main		: LISTEN ON STRING		{
 				free(h);
 			}
 		}
+		| READONLY COMMUNITY STRING	{
