@@ -200,3 +200,4 @@ mib_sysor(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 	u_int32_t		 idx = 1, nmib = 0;
 	struct oid		*next, *miboid;
 	char			 buf[SNMPD_MAXSTRLEN];
+
