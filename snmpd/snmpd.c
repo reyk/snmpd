@@ -198,3 +198,4 @@ main(int argc, char *argv[])
 	signal_set(&ev_sigchld, SIGCHLD, snmpd_sig_handler, env);
 	signal_set(&ev_sighup, SIGHUP, snmpd_sig_handler, env);
 	signal_add(&ev_sigint, NULL);
+	signal_add(&ev_sigterm, NULL);
