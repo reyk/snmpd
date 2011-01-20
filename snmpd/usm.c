@@ -200,3 +200,4 @@ usm_checkuser(struct usmuser *up, const char **errp)
 	return 0;
 
 fail:
+	free(up->uu_name);
