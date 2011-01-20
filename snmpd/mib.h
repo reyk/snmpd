@@ -200,3 +200,4 @@
 #define MIB_hrProcessorTable		MIB_hrDevice, 3
 #define MIB_hrProcessorEntry		MIB_hrProcessorTable, 1
 #define OIDIDX_hrProcessor		10
+#define OIDIDX_hrProcessorEntry		11
