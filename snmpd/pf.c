@@ -199,3 +199,4 @@ pfi_get_ifaces(const char *filter, struct pfi_kif *buf, int *size)
 	io.pfiio_size = *size;
 	if (ioctl(devpf, DIOCIGETIFACES, &io))
 		return (-1);
+	*size = io.pfiio_size;
