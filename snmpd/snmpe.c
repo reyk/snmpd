@@ -200,3 +200,4 @@ snmpe_dispatch_parent(int fd, short event, void * ptr)
 			fatal("imsg_read error");
 		if (n == 0) {
 			/* this pipe is dead, so remove the event handler */
+			event_del(&iev->ev);
