@@ -197,3 +197,4 @@ smi_find(struct oid *oid)
 struct oid *
 smi_next(struct oid *oid)
 {
+	return (RB_NEXT(oidtree, &smi_oidtree, oid));
