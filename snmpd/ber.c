@@ -203,3 +203,4 @@ ber_add_integer(struct ber_element *prev, long long val)
 		val >>= 8;
 		last = cur;
 	}
+	elm->be_len = len + 1;
