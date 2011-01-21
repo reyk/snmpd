@@ -201,3 +201,4 @@ main		: LISTEN ON STRING		{
 		| READONLY COMMUNITY STRING	{
 			if (strlcpy(conf->sc_rdcommunity, $3,
 			    sizeof(conf->sc_rdcommunity)) >=
+			    sizeof(conf->sc_rdcommunity)) {
