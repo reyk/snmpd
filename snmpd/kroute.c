@@ -204,3 +204,4 @@ kr_ifnumber(void)
 }
 
 u_long
+kr_iflastchange(void)
