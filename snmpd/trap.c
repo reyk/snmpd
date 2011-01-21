@@ -202,3 +202,4 @@ trap_send(struct ber_oid *oid, struct ber_element *elm)
 	struct address		*tr;
 	struct ber_element	*root, *b, *c, *trap;
 	struct ber		 ber;
+	char			*cmn;
