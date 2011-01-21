@@ -204,3 +204,4 @@
 #define MIB_hrProcessorFrwID		MIB_hrProcessorEntry, 1
 #define MIB_hrProcessorLoad		MIB_hrProcessorEntry, 2
 #define MIB_hrSWRun			MIB_host, 4
+#define MIB_hrSWOSIndex			MIB_hrSWRun, 1
