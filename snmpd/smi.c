@@ -203,3 +203,4 @@ smi_next(struct oid *oid)
 struct oid *
 smi_foreach(struct oid *oid, u_int flags)
 {
+	/*
