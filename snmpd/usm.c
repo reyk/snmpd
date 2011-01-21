@@ -202,3 +202,4 @@ usm_checkuser(struct usmuser *up, const char **errp)
 fail:
 	free(up->uu_name);
 	free(up->uu_authkey);
+	free(up->uu_privkey);
