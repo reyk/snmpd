@@ -203,3 +203,4 @@
 #define OIDIDX_hrProcessorEntry		11
 #define MIB_hrProcessorFrwID		MIB_hrProcessorEntry, 1
 #define MIB_hrProcessorLoad		MIB_hrProcessorEntry, 2
+#define MIB_hrSWRun			MIB_host, 4
