@@ -204,3 +204,4 @@ mps_getnextreq(struct ber_element *root, struct ber_oid *o)
 		switch (ret) {
 		case 0:
 			return (ber);
+		case -1:
