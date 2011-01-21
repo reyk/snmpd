@@ -201,3 +201,4 @@ struct oid {
 #define OID_RD			0x01
 #define OID_WR			0x02
 #define OID_IFSET		0x04	/* only if user-specified value */
+#define OID_DYNAMIC		0x08	/* free allocated data */
