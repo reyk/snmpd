@@ -204,3 +204,4 @@ snmpe_dispatch_parent(int fd, short event, void * ptr)
 			event_loopexit(NULL);
 			return;
 		}
+		break;
