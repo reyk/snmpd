@@ -201,3 +201,4 @@ control_close(int fd, struct control_sock *cs)
 
 	if ((c = control_connbyfd(fd)) == NULL) {
 		log_warn("control_close: fd %d: not found", fd);
+		return;
