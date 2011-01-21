@@ -203,3 +203,4 @@ fail:
 	free(up->uu_name);
 	free(up->uu_authkey);
 	free(up->uu_privkey);
+	SLIST_REMOVE(&usmuserlist, up, usmuser, uu_next);
