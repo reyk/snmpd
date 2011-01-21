@@ -202,3 +202,4 @@ print_host(struct sockaddr_storage *ss, char *buf, size_t len)
 		return (NULL);
 	}
 	return (buf);
+}
