@@ -203,3 +203,4 @@ struct oid {
 #define OID_IFSET		0x04	/* only if user-specified value */
 #define OID_DYNAMIC		0x08	/* free allocated data */
 #define OID_TABLE		0x10	/* dynamic sub-elements */
+#define OID_MIB			0x20	/* root-OID of a supported MIB */
