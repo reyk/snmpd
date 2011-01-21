@@ -204,3 +204,4 @@ trap_send(struct ber_oid *oid, struct ber_element *elm)
 	struct ber		 ber;
 	char			*cmn;
 	ssize_t			 len;
+	u_int8_t		*ptr;
