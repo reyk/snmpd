@@ -204,3 +204,4 @@ control_close(int fd, struct control_sock *cs)
 		return;
 	}
 
+	msgbuf_clear(&c->iev.ibuf.w);
