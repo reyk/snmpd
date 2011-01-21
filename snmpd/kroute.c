@@ -201,3 +201,4 @@ u_int
 kr_ifnumber(void)
 {
 	return (kr_state.ks_nkif);
+}
