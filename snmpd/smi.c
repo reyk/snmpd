@@ -204,3 +204,4 @@ struct oid *
 smi_foreach(struct oid *oid, u_int flags)
 {
 	/*
+	 * Traverse the tree of MIBs with the option to check
