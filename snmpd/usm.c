@@ -205,3 +205,4 @@ fail:
 	free(up->uu_privkey);
 	SLIST_REMOVE(&usmuserlist, up, usmuser, uu_next);
 	free(up);
+	return -1;
