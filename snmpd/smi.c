@@ -208,3 +208,4 @@ smi_foreach(struct oid *oid, u_int flags)
 	 * for specific OID flags.
 	 */
 	if (oid == NULL) {
+		oid = RB_MIN(oidtree, &smi_oidtree);
