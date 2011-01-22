@@ -206,3 +206,4 @@ main(int argc, char *argv[])
 	close(pipe_parent2snmpe[1]);
 
 	if ((iev_snmpe = calloc(1, sizeof(struct imsgev))) == NULL)
+		fatal(NULL);
