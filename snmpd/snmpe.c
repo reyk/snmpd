@@ -207,3 +207,4 @@ snmpe_dispatch_parent(int fd, short event, void * ptr)
 		break;
 	case EV_WRITE:
 		if (msgbuf_write(&ibuf->w) == -1)
+			fatal("msgbuf_write");
