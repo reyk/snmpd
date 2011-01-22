@@ -206,3 +206,4 @@ mps_getnextreq(struct ber_element *root, struct ber_oid *o)
 			return (ber);
 		case -1:
 			return (NULL);
+		case 1:	/* end-of-rows */
