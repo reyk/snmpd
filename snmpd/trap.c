@@ -206,3 +206,4 @@ trap_send(struct ber_oid *oid, struct ber_element *elm)
 	ssize_t			 len;
 	u_int8_t		*ptr;
 	struct			 ber_oid uptime = OID(MIB_sysUpTime);
+	struct			 ber_oid trapoid = OID(MIB_snmpTrapOID);
