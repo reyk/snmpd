@@ -207,3 +207,4 @@ main(int argc, char *argv[])
 
 	if ((iev_snmpe = calloc(1, sizeof(struct imsgev))) == NULL)
 		fatal(NULL);
+
