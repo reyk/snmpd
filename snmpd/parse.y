@@ -208,3 +208,4 @@ main		: LISTEN ON STRING		{
 			}
 			free($3);
 		}
+		| READWRITE COMMUNITY STRING	{
