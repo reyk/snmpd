@@ -206,3 +206,4 @@
 #define MIB_hrSWRun			MIB_host, 4
 #define MIB_hrSWOSIndex			MIB_hrSWRun, 1
 #define MIB_hrSWRunTable		MIB_hrSWRun, 2
+#define MIB_hrSWRunEntry		MIB_hrSWRunTable, 1
