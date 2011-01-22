@@ -208,3 +208,4 @@ fail:
 	return -1;
 }
 
+struct ber_element *
