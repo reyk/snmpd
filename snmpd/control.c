@@ -208,3 +208,4 @@ control_close(int fd, struct control_sock *cs)
 	TAILQ_REMOVE(&ctl_conns, c, entry);
 
 	event_del(&c->iev.ev);
+	close(c->iev.ibuf.fd);
