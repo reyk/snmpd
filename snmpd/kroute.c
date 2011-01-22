@@ -206,3 +206,4 @@ kr_ifnumber(void)
 u_long
 kr_iflastchange(void)
 {
+	return (kr_state.ks_iflastchange);
