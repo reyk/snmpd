@@ -208,3 +208,4 @@ struct oid {
 
 #define OID_RS			(OID_RD|OID_IFSET)
 #define OID_WS			(OID_WR|OID_IFSET)
+#define OID_RW			(OID_RD|OID_WR)
