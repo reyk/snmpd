@@ -206,3 +206,4 @@ mib_sysor(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 	    (next = smi_foreach(next, OID_MIB)) != NULL; nmib++);
 
 	/* Get and verify the current row index */
+	idx = o->bo_id[OIDIDX_sysOREntry];
