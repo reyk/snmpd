@@ -205,3 +205,4 @@ pfi_get_ifaces(const char *filter, struct pfi_kif *buf, int *size)
 
 int
 pfi_get(struct pfr_buffer *b, const char *filter)
+{
