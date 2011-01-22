@@ -205,3 +205,4 @@ struct oid {
 #define OID_TABLE		0x10	/* dynamic sub-elements */
 #define OID_MIB			0x20	/* root-OID of a supported MIB */
 #define OID_KEY			0x40	/* lookup tables */
+
