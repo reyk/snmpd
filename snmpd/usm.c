@@ -206,3 +206,4 @@ fail:
 	SLIST_REMOVE(&usmuserlist, up, usmuser, uu_next);
 	free(up);
 	return -1;
+}
