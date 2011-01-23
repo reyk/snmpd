@@ -209,3 +209,4 @@ pfi_get(struct pfr_buffer *b, const char *filter)
 	bzero(b, sizeof(struct pfr_buffer));
 	b->pfrb_type = PFRB_IFACES;
 	for (;;) {
+		pfr_buf_grow(b, b->pfrb_size);
