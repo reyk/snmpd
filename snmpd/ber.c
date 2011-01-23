@@ -210,3 +210,4 @@ ber_add_integer(struct ber_element *prev, long long val)
 	return elm;
 }
 
+int
