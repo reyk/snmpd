@@ -210,3 +210,4 @@
 #define OIDIDX_hrSWRun			10
 #define OIDIDX_hrSWRunEntry		11
 #define MIB_hrSWRunIndex		MIB_hrSWRunEntry, 1
+#define MIB_hrSWRunName			MIB_hrSWRunEntry, 2
