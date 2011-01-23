@@ -211,3 +211,4 @@ control_close(int fd, struct control_sock *cs)
 	close(c->iev.ibuf.fd);
 
 	/* Some file descriptors are available again. */
+	if (evtimer_pending(&cs->cs_evt, NULL)) {
