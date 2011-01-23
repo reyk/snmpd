@@ -211,3 +211,4 @@ mib_sysor(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 		return (1);
 
 	/* Find the MIB root element for this Id */
+	for (next = miboid = NULL, nmib = 1;
