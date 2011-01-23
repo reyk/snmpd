@@ -212,3 +212,4 @@
 #define MIB_hrSWRunIndex		MIB_hrSWRunEntry, 1
 #define MIB_hrSWRunName			MIB_hrSWRunEntry, 2
 #define MIB_hrSWRunID			MIB_hrSWRunEntry, 3
+#define MIB_hrSWRunPath			MIB_hrSWRunEntry, 4
