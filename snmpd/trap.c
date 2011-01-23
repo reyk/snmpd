@@ -211,3 +211,4 @@ trap_send(struct ber_oid *oid, struct ber_element *elm)
 	struct oid		 oa, ob;
 
 	if (TAILQ_EMPTY(&env->sc_trapreceivers))
+		return (0);
