@@ -210,3 +210,4 @@ mib_sysor(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 	if (idx > nmib)
 		return (1);
 
+	/* Find the MIB root element for this Id */
