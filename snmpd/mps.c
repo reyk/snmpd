@@ -210,3 +210,4 @@ mps_getnextreq(struct ber_element *root, struct ber_oid *o)
 			break;
 		}
 	} else if (o->bo_n == value->o_oidlen && value->o_get != NULL) {
+		/* No instance identifier specified. Append .0. */
