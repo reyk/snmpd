@@ -211,3 +211,4 @@ kr_iflastchange(void)
 
 int
 kr_updateif(u_int if_index)
+{
