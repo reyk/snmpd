@@ -210,3 +210,4 @@ snmpe_dispatch_parent(int fd, short event, void * ptr)
 			fatal("msgbuf_write");
 		imsg_event_add(iev);
 		return;
+	default:
