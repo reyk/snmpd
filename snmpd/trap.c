@@ -209,3 +209,4 @@ trap_send(struct ber_oid *oid, struct ber_element *elm)
 	struct			 ber_oid trapoid = OID(MIB_snmpTrapOID);
 	char			 ostr[SNMP_MAX_OID_LEN];
 	struct oid		 oa, ob;
+
