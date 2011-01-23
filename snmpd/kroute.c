@@ -209,3 +209,4 @@ kr_iflastchange(void)
 	return (kr_state.ks_iflastchange);
 }
 
+int
