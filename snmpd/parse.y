@@ -211,3 +211,4 @@ main		: LISTEN ON STRING		{
 		| READWRITE COMMUNITY STRING	{
 			if (strlcpy(conf->sc_rwcommunity, $3,
 			    sizeof(conf->sc_rwcommunity)) >=
+			    sizeof(conf->sc_rwcommunity)) {
