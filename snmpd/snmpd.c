@@ -209,3 +209,4 @@ main(int argc, char *argv[])
 		fatal(NULL);
 
 	imsg_init(&iev_snmpe->ibuf, pipe_parent2snmpe[0]);
+	iev_snmpe->handler = snmpd_dispatch_snmpe;
