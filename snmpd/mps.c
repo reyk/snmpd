@@ -209,3 +209,4 @@ mps_getnextreq(struct ber_element *root, struct ber_oid *o)
 		case 1:	/* end-of-rows */
 			break;
 		}
+	} else if (o->bo_n == value->o_oidlen && value->o_get != NULL) {
