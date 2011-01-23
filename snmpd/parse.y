@@ -212,3 +212,4 @@ main		: LISTEN ON STRING		{
 			if (strlcpy(conf->sc_rwcommunity, $3,
 			    sizeof(conf->sc_rwcommunity)) >=
 			    sizeof(conf->sc_rwcommunity)) {
+				yyerror("r/w community name too long");
