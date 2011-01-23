@@ -212,3 +212,4 @@ control_close(int fd, struct control_sock *cs)
 
 	/* Some file descriptors are available again. */
 	if (evtimer_pending(&cs->cs_evt, NULL)) {
+		evtimer_del(&cs->cs_evt);
