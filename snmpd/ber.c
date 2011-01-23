@@ -211,3 +211,4 @@ ber_add_integer(struct ber_element *prev, long long val)
 }
 
 int
+ber_get_integer(struct ber_element *elm, long long *n)
