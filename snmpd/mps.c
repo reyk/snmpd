@@ -212,3 +212,4 @@ mps_getnextreq(struct ber_element *root, struct ber_oid *o)
 	} else if (o->bo_n == value->o_oidlen && value->o_get != NULL) {
 		/* No instance identifier specified. Append .0. */
 		if (o->bo_n + 1 > BER_MAX_OID_LEN)
+			return (NULL);
