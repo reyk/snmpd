@@ -210,3 +210,4 @@ trap_send(struct ber_oid *oid, struct ber_element *elm)
 	char			 ostr[SNMP_MAX_OID_LEN];
 	struct oid		 oa, ob;
 
+	if (TAILQ_EMPTY(&env->sc_trapreceivers))
