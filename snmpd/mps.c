@@ -214,3 +214,4 @@ mps_getnextreq(struct ber_element *root, struct ber_oid *o)
 		if (o->bo_n + 1 > BER_MAX_OID_LEN)
 			return (NULL);
 		ber = ber_add_noid(ber, o, o->bo_n + 1);
+		if ((ret = value->o_get(value, o, &ber)) != 0)
