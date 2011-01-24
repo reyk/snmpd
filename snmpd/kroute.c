@@ -216,3 +216,4 @@ kr_updateif(u_int if_index)
 
 	if ((kn = kif_find(if_index)) != NULL)
 		kif_remove(kn);
+
