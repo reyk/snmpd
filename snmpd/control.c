@@ -215,3 +215,4 @@ control_close(int fd, struct control_sock *cs)
 		evtimer_del(&cs->cs_evt);
 		event_add(&cs->cs_ev, NULL);
 	}
+
