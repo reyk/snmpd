@@ -213,3 +213,4 @@ trap_send(struct ber_oid *oid, struct ber_element *elm)
 	if (TAILQ_EMPTY(&env->sc_trapreceivers))
 		return (0);
 
+	smi_scalar_oidlen(&uptime);
