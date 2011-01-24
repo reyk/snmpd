@@ -216,3 +216,4 @@ ber_get_integer(struct ber_element *elm, long long *n)
 	if (elm->be_encoding != BER_TYPE_INTEGER)
 		return -1;
 
+	*n = elm->be_numeric;
