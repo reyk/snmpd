@@ -214,3 +214,4 @@ snmpe_dispatch_parent(int fd, short event, void * ptr)
 		fatalx("snmpe_dispatch_parent: unknown event");
 	}
 
+	for (;;) {
