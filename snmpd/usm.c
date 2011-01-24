@@ -214,3 +214,4 @@ usm_decode(struct snmp_message *msg, struct ber_element *elm, const char **errp)
 	struct snmp_stats	*stats = &env->sc_stats;
 	off_t			 offs, offs2;
 	char			*usmparams;
+	size_t			 len;
