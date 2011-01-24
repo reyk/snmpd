@@ -216,3 +216,4 @@ control_close(int fd, struct control_sock *cs)
 		event_add(&cs->cs_ev, NULL);
 	}
 
+	free(c);
