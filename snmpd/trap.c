@@ -214,3 +214,4 @@ trap_send(struct ber_oid *oid, struct ber_element *elm)
 		return (0);
 
 	smi_scalar_oidlen(&uptime);
+	smi_scalar_oidlen(&trapoid);
