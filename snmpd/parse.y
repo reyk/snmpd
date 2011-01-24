@@ -213,3 +213,4 @@ main		: LISTEN ON STRING		{
 			    sizeof(conf->sc_rwcommunity)) >=
 			    sizeof(conf->sc_rwcommunity)) {
 				yyerror("r/w community name too long");
+				free($3);
