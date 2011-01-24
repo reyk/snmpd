@@ -213,3 +213,4 @@ int
 kr_updateif(u_int if_index)
 {
 	struct kif_node	*kn;
+
