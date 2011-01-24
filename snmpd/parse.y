@@ -215,3 +215,4 @@ main		: LISTEN ON STRING		{
 				yyerror("r/w community name too long");
 				free($3);
 				YYERROR;
+			}
