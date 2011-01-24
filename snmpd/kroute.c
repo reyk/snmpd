@@ -215,3 +215,4 @@ kr_updateif(u_int if_index)
 	struct kif_node	*kn;
 
 	if ((kn = kif_find(if_index)) != NULL)
+		kif_remove(kn);
