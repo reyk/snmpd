@@ -215,3 +215,4 @@ pfi_get(struct pfr_buffer *b, const char *filter)
 			return (1);
 		if (b->pfrb_size <= b->pfrb_msize)
 			break;
+	}
