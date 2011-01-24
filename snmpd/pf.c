@@ -213,3 +213,4 @@ pfi_get(struct pfr_buffer *b, const char *filter)
 		b->pfrb_size = b->pfrb_msize;
 		if (pfi_get_ifaces(filter, b->pfrb_caddr, &(b->pfrb_size)))
 			return (1);
+		if (b->pfrb_size <= b->pfrb_msize)
