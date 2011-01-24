@@ -213,3 +213,4 @@ main(int argc, char *argv[])
 	iev_snmpe->data = iev_snmpe;
 
 	iev_snmpe->events = EV_READ;
+	event_set(&iev_snmpe->ev, iev_snmpe->ibuf.fd, iev_snmpe->events,
