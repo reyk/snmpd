@@ -215,3 +215,4 @@ smi_foreach(struct oid *oid, u_int flags)
 			return (oid);
 	}
 	for (;;) {
+		oid = RB_NEXT(oidtree, &smi_oidtree, oid);
