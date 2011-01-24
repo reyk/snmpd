@@ -214,3 +214,4 @@ control_close(int fd, struct control_sock *cs)
 	if (evtimer_pending(&cs->cs_evt, NULL)) {
 		evtimer_del(&cs->cs_evt);
 		event_add(&cs->cs_ev, NULL);
+	}
