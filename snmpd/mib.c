@@ -219,3 +219,4 @@ mib_sysor(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 	if (miboid == NULL)
 		return (-1);
 
+	/* Tables need to prepend the OID on their own */
