@@ -218,3 +218,4 @@ main(int argc, char *argv[])
 	event_add(&iev_snmpe->ev, NULL);
 
 	event_dispatch();
+
