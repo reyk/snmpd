@@ -219,3 +219,4 @@ usm_decode(struct snmp_message *msg, struct ber_element *elm, const char **errp)
 	struct ber		 ber;
 	struct ber_element	*usm = NULL, *next = NULL, *decr;
 	char			*engineid;
+	char			*user;
