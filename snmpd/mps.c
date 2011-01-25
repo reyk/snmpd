@@ -219,3 +219,4 @@ mps_getnextreq(struct ber_element *root, struct ber_oid *o)
 		return (ber);
 	}
 
+getnext:
