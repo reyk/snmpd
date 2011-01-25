@@ -217,3 +217,4 @@ usm_decode(struct snmp_message *msg, struct ber_element *elm, const char **errp)
 	size_t			 len;
 	size_t			 enginelen, userlen, digestlen, saltlen;
 	struct ber		 ber;
+	struct ber_element	*usm = NULL, *next = NULL, *decr;
