@@ -217,3 +217,4 @@ mps_getnextreq(struct ber_element *root, struct ber_oid *o)
 		if ((ret = value->o_get(value, o, &ber)) != 0)
 			return (NULL);
 		return (ber);
+	}
