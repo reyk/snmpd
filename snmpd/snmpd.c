@@ -219,3 +219,4 @@ main(int argc, char *argv[])
 
 	event_dispatch();
 
+	return (0);
