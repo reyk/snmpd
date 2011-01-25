@@ -219,3 +219,4 @@ main		: LISTEN ON STRING		{
 			free($3);
 		}
 		| READWRITE DISABLED {
+			conf->sc_readonly = 1;
