@@ -217,3 +217,4 @@ mib_sysor(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 			miboid = next;
 	}
 	if (miboid == NULL)
+		return (-1);
