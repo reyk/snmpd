@@ -217,3 +217,4 @@ pfi_get(struct pfr_buffer *b, const char *filter)
 			break;
 	}
 
+	return (0);
