@@ -218,3 +218,4 @@ snmpe_dispatch_parent(int fd, short event, void * ptr)
 		if ((n = imsg_get(ibuf, &imsg)) == -1)
 			fatal("snmpe_dispatch_parent: imsg_read error");
 		if (n == 0)
+			break;
