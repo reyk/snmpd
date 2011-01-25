@@ -220,3 +220,4 @@ kr_updateif(u_int if_index)
 	/* Do not update the interface address list */
 	return (fetchifs(if_index));
 }
+
