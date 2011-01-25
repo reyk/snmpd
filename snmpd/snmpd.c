@@ -217,3 +217,4 @@ main(int argc, char *argv[])
 	    iev_snmpe->handler, iev_snmpe);
 	event_add(&iev_snmpe->ev, NULL);
 
+	event_dispatch();
