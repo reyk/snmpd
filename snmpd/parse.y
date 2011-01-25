@@ -220,3 +220,4 @@ main		: LISTEN ON STRING		{
 		}
 		| READWRITE DISABLED {
 			conf->sc_readonly = 1;
+ 		}
