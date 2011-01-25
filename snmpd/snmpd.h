@@ -218,3 +218,4 @@ struct oid {
 #define OID_TRW			(OID_RD|OID_WR|OID_TABLE)
 #define OID_TRWS		(OID_RW|OID_IFSET|OID_TABLE)
 
+#define OID_NOTSET(_oid)						\
