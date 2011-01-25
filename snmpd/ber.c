@@ -220,3 +220,4 @@ ber_get_integer(struct ber_element *elm, long long *n)
 	return 0;
 }
 
+int
