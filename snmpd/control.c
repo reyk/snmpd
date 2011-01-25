@@ -220,3 +220,4 @@ control_close(int fd, struct control_sock *cs)
 }
 
 /* ARGSUSED */
+void
