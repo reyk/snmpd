@@ -220,3 +220,4 @@ snmpe_dispatch_parent(int fd, short event, void * ptr)
 		if (n == 0)
 			break;
 
+		switch (imsg.hdr.type) {
