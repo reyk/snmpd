@@ -219,3 +219,4 @@ struct oid {
 #define OID_TRWS		(OID_RW|OID_IFSET|OID_TABLE)
 
 #define OID_NOTSET(_oid)						\
+	(((_oid)->o_flags & OID_IFSET) &&				\
