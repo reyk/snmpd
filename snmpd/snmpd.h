@@ -220,3 +220,4 @@ struct oid {
 
 #define OID_NOTSET(_oid)						\
 	(((_oid)->o_flags & OID_IFSET) &&				\
+	((_oid)->o_data == NULL) && ((_oid)->o_val == 0))
