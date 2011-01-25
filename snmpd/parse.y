@@ -217,3 +217,4 @@ main		: LISTEN ON STRING		{
 				YYERROR;
 			}
 			free($3);
+		}
