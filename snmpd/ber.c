@@ -217,3 +217,4 @@ ber_get_integer(struct ber_element *elm, long long *n)
 		return -1;
 
 	*n = elm->be_numeric;
+	return 0;
