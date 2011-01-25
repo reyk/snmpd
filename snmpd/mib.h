@@ -220,3 +220,4 @@
 #define MIB_hrSWRunPerfTable		MIB_hrSWRunPerf, 1
 #define OIDIDX_hrSWRunPerf		10
 #define OIDIDX_hrSWRunPerfEntry		11
+#define MIB_hrSWRunPerfEntry		MIB_hrSWRunPerfTable, 1
