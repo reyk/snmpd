@@ -218,3 +218,4 @@ kr_updateif(u_int if_index)
 		kif_remove(kn);
 
 	/* Do not update the interface address list */
+	return (fetchifs(if_index));
