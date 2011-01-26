@@ -224,3 +224,4 @@ usm_decode(struct snmp_message *msg, struct ber_element *elm, const char **errp)
 	u_long			 now;
 	long long		 engine_boots, engine_time;
 
+	bzero(&ber, sizeof(ber));
