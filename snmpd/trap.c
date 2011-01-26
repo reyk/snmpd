@@ -221,3 +221,4 @@ trap_send(struct ber_oid *oid, struct ber_element *elm)
 	log_debug("trap_send: oid %s", ostr);
 
 	/* Setup OIDs to compare against the trap receiver MIB */
+	bzero(&oa, sizeof(oa));
