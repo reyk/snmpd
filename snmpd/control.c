@@ -221,3 +221,4 @@ control_close(int fd, struct control_sock *cs)
 
 /* ARGSUSED */
 void
+control_dispatch_imsg(int fd, short event, void *arg)
