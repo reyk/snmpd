@@ -223,3 +223,4 @@ control_close(int fd, struct control_sock *cs)
 void
 control_dispatch_imsg(int fd, short event, void *arg)
 {
+	struct control_sock	*cs = (struct control_sock *)arg;
