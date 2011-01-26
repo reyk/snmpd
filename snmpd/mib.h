@@ -222,3 +222,4 @@
 #define OIDIDX_hrSWRunPerfEntry		11
 #define MIB_hrSWRunPerfEntry		MIB_hrSWRunPerfTable, 1
 #define MIB_hrSWRunPerfCPU		MIB_hrSWRunPerfEntry, 1
+#define MIB_hrSWRunPerfMem		MIB_hrSWRunPerfEntry, 2
