@@ -222,3 +222,4 @@ main		: LISTEN ON STRING		{
 			conf->sc_readonly = 1;
  		}
 		| TRAP COMMUNITY STRING		{
+			if (strlcpy(conf->sc_trcommunity, $3,
