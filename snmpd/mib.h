@@ -224,3 +224,4 @@
 #define MIB_hrSWRunPerfCPU		MIB_hrSWRunPerfEntry, 1
 #define MIB_hrSWRunPerfMem		MIB_hrSWRunPerfEntry, 2
 #define MIB_hrSWInstalled		MIB_host, 6
+#define MIB_hrMIBAdminInfo		MIB_host, 7
