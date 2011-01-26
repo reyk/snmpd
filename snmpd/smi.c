@@ -221,3 +221,4 @@ smi_foreach(struct oid *oid, u_int flags)
 		if (flags == 0 || (oid->o_flags & flags))
 			return (oid);
 	}
+
