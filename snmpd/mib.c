@@ -221,3 +221,4 @@ mib_sysor(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 
 	/* Tables need to prepend the OID on their own */
 	ber = ber_add_oid(ber, o);
+
