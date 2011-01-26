@@ -224,3 +224,4 @@ main(int argc, char *argv[])
 
 void
 snmpd_shutdown(struct snmpd *env)
+{
