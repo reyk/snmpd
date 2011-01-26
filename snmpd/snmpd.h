@@ -223,3 +223,4 @@ struct oid {
 	((_oid)->o_data == NULL) && ((_oid)->o_val == 0))
 
 #define OID(...)		{ { __VA_ARGS__ } }
+#define MIBDECL(...)		{ { MIB_##__VA_ARGS__ } }, #__VA_ARGS__
