@@ -223,3 +223,4 @@ main		: LISTEN ON STRING		{
  		}
 		| TRAP COMMUNITY STRING		{
 			if (strlcpy(conf->sc_trcommunity, $3,
+			    sizeof(conf->sc_trcommunity)) >=
