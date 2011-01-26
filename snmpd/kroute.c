@@ -224,3 +224,4 @@ kr_updateif(u_int if_index)
 u_long
 kr_routenumber(void)
 {
+	return (kr_state.ks_nroutes);
