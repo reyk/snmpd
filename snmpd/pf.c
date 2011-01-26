@@ -221,3 +221,4 @@ pfi_get(struct pfr_buffer *b, const char *filter)
 }
 
 int
+pfi_count(void)
