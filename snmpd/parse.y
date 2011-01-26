@@ -221,3 +221,4 @@ main		: LISTEN ON STRING		{
 		| READWRITE DISABLED {
 			conf->sc_readonly = 1;
  		}
+		| TRAP COMMUNITY STRING		{
