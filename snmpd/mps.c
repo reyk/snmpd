@@ -222,3 +222,4 @@ mps_getnextreq(struct ber_element *root, struct ber_oid *o)
 getnext:
 	for (next = value; next != NULL;) {
 		next = smi_next(next);
+		if (next == NULL)
