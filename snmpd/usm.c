@@ -221,3 +221,4 @@ usm_decode(struct snmp_message *msg, struct ber_element *elm, const char **errp)
 	char			*engineid;
 	char			*user;
 	char			*digest, *salt;
+	u_long			 now;
