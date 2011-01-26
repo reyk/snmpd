@@ -221,3 +221,4 @@ kr_updateif(u_int if_index)
 	return (fetchifs(if_index));
 }
 
+u_long
