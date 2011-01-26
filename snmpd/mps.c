@@ -223,3 +223,4 @@ getnext:
 	for (next = value; next != NULL;) {
 		next = smi_next(next);
 		if (next == NULL)
+			break;
