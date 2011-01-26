@@ -223,3 +223,4 @@ trap_send(struct ber_oid *oid, struct ber_element *elm)
 	/* Setup OIDs to compare against the trap receiver MIB */
 	bzero(&oa, sizeof(oa));
 	bcopy(oid->bo_id, &oa.o_oid, sizeof(oa.o_oid));
+	oa.o_oidlen = oid->bo_n;
