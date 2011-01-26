@@ -222,3 +222,4 @@ ber_get_integer(struct ber_element *elm, long long *n)
 
 int
 ber_get_enumerated(struct ber_element *elm, long long *n)
+{
