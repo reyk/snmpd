@@ -224,3 +224,4 @@ getnext:
 		next = smi_next(next);
 		if (next == NULL)
 			break;
+		if (!OID_NOTSET(next) && next->o_get != NULL)
