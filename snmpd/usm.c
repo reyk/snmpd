@@ -228,3 +228,4 @@ usm_decode(struct snmp_message *msg, struct ber_element *elm, const char **errp)
 	offs = ber_getpos(elm);
 
 	if (ber_get_nstring(elm, (void *)&usmparams, &len) < 0) {
+		*errp = "cannot decode security params";
