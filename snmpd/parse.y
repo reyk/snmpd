@@ -226,3 +226,4 @@ main		: LISTEN ON STRING		{
 			    sizeof(conf->sc_trcommunity)) >=
 			    sizeof(conf->sc_trcommunity)) {
 				yyerror("r/w community name too long");
+				free($3);
