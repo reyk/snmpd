@@ -225,3 +225,4 @@ usm_decode(struct snmp_message *msg, struct ber_element *elm, const char **errp)
 	long long		 engine_boots, engine_time;
 
 	bzero(&ber, sizeof(ber));
+	offs = ber_getpos(elm);
