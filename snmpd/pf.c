@@ -226,3 +226,4 @@ pfi_count(void)
 	struct pfr_buffer 	 b;
 	const struct pfi_kif 	*p;
 	int			 c = 0;
+
