@@ -225,3 +225,4 @@ snmpe_dispatch_parent(int fd, short event, void * ptr)
 			log_debug("snmpe_dispatch_parent: unexpected imsg %d",
 			    imsg.hdr.type);
 			break;
+		}
