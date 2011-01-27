@@ -226,3 +226,4 @@ control_dispatch_imsg(int fd, short event, void *arg)
 	struct control_sock	*cs = (struct control_sock *)arg;
 	struct ctl_conn		*c;
 	struct imsg		 imsg;
+	int			 n;
