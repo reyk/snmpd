@@ -228,3 +228,4 @@ control_dispatch_imsg(int fd, short event, void *arg)
 	struct imsg		 imsg;
 	int			 n;
 
+	if ((c = control_connbyfd(fd)) == NULL) {
