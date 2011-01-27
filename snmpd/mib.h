@@ -228,3 +228,4 @@
 
 /* IF-MIB */
 #define MIB_ifMIB			MIB_mib_2, 31
+#define MIB_ifMIBObjects		MIB_ifMIB, 1
