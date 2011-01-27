@@ -225,3 +225,4 @@ smi_foreach(struct oid *oid, u_int flags)
 	return (oid);
 }
 
+int
