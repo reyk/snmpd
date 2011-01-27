@@ -227,3 +227,4 @@ kr_routenumber(void)
 	return (kr_state.ks_nroutes);
 }
 
+/* rb-tree compare */
