@@ -227,3 +227,4 @@ usm_decode(struct snmp_message *msg, struct ber_element *elm, const char **errp)
 	bzero(&ber, sizeof(ber));
 	offs = ber_getpos(elm);
 
+	if (ber_get_nstring(elm, (void *)&usmparams, &len) < 0) {
