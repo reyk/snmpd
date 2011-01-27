@@ -228,3 +228,4 @@ ber_get_enumerated(struct ber_element *elm, long long *n)
 
 	*n = elm->be_numeric;
 	return 0;
+}
