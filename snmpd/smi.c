@@ -227,3 +227,4 @@ smi_foreach(struct oid *oid, u_int flags)
 
 int
 smi_oid_cmp(struct oid *a, struct oid *b)
+{
