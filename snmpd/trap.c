@@ -225,3 +225,4 @@ trap_send(struct ber_oid *oid, struct ber_element *elm)
 	bcopy(oid->bo_id, &oa.o_oid, sizeof(oa.o_oid));
 	oa.o_oidlen = oid->bo_n;
 	bzero(&ob, sizeof(ob));
+	ob.o_flags = OID_TABLE;
