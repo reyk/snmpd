@@ -227,3 +227,4 @@ pfi_count(void)
 	const struct pfi_kif 	*p;
 	int			 c = 0;
 
+	if (pfi_get(&b, NULL)) {
