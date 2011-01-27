@@ -226,3 +226,4 @@
 #define MIB_hrSWInstalled		MIB_host, 6
 #define MIB_hrMIBAdminInfo		MIB_host, 7
 
+/* IF-MIB */
