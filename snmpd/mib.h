@@ -227,3 +227,4 @@
 #define MIB_hrMIBAdminInfo		MIB_host, 7
 
 /* IF-MIB */
+#define MIB_ifMIB			MIB_mib_2, 31
