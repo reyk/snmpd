@@ -227,3 +227,4 @@ trap_send(struct ber_oid *oid, struct ber_element *elm)
 	bzero(&ob, sizeof(ob));
 	ob.o_flags = OID_TABLE;
 
+	/* Add mandatory varbind elements */
