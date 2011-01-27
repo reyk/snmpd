@@ -228,3 +228,4 @@ kr_routenumber(void)
 }
 
 /* rb-tree compare */
+int
