@@ -227,3 +227,4 @@ getnext:
 		if (!OID_NOTSET(next) && next->o_get != NULL)
 			break;
 	}
+	if (next == NULL || next->o_get == NULL)
