@@ -228,3 +228,4 @@ pfi_count(void)
 	int			 c = 0;
 
 	if (pfi_get(&b, NULL)) {
+		free(b.pfrb_caddr);
