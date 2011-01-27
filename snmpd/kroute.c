@@ -225,3 +225,4 @@ u_long
 kr_routenumber(void)
 {
 	return (kr_state.ks_nroutes);
+}
