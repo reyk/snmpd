@@ -227,3 +227,4 @@ snmpe_dispatch_parent(int fd, short event, void * ptr)
 			break;
 		}
 		imsg_free(&imsg);
+	}
