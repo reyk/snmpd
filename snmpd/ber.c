@@ -225,3 +225,4 @@ ber_get_enumerated(struct ber_element *elm, long long *n)
 {
 	if (elm->be_encoding != BER_TYPE_ENUMERATED)
 		return -1;
+
