@@ -226,3 +226,4 @@ trap_send(struct ber_oid *oid, struct ber_element *elm)
 	oa.o_oidlen = oid->bo_n;
 	bzero(&ob, sizeof(ob));
 	ob.o_flags = OID_TABLE;
+
