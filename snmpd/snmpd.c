@@ -227,3 +227,4 @@ snmpd_shutdown(struct snmpd *env)
 {
 	pid_t	pid;
 
+	if (snmpe_pid)
