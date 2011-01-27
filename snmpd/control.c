@@ -227,3 +227,4 @@ control_dispatch_imsg(int fd, short event, void *arg)
 	struct ctl_conn		*c;
 	struct imsg		 imsg;
 	int			 n;
+
