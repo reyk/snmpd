@@ -226,3 +226,4 @@ void
 snmpd_shutdown(struct snmpd *env)
 {
 	pid_t	pid;
+
