@@ -229,3 +229,4 @@ int
 smi_oid_cmp(struct oid *a, struct oid *b)
 {
 	size_t	 i;
+
