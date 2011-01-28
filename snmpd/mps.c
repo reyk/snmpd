@@ -229,3 +229,4 @@ getnext:
 	}
 	if (next == NULL || next->o_get == NULL)
 		return (NULL);
+
