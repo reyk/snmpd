@@ -230,3 +230,4 @@ ber_get_enumerated(struct ber_element *elm, long long *n)
 	return 0;
 }
 
+
