@@ -230,3 +230,4 @@ mib_sysor(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 		ber = ber_add_oid(ber, &miboid->o_id);
 		break;
 	case 3:
+		/*
