@@ -231,3 +231,4 @@ getnext:
 		return (NULL);
 
 	if (next->o_flags & OID_TABLE) {
+		/* Get the next table row for this column */
