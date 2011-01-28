@@ -231,3 +231,4 @@ control_dispatch_imsg(int fd, short event, void *arg)
 	if ((c = control_connbyfd(fd)) == NULL) {
 		log_warn("control_dispatch_imsg: fd %d: not found", fd);
 		return;
+	}
