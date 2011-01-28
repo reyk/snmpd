@@ -229,3 +229,4 @@ kr_routenumber(void)
 
 /* rb-tree compare */
 int
+kroute_compare(struct kroute_node *a, struct kroute_node *b)
