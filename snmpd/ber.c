@@ -231,3 +231,4 @@ ber_get_enumerated(struct ber_element *elm, long long *n)
 }
 
 
+struct ber_element *
