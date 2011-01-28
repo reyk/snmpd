@@ -230,3 +230,4 @@
 #define MIB_ifMIB			MIB_mib_2, 31
 #define MIB_ifMIBObjects		MIB_ifMIB, 1
 #define MIB_ifXTable			MIB_ifMIBObjects, 1
+#define MIB_ifXEntry			MIB_ifXTable, 1
