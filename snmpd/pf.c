@@ -230,3 +230,4 @@ pfi_count(void)
 	if (pfi_get(&b, NULL)) {
 		free(b.pfrb_caddr);
 		return (-1);
+	}
