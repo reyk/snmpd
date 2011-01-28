@@ -230,3 +230,4 @@ smi_oid_cmp(struct oid *a, struct oid *b)
 {
 	size_t	 i;
 
+	for (i = 0; i < MIN(a->o_oidlen, b->o_oidlen); i++)
