@@ -231,3 +231,4 @@ kr_routenumber(void)
 int
 kroute_compare(struct kroute_node *a, struct kroute_node *b)
 {
+	if (ntohl(a->r.prefix.s_addr) < ntohl(b->r.prefix.s_addr))
