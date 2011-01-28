@@ -231,3 +231,4 @@ mib_sysor(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 		break;
 	case 3:
 		/*
+		 * This should be a description of the MIB.
