@@ -231,3 +231,4 @@ snmpd_shutdown(struct snmpd *env)
 		kill(snmpe_pid, SIGTERM);
 
 	do {
+		if ((pid = wait(NULL)) == -1 &&
