@@ -232,3 +232,4 @@ pfi_count(void)
 		return (-1);
 	}
 
+	PFRB_FOREACH(p, &b)
