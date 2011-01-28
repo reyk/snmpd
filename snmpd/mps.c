@@ -230,3 +230,4 @@ getnext:
 	if (next == NULL || next->o_get == NULL)
 		return (NULL);
 
+	if (next->o_flags & OID_TABLE) {
