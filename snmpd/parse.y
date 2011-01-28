@@ -231,3 +231,4 @@ main		: LISTEN ON STRING		{
 			}
 			free($3);
 		}
+		| TRAP RECEIVER			{
