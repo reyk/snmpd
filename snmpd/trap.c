@@ -231,3 +231,4 @@ trap_send(struct ber_oid *oid, struct ber_element *elm)
 	trap = ber_add_sequence(NULL);
 	c = ber_printf_elements(trap, "{Odt}{OO}",
 	    &uptime, smi_getticks(),
+	    BER_CLASS_APPLICATION, SNMP_T_TIMETICKS,
