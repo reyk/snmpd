@@ -232,3 +232,4 @@ main		: LISTEN ON STRING		{
 			free($3);
 		}
 		| TRAP RECEIVER			{
+			hlist = &conf->sc_trapreceivers;
