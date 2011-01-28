@@ -232,3 +232,4 @@ snmpe_dispatch_parent(int fd, short event, void * ptr)
 }
 
 int
+snmpe_bind(struct address *addr)
