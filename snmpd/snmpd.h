@@ -231,3 +231,4 @@ struct oid {
  * pf
  */
 
+enum {	PFRB_TABLES = 1, PFRB_TSTATS, PFRB_ADDRS, PFRB_ASTATS,
