@@ -229,3 +229,4 @@ trap_send(struct ber_oid *oid, struct ber_element *elm)
 
 	/* Add mandatory varbind elements */
 	trap = ber_add_sequence(NULL);
+	c = ber_printf_elements(trap, "{Odt}{OO}",
