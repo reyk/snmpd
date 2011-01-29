@@ -233,3 +233,4 @@ pfi_count(void)
 	}
 
 	PFRB_FOREACH(p, &b)
+		c++;
