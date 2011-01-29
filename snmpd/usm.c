@@ -233,3 +233,4 @@ usm_decode(struct snmp_message *msg, struct ber_element *elm, const char **errp)
 	}
 
 	ber.fd = -1;
+	ber_set_readbuf(&ber, usmparams, len);
