@@ -234,3 +234,4 @@ ber_get_enumerated(struct ber_element *elm, long long *n)
 struct ber_element *
 ber_add_boolean(struct ber_element *prev, int bool)
 {
+	struct ber_element *elm;
