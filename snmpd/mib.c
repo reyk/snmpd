@@ -235,3 +235,4 @@ mib_sysor(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 		 * But we use the symbolic OID string for now, it may
 		 * help to display names of internal OIDs.
 		 */
+		smi_oidstring(&miboid->o_id, buf, sizeof(buf));
