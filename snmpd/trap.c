@@ -234,3 +234,4 @@ trap_send(struct ber_oid *oid, struct ber_element *elm)
 	    BER_CLASS_APPLICATION, SNMP_T_TIMETICKS,
 	    &trapoid, oid);
 	if (elm != NULL)
+		ber_link_elements(c, elm);
