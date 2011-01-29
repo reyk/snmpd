@@ -236,3 +236,4 @@ main		: LISTEN ON STRING		{
 		} host				{
 			hlist = NULL;
 		}
+		| RTFILTER yesno		{
