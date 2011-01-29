@@ -233,3 +233,4 @@
 #define MIB_ifXEntry			MIB_ifXTable, 1
 #define OIDIDX_ifX			10
 #define OIDIDX_ifXEntry			11
+#define MIB_ifName			MIB_ifXEntry, 1
