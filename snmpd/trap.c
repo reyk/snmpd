@@ -233,3 +233,4 @@ trap_send(struct ber_oid *oid, struct ber_element *elm)
 	    &uptime, smi_getticks(),
 	    BER_CLASS_APPLICATION, SNMP_T_TIMETICKS,
 	    &trapoid, oid);
+	if (elm != NULL)
