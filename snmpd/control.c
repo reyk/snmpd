@@ -236,3 +236,4 @@ control_dispatch_imsg(int fd, short event, void *arg)
 	switch (event) {
 	case EV_READ:
 		if ((n = imsg_read(&c->iev.ibuf)) == -1 || n == 0) {
+			control_close(fd, cs);
