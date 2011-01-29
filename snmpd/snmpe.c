@@ -236,3 +236,4 @@ snmpe_bind(struct address *addr)
 {
 	char	 buf[512];
 	int	 s;
+
