@@ -236,3 +236,4 @@ getnext:
 			value = next;
 			goto getnext;
 		}
+		bcopy(&no, o, sizeof(*o));
