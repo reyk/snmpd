@@ -234,3 +234,4 @@ main		: LISTEN ON STRING		{
 		| TRAP RECEIVER			{
 			hlist = &conf->sc_trapreceivers;
 		} host				{
+			hlist = NULL;
