@@ -235,3 +235,4 @@ struct ber_element *
 ber_add_boolean(struct ber_element *prev, int bool)
 {
 	struct ber_element *elm;
+
