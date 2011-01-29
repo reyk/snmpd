@@ -235,3 +235,4 @@ trap_send(struct ber_oid *oid, struct ber_element *elm)
 	    &trapoid, oid);
 	if (elm != NULL)
 		ber_link_elements(c, elm);
+
