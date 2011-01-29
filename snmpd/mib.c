@@ -236,3 +236,4 @@ mib_sysor(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 		 * help to display names of internal OIDs.
 		 */
 		smi_oidstring(&miboid->o_id, buf, sizeof(buf));
+		ber = ber_add_string(ber, buf);
