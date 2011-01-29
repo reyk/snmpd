@@ -235,3 +235,4 @@ getnext:
 		if (mps_table(next, o, &no) == NULL) {
 			value = next;
 			goto getnext;
+		}
