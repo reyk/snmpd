@@ -234,3 +234,4 @@ smi_oid_cmp(struct oid *a, struct oid *b)
 		if (a->o_oid[i] != b->o_oid[i])
 			return (a->o_oid[i] - b->o_oid[i]);
 
+	/*
