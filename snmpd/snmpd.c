@@ -234,3 +234,4 @@ snmpd_shutdown(struct snmpd *env)
 		if ((pid = wait(NULL)) == -1 &&
 		    errno != EINTR && errno != ECHILD)
 			fatal("wait");
+	} while (pid != -1 || (pid == -1 && errno == EINTR));
