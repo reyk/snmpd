@@ -236,3 +236,4 @@
 #define MIB_ifName			MIB_ifXEntry, 1
 #define MIB_ifInMulticastPkts		MIB_ifXEntry, 2
 #define MIB_ifInBroadcastPkts		MIB_ifXEntry, 3
+#define MIB_ifOutMulticastPkts		MIB_ifXEntry, 4
