@@ -236,3 +236,4 @@ trap_send(struct ber_oid *oid, struct ber_element *elm)
 	if (elm != NULL)
 		ber_link_elements(c, elm);
 
+	bzero(&ber, sizeof(ber));
