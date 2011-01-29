@@ -235,3 +235,4 @@ smi_oid_cmp(struct oid *a, struct oid *b)
 			return (a->o_oid[i] - b->o_oid[i]);
 
 	/*
+	 * Return success if the matched object is a table
