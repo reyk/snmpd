@@ -236,3 +236,4 @@ enum {	PFRB_TABLES = 1, PFRB_TSTATS, PFRB_ADDRS, PFRB_ASTATS,
 
 enum {  IN, OUT };
 enum {  IPV4, IPV6 };
+enum {  PASS, BLOCK };
