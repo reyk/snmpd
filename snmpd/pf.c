@@ -235,3 +235,4 @@ pfi_count(void)
 	PFRB_FOREACH(p, &b)
 		c++;
 
+	free(b.pfrb_caddr);
