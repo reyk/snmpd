@@ -233,3 +233,4 @@ mib_sysor(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 		/*
 		 * This should be a description of the MIB.
 		 * But we use the symbolic OID string for now, it may
+		 * help to display names of internal OIDs.
