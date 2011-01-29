@@ -236,3 +236,4 @@ usm_decode(struct snmp_message *msg, struct ber_element *elm, const char **errp)
 	ber_set_readbuf(&ber, usmparams, len);
 	usm = ber_read_elements(&ber, NULL);
 	if (usm == NULL) {
+		*errp = "cannot decode security params";
