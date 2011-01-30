@@ -239,3 +239,4 @@ getnext:
 		bcopy(&no, o, sizeof(*o));
 		if ((ret = next->o_get(next, o, &ber)) != 0) {
 			if (ret == 1) {
+				value = next;
