@@ -240,3 +240,4 @@ enum {  PASS, BLOCK };
 
 enum {  PFI_IFTYPE_GROUP, PFI_IFTYPE_INSTANCE };
 
+struct pfr_buffer {
