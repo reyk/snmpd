@@ -239,3 +239,4 @@ kroute_compare(struct kroute_node *a, struct kroute_node *b)
 		return (-1);
 	if (a->r.prefixlen > b->r.prefixlen)
 		return (1);
+
