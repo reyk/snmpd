@@ -238,3 +238,4 @@ trap_send(struct ber_oid *oid, struct ber_element *elm)
 
 	bzero(&ber, sizeof(ber));
 	ber.fd = -1;
+
