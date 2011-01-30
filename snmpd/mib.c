@@ -238,3 +238,4 @@ mib_sysor(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 		smi_oidstring(&miboid->o_id, buf, sizeof(buf));
 		ber = ber_add_string(ber, buf);
 		break;
+	case 4:
