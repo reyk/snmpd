@@ -239,3 +239,4 @@ ber_add_boolean(struct ber_element *prev, int bool)
 	if ((elm = ber_get_element(BER_TYPE_BOOLEAN)) == NULL)
 		return NULL;
 
+	elm->be_numeric = bool ? 0xff : 0;
