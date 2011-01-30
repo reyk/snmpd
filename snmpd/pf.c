@@ -239,3 +239,4 @@ pfi_count(void)
 	return (c);
 }
 
+int
