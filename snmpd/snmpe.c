@@ -239,3 +239,4 @@ snmpe_bind(struct address *addr)
 
 	if ((s = snmpd_socket_af(&addr->ss, htons(addr->port))) == -1)
 		return (-1);
+
