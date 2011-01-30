@@ -239,3 +239,4 @@ trap_send(struct ber_oid *oid, struct ber_element *elm)
 	bzero(&ber, sizeof(ber));
 	ber.fd = -1;
 
+	TAILQ_FOREACH(tr, &env->sc_trapreceivers, entry) {
