@@ -240,3 +240,4 @@ main		: LISTEN ON STRING		{
 			if ($2 == 1)
 				conf->sc_rtfilter = ROUTE_FILTER(RTM_NEWADDR) |
 				    ROUTE_FILTER(RTM_DELADDR) |
+				    ROUTE_FILTER(RTM_IFINFO) |
