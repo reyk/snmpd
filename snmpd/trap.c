@@ -240,3 +240,4 @@ trap_send(struct ber_oid *oid, struct ber_element *elm)
 	ber.fd = -1;
 
 	TAILQ_FOREACH(tr, &env->sc_trapreceivers, entry) {
+		if (tr->sa_oid != NULL && tr->sa_oid->bo_n) {
