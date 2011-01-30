@@ -237,3 +237,4 @@ main		: LISTEN ON STRING		{
 			hlist = NULL;
 		}
 		| RTFILTER yesno		{
+			if ($2 == 1)
