@@ -237,3 +237,4 @@ ber_add_boolean(struct ber_element *prev, int bool)
 	struct ber_element *elm;
 
 	if ((elm = ber_get_element(BER_TYPE_BOOLEAN)) == NULL)
+		return NULL;
