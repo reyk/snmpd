@@ -237,3 +237,4 @@ snmpd_shutdown(struct snmpd *env)
 	} while (pid != -1 || (pid == -1 && errno == EINTR));
 
 	control_cleanup(&env->sc_csock);
+	control_cleanup(&env->sc_rcsock);
