@@ -238,3 +238,4 @@ snmpd_shutdown(struct snmpd *env)
 
 	control_cleanup(&env->sc_csock);
 	control_cleanup(&env->sc_rcsock);
+	log_info("terminating");
