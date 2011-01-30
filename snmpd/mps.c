@@ -240,3 +240,4 @@ getnext:
 		if ((ret = next->o_get(next, o, &ber)) != 0) {
 			if (ret == 1) {
 				value = next;
+				goto getnext;
