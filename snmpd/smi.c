@@ -240,3 +240,4 @@ smi_oid_cmp(struct oid *a, struct oid *b)
 	 */
 	if ((b->o_flags & OID_TABLE) &&
 	    (a->o_flags & OID_KEY) == 0 &&
+	    (a->o_oidlen > b->o_oidlen))
