@@ -238,3 +238,4 @@ enum {  IN, OUT };
 enum {  IPV4, IPV6 };
 enum {  PASS, BLOCK };
 
+enum {  PFI_IFTYPE_GROUP, PFI_IFTYPE_INSTANCE };
