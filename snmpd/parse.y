@@ -239,3 +239,4 @@ main		: LISTEN ON STRING		{
 		| RTFILTER yesno		{
 			if ($2 == 1)
 				conf->sc_rtfilter = ROUTE_FILTER(RTM_NEWADDR) |
+				    ROUTE_FILTER(RTM_DELADDR) |
