@@ -240,3 +240,4 @@ ber_add_boolean(struct ber_element *prev, int bool)
 		return NULL;
 
 	elm->be_numeric = bool ? 0xff : 0;
+	elm->be_len = 1;
