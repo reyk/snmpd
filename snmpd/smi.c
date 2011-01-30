@@ -238,3 +238,4 @@ smi_oid_cmp(struct oid *a, struct oid *b)
 	 * Return success if the matched object is a table
 	 * (it will match any sub-elements)
 	 */
+	if ((b->o_flags & OID_TABLE) &&
