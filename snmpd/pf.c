@@ -237,3 +237,4 @@ pfi_count(void)
 
 	free(b.pfrb_caddr);
 	return (c);
+}
