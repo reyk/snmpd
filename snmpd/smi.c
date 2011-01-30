@@ -239,3 +239,4 @@ smi_oid_cmp(struct oid *a, struct oid *b)
 	 * (it will match any sub-elements)
 	 */
 	if ((b->o_flags & OID_TABLE) &&
+	    (a->o_flags & OID_KEY) == 0 &&
