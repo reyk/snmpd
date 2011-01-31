@@ -242,3 +242,4 @@ snmpd_shutdown(struct snmpd *env)
 	exit(0);
 }
 
+int
