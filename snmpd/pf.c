@@ -242,3 +242,4 @@ pfi_count(void)
 int
 pfi_get_if(struct pfi_kif *rp, int idx)
 {
+	struct pfr_buffer	 b;
