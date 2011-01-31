@@ -241,3 +241,4 @@ snmpd_shutdown(struct snmpd *env)
 	log_info("terminating");
 	exit(0);
 }
+
