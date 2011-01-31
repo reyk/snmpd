@@ -244,3 +244,4 @@ mib_sysor(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 		 * the sysORUpTime value of 0 will indicate "loaded at
 		 * startup".
 		 */
+		ber = ber_add_integer(ber, 0);
