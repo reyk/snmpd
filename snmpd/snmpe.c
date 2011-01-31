@@ -243,3 +243,4 @@ snmpe_bind(struct address *addr)
 	/*
 	 * Socket options
 	 */
+	if (fcntl(s, F_SETFL, O_NONBLOCK) == -1)
