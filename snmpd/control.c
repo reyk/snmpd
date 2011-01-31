@@ -241,3 +241,4 @@ control_dispatch_imsg(int fd, short event, void *arg)
 		}
 		break;
 	case EV_WRITE:
+		if (msgbuf_write(&c->iev.ibuf.w) < 0) {
