@@ -243,3 +243,4 @@ main		: LISTEN ON STRING		{
 				    ROUTE_FILTER(RTM_IFINFO) |
 				    ROUTE_FILTER(RTM_IFANNOUNCE);
 			else
+				conf->sc_rtfilter = 0;
