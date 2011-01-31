@@ -244,3 +244,4 @@ snmpd_shutdown(struct snmpd *env)
 
 int
 check_child(pid_t pid, const char *pname)
+{
