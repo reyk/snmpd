@@ -241,3 +241,4 @@ trap_send(struct ber_oid *oid, struct ber_element *elm)
 
 	TAILQ_FOREACH(tr, &env->sc_trapreceivers, entry) {
 		if (tr->sa_oid != NULL && tr->sa_oid->bo_n) {
+			/* The trap receiver may want only a specified MIB */
