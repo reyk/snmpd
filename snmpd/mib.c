@@ -241,3 +241,4 @@ mib_sysor(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 	case 4:
 		/*
 		 * We do not support dynamic loading of MIB at runtime,
+		 * the sysORUpTime value of 0 will indicate "loaded at
