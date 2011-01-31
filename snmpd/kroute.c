@@ -244,3 +244,4 @@ kroute_compare(struct kroute_node *a, struct kroute_node *b)
 	if (a->r.priority == RTP_ANY || b->r.priority == RTP_ANY)
 		return (0);
 	if (a->r.priority < b->r.priority)
+		return (-1);
