@@ -242,3 +242,4 @@ enum {  PFI_IFTYPE_GROUP, PFI_IFTYPE_INSTANCE };
 
 struct pfr_buffer {
 	int	 pfrb_type;	/* type of content, see enum above */
+	int	 pfrb_size;	/* number of objects in buffer */
