@@ -243,3 +243,4 @@ smi_oid_cmp(struct oid *a, struct oid *b)
 	    (a->o_oidlen > b->o_oidlen))
 		return (0);
 
+	return (a->o_oidlen - b->o_oidlen);
