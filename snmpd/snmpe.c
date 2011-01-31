@@ -242,3 +242,4 @@ snmpe_bind(struct address *addr)
 
 	/*
 	 * Socket options
+	 */
