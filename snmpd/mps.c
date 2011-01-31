@@ -244,3 +244,4 @@ getnext:
 			}
 			return (NULL);
 		}
+	} else {
