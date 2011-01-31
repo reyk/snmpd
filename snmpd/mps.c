@@ -241,3 +241,4 @@ getnext:
 			if (ret == 1) {
 				value = next;
 				goto getnext;
+			}
