@@ -243,3 +243,4 @@
 #define MIB_ifHCInMulticastPkts		MIB_ifXEntry, 8
 #define MIB_ifHCInBroadcastPkts		MIB_ifXEntry, 9
 #define MIB_ifHCOutOctets		MIB_ifXEntry, 10
+#define MIB_ifHCOutUcastPkts		MIB_ifXEntry, 11
