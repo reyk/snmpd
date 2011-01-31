@@ -244,3 +244,4 @@ ber_add_boolean(struct ber_element *prev, int bool)
 
 	ber_link_elements(prev, elm);
 
+	return elm;
