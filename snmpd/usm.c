@@ -241,3 +241,4 @@ usm_decode(struct snmp_message *msg, struct ber_element *elm, const char **errp)
 	}
 
 #ifdef DEBUG
+	fprintf(stderr, "decode USM parameters:\n");
