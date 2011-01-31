@@ -243,3 +243,4 @@ trap_send(struct ber_oid *oid, struct ber_element *elm)
 		if (tr->sa_oid != NULL && tr->sa_oid->bo_n) {
 			/* The trap receiver may want only a specified MIB */
 			bcopy(&tr->sa_oid->bo_id, &ob.o_oid,
+			    sizeof(ob.o_oid));
