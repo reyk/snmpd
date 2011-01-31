@@ -242,3 +242,4 @@ getnext:
 				value = next;
 				goto getnext;
 			}
+			return (NULL);
