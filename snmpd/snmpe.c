@@ -245,3 +245,4 @@ snmpe_bind(struct address *addr)
 	 */
 	if (fcntl(s, F_SETFL, O_NONBLOCK) == -1)
 		goto bad;
+
