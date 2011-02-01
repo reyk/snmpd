@@ -246,3 +246,4 @@ main		: LISTEN ON STRING		{
 				conf->sc_rtfilter = 0;
 		}
 		| SECLEVEL seclevel {
+			conf->sc_min_seclevel = $2;
