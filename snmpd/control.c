@@ -247,3 +247,4 @@ control_dispatch_imsg(int fd, short event, void *arg)
 		}
 		imsg_event_add(&c->iev);
 		return;
+	default:
