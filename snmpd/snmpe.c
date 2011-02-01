@@ -247,3 +247,4 @@ snmpe_bind(struct address *addr)
 		goto bad;
 
 	if (bind(s, (struct sockaddr *)&addr->ss, addr->ss.ss_len) == -1)
+		goto bad;
