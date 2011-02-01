@@ -245,3 +245,4 @@ trap_send(struct ber_oid *oid, struct ber_element *elm)
 			bcopy(&tr->sa_oid->bo_id, &ob.o_oid,
 			    sizeof(ob.o_oid));
 			ob.o_oidlen = tr->sa_oid->bo_n;
+			if (smi_oid_cmp(&oa, &ob) != 0)
