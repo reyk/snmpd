@@ -245,3 +245,4 @@ main		: LISTEN ON STRING		{
 			else
 				conf->sc_rtfilter = 0;
 		}
+		| SECLEVEL seclevel {
