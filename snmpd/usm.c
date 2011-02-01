@@ -245,3 +245,4 @@ usm_decode(struct snmp_message *msg, struct ber_element *elm, const char **errp)
 	snmpe_debug_elements(usm);
 #endif
 
+	if (ber_scanf_elements(usm, "{xiixpxx", &engineid, &enginelen,
