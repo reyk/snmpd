@@ -247,3 +247,4 @@ main		: LISTEN ON STRING		{
 		}
 		| SECLEVEL seclevel {
 			conf->sc_min_seclevel = $2;
+		}
