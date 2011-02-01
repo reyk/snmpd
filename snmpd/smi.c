@@ -246,3 +246,4 @@ smi_oid_cmp(struct oid *a, struct oid *b)
 	return (a->o_oidlen - b->o_oidlen);
 }
 
+RB_GENERATE(oidtree, oid, o_element, smi_oid_cmp);
