@@ -245,3 +245,4 @@ mib_sysor(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 		 * startup".
 		 */
 		ber = ber_add_integer(ber, 0);
+		ber_set_header(ber,
