@@ -247,3 +247,4 @@ getnext:
 	} else {
 		bcopy(&next->o_id, o, sizeof(*o));
 		ber = ber_add_noid(ber, &next->o_id,
+		    next->o_oidlen + 1);
