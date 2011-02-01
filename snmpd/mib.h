@@ -248,3 +248,4 @@
 #define MIB_ifHCOutBroadcastPkts	MIB_ifXEntry, 13
 #define MIB_ifLinkUpDownTrapEnable	MIB_ifXEntry, 14
 #define MIB_ifHighSpeed			MIB_ifXEntry, 15
+#define MIB_ifPromiscuousMode		MIB_ifXEntry, 16
