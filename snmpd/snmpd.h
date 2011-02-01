@@ -245,3 +245,4 @@ struct pfr_buffer {
 	int	 pfrb_size;	/* number of objects in buffer */
 	int	 pfrb_msize;	/* maximum number of objects in buffer */
 	void	*pfrb_caddr;	/* malloc'ated memory area */
+};
