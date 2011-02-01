@@ -246,3 +246,4 @@ int
 check_child(pid_t pid, const char *pname)
 {
 	int	status;
+
