@@ -247,3 +247,4 @@ check_child(pid_t pid, const char *pname)
 {
 	int	status;
 
+	if (waitpid(pid, &status, WNOHANG) > 0) {
