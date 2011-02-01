@@ -248,3 +248,4 @@ trap_send(struct ber_oid *oid, struct ber_element *elm)
 			if (smi_oid_cmp(&oa, &ob) != 0)
 				continue;
 		}
+
