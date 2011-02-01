@@ -246,3 +246,4 @@ ber_add_boolean(struct ber_element *prev, int bool)
 
 	return elm;
 }
+
