@@ -248,3 +248,4 @@ usm_decode(struct snmp_message *msg, struct ber_element *elm, const char **errp)
 	if (ber_scanf_elements(usm, "{xiixpxx", &engineid, &enginelen,
 	    &engine_boots, &engine_time, &user, &userlen, &offs2,
 	    &digest, &digestlen, &salt, &saltlen) != 0) {
+		*errp = "cannot decode USM params";
