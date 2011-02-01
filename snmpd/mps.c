@@ -245,3 +245,4 @@ getnext:
 			return (NULL);
 		}
 	} else {
+		bcopy(&next->o_id, o, sizeof(*o));
