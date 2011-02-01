@@ -247,3 +247,4 @@ struct pfr_buffer {
 	void	*pfrb_caddr;	/* malloc'ated memory area */
 };
 
+#define PFRB_FOREACH(var, buf)				\
