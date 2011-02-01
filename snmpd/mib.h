@@ -246,3 +246,4 @@
 #define MIB_ifHCOutUcastPkts		MIB_ifXEntry, 11
 #define MIB_ifHCOutMulticastPkts	MIB_ifXEntry, 12
 #define MIB_ifHCOutBroadcastPkts	MIB_ifXEntry, 13
+#define MIB_ifLinkUpDownTrapEnable	MIB_ifXEntry, 14
