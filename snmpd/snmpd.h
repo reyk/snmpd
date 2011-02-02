@@ -252,3 +252,4 @@ struct pfr_buffer {
 	    (var) != NULL;				\
 	    (var) = pfr_buf_next((buf), (var)))
 
+/*
