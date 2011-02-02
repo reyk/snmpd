@@ -251,3 +251,4 @@ pfi_get_if(struct pfi_kif *rp, int idx)
 		return (-1);
 	}
 
+	PFRB_FOREACH(p, &b) {
