@@ -250,3 +250,4 @@ control_dispatch_imsg(int fd, short event, void *arg)
 	default:
 		fatalx("unknown event");
 	}
+
