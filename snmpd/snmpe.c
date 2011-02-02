@@ -249,3 +249,4 @@ snmpe_bind(struct address *addr)
 	if (bind(s, (struct sockaddr *)&addr->ss, addr->ss.ss_len) == -1)
 		goto bad;
 
+	if (print_host(&addr->ss, buf, sizeof(buf)) == NULL)
