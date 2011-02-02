@@ -250,3 +250,4 @@
 #define MIB_ifHighSpeed			MIB_ifXEntry, 15
 #define MIB_ifPromiscuousMode		MIB_ifXEntry, 16
 #define MIB_ifConnectorPresent		MIB_ifXEntry, 17
+#define MIB_ifAlias			MIB_ifXEntry, 18
