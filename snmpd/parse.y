@@ -249,3 +249,4 @@ main		: LISTEN ON STRING		{
 			conf->sc_min_seclevel = $2;
 		}
 		| USER STRING			{
+			const char *errstr;
