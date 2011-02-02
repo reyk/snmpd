@@ -250,3 +250,4 @@ kroute_compare(struct kroute_node *a, struct kroute_node *b)
 	return (0);
 }
 
+int
