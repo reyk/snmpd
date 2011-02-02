@@ -252,3 +252,4 @@ pfi_get_if(struct pfi_kif *rp, int idx)
 	}
 
 	PFRB_FOREACH(p, &b) {
+		if (i == idx)
