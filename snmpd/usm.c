@@ -250,3 +250,4 @@ usm_decode(struct snmp_message *msg, struct ber_element *elm, const char **errp)
 	    &digest, &digestlen, &salt, &saltlen) != 0) {
 		*errp = "cannot decode USM params";
 		goto done;
+	}
