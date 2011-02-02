@@ -252,3 +252,4 @@ getnext:
 			return (NULL);
 	}
 
+	return (ber);
