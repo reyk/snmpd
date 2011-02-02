@@ -252,3 +252,4 @@ snmpe_bind(struct address *addr)
 	if (print_host(&addr->ss, buf, sizeof(buf)) == NULL)
 		goto bad;
 
+	log_info("snmpe_bind: binding to address %s:%d", buf, addr->port);
