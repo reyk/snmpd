@@ -251,3 +251,4 @@ snmpe_bind(struct address *addr)
 
 	if (print_host(&addr->ss, buf, sizeof(buf)) == NULL)
 		goto bad;
+
