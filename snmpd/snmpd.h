@@ -251,3 +251,4 @@ struct pfr_buffer {
 	for ((var) = pfr_buf_next((buf), NULL);		\
 	    (var) != NULL;				\
 	    (var) = pfr_buf_next((buf), (var)))
+
