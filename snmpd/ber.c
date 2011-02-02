@@ -251,3 +251,4 @@ int
 ber_get_boolean(struct ber_element *elm, int *b)
 {
 	if (elm->be_encoding != BER_TYPE_BOOLEAN)
+		return -1;
