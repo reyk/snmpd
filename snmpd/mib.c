@@ -249,3 +249,4 @@ mib_sysor(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 		    BER_CLASS_APPLICATION, SNMP_T_TIMETICKS);
 		break;
 	default:
+		return (-1);
