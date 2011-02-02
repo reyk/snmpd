@@ -252,3 +252,4 @@ main		: LISTEN ON STRING		{
 			const char *errstr;
 			user = usm_newuser($2, &errstr);
 			if (user == NULL) {
+				yyerror(errstr);
