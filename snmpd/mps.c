@@ -249,3 +249,4 @@ getnext:
 		ber = ber_add_noid(ber, &next->o_id,
 		    next->o_oidlen + 1);
 		if ((ret = next->o_get(next, o, &ber)) != 0)
+			return (NULL);
