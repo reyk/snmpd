@@ -251,3 +251,4 @@ trap_send(struct ber_oid *oid, struct ber_element *elm)
 
 		if ((s = snmpd_socket_af(&tr->ss, htons(tr->port))) == -1) {
 			ret = -1;
+			goto done;
