@@ -251,3 +251,4 @@ check_child(pid_t pid, const char *pname)
 		if (WIFEXITED(status)) {
 			log_warnx("check_child: lost child: %s exited", pname);
 			return (1);
+		}
