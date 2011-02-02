@@ -252,3 +252,4 @@
 #define MIB_ifConnectorPresent		MIB_ifXEntry, 17
 #define MIB_ifAlias			MIB_ifXEntry, 18
 #define MIB_ifCounterDiscontinuityTime	MIB_ifXEntry, 19
+#define MIB_ifStackTable		MIB_ifMIBObjects, 2
