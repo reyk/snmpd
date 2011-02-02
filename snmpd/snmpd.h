@@ -250,3 +250,4 @@ struct pfr_buffer {
 #define PFRB_FOREACH(var, buf)				\
 	for ((var) = pfr_buf_next((buf), NULL);		\
 	    (var) != NULL;				\
+	    (var) = pfr_buf_next((buf), (var)))
