@@ -249,3 +249,4 @@ ber_add_boolean(struct ber_element *prev, int bool)
 
 int
 ber_get_boolean(struct ber_element *elm, int *b)
+{
