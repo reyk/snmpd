@@ -254,3 +254,4 @@ main		: LISTEN ON STRING		{
 			if (user == NULL) {
 				yyerror(errstr);
 				free($2);
+				YYERROR;
