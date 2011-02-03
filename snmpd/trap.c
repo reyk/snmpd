@@ -254,3 +254,4 @@ trap_send(struct ber_oid *oid, struct ber_element *elm)
 			goto done;
 		}
 
+		cmn = tr->sa_community != NULL ?
