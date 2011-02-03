@@ -253,3 +253,4 @@ main		: LISTEN ON STRING		{
 			user = usm_newuser($2, &errstr);
 			if (user == NULL) {
 				yyerror(errstr);
+				free($2);
