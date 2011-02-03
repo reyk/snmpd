@@ -256,3 +256,4 @@ snmpe_bind(struct address *addr)
 
 	return (s);
 
+ bad:
