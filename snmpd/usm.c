@@ -256,3 +256,4 @@ usm_decode(struct snmp_message *msg, struct ber_element *elm, const char **errp)
 	    "user '%s'", tohexstr(engineid, enginelen), engine_boots,
 	    engine_time, user);
 
+	if (enginelen > SNMPD_MAXENGINEIDLEN ||
