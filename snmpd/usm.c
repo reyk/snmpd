@@ -255,3 +255,4 @@ usm_decode(struct snmp_message *msg, struct ber_element *elm, const char **errp)
 	log_debug("USM: engineid '%s', engine boots %lld, engine time %lld, "
 	    "user '%s'", tohexstr(engineid, enginelen), engine_boots,
 	    engine_time, user);
+
