@@ -254,3 +254,4 @@ int
 kroute6_compare(struct kroute6_node *a, struct kroute6_node *b)
 {
 	int i;
+
