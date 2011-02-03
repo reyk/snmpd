@@ -253,3 +253,4 @@ struct pfr_buffer {
 	    (var) = pfr_buf_next((buf), (var)))
 
 /*
+ * daemon structures
