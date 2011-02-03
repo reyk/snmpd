@@ -256,3 +256,4 @@ struct pfr_buffer {
  * daemon structures
  */
 
+#define MSG_HAS_AUTH(m)		(((m)->sm_flags & SNMP_MSGFLAG_AUTH) != 0)
