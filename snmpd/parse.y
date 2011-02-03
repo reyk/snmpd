@@ -255,3 +255,4 @@ main		: LISTEN ON STRING		{
 				yyerror(errstr);
 				free($2);
 				YYERROR;
+			}
