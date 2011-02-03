@@ -255,3 +255,4 @@ getnext:
 	return (ber);
 }
 
+int
