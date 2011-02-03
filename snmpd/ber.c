@@ -255,3 +255,4 @@ ber_get_boolean(struct ber_element *elm, int *b)
 
 	*b = !(elm->be_numeric == 0);
 	return 0;
+}
