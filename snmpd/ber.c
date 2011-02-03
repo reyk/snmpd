@@ -254,3 +254,4 @@ ber_get_boolean(struct ber_element *elm, int *b)
 		return -1;
 
 	*b = !(elm->be_numeric == 0);
+	return 0;
