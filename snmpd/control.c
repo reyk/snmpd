@@ -254,3 +254,4 @@ control_dispatch_imsg(int fd, short event, void *arg)
 	for (;;) {
 		if ((n = imsg_get(&c->iev.ibuf, &imsg)) == -1) {
 			control_close(fd, cs);
+			return;
