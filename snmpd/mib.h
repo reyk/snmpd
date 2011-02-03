@@ -253,3 +253,4 @@
 #define MIB_ifAlias			MIB_ifXEntry, 18
 #define MIB_ifCounterDiscontinuityTime	MIB_ifXEntry, 19
 #define MIB_ifStackTable		MIB_ifMIBObjects, 2
+#define MIB_ifStackEntry		MIB_ifStackTable, 1
