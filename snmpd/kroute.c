@@ -256,3 +256,4 @@ kroute6_compare(struct kroute6_node *a, struct kroute6_node *b)
 	int i;
 
 	for (i = 0; i < 16; i++) {
+		if (a->r.prefix.s6_addr[i] < b->r.prefix.s6_addr[i])
