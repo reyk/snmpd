@@ -253,3 +253,4 @@ getnext:
 	}
 
 	return (ber);
+}
