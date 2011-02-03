@@ -256,3 +256,4 @@ main		: LISTEN ON STRING		{
 				free($2);
 				YYERROR;
 			}
+		} userspecs {
