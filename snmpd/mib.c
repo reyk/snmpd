@@ -256,3 +256,4 @@ mib_sysor(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 }
 
 int
+mib_getsnmp(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
