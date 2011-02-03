@@ -255,3 +255,4 @@ snmpe_bind(struct address *addr)
 	log_info("snmpe_bind: binding to address %s:%d", buf, addr->port);
 
 	return (s);
+
