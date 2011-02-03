@@ -256,3 +256,4 @@
 #define MIB_ifStackEntry		MIB_ifStackTable, 1
 #define OIDIDX_ifStack			10
 #define OIDIDX_ifStackEntry		11
+#define MIB_ifStackStatus		MIB_ifStackEntry, 3
