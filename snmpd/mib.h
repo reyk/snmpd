@@ -254,3 +254,4 @@
 #define MIB_ifCounterDiscontinuityTime	MIB_ifXEntry, 19
 #define MIB_ifStackTable		MIB_ifMIBObjects, 2
 #define MIB_ifStackEntry		MIB_ifStackTable, 1
+#define OIDIDX_ifStack			10
