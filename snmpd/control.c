@@ -259,3 +259,4 @@ control_dispatch_imsg(int fd, short event, void *arg)
 
 		if (n == 0)
 			break;
+
