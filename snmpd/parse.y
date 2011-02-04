@@ -258,3 +258,4 @@ main		: LISTEN ON STRING		{
 			}
 		} userspecs {
 			const char *errstr;
+			if (usm_checkuser(user, &errstr) < 0) {
