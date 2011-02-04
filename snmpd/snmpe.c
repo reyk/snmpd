@@ -260,3 +260,4 @@ snmpe_bind(struct address *addr)
 	close(s);
 	return (-1);
 }
+
