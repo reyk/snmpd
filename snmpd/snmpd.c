@@ -259,3 +259,4 @@ check_child(pid_t pid, const char *pname)
 		}
 	}
 
+	return (0);
