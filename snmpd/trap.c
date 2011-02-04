@@ -257,3 +257,4 @@ trap_send(struct ber_oid *oid, struct ber_element *elm)
 		cmn = tr->sa_community != NULL ?
 		    tr->sa_community : env->sc_trcommunity;
 
+		/* SNMP header */
