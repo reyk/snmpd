@@ -259,3 +259,4 @@ usm_decode(struct snmp_message *msg, struct ber_element *elm, const char **errp)
 	if (enginelen > SNMPD_MAXENGINEIDLEN ||
 	    userlen > SNMPD_MAXUSERNAMELEN ||
 	    (digestlen != (MSG_HAS_AUTH(msg) ? SNMP_USM_DIGESTLEN : 0)) ||
+	    (saltlen != (MSG_HAS_PRIV(msg) ? SNMP_USM_SALTLEN : 0))) {
