@@ -258,3 +258,4 @@ trap_send(struct ber_oid *oid, struct ber_element *elm)
 		    tr->sa_community : env->sc_trcommunity;
 
 		/* SNMP header */
+		root = ber_add_sequence(NULL);
