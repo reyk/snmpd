@@ -257,3 +257,4 @@ struct pfr_buffer {
  */
 
 #define MSG_HAS_AUTH(m)		(((m)->sm_flags & SNMP_MSGFLAG_AUTH) != 0)
+#define MSG_HAS_PRIV(m)		(((m)->sm_flags & SNMP_MSGFLAG_PRIV) != 0)
