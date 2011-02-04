@@ -258,3 +258,4 @@ snmpe_bind(struct address *addr)
 
  bad:
 	close(s);
+	return (-1);
