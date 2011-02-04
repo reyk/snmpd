@@ -257,3 +257,4 @@ main		: LISTEN ON STRING		{
 				YYERROR;
 			}
 		} userspecs {
+			const char *errstr;
