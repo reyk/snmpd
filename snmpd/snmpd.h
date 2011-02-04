@@ -260,3 +260,4 @@ struct pfr_buffer {
 #define MSG_HAS_PRIV(m)		(((m)->sm_flags & SNMP_MSGFLAG_PRIV) != 0)
 #define MSG_SECLEVEL(m)		((m)->sm_flags & SNMP_MSGFLAG_SECMASK)
 #define MSG_REPORT(m)		(((m)->sm_flags & SNMP_MSGFLAG_REPORT) != 0)
+
