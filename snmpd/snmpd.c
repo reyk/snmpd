@@ -257,3 +257,4 @@ check_child(pid_t pid, const char *pname)
 			    "signal %d", pname, WTERMSIG(status));
 			return (1);
 		}
+	}
