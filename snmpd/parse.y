@@ -260,3 +260,4 @@ main		: LISTEN ON STRING		{
 			const char *errstr;
 			if (usm_checkuser(user, &errstr) < 0) {
 				yyerror(errstr);
+				YYERROR;
