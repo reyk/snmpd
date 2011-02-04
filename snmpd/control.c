@@ -260,3 +260,4 @@ control_dispatch_imsg(int fd, short event, void *arg)
 		if (n == 0)
 			break;
 
+		if (cs->cs_restricted || (c->flags & CTL_CONN_LOCKED)) {
