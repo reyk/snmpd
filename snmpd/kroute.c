@@ -259,3 +259,4 @@ kroute6_compare(struct kroute6_node *a, struct kroute6_node *b)
 		if (a->r.prefix.s6_addr[i] < b->r.prefix.s6_addr[i])
 			return (-1);
 		if (a->r.prefix.s6_addr[i] > b->r.prefix.s6_addr[i])
+			return (1);
