@@ -259,3 +259,4 @@
 #define MIB_ifStackStatus		MIB_ifStackEntry, 3
 #define MIB_ifRcvAddressTable		MIB_ifMIBObjects, 4
 #define MIB_ifRcvAddressEntry		MIB_ifRcvAddressTable, 1
+#define OIDIDX_ifRcvAddress		10
