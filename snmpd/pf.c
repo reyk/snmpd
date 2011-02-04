@@ -260,3 +260,4 @@ pfi_get_if(struct pfi_kif *rp, int idx)
 	if (p == NULL) {
 		free(b.pfrb_caddr);
 		return (-1);
+	}
