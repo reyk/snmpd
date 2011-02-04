@@ -259,3 +259,4 @@ trap_send(struct ber_oid *oid, struct ber_element *elm)
 
 		/* SNMP header */
 		root = ber_add_sequence(NULL);
+		b = ber_printf_elements(root, "ds{tddd",
