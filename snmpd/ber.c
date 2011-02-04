@@ -260,3 +260,4 @@ ber_get_boolean(struct ber_element *elm, int *b)
 struct ber_element *
 ber_add_string(struct ber_element *prev, const char *string)
 {
+	return ber_add_nstring(prev, string, strlen(string));
