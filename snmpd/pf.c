@@ -262,3 +262,4 @@ pfi_get_if(struct pfi_kif *rp, int idx)
 		return (-1);
 	}
 
+	bcopy(p, rp, sizeof(struct pfi_kif));
