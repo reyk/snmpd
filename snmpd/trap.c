@@ -264,3 +264,4 @@ trap_send(struct ber_oid *oid, struct ber_element *elm)
 		    arc4random(), 0, 0);
 		ber_link_elements(b, trap);
 
+#ifdef DEBUG
