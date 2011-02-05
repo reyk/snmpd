@@ -261,3 +261,4 @@ snmpe_bind(struct address *addr)
 	return (-1);
 }
 
+#ifdef DEBUG
