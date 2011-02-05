@@ -261,3 +261,4 @@ struct ber_element *
 ber_add_string(struct ber_element *prev, const char *string)
 {
 	return ber_add_nstring(prev, string, strlen(string));
+}
