@@ -262,3 +262,4 @@ main		: LISTEN ON STRING		{
 				yyerror(errstr);
 				YYERROR;
 			}
+			user = NULL;
