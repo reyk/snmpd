@@ -263,3 +263,4 @@ check_child(pid_t pid, const char *pname)
 }
 
 void
+imsg_event_add(struct imsgev *iev)
