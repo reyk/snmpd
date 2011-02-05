@@ -263,3 +263,4 @@ trap_send(struct ber_oid *oid, struct ber_element *elm)
 		    SNMP_V2, cmn, BER_CLASS_CONTEXT, SNMP_C_TRAPV2,
 		    arc4random(), 0, 0);
 		ber_link_elements(b, trap);
+
