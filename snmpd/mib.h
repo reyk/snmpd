@@ -262,3 +262,4 @@
 #define OIDIDX_ifRcvAddress		10
 #define OIDIDX_ifRcvAddressEntry	11
 #define MIB_ifRcvAddressStatus		MIB_ifRcvAddressEntry, 2
+#define MIB_ifRcvAddressType		MIB_ifRcvAddressEntry, 3
