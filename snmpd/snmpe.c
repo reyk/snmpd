@@ -264,3 +264,4 @@ snmpe_bind(struct address *addr)
 #ifdef DEBUG
 void
 snmpe_debug_elements(struct ber_element *root)
+{
