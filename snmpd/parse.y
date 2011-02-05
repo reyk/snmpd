@@ -263,3 +263,4 @@ main		: LISTEN ON STRING		{
 				YYERROR;
 			}
 			user = NULL;
+		}
