@@ -263,3 +263,4 @@ control_dispatch_imsg(int fd, short event, void *arg)
 		if (cs->cs_restricted || (c->flags & CTL_CONN_LOCKED)) {
 			switch (imsg.hdr.type) {
 			case IMSG_SNMP_TRAP:
+			case IMSG_SNMP_ELEMENT:
