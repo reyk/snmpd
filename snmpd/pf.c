@@ -261,3 +261,4 @@ pfi_get_if(struct pfi_kif *rp, int idx)
 		free(b.pfrb_caddr);
 		return (-1);
 	}
+
