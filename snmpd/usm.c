@@ -262,3 +262,4 @@ usm_decode(struct snmp_message *msg, struct ber_element *elm, const char **errp)
 	    (saltlen != (MSG_HAS_PRIV(msg) ? SNMP_USM_SALTLEN : 0))) {
 		*errp = "bad field length";
 		goto done;
+	}
