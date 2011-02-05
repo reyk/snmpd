@@ -262,3 +262,4 @@ kroute6_compare(struct kroute6_node *a, struct kroute6_node *b)
 			return (1);
 	}
 
+	if (a->r.prefixlen < b->r.prefixlen)
