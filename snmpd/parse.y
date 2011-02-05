@@ -261,3 +261,4 @@ main		: LISTEN ON STRING		{
 			if (usm_checkuser(user, &errstr) < 0) {
 				yyerror(errstr);
 				YYERROR;
+			}
