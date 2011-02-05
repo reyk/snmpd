@@ -263,3 +263,4 @@ mps_set(struct ber_oid *o, void *p, long long len)
 	smi_oidlen(o);
 	if (o->bo_n > BER_MAX_OID_LEN)
 		return (-1);
+	bzero(&key, sizeof(key));
