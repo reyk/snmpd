@@ -268,3 +268,4 @@ mps_set(struct ber_oid *o, void *p, long long len)
 	value = smi_find(&key);
 	if (value == NULL)
 		return (-1);
+	if (value->o_data != NULL)
