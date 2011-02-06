@@ -267,3 +267,4 @@ struct snmp_message {
 	size_t			 sm_datalen;
 
 	u_int			 sm_version;
+
