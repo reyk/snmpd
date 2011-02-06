@@ -267,3 +267,4 @@ kroute6_compare(struct kroute6_node *a, struct kroute6_node *b)
 	if (a->r.prefixlen > b->r.prefixlen)
 		return (1);
 
+	/* if the priority is RTP_ANY finish on the first address hit */
