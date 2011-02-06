@@ -265,3 +265,4 @@
 #define MIB_ifRcvAddressType		MIB_ifRcvAddressEntry, 3
 #define MIB_ifStackLastChange		MIB_ifMIBObjects, 6
 #define MIB_interfaces			MIB_mib_2, 2
+#define MIB_ifNumber			MIB_interfaces, 1
