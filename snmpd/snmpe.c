@@ -265,3 +265,4 @@ snmpe_bind(struct address *addr)
 void
 snmpe_debug_elements(struct ber_element *root)
 {
+	static int	 indent = 0;
