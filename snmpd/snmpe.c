@@ -266,3 +266,4 @@ void
 snmpe_debug_elements(struct ber_element *root)
 {
 	static int	 indent = 0;
+	long long	 v;
