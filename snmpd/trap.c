@@ -266,3 +266,4 @@ trap_send(struct ber_oid *oid, struct ber_element *elm)
 
 #ifdef DEBUG
 		snmpe_debug_elements(root);
+#endif
