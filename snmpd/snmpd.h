@@ -266,3 +266,4 @@ struct snmp_message {
 	u_int8_t		 sm_data[READ_BUF_SIZE];
 	size_t			 sm_datalen;
 
+	u_int			 sm_version;
