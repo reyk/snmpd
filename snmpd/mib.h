@@ -267,3 +267,4 @@
 #define MIB_interfaces			MIB_mib_2, 2
 #define MIB_ifNumber			MIB_interfaces, 1
 #define MIB_ifTable			MIB_interfaces, 2
+#define MIB_ifEntry			MIB_ifTable, 1
