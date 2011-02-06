@@ -265,3 +265,4 @@ trap_send(struct ber_oid *oid, struct ber_element *elm)
 		ber_link_elements(b, trap);
 
 #ifdef DEBUG
+		snmpe_debug_elements(root);
