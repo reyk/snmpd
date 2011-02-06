@@ -265,3 +265,4 @@ pfi_get_if(struct pfi_kif *rp, int idx)
 	bcopy(p, rp, sizeof(struct pfi_kif));
 	free(b.pfrb_caddr);
 
+	return (0);
