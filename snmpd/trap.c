@@ -268,3 +268,4 @@ trap_send(struct ber_oid *oid, struct ber_element *elm)
 		snmpe_debug_elements(root);
 #endif
 
+		len = ber_write_elements(&ber, root);
