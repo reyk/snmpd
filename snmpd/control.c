@@ -265,3 +265,4 @@ control_dispatch_imsg(int fd, short event, void *arg)
 			case IMSG_SNMP_TRAP:
 			case IMSG_SNMP_ELEMENT:
 			case IMSG_SNMP_END:
+			case IMSG_SNMP_LOCK:
