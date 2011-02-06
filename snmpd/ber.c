@@ -266,3 +266,4 @@ ber_add_string(struct ber_element *prev, const char *string)
 struct ber_element *
 ber_add_nstring(struct ber_element *prev, const char *string0, size_t len)
 {
+	struct ber_element *elm;
