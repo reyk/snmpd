@@ -265,3 +265,4 @@ struct snmp_message {
 	struct ber_element	*sm_resp;
 	u_int8_t		 sm_data[READ_BUF_SIZE];
 	size_t			 sm_datalen;
+
