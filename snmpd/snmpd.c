@@ -268,3 +268,4 @@ imsg_event_add(struct imsgev *iev)
 	iev->events = EV_READ;
 	if (iev->ibuf.w.queued)
 		iev->events |= EV_WRITE;
+
