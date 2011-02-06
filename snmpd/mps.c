@@ -265,3 +265,4 @@ mps_set(struct ber_oid *o, void *p, long long len)
 		return (-1);
 	bzero(&key, sizeof(key));
 	bcopy(o, &key.o_id, sizeof(struct ber_oid));
+	value = smi_find(&key);
