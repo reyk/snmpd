@@ -271,3 +271,4 @@ system		: SYSTEM sysmib
 
 sysmib		: CONTACT STRING		{
 			struct ber_oid	 o = OID(MIB_sysContact);
+			mps_set(&o, $2, strlen($2));
