@@ -269,3 +269,4 @@ main		: LISTEN ON STRING		{
 system		: SYSTEM sysmib
 		;
 
+sysmib		: CONTACT STRING		{
