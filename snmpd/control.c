@@ -269,3 +269,4 @@ control_dispatch_imsg(int fd, short event, void *arg)
 				break;
 			default:
 				log_debug("control_dispatch_imsg: "
+				    "client requested restricted command");
