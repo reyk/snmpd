@@ -271,3 +271,4 @@ imsg_event_add(struct imsgev *iev)
 
 	event_del(&iev->ev);
 	event_set(&iev->ev, iev->ibuf.fd, iev->events, iev->handler, iev->data);
+	event_add(&iev->ev, NULL);
