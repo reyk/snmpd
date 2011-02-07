@@ -271,3 +271,4 @@ struct snmp_message {
 	/* V1, V2c */
 	char			 sm_community[SNMPD_MAXCOMMUNITYLEN];
 	int			 sm_context;
+
