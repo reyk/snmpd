@@ -269,3 +269,4 @@ struct snmp_message {
 	u_int			 sm_version;
 
 	/* V1, V2c */
+	char			 sm_community[SNMPD_MAXCOMMUNITYLEN];
