@@ -271,3 +271,4 @@ snmpe_debug_elements(struct ber_element *root)
 	char		*buf;
 	size_t		 len;
 	u_int		 i;
+	int		 constructed;
