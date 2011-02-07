@@ -270,3 +270,4 @@ pfi_get_if(struct pfi_kif *rp, int idx)
 
 int
 pft_get(struct pfr_buffer *b, struct pfr_table *filter)
+{
