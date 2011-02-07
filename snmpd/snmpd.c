@@ -269,3 +269,4 @@ imsg_event_add(struct imsgev *iev)
 	if (iev->ibuf.w.queued)
 		iev->events |= EV_WRITE;
 
+	event_del(&iev->ev);
