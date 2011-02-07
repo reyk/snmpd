@@ -272,3 +272,4 @@ snmpe_debug_elements(struct ber_element *root)
 	size_t		 len;
 	u_int		 i;
 	int		 constructed;
+	struct ber_oid	 o;
