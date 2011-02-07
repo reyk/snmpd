@@ -269,3 +269,4 @@ kroute6_compare(struct kroute6_node *a, struct kroute6_node *b)
 
 	/* if the priority is RTP_ANY finish on the first address hit */
 	if (a->r.priority == RTP_ANY || b->r.priority == RTP_ANY)
+		return (0);
