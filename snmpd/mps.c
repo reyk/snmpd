@@ -270,3 +270,4 @@ mps_set(struct ber_oid *o, void *p, long long len)
 		return (-1);
 	if (value->o_data != NULL)
 		free(value->o_data);
+	value->o_data = p;
