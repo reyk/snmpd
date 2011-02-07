@@ -269,3 +269,4 @@ snmpe_debug_elements(struct ber_element *root)
 	long long	 v;
 	int		 d;
 	char		*buf;
+	size_t		 len;
