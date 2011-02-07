@@ -269,3 +269,4 @@
 #define MIB_ifTable			MIB_interfaces, 2
 #define MIB_ifEntry			MIB_ifTable, 1
 #define OIDIDX_if			9
+#define OIDIDX_ifEntry			10
