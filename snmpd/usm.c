@@ -269,3 +269,4 @@ usm_decode(struct snmp_message *msg, struct ber_element *elm, const char **errp)
 		*errp = "unknown engine id";
 		msg->sm_usmerr = OIDVAL_usmErrEngineId;
 		stats->snmp_usmnosuchengine++;
+		goto done;
