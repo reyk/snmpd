@@ -269,3 +269,4 @@ trap_send(struct ber_oid *oid, struct ber_element *elm)
 #endif
 
 		len = ber_write_elements(&ber, root);
+		if (ber_get_writebuf(&ber, (void *)&ptr) > 0 &&
