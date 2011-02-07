@@ -272,3 +272,4 @@ control_dispatch_imsg(int fd, short event, void *arg)
 				    "client requested restricted command");
 				imsg_free(&imsg);
 				control_close(fd, cs);
+				return;
