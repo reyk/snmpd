@@ -270,3 +270,4 @@ mib_getsnmp(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 		{ 4, &stats->snmp_inbadcommunitynames },
 		{ 5, &stats->snmp_inbadcommunityuses },
 		{ 6, &stats->snmp_inasnparseerrs },
+		{ 8, &stats->snmp_intoobigs },
