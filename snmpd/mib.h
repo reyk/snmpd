@@ -271,3 +271,4 @@
 #define OIDIDX_if			9
 #define OIDIDX_ifEntry			10
 #define MIB_ifIndex			MIB_ifEntry, 1
+#define MIB_ifDescr			MIB_ifEntry, 2
