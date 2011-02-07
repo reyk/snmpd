@@ -270,3 +270,4 @@ trap_send(struct ber_oid *oid, struct ber_element *elm)
 
 		len = ber_write_elements(&ber, root);
 		if (ber_get_writebuf(&ber, (void *)&ptr) > 0 &&
+		    sendto(s, ptr, len, 0, (struct sockaddr *)&tr->ss,
