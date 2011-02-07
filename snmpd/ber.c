@@ -270,3 +270,4 @@ ber_add_nstring(struct ber_element *prev, const char *string0, size_t len)
 	char *string;
 
 	if ((string = calloc(1, len + 1)) == NULL)
+		return NULL;
