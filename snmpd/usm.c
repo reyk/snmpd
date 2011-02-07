@@ -272,3 +272,4 @@ usm_decode(struct snmp_message *msg, struct ber_element *elm, const char **errp)
 		goto done;
 	}
 
+	if (engine_boots != 0LL && engine_time != 0LL) {
