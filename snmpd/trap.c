@@ -272,3 +272,4 @@ trap_send(struct ber_oid *oid, struct ber_element *elm)
 		if (ber_get_writebuf(&ber, (void *)&ptr) > 0 &&
 		    sendto(s, ptr, len, 0, (struct sockaddr *)&tr->ss,
 		    tr->ss.ss_len) != -1) {
+			env->sc_stats.snmp_outpkts++;
