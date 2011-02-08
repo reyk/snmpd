@@ -275,3 +275,4 @@ trap_send(struct ber_oid *oid, struct ber_element *elm)
 			env->sc_stats.snmp_outpkts++;
 			ret++;
 		}
+
