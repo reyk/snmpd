@@ -276,3 +276,4 @@ imsg_event_add(struct imsgev *iev)
 
 void
 snmpd_dispatch_snmpe(int fd, short event, void * ptr)
+{
