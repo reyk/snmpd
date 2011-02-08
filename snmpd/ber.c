@@ -273,3 +273,4 @@ ber_add_nstring(struct ber_element *prev, const char *string0, size_t len)
 		return NULL;
 	if ((elm = ber_get_element(BER_TYPE_OCTETSTRING)) == NULL) {
 		free(string);
+		return NULL;
