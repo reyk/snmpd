@@ -273,3 +273,4 @@ mps_set(struct ber_oid *o, void *p, long long len)
 	value->o_data = p;
 	value->o_val = len;
 
+	return (0);
