@@ -276,3 +276,4 @@ usm_decode(struct snmp_message *msg, struct ber_element *elm, const char **errp)
 		now = snmpd_engine_time();
 		if (engine_boots != env->sc_engine_boots ||
 		    engine_time < (long long)(now - SNMP_MAX_TIMEWINDOW) ||
+		    engine_time > (long long)(now + SNMP_MAX_TIMEWINDOW)) {
