@@ -275,3 +275,4 @@ ber_add_nstring(struct ber_element *prev, const char *string0, size_t len)
 		free(string);
 		return NULL;
 	}
+
