@@ -273,3 +273,4 @@ struct snmp_message {
 	int			 sm_context;
 
 	/* V3 */
+	long long		 sm_msgid;
