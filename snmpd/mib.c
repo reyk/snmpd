@@ -276,3 +276,4 @@ mib_getsnmp(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 		{ 11, &stats->snmp_inreadonlys },
 		{ 12, &stats->snmp_ingenerrs },
 		{ 13, &stats->snmp_intotalreqvars },
+		{ 14, &stats->snmp_intotalsetvars },
