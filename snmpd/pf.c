@@ -276,3 +276,4 @@ pft_get(struct pfr_buffer *b, struct pfr_table *filter)
 	
 	for (;;) {
 		pfr_buf_grow(b, b->pfrb_size);
+		b->pfrb_size = b->pfrb_msize;
