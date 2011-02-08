@@ -273,3 +273,4 @@ pft_get(struct pfr_buffer *b, struct pfr_table *filter)
 {
 	bzero(b, sizeof(struct pfr_buffer));
 	b->pfrb_type = PFRB_TSTATS;
+	
