@@ -276,3 +276,4 @@ mps_set(struct ber_oid *o, void *p, long long len)
 	return (0);
 }
 
+struct ber_oid *
