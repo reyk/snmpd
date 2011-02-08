@@ -274,3 +274,4 @@ imsg_event_add(struct imsgev *iev)
 	event_add(&iev->ev, NULL);
 }
 
+void
