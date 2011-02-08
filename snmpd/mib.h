@@ -276,3 +276,4 @@
 #define MIB_ifMtu			MIB_ifEntry, 4
 #define MIB_ifSpeed			MIB_ifEntry, 5
 #define MIB_ifPhysAddress		MIB_ifEntry, 6
+#define MIB_ifAdminStatus		MIB_ifEntry, 7
