@@ -274,3 +274,4 @@ struct snmp_message {
 
 	/* V3 */
 	long long		 sm_msgid;
+	long long		 sm_max_msg_size;
