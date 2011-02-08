@@ -273,3 +273,4 @@ mib_getsnmp(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 		{ 8, &stats->snmp_intoobigs },
 		{ 9, &stats->snmp_innosuchnames },
 		{ 10, &stats->snmp_inbadvalues },
+		{ 11, &stats->snmp_inreadonlys },
