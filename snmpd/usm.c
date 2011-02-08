@@ -273,3 +273,4 @@ usm_decode(struct snmp_message *msg, struct ber_element *elm, const char **errp)
 	}
 
 	if (engine_boots != 0LL && engine_time != 0LL) {
+		now = snmpd_engine_time();
