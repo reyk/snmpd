@@ -276,3 +276,4 @@ snmpe_debug_elements(struct ber_element *root)
 	char		 str[BUFSIZ];
 
 	/* calculate lengths */
+	ber_calc_len(root);
