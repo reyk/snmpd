@@ -275,3 +275,4 @@ snmpe_debug_elements(struct ber_element *root)
 	struct ber_oid	 o;
 	char		 str[BUFSIZ];
 
+	/* calculate lengths */
