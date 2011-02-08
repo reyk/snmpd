@@ -275,3 +275,4 @@
 #define MIB_ifType			MIB_ifEntry, 3
 #define MIB_ifMtu			MIB_ifEntry, 4
 #define MIB_ifSpeed			MIB_ifEntry, 5
+#define MIB_ifPhysAddress		MIB_ifEntry, 6
