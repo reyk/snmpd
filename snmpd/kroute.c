@@ -273,3 +273,4 @@ kroute6_compare(struct kroute6_node *a, struct kroute6_node *b)
 	if (a->r.priority < b->r.priority)
 		return (-1);
 	if (a->r.priority > b->r.priority)
+		return (1);
