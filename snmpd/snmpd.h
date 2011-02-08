@@ -276,3 +276,4 @@ struct snmp_message {
 	long long		 sm_msgid;
 	long long		 sm_max_msg_size;
 	u_int8_t		 sm_flags;
+	long long		 sm_secmodel;
