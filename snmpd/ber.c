@@ -280,3 +280,4 @@ ber_add_nstring(struct ber_element *prev, const char *string0, size_t len)
 	elm->be_val = string;
 	elm->be_len = len;
 	elm->be_free = 1;		/* free string on cleanup */
+
