@@ -279,3 +279,4 @@ control_dispatch_imsg(int fd, short event, void *arg)
 		switch (imsg.hdr.type) {
 		case IMSG_CTL_NOTIFY:
 			if (c->flags & CTL_CONN_NOTIFY) {
+				log_debug("control_dispatch_imsg: "
