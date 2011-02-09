@@ -278,3 +278,4 @@ mps_set(struct ber_oid *o, void *p, long long len)
 
 struct ber_oid *
 mps_table(struct oid *oid, struct ber_oid *o, struct ber_oid *no)
+{
