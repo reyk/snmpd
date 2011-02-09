@@ -279,3 +279,4 @@ snmpe_debug_elements(struct ber_element *root)
 	ber_calc_len(root);
 
 	switch (root->be_encoding) {
+	case BER_TYPE_SEQUENCE:
