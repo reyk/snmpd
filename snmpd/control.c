@@ -280,3 +280,4 @@ control_dispatch_imsg(int fd, short event, void *arg)
 		case IMSG_CTL_NOTIFY:
 			if (c->flags & CTL_CONN_NOTIFY) {
 				log_debug("control_dispatch_imsg: "
+				    "client requested notify more than once");
