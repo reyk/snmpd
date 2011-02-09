@@ -277,3 +277,4 @@ sysmib		: CONTACT STRING		{
 			struct ber_oid	 o = OID(MIB_sysDescr);
 			mps_set(&o, $2, strlen($2));
 		}
+		| LOCATION STRING		{
