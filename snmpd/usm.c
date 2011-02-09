@@ -279,3 +279,4 @@ usm_decode(struct snmp_message *msg, struct ber_element *elm, const char **errp)
 		    engine_time > (long long)(now + SNMP_MAX_TIMEWINDOW)) {
 			*errp = "out of time window";
 			msg->sm_usmerr = OIDVAL_usmErrTimeWindow;
+			stats->snmp_usmtimewindow++;
