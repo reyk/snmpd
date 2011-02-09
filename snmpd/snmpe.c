@@ -277,3 +277,4 @@ snmpe_debug_elements(struct ber_element *root)
 
 	/* calculate lengths */
 	ber_calc_len(root);
+
