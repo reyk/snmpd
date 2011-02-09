@@ -278,3 +278,4 @@ struct snmp_message {
 	u_int8_t		 sm_flags;
 	long long		 sm_secmodel;
 	u_int32_t		 sm_engine_boots;
+	u_int32_t		 sm_engine_time;
