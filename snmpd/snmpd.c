@@ -280,3 +280,4 @@ snmpd_dispatch_snmpe(int fd, short event, void * ptr)
 	struct imsgev		*iev;
 	struct imsgbuf		*ibuf;
 	struct imsg		 imsg;
+	ssize_t			 n;
