@@ -277,3 +277,4 @@
 #define MIB_ifSpeed			MIB_ifEntry, 5
 #define MIB_ifPhysAddress		MIB_ifEntry, 6
 #define MIB_ifAdminStatus		MIB_ifEntry, 7
+#define MIB_ifOperStatus		MIB_ifEntry, 8
