@@ -279,3 +279,4 @@ struct snmp_message {
 	long long		 sm_secmodel;
 	u_int32_t		 sm_engine_boots;
 	u_int32_t		 sm_engine_time;
+	char			 sm_ctxengineid[SNMPD_MAXENGINEIDLEN];
