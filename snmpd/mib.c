@@ -280,3 +280,4 @@ mib_getsnmp(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 		{ 15, &stats->snmp_ingetrequests },
 		{ 16, &stats->snmp_ingetnexts },
 		{ 17, &stats->snmp_insetrequests },
+		{ 18, &stats->snmp_ingetresponses },
