@@ -280,3 +280,4 @@ trap_send(struct ber_oid *oid, struct ber_element *elm)
 		ber_unlink_elements(b);
 		ber_free_elements(root);
 	}
+
