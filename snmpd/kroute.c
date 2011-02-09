@@ -279,3 +279,4 @@ kroute6_compare(struct kroute6_node *a, struct kroute6_node *b)
 
 int
 kif_compare(struct kif_node *a, struct kif_node *b)
+{
