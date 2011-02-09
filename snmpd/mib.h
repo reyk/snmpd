@@ -279,3 +279,4 @@
 #define MIB_ifAdminStatus		MIB_ifEntry, 7
 #define MIB_ifOperStatus		MIB_ifEntry, 8
 #define MIB_ifLastChange		MIB_ifEntry, 9
+#define MIB_ifInOctets			MIB_ifEntry, 10
