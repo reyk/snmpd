@@ -280,3 +280,4 @@ struct ber_oid *
 mps_table(struct oid *oid, struct ber_oid *o, struct ber_oid *no)
 {
 	u_int32_t		 col, idx = 1, id, subid;
+	struct oid		 a, b;
