@@ -277,3 +277,4 @@ control_dispatch_imsg(int fd, short event, void *arg)
 		}
 
 		switch (imsg.hdr.type) {
+		case IMSG_CTL_NOTIFY:
