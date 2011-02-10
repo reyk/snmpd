@@ -284,3 +284,4 @@ struct snmp_message {
 	char			 sm_ctxname[SNMPD_MAXCONTEXNAMELEN+1];
 
 	/* USM */
+	char			 sm_username[SNMPD_MAXUSERNAMELEN+1];
