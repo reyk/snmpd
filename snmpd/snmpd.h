@@ -283,3 +283,4 @@ struct snmp_message {
 	size_t			 sm_ctxengineid_len;
 	char			 sm_ctxname[SNMPD_MAXCONTEXNAMELEN+1];
 
+	/* USM */
