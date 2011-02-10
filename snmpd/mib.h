@@ -284,3 +284,4 @@
 #define MIB_ifInNUcastPkts		MIB_ifEntry, 12
 #define MIB_ifInDiscards		MIB_ifEntry, 13
 #define MIB_ifInErrors			MIB_ifEntry, 14
+#define MIB_ifInUnknownProtos		MIB_ifEntry, 15
