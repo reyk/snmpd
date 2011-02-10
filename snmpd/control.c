@@ -281,3 +281,4 @@ control_dispatch_imsg(int fd, short event, void *arg)
 			if (c->flags & CTL_CONN_NOTIFY) {
 				log_debug("control_dispatch_imsg: "
 				    "client requested notify more than once");
+				imsg_compose(&c->iev.ibuf, IMSG_CTL_FAIL,
