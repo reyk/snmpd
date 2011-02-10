@@ -281,3 +281,4 @@ usm_decode(struct snmp_message *msg, struct ber_element *elm, const char **errp)
 			msg->sm_usmerr = OIDVAL_usmErrTimeWindow;
 			stats->snmp_usmtimewindow++;
 			goto done;
+		}
