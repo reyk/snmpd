@@ -283,3 +283,4 @@ mps_table(struct oid *oid, struct ber_oid *o, struct ber_oid *no)
 	struct oid		 a, b;
 
 	/*
+	 * This function is being used to iterate through elements
