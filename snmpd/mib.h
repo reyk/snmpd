@@ -281,3 +281,4 @@
 #define MIB_ifLastChange		MIB_ifEntry, 9
 #define MIB_ifInOctets			MIB_ifEntry, 10
 #define MIB_ifInUcastPkts		MIB_ifEntry, 11
+#define MIB_ifInNUcastPkts		MIB_ifEntry, 12
