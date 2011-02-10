@@ -282,3 +282,4 @@ snmpd_dispatch_snmpe(int fd, short event, void * ptr)
 	struct imsg		 imsg;
 	ssize_t			 n;
 
+	iev = ptr;
