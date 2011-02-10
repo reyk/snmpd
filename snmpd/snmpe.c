@@ -282,3 +282,4 @@ snmpe_debug_elements(struct ber_element *root)
 	case BER_TYPE_SEQUENCE:
 	case BER_TYPE_SET:
 		constructed = root->be_encoding;
+		break;
