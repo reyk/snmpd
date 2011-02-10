@@ -281,3 +281,4 @@ int
 kif_compare(struct kif_node *a, struct kif_node *b)
 {
 	return (a->k.if_index - b->k.if_index);
+}
