@@ -284,3 +284,4 @@ control_dispatch_imsg(int fd, short event, void *arg)
 				imsg_compose(&c->iev.ibuf, IMSG_CTL_FAIL,
 				    0, 0, -1, NULL, 0);
 				break;
+			}
