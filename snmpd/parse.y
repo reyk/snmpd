@@ -283,3 +283,4 @@ sysmib		: CONTACT STRING		{
 		}
 		| NAME STRING			{
 			struct ber_oid	 o = OID(MIB_sysName);
+			mps_set(&o, $2, strlen($2));
