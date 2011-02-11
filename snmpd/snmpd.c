@@ -285,3 +285,4 @@ snmpd_dispatch_snmpe(int fd, short event, void * ptr)
 	iev = ptr;
 	ibuf = &iev->ibuf;
 	switch (event) {
+	case EV_READ:
