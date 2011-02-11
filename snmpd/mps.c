@@ -286,3 +286,4 @@ mps_table(struct oid *oid, struct ber_oid *o, struct ber_oid *no)
 	 * This function is being used to iterate through elements
 	 * in a SMI "table". It is called by the mps_getnext() handler.
 	 * For example, if the input is sysORIndex, it will return
+	 * sysORIndex.1. If the input is sysORIndex.2, it will return
