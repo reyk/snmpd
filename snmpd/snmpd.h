@@ -287,3 +287,4 @@ struct snmp_message {
 	char			 sm_username[SNMPD_MAXUSERNAMELEN+1];
 	struct usmuser		*sm_user;
 	size_t			 sm_digest_offs;
+	char			 sm_salt[SNMP_USM_SALTLEN];
