@@ -286,3 +286,4 @@ usm_decode(struct snmp_message *msg, struct ber_element *elm, const char **errp)
 
 	msg->sm_engine_boots = (u_int32_t)engine_boots;
 	msg->sm_engine_time = (u_int32_t)engine_time;
+
