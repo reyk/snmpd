@@ -285,3 +285,4 @@ trap_send(struct ber_oid *oid, struct ber_element *elm)
 	ber_free_elements(trap);
 	ber_free(&ber);
 
+	return (ret);
