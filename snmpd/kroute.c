@@ -285,3 +285,4 @@ kif_compare(struct kif_node *a, struct kif_node *b)
 
 int
 ka_compare(struct kif_addr *a, struct kif_addr *b)
+{
