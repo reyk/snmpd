@@ -285,3 +285,4 @@
 #define MIB_ifInDiscards		MIB_ifEntry, 13
 #define MIB_ifInErrors			MIB_ifEntry, 14
 #define MIB_ifInUnknownProtos		MIB_ifEntry, 15
+#define MIB_ifOutOctets			MIB_ifEntry, 16
