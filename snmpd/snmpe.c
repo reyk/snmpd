@@ -288,3 +288,4 @@ snmpe_debug_elements(struct ber_element *root)
 		break;
 	}
 
+	fprintf(stderr, "%*slen %lu ", indent, "", root->be_len);
