@@ -285,3 +285,4 @@ control_dispatch_imsg(int fd, short event, void *arg)
 				    0, 0, -1, NULL, 0);
 				break;
 			}
+			c->flags |= CTL_CONN_NOTIFY;
