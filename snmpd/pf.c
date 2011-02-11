@@ -288,3 +288,4 @@ pft_get(struct pfr_buffer *b, struct pfr_table *filter)
 
 int
 pft_get_table(struct pfr_tstats *rts, int idx)
+{
