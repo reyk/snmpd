@@ -288,3 +288,4 @@
 #define MIB_ifOutOctets			MIB_ifEntry, 16
 #define MIB_ifOutUcastPkts		MIB_ifEntry, 17
 #define MIB_ifOutNUcastPkts		MIB_ifEntry, 18
+#define MIB_ifOutDiscards		MIB_ifEntry, 19
