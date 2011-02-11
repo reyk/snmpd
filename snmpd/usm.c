@@ -288,3 +288,4 @@ usm_decode(struct snmp_message *msg, struct ber_element *elm, const char **errp)
 	msg->sm_engine_time = (u_int32_t)engine_time;
 
 	memcpy(msg->sm_username, user, userlen);
+	msg->sm_username[userlen] = '\0';
