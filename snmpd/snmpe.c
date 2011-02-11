@@ -285,3 +285,4 @@ snmpe_debug_elements(struct ber_element *root)
 		break;
 	default:
 		constructed = 0;
+		break;
