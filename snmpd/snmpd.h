@@ -288,3 +288,4 @@ struct snmp_message {
 	struct usmuser		*sm_user;
 	size_t			 sm_digest_offs;
 	char			 sm_salt[SNMP_USM_SALTLEN];
+	int			 sm_usmerr;
