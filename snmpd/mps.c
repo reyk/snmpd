@@ -288,3 +288,4 @@ mps_table(struct oid *oid, struct ber_oid *o, struct ber_oid *no)
 	 * For example, if the input is sysORIndex, it will return
 	 * sysORIndex.1. If the input is sysORIndex.2, it will return
 	 * sysORIndex.3 etc.. The MIB code has to verify the index,
+	 * see mib_sysor() as an example.
