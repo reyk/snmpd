@@ -287,3 +287,4 @@ sysmib		: CONTACT STRING		{
 		}
 		| OBJECTID oid			{
 			struct ber_oid	 o = OID(MIB_sysOID);
+			mps_set(&o, $2, sizeof(struct ber_oid));
