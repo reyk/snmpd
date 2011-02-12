@@ -291,3 +291,4 @@ pft_get_table(struct pfr_tstats *rts, int idx)
 {
 	struct pfr_buffer	 b;
 	const struct pfr_tstats	*ts;
+	int			 i = 1;
