@@ -290,3 +290,4 @@ int
 ber_get_string(struct ber_element *elm, char **s)
 {
 	if (elm->be_encoding != BER_TYPE_OCTETSTRING)
+		return -1;
