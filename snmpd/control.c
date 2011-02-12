@@ -291,3 +291,4 @@ control_dispatch_imsg(int fd, short event, void *arg)
 			/* enable restricted control mode */
 			c->flags |= CTL_CONN_LOCKED;
 			break;
+		case IMSG_SNMP_TRAP:
