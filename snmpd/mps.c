@@ -291,3 +291,4 @@ mps_table(struct oid *oid, struct ber_oid *o, struct ber_oid *no)
 	 * see mib_sysor() as an example.
 	 */
 
+	if (oid->o_table != NULL)
