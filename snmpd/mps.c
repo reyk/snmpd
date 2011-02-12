@@ -292,3 +292,4 @@ mps_table(struct oid *oid, struct ber_oid *o, struct ber_oid *no)
 	 */
 
 	if (oid->o_table != NULL)
+		return (oid->o_table(oid, o, no));
