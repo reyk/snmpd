@@ -290,3 +290,4 @@ mps_table(struct oid *oid, struct ber_oid *o, struct ber_oid *no)
 	 * sysORIndex.3 etc.. The MIB code has to verify the index,
 	 * see mib_sysor() as an example.
 	 */
+
