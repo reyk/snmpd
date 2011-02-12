@@ -291,3 +291,4 @@ snmpe_debug_elements(struct ber_element *root)
 	fprintf(stderr, "%*slen %lu ", indent, "", root->be_len);
 	switch (root->be_class) {
 	case BER_CLASS_UNIVERSAL:
+		fprintf(stderr, "class: universal(%u) type: ", root->be_class);
