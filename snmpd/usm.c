@@ -289,3 +289,4 @@ usm_decode(struct snmp_message *msg, struct ber_element *elm, const char **errp)
 
 	memcpy(msg->sm_username, user, userlen);
 	msg->sm_username[userlen] = '\0';
+	msg->sm_user = usm_finduser(msg->sm_username);
