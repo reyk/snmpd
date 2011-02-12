@@ -290,3 +290,4 @@ struct snmp_message {
 	char			 sm_salt[SNMP_USM_SALTLEN];
 	int			 sm_usmerr;
 
+	long long		 sm_request;
