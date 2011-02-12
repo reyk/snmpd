@@ -292,3 +292,4 @@ usm_decode(struct snmp_message *msg, struct ber_element *elm, const char **errp)
 	msg->sm_user = usm_finduser(msg->sm_username);
 	if (msg->sm_user == NULL) {
 		*errp = "no such user";
+		msg->sm_usmerr = OIDVAL_usmErrUserName;
