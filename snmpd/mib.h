@@ -291,3 +291,4 @@
 #define MIB_ifOutDiscards		MIB_ifEntry, 19
 #define MIB_ifOutErrors			MIB_ifEntry, 20
 #define MIB_ifOutQLen			MIB_ifEntry, 21
+#define MIB_ifSpecific			MIB_ifEntry, 22
