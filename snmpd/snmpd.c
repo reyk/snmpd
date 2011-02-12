@@ -291,3 +291,4 @@ snmpd_dispatch_snmpe(int fd, short event, void * ptr)
 		if (n == 0) {
 			/* this pipe is dead, so remove the event handler */
 			event_del(&iev->ev);
+			event_loopexit(NULL);
