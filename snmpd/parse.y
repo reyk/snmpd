@@ -292,3 +292,4 @@ sysmib		: CONTACT STRING		{
 		| SERVICES NUMBER		{
 			struct ber_oid	 o = OID(MIB_sysServices);
 			mps_set(&o, NULL, $2);
+		}
