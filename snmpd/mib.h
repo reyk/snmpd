@@ -290,3 +290,4 @@
 #define MIB_ifOutNUcastPkts		MIB_ifEntry, 18
 #define MIB_ifOutDiscards		MIB_ifEntry, 19
 #define MIB_ifOutErrors			MIB_ifEntry, 20
+#define MIB_ifOutQLen			MIB_ifEntry, 21
