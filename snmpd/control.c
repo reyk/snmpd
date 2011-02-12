@@ -292,3 +292,4 @@ control_dispatch_imsg(int fd, short event, void *arg)
 			c->flags |= CTL_CONN_LOCKED;
 			break;
 		case IMSG_SNMP_TRAP:
+			if (trap_imsg(&c->iev, imsg.hdr.pid) == -1) {
