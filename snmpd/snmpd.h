@@ -291,3 +291,4 @@ struct snmp_message {
 	int			 sm_usmerr;
 
 	long long		 sm_request;
+
