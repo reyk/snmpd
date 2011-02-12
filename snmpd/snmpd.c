@@ -289,3 +289,4 @@ snmpd_dispatch_snmpe(int fd, short event, void * ptr)
 		if ((n = imsg_read(ibuf)) == -1)
 			fatal("imsg_read error");
 		if (n == 0) {
+			/* this pipe is dead, so remove the event handler */
