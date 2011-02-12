@@ -289,3 +289,4 @@ ka_compare(struct kif_addr *a, struct kif_addr *b)
 	if (a->addr.sa.sa_family < b->addr.sa.sa_family)
 		return (-1);
 	if (a->addr.sa.sa_family > b->addr.sa.sa_family)
+		return (1);
