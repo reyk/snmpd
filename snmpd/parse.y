@@ -290,3 +290,4 @@ sysmib		: CONTACT STRING		{
 			mps_set(&o, $2, sizeof(struct ber_oid));
 		}
 		| SERVICES NUMBER		{
+			struct ber_oid	 o = OID(MIB_sysServices);
