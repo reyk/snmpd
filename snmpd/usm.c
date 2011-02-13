@@ -295,3 +295,4 @@ usm_decode(struct snmp_message *msg, struct ber_element *elm, const char **errp)
 		msg->sm_usmerr = OIDVAL_usmErrUserName;
 		stats->snmp_usmnosuchuser++;
 		goto done;
+	}
