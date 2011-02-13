@@ -294,3 +294,4 @@ struct snmp_message {
 
 	long long		 sm_error;
 #define sm_nonrepeaters		 sm_error
+	long long		 sm_errorindex;
