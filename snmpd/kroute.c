@@ -293,3 +293,4 @@ ka_compare(struct kif_addr *a, struct kif_addr *b)
 	return (memcmp(&a->addr.sa, &b->addr.sa, a->addr.sa.sa_len));
 }
 
+/* tree management */
