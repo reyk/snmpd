@@ -293,3 +293,4 @@
 #define MIB_ifOutQLen			MIB_ifEntry, 21
 #define MIB_ifSpecific			MIB_ifEntry, 22
 
+/* IP-MIB */
