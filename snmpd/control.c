@@ -294,3 +294,4 @@ control_dispatch_imsg(int fd, short event, void *arg)
 		case IMSG_SNMP_TRAP:
 			if (trap_imsg(&c->iev, imsg.hdr.pid) == -1) {
 				log_debug("control_dispatch_imsg: "
+				    "received invalid trap (pid %d)",
