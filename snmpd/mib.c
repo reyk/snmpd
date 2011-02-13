@@ -295,3 +295,4 @@ mib_getsnmp(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 		{ 32, &stats->snmp_proxydrops }
 	};
 
+	switch (oid->o_oid[OIDIDX_snmp]) {
