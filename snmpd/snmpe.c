@@ -294,3 +294,4 @@ snmpe_debug_elements(struct ber_element *root)
 		fprintf(stderr, "class: universal(%u) type: ", root->be_class);
 		switch (root->be_type) {
 		case BER_TYPE_EOC:
+			fprintf(stderr, "end-of-content");
