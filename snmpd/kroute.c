@@ -294,3 +294,4 @@ ka_compare(struct kif_addr *a, struct kif_addr *b)
 }
 
 /* tree management */
+struct kroute_node *
