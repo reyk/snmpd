@@ -293,3 +293,4 @@ pft_get_table(struct pfr_tstats *rts, int idx)
 	const struct pfr_tstats	*ts;
 	int			 i = 1;
 
+	if (pft_get(&b, NULL)) {
