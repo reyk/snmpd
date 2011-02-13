@@ -295,3 +295,4 @@ pft_get_table(struct pfr_tstats *rts, int idx)
 
 	if (pft_get(&b, NULL)) {
 		free(b.pfrb_caddr);
+		return (-1);
