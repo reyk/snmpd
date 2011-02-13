@@ -294,3 +294,4 @@ ber_get_string(struct ber_element *elm, char **s)
 
 	*s = elm->be_val;
 	return 0;
+}
