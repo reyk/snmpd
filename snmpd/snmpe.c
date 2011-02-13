@@ -293,3 +293,4 @@ snmpe_debug_elements(struct ber_element *root)
 	case BER_CLASS_UNIVERSAL:
 		fprintf(stderr, "class: universal(%u) type: ", root->be_class);
 		switch (root->be_type) {
+		case BER_TYPE_EOC:
