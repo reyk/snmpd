@@ -296,3 +296,4 @@ sysmib		: CONTACT STRING		{
 		;
 
 mib		: OBJECTID oid NAME STRING optwrite objtype	{
+			struct oid	*oid;
