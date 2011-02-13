@@ -295,3 +295,4 @@
 
 /* IP-MIB */
 #define MIB_ipMIB			MIB_mib_2, 4
+#define OIDIDX_ip			7
