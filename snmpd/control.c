@@ -296,3 +296,4 @@ control_dispatch_imsg(int fd, short event, void *arg)
 				log_debug("control_dispatch_imsg: "
 				    "received invalid trap (pid %d)",
 				    imsg.hdr.pid);
+				imsg_free(&imsg);
