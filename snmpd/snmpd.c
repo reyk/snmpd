@@ -294,3 +294,4 @@ snmpd_dispatch_snmpe(int fd, short event, void * ptr)
 			event_loopexit(NULL);
 			return;
 		}
+		break;
