@@ -294,3 +294,4 @@
 #define MIB_ifSpecific			MIB_ifEntry, 22
 
 /* IP-MIB */
+#define MIB_ipMIB			MIB_mib_2, 4
