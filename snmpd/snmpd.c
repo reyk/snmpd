@@ -295,3 +295,4 @@ snmpd_dispatch_snmpe(int fd, short event, void * ptr)
 			return;
 		}
 		break;
+	case EV_WRITE:
