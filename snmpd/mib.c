@@ -293,3 +293,4 @@ mib_getsnmp(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 		{ 29, &stats->snmp_outtraps },
 		{ 31, &stats->snmp_silentdrops },
 		{ 32, &stats->snmp_proxydrops }
+	};
