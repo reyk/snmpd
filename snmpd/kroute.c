@@ -296,3 +296,4 @@ ka_compare(struct kif_addr *a, struct kif_addr *b)
 /* tree management */
 struct kroute_node *
 kroute_find(in_addr_t prefix, u_int8_t prefixlen, u_int8_t prio)
+{
