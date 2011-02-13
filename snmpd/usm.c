@@ -296,3 +296,4 @@ usm_decode(struct snmp_message *msg, struct ber_element *elm, const char **errp)
 		stats->snmp_usmnosuchuser++;
 		goto done;
 	}
+	if (MSG_SECLEVEL(msg) > msg->sm_user->uu_seclevel) {
