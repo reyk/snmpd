@@ -299,3 +299,4 @@ snmpd_dispatch_snmpe(int fd, short event, void * ptr)
 		if (msgbuf_write(&ibuf->w) == -1)
 			fatal("msgbuf_write");
 		imsg_event_add(iev);
+		return;
