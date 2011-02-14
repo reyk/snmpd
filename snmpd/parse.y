@@ -298,3 +298,4 @@ sysmib		: CONTACT STRING		{
 mib		: OBJECTID oid NAME STRING optwrite objtype	{
 			struct oid	*oid;
 			if ((oid = (struct oid *)
+			    calloc(1, sizeof(*oid))) == NULL) {
