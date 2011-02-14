@@ -300,3 +300,4 @@ snmpe_debug_elements(struct ber_element *root)
 			fprintf(stderr, "boolean");
 			break;
 		case BER_TYPE_INTEGER:
+			fprintf(stderr, "integer");
