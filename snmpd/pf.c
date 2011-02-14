@@ -298,3 +298,4 @@ pft_get_table(struct pfr_tstats *rts, int idx)
 		return (-1);
 	}
  
+	PFRB_FOREACH(ts, &b) {
