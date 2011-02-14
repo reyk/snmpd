@@ -297,3 +297,4 @@ pft_get_table(struct pfr_tstats *rts, int idx)
 		free(b.pfrb_caddr);
 		return (-1);
 	}
+ 
