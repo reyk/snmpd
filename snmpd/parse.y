@@ -300,3 +300,4 @@ mib		: OBJECTID oid NAME STRING optwrite objtype	{
 			if ((oid = (struct oid *)
 			    calloc(1, sizeof(*oid))) == NULL) {
 				yyerror("calloc");
+				free($2);
