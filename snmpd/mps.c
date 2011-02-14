@@ -299,3 +299,4 @@ mps_table(struct oid *oid, struct ber_oid *o, struct ber_oid *no)
 	subid = oid->o_oidlen;
 
 	if (o->bo_n >= oid->o_oidlen) {
+		/*
