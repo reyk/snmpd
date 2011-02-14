@@ -298,3 +298,4 @@ snmpd_dispatch_snmpe(int fd, short event, void * ptr)
 	case EV_WRITE:
 		if (msgbuf_write(&ibuf->w) == -1)
 			fatal("msgbuf_write");
+		imsg_event_add(iev);
