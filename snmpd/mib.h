@@ -299,3 +299,4 @@
 #define MIB_ipForwarding		MIB_ipMIB, 1
 #define MIB_ipDefaultTTL		MIB_ipMIB, 2
 #define MIB_ipInReceives		MIB_ipMIB, 3
+#define MIB_ipInHdrErrors		MIB_ipMIB, 4
