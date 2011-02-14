@@ -300,3 +300,4 @@
 #define MIB_ipDefaultTTL		MIB_ipMIB, 2
 #define MIB_ipInReceives		MIB_ipMIB, 3
 #define MIB_ipInHdrErrors		MIB_ipMIB, 4
+#define MIB_ipInAddrErrors		MIB_ipMIB, 5
