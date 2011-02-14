@@ -298,3 +298,4 @@ usm_decode(struct snmp_message *msg, struct ber_element *elm, const char **errp)
 	}
 	if (MSG_SECLEVEL(msg) > msg->sm_user->uu_seclevel) {
 		*errp = "unsupported security model";
+		msg->sm_usmerr = OIDVAL_usmErrSecLevel;
