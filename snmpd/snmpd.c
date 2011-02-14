@@ -300,3 +300,4 @@ snmpd_dispatch_snmpe(int fd, short event, void * ptr)
 			fatal("msgbuf_write");
 		imsg_event_add(iev);
 		return;
+	default:
