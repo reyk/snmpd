@@ -298,3 +298,4 @@ struct snmp_message {
 #define sm_maxrepetitions	 sm_errorindex
 
 	struct ber_element	*sm_pdu;
+	struct ber_element	*sm_pduend;
