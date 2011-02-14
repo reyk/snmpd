@@ -300,3 +300,4 @@ mib_getsnmp(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 		i = stats->snmp_enableauthentraps == 1 ? 1 : 2;
 		*elm = ber_add_integer(*elm, i);
 		break;
+	default:
