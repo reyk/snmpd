@@ -297,3 +297,4 @@ snmpe_debug_elements(struct ber_element *root)
 			fprintf(stderr, "end-of-content");
 			break;
 		case BER_TYPE_BOOLEAN:
+			fprintf(stderr, "boolean");
