@@ -301,3 +301,4 @@ mib		: OBJECTID oid NAME STRING optwrite objtype	{
 			    calloc(1, sizeof(*oid))) == NULL) {
 				yyerror("calloc");
 				free($2);
+				free($6.data);
