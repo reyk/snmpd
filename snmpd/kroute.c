@@ -304,3 +304,4 @@ kroute_find(in_addr_t prefix, u_int8_t prefixlen, u_int8_t prio)
 	s.r.prefixlen = prefixlen;
 	s.r.priority = prio;
 
+	kn = RB_FIND(kroute_tree, &krt, &s);
