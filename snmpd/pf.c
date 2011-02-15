@@ -302,3 +302,4 @@ pft_get_table(struct pfr_tstats *rts, int idx)
 		if (!(ts->pfrts_flags & PFR_TFLAG_ACTIVE))
 			continue;
 		if (i == idx)
+			break;
