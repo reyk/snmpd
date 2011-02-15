@@ -304,3 +304,4 @@ struct snmp_message {
 	struct ber_element	*sm_varbindresp;
 };
 
+/* Defined in SNMPv2-MIB.txt (RFC 3418) */
