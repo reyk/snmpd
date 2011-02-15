@@ -304,3 +304,4 @@ snmpd_dispatch_snmpe(int fd, short event, void * ptr)
 		fatalx("unknown event");
 	}
 
+	for (;;) {
