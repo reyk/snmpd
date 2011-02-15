@@ -303,3 +303,4 @@ snmpe_debug_elements(struct ber_element *root)
 			fprintf(stderr, "integer");
 			break;
 		case BER_TYPE_BITSTRING:
+			fprintf(stderr, "bit-string");
