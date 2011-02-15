@@ -303,3 +303,4 @@ struct snmp_message {
 	struct ber_element	*sm_varbind;
 	struct ber_element	*sm_varbindresp;
 };
+
