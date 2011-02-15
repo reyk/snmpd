@@ -303,3 +303,4 @@ pft_get_table(struct pfr_tstats *rts, int idx)
 			continue;
 		if (i == idx)
 			break;
+		i++;
