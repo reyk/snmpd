@@ -301,3 +301,4 @@ usm_decode(struct snmp_message *msg, struct ber_element *elm, const char **errp)
 		msg->sm_usmerr = OIDVAL_usmErrSecLevel;
 		stats->snmp_usmbadseclevel++;
 		goto done;
+	}
