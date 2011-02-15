@@ -304,3 +304,4 @@ mib		: OBJECTID oid NAME STRING optwrite objtype	{
 				free($6.data);
 				YYERROR;
 			}
+
