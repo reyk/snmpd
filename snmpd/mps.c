@@ -302,3 +302,4 @@ mps_table(struct oid *oid, struct ber_oid *o, struct ber_oid *no)
 		/*
 		 * Compare the requested and the matched OID to see
 		 * if we have to iterate to the next element.
+		 */
