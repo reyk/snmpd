@@ -302,3 +302,4 @@
 #define MIB_ipInHdrErrors		MIB_ipMIB, 4
 #define MIB_ipInAddrErrors		MIB_ipMIB, 5
 #define MIB_ipForwDatagrams		MIB_ipMIB, 6
+#define MIB_ipInUnknownProtos		MIB_ipMIB, 7
