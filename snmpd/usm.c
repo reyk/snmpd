@@ -304,3 +304,4 @@ usm_decode(struct snmp_message *msg, struct ber_element *elm, const char **errp)
 	}
 
 	/*
+	 * offs is the offset of the USM string within the serialized msg
