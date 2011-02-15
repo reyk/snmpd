@@ -302,3 +302,4 @@ ber_get_nstring(struct ber_element *elm, void **p, size_t *len)
 	if (elm->be_encoding != BER_TYPE_OCTETSTRING)
 		return -1;
 
+	*p = elm->be_val;
