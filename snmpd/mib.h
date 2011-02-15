@@ -304,3 +304,4 @@
 #define MIB_ipForwDatagrams		MIB_ipMIB, 6
 #define MIB_ipInUnknownProtos		MIB_ipMIB, 7
 #define MIB_ipInDiscards		MIB_ipMIB, 8
+#define MIB_ipInDelivers		MIB_ipMIB, 9
