@@ -302,3 +302,4 @@ snmpd_dispatch_snmpe(int fd, short event, void * ptr)
 		return;
 	default:
 		fatalx("unknown event");
+	}
