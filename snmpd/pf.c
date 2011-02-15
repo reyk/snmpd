@@ -301,3 +301,4 @@ pft_get_table(struct pfr_tstats *rts, int idx)
 	PFRB_FOREACH(ts, &b) {
 		if (!(ts->pfrts_flags & PFR_TFLAG_ACTIVE))
 			continue;
+		if (i == idx)
