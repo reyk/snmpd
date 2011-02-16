@@ -305,3 +305,4 @@ struct snmp_message {
 };
 
 /* Defined in SNMPv2-MIB.txt (RFC 3418) */
+struct snmp_stats {
