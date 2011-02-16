@@ -308,3 +308,4 @@
 #define MIB_ipOutRequests		MIB_ipMIB, 10
 #define MIB_ipOutDiscards		MIB_ipMIB, 11
 #define MIB_ipOutNoRoutes		MIB_ipMIB, 12
+#define MIB_ipReasmTimeout		MIB_ipMIB, 13
