@@ -308,3 +308,4 @@ struct snmp_message {
 struct snmp_stats {
 	u_int32_t		snmp_inpkts;
 	u_int32_t		snmp_outpkts;
+	u_int32_t		snmp_inbadversions;
