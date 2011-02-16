@@ -306,3 +306,4 @@ pft_get_table(struct pfr_tstats *rts, int idx)
 		i++;
 	}
 
+	if (ts == NULL) {
