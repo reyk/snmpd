@@ -308,3 +308,4 @@ mib		: OBJECTID oid NAME STRING optwrite objtype	{
 			smi_oidlen($2);
 			bcopy($2, &oid->o_id, sizeof(struct ber_oid));
 			free($2);
+			oid->o_name = $4;
