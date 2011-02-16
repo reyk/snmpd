@@ -306,3 +306,4 @@
 #define MIB_ipInDiscards		MIB_ipMIB, 8
 #define MIB_ipInDelivers		MIB_ipMIB, 9
 #define MIB_ipOutRequests		MIB_ipMIB, 10
+#define MIB_ipOutDiscards		MIB_ipMIB, 11
