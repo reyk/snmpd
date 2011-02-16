@@ -305,3 +305,4 @@ mib		: OBJECTID oid NAME STRING optwrite objtype	{
 				YYERROR;
 			}
 
+			smi_oidlen($2);
