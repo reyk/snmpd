@@ -307,3 +307,4 @@ ber_get_nstring(struct ber_element *elm, void **p, size_t *len)
 	return 0;
 }
 
+struct ber_element *
