@@ -308,3 +308,4 @@ usm_decode(struct snmp_message *msg, struct ber_element *elm, const char **errp)
 	 * and offs2 the offset of the digest within the USM string.
 	 */
 	if (!usm_valid_digest(msg, offs + offs2, digest, digestlen)) {
+		*errp = "bad msg digest";
