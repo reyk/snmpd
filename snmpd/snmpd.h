@@ -307,3 +307,4 @@ struct snmp_message {
 /* Defined in SNMPv2-MIB.txt (RFC 3418) */
 struct snmp_stats {
 	u_int32_t		snmp_inpkts;
+	u_int32_t		snmp_outpkts;
