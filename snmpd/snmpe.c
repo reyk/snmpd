@@ -306,3 +306,4 @@ snmpe_debug_elements(struct ber_element *root)
 			fprintf(stderr, "bit-string");
 			break;
 		case BER_TYPE_OCTETSTRING:
+			fprintf(stderr, "octet-string");
