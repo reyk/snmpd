@@ -306,3 +306,4 @@ control_dispatch_imsg(int fd, short event, void *arg)
 			    "error handling imsg %d", imsg.hdr.type);
 			break;
 		}
+		imsg_free(&imsg);
