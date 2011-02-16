@@ -305,3 +305,4 @@ snmpd_dispatch_snmpe(int fd, short event, void * ptr)
 	}
 
 	for (;;) {
+		if ((n = imsg_get(ibuf, &imsg)) == -1)
