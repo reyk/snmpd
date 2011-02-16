@@ -306,3 +306,4 @@ kroute_find(in_addr_t prefix, u_int8_t prefixlen, u_int8_t prio)
 
 	kn = RB_FIND(kroute_tree, &krt, &s);
 	if (kn && prio == RTP_ANY) {
+		tmp = RB_PREV(kroute_tree, &krt, kn);
