@@ -305,3 +305,4 @@
 #define MIB_ipInUnknownProtos		MIB_ipMIB, 7
 #define MIB_ipInDiscards		MIB_ipMIB, 8
 #define MIB_ipInDelivers		MIB_ipMIB, 9
+#define MIB_ipOutRequests		MIB_ipMIB, 10
