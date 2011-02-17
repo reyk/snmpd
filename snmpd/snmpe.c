@@ -310,3 +310,4 @@ snmpe_debug_elements(struct ber_element *root)
 			break;
 		case BER_TYPE_NULL:
 			fprintf(stderr, "null");
+			break;
