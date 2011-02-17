@@ -311,3 +311,4 @@ struct snmp_stats {
 	u_int32_t		snmp_inbadversions;
 	u_int32_t		snmp_inbadcommunitynames;
 	u_int32_t		snmp_inbadcommunityuses;
+	u_int32_t		snmp_inasnparseerrs;
