@@ -311,3 +311,4 @@ snmpd_dispatch_snmpe(int fd, short event, void * ptr)
 			break;
 
 		switch (imsg.hdr.type) {
+		default:
