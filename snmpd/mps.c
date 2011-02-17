@@ -310,3 +310,4 @@ mps_table(struct oid *oid, struct ber_oid *o, struct ber_oid *no)
 		b.o_oidlen--;
 		b.o_flags |= OID_TABLE;
 		if (smi_oid_cmp(&a, &b) == 0) {
+			col = oid->o_oid[id];
