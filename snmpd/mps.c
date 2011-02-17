@@ -312,3 +312,4 @@ mps_table(struct oid *oid, struct ber_oid *o, struct ber_oid *no)
 		if (smi_oid_cmp(&a, &b) == 0) {
 			col = oid->o_oid[id];
 			if (col > o->bo_id[id])
+				idx = 1;
