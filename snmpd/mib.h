@@ -312,3 +312,4 @@
 #define MIB_ipReasmReqds		MIB_ipMIB, 14
 #define MIB_ipReasmOKs			MIB_ipMIB, 15
 #define MIB_ipReasmFails		MIB_ipMIB, 16
+#define MIB_ipFragOKs			MIB_ipMIB, 17
