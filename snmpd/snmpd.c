@@ -309,3 +309,4 @@ snmpd_dispatch_snmpe(int fd, short event, void * ptr)
 			fatal("snmpd_dispatch_relay: imsg_read error");
 		if (n == 0)
 			break;
+
