@@ -311,3 +311,4 @@ kroute_find(in_addr_t prefix, u_int8_t prefixlen, u_int8_t prio)
 			if (kroute_compare(&s, tmp) == 0)
 				kn = tmp;
 			else
+				break;
