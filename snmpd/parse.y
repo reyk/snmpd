@@ -310,3 +310,4 @@ mib		: OBJECTID oid NAME STRING optwrite objtype	{
 			free($2);
 			oid->o_name = $4;
 			oid->o_data = $6.data;
+			oid->o_val = $6.value;
