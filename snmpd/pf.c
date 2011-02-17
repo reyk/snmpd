@@ -311,3 +311,4 @@ pft_get_table(struct pfr_tstats *rts, int idx)
 		return (-1);
 	}
 
+	bcopy(ts, rts, sizeof(struct pfr_tstats));
