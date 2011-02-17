@@ -312,3 +312,4 @@ ber_add_bitstring(struct ber_element *prev, const void *v0, size_t len)
 {
 	struct ber_element *elm;
 	void *v;
+
