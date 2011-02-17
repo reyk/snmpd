@@ -309,3 +309,4 @@ snmpe_debug_elements(struct ber_element *root)
 			fprintf(stderr, "octet-string");
 			break;
 		case BER_TYPE_NULL:
+			fprintf(stderr, "null");
