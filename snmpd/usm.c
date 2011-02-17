@@ -311,3 +311,4 @@ usm_decode(struct snmp_message *msg, struct ber_element *elm, const char **errp)
 		*errp = "bad msg digest";
 		msg->sm_usmerr = OIDVAL_usmErrDigest;
 		stats->snmp_usmwrongdigest++;
+		goto done;
