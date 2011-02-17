@@ -310,3 +310,4 @@
 #define MIB_ipOutNoRoutes		MIB_ipMIB, 12
 #define MIB_ipReasmTimeout		MIB_ipMIB, 13
 #define MIB_ipReasmReqds		MIB_ipMIB, 14
+#define MIB_ipReasmOKs			MIB_ipMIB, 15
