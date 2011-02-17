@@ -309,3 +309,4 @@ mps_table(struct oid *oid, struct ber_oid *o, struct ber_oid *no)
 		bcopy(&oid->o_id, &b.o_id, sizeof(struct ber_oid));
 		b.o_oidlen--;
 		b.o_flags |= OID_TABLE;
+		if (smi_oid_cmp(&a, &b) == 0) {
