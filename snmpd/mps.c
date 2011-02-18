@@ -314,3 +314,4 @@ mps_table(struct oid *oid, struct ber_oid *o, struct ber_oid *no)
 			if (col > o->bo_id[id])
 				idx = 1;
 			else
+				idx = o->bo_id[subid] + 1;
