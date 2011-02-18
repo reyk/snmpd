@@ -313,3 +313,4 @@ snmpd_dispatch_snmpe(int fd, short event, void * ptr)
 		switch (imsg.hdr.type) {
 		default:
 			log_debug("snmpd_dispatch_relay: unexpected imsg %d",
+			    imsg.hdr.type);
