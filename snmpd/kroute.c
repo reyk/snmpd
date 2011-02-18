@@ -315,3 +315,4 @@ kroute_find(in_addr_t prefix, u_int8_t prefixlen, u_int8_t prio)
 			tmp = RB_PREV(kroute_tree, &krt, kn);
 		}
 	}
+	return (kn);
