@@ -314,3 +314,4 @@ mib		: OBJECTID oid NAME STRING optwrite objtype	{
 			switch ($6.type) {
 			case 1:
 				oid->o_get = mps_getint;
+				oid->o_set = mps_setint;
