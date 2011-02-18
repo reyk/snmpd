@@ -315,3 +315,4 @@ mps_table(struct oid *oid, struct ber_oid *o, struct ber_oid *no)
 				idx = 1;
 			else
 				idx = o->bo_id[subid] + 1;
+			o->bo_id[subid] = idx;
