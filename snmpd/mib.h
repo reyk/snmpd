@@ -316,3 +316,4 @@
 #define MIB_ipFragFails			MIB_ipMIB, 18
 #define MIB_ipFragCreates		MIB_ipMIB, 19
 #define MIB_ipAddrTable			MIB_ipMIB, 20
+#define MIB_ipAddrEntry			MIB_ipAddrTable, 1
