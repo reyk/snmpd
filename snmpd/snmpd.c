@@ -315,3 +315,4 @@ snmpd_dispatch_snmpe(int fd, short event, void * ptr)
 			log_debug("snmpd_dispatch_relay: unexpected imsg %d",
 			    imsg.hdr.type);
 			break;
+		}
