@@ -315,3 +315,4 @@ usm_decode(struct snmp_message *msg, struct ber_element *elm, const char **errp)
 	}
 
 	if (MSG_HAS_PRIV(msg)) {
+		memcpy(msg->sm_salt, salt, saltlen);
