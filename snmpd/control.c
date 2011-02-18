@@ -314,3 +314,4 @@ control_dispatch_imsg(int fd, short event, void *arg)
 
 void
 control_imsg_forward(struct imsg *imsg)
+{
