@@ -315,3 +315,4 @@ struct snmp_stats {
 	u_int32_t		snmp_intoobigs;
 	u_int32_t		snmp_innosuchnames;
 	u_int32_t		snmp_inbadvalues;
+	u_int32_t		snmp_inreadonlys;
