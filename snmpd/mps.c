@@ -317,3 +317,4 @@ mps_table(struct oid *oid, struct ber_oid *o, struct ber_oid *no)
 				idx = o->bo_id[subid] + 1;
 			o->bo_id[subid] = idx;
 			o->bo_id[id] = col;
+			bcopy(o, no, sizeof(*no));
