@@ -319,3 +319,4 @@ mib_getsnmp(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 int
 mib_setsnmp(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 {
+	struct snmp_stats	*stats = &env->sc_stats;
