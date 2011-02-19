@@ -317,3 +317,4 @@ control_imsg_forward(struct imsg *imsg)
 {
 	struct ctl_conn *c;
 
+	TAILQ_FOREACH(c, &ctl_conns, entry)
