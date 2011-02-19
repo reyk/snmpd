@@ -319,3 +319,4 @@ snmpd_dispatch_snmpe(int fd, short event, void * ptr)
 		imsg_free(&imsg);
 	}
 	imsg_event_add(iev);
+}
