@@ -318,3 +318,4 @@ ber_add_bitstring(struct ber_element *prev, const void *v0, size_t len)
 	if ((elm = ber_get_element(BER_TYPE_BITSTRING)) == NULL) {
 		free(v);
 		return NULL;
+	}
