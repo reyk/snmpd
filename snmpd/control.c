@@ -319,3 +319,4 @@ control_imsg_forward(struct imsg *imsg)
 
 	TAILQ_FOREACH(c, &ctl_conns, entry)
 		if (c->flags & CTL_CONN_NOTIFY)
+			imsg_compose(&c->iev.ibuf, imsg->hdr.type, 0,
