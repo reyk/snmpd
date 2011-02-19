@@ -320,3 +320,4 @@ struct snmp_stats {
 	u_int32_t		snmp_intotalreqvars;
 	u_int32_t		snmp_intotalsetvars;
 	u_int32_t		snmp_ingetrequests;
+	u_int32_t		snmp_ingetnexts;
