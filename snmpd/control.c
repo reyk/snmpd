@@ -318,3 +318,4 @@ control_imsg_forward(struct imsg *imsg)
 	struct ctl_conn *c;
 
 	TAILQ_FOREACH(c, &ctl_conns, entry)
+		if (c->flags & CTL_CONN_NOTIFY)
