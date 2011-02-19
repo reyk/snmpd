@@ -318,3 +318,4 @@ struct snmp_stats {
 	u_int32_t		snmp_inreadonlys;
 	u_int32_t		snmp_ingenerrs;
 	u_int32_t		snmp_intotalreqvars;
+	u_int32_t		snmp_intotalsetvars;
