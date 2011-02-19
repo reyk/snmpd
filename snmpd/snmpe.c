@@ -317,3 +317,4 @@ snmpe_debug_elements(struct ber_element *root)
 		case BER_TYPE_ENUMERATED:
 			fprintf(stderr, "enumerated");
 			break;
+		case BER_TYPE_SEQUENCE:
