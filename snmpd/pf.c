@@ -318,3 +318,4 @@ pft_get_table(struct pfr_tstats *rts, int idx)
 }
 
 int
+pft_count(void)
