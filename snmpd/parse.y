@@ -320,3 +320,4 @@ mib		: OBJECTID oid NAME STRING optwrite objtype	{
 				oid->o_get = mps_getstr;
 				oid->o_set = mps_setstr;
 				break;
+			}
