@@ -320,3 +320,4 @@ snmpd_dispatch_snmpe(int fd, short event, void * ptr)
 	}
 	imsg_event_add(iev);
 }
+
