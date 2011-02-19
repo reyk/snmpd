@@ -318,3 +318,4 @@
 #define MIB_ipAddrTable			MIB_ipMIB, 20
 #define MIB_ipAddrEntry			MIB_ipAddrTable, 1
 #define OIDIDX_ipAddr			9
+#define OIDIDX_ipAddrEntry		10
