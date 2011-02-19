@@ -320,3 +320,4 @@ usm_decode(struct snmp_message *msg, struct ber_element *elm, const char **errp)
 			*errp = "cannot decrypt msg";
 			msg->sm_usmerr = OIDVAL_usmErrDecrypt;
 			stats->snmp_usmdecrypterr++;
+			goto done;
