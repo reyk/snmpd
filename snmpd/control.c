@@ -324,3 +324,4 @@ control_imsg_forward(struct imsg *imsg)
 			    imsg->hdr.len - IMSG_HEADER_SIZE);
 }
 
+void
