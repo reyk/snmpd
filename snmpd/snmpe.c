@@ -324,3 +324,4 @@ snmpe_debug_elements(struct ber_element *root)
 			fprintf(stderr, "set");
 			break;
 		}
+		break;
