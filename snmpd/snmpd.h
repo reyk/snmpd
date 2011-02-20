@@ -324,3 +324,4 @@ struct snmp_stats {
 	u_int32_t		snmp_insetrequests;
 	u_int32_t		snmp_ingetresponses;
 	u_int32_t		snmp_intraps;
+	u_int32_t		snmp_outtoobigs;
