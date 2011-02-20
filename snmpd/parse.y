@@ -321,3 +321,4 @@ mib		: OBJECTID oid NAME STRING optwrite objtype	{
 				oid->o_set = mps_setstr;
 				break;
 			}
+			oid->o_flags = OID_RD|OID_DYNAMIC;
