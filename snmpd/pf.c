@@ -324,3 +324,4 @@ pft_count(void)
 	const struct pfr_tstats	*ts;
 	int			 c = 0;
 
+	if (pft_get(&b, NULL)) {
