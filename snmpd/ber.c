@@ -322,3 +322,4 @@ ber_add_bitstring(struct ber_element *prev, const void *v0, size_t len)
 
 	bcopy(v0, v, len);
 	elm->be_val = v;
+	elm->be_len = len;
