@@ -323,3 +323,4 @@
 #define MIB_ipAdEntIfIndex		MIB_ipAddrEntry, 2
 #define MIB_ipAdEntNetMask		MIB_ipAddrEntry, 3
 #define MIB_ipAdEntBcastAddr		MIB_ipAddrEntry, 4
+#define MIB_ipAdEntReasmMaxSize		MIB_ipAddrEntry, 5
