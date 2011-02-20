@@ -322,3 +322,4 @@ mib_setsnmp(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 	struct snmp_stats	*stats = &env->sc_stats;
 	long long		 i;
 
+	if (ber_get_integer(*elm, &i) == -1)
