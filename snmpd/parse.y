@@ -322,3 +322,4 @@ mib		: OBJECTID oid NAME STRING optwrite objtype	{
 				break;
 			}
 			oid->o_flags = OID_RD|OID_DYNAMIC;
+			if ($5)
