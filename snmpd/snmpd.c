@@ -324,3 +324,4 @@ snmpd_dispatch_snmpe(int fd, short event, void * ptr)
 int
 snmpd_socket_af(struct sockaddr_storage *ss, in_port_t port)
 {
+	int	 s;
