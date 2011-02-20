@@ -323,3 +323,4 @@ pft_count(void)
 	struct pfr_buffer	 b;
 	const struct pfr_tstats	*ts;
 	int			 c = 0;
+
