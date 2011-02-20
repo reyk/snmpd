@@ -322,3 +322,4 @@ struct kroute_node *
 kroute_matchgw(struct kroute_node *kr, struct sockaddr_in *sa_in)
 {
 	in_addr_t	nexthop;
+
