@@ -321,3 +321,4 @@ control_imsg_forward(struct imsg *imsg)
 		if (c->flags & CTL_CONN_NOTIFY)
 			imsg_compose(&c->iev.ibuf, imsg->hdr.type, 0,
 			    imsg->hdr.pid, -1, imsg->data,
+			    imsg->hdr.len - IMSG_HEADER_SIZE);
