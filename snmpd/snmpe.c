@@ -321,3 +321,4 @@ snmpe_debug_elements(struct ber_element *root)
 			fprintf(stderr, "sequence");
 			break;
 		case BER_TYPE_SET:
+			fprintf(stderr, "set");
