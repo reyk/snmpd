@@ -321,3 +321,4 @@ mps_table(struct oid *oid, struct ber_oid *o, struct ber_oid *no)
 		}
 	}
 
+	/* The root element ends with a 0, iterate to the first element */
