@@ -323,3 +323,4 @@ struct snmp_stats {
 	u_int32_t		snmp_ingetnexts;
 	u_int32_t		snmp_insetrequests;
 	u_int32_t		snmp_ingetresponses;
+	u_int32_t		snmp_intraps;
