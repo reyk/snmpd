@@ -322,3 +322,4 @@ usm_decode(struct snmp_message *msg, struct ber_element *elm, const char **errp)
 			stats->snmp_usmdecrypterr++;
 			goto done;
 		}
+		ber_replace_elements(elm, decr);
