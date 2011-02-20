@@ -323,3 +323,4 @@ control_imsg_forward(struct imsg *imsg)
 			    imsg->hdr.pid, -1, imsg->data,
 			    imsg->hdr.len - IMSG_HEADER_SIZE);
 }
+
