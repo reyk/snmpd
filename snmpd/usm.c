@@ -324,3 +324,4 @@ usm_decode(struct snmp_message *msg, struct ber_element *elm, const char **errp)
 		}
 		ber_replace_elements(elm, decr);
 	}
+	next = elm->be_next;
