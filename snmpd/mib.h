@@ -321,3 +321,4 @@
 #define OIDIDX_ipAddrEntry		10
 #define MIB_ipAdEntAddr			MIB_ipAddrEntry, 1
 #define MIB_ipAdEntIfIndex		MIB_ipAddrEntry, 2
+#define MIB_ipAdEntNetMask		MIB_ipAddrEntry, 3
