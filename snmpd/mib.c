@@ -323,3 +323,4 @@ mib_setsnmp(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 	long long		 i;
 
 	if (ber_get_integer(*elm, &i) == -1)
+		return (-1);
