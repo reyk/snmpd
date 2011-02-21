@@ -327,3 +327,4 @@ snmpe_debug_elements(struct ber_element *root)
 		break;
 	case BER_CLASS_APPLICATION:
 		fprintf(stderr, "class: application(%u) type: ",
+		    root->be_class);
