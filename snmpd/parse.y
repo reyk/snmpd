@@ -326,3 +326,4 @@ mib		: OBJECTID oid NAME STRING optwrite objtype	{
 				oid->o_flags |= OID_WR;
 
 			smi_insert(oid);
+		}
