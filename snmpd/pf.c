@@ -327,3 +327,4 @@ pft_count(void)
 	if (pft_get(&b, NULL)) {
 		free(b.pfrb_caddr);
 		return (-1);
+	}
