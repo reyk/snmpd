@@ -326,3 +326,4 @@ snmpd_socket_af(struct sockaddr_storage *ss, in_port_t port)
 {
 	int	 s;
 
+	switch (ss->ss_family) {
