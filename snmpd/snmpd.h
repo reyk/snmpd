@@ -327,3 +327,4 @@ struct snmp_stats {
 	u_int32_t		snmp_outtoobigs;
 	u_int32_t		snmp_outnosuchnames;
 	u_int32_t		snmp_outbadvalues;
+	u_int32_t		snmp_outgenerrs;
