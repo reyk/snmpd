@@ -327,3 +327,4 @@ ber_add_bitstring(struct ber_element *prev, const void *v0, size_t len)
 
 	ber_link_elements(prev, elm);
 
+	return elm;
