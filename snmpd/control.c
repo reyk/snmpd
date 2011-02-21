@@ -326,3 +326,4 @@ control_imsg_forward(struct imsg *imsg)
 
 void
 session_socket_blockmode(int fd, enum blockmodes bm)
+{
