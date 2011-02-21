@@ -325,3 +325,4 @@ ber_add_bitstring(struct ber_element *prev, const void *v0, size_t len)
 	elm->be_len = len;
 	elm->be_free = 1;		/* free string on cleanup */
 
+	ber_link_elements(prev, elm);
