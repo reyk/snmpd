@@ -327,3 +327,4 @@ usm_decode(struct snmp_message *msg, struct ber_element *elm, const char **errp)
 	next = elm->be_next;
 
 done:
+	ber_free(&ber);
