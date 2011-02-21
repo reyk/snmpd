@@ -326,3 +326,4 @@
 #define MIB_ipAdEntReasmMaxSize		MIB_ipAddrEntry, 5
 #define MIB_ipNetToMediaTable		MIB_ipMIB, 22
 #define MIB_ipNetToMediaEntry		MIB_ipNetToMediaTable, 1
+#define MIB_ipNetToMediaIfIndex		MIB_ipNetToMediaEntry, 1
