@@ -325,3 +325,4 @@
 #define MIB_ipAdEntBcastAddr		MIB_ipAddrEntry, 4
 #define MIB_ipAdEntReasmMaxSize		MIB_ipAddrEntry, 5
 #define MIB_ipNetToMediaTable		MIB_ipMIB, 22
+#define MIB_ipNetToMediaEntry		MIB_ipNetToMediaTable, 1
