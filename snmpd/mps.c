@@ -325,3 +325,4 @@ mps_table(struct oid *oid, struct ber_oid *o, struct ber_oid *no)
 	if (!no->bo_id[subid])
 		no->bo_id[subid]++;
 
+	smi_oidlen(no);
