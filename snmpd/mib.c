@@ -325,3 +325,4 @@ mib_setsnmp(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 	if (ber_get_integer(*elm, &i) == -1)
 		return (-1);
 
+	stats->snmp_enableauthentraps = i == 1 ? 1 : 0;
