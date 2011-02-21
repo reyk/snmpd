@@ -328,3 +328,4 @@ void
 session_socket_blockmode(int fd, enum blockmodes bm)
 {
 	int	flags;
+
