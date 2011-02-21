@@ -327,3 +327,4 @@ kroute_matchgw(struct kroute_node *kr, struct sockaddr_in *sa_in)
 		log_warnx("kroute_matchgw: no nexthop defined");
 		return (NULL);
 	}
+	nexthop = sa_in->sin_addr.s_addr;
