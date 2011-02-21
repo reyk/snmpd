@@ -325,3 +325,4 @@ snmpe_debug_elements(struct ber_element *root)
 			break;
 		}
 		break;
+	case BER_CLASS_APPLICATION:
