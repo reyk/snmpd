@@ -330,3 +330,4 @@
 #define MIB_ipNetToMediaPhysAddress	MIB_ipNetToMediaEntry, 2
 #define MIB_ipNetToMediaNetAddress	MIB_ipNetToMediaEntry, 3
 #define MIB_ipNetToMediaType		MIB_ipNetToMediaEntry, 4
+#define MIB_ipRoutingDiscards		MIB_ipMIB, 23
