@@ -329,3 +329,4 @@ session_socket_blockmode(int fd, enum blockmodes bm)
 {
 	int	flags;
 
+	if ((flags = fcntl(fd, F_GETFL, 0)) == -1)
