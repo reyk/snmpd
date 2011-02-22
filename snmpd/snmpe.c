@@ -332,3 +332,4 @@ snmpe_debug_elements(struct ber_element *root)
 		case SNMP_T_IPADDR:
 			fprintf(stderr, "ipaddr");
 			break;
+		case SNMP_T_COUNTER32:
