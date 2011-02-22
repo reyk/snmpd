@@ -330,3 +330,4 @@ mib		: OBJECTID oid NAME STRING optwrite objtype	{
 		;
 
 objtype		: INTEGER NUMBER			{
+			$$.type = 1;
