@@ -330,3 +330,4 @@ done:
 	ber_free(&ber);
 	if (usm != NULL)
 		ber_free_elements(usm);
+	return next;
