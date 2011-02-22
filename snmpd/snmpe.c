@@ -331,3 +331,4 @@ snmpe_debug_elements(struct ber_element *root)
 		switch (root->be_type) {
 		case SNMP_T_IPADDR:
 			fprintf(stderr, "ipaddr");
+			break;
