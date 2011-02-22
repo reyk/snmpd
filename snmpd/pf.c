@@ -330,3 +330,4 @@ pft_count(void)
 	}
 
 	PFRB_FOREACH(ts, &b) {
+		if (!(ts->pfrts_flags & PFR_TFLAG_ACTIVE))
