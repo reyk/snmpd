@@ -329,3 +329,4 @@
 #define MIB_ipNetToMediaIfIndex		MIB_ipNetToMediaEntry, 1
 #define MIB_ipNetToMediaPhysAddress	MIB_ipNetToMediaEntry, 2
 #define MIB_ipNetToMediaNetAddress	MIB_ipNetToMediaEntry, 3
+#define MIB_ipNetToMediaType		MIB_ipNetToMediaEntry, 4
