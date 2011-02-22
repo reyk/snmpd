@@ -330,3 +330,4 @@ snmpd_socket_af(struct sockaddr_storage *ss, in_port_t port)
 	case AF_INET:
 		((struct sockaddr_in *)ss)->sin_port = port;
 		((struct sockaddr_in *)ss)->sin_len =
+		    sizeof(struct sockaddr_in);
