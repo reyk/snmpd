@@ -329,3 +329,4 @@ mib		: OBJECTID oid NAME STRING optwrite objtype	{
 		}
 		;
 
+objtype		: INTEGER NUMBER			{
