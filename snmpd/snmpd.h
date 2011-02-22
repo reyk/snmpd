@@ -332,3 +332,4 @@ struct snmp_stats {
 	u_int32_t		snmp_outgetnexts;
 	u_int32_t		snmp_outsetrequests;
 	u_int32_t		snmp_outgetresponses;
+	u_int32_t		snmp_outtraps;
