@@ -331,3 +331,4 @@ kroute_matchgw(struct kroute_node *kr, struct sockaddr_in *sa_in)
 
 	while (kr) {
 		if (kr->r.nexthop.s_addr == nexthop)
+			return (kr);
