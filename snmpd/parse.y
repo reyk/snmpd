@@ -336,3 +336,4 @@ objtype		: INTEGER NUMBER			{
 		}
 		| OCTETSTRING STRING			{
 			$$.type = 2;
+			$$.data = $2;
