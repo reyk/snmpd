@@ -334,3 +334,4 @@ session_socket_blockmode(int fd, enum blockmodes bm)
 
 	if (bm == BM_NONBLOCK)
 		flags |= O_NONBLOCK;
+	else
