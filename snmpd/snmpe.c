@@ -334,3 +334,4 @@ snmpe_debug_elements(struct ber_element *root)
 			break;
 		case SNMP_T_COUNTER32:
 			fprintf(stderr, "counter32");
+			break;
