@@ -334,3 +334,4 @@ done:
 }
 
 struct ber_element *
+usm_encode(struct snmp_message *msg, struct ber_element *e)
