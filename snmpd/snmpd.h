@@ -334,3 +334,4 @@ struct snmp_stats {
 	u_int32_t		snmp_outgetresponses;
 	u_int32_t		snmp_outtraps;
 	int			snmp_enableauthentraps;
+	u_int32_t		snmp_silentdrops;
