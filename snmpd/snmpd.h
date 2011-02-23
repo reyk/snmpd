@@ -336,3 +336,4 @@ struct snmp_stats {
 	int			snmp_enableauthentraps;
 	u_int32_t		snmp_silentdrops;
 	u_int32_t		snmp_proxydrops;
+
