@@ -334,3 +334,4 @@ pft_count(void)
 			continue;
 		c++;
 	}
+
