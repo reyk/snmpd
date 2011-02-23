@@ -336,3 +336,4 @@
 #define MIB_ipfMIB			MIB_ipMIB, 24
 #define MIB_ipfInetCidrRouteNumber	MIB_ipfMIB, 6
 #define MIB_ipfInetCidrRouteTable	MIB_ipfMIB, 7
+#define MIB_ipfInetCidrRouteEntry	MIB_ipfInetCidrRouteTable, 1
