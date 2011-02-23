@@ -334,3 +334,4 @@ snmpd_socket_af(struct sockaddr_storage *ss, in_port_t port)
 		break;
 	case AF_INET6:
 		((struct sockaddr_in6 *)ss)->sin6_port = port;
+		((struct sockaddr_in6 *)ss)->sin6_len =
