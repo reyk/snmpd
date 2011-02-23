@@ -334,3 +334,4 @@ void
 mps_encodeinaddr(struct ber_oid *o, struct in_addr *addr, int offset)
 {
 	u_int32_t	 a, i;
+
