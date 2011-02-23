@@ -335,3 +335,4 @@ pft_count(void)
 		c++;
 	}
 
+	free(b.pfrb_caddr);
