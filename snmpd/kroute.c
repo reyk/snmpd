@@ -335,3 +335,4 @@ kroute_matchgw(struct kroute_node *kr, struct sockaddr_in *sa_in)
 		kr = kr->next;
 	}
 
+	return (NULL);
