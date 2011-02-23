@@ -336,3 +336,4 @@ ber_get_bitstring(struct ber_element *elm, void **v, size_t *len)
 	if (elm->be_encoding != BER_TYPE_BITSTRING)
 		return -1;
 
+	*v = elm->be_val;
