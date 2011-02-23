@@ -335,3 +335,4 @@ mib_setsnmp(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
  */
 int	 mib_engine(struct oid *, struct ber_oid *, struct ber_element **);
 int	 mib_usmstats(struct oid *, struct ber_oid *, struct ber_element **);
+
