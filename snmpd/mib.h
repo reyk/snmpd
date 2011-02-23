@@ -333,3 +333,4 @@
 #define MIB_ipRoutingDiscards		MIB_ipMIB, 23
 
 /* IP-FORWARD-MIB */
+#define MIB_ipfMIB			MIB_ipMIB, 24
