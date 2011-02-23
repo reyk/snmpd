@@ -333,3 +333,4 @@ mib_setsnmp(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 /*
  * Defined in SNMP-USER-BASED-SM-MIB.txt (RFC 3414)
  */
+int	 mib_engine(struct oid *, struct ber_oid *, struct ber_element **);
