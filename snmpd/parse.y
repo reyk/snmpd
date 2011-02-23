@@ -333,3 +333,4 @@ objtype		: INTEGER NUMBER			{
 			$$.type = 1;
 			$$.data = NULL;
 			$$.value = $2;
+		}
