@@ -333,3 +333,4 @@ done:
 	return next;
 }
 
+struct ber_element *
