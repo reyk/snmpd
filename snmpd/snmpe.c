@@ -337,3 +337,4 @@ snmpe_debug_elements(struct ber_element *root)
 			break;
 		case SNMP_T_GAUGE32:
 			fprintf(stderr, "gauge32");
+			break;
