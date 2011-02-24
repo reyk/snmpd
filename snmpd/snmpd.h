@@ -339,3 +339,4 @@ struct snmp_stats {
 
 	/* USM stats (RFC 3414) */
 	u_int32_t		snmp_usmbadseclevel;
+	u_int32_t		snmp_usmtimewindow;
