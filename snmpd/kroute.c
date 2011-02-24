@@ -340,3 +340,4 @@ kroute_matchgw(struct kroute_node *kr, struct sockaddr_in *sa_in)
 
 int
 kroute_insert(struct kroute_node *kr)
+{
