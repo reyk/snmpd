@@ -340,3 +340,4 @@ pft_count(void)
 }
 
 int
+pfta_get(struct pfr_buffer *b, struct pfr_table *filter)
