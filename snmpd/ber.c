@@ -340,3 +340,4 @@ ber_get_bitstring(struct ber_element *elm, void **v, size_t *len)
 	*len = elm->be_len;
 	return 0;
 }
+
