@@ -340,3 +340,4 @@ snmpe_debug_elements(struct ber_element *root)
 			break;
 		case SNMP_T_TIMETICKS:
 			fprintf(stderr, "timeticks");
+			break;
