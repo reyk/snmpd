@@ -338,3 +338,4 @@ objtype		: INTEGER NUMBER			{
 			$$.type = 2;
 			$$.data = $2;
 			$$.value = strlen($2);
+		}
