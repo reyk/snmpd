@@ -337,3 +337,4 @@ mps_encodeinaddr(struct ber_oid *o, struct in_addr *addr, int offset)
 
 	o->bo_n = offset;
 	if (addr != NULL) {
+		a = htole32(addr->s_addr);
