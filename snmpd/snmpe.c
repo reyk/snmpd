@@ -338,3 +338,4 @@ snmpe_debug_elements(struct ber_element *root)
 		case SNMP_T_GAUGE32:
 			fprintf(stderr, "gauge32");
 			break;
+		case SNMP_T_TIMETICKS:
