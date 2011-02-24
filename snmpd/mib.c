@@ -337,3 +337,4 @@ int	 mib_engine(struct oid *, struct ber_oid *, struct ber_element **);
 int	 mib_usmstats(struct oid *, struct ber_oid *, struct ber_element **);
 
 static struct oid usm_mib[] = {
+	{ MIB(snmpEngine),			OID_MIB },
