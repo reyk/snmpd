@@ -340,3 +340,4 @@ usm_encode(struct snmp_message *msg, struct ber_element *e)
 	struct ber_element	*usm, *a, *res = NULL;
 	void			*ptr;
 	char			 digest[SNMP_USM_DIGESTLEN];
+	size_t			 digestlen, saltlen, len;
