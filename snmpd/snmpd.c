@@ -338,3 +338,4 @@ snmpd_socket_af(struct sockaddr_storage *ss, in_port_t port)
 		    sizeof(struct sockaddr_in6);
 		break;
 	default:
+		return (-1);
