@@ -337,3 +337,4 @@ struct snmp_stats {
 	u_int32_t		snmp_silentdrops;
 	u_int32_t		snmp_proxydrops;
 
+	/* USM stats (RFC 3414) */
