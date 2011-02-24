@@ -338,3 +338,4 @@
 #define MIB_ipfInetCidrRouteTable	MIB_ipfMIB, 7
 #define MIB_ipfInetCidrRouteEntry	MIB_ipfInetCidrRouteTable, 1
 #define OIDIDX_ipfInetCidrRoute		10
+#define MIB_ipfRouteEntDestType		MIB_ipfInetCidrRouteEntry, 1
