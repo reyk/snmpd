@@ -339,3 +339,4 @@ session_socket_blockmode(int fd, enum blockmodes bm)
 
 	if ((flags = fcntl(fd, F_SETFL, flags)) == -1)
 		fatal("fcntl F_SETFL");
+}
