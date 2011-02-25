@@ -341,3 +341,4 @@ objtype		: INTEGER NUMBER			{
 		}
 		;
 
+optwrite	: READONLY				{ $$ = 0; }
