@@ -343,3 +343,4 @@ mps_encodeinaddr(struct ber_oid *o, struct in_addr *addr, int offset)
 		o->bo_id[o->bo_n++] = (a >> 16) & 0xff;
 		o->bo_id[o->bo_n++] = (a >> 24) & 0xff;
 	} else {
+		/* Create an invalid "last address" marker (5 bytes) */
