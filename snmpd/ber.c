@@ -342,3 +342,4 @@ ber_get_bitstring(struct ber_element *elm, void **v, size_t *len)
 }
 
 struct ber_element *
+ber_add_null(struct ber_element *prev)
