@@ -343,3 +343,4 @@ snmpe_debug_elements(struct ber_element *root)
 			break;
 		case SNMP_T_OPAQUE:
 			fprintf(stderr, "opaque");
+			break;
