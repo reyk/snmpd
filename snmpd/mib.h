@@ -342,3 +342,4 @@
 #define MIB_ipfRouteEntDest		MIB_ipfInetCidrRouteEntry, 2
 #define MIB_ipfRouteEntPfxLen		MIB_ipfInetCidrRouteEntry, 3
 #define MIB_ipfRouteEntPolicy		MIB_ipfInetCidrRouteEntry, 4
+#define MIB_ipfRouteEntNextHopType	MIB_ipfInetCidrRouteEntry, 5
