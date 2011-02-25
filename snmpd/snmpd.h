@@ -341,3 +341,4 @@ struct snmp_stats {
 	u_int32_t		snmp_usmbadseclevel;
 	u_int32_t		snmp_usmtimewindow;
 	u_int32_t		snmp_usmnosuchuser;
+	u_int32_t		snmp_usmnosuchengine;
