@@ -341,3 +341,4 @@ snmpe_debug_elements(struct ber_element *root)
 		case SNMP_T_TIMETICKS:
 			fprintf(stderr, "timeticks");
 			break;
+		case SNMP_T_OPAQUE:
