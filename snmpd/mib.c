@@ -344,3 +344,4 @@ static struct oid usm_mib[] = {
 	{ MIB(snmpEngineMaxMsgSize),		OID_RD, mib_engine },
 	{ MIB(usmStats),			OID_MIB },
 	{ MIB(usmStatsUnsupportedSecLevels),	OID_RD, mib_usmstats },
+	{ MIB(usmStatsNotInTimeWindow),		OID_RD, mib_usmstats },
