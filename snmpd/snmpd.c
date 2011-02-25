@@ -343,3 +343,4 @@ snmpd_socket_af(struct sockaddr_storage *ss, in_port_t port)
 
 	s = socket(ss->ss_family, SOCK_DGRAM, IPPROTO_UDP);
 	return (s);
+}
