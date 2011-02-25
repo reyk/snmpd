@@ -342,3 +342,4 @@ static struct oid usm_mib[] = {
 	{ MIB(snmpEngineBoots),			OID_RD, mib_engine },
 	{ MIB(snmpEngineTime),			OID_RD, mib_engine },
 	{ MIB(snmpEngineMaxMsgSize),		OID_RD, mib_engine },
+	{ MIB(usmStats),			OID_MIB },
