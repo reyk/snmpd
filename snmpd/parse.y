@@ -342,3 +342,4 @@ objtype		: INTEGER NUMBER			{
 		;
 
 optwrite	: READONLY				{ $$ = 0; }
+		| READWRITE				{ $$ = 1; }
