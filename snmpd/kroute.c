@@ -342,3 +342,4 @@ int
 kroute_insert(struct kroute_node *kr)
 {
 	struct kroute_node	*krm;
+
