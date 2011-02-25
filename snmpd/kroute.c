@@ -343,3 +343,4 @@ kroute_insert(struct kroute_node *kr)
 {
 	struct kroute_node	*krm;
 
+	if ((krm = RB_INSERT(kroute_tree, &krt, kr)) != NULL) {
