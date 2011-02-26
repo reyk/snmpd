@@ -347,3 +347,4 @@ mps_encodeinaddr(struct ber_oid *o, struct in_addr *addr, int offset)
 		for (i = 0; i < 5; i++)
 			o->bo_id[o->bo_n++] = 0xff;
 	}
+}
