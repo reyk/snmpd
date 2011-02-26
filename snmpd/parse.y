@@ -345,3 +345,4 @@ optwrite	: READONLY				{ $$ = 0; }
 		| READWRITE				{ $$ = 1; }
 		;
 
+oid		: STRING				{
