@@ -346,3 +346,4 @@ struct snmp_stats {
 	u_int32_t		snmp_usmdecrypterr;
 };
 
+struct address {
