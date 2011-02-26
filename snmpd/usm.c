@@ -348,3 +348,4 @@ usm_encode(struct snmp_message *msg, struct ber_element *e)
 
 	usm = ber_add_sequence(NULL);
 
+	if (MSG_HAS_AUTH(msg)) {
