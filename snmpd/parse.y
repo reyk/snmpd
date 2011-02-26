@@ -347,3 +347,4 @@ optwrite	: READONLY				{ $$ = 0; }
 
 oid		: STRING				{
 			struct ber_oid	*sysoid;
+			if ((sysoid =
