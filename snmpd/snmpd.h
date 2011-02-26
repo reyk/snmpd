@@ -345,3 +345,4 @@ struct snmp_stats {
 	u_int32_t		snmp_usmwrongdigest;
 	u_int32_t		snmp_usmdecrypterr;
 };
+
