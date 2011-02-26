@@ -345,3 +345,4 @@ static struct oid usm_mib[] = {
 	{ MIB(usmStats),			OID_MIB },
 	{ MIB(usmStatsUnsupportedSecLevels),	OID_RD, mib_usmstats },
 	{ MIB(usmStatsNotInTimeWindow),		OID_RD, mib_usmstats },
+	{ MIB(usmStatsUnknownUserNames),	OID_RD, mib_usmstats },
