@@ -348,3 +348,4 @@ snmpe_debug_elements(struct ber_element *root)
 			fprintf(stderr, "counter64");
 			break;
 		}
+		break;
