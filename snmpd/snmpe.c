@@ -346,3 +346,4 @@ snmpe_debug_elements(struct ber_element *root)
 			break;
 		case SNMP_T_COUNTER64:
 			fprintf(stderr, "counter64");
+			break;
