@@ -348,3 +348,4 @@ struct snmp_stats {
 
 struct address {
 	struct sockaddr_storage	 ss;
+	in_port_t		 port;
