@@ -346,3 +346,4 @@ kroute_insert(struct kroute_node *kr)
 	if ((krm = RB_INSERT(kroute_tree, &krt, kr)) != NULL) {
 		/* multipath route, add at end of list */
 		while (krm->next != NULL)
+			krm = krm->next;
