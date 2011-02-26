@@ -346,3 +346,4 @@ snmpd_socket_af(struct sockaddr_storage *ss, in_port_t port)
 }
 
 void
+snmpd_generate_engineid(struct snmpd *env)
