@@ -347,3 +347,4 @@ struct snmp_stats {
 };
 
 struct address {
+	struct sockaddr_storage	 ss;
