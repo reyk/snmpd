@@ -346,3 +346,4 @@ usm_encode(struct snmp_message *msg, struct ber_element *e)
 	bzero(&ber, sizeof(ber));
 	ber.fd = -1;
 
+	usm = ber_add_sequence(NULL);
