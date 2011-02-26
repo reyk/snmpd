@@ -345,3 +345,4 @@ usm_encode(struct snmp_message *msg, struct ber_element *e)
 	msg->sm_digest_offs = 0;
 	bzero(&ber, sizeof(ber));
 	ber.fd = -1;
+
