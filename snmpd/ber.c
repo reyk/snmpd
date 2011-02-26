@@ -346,3 +346,4 @@ ber_add_null(struct ber_element *prev)
 {
 	struct ber_element *elm;
 
+	if ((elm = ber_get_element(BER_TYPE_NULL)) == NULL)
