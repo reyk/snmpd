@@ -348,3 +348,4 @@ pfta_get(struct pfr_buffer *b, struct pfr_table *filter)
 	for (;;) {
 		pfr_buf_grow(b, b->pfrb_size);
 		b->pfrb_size = b->pfrb_msize;
+		if (pfr_get_astats(filter, b->pfrb_caddr, &(b->pfrb_size), 0)) {
