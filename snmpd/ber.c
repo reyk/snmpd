@@ -345,3 +345,4 @@ struct ber_element *
 ber_add_null(struct ber_element *prev)
 {
 	struct ber_element *elm;
+
