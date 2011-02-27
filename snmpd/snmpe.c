@@ -352,3 +352,4 @@ snmpe_debug_elements(struct ber_element *root)
 	case BER_CLASS_CONTEXT:
 		fprintf(stderr, "class: context(%u) type: ",
 		    root->be_class);
+		switch (root->be_type) {
