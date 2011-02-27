@@ -350,3 +350,4 @@ kroute_insert(struct kroute_node *kr)
 		krm->next = kr;
 		kr->next = NULL; /* to be sure */
 	}
+
