@@ -352,3 +352,4 @@ oid		: STRING				{
 				yyerror("calloc");
 				free($1);
 				YYERROR;
+			}
