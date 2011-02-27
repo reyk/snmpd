@@ -352,3 +352,4 @@ static struct oid usm_mib[] = {
 	{ MIBEND }
 };
 
+int
