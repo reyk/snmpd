@@ -352,3 +352,4 @@ struct address {
 
 	TAILQ_ENTRY(address)	 entry;
 
+	/* For SNMP trap receivers etc. */
