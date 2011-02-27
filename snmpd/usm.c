@@ -350,3 +350,4 @@ usm_encode(struct snmp_message *msg, struct ber_element *e)
 
 	if (MSG_HAS_AUTH(msg)) {
 		/*
+		 * Fill in enough zeroes and remember the position within the
