@@ -349,3 +349,4 @@
 #define MIB_ipfRouteEntProto		MIB_ipfInetCidrRouteEntry, 9
 #define MIB_ipfRouteEntAge		MIB_ipfInetCidrRouteEntry, 10
 #define MIB_ipfRouteEntNextHopAS	MIB_ipfInetCidrRouteEntry, 11
+#define MIB_ipfRouteEntRouteMetric1	MIB_ipfInetCidrRouteEntry, 12
