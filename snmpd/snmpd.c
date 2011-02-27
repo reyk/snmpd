@@ -351,3 +351,4 @@ snmpd_generate_engineid(struct snmpd *env)
 	u_int32_t		 oid_enterprise, rnd, tim;
 
 	/* RFC 3411 */
+	memset(env->sc_engineid, 0, sizeof(env->sc_engineid));
