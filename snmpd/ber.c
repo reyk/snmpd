@@ -351,3 +351,4 @@ ber_add_null(struct ber_element *prev)
 
 	ber_link_elements(prev, elm);
 
+	return elm;
