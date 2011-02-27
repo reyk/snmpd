@@ -352,3 +352,4 @@
 #define MIB_ipfRouteEntRouteMetric1	MIB_ipfInetCidrRouteEntry, 12
 #define MIB_ipfRouteEntRouteMetric2	MIB_ipfInetCidrRouteEntry, 13
 #define MIB_ipfRouteEntRouteMetric3	MIB_ipfInetCidrRouteEntry, 14
+#define MIB_ipfRouteEntRouteMetric4	MIB_ipfInetCidrRouteEntry, 15
