@@ -349,3 +349,4 @@ oid		: STRING				{
 			struct ber_oid	*sysoid;
 			if ((sysoid =
 			    calloc(1, sizeof(*sysoid))) == NULL) {
+				yyerror("calloc");
