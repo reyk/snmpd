@@ -350,3 +350,4 @@ struct address {
 	struct sockaddr_storage	 ss;
 	in_port_t		 port;
 
+	TAILQ_ENTRY(address)	 entry;
