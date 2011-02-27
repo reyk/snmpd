@@ -350,3 +350,4 @@ static struct oid usm_mib[] = {
 	{ MIB(usmStatsWrongDigests),		OID_RD, mib_usmstats },
 	{ MIB(usmStatsDecryptionErrors),	OID_RD, mib_usmstats },
 	{ MIBEND }
+};
