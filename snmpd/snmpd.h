@@ -351,3 +351,4 @@ struct address {
 	in_port_t		 port;
 
 	TAILQ_ENTRY(address)	 entry;
+
