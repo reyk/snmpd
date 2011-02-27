@@ -351,3 +351,4 @@ oid		: STRING				{
 			    calloc(1, sizeof(*sysoid))) == NULL) {
 				yyerror("calloc");
 				free($1);
+				YYERROR;
