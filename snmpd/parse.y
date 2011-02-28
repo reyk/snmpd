@@ -356,3 +356,4 @@ oid		: STRING				{
 			if (ber_string2oid($1, sysoid) == -1) {
 				yyerror("invalid OID: %s", $1);
 				free(sysoid);
+				free($1);
