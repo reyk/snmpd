@@ -353,3 +353,4 @@ ber_add_null(struct ber_element *prev)
 
 	return elm;
 }
+
