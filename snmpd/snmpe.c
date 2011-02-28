@@ -353,3 +353,4 @@ snmpe_debug_elements(struct ber_element *root)
 		fprintf(stderr, "class: context(%u) type: ",
 		    root->be_class);
 		switch (root->be_type) {
+		case SNMP_C_GETREQ:
