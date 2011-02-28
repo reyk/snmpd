@@ -356,3 +356,4 @@ snmpd_generate_engineid(struct snmpd *env)
 	memcpy(env->sc_engineid, &oid_enterprise, sizeof(oid_enterprise));
 	env->sc_engineid[0] |= SNMP_ENGINEID_NEW;
 	env->sc_engineid_len = sizeof(oid_enterprise);
+
