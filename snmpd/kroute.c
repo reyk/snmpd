@@ -355,3 +355,4 @@ kroute_insert(struct kroute_node *kr)
 	return (0);
 }
 
+int
