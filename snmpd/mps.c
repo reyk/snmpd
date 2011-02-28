@@ -356,3 +356,4 @@ mps_decodeinaddr(struct ber_oid *o, struct in_addr *addr, int offset)
 
 	a = ((o->bo_id[offset] & 0xff)) |
 	    ((o->bo_id[offset + 1] & 0xff) << 8) |
+	    ((o->bo_id[offset + 2] & 0xff) << 16) |
