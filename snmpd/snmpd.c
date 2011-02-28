@@ -353,3 +353,4 @@ snmpd_generate_engineid(struct snmpd *env)
 	/* RFC 3411 */
 	memset(env->sc_engineid, 0, sizeof(env->sc_engineid));
 	oid_enterprise = htonl(OIDVAL_openBSD_eid);
+	memcpy(env->sc_engineid, &oid_enterprise, sizeof(oid_enterprise));
