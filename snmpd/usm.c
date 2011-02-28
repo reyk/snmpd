@@ -353,3 +353,4 @@ usm_encode(struct snmp_message *msg, struct ber_element *e)
 		 * Fill in enough zeroes and remember the position within the
 		 * messages. The digest will be calculated once the message
 		 * is complete.
+		 */
