@@ -356,3 +356,4 @@ usm_encode(struct snmp_message *msg, struct ber_element *e)
 		 */
 #ifdef DEBUG
 		assert(msg->sm_user != NULL);
+#endif
