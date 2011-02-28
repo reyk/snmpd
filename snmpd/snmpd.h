@@ -356,3 +356,4 @@ struct address {
 	char			*sa_community;
 	struct ber_oid		*sa_oid;
 };
+TAILQ_HEAD(addresslist, address);
