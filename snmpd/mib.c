@@ -355,3 +355,4 @@ static struct oid usm_mib[] = {
 int
 mib_engine(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 {
+	switch (oid->o_oid[OIDIDX_snmpEngine]) {
