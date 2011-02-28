@@ -353,3 +353,4 @@ kroute_insert(struct kroute_node *kr)
 
 	kr_state.ks_nroutes++;
 	return (0);
+}
