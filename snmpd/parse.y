@@ -353,3 +353,4 @@ oid		: STRING				{
 				free($1);
 				YYERROR;
 			}
+			if (ber_string2oid($1, sysoid) == -1) {
