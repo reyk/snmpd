@@ -354,3 +354,4 @@ struct address {
 
 	/* For SNMP trap receivers etc. */
 	char			*sa_community;
+	struct ber_oid		*sa_oid;
