@@ -354,3 +354,4 @@ usm_encode(struct snmp_message *msg, struct ber_element *e)
 		 * messages. The digest will be calculated once the message
 		 * is complete.
 		 */
+#ifdef DEBUG
