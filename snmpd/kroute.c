@@ -356,3 +356,4 @@ kroute_insert(struct kroute_node *kr)
 }
 
 int
+kroute_remove(struct kroute_node *kr)
