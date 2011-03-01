@@ -358,3 +358,4 @@ pfta_get(struct pfr_buffer *b, struct pfr_table *filter)
 	return (0);
 }
 
+int
