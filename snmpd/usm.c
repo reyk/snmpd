@@ -358,3 +358,4 @@ usm_encode(struct snmp_message *msg, struct ber_element *e)
 		assert(msg->sm_user != NULL);
 #endif
 		bzero(digest, sizeof(digest));
+		digestlen = sizeof(digest);
