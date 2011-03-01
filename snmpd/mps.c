@@ -360,3 +360,4 @@ mps_decodeinaddr(struct ber_oid *o, struct in_addr *addr, int offset)
 	    ((o->bo_id[offset + 3] & 0xff) << 24);
 	addr->s_addr = letoh32(a);
 
+	/* Detect invalid address */
