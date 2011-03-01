@@ -358,3 +358,4 @@
 #define MIB_ipfInetCidrRouteDiscards	MIB_ipfMIB, 8
 
 /* BRIDGE-MIB */
+#define MIB_dot1dBridge			MIB_mib_2, 17
