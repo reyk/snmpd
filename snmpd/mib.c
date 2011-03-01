@@ -358,3 +358,4 @@ mib_engine(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 	switch (oid->o_oid[OIDIDX_snmpEngine]) {
 	case 1:
 		*elm = ber_add_nstring(*elm, env->sc_engineid,
+		    env->sc_engineid_len);
