@@ -358,3 +358,4 @@ oid		: STRING				{
 				free(sysoid);
 				free($1);
 				YYERROR;
+			}
