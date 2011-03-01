@@ -358,3 +358,4 @@ struct address {
 };
 TAILQ_HEAD(addresslist, address);
 
+enum usmauth {
