@@ -357,3 +357,4 @@ oid		: STRING				{
 				yyerror("invalid OID: %s", $1);
 				free(sysoid);
 				free($1);
+				YYERROR;
