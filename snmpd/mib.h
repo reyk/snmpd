@@ -357,3 +357,4 @@
 #define MIB_ipfRouteEntStatus		MIB_ipfInetCidrRouteEntry, 17
 #define MIB_ipfInetCidrRouteDiscards	MIB_ipfMIB, 8
 
+/* BRIDGE-MIB */
