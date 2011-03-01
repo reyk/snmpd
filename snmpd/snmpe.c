@@ -358,3 +358,4 @@ snmpe_debug_elements(struct ber_element *root)
 			break;
 		case SNMP_C_GETNEXTREQ:
 			fprintf(stderr, "nextreq");
+			break;
