@@ -357,3 +357,4 @@ struct address {
 	struct ber_oid		*sa_oid;
 };
 TAILQ_HEAD(addresslist, address);
+
