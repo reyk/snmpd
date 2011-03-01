@@ -358,3 +358,4 @@ int
 ber_get_null(struct ber_element *elm)
 {
 	if (elm->be_encoding != BER_TYPE_NULL)
+		return -1;
