@@ -359,3 +359,4 @@ pfta_get(struct pfr_buffer *b, struct pfr_table *filter)
 }
 
 int
+pfta_get_addr(struct pfr_astats *ras, int tblidx)
