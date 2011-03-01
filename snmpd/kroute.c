@@ -359,3 +359,4 @@ int
 kroute_remove(struct kroute_node *kr)
 {
 	struct kroute_node	*krm;
+
