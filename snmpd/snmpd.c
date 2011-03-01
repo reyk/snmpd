@@ -357,3 +357,4 @@ snmpd_generate_engineid(struct snmpd *env)
 	env->sc_engineid[0] |= SNMP_ENGINEID_NEW;
 	env->sc_engineid_len = sizeof(oid_enterprise);
 
+	/* XXX alternatively configure engine id via snmpd.conf */
