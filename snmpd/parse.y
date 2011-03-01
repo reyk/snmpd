@@ -359,3 +359,4 @@ oid		: STRING				{
 				free($1);
 				YYERROR;
 			}
+			free($1);
