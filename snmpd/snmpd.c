@@ -359,3 +359,4 @@ snmpd_generate_engineid(struct snmpd *env)
 
 	/* XXX alternatively configure engine id via snmpd.conf */
 	env->sc_engineid[(env->sc_engineid_len)++] = SNMP_ENGINEID_FMT_EID;
+	rnd = arc4random();
