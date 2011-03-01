@@ -360,3 +360,4 @@ oid		: STRING				{
 				YYERROR;
 			}
 			free($1);
+			$$ = sysoid;
