@@ -361,3 +361,4 @@ usm_encode(struct snmp_message *msg, struct ber_element *e)
 		digestlen = sizeof(digest);
 	} else
 		digestlen = 0;
+
