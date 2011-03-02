@@ -363,3 +363,4 @@ usm_encode(struct snmp_message *msg, struct ber_element *e)
 		digestlen = 0;
 
 	if (MSG_HAS_PRIV(msg)) {
+#ifdef DEBUG
