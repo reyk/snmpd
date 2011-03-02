@@ -364,3 +364,4 @@ ber_get_null(struct ber_element *elm)
 }
 
 struct ber_element *
+ber_add_eoc(struct ber_element *prev)
