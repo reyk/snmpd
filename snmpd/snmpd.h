@@ -363,3 +363,4 @@ enum usmauth {
 	AUTH_MD5,	/* HMAC-MD5-96, RFC3414 */
 	AUTH_SHA1	/* HMAC-SHA-96, RFC3414 */
 };
+
