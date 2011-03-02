@@ -362,3 +362,4 @@ snmpd_generate_engineid(struct snmpd *env)
 	rnd = arc4random();
 	memcpy(&env->sc_engineid[env->sc_engineid_len], &rnd, sizeof(rnd));
 	env->sc_engineid_len += sizeof(rnd);
+
