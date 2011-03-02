@@ -362,3 +362,4 @@ int
 pfta_get_addr(struct pfr_astats *ras, int tblidx)
 {
 	struct pfr_buffer	 ba;
+	struct pfr_tstats	 ts;
