@@ -362,3 +362,4 @@
 #define MIB_dot1dBase			MIB_dot1dBridge, 1
 #define MIB_dot1dBaseBridgeAddress	MIB_dot1dBase, 1
 #define MIB_dot1dBaseNumPorts		MIB_dot1dBase, 2
+#define MIB_dot1dBaseType		MIB_dot1dBase, 3
