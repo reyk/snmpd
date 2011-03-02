@@ -362,3 +362,4 @@ mib_engine(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 		break;
 	case 2:
 		*elm = ber_add_integer(*elm, env->sc_engine_boots);
+		break;
