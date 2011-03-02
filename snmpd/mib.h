@@ -364,3 +364,4 @@
 #define MIB_dot1dBaseNumPorts		MIB_dot1dBase, 2
 #define MIB_dot1dBaseType		MIB_dot1dBase, 3
 #define MIB_dot1dBasePortTable		MIB_dot1dBase, 4
+#define OIDIDX_dot1d			10
