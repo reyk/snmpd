@@ -364,3 +364,4 @@ oid		: STRING				{
 		}
 		;
 
+hostoid		: /* empty */				{ $$ = NULL; }
