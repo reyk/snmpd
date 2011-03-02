@@ -362,3 +362,4 @@ snmpe_debug_elements(struct ber_element *root)
 		case SNMP_C_GETRESP:
 			fprintf(stderr, "getresp");
 			break;
+		case SNMP_C_SETREQ:
