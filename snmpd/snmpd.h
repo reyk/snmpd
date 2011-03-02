@@ -361,3 +361,4 @@ TAILQ_HEAD(addresslist, address);
 enum usmauth {
 	AUTH_NONE = 0,
 	AUTH_MD5,	/* HMAC-MD5-96, RFC3414 */
+	AUTH_SHA1	/* HMAC-SHA-96, RFC3414 */
