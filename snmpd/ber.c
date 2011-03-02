@@ -363,3 +363,4 @@ ber_get_null(struct ber_element *elm)
 	return 0;
 }
 
+struct ber_element *
