@@ -364,3 +364,4 @@ enum usmauth {
 	AUTH_SHA1	/* HMAC-SHA-96, RFC3414 */
 };
 
+#define AUTH_DEFAULT	AUTH_SHA1	/* Default digest */
