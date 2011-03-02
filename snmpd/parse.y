@@ -361,3 +361,4 @@ oid		: STRING				{
 			}
 			free($1);
 			$$ = sysoid;
+		}
