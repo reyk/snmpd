@@ -363,3 +363,4 @@ mps_decodeinaddr(struct ber_oid *o, struct in_addr *addr, int offset)
 	/* Detect invalid address */
 	if ((o->bo_n - offset) > 4)
 		return (-1);
+
