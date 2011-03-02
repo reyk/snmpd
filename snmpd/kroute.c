@@ -361,3 +361,4 @@ kroute_remove(struct kroute_node *kr)
 	struct kroute_node	*krm;
 
 	if ((krm = RB_FIND(kroute_tree, &krt, kr)) == NULL) {
+		log_warnx("kroute_remove failed to find %s/%u",
