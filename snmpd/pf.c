@@ -366,3 +366,4 @@ pfta_get_addr(struct pfr_astats *ras, int tblidx)
 	struct pfr_table	 filter;
 	const struct pfr_astats	*as;
 
+	if (pft_get_table(&ts, tblidx))
