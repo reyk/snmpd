@@ -366,3 +366,4 @@ kroute_remove(struct kroute_node *kr)
 		return (-1);
 	}
 
+	if (krm == kr) {
