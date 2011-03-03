@@ -368,3 +368,4 @@ snmpd_generate_engineid(struct snmpd *env)
 	env->sc_engineid_len += sizeof(tim);
 }
 
+u_long
