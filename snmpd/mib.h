@@ -366,3 +366,4 @@
 #define MIB_dot1dBasePortTable		MIB_dot1dBase, 4
 #define OIDIDX_dot1d			10
 #define OIDIDX_dot1dEntry		11
+#define MIB_dot1dBasePortEntry		MIB_dot1dBasePortTable, 1
