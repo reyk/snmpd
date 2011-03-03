@@ -365,3 +365,4 @@ enum usmauth {
 };
 
 #define AUTH_DEFAULT	AUTH_SHA1	/* Default digest */
+
