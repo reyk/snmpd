@@ -367,3 +367,4 @@ mib_engine(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 		*elm = ber_add_integer(*elm, snmpd_engine_time());
 		break;
 	case 4:
+		*elm = ber_add_integer(*elm, READ_BUF_SIZE);
