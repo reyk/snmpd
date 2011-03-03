@@ -367,3 +367,4 @@ struct ber_element *
 ber_add_eoc(struct ber_element *prev)
 {
 	struct ber_element *elm;
+
