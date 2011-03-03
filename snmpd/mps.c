@@ -365,3 +365,4 @@ mps_decodeinaddr(struct ber_oid *o, struct in_addr *addr, int offset)
 		return (-1);
 
 	return (0);
+}
