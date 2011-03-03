@@ -367,3 +367,4 @@ snmpd_generate_engineid(struct snmpd *env)
 	memcpy(&env->sc_engineid[env->sc_engineid_len], &tim, sizeof(tim));
 	env->sc_engineid_len += sizeof(tim);
 }
+
