@@ -368,3 +368,4 @@ hostoid		: /* empty */				{ $$ = NULL; }
 		| OBJECTID oid				{ $$ = $2; }
 		;
 
+hostcmn		: /* empty */				{ $$ = NULL; }
