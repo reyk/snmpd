@@ -366,3 +366,4 @@ oid		: STRING				{
 
 hostoid		: /* empty */				{ $$ = NULL; }
 		| OBJECTID oid				{ $$ = $2; }
+		;
