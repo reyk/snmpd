@@ -366,3 +366,4 @@ snmpe_debug_elements(struct ber_element *root)
 			fprintf(stderr, "setreq");
 			break;
 		case SNMP_C_TRAP:
+			fprintf(stderr, "trap");
