@@ -368,3 +368,4 @@ enum usmauth {
 
 enum usmpriv {
 	PRIV_NONE = 0,
+	PRIV_DES,	/* CBC-DES, RFC3414 */
