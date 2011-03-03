@@ -367,3 +367,4 @@ kroute_remove(struct kroute_node *kr)
 	}
 
 	if (krm == kr) {
+		/* head element */
