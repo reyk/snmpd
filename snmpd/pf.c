@@ -368,3 +368,4 @@ pfta_get_addr(struct pfr_astats *ras, int tblidx)
 
 	if (pft_get_table(&ts, tblidx))
 		return (-1);
+
