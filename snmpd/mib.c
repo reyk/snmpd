@@ -368,3 +368,4 @@ mib_engine(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 		break;
 	case 4:
 		*elm = ber_add_integer(*elm, READ_BUF_SIZE);
+		break;
