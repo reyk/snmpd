@@ -370,3 +370,4 @@ pfta_get_addr(struct pfr_astats *ras, int tblidx)
 		return (-1);
 
 	bzero(&filter, sizeof(filter));
+	if (strlcpy(filter.pfrt_name, ts.pfrts_name,
