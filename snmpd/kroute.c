@@ -372,3 +372,4 @@ kroute_remove(struct kroute_node *kr)
 			log_warnx("kroute_remove failed for %s/%u",
 			    inet_ntoa(kr->r.prefix), kr->r.prefixlen);
 			return (-1);
+		}
