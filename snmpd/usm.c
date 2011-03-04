@@ -371,3 +371,4 @@ usm_encode(struct snmp_message *msg, struct ber_element *e)
 		    sizeof(msg->sm_salt));
 		saltlen = sizeof(msg->sm_salt);
 	} else
+		saltlen = 0;
