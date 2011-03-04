@@ -372,3 +372,4 @@ hostcmn		: /* empty */				{ $$ = NULL; }
 		| COMMUNITY STRING			{ $$ = $2; }
 		;
 
+hostdef		: STRING hostoid hostcmn		{
