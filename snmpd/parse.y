@@ -370,3 +370,4 @@ hostoid		: /* empty */				{ $$ = NULL; }
 
 hostcmn		: /* empty */				{ $$ = NULL; }
 		| COMMUNITY STRING			{ $$ = $2; }
+		;
