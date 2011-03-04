@@ -372,3 +372,4 @@ ber_add_eoc(struct ber_element *prev)
 		return NULL;
 
 	ber_link_elements(prev, elm);
+
