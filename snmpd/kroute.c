@@ -371,3 +371,4 @@ kroute_remove(struct kroute_node *kr)
 		if (RB_REMOVE(kroute_tree, &krt, kr) == NULL) {
 			log_warnx("kroute_remove failed for %s/%u",
 			    inet_ntoa(kr->r.prefix), kr->r.prefixlen);
+			return (-1);
