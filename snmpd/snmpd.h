@@ -371,3 +371,4 @@ enum usmpriv {
 	PRIV_DES,	/* CBC-DES, RFC3414 */
 	PRIV_AES	/* CFB128-AES-128, RFC3826 */
 };
+
