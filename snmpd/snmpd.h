@@ -372,3 +372,4 @@ enum usmpriv {
 	PRIV_AES	/* CFB128-AES-128, RFC3826 */
 };
 
+#define PRIV_DEFAULT	PRIV_DES	/* Default cipher */
