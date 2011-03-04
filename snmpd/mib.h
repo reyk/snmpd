@@ -369,3 +369,4 @@
 #define MIB_dot1dBasePortEntry		MIB_dot1dBasePortTable, 1
 #define MIB_dot1dBasePort		MIB_dot1dBasePortEntry, 1
 #define MIB_dot1dBasePortIfIndex	MIB_dot1dBasePortEntry, 2
+#define MIB_dot1dBasePortCircuit	MIB_dot1dBasePortEntry, 3
