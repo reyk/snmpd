@@ -370,3 +370,4 @@ usm_encode(struct snmp_message *msg, struct ber_element *e)
 		memcpy(msg->sm_salt, &msg->sm_user->uu_salt,
 		    sizeof(msg->sm_salt));
 		saltlen = sizeof(msg->sm_salt);
+	} else
