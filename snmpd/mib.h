@@ -372,3 +372,4 @@
 #define MIB_dot1dBasePortCircuit	MIB_dot1dBasePortEntry, 3
 #define MIB_dot1dBasePortDelayExceededDiscards	MIB_dot1dBasePortEntry, 4
 #define MIB_dot1dBasePortMtuExceededDiscards	MIB_dot1dBasePortEntry, 5
+#define MIB_dot1dStp			MIB_dot1dBridge, 2
