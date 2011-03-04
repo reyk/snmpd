@@ -370,3 +370,4 @@ snmpd_generate_engineid(struct snmpd *env)
 
 u_long
 snmpd_engine_time(void)
+{
