@@ -370,3 +370,4 @@ snmpe_debug_elements(struct ber_element *root)
 			break;
 		case SNMP_C_GETBULKREQ:
 			fprintf(stderr, "getbulkreq");
+			break;
