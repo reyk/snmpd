@@ -376,3 +376,4 @@ pfta_get_addr(struct pfr_astats *ras, int tblidx)
 	}
 
 	if (pfta_get(&ba, &filter) || ba.pfrb_size == 0) {
+		free(ba.pfrb_caddr);
