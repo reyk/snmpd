@@ -374,3 +374,4 @@ enum usmpriv {
 
 #define PRIV_DEFAULT	PRIV_DES	/* Default cipher */
 
+struct usmuser {
