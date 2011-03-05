@@ -373,3 +373,4 @@ snmpd_engine_time(void)
 {
 	struct timeval	 now;
 
+	/*
