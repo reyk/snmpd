@@ -376,3 +376,4 @@ ber_add_eoc(struct ber_element *prev)
 	return elm;
 }
 
+int
