@@ -373,3 +373,4 @@ hostcmn		: /* empty */				{ $$ = NULL; }
 		;
 
 hostdef		: STRING hostoid hostcmn		{
+			if (host($1, hlist, 1,
