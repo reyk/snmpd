@@ -374,3 +374,4 @@ snmpd_engine_time(void)
 	struct timeval	 now;
 
 	/*
+	 * snmpEngineBoots should be stored in a non-volatile storage.
