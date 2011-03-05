@@ -375,3 +375,4 @@ kroute_remove(struct kroute_node *kr)
 		}
 		if (kr->next != NULL) {
 			if (RB_INSERT(kroute_tree, &krt, kr->next) != NULL) {
+				log_warnx("kroute_remove failed to add %s/%u",
