@@ -375,3 +375,4 @@ pfta_get_addr(struct pfr_astats *ras, int tblidx)
 		return (-1);
 	}
 
+	if (pfta_get(&ba, &filter) || ba.pfrb_size == 0) {
