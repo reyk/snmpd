@@ -373,3 +373,4 @@ usm_encode(struct snmp_message *msg, struct ber_element *e)
 	} else
 		saltlen = 0;
 
+	msg->sm_engine_boots = (u_int32_t)env->sc_engine_boots;
