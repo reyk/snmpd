@@ -374,3 +374,4 @@ snmpe_debug_elements(struct ber_element *root)
 		case SNMP_C_INFORMREQ:
 			fprintf(stderr, "informreq");
 			break;
+		case SNMP_C_TRAPV2:
