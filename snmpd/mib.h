@@ -375,3 +375,4 @@
 #define MIB_dot1dStp			MIB_dot1dBridge, 2
 #define MIB_dot1dSr			MIB_dot1dBridge, 3
 #define MIB_dot1dTp			MIB_dot1dBridge, 4
+#define MIB_dot1dStatic			MIB_dot1dBridge, 5
