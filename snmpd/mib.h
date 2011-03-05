@@ -374,3 +374,4 @@
 #define MIB_dot1dBasePortMtuExceededDiscards	MIB_dot1dBasePortEntry, 5
 #define MIB_dot1dStp			MIB_dot1dBridge, 2
 #define MIB_dot1dSr			MIB_dot1dBridge, 3
+#define MIB_dot1dTp			MIB_dot1dBridge, 4
