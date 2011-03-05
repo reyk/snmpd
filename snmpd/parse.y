@@ -375,3 +375,4 @@ hostcmn		: /* empty */				{ $$ = NULL; }
 hostdef		: STRING hostoid hostcmn		{
 			if (host($1, hlist, 1,
 			    SNMPD_TRAPPORT, $2, $3) <= 0) {
+				yyerror("invalid host: %s", $1);
