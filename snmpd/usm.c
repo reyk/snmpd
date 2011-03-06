@@ -378,3 +378,4 @@ usm_encode(struct snmp_message *msg, struct ber_element *e)
 	if ((a = ber_printf_elements(usm, "xdds",
 	    env->sc_engineid, env->sc_engineid_len, msg->sm_engine_boots,
 	    msg->sm_engine_time, msg->sm_username)) == NULL)
+		goto done;
