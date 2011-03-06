@@ -379,3 +379,4 @@ snmpd_engine_time(void)
 	 * was last incremented. We don't rely on non-volatile storage.
 	 * snmpEngineBoots is set to zero and snmpEngineTime to the system
 	 * clock. Hence, the tuple (snmpEngineBoots, snmpEngineTime) is
+	 * still unique and protects us against replay attacks. It only
