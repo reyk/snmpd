@@ -377,3 +377,4 @@ ber_add_eoc(struct ber_element *prev)
 }
 
 int
+ber_get_eoc(struct ber_element *elm)
