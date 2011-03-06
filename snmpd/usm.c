@@ -377,3 +377,4 @@ usm_encode(struct snmp_message *msg, struct ber_element *e)
 	msg->sm_engine_time = (u_int32_t)snmpd_engine_time();
 	if ((a = ber_printf_elements(usm, "xdds",
 	    env->sc_engineid, env->sc_engineid_len, msg->sm_engine_boots,
+	    msg->sm_engine_time, msg->sm_username)) == NULL)
