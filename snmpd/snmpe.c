@@ -378,3 +378,4 @@ snmpe_debug_elements(struct ber_element *root)
 			fprintf(stderr, "trapv2");
 			break;
 		case SNMP_C_REPORT:
+			fprintf(stderr, "report");
