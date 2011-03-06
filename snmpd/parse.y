@@ -380,3 +380,4 @@ hostdef		: STRING hostoid hostcmn		{
 				YYERROR;
 			}
 			free($1);
+		}
