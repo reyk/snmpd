@@ -380,3 +380,4 @@ snmpd_engine_time(void)
 	 * snmpEngineBoots is set to zero and snmpEngineTime to the system
 	 * clock. Hence, the tuple (snmpEngineBoots, snmpEngineTime) is
 	 * still unique and protects us against replay attacks. It only
+	 * 'expires' a little bit sooner than the RFC3414 method.
