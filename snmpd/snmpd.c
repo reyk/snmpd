@@ -378,3 +378,4 @@ snmpd_engine_time(void)
 	 * snmpEngineTime is the number of seconds since snmpEngineBoots
 	 * was last incremented. We don't rely on non-volatile storage.
 	 * snmpEngineBoots is set to zero and snmpEngineTime to the system
+	 * clock. Hence, the tuple (snmpEngineBoots, snmpEngineTime) is
