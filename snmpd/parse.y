@@ -379,3 +379,4 @@ hostdef		: STRING hostoid hostcmn		{
 				free($1);
 				YYERROR;
 			}
+			free($1);
