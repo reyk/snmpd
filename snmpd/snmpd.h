@@ -377,3 +377,4 @@ enum usmpriv {
 struct usmuser {
 	char			*uu_name;
 	int			 uu_seclevel;
+
