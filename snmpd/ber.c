@@ -379,3 +379,4 @@ ber_add_eoc(struct ber_element *prev)
 int
 ber_get_eoc(struct ber_element *elm)
 {
+	if (elm->be_encoding != BER_TYPE_EOC)
