@@ -379,3 +379,4 @@
 
 /*
  * PRIVATE ENTERPRISE NUMBERS from
+ * http://www.iana.org/assignments/enterprise-numbers
