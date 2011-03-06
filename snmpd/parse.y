@@ -378,3 +378,4 @@ hostdef		: STRING hostoid hostcmn		{
 				yyerror("invalid host: %s", $1);
 				free($1);
 				YYERROR;
+			}
