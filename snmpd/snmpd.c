@@ -377,3 +377,4 @@ snmpd_engine_time(void)
 	 * snmpEngineBoots should be stored in a non-volatile storage.
 	 * snmpEngineTime is the number of seconds since snmpEngineBoots
 	 * was last incremented. We don't rely on non-volatile storage.
+	 * snmpEngineBoots is set to zero and snmpEngineTime to the system
