@@ -377,3 +377,4 @@ kroute_remove(struct kroute_node *kr)
 			if (RB_INSERT(kroute_tree, &krt, kr->next) != NULL) {
 				log_warnx("kroute_remove failed to add %s/%u",
 				    inet_ntoa(kr->r.prefix), kr->r.prefixlen);
+				return (-1);
