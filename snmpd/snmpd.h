@@ -378,3 +378,4 @@ struct usmuser {
 	char			*uu_name;
 	int			 uu_seclevel;
 
+	enum usmauth		 uu_auth;
