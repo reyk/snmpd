@@ -380,3 +380,4 @@ pfta_get_addr(struct pfr_astats *ras, int tblidx)
 		return (-1);
 	}
 
+	PFRB_FOREACH(as, &ba) {
