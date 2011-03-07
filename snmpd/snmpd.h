@@ -381,3 +381,4 @@ struct usmuser {
 	enum usmauth		 uu_auth;
 	char			*uu_authkey;
 	unsigned		 uu_authkeylen;
+
