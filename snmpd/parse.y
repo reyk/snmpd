@@ -381,3 +381,4 @@ hostdef		: STRING hostoid hostcmn		{
 			}
 			free($1);
 		}
+		;
