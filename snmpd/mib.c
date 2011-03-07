@@ -384,3 +384,4 @@ mib_usmstats(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 		u_int8_t	 m_id;
 		u_int32_t	*m_ptr;
 	}			 mapping[] = {
+		{ OIDVAL_usmErrSecLevel,	&stats->snmp_usmbadseclevel },
