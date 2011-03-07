@@ -381,3 +381,4 @@ pfta_get_addr(struct pfr_astats *ras, int tblidx)
 	}
 
 	PFRB_FOREACH(as, &ba) {
+		if (as->pfras_a.pfra_af != AF_INET)
