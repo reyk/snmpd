@@ -383,3 +383,4 @@ snmpd_engine_time(void)
 	 * 'expires' a little bit sooner than the RFC3414 method.
 	 */
 	gettimeofday(&now, NULL);
+	return now.tv_sec;
