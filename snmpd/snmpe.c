@@ -383,3 +383,4 @@ snmpe_debug_elements(struct ber_element *root)
 		}
 		break;
 	case BER_CLASS_PRIVATE:
+		fprintf(stderr, "class: private(%u) type: ", root->be_class);
