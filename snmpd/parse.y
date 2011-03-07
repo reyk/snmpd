@@ -383,3 +383,4 @@ hostdef		: STRING hostoid hostcmn		{
 		}
 		;
 
+hostlist	: /* empty */
