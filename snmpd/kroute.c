@@ -381,3 +381,4 @@ kroute_remove(struct kroute_node *kr)
 			}
 		}
 	} else {
+		/* somewhere in the list */
