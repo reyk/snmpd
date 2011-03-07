@@ -381,3 +381,4 @@ snmpe_debug_elements(struct ber_element *root)
 			fprintf(stderr, "report");
 			break;
 		}
+		break;
