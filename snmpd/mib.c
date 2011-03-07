@@ -382,3 +382,4 @@ mib_usmstats(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 	long long		 i;
 	struct statsmap {
 		u_int8_t	 m_id;
+		u_int32_t	*m_ptr;
