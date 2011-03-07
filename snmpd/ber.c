@@ -383,3 +383,4 @@ ber_get_eoc(struct ber_element *elm)
 		return -1;
 
 	return 0;
+}
