@@ -382,3 +382,4 @@ ber_get_eoc(struct ber_element *elm)
 	if (elm->be_encoding != BER_TYPE_EOC)
 		return -1;
 
+	return 0;
