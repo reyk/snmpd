@@ -384,3 +384,4 @@ snmpd_engine_time(void)
 	 */
 	gettimeofday(&now, NULL);
 	return now.tv_sec;
+}
