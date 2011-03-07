@@ -383,3 +383,4 @@ struct usmuser {
 	unsigned		 uu_authkeylen;
 
 
+	enum usmpriv		 uu_priv;
