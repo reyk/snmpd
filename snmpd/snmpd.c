@@ -382,3 +382,4 @@ snmpd_engine_time(void)
 	 * still unique and protects us against replay attacks. It only
 	 * 'expires' a little bit sooner than the RFC3414 method.
 	 */
+	gettimeofday(&now, NULL);
