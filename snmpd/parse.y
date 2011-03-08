@@ -385,3 +385,4 @@ hostdef		: STRING hostoid hostcmn		{
 
 hostlist	: /* empty */
 		| hostlist comma hostdef
+		;
