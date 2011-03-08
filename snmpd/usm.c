@@ -385,3 +385,4 @@ usm_encode(struct snmp_message *msg, struct ber_element *e)
 	if (digestlen > 0)
 		ber_set_writecallback(a, usm_cb_digest, msg);
 
+	if ((a = ber_add_nstring(a, msg->sm_salt, saltlen)) == NULL)
