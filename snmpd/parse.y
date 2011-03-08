@@ -387,3 +387,4 @@ hostlist	: /* empty */
 		| hostlist comma hostdef
 		;
 
+host		: hostdef
