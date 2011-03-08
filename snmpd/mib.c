@@ -386,3 +386,4 @@ mib_usmstats(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 	}			 mapping[] = {
 		{ OIDVAL_usmErrSecLevel,	&stats->snmp_usmbadseclevel },
 		{ OIDVAL_usmErrTimeWindow,	&stats->snmp_usmtimewindow },
+		{ OIDVAL_usmErrUserName,	&stats->snmp_usmnosuchuser },
