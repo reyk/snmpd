@@ -386,3 +386,4 @@ snmpe_debug_elements(struct ber_element *root)
 		fprintf(stderr, "class: private(%u) type: ", root->be_class);
 		break;
 	default:
+		fprintf(stderr, "class: <INVALID>(%u) type: ", root->be_class);
