@@ -387,3 +387,4 @@ struct usmuser {
 	char			*uu_privkey;
 	unsigned long long	 uu_salt;
 
+	SLIST_ENTRY(usmuser)	 uu_next;
