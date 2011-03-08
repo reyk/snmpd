@@ -388,3 +388,4 @@ snmpd_engine_time(void)
 
 char *
 tohexstr(u_int8_t *str, int len)
+{
