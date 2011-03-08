@@ -386,3 +386,4 @@
  * that are very common in the datacenters around the world, other
  * companies that contributed to snmpd or OpenBSD in some way, or just
  * any other organizations that we wanted to include. It would be an
+ * overkill to include ~30.000 entries for all the organizations from
