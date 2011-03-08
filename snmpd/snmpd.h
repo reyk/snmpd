@@ -388,3 +388,4 @@ struct usmuser {
 	unsigned long long	 uu_salt;
 
 	SLIST_ENTRY(usmuser)	 uu_next;
+};
