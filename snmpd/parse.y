@@ -388,3 +388,4 @@ hostlist	: /* empty */
 		;
 
 host		: hostdef
+		| '{' hostlist '}'
