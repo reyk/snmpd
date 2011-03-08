@@ -387,3 +387,4 @@ ber_get_eoc(struct ber_element *elm)
 
 size_t
 ber_oid2ber(struct ber_oid *o, u_int8_t *buf, size_t len)
+{
