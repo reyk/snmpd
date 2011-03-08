@@ -385,3 +385,4 @@ kroute_remove(struct kroute_node *kr)
 		while (krm->next != kr && krm->next != NULL)
 			krm = krm->next;
 		if (krm->next == NULL) {
+			log_warnx("kroute_remove multipath list corrupted "
