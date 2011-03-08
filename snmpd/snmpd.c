@@ -386,3 +386,4 @@ snmpd_engine_time(void)
 	return now.tv_sec;
 }
 
+char *
