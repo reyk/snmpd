@@ -387,3 +387,4 @@ mib_usmstats(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 		{ OIDVAL_usmErrSecLevel,	&stats->snmp_usmbadseclevel },
 		{ OIDVAL_usmErrTimeWindow,	&stats->snmp_usmtimewindow },
 		{ OIDVAL_usmErrUserName,	&stats->snmp_usmnosuchuser },
+		{ OIDVAL_usmErrEngineId,	&stats->snmp_usmnosuchengine },
