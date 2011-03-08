@@ -386,3 +386,4 @@ kroute_remove(struct kroute_node *kr)
 			krm = krm->next;
 		if (krm->next == NULL) {
 			log_warnx("kroute_remove multipath list corrupted "
+			    "for %s/%u", inet_ntoa(kr->r.prefix),
