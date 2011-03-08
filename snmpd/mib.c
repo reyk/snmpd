@@ -385,3 +385,4 @@ mib_usmstats(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 		u_int32_t	*m_ptr;
 	}			 mapping[] = {
 		{ OIDVAL_usmErrSecLevel,	&stats->snmp_usmbadseclevel },
+		{ OIDVAL_usmErrTimeWindow,	&stats->snmp_usmtimewindow },
