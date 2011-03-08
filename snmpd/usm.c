@@ -387,3 +387,4 @@ usm_encode(struct snmp_message *msg, struct ber_element *e)
 
 	if ((a = ber_add_nstring(a, msg->sm_salt, saltlen)) == NULL)
 		goto done;
+
