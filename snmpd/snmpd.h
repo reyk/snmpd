@@ -386,3 +386,4 @@ struct usmuser {
 	enum usmpriv		 uu_priv;
 	char			*uu_privkey;
 	unsigned long long	 uu_salt;
+
