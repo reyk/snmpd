@@ -388,3 +388,4 @@ pfta_get_addr(struct pfr_astats *ras, int tblidx)
 		    && (as->pfras_a.pfra_net == ras->pfras_a.pfra_net))
 			break;
 	}
+
