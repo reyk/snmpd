@@ -392,3 +392,4 @@ struct usmuser {
 
 struct snmpd {
 	u_int8_t		 sc_flags;
+#define SNMPD_F_VERBOSE		 0x01
