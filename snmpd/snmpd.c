@@ -390,3 +390,4 @@ char *
 tohexstr(u_int8_t *str, int len)
 {
 #define MAXHEXSTRLEN		256
+	static char hstr[2 * MAXHEXSTRLEN + 1];
