@@ -389,3 +389,4 @@ pfta_get_addr(struct pfr_astats *ras, int tblidx)
 			break;
 	}
 
+	if (as == NULL) {
