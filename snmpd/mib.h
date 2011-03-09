@@ -389,3 +389,4 @@
  * overkill to include ~30.000 entries for all the organizations from
  * the official list.
  */
+#define MIB_ibm				MIB_enterprises, 2
