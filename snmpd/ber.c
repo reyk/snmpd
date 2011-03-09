@@ -389,3 +389,4 @@ size_t
 ber_oid2ber(struct ber_oid *o, u_int8_t *buf, size_t len)
 {
 	u_int32_t	 v;
+	u_int		 i, j = 0, k;
