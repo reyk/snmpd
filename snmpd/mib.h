@@ -390,3 +390,4 @@
  * the official list.
  */
 #define MIB_ibm				MIB_enterprises, 2
+#define MIB_cmu				MIB_enterprises, 3
