@@ -390,3 +390,4 @@ mib_usmstats(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 		{ OIDVAL_usmErrEngineId,	&stats->snmp_usmnosuchengine },
 		{ OIDVAL_usmErrDigest,		&stats->snmp_usmwrongdigest },
 		{ OIDVAL_usmErrDecrypt,		&stats->snmp_usmdecrypterr },
+	};
