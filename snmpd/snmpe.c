@@ -390,3 +390,4 @@ snmpe_debug_elements(struct ber_element *root)
 		break;
 	}
 	fprintf(stderr, "(%lu) encoding %lu ",
+	    root->be_type, root->be_encoding);
