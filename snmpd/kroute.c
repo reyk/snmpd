@@ -389,3 +389,4 @@ kroute_remove(struct kroute_node *kr)
 			    "for %s/%u", inet_ntoa(kr->r.prefix),
 			    kr->r.prefixlen);
 			return (-1);
+		}
