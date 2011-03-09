@@ -392,3 +392,4 @@ host		: hostdef
 		;
 
 comma		: /* empty */
+		| ','
