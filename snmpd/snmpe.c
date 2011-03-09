@@ -392,3 +392,4 @@ snmpe_debug_elements(struct ber_element *root)
 	fprintf(stderr, "(%lu) encoding %lu ",
 	    root->be_type, root->be_encoding);
 
+	if (constructed)
