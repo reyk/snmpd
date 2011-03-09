@@ -391,3 +391,4 @@ host		: hostdef
 		| '{' hostlist '}'
 		;
 
+comma		: /* empty */
