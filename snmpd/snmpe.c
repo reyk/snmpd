@@ -389,3 +389,4 @@ snmpe_debug_elements(struct ber_element *root)
 		fprintf(stderr, "class: <INVALID>(%u) type: ", root->be_class);
 		break;
 	}
+	fprintf(stderr, "(%lu) encoding %lu ",
