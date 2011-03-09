@@ -391,3 +391,4 @@
  */
 #define MIB_ibm				MIB_enterprises, 2
 #define MIB_cmu				MIB_enterprises, 3
+#define MIB_unix			MIB_enterprises, 4
