@@ -391,3 +391,4 @@ struct usmuser {
 };
 
 struct snmpd {
+	u_int8_t		 sc_flags;
