@@ -391,3 +391,4 @@ ber_oid2ber(struct ber_oid *o, u_int8_t *buf, size_t len)
 	u_int32_t	 v;
 	u_int		 i, j = 0, k;
 
+	if (o->bo_n < BER_MIN_OID_LEN || o->bo_n > BER_MAX_OID_LEN ||
