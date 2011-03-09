@@ -391,3 +391,4 @@ kroute_remove(struct kroute_node *kr)
 			return (-1);
 		}
 		krm->next = kr->next;
+	}
