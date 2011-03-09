@@ -390,3 +390,4 @@ usm_encode(struct snmp_message *msg, struct ber_element *e)
 
 #ifdef DEBUG
 	fprintf(stderr, "encode USM parameters:\n");
+	snmpe_debug_elements(usm);
