@@ -392,3 +392,4 @@ usm_encode(struct snmp_message *msg, struct ber_element *e)
 	fprintf(stderr, "encode USM parameters:\n");
 	snmpe_debug_elements(usm);
 #endif
+	len = ber_write_elements(&ber, usm);
