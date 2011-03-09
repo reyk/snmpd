@@ -389,3 +389,4 @@ struct usmuser {
 
 	SLIST_ENTRY(usmuser)	 uu_next;
 };
+
