@@ -393,3 +393,4 @@
 #define MIB_cmu				MIB_enterprises, 3
 #define MIB_unix			MIB_enterprises, 4
 #define MIB_ciscoSystems		MIB_enterprises, 9
+#define MIB_hp				MIB_enterprises, 11
