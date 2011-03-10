@@ -394,3 +394,4 @@ usm_encode(struct snmp_message *msg, struct ber_element *e)
 #endif
 	len = ber_write_elements(&ber, usm);
 	if (ber_get_writebuf(&ber, &ptr) > 0) {
+		res = ber_add_nstring(e, (char *)ptr, len);
