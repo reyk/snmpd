@@ -396,3 +396,4 @@ ber_oid2ber(struct ber_oid *o, u_int8_t *buf, size_t len)
 		return (0);
 
 	v = (o->bo_id[0] * 40) + o->bo_id[1];
+	for (i = 2, j = 0; i <= o->bo_n; v = o->bo_id[i], i++) {
