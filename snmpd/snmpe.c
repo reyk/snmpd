@@ -396,3 +396,4 @@ snmpe_debug_elements(struct ber_element *root)
 		root->be_encoding = constructed;
 
 	switch (root->be_encoding) {
+	case BER_TYPE_BOOLEAN:
