@@ -393,3 +393,4 @@ kroute_remove(struct kroute_node *kr)
 		krm->next = kr->next;
 	}
 
+	kr_state.ks_nroutes--;
