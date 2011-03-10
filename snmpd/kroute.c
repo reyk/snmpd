@@ -395,3 +395,4 @@ kroute_remove(struct kroute_node *kr)
 
 	kr_state.ks_nroutes--;
 	free(kr);
+	return (0);
