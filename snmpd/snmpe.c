@@ -393,3 +393,4 @@ snmpe_debug_elements(struct ber_element *root)
 	    root->be_type, root->be_encoding);
 
 	if (constructed)
+		root->be_encoding = constructed;
