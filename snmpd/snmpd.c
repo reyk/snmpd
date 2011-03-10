@@ -393,3 +393,4 @@ tohexstr(u_int8_t *str, int len)
 	static char hstr[2 * MAXHEXSTRLEN + 1];
 	char *r = hstr;
 
+	if (len > MAXHEXSTRLEN)
