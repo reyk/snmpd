@@ -395,3 +395,4 @@
 #define MIB_ciscoSystems		MIB_enterprises, 9
 #define MIB_hp				MIB_enterprises, 11
 #define MIB_mit				MIB_enterprises, 20
+#define MIB_nortelNetworks		MIB_enterprises, 35
