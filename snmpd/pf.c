@@ -393,3 +393,4 @@ pfta_get_addr(struct pfr_astats *ras, int tblidx)
 		free(ba.pfrb_caddr);
 		return (-1);
 	}
+
