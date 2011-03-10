@@ -394,3 +394,4 @@ tohexstr(u_int8_t *str, int len)
 	char *r = hstr;
 
 	if (len > MAXHEXSTRLEN)
+		len = MAXHEXSTRLEN;	/* truncate */
