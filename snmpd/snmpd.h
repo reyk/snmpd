@@ -396,3 +396,4 @@ struct snmpd {
 #define SNMPD_F_NONAMES		 0x02
 
 	const char		*sc_confpath;
+	struct address		 sc_address;
