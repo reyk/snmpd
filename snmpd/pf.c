@@ -394,3 +394,4 @@ pfta_get_addr(struct pfr_astats *ras, int tblidx)
 		return (-1);
 	}
 
+	bcopy(as, ras, sizeof(struct pfr_astats));
