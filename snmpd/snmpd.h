@@ -395,3 +395,4 @@ struct snmpd {
 #define SNMPD_F_VERBOSE		 0x01
 #define SNMPD_F_NONAMES		 0x02
 
+	const char		*sc_confpath;
