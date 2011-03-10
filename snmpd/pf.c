@@ -395,3 +395,4 @@ pfta_get_addr(struct pfr_astats *ras, int tblidx)
 	}
 
 	bcopy(as, ras, sizeof(struct pfr_astats));
+	free(ba.pfrb_caddr);
