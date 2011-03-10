@@ -395,3 +395,4 @@ comma		: /* empty */
 		| ','
 		;
 
+seclevel	: NONE		{ $$ = 0; }
