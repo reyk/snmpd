@@ -398,3 +398,4 @@ comma		: /* empty */
 seclevel	: NONE		{ $$ = 0; }
 		| AUTH		{ $$ = SNMP_MSGFLAG_AUTH; }
 		| ENC		{ $$ = SNMP_MSGFLAG_AUTH | SNMP_MSGFLAG_PRIV; }
+		;
