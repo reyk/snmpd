@@ -400,3 +400,4 @@ seclevel	: NONE		{ $$ = 0; }
 		| ENC		{ $$ = SNMP_MSGFLAG_AUTH | SNMP_MSGFLAG_PRIV; }
 		;
 
+userspecs	: /* empty */
