@@ -399,3 +399,4 @@ ber_oid2ber(struct ber_oid *o, u_int8_t *buf, size_t len)
 	for (i = 2, j = 0; i <= o->bo_n; v = o->bo_id[i], i++) {
 		for (k = 28; k >= 7; k -= 7) {
 			if (v >= (u_int)(1 << k)) {
+				if (len)
