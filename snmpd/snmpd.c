@@ -397,3 +397,4 @@ tohexstr(u_int8_t *str, int len)
 		len = MAXHEXSTRLEN;	/* truncate */
 	while (len-- > 0)
 		r += snprintf(r, len * 2, "%0*x", 2, *str++);
+	*r = '\0';
