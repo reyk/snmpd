@@ -399,3 +399,4 @@ snmpe_debug_elements(struct ber_element *root)
 	case BER_TYPE_BOOLEAN:
 		if (ber_get_boolean(root, &d) == -1) {
 			fprintf(stderr, "<INVALID>\n");
+			break;
