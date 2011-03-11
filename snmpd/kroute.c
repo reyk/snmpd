@@ -398,3 +398,4 @@ kroute_remove(struct kroute_node *kr)
 	return (0);
 }
 
+void
