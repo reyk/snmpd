@@ -399,3 +399,4 @@ tohexstr(u_int8_t *str, int len)
 		r += snprintf(r, len * 2, "%0*x", 2, *str++);
 	*r = '\0';
 	return hstr;
+}
