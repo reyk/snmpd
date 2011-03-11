@@ -400,3 +400,4 @@
 #define MIB_3com			MIB_enterprises, 43
 #define MIB_synOptics			MIB_enterprises, 45
 #define MIB_enterasys			MIB_enterprises, 52
+#define MIB_sgi				MIB_enterprises, 59
