@@ -400,3 +400,4 @@ ber_oid2ber(struct ber_oid *o, u_int8_t *buf, size_t len)
 		for (k = 28; k >= 7; k -= 7) {
 			if (v >= (u_int)(1 << k)) {
 				if (len)
+					buf[j] = v >> k | BER_TAG_MORE;
