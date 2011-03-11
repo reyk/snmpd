@@ -398,3 +398,4 @@ usm_encode(struct snmp_message *msg, struct ber_element *e)
 		if (digestlen > 0)
 			ber_set_writecallback(res, usm_cb_digest, msg);
 	}
+
