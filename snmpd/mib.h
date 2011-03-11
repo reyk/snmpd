@@ -397,3 +397,4 @@
 #define MIB_mit				MIB_enterprises, 20
 #define MIB_nortelNetworks		MIB_enterprises, 35
 #define MIB_sun				MIB_enterprises, 42
+#define MIB_3com			MIB_enterprises, 43
