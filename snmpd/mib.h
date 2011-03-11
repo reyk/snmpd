@@ -398,3 +398,4 @@
 #define MIB_nortelNetworks		MIB_enterprises, 35
 #define MIB_sun				MIB_enterprises, 42
 #define MIB_3com			MIB_enterprises, 43
+#define MIB_synOptics			MIB_enterprises, 45
