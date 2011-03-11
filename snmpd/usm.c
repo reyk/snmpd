@@ -399,3 +399,4 @@ usm_encode(struct snmp_message *msg, struct ber_element *e)
 			ber_set_writecallback(res, usm_cb_digest, msg);
 	}
 
+done:
