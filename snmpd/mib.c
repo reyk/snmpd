@@ -399,3 +399,4 @@ mib_usmstats(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 			    SNMP_T_COUNTER32);
 			return (0);
 		}
+	}
