@@ -399,3 +399,4 @@ struct snmpd {
 	struct address		 sc_address;
 	int			 sc_sock;
 	struct event		 sc_ev;
+	struct timeval		 sc_starttime;
