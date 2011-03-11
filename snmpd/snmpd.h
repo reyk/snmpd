@@ -400,3 +400,4 @@ struct snmpd {
 	int			 sc_sock;
 	struct event		 sc_ev;
 	struct timeval		 sc_starttime;
+	u_int32_t		 sc_engine_boots;
