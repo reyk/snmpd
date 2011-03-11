@@ -397,3 +397,4 @@ struct snmpd {
 
 	const char		*sc_confpath;
 	struct address		 sc_address;
+	int			 sc_sock;
