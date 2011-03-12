@@ -402,3 +402,4 @@ void
 kroute_clear(void)
 {
 	struct kroute_node	*kr;
+
