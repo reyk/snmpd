@@ -402,3 +402,4 @@ ber_oid2ber(struct ber_oid *o, u_int8_t *buf, size_t len)
 				if (len)
 					buf[j] = v >> k | BER_TAG_MORE;
 				j++;
+			}
