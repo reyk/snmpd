@@ -403,3 +403,4 @@ struct snmpd {
 	u_int32_t		 sc_engine_boots;
 
 	struct control_sock	 sc_csock;
+	struct control_sock	 sc_rcsock;
