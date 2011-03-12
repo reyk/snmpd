@@ -402,3 +402,4 @@ seclevel	: NONE		{ $$ = 0; }
 
 userspecs	: /* empty */
 		| userspecs userspec
+		;
