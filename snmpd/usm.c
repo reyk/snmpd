@@ -402,3 +402,4 @@ usm_encode(struct snmp_message *msg, struct ber_element *e)
 done:
 	ber_free(&ber);
 	ber_free_elements(usm);
+	return res;
