@@ -403,3 +403,4 @@ snmpe_debug_elements(struct ber_element *root)
 		}
 		fprintf(stderr, "%s(%d)\n", d ? "true" : "false", d);
 		break;
+	case BER_TYPE_INTEGER:
