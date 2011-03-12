@@ -401,3 +401,4 @@ kroute_remove(struct kroute_node *kr)
 void
 kroute_clear(void)
 {
+	struct kroute_node	*kr;
