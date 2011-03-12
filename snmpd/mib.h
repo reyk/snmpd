@@ -403,3 +403,4 @@
 #define MIB_sgi				MIB_enterprises, 59
 #define MIB_apple			MIB_enterprises, 63
 #define MIB_nasa			MIB_enterprises, 71
+#define MIB_att				MIB_enterprises, 74
