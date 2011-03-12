@@ -403,3 +403,4 @@ done:
 	ber_free(&ber);
 	ber_free_elements(usm);
 	return res;
+}
