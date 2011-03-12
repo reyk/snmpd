@@ -404,3 +404,4 @@ userspecs	: /* empty */
 		| userspecs userspec
 		;
 
+userspec	: AUTHKEY STRING		{
