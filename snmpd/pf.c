@@ -401,3 +401,4 @@ pfta_get_addr(struct pfr_astats *ras, int tblidx)
 }
 
 int
+pfta_get_nextaddr(struct pfr_astats *ras, int *tblidx)
