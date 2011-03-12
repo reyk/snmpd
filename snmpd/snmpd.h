@@ -404,3 +404,4 @@ struct snmpd {
 
 	struct control_sock	 sc_csock;
 	struct control_sock	 sc_rcsock;
+
