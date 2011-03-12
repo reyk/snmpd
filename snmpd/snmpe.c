@@ -402,3 +402,4 @@ snmpe_debug_elements(struct ber_element *root)
 			break;
 		}
 		fprintf(stderr, "%s(%d)\n", d ? "true" : "false", d);
+		break;
