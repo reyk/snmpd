@@ -405,3 +405,4 @@ userspecs	: /* empty */
 		;
 
 userspec	: AUTHKEY STRING		{
+			user->uu_authkey = $2;
