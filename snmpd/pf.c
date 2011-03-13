@@ -407,3 +407,4 @@ pfta_get_nextaddr(struct pfr_astats *ras, int *tblidx)
 	struct pfr_tstats	 ts;
 	struct pfr_table	 filter;
 	const struct pfr_astats	*as;
+	int			 i, found = 0;
