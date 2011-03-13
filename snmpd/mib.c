@@ -407,3 +407,4 @@ mib_usmstats(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
  * Defined in HOST-RESOURCES-MIB.txt (RFC 2790)
  */
 
+int	 mib_hrsystemuptime(struct oid *, struct ber_oid *, struct ber_element **);
