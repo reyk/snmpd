@@ -405,3 +405,4 @@
 #define MIB_nasa			MIB_enterprises, 71
 #define MIB_att				MIB_enterprises, 74
 #define MIB_nokia			MIB_enterprises, 94
+#define MIB_cern			MIB_enterprises, 96
