@@ -407,3 +407,4 @@ snmpe_debug_elements(struct ber_element *root)
 	case BER_TYPE_ENUMERATED:
 		if (ber_get_integer(root, &v) == -1) {
 			fprintf(stderr, "<INVALID>\n");
+			break;
