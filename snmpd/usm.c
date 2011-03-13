@@ -408,3 +408,4 @@ done:
 void
 usm_cb_digest(void *arg, size_t offs)
 {
+	struct snmp_message *msg = arg;
