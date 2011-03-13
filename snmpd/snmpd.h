@@ -405,3 +405,4 @@ struct snmpd {
 	struct control_sock	 sc_csock;
 	struct control_sock	 sc_rcsock;
 
+	char			 sc_rdcommunity[SNMPD_MAXCOMMUNITYLEN];
