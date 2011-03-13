@@ -408,3 +408,4 @@ userspec	: AUTHKEY STRING		{
 			user->uu_authkey = $2;
 		}
 		| AUTH auth			{
+			user->uu_auth = $2;
