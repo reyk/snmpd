@@ -407,3 +407,4 @@
 #define MIB_nokia			MIB_enterprises, 94
 #define MIB_cern			MIB_enterprises, 96
 #define MIB_oracle			MIB_enterprises, 111
+#define MIB_motorola			MIB_enterprises, 161
