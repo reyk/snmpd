@@ -406,3 +406,4 @@ kroute_clear(void)
 	while ((kr = RB_MIN(kroute_tree, &krt)) != NULL)
 		kroute_remove(kr);
 }
+
