@@ -407,3 +407,4 @@ kroute_clear(void)
 		kroute_remove(kr);
 }
 
+struct kroute6_node *
