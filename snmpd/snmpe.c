@@ -405,3 +405,4 @@ snmpe_debug_elements(struct ber_element *root)
 		break;
 	case BER_TYPE_INTEGER:
 	case BER_TYPE_ENUMERATED:
+		if (ber_get_integer(root, &v) == -1) {
