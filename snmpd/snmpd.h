@@ -408,3 +408,4 @@ struct snmpd {
 	char			 sc_rdcommunity[SNMPD_MAXCOMMUNITYLEN];
 	char			 sc_rwcommunity[SNMPD_MAXCOMMUNITYLEN];
 	char			 sc_trcommunity[SNMPD_MAXCOMMUNITYLEN];
+
