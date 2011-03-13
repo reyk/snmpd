@@ -406,3 +406,4 @@
 #define MIB_att				MIB_enterprises, 74
 #define MIB_nokia			MIB_enterprises, 94
 #define MIB_cern			MIB_enterprises, 96
+#define MIB_oracle			MIB_enterprises, 111
