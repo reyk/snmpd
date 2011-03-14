@@ -412,3 +412,4 @@ usm_cb_digest(void *arg, size_t offs)
 	msg->sm_digest_offs += offs;
 }
 
+struct ber_element *
