@@ -409,3 +409,4 @@
 #define MIB_oracle			MIB_enterprises, 111
 #define MIB_motorola			MIB_enterprises, 161
 #define MIB_ncr				MIB_enterprises, 191
+#define MIB_ericsson			MIB_enterprises, 193
