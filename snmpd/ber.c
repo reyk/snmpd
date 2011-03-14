@@ -412,3 +412,4 @@ ber_oid2ber(struct ber_oid *o, u_int8_t *buf, size_t len)
 	return (j);
 }
 
+int
