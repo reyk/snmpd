@@ -409,3 +409,4 @@ snmpe_debug_elements(struct ber_element *root)
 			fprintf(stderr, "<INVALID>\n");
 			break;
 		}
+		fprintf(stderr, "value %lld\n", v);
