@@ -412,3 +412,4 @@ snmpe_debug_elements(struct ber_element *root)
 		fprintf(stderr, "value %lld\n", v);
 		break;
 	case BER_TYPE_BITSTRING:
+		if (ber_get_bitstring(root, (void *)&buf, &len) == -1) {
