@@ -411,3 +411,4 @@ pfta_get_nextaddr(struct pfr_astats *ras, int *tblidx)
 
 	ba.pfrb_caddr = NULL;
 
+	for (i = *tblidx; !pft_get_table(&ts, i); i++) {
