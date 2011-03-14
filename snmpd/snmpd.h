@@ -410,3 +410,4 @@ struct snmpd {
 	char			 sc_trcommunity[SNMPD_MAXCOMMUNITYLEN];
 
 	char			 sc_engineid[SNMPD_MAXENGINEIDLEN];
+	size_t			 sc_engineid_len;
