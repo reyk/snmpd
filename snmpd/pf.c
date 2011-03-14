@@ -410,3 +410,4 @@ pfta_get_nextaddr(struct pfr_astats *ras, int *tblidx)
 	int			 i, found = 0;
 
 	ba.pfrb_caddr = NULL;
+
