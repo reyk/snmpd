@@ -412,3 +412,4 @@ userspec	: AUTHKEY STRING		{
 		}
 		| ENCKEY STRING			{
 			user->uu_privkey = $2;
+		}
