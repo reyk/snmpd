@@ -409,3 +409,4 @@ userspec	: AUTHKEY STRING		{
 		}
 		| AUTH auth			{
 			user->uu_auth = $2;
+		}
