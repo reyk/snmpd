@@ -410,3 +410,4 @@ userspec	: AUTHKEY STRING		{
 		| AUTH auth			{
 			user->uu_auth = $2;
 		}
+		| ENCKEY STRING			{
