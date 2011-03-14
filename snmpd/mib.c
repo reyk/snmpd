@@ -410,3 +410,4 @@ mib_usmstats(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 int	 mib_hrsystemuptime(struct oid *, struct ber_oid *, struct ber_element **);
 int	 mib_hrsystemdate(struct oid *, struct ber_oid *, struct ber_element **);
 int	 mib_hrsystemprocs(struct oid *, struct ber_oid *, struct ber_element **);
+int	 mib_hrmemory(struct oid *, struct ber_oid *, struct ber_element **);
