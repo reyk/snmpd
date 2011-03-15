@@ -413,3 +413,4 @@ usm_cb_digest(void *arg, size_t offs)
 }
 
 struct ber_element *
+usm_encrypt(struct snmp_message *msg, struct ber_element *pdu)
