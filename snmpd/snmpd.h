@@ -416,3 +416,4 @@ struct snmpd {
 
 	struct addresslist	 sc_trapreceivers;
 
+	int			 sc_ncpu;
