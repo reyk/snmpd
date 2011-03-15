@@ -414,3 +414,4 @@ snmpe_debug_elements(struct ber_element *root)
 	case BER_TYPE_BITSTRING:
 		if (ber_get_bitstring(root, (void *)&buf, &len) == -1) {
 			fprintf(stderr, "<INVALID>\n");
+			break;
