@@ -413,3 +413,4 @@ int	 mib_hrsystemprocs(struct oid *, struct ber_oid *, struct ber_element **);
 int	 mib_hrmemory(struct oid *, struct ber_oid *, struct ber_element **);
 int	 mib_hrstorage(struct oid *, struct ber_oid *, struct ber_element **);
 int	 mib_hrdevice(struct oid *, struct ber_oid *, struct ber_element **);
+int	 mib_hrprocessor(struct oid *, struct ber_oid *, struct ber_element **);
