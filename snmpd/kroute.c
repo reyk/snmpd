@@ -415,3 +415,4 @@ kroute6_find(const struct in6_addr *prefix, u_int8_t prefixlen, u_int8_t prio)
 
 	memcpy(&s.r.prefix, prefix, sizeof(struct in6_addr));
 	s.r.prefixlen = prefixlen;
+	s.r.priority = prio;
