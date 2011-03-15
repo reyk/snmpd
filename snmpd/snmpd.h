@@ -413,3 +413,4 @@ struct snmpd {
 	size_t			 sc_engineid_len;
 
 	struct snmp_stats	 sc_stats;
+
