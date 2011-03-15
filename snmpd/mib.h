@@ -414,3 +414,4 @@
 #define MIB_compaq			MIB_enterprises, 232
 #define MIB_bmw				MIB_enterprises, 513
 #define MIB_dell			MIB_enterprises, 674
+#define MIB_iij				MIB_enterprises, 770
