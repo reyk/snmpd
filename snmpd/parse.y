@@ -415,3 +415,4 @@ userspec	: AUTHKEY STRING		{
 		}
 		| ENC enc			{
 			user->uu_priv = $2;
+		}
