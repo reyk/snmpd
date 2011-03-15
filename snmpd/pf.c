@@ -416,3 +416,4 @@ pfta_get_nextaddr(struct pfr_astats *ras, int *tblidx)
 		if (strlcpy(filter.pfrt_name, ts.pfrts_name,
 		    sizeof(filter.pfrt_name)) >= sizeof(filter.pfrt_name))
 			goto fail;
+
