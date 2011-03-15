@@ -415,3 +415,4 @@
 #define MIB_bmw				MIB_enterprises, 513
 #define MIB_dell			MIB_enterprises, 674
 #define MIB_iij				MIB_enterprises, 770
+#define MIB_sandia			MIB_enterprises, 1400
