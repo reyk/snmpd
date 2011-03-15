@@ -415,3 +415,4 @@ struct snmpd {
 	struct snmp_stats	 sc_stats;
 
 	struct addresslist	 sc_trapreceivers;
+
