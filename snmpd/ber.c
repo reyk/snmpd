@@ -413,3 +413,4 @@ ber_oid2ber(struct ber_oid *o, u_int8_t *buf, size_t len)
 }
 
 int
+ber_string2oid(const char *oidstr, struct ber_oid *o)
