@@ -417,3 +417,4 @@
 #define MIB_iij				MIB_enterprises, 770
 #define MIB_sandia			MIB_enterprises, 1400
 #define MIB_mercedesBenz		MIB_enterprises, 1635
+#define MIB_alteon			MIB_enterprises, 1872
