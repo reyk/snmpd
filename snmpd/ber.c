@@ -418,3 +418,4 @@ ber_string2oid(const char *oidstr, struct ber_oid *o)
 	char			*sp, *p, str[BUFSIZ];
 	const char		*errstr;
 
+	if (strlcpy(str, oidstr, sizeof(str)) >= sizeof(str))
