@@ -420,3 +420,4 @@ ber_string2oid(const char *oidstr, struct ber_oid *o)
 
 	if (strlcpy(str, oidstr, sizeof(str)) >= sizeof(str))
 		return (-1);
+	bzero(o, sizeof(*o));
