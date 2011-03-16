@@ -417,3 +417,4 @@ kroute6_find(const struct in6_addr *prefix, u_int8_t prefixlen, u_int8_t prio)
 	s.r.prefixlen = prefixlen;
 	s.r.priority = prio;
 
+	kn6 = RB_FIND(kroute6_tree, &krt6, &s);
