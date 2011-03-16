@@ -420,3 +420,4 @@
 #define MIB_alteon			MIB_enterprises, 1872
 #define MIB_extremeNetworks		MIB_enterprises, 1916
 #define MIB_foundryNetworks		MIB_enterprises, 1991
+#define MIB_huawaiTechnology		MIB_enterprises, 2011
