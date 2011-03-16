@@ -418,3 +418,4 @@ userspec	: AUTHKEY STRING		{
 		}
 		;
 
+auth		: STRING			{
