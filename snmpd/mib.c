@@ -417,3 +417,4 @@ int	 mib_hrprocessor(struct oid *, struct ber_oid *, struct ber_element **);
 int	 mib_hrswrun(struct oid *, struct ber_oid *, struct ber_element **);
 
 int	 kinfo_proc_comp(const void *, const void *);
+int	 kinfo_proc(u_int32_t, struct kinfo_proc **);
