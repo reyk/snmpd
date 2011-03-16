@@ -419,3 +419,4 @@
 #define MIB_mercedesBenz		MIB_enterprises, 1635
 #define MIB_alteon			MIB_enterprises, 1872
 #define MIB_extremeNetworks		MIB_enterprises, 1916
+#define MIB_foundryNetworks		MIB_enterprises, 1991
