@@ -417,3 +417,4 @@ snmpe_debug_elements(struct ber_element *root)
 			break;
 		}
 		fprintf(stderr, "hexdump ");
+		for (i = 0; i < len; i++)
