@@ -419,3 +419,4 @@ usm_encrypt(struct snmp_message *msg, struct ber_element *pdu)
 	struct ber_element	*encrpdu = NULL;
 	void			*ptr;
 	int			 len;
+	ssize_t			 elen;
