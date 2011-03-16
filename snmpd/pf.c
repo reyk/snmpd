@@ -418,3 +418,4 @@ pfta_get_nextaddr(struct pfr_astats *ras, int *tblidx)
 			goto fail;
 
 		if (pfta_get(&ba, &filter) || ba.pfrb_size == 0)
+			goto fail;
