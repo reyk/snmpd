@@ -420,3 +420,4 @@ int	 kinfo_proc_comp(const void *, const void *);
 int	 kinfo_proc(u_int32_t, struct kinfo_proc **);
 int	 kinfo_args(struct kinfo_proc *, char **);
 
+static struct oid hr_mib[] = {
