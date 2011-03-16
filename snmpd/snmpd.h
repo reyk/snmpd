@@ -418,3 +418,4 @@ struct snmpd {
 
 	int			 sc_ncpu;
 	int64_t			*sc_cpustates;
+	int			 sc_rtfilter;
