@@ -419,3 +419,4 @@ snmpe_debug_elements(struct ber_element *root)
 		fprintf(stderr, "hexdump ");
 		for (i = 0; i < len; i++)
 			fprintf(stderr, "%02x", buf[i]);
+		fprintf(stderr, "\n");
