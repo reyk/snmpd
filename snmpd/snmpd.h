@@ -420,3 +420,4 @@ struct snmpd {
 	int64_t			*sc_cpustates;
 	int			 sc_rtfilter;
 
+	int			 sc_min_seclevel;
