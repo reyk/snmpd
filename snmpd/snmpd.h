@@ -423,3 +423,4 @@ struct snmpd {
 	int			 sc_min_seclevel;
 	int			 sc_readonly;
 };
+
