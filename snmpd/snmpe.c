@@ -422,3 +422,4 @@ snmpe_debug_elements(struct ber_element *root)
 		fprintf(stderr, "\n");
 		break;
 	case BER_TYPE_OBJECT:
+		if (ber_get_oid(root, &o) == -1) {
