@@ -421,3 +421,4 @@ userspec	: AUTHKEY STRING		{
 auth		: STRING			{
 			if (strcasecmp($1, "hmac-md5") == 0 ||
 			    strcasecmp($1, "hmac-md5-96") == 0)
+				$$ = AUTH_MD5;
