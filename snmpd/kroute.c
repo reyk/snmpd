@@ -421,3 +421,4 @@ kroute6_find(const struct in6_addr *prefix, u_int8_t prefixlen, u_int8_t prio)
 	if (kn6 && prio == RTP_ANY) {
 		tmp = RB_PREV(kroute6_tree, &krt6, kn6);
 		while (tmp) {
+			if (kroute6_compare(&s, tmp) == 0)
