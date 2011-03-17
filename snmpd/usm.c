@@ -423,3 +423,4 @@ usm_encrypt(struct snmp_message *msg, struct ber_element *pdu)
 	u_char			 encbuf[READ_BUF_SIZE];
 
 	if (!MSG_HAS_PRIV(msg))
+		return pdu;
