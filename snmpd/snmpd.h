@@ -421,3 +421,4 @@ struct snmpd {
 	int			 sc_rtfilter;
 
 	int			 sc_min_seclevel;
+	int			 sc_readonly;
