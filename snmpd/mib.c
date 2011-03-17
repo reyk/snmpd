@@ -424,3 +424,4 @@ static struct oid hr_mib[] = {
 	{ MIB(host),				OID_MIB },
 	{ MIB(hrSystemUptime),			OID_RD, mib_hrsystemuptime },
 	{ MIB(hrSystemDate),			OID_RD, mib_hrsystemdate },
+	{ MIB(hrSystemProcesses),		OID_RD, mib_hrsystemprocs },
