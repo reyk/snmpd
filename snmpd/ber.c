@@ -422,3 +422,4 @@ ber_string2oid(const char *oidstr, struct ber_oid *o)
 		return (-1);
 	bzero(o, sizeof(*o));
 
+	/* Parse OID strings in the common forms n.n.n, n_n_n_n, or n-n-n */
