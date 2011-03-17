@@ -423,3 +423,4 @@
 #define MIB_huawaiTechnology		MIB_enterprises, 2011
 #define MIB_ucDavis			MIB_enterprises, 2021
 #define MIB_checkPoint			MIB_enterprises, 2620
+#define MIB_juniper			MIB_enterprises, 2636
