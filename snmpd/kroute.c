@@ -424,3 +424,4 @@ kroute6_find(const struct in6_addr *prefix, u_int8_t prefixlen, u_int8_t prio)
 			if (kroute6_compare(&s, tmp) == 0)
 				kn6 = tmp;
 			else
+				break;
