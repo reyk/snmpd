@@ -424,3 +424,4 @@ struct snmpd {
 	int			 sc_readonly;
 };
 
+/* control.c */
