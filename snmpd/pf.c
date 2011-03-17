@@ -422,3 +422,4 @@ pfta_get_nextaddr(struct pfr_astats *ras, int *tblidx)
 
 		PFRB_FOREACH(as, &ba) {
 			if (found)
+				goto found;
