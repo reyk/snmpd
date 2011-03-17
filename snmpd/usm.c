@@ -421,3 +421,4 @@ usm_encrypt(struct snmp_message *msg, struct ber_element *pdu)
 	int			 len;
 	ssize_t			 elen;
 	u_char			 encbuf[READ_BUF_SIZE];
+
