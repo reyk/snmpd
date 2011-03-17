@@ -424,3 +424,4 @@ pfta_get_nextaddr(struct pfr_astats *ras, int *tblidx)
 			if (found)
 				goto found;
 			if (as->pfras_a.pfra_af != AF_INET)
+				continue;
