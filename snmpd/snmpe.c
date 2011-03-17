@@ -421,3 +421,4 @@ snmpe_debug_elements(struct ber_element *root)
 			fprintf(stderr, "%02x", buf[i]);
 		fprintf(stderr, "\n");
 		break;
+	case BER_TYPE_OBJECT:
