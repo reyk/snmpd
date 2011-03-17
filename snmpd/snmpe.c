@@ -424,3 +424,4 @@ snmpe_debug_elements(struct ber_element *root)
 	case BER_TYPE_OBJECT:
 		if (ber_get_oid(root, &o) == -1) {
 			fprintf(stderr, "<INVALID>\n");
+			break;
