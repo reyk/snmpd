@@ -425,3 +425,4 @@
 #define MIB_checkPoint			MIB_enterprises, 2620
 #define MIB_juniper			MIB_enterprises, 2636
 #define MIB_audi			MIB_enterprises, 3195
+#define MIB_volkswagen			MIB_enterprises, 3210
