@@ -427,3 +427,4 @@ kroute6_find(const struct in6_addr *prefix, u_int8_t prefixlen, u_int8_t prio)
 				break;
 			tmp = RB_PREV(kroute6_tree, &krt6, kn6);
 		}
+	}
