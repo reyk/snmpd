@@ -426,3 +426,4 @@ pfta_get_nextaddr(struct pfr_astats *ras, int *tblidx)
 			if (as->pfras_a.pfra_af != AF_INET)
 				continue;
 			if ((memcmp(&as->pfras_a.pfra_ip4addr,
+			    &ras->pfras_a.pfra_ip4addr,
