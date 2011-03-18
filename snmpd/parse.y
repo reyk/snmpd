@@ -428,3 +428,4 @@ auth		: STRING			{
 			else {
 				yyerror("syntax error, bad auth hmac");
 				free($1);
+				YYERROR;
