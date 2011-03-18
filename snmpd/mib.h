@@ -428,3 +428,4 @@
 #define MIB_volkswagen			MIB_enterprises, 3210
 #define MIB_genua			MIB_enterprises, 3717
 #define MIB_amazon			MIB_enterprises, 4843
+#define MIB_force10Networks		MIB_enterprises, 6027
