@@ -426,3 +426,4 @@ struct snmpd {
 
 /* control.c */
 int		 control_init(struct control_sock *);
+int		 control_listen(struct control_sock *);
