@@ -425,3 +425,4 @@ snmpe_debug_elements(struct ber_element *root)
 		if (ber_get_oid(root, &o) == -1) {
 			fprintf(stderr, "<INVALID>\n");
 			break;
+		}
