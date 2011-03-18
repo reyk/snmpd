@@ -426,3 +426,4 @@ auth		: STRING			{
 			     strcasecmp($1, "hmac-sha1-96") == 0)
 				$$ = AUTH_SHA1;
 			else {
+				yyerror("syntax error, bad auth hmac");
