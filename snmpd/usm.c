@@ -427,3 +427,4 @@ usm_encrypt(struct snmp_message *msg, struct ber_element *pdu)
 
 	bzero(&ber, sizeof(ber));
 	ber.fd = -1;
+
