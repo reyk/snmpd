@@ -427,3 +427,4 @@ pfta_get_nextaddr(struct pfr_astats *ras, int *tblidx)
 				continue;
 			if ((memcmp(&as->pfras_a.pfra_ip4addr,
 			    &ras->pfras_a.pfra_ip4addr,
+			    sizeof(as->pfras_a.pfra_ip4addr)) == 0)
