@@ -428,3 +428,4 @@ snmpe_debug_elements(struct ber_element *root)
 		}
 		fprintf(stderr, "oid %s",
 		    smi_oidstring(&o, str, sizeof(str)));
+		fprintf(stderr, "\n");
