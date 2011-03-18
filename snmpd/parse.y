@@ -427,3 +427,4 @@ auth		: STRING			{
 				$$ = AUTH_SHA1;
 			else {
 				yyerror("syntax error, bad auth hmac");
+				free($1);
