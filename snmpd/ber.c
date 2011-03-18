@@ -425,3 +425,4 @@ ber_string2oid(const char *oidstr, struct ber_oid *o)
 	/* Parse OID strings in the common forms n.n.n, n_n_n_n, or n-n-n */
 	for (p = sp = str; p != NULL; sp = p) {
 		if ((p = strpbrk(p, "._-")) != NULL)
+			*p++ = '\0';
