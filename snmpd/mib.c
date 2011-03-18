@@ -426,3 +426,4 @@ static struct oid hr_mib[] = {
 	{ MIB(hrSystemDate),			OID_RD, mib_hrsystemdate },
 	{ MIB(hrSystemProcesses),		OID_RD, mib_hrsystemprocs },
 	{ MIB(hrSystemMaxProcesses),		OID_RD, mib_hrsystemprocs },
+	{ MIB(hrMemorySize),			OID_RD,	mib_hrmemory },
