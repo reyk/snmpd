@@ -427,3 +427,4 @@ ber_string2oid(const char *oidstr, struct ber_oid *o)
 		if ((p = strpbrk(p, "._-")) != NULL)
 			*p++ = '\0';
 		o->bo_id[o->bo_n++] = strtonum(sp, 0, UINT_MAX, &errstr);
+		if (errstr || o->bo_n > BER_MAX_OID_LEN)
