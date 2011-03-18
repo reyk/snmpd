@@ -425,3 +425,4 @@ struct snmpd {
 };
 
 /* control.c */
+int		 control_init(struct control_sock *);
