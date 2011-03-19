@@ -431,3 +431,4 @@
 #define MIB_force10Networks		MIB_enterprises, 6027
 #define MIB_vMware			MIB_enterprises, 6876
 #define MIB_alcatelLucent		MIB_enterprises, 7483
+#define MIB_snom			MIB_enterprises, 7526
