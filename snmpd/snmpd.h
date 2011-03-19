@@ -432,3 +432,4 @@ void		 control_dispatch_imsg(int, short, void *);
 void		 control_imsg_forward(struct imsg *);
 void		 control_cleanup(struct control_sock *);
 
+void		 session_socket_blockmode(int, enum blockmodes);
