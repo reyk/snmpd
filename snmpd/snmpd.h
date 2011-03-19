@@ -429,3 +429,4 @@ int		 control_init(struct control_sock *);
 int		 control_listen(struct control_sock *);
 void		 control_accept(int, short, void *);
 void		 control_dispatch_imsg(int, short, void *);
+void		 control_imsg_forward(struct imsg *);
