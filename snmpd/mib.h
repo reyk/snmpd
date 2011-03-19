@@ -430,3 +430,4 @@
 #define MIB_amazon			MIB_enterprises, 4843
 #define MIB_force10Networks		MIB_enterprises, 6027
 #define MIB_vMware			MIB_enterprises, 6876
+#define MIB_alcatelLucent		MIB_enterprises, 7483
