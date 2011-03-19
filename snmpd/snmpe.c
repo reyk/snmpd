@@ -430,3 +430,4 @@ snmpe_debug_elements(struct ber_element *root)
 		    smi_oidstring(&o, str, sizeof(str)));
 		fprintf(stderr, "\n");
 		break;
+	case BER_TYPE_OCTETSTRING:
