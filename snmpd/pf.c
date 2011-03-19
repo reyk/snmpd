@@ -431,3 +431,4 @@ pfta_get_nextaddr(struct pfr_astats *ras, int *tblidx)
 			    && (as->pfras_a.pfra_net == ras->pfras_a.pfra_net))
 				found = 1;
 		}
+	}
