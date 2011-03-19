@@ -430,3 +430,4 @@ pfta_get_nextaddr(struct pfr_astats *ras, int *tblidx)
 			    sizeof(as->pfras_a.pfra_ip4addr)) == 0)
 			    && (as->pfras_a.pfra_net == ras->pfras_a.pfra_net))
 				found = 1;
+		}
