@@ -431,3 +431,4 @@ kroute6_find(const struct in6_addr *prefix, u_int8_t prefixlen, u_int8_t prio)
 	return (kn6);
 }
 
+struct kroute6_node *
