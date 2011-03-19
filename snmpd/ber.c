@@ -430,3 +430,4 @@ ber_string2oid(const char *oidstr, struct ber_oid *o)
 		if (errstr || o->bo_n > BER_MAX_OID_LEN)
 			return (-1);
 	}
+
