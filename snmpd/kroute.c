@@ -432,3 +432,4 @@ kroute6_find(const struct in6_addr *prefix, u_int8_t prefixlen, u_int8_t prio)
 }
 
 struct kroute6_node *
+kroute6_matchgw(struct kroute6_node *kr, struct sockaddr_in6 *sa_in6)
