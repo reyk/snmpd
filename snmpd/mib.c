@@ -429,3 +429,4 @@ static struct oid hr_mib[] = {
 	{ MIB(hrMemorySize),			OID_RD,	mib_hrmemory },
 	{ MIB(hrStorageIndex),			OID_TRD, mib_hrstorage },
 	{ MIB(hrStorageType),			OID_TRD, mib_hrstorage },
+	{ MIB(hrStorageDescr),			OID_TRD, mib_hrstorage },
