@@ -432,3 +432,4 @@ auth		: STRING			{
 			}
 			free($1);
 		}
+		;
