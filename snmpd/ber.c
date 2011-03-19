@@ -431,3 +431,4 @@ ber_string2oid(const char *oidstr, struct ber_oid *o)
 			return (-1);
 	}
 
+	return (0);
