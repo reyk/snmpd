@@ -429,3 +429,4 @@ usm_encrypt(struct snmp_message *msg, struct ber_element *pdu)
 	ber.fd = -1;
 
 #ifdef DEBUG
+	fprintf(stderr, "encrypted PDU:\n");
