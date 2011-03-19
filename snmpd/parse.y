@@ -431,3 +431,4 @@ auth		: STRING			{
 				YYERROR;
 			}
 			free($1);
+		}
