@@ -431,3 +431,4 @@ snmpe_debug_elements(struct ber_element *root)
 		fprintf(stderr, "\n");
 		break;
 	case BER_TYPE_OCTETSTRING:
+		if (ber_get_string(root, &buf) == -1) {
