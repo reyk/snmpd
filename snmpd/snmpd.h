@@ -435,3 +435,4 @@ void		 control_cleanup(struct control_sock *);
 void		 session_socket_blockmode(int, enum blockmodes);
 
 /* parse.y */
+struct snmpd	*parse_config(const char *, u_int);
