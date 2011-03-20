@@ -434,3 +434,4 @@ usm_encrypt(struct snmp_message *msg, struct ber_element *pdu)
 #endif
 
 	len = ber_write_elements(&ber, pdu);
+	if (ber_get_writebuf(&ber, &ptr) > 0) {
