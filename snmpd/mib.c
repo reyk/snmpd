@@ -433,3 +433,4 @@ static struct oid hr_mib[] = {
 	{ MIB(hrStorageAllocationUnits),	OID_TRD, mib_hrstorage },
 	{ MIB(hrStorageSize),			OID_TRD, mib_hrstorage },
 	{ MIB(hrStorageUsed),			OID_TRD, mib_hrstorage },
+	{ MIB(hrStorageAllocationFailures),	OID_TRD, mib_hrstorage },
