@@ -435,3 +435,4 @@ auth		: STRING			{
 		;
 
 enc		: STRING			{
+			if (strcasecmp($1, "des") == 0 ||
