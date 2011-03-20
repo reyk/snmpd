@@ -435,3 +435,4 @@ snmpe_debug_elements(struct ber_element *root)
 			fprintf(stderr, "<INVALID>\n");
 			break;
 		}
+		if (root->be_class == BER_CLASS_APPLICATION &&
