@@ -434,3 +434,4 @@ auth		: STRING			{
 		}
 		;
 
+enc		: STRING			{
