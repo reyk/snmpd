@@ -434,3 +434,4 @@ ber_string2oid(const char *oidstr, struct ber_oid *o)
 	return (0);
 }
 
+struct ber_element *
