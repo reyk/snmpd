@@ -436,3 +436,4 @@ ber_string2oid(const char *oidstr, struct ber_oid *o)
 
 struct ber_element *
 ber_add_oid(struct ber_element *prev, struct ber_oid *o)
+{
