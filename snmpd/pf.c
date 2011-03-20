@@ -434,3 +434,4 @@ pfta_get_nextaddr(struct pfr_astats *ras, int *tblidx)
 	}
 
 
+ fail:
