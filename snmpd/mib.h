@@ -436,3 +436,4 @@
 #define MIB_f5Networks			MIB_enterprises, 12276
 #define MIB_sFlow			MIB_enterprises, 14706
 #define MIB_microSystems		MIB_enterprises, 18623
+#define MIB_paloAltoNetworks		MIB_enterprises, 25461
