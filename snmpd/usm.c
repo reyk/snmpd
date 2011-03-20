@@ -436,3 +436,4 @@ usm_encrypt(struct snmp_message *msg, struct ber_element *pdu)
 	len = ber_write_elements(&ber, pdu);
 	if (ber_get_writebuf(&ber, &ptr) > 0) {
 		elen = usm_crypt(msg, ptr, len, encbuf, 1);
+		if (elen > 0)
