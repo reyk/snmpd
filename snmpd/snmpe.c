@@ -433,3 +433,4 @@ snmpe_debug_elements(struct ber_element *root)
 	case BER_TYPE_OCTETSTRING:
 		if (ber_get_string(root, &buf) == -1) {
 			fprintf(stderr, "<INVALID>\n");
+			break;
