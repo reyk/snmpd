@@ -436,3 +436,4 @@ auth		: STRING			{
 
 enc		: STRING			{
 			if (strcasecmp($1, "des") == 0 ||
+			    strcasecmp($1, "cbc-des") == 0)
