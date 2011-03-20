@@ -434,3 +434,4 @@
 #define MIB_snom			MIB_enterprises, 7526
 #define MIB_google			MIB_enterprises, 11129
 #define MIB_f5Networks			MIB_enterprises, 12276
+#define MIB_sFlow			MIB_enterprises, 14706
