@@ -434,3 +434,4 @@ snmpe_debug_elements(struct ber_element *root)
 		if (ber_get_string(root, &buf) == -1) {
 			fprintf(stderr, "<INVALID>\n");
 			break;
+		}
