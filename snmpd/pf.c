@@ -435,3 +435,4 @@ pfta_get_nextaddr(struct pfr_astats *ras, int *tblidx)
 
 
  fail:
+	free(ba.pfrb_caddr);
