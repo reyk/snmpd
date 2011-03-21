@@ -437,3 +437,4 @@ kroute6_matchgw(struct kroute6_node *kr, struct sockaddr_in6 *sa_in6)
 	struct in6_addr	nexthop;
 
 	if (sa_in6 == NULL) {
+		log_warnx("kroute6_matchgw: no nexthop defined");
