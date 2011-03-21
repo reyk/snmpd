@@ -439,3 +439,4 @@ usm_encrypt(struct snmp_message *msg, struct ber_element *pdu)
 		if (elen > 0)
 			encrpdu = ber_add_nstring(NULL, (char *)encbuf, elen);
 	}
+
