@@ -439,3 +439,4 @@
 #define MIB_paloAltoNetworks		MIB_enterprises, 25461
 #define MIB_h3c				MIB_enterprises, 25506
 #define MIB_vantronix			MIB_enterprises, 26766
+#define OIDVAL_openBSD_eid		30155
