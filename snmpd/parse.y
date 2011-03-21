@@ -440,3 +440,4 @@ enc		: STRING			{
 				$$ = PRIV_DES;
 			else if (strcasecmp($1, "aes") == 0 ||
 			    strcasecmp($1, "cfb128-aes-128") == 0)
+				$$ = PRIV_AES;
