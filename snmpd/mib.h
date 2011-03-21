@@ -438,3 +438,4 @@
 #define MIB_microSystems		MIB_enterprises, 18623
 #define MIB_paloAltoNetworks		MIB_enterprises, 25461
 #define MIB_h3c				MIB_enterprises, 25506
+#define MIB_vantronix			MIB_enterprises, 26766
