@@ -437,3 +437,4 @@ snmpe_debug_elements(struct ber_element *root)
 		}
 		if (root->be_class == BER_CLASS_APPLICATION &&
 		    root->be_type == SNMP_T_IPADDR) {
+			fprintf(stderr, "addr %s\n",
