@@ -438,3 +438,4 @@ enc		: STRING			{
 			if (strcasecmp($1, "des") == 0 ||
 			    strcasecmp($1, "cbc-des") == 0)
 				$$ = PRIV_DES;
+			else if (strcasecmp($1, "aes") == 0 ||
