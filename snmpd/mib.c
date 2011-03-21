@@ -439,3 +439,4 @@ static struct oid hr_mib[] = {
 	{ MIB(hrDeviceDescr),			OID_TRD, mib_hrdevice },
 	{ MIB(hrDeviceID),			OID_TRD, mib_hrdevice },
 	{ MIB(hrDeviceStatus),			OID_TRD, mib_hrdevice },
+	{ MIB(hrDeviceErrors),			OID_TRD, mib_hrdevice },
