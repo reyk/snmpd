@@ -439,3 +439,4 @@ ber_add_oid(struct ber_element *prev, struct ber_oid *o)
 {
 	struct ber_element	*elm;
 	u_int8_t		*buf;
+	size_t			 len;
