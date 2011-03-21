@@ -439,3 +439,4 @@ snmpe_debug_elements(struct ber_element *root)
 		    root->be_type == SNMP_T_IPADDR) {
 			fprintf(stderr, "addr %s\n",
 			    inet_ntoa(*(struct in_addr *)buf));
+		} else {
