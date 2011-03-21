@@ -438,3 +438,4 @@ void		 session_socket_blockmode(int, enum blockmodes);
 struct snmpd	*parse_config(const char *, u_int);
 int		 cmdline_symset(char *);
 
+/* log.c */
