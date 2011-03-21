@@ -440,3 +440,4 @@ pfta_get_nextaddr(struct pfr_astats *ras, int *tblidx)
 	return (-1);
 
  found:
+	bcopy(as, ras, sizeof(struct pfr_astats));
