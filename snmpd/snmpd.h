@@ -439,3 +439,4 @@ struct snmpd	*parse_config(const char *, u_int);
 int		 cmdline_symset(char *);
 
 /* log.c */
+void		 log_init(int);
