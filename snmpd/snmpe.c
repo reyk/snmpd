@@ -440,3 +440,4 @@ snmpe_debug_elements(struct ber_element *root)
 			fprintf(stderr, "addr %s\n",
 			    inet_ntoa(*(struct in_addr *)buf));
 		} else {
+			char *visbuf;
