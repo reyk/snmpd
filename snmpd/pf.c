@@ -443,3 +443,4 @@ pfta_get_nextaddr(struct pfr_astats *ras, int *tblidx)
 	bcopy(as, ras, sizeof(struct pfr_astats));
 	*tblidx = i;
 
+	free(ba.pfrb_caddr);
