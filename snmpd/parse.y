@@ -442,3 +442,4 @@ enc		: STRING			{
 			    strcasecmp($1, "cfb128-aes-128") == 0)
 				$$ = PRIV_AES;
 			else {
+				yyerror("syntax error, bad encryption cipher");
