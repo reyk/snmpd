@@ -444,3 +444,4 @@ enc		: STRING			{
 			else {
 				yyerror("syntax error, bad encryption cipher");
 				free($1);
+				YYERROR;
