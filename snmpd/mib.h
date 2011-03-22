@@ -443,3 +443,4 @@
 #define MIB_openBSD			MIB_enterprises, OIDVAL_openBSD_eid
 #define MIB_nicira			MIB_enterprises, 39961
 
+/* UCD-DISKIO-MIB */
