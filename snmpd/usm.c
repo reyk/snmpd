@@ -443,3 +443,4 @@ usm_encrypt(struct snmp_message *msg, struct ber_element *pdu)
 	ber_free(&ber);
 	ber_free_elements(pdu);
 	return encrpdu;
+}
