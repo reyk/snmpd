@@ -443,3 +443,4 @@ enc		: STRING			{
 				$$ = PRIV_AES;
 			else {
 				yyerror("syntax error, bad encryption cipher");
+				free($1);
