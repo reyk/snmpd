@@ -444,3 +444,4 @@ void		 log_warn(const char *, ...);
 void		 log_warnx(const char *, ...);
 void		 log_info(const char *, ...);
 void		 log_debug(const char *, ...);
+__dead void	 fatal(const char *);
