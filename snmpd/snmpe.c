@@ -441,3 +441,4 @@ snmpe_debug_elements(struct ber_element *root)
 			    inet_ntoa(*(struct in_addr *)buf));
 		} else {
 			char *visbuf;
+			if ((visbuf = malloc(root->be_len * 4 + 1)) == NULL)
