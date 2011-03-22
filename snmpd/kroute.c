@@ -444,3 +444,4 @@ kroute6_matchgw(struct kroute6_node *kr, struct sockaddr_in6 *sa_in6)
 
 	while (kr) {
 		if (memcmp(&kr->r.nexthop, &nexthop, sizeof(nexthop)) == 0)
+			return (kr);
