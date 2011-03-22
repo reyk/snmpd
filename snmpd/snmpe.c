@@ -442,3 +442,4 @@ snmpe_debug_elements(struct ber_element *root)
 		} else {
 			char *visbuf;
 			if ((visbuf = malloc(root->be_len * 4 + 1)) == NULL)
+				fatal("malloc");
