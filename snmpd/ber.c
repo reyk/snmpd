@@ -443,3 +443,4 @@ ber_add_oid(struct ber_element *prev, struct ber_oid *o)
 
 	if ((elm = ber_get_element(BER_TYPE_OBJECT)) == NULL)
 		return (NULL);
+
