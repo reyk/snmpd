@@ -447,3 +447,4 @@ enc		: STRING			{
 				YYERROR;
 			}
 			free($1);
+
