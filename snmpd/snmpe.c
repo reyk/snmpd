@@ -447,3 +447,4 @@ snmpe_debug_elements(struct ber_element *root)
 			fprintf(stderr, "string \"%s\"\n",  visbuf);
 			free(visbuf);
 		}
+		break;
