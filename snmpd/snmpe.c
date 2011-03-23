@@ -445,3 +445,4 @@ snmpe_debug_elements(struct ber_element *root)
 				fatal("malloc");
 			strvisx(visbuf, buf, root->be_len, 0);
 			fprintf(stderr, "string \"%s\"\n",  visbuf);
+			free(visbuf);
