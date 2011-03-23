@@ -445,3 +445,4 @@ usm_encrypt(struct snmp_message *msg, struct ber_element *pdu)
 	return encrpdu;
 }
 
+/*
