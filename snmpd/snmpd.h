@@ -448,3 +448,4 @@ __dead void	 fatal(const char *);
 __dead void	 fatalx(const char *);
 void		 vlog(int, const char *, va_list);
 const char	*log_in6addr(const struct in6_addr *);
+const char	*print_host(struct sockaddr_storage *, char *, size_t);
