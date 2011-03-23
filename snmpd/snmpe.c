@@ -448,3 +448,4 @@ snmpe_debug_elements(struct ber_element *root)
 			free(visbuf);
 		}
 		break;
+	case BER_TYPE_NULL:	/* no payload */
