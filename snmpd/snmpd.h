@@ -445,3 +445,4 @@ void		 log_warnx(const char *, ...);
 void		 log_info(const char *, ...);
 void		 log_debug(const char *, ...);
 __dead void	 fatal(const char *);
+__dead void	 fatalx(const char *);
