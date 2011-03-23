@@ -448,3 +448,4 @@ usm_encrypt(struct snmp_message *msg, struct ber_element *pdu)
 /*
  * Calculate message digest and replace within message
  */
+void
