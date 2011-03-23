@@ -446,3 +446,4 @@ ber_add_oid(struct ber_element *prev, struct ber_oid *o)
 
 	if ((len = ber_oid2ber(o, NULL, 0)) == 0)
 		goto fail;
+
