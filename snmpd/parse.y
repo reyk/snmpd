@@ -445,3 +445,4 @@ enc		: STRING			{
 				yyerror("syntax error, bad encryption cipher");
 				free($1);
 				YYERROR;
+			}
