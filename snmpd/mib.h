@@ -446,3 +446,4 @@
 /* UCD-DISKIO-MIB */
 #define MIB_ucdExperimental		MIB_ucDavis, 13
 #define MIB_ucdDiskIOMIB		MIB_ucdExperimental, 15
+#define MIB_diskIOTable			MIB_ucdDiskIOMIB, 1
