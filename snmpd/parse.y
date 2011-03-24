@@ -449,3 +449,4 @@ enc		: STRING			{
 			free($1);
 
 		}
+		;
