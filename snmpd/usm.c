@@ -452,3 +452,4 @@ void
 usm_finalize_digest(struct snmp_message *msg, char *buf, ssize_t len)
 {
 	const EVP_MD	*md;
+	u_char		 digest[EVP_MAX_MD_SIZE];
