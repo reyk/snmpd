@@ -452,3 +452,4 @@ ber_add_oid(struct ber_element *prev, struct ber_oid *o)
 
 	elm->be_val = buf;
 	elm->be_len = len;
+	elm->be_free = 1;
