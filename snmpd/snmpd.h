@@ -452,3 +452,4 @@ const char	*print_host(struct sockaddr_storage *, char *, size_t);
 
 void		 imsg_event_add(struct imsgev *);
 int		 imsg_compose_event(struct imsgev *, enum imsg_type, u_int32_t,
+		    pid_t, int, void *, u_int16_t);
