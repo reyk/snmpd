@@ -450,3 +450,4 @@ void		 vlog(int, const char *, va_list);
 const char	*log_in6addr(const struct in6_addr *);
 const char	*print_host(struct sockaddr_storage *, char *, size_t);
 
+void		 imsg_event_add(struct imsgev *);
