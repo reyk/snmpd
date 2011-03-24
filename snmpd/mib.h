@@ -450,3 +450,4 @@
 #define MIB_diskIOEntry			MIB_diskIOTable, 1
 #define OIDIDX_diskIO			11
 #define OIDIDX_diskIOEntry		12
+#define MIB_diskIOIndex			MIB_diskIOEntry, 1
