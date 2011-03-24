@@ -450,3 +450,4 @@ snmpe_debug_elements(struct ber_element *root)
 		break;
 	case BER_TYPE_NULL:	/* no payload */
 	case BER_TYPE_EOC:
+	case BER_TYPE_SEQUENCE:
