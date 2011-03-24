@@ -452,3 +452,4 @@ snmpe_debug_elements(struct ber_element *root)
 	case BER_TYPE_EOC:
 	case BER_TYPE_SEQUENCE:
 	case BER_TYPE_SET:
+	default:
