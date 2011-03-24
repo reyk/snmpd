@@ -449,3 +449,4 @@ static struct oid hr_mib[] = {
 	{ MIB(hrSWRunParameters),		OID_TRD, mib_hrswrun },
 	{ MIB(hrSWRunType),			OID_TRD, mib_hrswrun },
 	{ MIB(hrSWRunStatus),			OID_TRD, mib_hrswrun },
+	{ MIBEND }
