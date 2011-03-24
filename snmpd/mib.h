@@ -452,3 +452,4 @@
 #define OIDIDX_diskIOEntry		12
 #define MIB_diskIOIndex			MIB_diskIOEntry, 1
 #define MIB_diskIODevice		MIB_diskIOEntry, 2
+#define MIB_diskIONRead			MIB_diskIOEntry, 3
