@@ -451,3 +451,4 @@ static struct oid hr_mib[] = {
 	{ MIB(hrSWRunStatus),			OID_TRD, mib_hrswrun },
 	{ MIBEND }
 };
+
