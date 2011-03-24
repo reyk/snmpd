@@ -452,3 +452,4 @@ int
 pfta_get_first(struct pfr_astats *ras)
 {
 	struct pfr_buffer	 ba;
+	struct pfr_tstats	 ts;
