@@ -452,3 +452,4 @@ static struct oid hr_mib[] = {
 	{ MIBEND }
 };
 
+int
