@@ -450,3 +450,4 @@ pfta_get_nextaddr(struct pfr_astats *ras, int *tblidx)
 
 int
 pfta_get_first(struct pfr_astats *ras)
+{
