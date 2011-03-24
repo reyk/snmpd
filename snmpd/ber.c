@@ -450,3 +450,4 @@ ber_add_oid(struct ber_element *prev, struct ber_oid *o)
 	if ((buf = calloc(1, len)) == NULL)
 		goto fail;
 
+	elm->be_val = buf;
