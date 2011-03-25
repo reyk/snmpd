@@ -455,3 +455,4 @@ usm_finalize_digest(struct snmp_message *msg, char *buf, ssize_t len)
 	u_char		 digest[EVP_MAX_MD_SIZE];
 	unsigned	 hlen;
 
+	if (msg->sm_resp == NULL ||
