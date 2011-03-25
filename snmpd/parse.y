@@ -453,3 +453,4 @@ enc		: STRING			{
 
 %%
 
+struct keywords {
