@@ -454,3 +454,4 @@ kroute6_matchgw(struct kroute6_node *kr, struct sockaddr_in6 *sa_in6)
 int
 kroute6_insert(struct kroute6_node *kr)
 {
+	struct kroute6_node	*krm;
