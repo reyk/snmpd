@@ -455,3 +455,4 @@ int
 kroute6_insert(struct kroute6_node *kr)
 {
 	struct kroute6_node	*krm;
+
