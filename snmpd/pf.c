@@ -456,3 +456,4 @@ pfta_get_first(struct pfr_astats *ras)
 	struct pfr_table	 filter;
 	const struct pfr_astats	*as;
 
+	if (pft_get_table(&ts, 1))
