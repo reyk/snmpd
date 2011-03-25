@@ -454,3 +454,4 @@
 #define MIB_diskIODevice		MIB_diskIOEntry, 2
 #define MIB_diskIONRead			MIB_diskIOEntry, 3
 #define MIB_diskIONWritten		MIB_diskIOEntry, 4
+#define MIB_diskIOReads			MIB_diskIOEntry, 5
