@@ -456,3 +456,4 @@ enc		: STRING			{
 struct keywords {
 	const char	*k_name;
 	int		 k_val;
+};
