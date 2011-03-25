@@ -456,3 +456,4 @@ usm_finalize_digest(struct snmp_message *msg, char *buf, ssize_t len)
 	unsigned	 hlen;
 
 	if (msg->sm_resp == NULL ||
+	    !MSG_HAS_AUTH(msg) ||
