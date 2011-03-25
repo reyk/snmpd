@@ -455,3 +455,4 @@ snmpe_debug_elements(struct ber_element *root)
 	default:
 		fprintf(stderr, "\n");
 		break;
+	}
