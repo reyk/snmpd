@@ -455,3 +455,4 @@ static struct oid hr_mib[] = {
 int
 mib_hrsystemuptime(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 {
+	struct timeval   boottime;
