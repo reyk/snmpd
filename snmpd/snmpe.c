@@ -454,3 +454,4 @@ snmpe_debug_elements(struct ber_element *root)
 	case BER_TYPE_SET:
 	default:
 		fprintf(stderr, "\n");
+		break;
