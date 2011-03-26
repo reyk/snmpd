@@ -460,3 +460,4 @@ pfta_get_first(struct pfr_astats *ras)
 		return (-1);
 
 	bzero(&filter, sizeof(filter));
+	if (strlcpy(filter.pfrt_name, ts.pfrts_name,
