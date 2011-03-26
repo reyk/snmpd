@@ -458,3 +458,4 @@ usm_finalize_digest(struct snmp_message *msg, char *buf, ssize_t len)
 	if (msg->sm_resp == NULL ||
 	    !MSG_HAS_AUTH(msg) ||
 	    msg->sm_user == NULL ||
+	    msg->sm_digest_offs == 0 ||
