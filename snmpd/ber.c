@@ -459,3 +459,4 @@ ber_add_oid(struct ber_element *prev, struct ber_oid *o)
 
 	ber_link_elements(prev, elm);
 
+	return (elm);
