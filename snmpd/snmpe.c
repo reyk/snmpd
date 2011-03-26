@@ -459,3 +459,4 @@ snmpe_debug_elements(struct ber_element *root)
 
 	if (constructed && root->be_sub) {
 		indent += 2;
+		snmpe_debug_elements(root->be_sub);
