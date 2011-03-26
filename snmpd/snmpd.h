@@ -460,3 +460,4 @@ void		 kr_shutdown(void);
 
 u_int		 kr_ifnumber(void);
 u_long		 kr_iflastchange(void);
+int		 kr_updateif(u_int);
