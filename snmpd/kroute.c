@@ -458,3 +458,4 @@ kroute6_insert(struct kroute6_node *kr)
 
 	if ((krm = RB_INSERT(kroute6_tree, &krt6, kr)) != NULL) {
 		/* multipath route, add at end of list */
+		while (krm->next != NULL)
