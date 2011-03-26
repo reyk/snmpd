@@ -460,3 +460,4 @@
 #define MIB_diskIONWrittenX		MIB_diskIOEntry, 13
 
 /* OPENBSD-MIB */
+#define MIB_pfMIBObjects		MIB_openBSD, 1
