@@ -457,3 +457,4 @@ mib_hrsystemuptime(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 {
 	struct timeval   boottime;
 	int		 mib[] = { CTL_KERN, KERN_BOOTTIME };
+	time_t		 now;
