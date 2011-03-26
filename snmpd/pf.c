@@ -459,3 +459,4 @@ pfta_get_first(struct pfr_astats *ras)
 	if (pft_get_table(&ts, 1))
 		return (-1);
 
+	bzero(&filter, sizeof(filter));
