@@ -457,3 +457,4 @@ int		 imsg_compose_event(struct imsgev *, enum imsg_type, u_int32_t,
 /* kroute.c */
 void		 kr_init(void);
 void		 kr_shutdown(void);
+
