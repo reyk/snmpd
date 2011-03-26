@@ -457,3 +457,4 @@ snmpe_debug_elements(struct ber_element *root)
 		break;
 	}
 
+	if (constructed && root->be_sub) {
