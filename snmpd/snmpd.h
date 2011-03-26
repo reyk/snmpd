@@ -458,3 +458,4 @@ int		 imsg_compose_event(struct imsgev *, enum imsg_type, u_int32_t,
 void		 kr_init(void);
 void		 kr_shutdown(void);
 
+u_int		 kr_ifnumber(void);
