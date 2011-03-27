@@ -462,3 +462,4 @@
 /* OPENBSD-MIB */
 #define MIB_pfMIBObjects		MIB_openBSD, 1
 #define MIB_pfInfo			MIB_pfMIBObjects, 1
+#define MIB_pfRunning			MIB_pfInfo, 1
