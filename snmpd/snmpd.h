@@ -464,3 +464,4 @@ int		 kr_updateif(u_int);
 u_long		 kr_routenumber(void);
 
 struct kif	*kr_getif(u_short);
+struct kif	*kr_getnextif(u_short);
