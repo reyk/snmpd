@@ -464,3 +464,4 @@ pfta_get_first(struct pfr_astats *ras)
 	    sizeof(filter.pfrt_name)) >= sizeof(filter.pfrt_name)) {
 		return (-1);
 	}
+
