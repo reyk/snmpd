@@ -463,3 +463,4 @@ mib_hrsystemuptime(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 	(void)time(&now);
 	len = sizeof(boottime);
 
+	if (sysctl(mib, 2, &boottime, &len, NULL, 0) == -1)
