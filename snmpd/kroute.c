@@ -464,3 +464,4 @@ kroute6_insert(struct kroute6_node *kr)
 		kr->next = NULL; /* to be sure */
 	}
 
+	kr_state.ks_nroutes++;
