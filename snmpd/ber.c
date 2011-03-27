@@ -462,3 +462,4 @@ ber_add_oid(struct ber_element *prev, struct ber_oid *o)
 	return (elm);
 
  fail:
+	ber_free_elements(elm);
