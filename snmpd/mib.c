@@ -461,3 +461,4 @@ mib_hrsystemuptime(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 	size_t		 len;
 
 	(void)time(&now);
+	len = sizeof(boottime);
