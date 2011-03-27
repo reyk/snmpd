@@ -463,3 +463,4 @@ snmpe_debug_elements(struct ber_element *root)
 		indent -= 2;
 	}
 	if (root->be_next)
+		snmpe_debug_elements(root->be_next);
