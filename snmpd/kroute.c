@@ -462,3 +462,4 @@ kroute6_insert(struct kroute6_node *kr)
 			krm = krm->next;
 		krm->next = kr;
 		kr->next = NULL; /* to be sure */
+	}
