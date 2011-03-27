@@ -462,3 +462,4 @@ usm_finalize_digest(struct snmp_message *msg, char *buf, ssize_t len)
 	    len <= 0)
 		return;
 	bzero(digest, SNMP_USM_DIGESTLEN);
+#ifdef DEBUG
