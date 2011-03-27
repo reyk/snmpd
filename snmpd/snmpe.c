@@ -464,3 +464,4 @@ snmpe_debug_elements(struct ber_element *root)
 	}
 	if (root->be_next)
 		snmpe_debug_elements(root->be_next);
+}
