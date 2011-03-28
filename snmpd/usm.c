@@ -468,3 +468,4 @@ usm_finalize_digest(struct snmp_message *msg, char *buf, ssize_t len)
 #endif
 
 	if ((md = usm_get_md(msg->sm_user->uu_auth)) == NULL)
+		return;
