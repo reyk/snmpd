@@ -467,3 +467,4 @@ mib_hrsystemuptime(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 		return (-1);
 
 	*elm = ber_add_integer(*elm, (now - boottime.tv_sec) * 100);
+	ber_set_header(*elm, BER_CLASS_APPLICATION, SNMP_T_TIMETICKS);
