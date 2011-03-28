@@ -468,3 +468,4 @@ kroute6_insert(struct kroute6_node *kr)
 	return (0);
 }
 
+int
