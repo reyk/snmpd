@@ -467,3 +467,4 @@ struct kif	*kr_getif(u_short);
 struct kif	*kr_getnextif(u_short);
 struct kif_addr *kr_getaddr(struct sockaddr *);
 struct kif_addr *kr_getnextaddr(struct sockaddr *);
+
