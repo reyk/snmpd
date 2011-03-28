@@ -467,3 +467,4 @@
 #define MIB_pfDebug			MIB_pfInfo, 3
 #define MIB_pfHostid			MIB_pfInfo, 4
 #define MIB_pfCounters			MIB_pfMIBObjects, 2
+#define MIB_pfCntMatch			MIB_pfCounters, 1
