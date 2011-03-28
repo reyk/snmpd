@@ -468,3 +468,4 @@ snmpe_debug_elements(struct ber_element *root)
 #endif
 
 unsigned long
+snmpe_application(struct ber_element *elm)
