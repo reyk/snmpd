@@ -465,3 +465,4 @@ ber_add_oid(struct ber_element *prev, struct ber_oid *o)
 	ber_free_elements(elm);
 	return (NULL);
 }
+
