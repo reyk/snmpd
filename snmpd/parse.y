@@ -465,3 +465,4 @@ yyerror(const char *fmt, ...)
 	char		*nfmt;
 
 	file->errors++;
+	va_start(ap, fmt);
