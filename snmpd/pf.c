@@ -465,3 +465,4 @@ pfta_get_first(struct pfr_astats *ras)
 		return (-1);
 	}
 
+	if (pfta_get(&ba, &filter) || ba.pfrb_size == 0) {
