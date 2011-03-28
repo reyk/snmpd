@@ -468,3 +468,4 @@
 #define MIB_pfHostid			MIB_pfInfo, 4
 #define MIB_pfCounters			MIB_pfMIBObjects, 2
 #define MIB_pfCntMatch			MIB_pfCounters, 1
+#define MIB_pfCntBadOffset		MIB_pfCounters, 2
