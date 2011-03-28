@@ -467,3 +467,4 @@ usm_finalize_digest(struct snmp_message *msg, char *buf, ssize_t len)
 	assert(!memcmp(buf + msg->sm_digest_offs, digest, SNMP_USM_DIGESTLEN));
 #endif
 
+	if ((md = usm_get_md(msg->sm_user->uu_auth)) == NULL)
