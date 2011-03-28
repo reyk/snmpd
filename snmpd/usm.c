@@ -466,3 +466,4 @@ usm_finalize_digest(struct snmp_message *msg, char *buf, ssize_t len)
 	assert(msg->sm_digest_offs + SNMP_USM_DIGESTLEN <= (size_t)len);
 	assert(!memcmp(buf + msg->sm_digest_offs, digest, SNMP_USM_DIGESTLEN));
 #endif
+
