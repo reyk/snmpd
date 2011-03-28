@@ -466,3 +466,4 @@ pfta_get_first(struct pfr_astats *ras)
 	}
 
 	if (pfta_get(&ba, &filter) || ba.pfrb_size == 0) {
+		free(ba.pfrb_caddr);
