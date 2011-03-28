@@ -466,3 +466,4 @@ yyerror(const char *fmt, ...)
 
 	file->errors++;
 	va_start(ap, fmt);
+	if (asprintf(&nfmt, "%s:%d: %s", file->name, yylval.lineno, fmt) == -1)
