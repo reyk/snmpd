@@ -465,3 +465,4 @@ u_long		 kr_routenumber(void);
 
 struct kif	*kr_getif(u_short);
 struct kif	*kr_getnextif(u_short);
+struct kif_addr *kr_getaddr(struct sockaddr *);
