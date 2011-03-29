@@ -470,3 +470,4 @@ snmpe_debug_elements(struct ber_element *root)
 unsigned long
 snmpe_application(struct ber_element *elm)
 {
+	if (elm->be_class != BER_CLASS_APPLICATION)
