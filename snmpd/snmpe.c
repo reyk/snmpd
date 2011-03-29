@@ -471,3 +471,4 @@ unsigned long
 snmpe_application(struct ber_element *elm)
 {
 	if (elm->be_class != BER_CLASS_APPLICATION)
+		return (BER_TYPE_OCTETSTRING);
