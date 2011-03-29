@@ -471,3 +471,4 @@ ber_add_noid(struct ber_element *prev, struct ber_oid *o, int n)
 {
 	struct ber_oid		 no;
 
+	if (n > BER_MAX_OID_LEN)
