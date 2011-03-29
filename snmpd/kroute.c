@@ -471,3 +471,4 @@ kroute6_insert(struct kroute6_node *kr)
 int
 kroute6_remove(struct kroute6_node *kr)
 {
+	struct kroute6_node	*krm;
