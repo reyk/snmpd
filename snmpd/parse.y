@@ -470,3 +470,4 @@ yyerror(const char *fmt, ...)
 		fatalx("yyerror asprintf");
 	vlog(LOG_CRIT, nfmt, ap);
 	va_end(ap);
+	free(nfmt);
