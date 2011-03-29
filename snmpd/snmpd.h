@@ -470,3 +470,4 @@ struct kif_addr *kr_getnextaddr(struct sockaddr *);
 
 struct kroute	*kroute_first(void);
 struct kroute	*kroute_getaddr(in_addr_t, u_int8_t, u_int8_t, int);
+
