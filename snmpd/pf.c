@@ -471,3 +471,4 @@ pfta_get_first(struct pfr_astats *ras)
 	}
 
 	/* take the first AF_INET addr */
+	PFRB_FOREACH(as, &ba) {
