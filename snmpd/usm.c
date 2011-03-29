@@ -470,3 +470,4 @@ usm_finalize_digest(struct snmp_message *msg, char *buf, ssize_t len)
 	if ((md = usm_get_md(msg->sm_user->uu_auth)) == NULL)
 		return;
 
+	HMAC(md, msg->sm_user->uu_authkey, (int)msg->sm_user->uu_authkeylen,
