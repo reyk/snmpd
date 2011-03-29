@@ -472,3 +472,4 @@ yyerror(const char *fmt, ...)
 	va_end(ap);
 	free(nfmt);
 	return (0);
+}
