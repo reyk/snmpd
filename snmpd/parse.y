@@ -471,3 +471,4 @@ yyerror(const char *fmt, ...)
 	vlog(LOG_CRIT, nfmt, ap);
 	va_end(ap);
 	free(nfmt);
+	return (0);
