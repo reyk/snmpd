@@ -469,3 +469,4 @@ yyerror(const char *fmt, ...)
 	if (asprintf(&nfmt, "%s:%d: %s", file->name, yylval.lineno, fmt) == -1)
 		fatalx("yyerror asprintf");
 	vlog(LOG_CRIT, nfmt, ap);
+	va_end(ap);
