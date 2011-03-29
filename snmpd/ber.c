@@ -470,3 +470,4 @@ struct ber_element *
 ber_add_noid(struct ber_element *prev, struct ber_oid *o, int n)
 {
 	struct ber_oid		 no;
+
