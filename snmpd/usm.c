@@ -472,3 +472,4 @@ usm_finalize_digest(struct snmp_message *msg, char *buf, ssize_t len)
 
 	HMAC(md, msg->sm_user->uu_authkey, (int)msg->sm_user->uu_authkeylen,
 	    (u_char*)buf, (size_t)len, digest, &hlen);
+
