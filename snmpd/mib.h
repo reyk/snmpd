@@ -470,3 +470,4 @@
 #define MIB_pfCntMatch			MIB_pfCounters, 1
 #define MIB_pfCntBadOffset		MIB_pfCounters, 2
 #define MIB_pfCntFragment		MIB_pfCounters, 3
+#define MIB_pfCntShort			MIB_pfCounters, 4
