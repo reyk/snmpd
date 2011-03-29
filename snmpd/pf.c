@@ -470,3 +470,4 @@ pfta_get_first(struct pfr_astats *ras)
 		return (-1);
 	}
 
+	/* take the first AF_INET addr */
