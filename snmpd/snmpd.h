@@ -472,3 +472,4 @@ struct kroute	*kroute_first(void);
 struct kroute	*kroute_getaddr(in_addr_t, u_int8_t, u_int8_t, int);
 
 /* snmpe.c */
+pid_t		 snmpe(struct snmpd *, int [2]);
