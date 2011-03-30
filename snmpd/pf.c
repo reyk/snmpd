@@ -475,3 +475,4 @@ pfta_get_first(struct pfr_astats *ras)
 		if (as->pfras_a.pfra_af != AF_INET)
 			continue;
 		break;
+	}
