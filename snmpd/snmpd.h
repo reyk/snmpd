@@ -476,3 +476,4 @@ pid_t		 snmpe(struct snmpd *, int [2]);
 void		 snmpe_debug_elements(struct ber_element *);
 
 /* trap.c */
+void		 trap_init(void);
