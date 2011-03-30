@@ -474,3 +474,4 @@ yyerror(const char *fmt, ...)
 	return (0);
 }
 
+int
