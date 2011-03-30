@@ -474,3 +474,4 @@
 #define MIB_pfCntNormalize		MIB_pfCounters, 5
 #define MIB_pfCntMemory			MIB_pfCounters, 6
 #define MIB_pfCntTimestamp		MIB_pfCounters, 7
+#define MIB_pfCntCongestion		MIB_pfCounters, 8
