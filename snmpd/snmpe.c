@@ -475,3 +475,4 @@ snmpe_application(struct ber_element *elm)
 
 	switch (elm->be_type) {
 	case SNMP_T_IPADDR:
+		return (BER_TYPE_OCTETSTRING);
