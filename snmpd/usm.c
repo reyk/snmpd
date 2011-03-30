@@ -476,3 +476,4 @@ usm_finalize_digest(struct snmp_message *msg, char *buf, ssize_t len)
 	memcpy(buf + msg->sm_digest_offs, digest, SNMP_USM_DIGESTLEN);
 	return;
 }
+
