@@ -475,3 +475,4 @@ struct kroute	*kroute_getaddr(in_addr_t, u_int8_t, u_int8_t, int);
 pid_t		 snmpe(struct snmpd *, int [2]);
 void		 snmpe_debug_elements(struct ber_element *);
 
+/* trap.c */
