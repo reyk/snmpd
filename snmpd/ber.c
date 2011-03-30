@@ -474,3 +474,4 @@ ber_add_noid(struct ber_element *prev, struct ber_oid *o, int n)
 	if (n > BER_MAX_OID_LEN)
 		return (NULL);
 	no.bo_n = n;
+	bcopy(&o->bo_id, &no.bo_id, sizeof(no.bo_id));
