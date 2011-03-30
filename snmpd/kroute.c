@@ -473,3 +473,4 @@ kroute6_remove(struct kroute6_node *kr)
 {
 	struct kroute6_node	*krm;
 
+	if ((krm = RB_FIND(kroute6_tree, &krt6, kr)) == NULL) {
