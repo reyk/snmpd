@@ -476,3 +476,4 @@
 #define MIB_pfCntTimestamp		MIB_pfCounters, 7
 #define MIB_pfCntCongestion		MIB_pfCounters, 8
 #define MIB_pfCntIpOptions		MIB_pfCounters, 9
+#define MIB_pfCntProtoCksum		MIB_pfCounters, 10
