@@ -475,3 +475,4 @@ yyerror(const char *fmt, ...)
 }
 
 int
+kw_cmp(const void *k, const void *e)
