@@ -474,3 +474,4 @@ pfta_get_first(struct pfr_astats *ras)
 	PFRB_FOREACH(as, &ba) {
 		if (as->pfras_a.pfra_af != AF_INET)
 			continue;
+		break;
