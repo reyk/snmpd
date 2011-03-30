@@ -473,3 +473,4 @@ yyerror(const char *fmt, ...)
 	free(nfmt);
 	return (0);
 }
+
