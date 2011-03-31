@@ -477,3 +477,4 @@ pfta_get_first(struct pfr_astats *ras)
 		break;
 	}
 
+	if (as == NULL) {
