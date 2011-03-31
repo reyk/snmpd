@@ -480,3 +480,4 @@ mib_hrsystemdate(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 	time_t		 now;
 	int		 tzoffset;
 	unsigned short	 year;
+
