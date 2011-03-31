@@ -478,3 +478,4 @@ void		 snmpe_debug_elements(struct ber_element *);
 /* trap.c */
 void		 trap_init(void);
 int		 trap_imsg(struct imsgev *, pid_t);
+int		 trap_send(struct ber_oid *, struct ber_element *);
