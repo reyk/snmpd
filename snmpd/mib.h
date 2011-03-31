@@ -480,3 +480,4 @@
 #define MIB_pfCntStateMismatch		MIB_pfCounters, 11
 #define MIB_pfCntStateInsert		MIB_pfCounters, 12
 #define MIB_pfCntStateLimit		MIB_pfCounters, 13
+#define MIB_pfCntSrcLimit		MIB_pfCounters, 14
