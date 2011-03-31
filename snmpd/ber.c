@@ -478,3 +478,4 @@ ber_add_noid(struct ber_element *prev, struct ber_oid *o, int n)
 
 	return (ber_add_oid(prev, &no));
 }
+
