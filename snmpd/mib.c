@@ -478,3 +478,4 @@ mib_hrsystemdate(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 	struct tm	*ptm;
 	u_char		 s[11];
 	time_t		 now;
+	int		 tzoffset;
