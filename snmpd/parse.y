@@ -478,3 +478,4 @@ int
 kw_cmp(const void *k, const void *e)
 {
 	return (strcmp(k, ((const struct keywords *)e)->k_name));
+}
