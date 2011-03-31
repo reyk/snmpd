@@ -477,3 +477,4 @@
 #define MIB_pfCntCongestion		MIB_pfCounters, 8
 #define MIB_pfCntIpOptions		MIB_pfCounters, 9
 #define MIB_pfCntProtoCksum		MIB_pfCounters, 10
+#define MIB_pfCntStateMismatch		MIB_pfCounters, 11
