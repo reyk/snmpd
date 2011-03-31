@@ -478,3 +478,4 @@
 #define MIB_pfCntIpOptions		MIB_pfCounters, 9
 #define MIB_pfCntProtoCksum		MIB_pfCounters, 10
 #define MIB_pfCntStateMismatch		MIB_pfCounters, 11
+#define MIB_pfCntStateInsert		MIB_pfCounters, 12
