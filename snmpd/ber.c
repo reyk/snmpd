@@ -477,3 +477,4 @@ ber_add_noid(struct ber_element *prev, struct ber_oid *o, int n)
 	bcopy(&o->bo_id, &no.bo_id, sizeof(no.bo_id));
 
 	return (ber_add_oid(prev, &no));
+}
