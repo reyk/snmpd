@@ -480,3 +480,4 @@ snmpe_application(struct ber_element *elm)
 	case SNMP_T_GAUGE32:
 	case SNMP_T_TIMETICKS:
 	case SNMP_T_OPAQUE:
+	case SNMP_T_COUNTER64:
