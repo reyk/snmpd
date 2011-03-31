@@ -477,3 +477,4 @@ usm_finalize_digest(struct snmp_message *msg, char *buf, ssize_t len)
 	return;
 }
 
+void
