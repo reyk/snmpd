@@ -480,3 +480,4 @@ ber_add_noid(struct ber_element *prev, struct ber_oid *o, int n)
 }
 
 struct ber_element *
+ber_add_oidstring(struct ber_element *prev, const char *oidstr)
