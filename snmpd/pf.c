@@ -480,3 +480,4 @@ pfta_get_first(struct pfr_astats *ras)
 	if (as == NULL) {
 		free(ba.pfrb_caddr);
 		return (-1);
+	}
