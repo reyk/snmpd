@@ -484,3 +484,4 @@ kroute6_remove(struct kroute6_node *kr)
 		if (RB_REMOVE(kroute6_tree, &krt6, kr) == NULL) {
 			log_warnx("kroute6_remove failed for %s/%u",
 			    log_in6addr(&kr->r.prefix), kr->r.prefixlen);
+			return (-1);
