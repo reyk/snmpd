@@ -481,3 +481,4 @@ kw_cmp(const void *k, const void *e)
 }
 
 int
+lookup(char *s)
