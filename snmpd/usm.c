@@ -481,3 +481,4 @@ void
 usm_make_report(struct snmp_message *msg)
 {
 	struct ber_oid		 usmstat = OID(MIB_usmStats, 0, 0);
+
