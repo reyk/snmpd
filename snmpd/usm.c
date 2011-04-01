@@ -483,3 +483,4 @@ usm_make_report(struct snmp_message *msg)
 	struct ber_oid		 usmstat = OID(MIB_usmStats, 0, 0);
 
 	/* Always send report in clear-text */
+	msg->sm_flags = 0;
