@@ -482,3 +482,4 @@ mib_hrsystemdate(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 	unsigned short	 year;
 
 	(void)time(&now);
+	ptm = localtime(&now);
