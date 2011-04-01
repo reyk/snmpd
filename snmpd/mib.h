@@ -484,3 +484,4 @@
 #define MIB_pfCntSynproxy		MIB_pfCounters, 15
 #define MIB_pfCntTranslate		MIB_pfCounters, 16
 #define MIB_pfStateTable		MIB_pfMIBObjects, 3
+#define MIB_pfStateCount		MIB_pfStateTable, 1
