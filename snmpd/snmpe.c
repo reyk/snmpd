@@ -484,3 +484,4 @@ snmpe_application(struct ber_element *elm)
 		return (BER_TYPE_INTEGER);
 	default:
 		break;
+	}
