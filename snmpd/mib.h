@@ -481,3 +481,4 @@
 #define MIB_pfCntStateInsert		MIB_pfCounters, 12
 #define MIB_pfCntStateLimit		MIB_pfCounters, 13
 #define MIB_pfCntSrcLimit		MIB_pfCounters, 14
+#define MIB_pfCntSynproxy		MIB_pfCounters, 15
