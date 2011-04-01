@@ -483,3 +483,4 @@ pfta_get_first(struct pfr_astats *ras)
 	}
 
 	bcopy(as, ras, sizeof(struct pfr_astats));
+	free(ba.pfrb_caddr);
