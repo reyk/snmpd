@@ -481,3 +481,4 @@ int		 trap_imsg(struct imsgev *, pid_t);
 int		 trap_send(struct ber_oid *, struct ber_element *);
 
 /* mps.c */
+struct ber_element *
