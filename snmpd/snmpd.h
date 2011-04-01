@@ -484,3 +484,4 @@ int		 trap_send(struct ber_oid *, struct ber_element *);
 struct ber_element *
 		 mps_getreq(struct ber_element *, struct ber_oid *, u_int);
 struct ber_element *
+		 mps_getnextreq(struct ber_element *, struct ber_oid *);
