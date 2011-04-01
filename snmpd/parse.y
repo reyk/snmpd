@@ -484,3 +484,4 @@ int
 lookup(char *s)
 {
 	/* this has to be sorted always */
+	static const struct keywords keywords[] = {
