@@ -481,3 +481,4 @@ kroute6_remove(struct kroute6_node *kr)
 
 	if (krm == kr) {
 		/* head element */
+		if (RB_REMOVE(kroute6_tree, &krt6, kr) == NULL) {
