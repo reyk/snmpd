@@ -483,3 +483,4 @@ kw_cmp(const void *k, const void *e)
 int
 lookup(char *s)
 {
+	/* this has to be sorted always */
