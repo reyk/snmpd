@@ -482,3 +482,4 @@ pfta_get_first(struct pfr_astats *ras)
 		return (-1);
 	}
 
+	bcopy(as, ras, sizeof(struct pfr_astats));
