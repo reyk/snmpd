@@ -486,3 +486,4 @@ pfta_get_first(struct pfr_astats *ras)
 	free(ba.pfrb_caddr);
 
 	return (0);
+}
