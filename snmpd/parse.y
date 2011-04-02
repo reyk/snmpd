@@ -487,3 +487,4 @@ lookup(char *s)
 	static const struct keywords keywords[] = {
 		{ "auth",		AUTH },
 		{ "authkey",		AUTHKEY },
+		{ "community",		COMMUNITY },
