@@ -486,3 +486,4 @@ snmpe_application(struct ber_element *elm)
 		break;
 	}
 	return (BER_TYPE_OCTETSTRING);
+}
