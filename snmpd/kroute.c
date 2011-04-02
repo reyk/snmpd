@@ -486,3 +486,4 @@ kroute6_remove(struct kroute6_node *kr)
 			    log_in6addr(&kr->r.prefix), kr->r.prefixlen);
 			return (-1);
 		}
+		if (kr->next != NULL) {
