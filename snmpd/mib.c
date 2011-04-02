@@ -486,3 +486,4 @@ mib_hrsystemdate(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 
 	year = htons(ptm->tm_year + 1900);
 	memcpy(s, &year, 2);
+	s[2] = ptm->tm_mon + 1;
