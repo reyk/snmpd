@@ -487,3 +487,4 @@ ber_add_oidstring(struct ber_element *prev, const char *oidstr)
 	if (ber_string2oid(oidstr, &o) == -1)
 		return (NULL);
 
+	return (ber_add_oid(prev, &o));
