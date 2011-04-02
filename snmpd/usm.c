@@ -485,3 +485,4 @@ usm_make_report(struct snmp_message *msg)
 	/* Always send report in clear-text */
 	msg->sm_flags = 0;
 	msg->sm_context = SNMP_C_REPORT;
+	msg->sm_username[0] = '\0';
