@@ -488,3 +488,4 @@ mib_hrsystemdate(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 	memcpy(s, &year, 2);
 	s[2] = ptm->tm_mon + 1;
 	s[3] = ptm->tm_mday;
+	s[4] = ptm->tm_hour;
