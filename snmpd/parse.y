@@ -488,3 +488,4 @@ lookup(char *s)
 		{ "auth",		AUTH },
 		{ "authkey",		AUTHKEY },
 		{ "community",		COMMUNITY },
+		{ "contact",		CONTACT },
