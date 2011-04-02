@@ -485,3 +485,4 @@
 #define MIB_pfCntTranslate		MIB_pfCounters, 16
 #define MIB_pfStateTable		MIB_pfMIBObjects, 3
 #define MIB_pfStateCount		MIB_pfStateTable, 1
+#define MIB_pfStateSearches		MIB_pfStateTable, 2
