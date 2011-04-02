@@ -487,3 +487,4 @@
 #define MIB_pfStateCount		MIB_pfStateTable, 1
 #define MIB_pfStateSearches		MIB_pfStateTable, 2
 #define MIB_pfStateInserts		MIB_pfStateTable, 3
+#define MIB_pfStateRemovals		MIB_pfStateTable, 4
