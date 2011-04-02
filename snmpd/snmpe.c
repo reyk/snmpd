@@ -485,3 +485,4 @@ snmpe_application(struct ber_element *elm)
 	default:
 		break;
 	}
+	return (BER_TYPE_OCTETSTRING);
