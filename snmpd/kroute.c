@@ -485,3 +485,4 @@ kroute6_remove(struct kroute6_node *kr)
 			log_warnx("kroute6_remove failed for %s/%u",
 			    log_in6addr(&kr->r.prefix), kr->r.prefixlen);
 			return (-1);
+		}
