@@ -487,3 +487,4 @@ struct ber_element *
 		 mps_getnextreq(struct ber_element *, struct ber_oid *);
 int		 mps_setreq(struct ber_element *, struct ber_oid *);
 int		 mps_set(struct ber_oid *, void *, long long);
+int		 mps_getstr(struct oid *, struct ber_oid *,
