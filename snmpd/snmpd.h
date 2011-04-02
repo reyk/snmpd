@@ -485,3 +485,4 @@ struct ber_element *
 		 mps_getreq(struct ber_element *, struct ber_oid *, u_int);
 struct ber_element *
 		 mps_getnextreq(struct ber_element *, struct ber_oid *);
+int		 mps_setreq(struct ber_element *, struct ber_oid *);
