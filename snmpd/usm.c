@@ -486,3 +486,4 @@ usm_make_report(struct snmp_message *msg)
 	msg->sm_flags = 0;
 	msg->sm_context = SNMP_C_REPORT;
 	msg->sm_username[0] = '\0';
+	usmstat.bo_id[OIDIDX_usmStats] = msg->sm_usmerr;
