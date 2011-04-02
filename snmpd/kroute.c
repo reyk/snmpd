@@ -487,3 +487,4 @@ kroute6_remove(struct kroute6_node *kr)
 			return (-1);
 		}
 		if (kr->next != NULL) {
+			if (RB_INSERT(kroute6_tree, &krt6, kr->next) != NULL) {
