@@ -491,3 +491,4 @@
 #define MIB_pfLogInterface		MIB_pfMIBObjects, 4
 #define MIB_pfLogIfName			MIB_pfLogInterface, 1
 #define MIB_pfLogIfIpBytesIn		MIB_pfLogInterface, 2
+#define MIB_pfLogIfIpBytesOut		MIB_pfLogInterface, 3
