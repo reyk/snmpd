@@ -491,3 +491,4 @@ ber_add_oidstring(struct ber_element *prev, const char *oidstr)
 }
 
 int
+ber_get_oid(struct ber_element *elm, struct ber_oid *o)
