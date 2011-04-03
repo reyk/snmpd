@@ -491,3 +491,4 @@ int		 mps_getstr(struct oid *, struct ber_oid *,
 		    struct ber_element **);
 int		 mps_setstr(struct oid *, struct ber_oid *,
 		    struct ber_element **);
+int		 mps_getint(struct oid *, struct ber_oid *,
