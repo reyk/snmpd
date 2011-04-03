@@ -491,3 +491,4 @@ lookup(char *s)
 		{ "contact",		CONTACT },
 		{ "description",	DESCR },
 		{ "disabled",		DISABLED},
+		{ "enc",		ENC },
