@@ -490,3 +490,4 @@ lookup(char *s)
 		{ "community",		COMMUNITY },
 		{ "contact",		CONTACT },
 		{ "description",	DESCR },
+		{ "disabled",		DISABLED},
