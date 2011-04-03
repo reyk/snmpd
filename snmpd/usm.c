@@ -489,3 +489,4 @@ usm_make_report(struct snmp_message *msg)
 	usmstat.bo_id[OIDIDX_usmStats] = msg->sm_usmerr;
 	usmstat.bo_n = OIDIDX_usmStats + 2;
 	if (msg->sm_varbindresp != NULL)
+		ber_free_elements(msg->sm_varbindresp);
