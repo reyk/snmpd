@@ -490,3 +490,4 @@
 #define MIB_pfStateRemovals		MIB_pfStateTable, 4
 #define MIB_pfLogInterface		MIB_pfMIBObjects, 4
 #define MIB_pfLogIfName			MIB_pfLogInterface, 1
+#define MIB_pfLogIfIpBytesIn		MIB_pfLogInterface, 2
