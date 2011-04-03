@@ -490,3 +490,4 @@ snmpe_application(struct ber_element *elm)
 
 int
 snmpe_parse(struct sockaddr_storage *ss,
+    struct ber_element *root, struct snmp_message *msg)
