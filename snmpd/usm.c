@@ -491,3 +491,4 @@ usm_make_report(struct snmp_message *msg)
 	if (msg->sm_varbindresp != NULL)
 		ber_free_elements(msg->sm_varbindresp);
 	msg->sm_varbindresp = ber_add_sequence(NULL);
+	mps_getreq(msg->sm_varbindresp, &usmstat, msg->sm_version);
