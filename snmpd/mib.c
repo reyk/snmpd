@@ -492,3 +492,4 @@ mib_hrsystemdate(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 	s[5] = ptm->tm_min;
 	s[6] = ptm->tm_sec;
 	s[7] = 0;
+
