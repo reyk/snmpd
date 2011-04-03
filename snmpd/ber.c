@@ -489,3 +489,4 @@ ber_add_oidstring(struct ber_element *prev, const char *oidstr)
 
 	return (ber_add_oid(prev, &o));
 }
+
