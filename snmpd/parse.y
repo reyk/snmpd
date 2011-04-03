@@ -492,3 +492,4 @@ lookup(char *s)
 		{ "description",	DESCR },
 		{ "disabled",		DISABLED},
 		{ "enc",		ENC },
+		{ "enckey",		ENCKEY },
