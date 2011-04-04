@@ -494,3 +494,4 @@ int
 ber_get_oid(struct ber_element *elm, struct ber_oid *o)
 {
 	u_int8_t	*buf;
+	size_t		 len, i = 0, j = 0;
