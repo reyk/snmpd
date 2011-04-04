@@ -495,3 +495,4 @@ kroute6_remove(struct kroute6_node *kr)
 			}
 		}
 	} else {
+		/* somewhere in the list */
