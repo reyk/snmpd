@@ -496,3 +496,4 @@ usm_make_report(struct snmp_message *msg)
 }
 
 int
+usm_valid_digest(struct snmp_message *msg, off_t offs,
