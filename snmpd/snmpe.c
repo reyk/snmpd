@@ -493,3 +493,4 @@ snmpe_parse(struct sockaddr_storage *ss,
     struct ber_element *root, struct snmp_message *msg)
 {
 	struct snmp_stats	*stats = &env->sc_stats;
+	struct ber_element	*a, *b, *c, *d, *e, *f, *next, *last;
