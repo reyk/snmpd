@@ -496,3 +496,4 @@
 #define MIB_pfLogIfIpPktsInDrop		MIB_pfLogInterface, 5
 #define MIB_pfLogIfIpPktsOutPass	MIB_pfLogInterface, 6
 #define MIB_pfLogIfIpPktsOutDrop	MIB_pfLogInterface, 7
+#define MIB_pfLogIfIp6BytesIn		MIB_pfLogInterface, 8
