@@ -495,3 +495,4 @@ usm_make_report(struct snmp_message *msg)
 	return;
 }
 
+int
