@@ -496,3 +496,4 @@ lookup(char *s)
 		{ "filter-routes",	RTFILTER },
 		{ "include",		INCLUDE },
 		{ "integer",		INTEGER },
+		{ "listen",		LISTEN },
