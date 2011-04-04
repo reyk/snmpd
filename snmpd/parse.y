@@ -493,3 +493,4 @@ lookup(char *s)
 		{ "disabled",		DISABLED},
 		{ "enc",		ENC },
 		{ "enckey",		ENCKEY },
+		{ "filter-routes",	RTFILTER },
