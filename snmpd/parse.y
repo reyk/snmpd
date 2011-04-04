@@ -495,3 +495,4 @@ lookup(char *s)
 		{ "enckey",		ENCKEY },
 		{ "filter-routes",	RTFILTER },
 		{ "include",		INCLUDE },
+		{ "integer",		INTEGER },
