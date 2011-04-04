@@ -495,3 +495,4 @@ mib_hrsystemdate(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 
 	tzoffset = ptm->tm_gmtoff;
 	if (tzoffset < 0)
+		s[8] = '-';
