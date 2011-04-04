@@ -494,3 +494,4 @@ usm_make_report(struct snmp_message *msg)
 	mps_getreq(msg->sm_varbindresp, &usmstat, msg->sm_version);
 	return;
 }
+
