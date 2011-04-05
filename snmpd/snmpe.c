@@ -497,3 +497,4 @@ snmpe_parse(struct sockaddr_storage *ss,
 	const char		*errstr = "invalid message";
 	long long		 ver, req;
 	long long		 errval, erridx;
+	unsigned long		 type;
