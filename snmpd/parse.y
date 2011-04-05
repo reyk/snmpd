@@ -497,3 +497,4 @@ lookup(char *s)
 		{ "include",		INCLUDE },
 		{ "integer",		INTEGER },
 		{ "listen",		LISTEN },
+		{ "location",		LOCATION },
