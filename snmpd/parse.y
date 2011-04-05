@@ -500,3 +500,4 @@ lookup(char *s)
 		{ "location",		LOCATION },
 		{ "name",		NAME },
 		{ "none",		NONE },
+		{ "oid",		OBJECTID },
