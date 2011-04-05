@@ -498,3 +498,4 @@ lookup(char *s)
 		{ "integer",		INTEGER },
 		{ "listen",		LISTEN },
 		{ "location",		LOCATION },
+		{ "name",		NAME },
