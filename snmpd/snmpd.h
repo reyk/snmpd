@@ -497,3 +497,4 @@ int		 mps_setint(struct oid *, struct ber_oid *,
 		    struct ber_element **);
 int		 mps_getts(struct oid *, struct ber_oid *,
 		    struct ber_element **);
+void		 mps_encodeinaddr(struct ber_oid *, struct in_addr *, int);
