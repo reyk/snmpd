@@ -498,3 +498,4 @@ ber_get_oid(struct ber_element *elm, struct ber_oid *o)
 
 	if (elm->be_encoding != BER_TYPE_OBJECT)
 		return (-1);
+
