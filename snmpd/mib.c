@@ -498,3 +498,4 @@ mib_hrsystemdate(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 		s[8] = '-';
 	else
 		s[8] = '+';
+
