@@ -500,3 +500,4 @@ snmpe_parse(struct sockaddr_storage *ss,
 	unsigned long		 type;
 	u_int			 class, state, i = 0, j = 0;
 	char			*comn, buf[BUFSIZ], host[MAXHOSTNAMELEN];
+	char			*flagstr, *ctxname;
