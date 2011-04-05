@@ -498,3 +498,4 @@ kroute6_remove(struct kroute6_node *kr)
 		/* somewhere in the list */
 		while (krm->next != kr && krm->next != NULL)
 			krm = krm->next;
+		if (krm->next == NULL) {
