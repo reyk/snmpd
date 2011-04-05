@@ -500,3 +500,4 @@ ber_get_oid(struct ber_element *elm, struct ber_oid *o)
 		return (-1);
 
 	buf = elm->be_val;
+	len = elm->be_len;
