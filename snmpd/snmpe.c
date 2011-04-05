@@ -498,3 +498,4 @@ snmpe_parse(struct sockaddr_storage *ss,
 	long long		 ver, req;
 	long long		 errval, erridx;
 	unsigned long		 type;
+	u_int			 class, state, i = 0, j = 0;
