@@ -500,3 +500,4 @@ mib_hrsystemdate(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 		s[8] = '+';
 
 	s[9] = abs(tzoffset) / 3600;
+	s[10] = (abs(tzoffset) - (s[9] * 3600)) / 60;
