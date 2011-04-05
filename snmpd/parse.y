@@ -499,3 +499,4 @@ lookup(char *s)
 		{ "listen",		LISTEN },
 		{ "location",		LOCATION },
 		{ "name",		NAME },
+		{ "none",		NONE },
