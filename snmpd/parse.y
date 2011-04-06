@@ -502,3 +502,4 @@ lookup(char *s)
 		{ "none",		NONE },
 		{ "oid",		OBJECTID },
 		{ "on",			ON },
+		{ "read-only",		READONLY },
