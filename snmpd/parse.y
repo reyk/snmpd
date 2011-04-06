@@ -501,3 +501,4 @@ lookup(char *s)
 		{ "name",		NAME },
 		{ "none",		NONE },
 		{ "oid",		OBJECTID },
+		{ "on",			ON },
