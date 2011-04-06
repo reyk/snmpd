@@ -502,3 +502,4 @@ int		 mps_decodeinaddr(struct ber_oid *, struct in_addr *, int);
 struct ber_oid	*mps_table(struct oid *, struct ber_oid *, struct ber_oid *);
 
 /* pf.c */
+void			 pf_init(void);
