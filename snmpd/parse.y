@@ -503,3 +503,4 @@ lookup(char *s)
 		{ "oid",		OBJECTID },
 		{ "on",			ON },
 		{ "read-only",		READONLY },
+		{ "read-write",		READWRITE },
