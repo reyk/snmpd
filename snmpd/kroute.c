@@ -501,3 +501,4 @@ kroute6_remove(struct kroute6_node *kr)
 		if (krm->next == NULL) {
 			log_warnx("kroute6_remove multipath list corrupted "
 			    "for %s/%u", log_in6addr(&kr->r.prefix),
+			    kr->r.prefixlen);
