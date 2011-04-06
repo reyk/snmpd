@@ -502,3 +502,4 @@ snmpe_parse(struct sockaddr_storage *ss,
 	char			*comn, buf[BUFSIZ], host[MAXHOSTNAMELEN];
 	char			*flagstr, *ctxname;
 	struct ber_oid		 o;
+	size_t			 len;
