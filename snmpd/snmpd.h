@@ -503,3 +503,4 @@ struct ber_oid	*mps_table(struct oid *, struct ber_oid *, struct ber_oid *);
 
 /* pf.c */
 void			 pf_init(void);
+int			 pf_get_stats(struct pf_status *);
