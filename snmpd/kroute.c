@@ -503,3 +503,4 @@ kroute6_remove(struct kroute6_node *kr)
 			    "for %s/%u", log_in6addr(&kr->r.prefix),
 			    kr->r.prefixlen);
 			return (-1);
+		}
