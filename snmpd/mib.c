@@ -503,3 +503,4 @@ mib_hrsystemdate(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 	s[10] = (abs(tzoffset) - (s[9] * 3600)) / 60;
 
 	*elm = ber_add_nstring(*elm, s, sizeof(s));
+
