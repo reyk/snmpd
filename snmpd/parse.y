@@ -504,3 +504,4 @@ lookup(char *s)
 		{ "on",			ON },
 		{ "read-only",		READONLY },
 		{ "read-write",		READWRITE },
+		{ "receiver",		RECEIVER },
