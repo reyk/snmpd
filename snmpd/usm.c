@@ -504,3 +504,4 @@ usm_valid_digest(struct snmp_message *msg, off_t offs,
 	unsigned	 hlen;
 
 	if (!MSG_HAS_AUTH(msg))
+		return 1;
