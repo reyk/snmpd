@@ -504,3 +504,4 @@ kroute6_remove(struct kroute6_node *kr)
 			    kr->r.prefixlen);
 			return (-1);
 		}
+		krm->next = kr->next;
