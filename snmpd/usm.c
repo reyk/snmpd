@@ -503,3 +503,4 @@ usm_valid_digest(struct snmp_message *msg, off_t offs,
 	u_char		 exp_digest[EVP_MAX_MD_SIZE];
 	unsigned	 hlen;
 
+	if (!MSG_HAS_AUTH(msg))
