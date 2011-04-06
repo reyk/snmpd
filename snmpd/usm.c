@@ -502,3 +502,4 @@ usm_valid_digest(struct snmp_message *msg, off_t offs,
 	const EVP_MD	*md;
 	u_char		 exp_digest[EVP_MAX_MD_SIZE];
 	unsigned	 hlen;
+
