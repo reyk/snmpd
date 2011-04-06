@@ -502,3 +502,4 @@
 #define MIB_pfLogIfIp6PktsInDrop	MIB_pfLogInterface, 11
 #define MIB_pfLogIfIp6PktsOutPass	MIB_pfLogInterface, 12
 #define MIB_pfLogIfIp6PktsOutDrop	MIB_pfLogInterface, 13
+#define MIB_pfSrcTracking		MIB_pfMIBObjects, 5
