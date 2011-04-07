@@ -508,3 +508,4 @@
 #define MIB_pfSrcTrackInserts		MIB_pfSrcTracking, 3
 #define MIB_pfSrcTrackRemovals		MIB_pfSrcTracking, 4
 #define MIB_pfLimits			MIB_pfMIBObjects, 6
+#define MIB_pfLimitStates		MIB_pfLimits, 1
