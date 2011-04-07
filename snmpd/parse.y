@@ -507,3 +507,4 @@ lookup(char *s)
 		{ "receiver",		RECEIVER },
 		{ "seclevel",		SECLEVEL },
 		{ "services",		SERVICES },
+		{ "string",		OCTETSTRING },
