@@ -505,3 +505,4 @@ kroute6_remove(struct kroute6_node *kr)
 			return (-1);
 		}
 		krm->next = kr->next;
+	}
