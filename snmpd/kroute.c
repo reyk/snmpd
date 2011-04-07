@@ -508,3 +508,4 @@ kroute6_remove(struct kroute6_node *kr)
 	}
 
 	kr_state.ks_nroutes--;
+	free(kr);
