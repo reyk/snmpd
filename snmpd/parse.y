@@ -505,3 +505,4 @@ lookup(char *s)
 		{ "read-only",		READONLY },
 		{ "read-write",		READWRITE },
 		{ "receiver",		RECEIVER },
+		{ "seclevel",		SECLEVEL },
