@@ -507,3 +507,4 @@ ber_get_oid(struct ber_element *elm, struct ber_oid *o)
 
 	bzero(o, sizeof(*o));
 	o->bo_id[j++] = buf[i] / 40;
+	o->bo_id[j++] = buf[i++] % 40;
