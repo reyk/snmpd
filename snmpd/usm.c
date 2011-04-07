@@ -507,3 +507,4 @@ usm_valid_digest(struct snmp_message *msg, off_t offs,
 		return 1;
 
 	if (digestlen != SNMP_USM_DIGESTLEN)
+		return 0;
