@@ -505,3 +505,4 @@ ber_get_oid(struct ber_element *elm, struct ber_oid *o)
 	if (!buf[i])
 		return (-1);
 
+	bzero(o, sizeof(*o));
