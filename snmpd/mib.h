@@ -505,3 +505,4 @@
 #define MIB_pfSrcTracking		MIB_pfMIBObjects, 5
 #define MIB_pfSrcTrackCount		MIB_pfSrcTracking, 1
 #define MIB_pfSrcTrackSearches		MIB_pfSrcTracking, 2
+#define MIB_pfSrcTrackInserts		MIB_pfSrcTracking, 3
