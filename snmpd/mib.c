@@ -505,3 +505,4 @@ mib_hrsystemdate(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 	*elm = ber_add_nstring(*elm, s, sizeof(s));
 
 	return (0);
+}
