@@ -505,3 +505,4 @@ snmpe_parse(struct sockaddr_storage *ss,
 	size_t			 len;
 
 	if (ber_scanf_elements(root, "{ie", &ver, &a) != 0)
+		goto parsefail;
