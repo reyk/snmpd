@@ -506,3 +506,4 @@ lookup(char *s)
 		{ "read-write",		READWRITE },
 		{ "receiver",		RECEIVER },
 		{ "seclevel",		SECLEVEL },
+		{ "services",		SERVICES },
