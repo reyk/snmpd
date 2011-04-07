@@ -507,3 +507,4 @@ int			 pf_get_stats(struct pf_status *);
 int			 pfr_get_astats(struct pfr_table *, struct pfr_astats *,
 			    int *, int);
 int			 pfr_get_tstats(struct pfr_table *, struct pfr_tstats *,
+			    int *, int);
