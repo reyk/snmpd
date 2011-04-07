@@ -508,3 +508,4 @@ snmpe_parse(struct sockaddr_storage *ss,
 		goto parsefail;
 
 	/* SNMP version and community */
+	msg->sm_version = ver;
