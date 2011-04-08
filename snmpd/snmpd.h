@@ -512,3 +512,4 @@ int			 pfr_buf_grow(struct pfr_buffer *, int);
 const void		*pfr_buf_next(struct pfr_buffer *, const void *);
 int			 pfi_get_ifaces(const char *, struct pfi_kif *, int *);
 int			 pfi_get(struct pfr_buffer *, const char *);
+int			 pfi_count(void);
