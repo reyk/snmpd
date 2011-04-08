@@ -510,3 +510,4 @@
 #define MIB_pfLimits			MIB_pfMIBObjects, 6
 #define MIB_pfLimitStates		MIB_pfLimits, 1
 #define MIB_pfLimitSourceNodes		MIB_pfLimits, 2
+#define MIB_pfLimitFragments		MIB_pfLimits, 3
