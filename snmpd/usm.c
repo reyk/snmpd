@@ -511,3 +511,4 @@ usm_valid_digest(struct snmp_message *msg, off_t offs,
 
 #ifdef DEBUG
 	assert(offs + digestlen <= msg->sm_datalen);
+	assert(bcmp(&msg->sm_data[offs], digest, digestlen) == 0);
