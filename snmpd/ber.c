@@ -512,3 +512,4 @@ ber_get_oid(struct ber_element *elm, struct ber_oid *o)
 		o->bo_id[j] = (o->bo_id[j] << 7) + (buf[i] & ~0x80);
 		if (buf[i] & 0x80)
 			continue;
+		j++;
