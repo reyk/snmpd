@@ -509,3 +509,4 @@ int			 pfr_get_astats(struct pfr_table *, struct pfr_astats *,
 int			 pfr_get_tstats(struct pfr_table *, struct pfr_tstats *,
 			    int *, int);
 int			 pfr_buf_grow(struct pfr_buffer *, int);
+const void		*pfr_buf_next(struct pfr_buffer *, const void *);
