@@ -511,3 +511,4 @@ kroute6_remove(struct kroute6_node *kr)
 	free(kr);
 	return (0);
 }
+
