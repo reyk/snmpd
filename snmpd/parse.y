@@ -511,3 +511,4 @@ lookup(char *s)
 		{ "system",		SYSTEM },
 		{ "trap",		TRAP },
 		{ "user",		USER }
+	};
