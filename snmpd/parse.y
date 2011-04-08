@@ -509,3 +509,4 @@ lookup(char *s)
 		{ "services",		SERVICES },
 		{ "string",		OCTETSTRING },
 		{ "system",		SYSTEM },
+		{ "trap",		TRAP },
