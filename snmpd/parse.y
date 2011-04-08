@@ -510,3 +510,4 @@ lookup(char *s)
 		{ "string",		OCTETSTRING },
 		{ "system",		SYSTEM },
 		{ "trap",		TRAP },
+		{ "user",		USER }
