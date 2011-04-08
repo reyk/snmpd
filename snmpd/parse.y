@@ -512,3 +512,4 @@ lookup(char *s)
 		{ "trap",		TRAP },
 		{ "user",		USER }
 	};
+	const struct keywords	*p;
