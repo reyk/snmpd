@@ -512,3 +512,4 @@ snmpe_parse(struct sockaddr_storage *ss,
 	switch (msg->sm_version) {
 	case SNMP_V1:
 	case SNMP_V2:
+		if (env->sc_min_seclevel != 0)
