@@ -511,3 +511,4 @@ snmpe_parse(struct sockaddr_storage *ss,
 	msg->sm_version = ver;
 	switch (msg->sm_version) {
 	case SNMP_V1:
+	case SNMP_V2:
