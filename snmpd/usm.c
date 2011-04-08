@@ -509,3 +509,4 @@ usm_valid_digest(struct snmp_message *msg, off_t offs,
 	if (digestlen != SNMP_USM_DIGESTLEN)
 		return 0;
 
+#ifdef DEBUG
