@@ -512,3 +512,4 @@
 #define MIB_pfLimitSourceNodes		MIB_pfLimits, 2
 #define MIB_pfLimitFragments		MIB_pfLimits, 3
 #define MIB_pfLimitMaxTables		MIB_pfLimits, 4
+#define MIB_pfLimitMaxTableEntries	MIB_pfLimits, 5
