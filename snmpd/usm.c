@@ -514,3 +514,4 @@ usm_valid_digest(struct snmp_message *msg, off_t offs,
 	assert(bcmp(&msg->sm_data[offs], digest, digestlen) == 0);
 #endif
 
+	if ((md = usm_get_md(msg->sm_user->uu_auth)) == NULL)
