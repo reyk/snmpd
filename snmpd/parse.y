@@ -514,3 +514,4 @@ lookup(char *s)
 	};
 	const struct keywords	*p;
 
+	p = bsearch(s, keywords, sizeof(keywords)/sizeof(keywords[0]),
