@@ -515,3 +515,4 @@ snmpe_parse(struct sockaddr_storage *ss,
 		if (env->sc_min_seclevel != 0)
 			goto badversion;
 		if (ber_scanf_elements(a, "se", &comn, &msg->sm_pdu) != 0)
+			goto parsefail;
