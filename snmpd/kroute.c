@@ -515,3 +515,4 @@ kroute6_remove(struct kroute6_node *kr)
 void
 kroute6_clear(void)
 {
+	struct kroute6_node	*kr;
