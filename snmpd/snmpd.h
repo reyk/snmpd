@@ -514,3 +514,4 @@ int			 pfi_get_ifaces(const char *, struct pfi_kif *, int *);
 int			 pfi_get(struct pfr_buffer *, const char *);
 int			 pfi_count(void);
 int			 pfi_get_if(struct pfi_kif *, int);
+int			 pft_get(struct pfr_buffer *, struct pfr_table *);
