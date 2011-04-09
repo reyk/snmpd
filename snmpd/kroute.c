@@ -516,3 +516,4 @@ void
 kroute6_clear(void)
 {
 	struct kroute6_node	*kr;
+
