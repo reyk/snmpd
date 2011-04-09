@@ -513,3 +513,4 @@ mib_hrsystemprocs(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 	char		 errbuf[_POSIX2_LINE_MAX];
 	int		 val;
 	int		 mib[] = { CTL_KERN, KERN_MAXPROC };
+	kvm_t		*kd;
