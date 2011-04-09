@@ -516,3 +516,4 @@ int			 pfi_count(void);
 int			 pfi_get_if(struct pfi_kif *, int);
 int			 pft_get(struct pfr_buffer *, struct pfr_table *);
 int			 pft_count(void);
+int			 pft_get_table(struct pfr_tstats *, int);
