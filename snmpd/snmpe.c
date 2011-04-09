@@ -513,3 +513,4 @@ snmpe_parse(struct sockaddr_storage *ss,
 	case SNMP_V1:
 	case SNMP_V2:
 		if (env->sc_min_seclevel != 0)
+			goto badversion;
