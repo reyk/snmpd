@@ -515,3 +515,4 @@
 #define MIB_pfLimitMaxTableEntries	MIB_pfLimits, 5
 #define MIB_pfTimeouts			MIB_pfMIBObjects, 7
 #define MIB_pfTimeoutTcpFirst		MIB_pfTimeouts, 1
+#define MIB_pfTimeoutTcpOpening		MIB_pfTimeouts, 2
