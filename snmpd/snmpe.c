@@ -516,3 +516,4 @@ snmpe_parse(struct sockaddr_storage *ss,
 			goto badversion;
 		if (ber_scanf_elements(a, "se", &comn, &msg->sm_pdu) != 0)
 			goto parsefail;
+		if (strlcpy(msg->sm_community, comn,
