@@ -515,3 +515,4 @@ int			 pfi_get(struct pfr_buffer *, const char *);
 int			 pfi_count(void);
 int			 pfi_get_if(struct pfi_kif *, int);
 int			 pft_get(struct pfr_buffer *, struct pfr_table *);
+int			 pft_count(void);
