@@ -518,3 +518,4 @@ snmpe_parse(struct sockaddr_storage *ss,
 			goto parsefail;
 		if (strlcpy(msg->sm_community, comn,
 		    sizeof(msg->sm_community)) >= sizeof(msg->sm_community)) {
+			stats->snmp_inbadcommunitynames++;
