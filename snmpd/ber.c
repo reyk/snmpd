@@ -517,3 +517,4 @@ ber_get_oid(struct ber_element *elm, struct ber_oid *o)
 	o->bo_n = j;
 
 	return (0);
+}
