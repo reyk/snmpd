@@ -518,3 +518,4 @@ ber_get_oid(struct ber_element *elm, struct ber_oid *o)
 
 	return (0);
 }
+
