@@ -517,3 +517,4 @@ snmpe_parse(struct sockaddr_storage *ss,
 		if (ber_scanf_elements(a, "se", &comn, &msg->sm_pdu) != 0)
 			goto parsefail;
 		if (strlcpy(msg->sm_community, comn,
+		    sizeof(msg->sm_community)) >= sizeof(msg->sm_community)) {
