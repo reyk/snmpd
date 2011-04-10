@@ -518,3 +518,4 @@ lookup(char *s)
 	    sizeof(keywords[0]), kw_cmp);
 
 	if (p)
+		return (p->k_val);
