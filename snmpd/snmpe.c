@@ -519,3 +519,4 @@ snmpe_parse(struct sockaddr_storage *ss,
 		if (strlcpy(msg->sm_community, comn,
 		    sizeof(msg->sm_community)) >= sizeof(msg->sm_community)) {
 			stats->snmp_inbadcommunitynames++;
+			errstr = "community name too long";
