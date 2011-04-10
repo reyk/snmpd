@@ -518,3 +518,4 @@ usm_valid_digest(struct snmp_message *msg, off_t offs,
 		return 0;
 
 	memset(&msg->sm_data[offs], 0, digestlen);
+	HMAC(md, msg->sm_user->uu_authkey, (int)msg->sm_user->uu_authkeylen,
