@@ -520,3 +520,4 @@ ber_get_oid(struct ber_element *elm, struct ber_oid *o)
 }
 
 struct ber_element *
+ber_printf_elements(struct ber_element *ber, char *fmt, ...)
