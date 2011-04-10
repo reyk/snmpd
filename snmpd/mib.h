@@ -518,3 +518,4 @@
 #define MIB_pfTimeoutTcpOpening		MIB_pfTimeouts, 2
 #define MIB_pfTimeoutTcpEstablished	MIB_pfTimeouts, 3
 #define MIB_pfTimeoutTcpClosing		MIB_pfTimeouts, 4
+#define MIB_pfTimeoutTcpFinWait		MIB_pfTimeouts, 5
