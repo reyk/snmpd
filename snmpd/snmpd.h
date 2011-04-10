@@ -519,3 +519,4 @@ int			 pft_count(void);
 int			 pft_get_table(struct pfr_tstats *, int);
 int			 pfta_get(struct pfr_buffer *, struct pfr_table *);
 int			 pfta_get_addr(struct pfr_astats *, int);
+int			 pfta_get_nextaddr(struct pfr_astats *, int *);
