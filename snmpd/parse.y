@@ -520,3 +520,4 @@ lookup(char *s)
 	if (p)
 		return (p->k_val);
 	else
+		return (STRING);
