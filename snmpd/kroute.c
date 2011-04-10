@@ -518,3 +518,4 @@ kroute6_clear(void)
 	struct kroute6_node	*kr;
 
 	while ((kr = RB_MIN(kroute6_tree, &krt6)) != NULL)
+		kroute6_remove(kr);
