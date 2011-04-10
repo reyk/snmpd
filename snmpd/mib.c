@@ -517,3 +517,4 @@ mib_hrsystemprocs(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 	size_t		 len;
 
 	switch (oid->o_oid[OIDIDX_hrsystem]) {
+	case 6:
