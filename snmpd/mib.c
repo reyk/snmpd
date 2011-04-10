@@ -518,3 +518,4 @@ mib_hrsystemprocs(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 
 	switch (oid->o_oid[OIDIDX_hrsystem]) {
 	case 6:
+		if ((kd = kvm_openfiles(NULL, NULL, NULL,
