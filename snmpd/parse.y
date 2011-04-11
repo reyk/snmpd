@@ -521,3 +521,4 @@ lookup(char *s)
 		return (p->k_val);
 	else
 		return (STRING);
+}
