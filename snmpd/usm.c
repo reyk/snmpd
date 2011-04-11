@@ -521,3 +521,4 @@ usm_valid_digest(struct snmp_message *msg, off_t offs,
 	HMAC(md, msg->sm_user->uu_authkey, (int)msg->sm_user->uu_authkeylen,
 	    msg->sm_data, msg->sm_datalen, exp_digest, &hlen);
 	/* we don't bother to restore the original message */
+
