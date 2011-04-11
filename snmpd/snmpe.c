@@ -521,3 +521,4 @@ snmpe_parse(struct sockaddr_storage *ss,
 			stats->snmp_inbadcommunitynames++;
 			errstr = "community name too long";
 			goto fail;
+		}
