@@ -523,3 +523,4 @@ mib_hrsystemprocs(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 			return (-1);
 
 		if (kvm_getprocs(kd, KERN_PROC_ALL, 0,
+		    sizeof(struct kinfo_proc), &val) == NULL)
