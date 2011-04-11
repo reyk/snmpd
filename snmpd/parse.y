@@ -522,3 +522,4 @@ lookup(char *s)
 	else
 		return (STRING);
 }
+
