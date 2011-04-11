@@ -522,3 +522,4 @@ kroute6_clear(void)
 }
 
 struct kif_node *
+kif_find(u_short if_index)
