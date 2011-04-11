@@ -521,3 +521,4 @@ mib_hrsystemprocs(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 		if ((kd = kvm_openfiles(NULL, NULL, NULL,
 		    KVM_NO_FILES, errbuf)) == NULL)
 			return (-1);
+
