@@ -524,3 +524,4 @@ int			 pfta_get_first(struct pfr_astats *);
 
 /* smi.c */
 int		 smi_init(void);
+u_long		 smi_getticks(void);
