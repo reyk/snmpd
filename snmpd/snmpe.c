@@ -524,3 +524,4 @@ snmpe_parse(struct sockaddr_storage *ss,
 		}
 		break;
 	case SNMP_V3:
+		if (ber_scanf_elements(a, "{iisi}e",
