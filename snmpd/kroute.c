@@ -521,3 +521,4 @@ kroute6_clear(void)
 		kroute6_remove(kr);
 }
 
+struct kif_node *
