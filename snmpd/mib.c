@@ -522,3 +522,4 @@ mib_hrsystemprocs(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 		    KVM_NO_FILES, errbuf)) == NULL)
 			return (-1);
 
+		if (kvm_getprocs(kd, KERN_PROC_ALL, 0,
