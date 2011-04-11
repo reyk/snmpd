@@ -523,3 +523,4 @@ lookup(char *s)
 		return (STRING);
 }
 
+#define MAXPUSHBACK	128
