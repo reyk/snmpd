@@ -523,3 +523,4 @@ snmpe_parse(struct sockaddr_storage *ss,
 			goto fail;
 		}
 		break;
+	case SNMP_V3:
