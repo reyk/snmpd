@@ -521,3 +521,4 @@
 #define MIB_pfTimeoutTcpFinWait		MIB_pfTimeouts, 5
 #define MIB_pfTimeoutTcpClosed		MIB_pfTimeouts, 6
 #define MIB_pfTimeoutUdpFirst		MIB_pfTimeouts, 7
+#define MIB_pfTimeoutUdpSingle		MIB_pfTimeouts, 8
