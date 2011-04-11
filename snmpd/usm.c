@@ -523,3 +523,4 @@ usm_valid_digest(struct snmp_message *msg, off_t offs,
 	/* we don't bother to restore the original message */
 
 	if (hlen < digestlen)
+		return 0;
