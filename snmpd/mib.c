@@ -526,3 +526,4 @@ mib_hrsystemprocs(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 		    sizeof(struct kinfo_proc), &val) == NULL)
 			return (-1);
 
+		*elm = ber_add_integer(*elm, val);
