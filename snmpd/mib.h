@@ -527,3 +527,4 @@
 #define MIB_pfTimeoutIcmpError		MIB_pfTimeouts, 11
 #define MIB_pfTimeoutOtherFirst		MIB_pfTimeouts, 12
 #define MIB_pfTimeoutOtherSingle	MIB_pfTimeouts, 13
+#define MIB_pfTimeoutOtherMultiple	MIB_pfTimeouts, 14
