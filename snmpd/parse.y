@@ -525,3 +525,4 @@ lookup(char *s)
 
 #define MAXPUSHBACK	128
 
+char	*parsebuf;
