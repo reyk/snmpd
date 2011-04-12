@@ -526,3 +526,4 @@ kif_find(u_short if_index)
 {
 	struct kif_node	s;
 
+	if (if_index == 0)
