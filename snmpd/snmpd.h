@@ -527,3 +527,4 @@ int		 smi_init(void);
 u_long		 smi_getticks(void);
 void		 smi_mibtree(struct oid *);
 struct oid	*smi_find(struct oid *);
+struct oid	*smi_next(struct oid *);
