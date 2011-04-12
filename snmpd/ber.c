@@ -528,3 +528,4 @@ ber_printf_elements(struct ber_element *ber, char *fmt, ...)
 	unsigned long		 type;
 	long long		 i;
 	char			*s;
+	void			*p;
