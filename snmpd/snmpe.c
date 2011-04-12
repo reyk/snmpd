@@ -527,3 +527,4 @@ snmpe_parse(struct sockaddr_storage *ss,
 		if (ber_scanf_elements(a, "{iisi}e",
 		    &msg->sm_msgid, &msg->sm_max_msg_size, &flagstr,
 		    &msg->sm_secmodel, &a) != 0)
+			goto parsefail;
