@@ -526,3 +526,4 @@ int			 pfta_get_first(struct pfr_astats *);
 int		 smi_init(void);
 u_long		 smi_getticks(void);
 void		 smi_mibtree(struct oid *);
+struct oid	*smi_find(struct oid *);
