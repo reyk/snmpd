@@ -526,3 +526,4 @@ snmpe_parse(struct sockaddr_storage *ss,
 	case SNMP_V3:
 		if (ber_scanf_elements(a, "{iisi}e",
 		    &msg->sm_msgid, &msg->sm_max_msg_size, &flagstr,
+		    &msg->sm_secmodel, &a) != 0)
