@@ -528,3 +528,4 @@ kif_find(u_short if_index)
 
 	if (if_index == 0)
 		return (RB_MIN(kif_tree, &kit));
+
