@@ -528,3 +528,4 @@ snmpe_parse(struct sockaddr_storage *ss,
 		    &msg->sm_msgid, &msg->sm_max_msg_size, &flagstr,
 		    &msg->sm_secmodel, &a) != 0)
 			goto parsefail;
+
