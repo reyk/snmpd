@@ -527,3 +527,4 @@ kif_find(u_short if_index)
 	struct kif_node	s;
 
 	if (if_index == 0)
+		return (RB_MIN(kif_tree, &kit));
