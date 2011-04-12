@@ -526,3 +526,4 @@ ber_printf_elements(struct ber_element *ber, char *fmt, ...)
 	int			 d, class;
 	size_t			 len;
 	unsigned long		 type;
+	long long		 i;
