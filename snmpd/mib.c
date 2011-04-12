@@ -527,3 +527,4 @@ mib_hrsystemprocs(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 			return (-1);
 
 		*elm = ber_add_integer(*elm, val);
+		ber_set_header(*elm, BER_CLASS_APPLICATION, SNMP_T_GAUGE32);
