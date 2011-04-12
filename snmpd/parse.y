@@ -527,3 +527,4 @@ lookup(char *s)
 
 char	*parsebuf;
 int	 parseindex;
+char	 pushback_buffer[MAXPUSHBACK];
