@@ -526,3 +526,4 @@ usm_valid_digest(struct snmp_message *msg, off_t offs,
 		return 0;
 
 	return memcmp(digest, exp_digest, digestlen) == 0;
+}
