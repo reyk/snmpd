@@ -525,3 +525,4 @@ ber_printf_elements(struct ber_element *ber, char *fmt, ...)
 	va_list			 ap;
 	int			 d, class;
 	size_t			 len;
+	unsigned long		 type;
