@@ -525,3 +525,4 @@ struct kif_node *
 kif_find(u_short if_index)
 {
 	struct kif_node	s;
+
