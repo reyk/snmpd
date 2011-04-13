@@ -532,3 +532,4 @@ struct ber_element *
 usm_decrypt(struct snmp_message *msg, struct ber_element *encr)
 {
 	u_char			*privstr;
+	size_t			 privlen;
