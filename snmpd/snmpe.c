@@ -530,3 +530,4 @@ snmpe_parse(struct sockaddr_storage *ss,
 			goto parsefail;
 
 		msg->sm_flags = *flagstr;
+		if (MSG_SECLEVEL(msg) < env->sc_min_seclevel ||
