@@ -529,3 +529,4 @@ void		 smi_mibtree(struct oid *);
 struct oid	*smi_find(struct oid *);
 struct oid	*smi_next(struct oid *);
 struct oid	*smi_foreach(struct oid *, u_int);
+void		 smi_oidlen(struct ber_oid *);
