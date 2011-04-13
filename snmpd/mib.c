@@ -530,3 +530,4 @@ mib_hrsystemprocs(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 		ber_set_header(*elm, BER_CLASS_APPLICATION, SNMP_T_GAUGE32);
 
 		kvm_close(kd);
+		break;
