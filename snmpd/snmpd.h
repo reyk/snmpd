@@ -532,3 +532,4 @@ struct oid	*smi_foreach(struct oid *, u_int);
 void		 smi_oidlen(struct ber_oid *);
 void		 smi_scalar_oidlen(struct ber_oid *);
 char		*smi_oidstring(struct ber_oid *, char *, size_t);
+void		 smi_delete(struct oid *);
