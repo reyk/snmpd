@@ -529,3 +529,4 @@ ber_printf_elements(struct ber_element *ber, char *fmt, ...)
 	long long		 i;
 	char			*s;
 	void			*p;
+	struct ber_oid		*o;
