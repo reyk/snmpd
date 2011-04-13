@@ -530,3 +530,4 @@
 #define MIB_pfTimeoutOtherMultiple	MIB_pfTimeouts, 14
 #define MIB_pfTimeoutFragment		MIB_pfTimeouts, 15
 #define MIB_pfTimeoutInterval		MIB_pfTimeouts, 16
+#define MIB_pfTimeoutAdaptiveStart	MIB_pfTimeouts, 17
