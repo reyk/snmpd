@@ -529,3 +529,4 @@ snmpe_parse(struct sockaddr_storage *ss,
 		    &msg->sm_secmodel, &a) != 0)
 			goto parsefail;
 
+		msg->sm_flags = *flagstr;
