@@ -531,3 +531,4 @@ char	 pushback_buffer[MAXPUSHBACK];
 int	 pushback_index = 0;
 
 int
+lgetc(int quotec)
