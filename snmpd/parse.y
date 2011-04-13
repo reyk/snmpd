@@ -532,3 +532,4 @@ int	 pushback_index = 0;
 
 int
 lgetc(int quotec)
+{
