@@ -530,3 +530,4 @@ usm_valid_digest(struct snmp_message *msg, off_t offs,
 
 struct ber_element *
 usm_decrypt(struct snmp_message *msg, struct ber_element *encr)
+{
