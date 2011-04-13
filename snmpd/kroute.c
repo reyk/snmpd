@@ -531,3 +531,4 @@ kif_find(u_short if_index)
 
 	bzero(&s, sizeof(s));
 	s.k.if_index = if_index;
+
