@@ -532,3 +532,4 @@ mib_hrsystemprocs(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 		kvm_close(kd);
 		break;
 	case 7:
+		len = sizeof(val);
