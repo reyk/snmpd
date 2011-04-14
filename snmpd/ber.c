@@ -533,3 +533,4 @@ ber_printf_elements(struct ber_element *ber, char *fmt, ...)
 	struct ber_element	*sub = ber, *e;
 
 	va_start(ap, fmt);
+	while (*fmt) {
