@@ -535,3 +535,4 @@ kif_find(u_short if_index)
 	return (RB_FIND(kif_tree, &kit, &s));
 }
 
+struct kif *
