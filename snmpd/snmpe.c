@@ -534,3 +534,4 @@ snmpe_parse(struct sockaddr_storage *ss,
 		    msg->sm_secmodel != SNMP_SEC_USM) {
 			/* XXX currently only USM supported */
 			errstr = "unsupported security model";
+			stats->snmp_usmbadseclevel++;
