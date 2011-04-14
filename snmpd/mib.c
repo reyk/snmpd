@@ -535,3 +535,4 @@ mib_hrsystemprocs(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 		len = sizeof(val);
 		if (sysctl(mib, 2, &val, &len, NULL, 0) == -1)
 			return (-1);
+
