@@ -536,3 +536,4 @@
 #define OIDIDX_pfstatus			9
 #define MIB_pfInterfaces		MIB_pfMIBObjects, 8
 #define MIB_pfIfNumber			MIB_pfInterfaces, 1
+#define MIB_pfIfTable			MIB_pfInterfaces, 128
