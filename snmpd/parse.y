@@ -536,3 +536,4 @@ lgetc(int quotec)
 	int		c, next;
 
 	if (parsebuf) {
+		/* Read character from the parsebuffer instead of input. */
