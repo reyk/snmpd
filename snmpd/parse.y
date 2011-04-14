@@ -535,3 +535,4 @@ lgetc(int quotec)
 {
 	int		c, next;
 
+	if (parsebuf) {
