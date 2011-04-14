@@ -535,3 +535,4 @@ char		*smi_oidstring(struct ber_oid *, char *, size_t);
 void		 smi_delete(struct oid *);
 void		 smi_insert(struct oid *);
 int		 smi_oid_cmp(struct oid *, struct oid *);
+
