@@ -534,3 +534,4 @@ usm_decrypt(struct snmp_message *msg, struct ber_element *encr)
 	u_char			*privstr;
 	size_t			 privlen;
 	u_char			 buf[READ_BUF_SIZE];
+	struct ber		 ber;
