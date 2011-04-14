@@ -533,3 +533,4 @@ kif_find(u_short if_index)
 	s.k.if_index = if_index;
 
 	return (RB_FIND(kif_tree, &kit, &s));
+}
