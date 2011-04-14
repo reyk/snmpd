@@ -535,3 +535,4 @@
 #define MIB_pfTimeoutSrcTrack		MIB_pfTimeouts, 19
 #define OIDIDX_pfstatus			9
 #define MIB_pfInterfaces		MIB_pfMIBObjects, 8
+#define MIB_pfIfNumber			MIB_pfInterfaces, 1
