@@ -536,3 +536,4 @@ mib_hrsystemprocs(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 		if (sysctl(mib, 2, &val, &len, NULL, 0) == -1)
 			return (-1);
 
+		*elm = ber_add_integer(*elm, val);
