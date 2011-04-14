@@ -534,3 +534,4 @@ int
 lgetc(int quotec)
 {
 	int		c, next;
+
