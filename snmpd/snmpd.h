@@ -540,3 +540,4 @@ int		 smi_oid_cmp(struct oid *, struct oid *);
 void		 timer_init(void);
 
 /* snmpd.c */
+int		 snmpd_socket_af(struct sockaddr_storage *, in_port_t);
