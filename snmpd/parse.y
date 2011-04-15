@@ -540,3 +540,4 @@ lgetc(int quotec)
 		if (parseindex >= 0) {
 			c = parsebuf[parseindex++];
 			if (c != '\0')
+				return (c);
