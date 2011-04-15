@@ -540,3 +540,4 @@ mib_hrsystemprocs(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 		break;
 	default:
 		return (-1);
+	}
