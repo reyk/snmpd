@@ -537,3 +537,4 @@ usm_decrypt(struct snmp_message *msg, struct ber_element *encr)
 	struct ber		 ber;
 	struct ber_element	*scoped_pdu = NULL;
 	ssize_t			 scoped_pdu_len;
+
