@@ -537,3 +537,4 @@
 #define MIB_pfInterfaces		MIB_pfMIBObjects, 8
 #define MIB_pfIfNumber			MIB_pfInterfaces, 1
 #define MIB_pfIfTable			MIB_pfInterfaces, 128
+#define MIB_pfIfEntry			MIB_pfIfTable, 1
