@@ -538,3 +538,4 @@ int		 smi_oid_cmp(struct oid *, struct oid *);
 
 /* timer.c */
 void		 timer_init(void);
+
