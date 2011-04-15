@@ -538,3 +538,4 @@ kif_find(u_short if_index)
 struct kif *
 kr_getif(u_short if_index)
 {
+	struct kif_node	*kn;
