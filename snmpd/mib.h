@@ -540,3 +540,4 @@
 #define MIB_pfIfEntry			MIB_pfIfTable, 1
 #define OIDIDX_pfInterface		11
 #define OIDIDX_pfIfEntry		12
+#define MIB_pfIfIndex			MIB_pfIfEntry, 1
