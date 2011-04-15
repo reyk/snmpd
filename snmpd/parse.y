@@ -538,3 +538,4 @@ lgetc(int quotec)
 	if (parsebuf) {
 		/* Read character from the parsebuffer instead of input. */
 		if (parseindex >= 0) {
+			c = parsebuf[parseindex++];
