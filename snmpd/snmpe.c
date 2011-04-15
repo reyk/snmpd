@@ -537,3 +537,4 @@ snmpe_parse(struct sockaddr_storage *ss,
 			stats->snmp_usmbadseclevel++;
 			msg->sm_usmerr = OIDVAL_usmErrSecLevel;
 			goto parsefail;
+		}
