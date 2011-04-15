@@ -537,3 +537,4 @@ ber_printf_elements(struct ber_element *ber, char *fmt, ...)
 		switch (*fmt++) {
 		case 'B':
 			p = va_arg(ap, void *);
+			len = va_arg(ap, size_t);
