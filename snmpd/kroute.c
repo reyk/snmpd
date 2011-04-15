@@ -540,3 +540,4 @@ kr_getif(u_short if_index)
 {
 	struct kif_node	*kn;
 
+	kn = kif_find(if_index);
