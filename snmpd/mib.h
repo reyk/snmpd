@@ -538,3 +538,4 @@
 #define MIB_pfIfNumber			MIB_pfInterfaces, 1
 #define MIB_pfIfTable			MIB_pfInterfaces, 128
 #define MIB_pfIfEntry			MIB_pfIfTable, 1
+#define OIDIDX_pfInterface		11
