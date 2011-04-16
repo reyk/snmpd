@@ -542,3 +542,4 @@ snmpe_parse(struct sockaddr_storage *ss,
 		if ((a = usm_decode(msg, a, &errstr)) == NULL)
 			goto parsefail;
 
+		if (ber_scanf_elements(a, "{xxe",
