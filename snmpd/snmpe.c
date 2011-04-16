@@ -543,3 +543,4 @@ snmpe_parse(struct sockaddr_storage *ss,
 			goto parsefail;
 
 		if (ber_scanf_elements(a, "{xxe",
+		    &msg->sm_ctxengineid, &msg->sm_ctxengineid_len,
