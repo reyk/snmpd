@@ -543,3 +543,4 @@ ber_printf_elements(struct ber_element *ber, char *fmt, ...)
 		case 'b':
 			d = va_arg(ap, int);
 			ber = ber_add_boolean(ber, d);
+			break;
