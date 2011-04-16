@@ -544,3 +544,4 @@
 #define MIB_pfIfDescr			MIB_pfIfEntry, 2
 #define MIB_pfIfType			MIB_pfIfEntry, 3
 #define MIB_pfIfRefs			MIB_pfIfEntry, 4
+#define MIB_pfIfRules			MIB_pfIfEntry, 5
