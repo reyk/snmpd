@@ -541,3 +541,4 @@ lgetc(int quotec)
 			c = parsebuf[parseindex++];
 			if (c != '\0')
 				return (c);
+			parsebuf = NULL;
