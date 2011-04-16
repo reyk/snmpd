@@ -541,3 +541,4 @@ ber_printf_elements(struct ber_element *ber, char *fmt, ...)
 			ber = ber_add_bitstring(ber, p, len);
 			break;
 		case 'b':
+			d = va_arg(ap, int);
