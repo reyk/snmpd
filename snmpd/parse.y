@@ -542,3 +542,4 @@ lgetc(int quotec)
 			if (c != '\0')
 				return (c);
 			parsebuf = NULL;
+		} else
