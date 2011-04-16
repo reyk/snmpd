@@ -544,3 +544,4 @@ int		 snmpd_socket_af(struct sockaddr_storage *, in_port_t);
 u_long		 snmpd_engine_time(void);
 char		*tohexstr(u_int8_t *, int);
 
+/* usm.c */
