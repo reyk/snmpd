@@ -546,3 +546,4 @@ lgetc(int quotec)
 			parseindex++;
 	}
 
+	if (pushback_index)
