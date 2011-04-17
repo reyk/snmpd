@@ -545,3 +545,4 @@ snmpe_parse(struct sockaddr_storage *ss,
 		if (ber_scanf_elements(a, "{xxe",
 		    &msg->sm_ctxengineid, &msg->sm_ctxengineid_len,
 		    &ctxname, &len, &msg->sm_pdu) != 0)
+			goto parsefail;
