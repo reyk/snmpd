@@ -546,3 +546,4 @@ kr_getif(u_short if_index)
 
 	return (&kn->k);
 }
+
