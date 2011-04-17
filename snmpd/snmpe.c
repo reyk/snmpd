@@ -547,3 +547,4 @@ snmpe_parse(struct sockaddr_storage *ss,
 		    &ctxname, &len, &msg->sm_pdu) != 0)
 			goto parsefail;
 		if (len > SNMPD_MAXCONTEXNAMELEN)
+			goto parsefail;
