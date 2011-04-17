@@ -545,3 +545,4 @@ ber_printf_elements(struct ber_element *ber, char *fmt, ...)
 			ber = ber_add_boolean(ber, d);
 			break;
 		case 'd':
+			d = va_arg(ap, int);
