@@ -546,3 +546,4 @@ char		*tohexstr(u_int8_t *, int);
 
 /* usm.c */
 void		 usm_generate_keys(void);
+struct usmuser	*usm_newuser(char *name, const char **);
