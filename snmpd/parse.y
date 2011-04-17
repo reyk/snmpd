@@ -547,3 +547,4 @@ lgetc(int quotec)
 	}
 
 	if (pushback_index)
+		return (pushback_buffer[--pushback_index]);
