@@ -545,3 +545,4 @@ lgetc(int quotec)
 		} else
 			parseindex++;
 	}
+
