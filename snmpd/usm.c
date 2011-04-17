@@ -547,3 +547,4 @@ usm_decrypt(struct snmp_message *msg, struct ber_element *encr)
 
 	bzero(&ber, sizeof(ber));
 	ber.fd = -1;
+	ber_set_readbuf(&ber, buf, scoped_pdu_len);
