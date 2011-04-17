@@ -545,3 +545,4 @@ usm_decrypt(struct snmp_message *msg, struct ber_element *encr)
 	if (scoped_pdu_len < 0)
 		return NULL;
 
+	bzero(&ber, sizeof(ber));
