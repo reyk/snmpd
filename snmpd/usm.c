@@ -546,3 +546,4 @@ usm_decrypt(struct snmp_message *msg, struct ber_element *encr)
 		return NULL;
 
 	bzero(&ber, sizeof(ber));
+	ber.fd = -1;
