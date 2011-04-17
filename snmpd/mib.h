@@ -545,3 +545,4 @@
 #define MIB_pfIfType			MIB_pfIfEntry, 3
 #define MIB_pfIfRefs			MIB_pfIfEntry, 4
 #define MIB_pfIfRules			MIB_pfIfEntry, 5
+#define MIB_pfIfIn4PassPkts		MIB_pfIfEntry, 6
