@@ -545,3 +545,4 @@ u_long		 snmpd_engine_time(void);
 char		*tohexstr(u_int8_t *, int);
 
 /* usm.c */
+void		 usm_generate_keys(void);
