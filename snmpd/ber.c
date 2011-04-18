@@ -549,3 +549,4 @@ ber_printf_elements(struct ber_element *ber, char *fmt, ...)
 			ber = ber_add_integer(ber, d);
 			break;
 		case 'e':
+			e = va_arg(ap, struct ber_element *);
