@@ -551,3 +551,4 @@ usm_decrypt(struct snmp_message *msg, struct ber_element *encr)
 	scoped_pdu = ber_read_elements(&ber, NULL);
 
 #ifdef DEBUG
+	if (scoped_pdu != NULL) {
