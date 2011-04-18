@@ -550,3 +550,4 @@ lgetc(int quotec)
 		return (pushback_buffer[--pushback_index]);
 
 	if (quotec) {
+		if ((c = getc(file->stream)) == EOF) {
