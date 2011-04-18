@@ -552,3 +552,4 @@ mib_hrmemory(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 	int			 mib[] = { CTL_HW, HW_PHYSMEM64 };
 	u_int64_t		 physmem;
 	size_t			 len = sizeof(physmem);
+
