@@ -552,3 +552,4 @@ int		 usm_checkuser(struct usmuser *, const char **);
 struct ber_element *usm_decode(struct snmp_message *, struct ber_element *,
 		    const char **);
 struct ber_element *usm_encode(struct snmp_message *, struct ber_element *);
+struct ber_element *usm_encrypt(struct snmp_message *, struct ber_element *);
