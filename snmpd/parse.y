@@ -552,3 +552,4 @@ lgetc(int quotec)
 	if (quotec) {
 		if ((c = getc(file->stream)) == EOF) {
 			yyerror("reached end of file while parsing quoted string");
+			if (file == topfile || popfile() == EOF)
