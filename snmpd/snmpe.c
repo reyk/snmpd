@@ -549,3 +549,4 @@ snmpe_parse(struct sockaddr_storage *ss,
 		if (len > SNMPD_MAXCONTEXNAMELEN)
 			goto parsefail;
 		memcpy(msg->sm_ctxname, ctxname, len);
+		msg->sm_ctxname[len] = '\0';
