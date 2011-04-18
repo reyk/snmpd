@@ -552,3 +552,4 @@ ber_printf_elements(struct ber_element *ber, char *fmt, ...)
 			e = va_arg(ap, struct ber_element *);
 			ber_link_elements(ber, e);
 			break;
+		case 'E':
