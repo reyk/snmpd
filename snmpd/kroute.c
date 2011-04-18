@@ -552,3 +552,4 @@ kr_getnextif(u_short if_index)
 {
 	struct kif_node	*kn;
 
+	if ((kn = kif_find(if_index)) == NULL)
