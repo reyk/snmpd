@@ -551,3 +551,4 @@ struct kif *
 kr_getnextif(u_short if_index)
 {
 	struct kif_node	*kn;
+
