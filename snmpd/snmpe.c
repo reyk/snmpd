@@ -551,3 +551,4 @@ snmpe_parse(struct sockaddr_storage *ss,
 		memcpy(msg->sm_ctxname, ctxname, len);
 		msg->sm_ctxname[len] = '\0';
 		break;
+	default:
