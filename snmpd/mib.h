@@ -549,3 +549,4 @@
 #define MIB_pfIfIn4PassBytes		MIB_pfIfEntry, 7
 #define MIB_pfIfIn4BlockPkts		MIB_pfIfEntry, 8
 #define MIB_pfIfIn4BlockBytes		MIB_pfIfEntry, 9
+#define MIB_pfIfOut4PassPkts		MIB_pfIfEntry, 10
