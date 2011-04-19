@@ -554,3 +554,4 @@ snmpe_parse(struct sockaddr_storage *ss,
 	default:
 	badversion:
 		stats->snmp_inbadversions++;
+		errstr = "bad snmp version";
