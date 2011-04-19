@@ -553,3 +553,4 @@ ber_printf_elements(struct ber_element *ber, char *fmt, ...)
 			ber_link_elements(ber, e);
 			break;
 		case 'E':
+			i = va_arg(ap, long long);
