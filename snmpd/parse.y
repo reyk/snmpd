@@ -555,3 +555,4 @@ lgetc(int quotec)
 			if (file == topfile || popfile() == EOF)
 				return (EOF);
 			return (quotec);
+		}
