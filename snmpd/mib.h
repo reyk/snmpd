@@ -556,3 +556,4 @@
 #define MIB_pfIfIn6PassPkts		MIB_pfIfEntry, 14
 #define MIB_pfIfIn6PassBytes		MIB_pfIfEntry, 15
 #define MIB_pfIfIn6BlockPkts		MIB_pfIfEntry, 16
+#define MIB_pfIfIn6BlockBytes		MIB_pfIfEntry, 17
