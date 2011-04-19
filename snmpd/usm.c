@@ -555,3 +555,4 @@ usm_decrypt(struct snmp_message *msg, struct ber_element *encr)
 		fprintf(stderr, "decrypted scoped PDU:\n");
 		snmpe_debug_elements(scoped_pdu);
 	}
+#endif
