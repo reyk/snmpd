@@ -555,3 +555,4 @@ struct ber_element *usm_encode(struct snmp_message *, struct ber_element *);
 struct ber_element *usm_encrypt(struct snmp_message *, struct ber_element *);
 void		 usm_finalize_digest(struct snmp_message *, char *, ssize_t);
 void		 usm_make_report(struct snmp_message *);
+#endif /* _SNMPD_H */
