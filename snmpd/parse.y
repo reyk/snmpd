@@ -556,3 +556,4 @@ lgetc(int quotec)
 				return (EOF);
 			return (quotec);
 		}
+		return (c);
