@@ -554,3 +554,4 @@ lgetc(int quotec)
 			yyerror("reached end of file while parsing quoted string");
 			if (file == topfile || popfile() == EOF)
 				return (EOF);
+			return (quotec);
