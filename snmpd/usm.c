@@ -559,3 +559,4 @@ usm_decrypt(struct snmp_message *msg, struct ber_element *encr)
 
 	ber_free(&ber);
 	return scoped_pdu;
+}
