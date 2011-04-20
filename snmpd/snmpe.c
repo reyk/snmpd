@@ -559,3 +559,4 @@ snmpe_parse(struct sockaddr_storage *ss,
 	}
 
 	if (ber_scanf_elements(msg->sm_pdu, "t{e", &class, &type, &a) != 0)
+		goto parsefail;
