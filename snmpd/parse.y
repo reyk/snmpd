@@ -559,3 +559,4 @@ lgetc(int quotec)
 		return (c);
 	}
 
+	while ((c = getc(file->stream)) == '\\') {
