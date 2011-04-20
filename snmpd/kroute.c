@@ -559,3 +559,4 @@ kr_getnextif(u_short if_index)
 	if (kn == NULL)
 		return (NULL);
 
+	return (&kn->k);
