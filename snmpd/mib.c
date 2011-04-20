@@ -558,3 +558,4 @@ mib_hrmemory(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 
 	ber = ber_add_integer(ber, physmem / 1024);
 
+	return (0);
