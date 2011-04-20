@@ -557,3 +557,4 @@ kr_getnextif(u_short if_index)
 	if (if_index)
 		kn = RB_NEXT(kif_tree, &kit, kn);
 	if (kn == NULL)
+		return (NULL);
