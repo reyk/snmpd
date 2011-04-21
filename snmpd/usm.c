@@ -564,3 +564,4 @@ usm_decrypt(struct snmp_message *msg, struct ber_element *encr)
 ssize_t
 usm_crypt(struct snmp_message *msg, u_char *inbuf, int inlen, u_char *outbuf,
 	int do_encrypt)
+{
