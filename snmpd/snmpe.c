@@ -562,3 +562,4 @@ snmpe_parse(struct sockaddr_storage *ss,
 		goto parsefail;
 
 	/* SNMP PDU context */
+	if (class != BER_CLASS_CONTEXT)
