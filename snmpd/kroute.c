@@ -561,3 +561,4 @@ kr_getnextif(u_short if_index)
 
 	return (&kn->k);
 }
+
