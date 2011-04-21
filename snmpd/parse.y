@@ -564,3 +564,4 @@ lgetc(int quotec)
 		if (next != '\n') {
 			c = next;
 			break;
+		}
