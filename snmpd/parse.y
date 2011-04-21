@@ -562,3 +562,4 @@ lgetc(int quotec)
 	while ((c = getc(file->stream)) == '\\') {
 		next = getc(file->stream);
 		if (next != '\n') {
+			c = next;
