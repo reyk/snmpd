@@ -562,3 +562,4 @@ kr_getnextif(u_short if_index)
 	return (&kn->k);
 }
 
+struct kif_node *
