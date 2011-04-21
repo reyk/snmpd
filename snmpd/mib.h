@@ -564,3 +564,4 @@
 #define MIB_pfTables			MIB_pfMIBObjects, 9
 #define MIB_pfTblNumber			MIB_pfTables, 1
 #define MIB_pfTblTable			MIB_pfTables, 128
+#define MIB_pfTblEntry			MIB_pfTblTable, 1
