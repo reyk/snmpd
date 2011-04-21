@@ -563,3 +563,4 @@ lgetc(int quotec)
 		next = getc(file->stream);
 		if (next != '\n') {
 			c = next;
+			break;
