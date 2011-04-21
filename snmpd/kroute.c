@@ -563,3 +563,4 @@ kr_getnextif(u_short if_index)
 }
 
 struct kif_node *
+kif_insert(u_short if_index)
