@@ -565,3 +565,4 @@ ber_printf_elements(struct ber_element *ber, char *fmt, ...)
 			ber = ber_add_oid(ber, o);
 			break;
 		case 'o':
+			s = va_arg(ap, char *);
