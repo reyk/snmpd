@@ -568,3 +568,4 @@ lgetc(int quotec)
 		yylval.lineno = file->lineno;
 		file->lineno++;
 	}
+	if (c == '\t' || c == ' ') {
