@@ -566,3 +566,4 @@ lgetc(int quotec)
 			break;
 		}
 		yylval.lineno = file->lineno;
+		file->lineno++;
