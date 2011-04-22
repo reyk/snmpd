@@ -567,3 +567,4 @@ snmpe_parse(struct sockaddr_storage *ss,
 	switch (type) {
 	case SNMP_C_GETBULKREQ:
 		if (msg->sm_version == SNMP_V1) {
+			stats->snmp_inbadversions++;
