@@ -567,3 +567,4 @@ kif_insert(u_short if_index)
 {
 	struct kif_node	*kif;
 
+	if ((kif = calloc(1, sizeof(struct kif_node))) == NULL)
