@@ -567,3 +567,4 @@ mib_hrstorage(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 	struct ber_element	*ber = *elm;
 	u_int32_t		 idx;
 	struct statfs		*mntbuf, *mnt;
+	int			 mntsize, maxsize;
