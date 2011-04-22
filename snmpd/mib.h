@@ -566,3 +566,4 @@
 #define MIB_pfTblTable			MIB_pfTables, 128
 #define MIB_pfTblEntry			MIB_pfTblTable, 1
 #define OIDIDX_pfTable			11
+#define OIDIDX_pfTableEntry		12
