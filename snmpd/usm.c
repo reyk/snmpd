@@ -567,3 +567,4 @@ usm_crypt(struct snmp_message *msg, u_char *inbuf, int inlen, u_char *outbuf,
 {
 	const EVP_CIPHER	*cipher;
 	EVP_CIPHER_CTX		 ctx;
+	u_char			*privkey;
