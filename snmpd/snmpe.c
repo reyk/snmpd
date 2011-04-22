@@ -565,3 +565,4 @@ snmpe_parse(struct sockaddr_storage *ss,
 	if (class != BER_CLASS_CONTEXT)
 		goto parsefail;
 	switch (type) {
+	case SNMP_C_GETBULKREQ:
