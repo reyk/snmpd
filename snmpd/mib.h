@@ -570,3 +570,4 @@
 #define MIB_pfTblIndex			MIB_pfTblEntry, 1
 #define MIB_pfTblName			MIB_pfTblEntry, 2
 #define MIB_pfTblAddresses		MIB_pfTblEntry, 3
+#define MIB_pfTblAnchorRefs		MIB_pfTblEntry, 4
