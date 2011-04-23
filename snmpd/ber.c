@@ -570,3 +570,4 @@ ber_printf_elements(struct ber_element *ber, char *fmt, ...)
 			break;
 		case 's':
 			s = va_arg(ap, char *);
+			ber = ber_add_string(ber, s);
