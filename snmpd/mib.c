@@ -570,3 +570,4 @@ mib_hrstorage(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 	int			 mntsize, maxsize;
 	u_int32_t		 units, size, used, fail = 0;
 	const char		*descr = NULL;
+	int			 mib[] = { CTL_HW, 0 };
