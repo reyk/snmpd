@@ -571,3 +571,4 @@ snmpe_parse(struct sockaddr_storage *ss,
 			errstr = "invalid request for protocol version 1";
 			goto fail;
 		}
+		/* FALLTHROUGH */
