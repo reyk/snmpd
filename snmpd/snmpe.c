@@ -572,3 +572,4 @@ snmpe_parse(struct sockaddr_storage *ss,
 			goto fail;
 		}
 		/* FALLTHROUGH */
+	case SNMP_C_GETREQ:
