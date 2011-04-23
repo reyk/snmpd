@@ -572,3 +572,4 @@ kif_insert(u_short if_index)
 
 	kif->k.if_index = if_index;
 	TAILQ_INIT(&kif->addrs);
+
