@@ -570,3 +570,4 @@ usm_crypt(struct snmp_message *msg, u_char *inbuf, int inlen, u_char *outbuf,
 	u_char			*privkey;
 	int			 i;
 	u_char			 iv[EVP_MAX_IV_LENGTH];
+	int			 len, len2;
