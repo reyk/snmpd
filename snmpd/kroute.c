@@ -570,3 +570,4 @@ kif_insert(u_short if_index)
 	if ((kif = calloc(1, sizeof(struct kif_node))) == NULL)
 		return (NULL);
 
+	kif->k.if_index = if_index;
