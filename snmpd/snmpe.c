@@ -569,3 +569,4 @@ snmpe_parse(struct sockaddr_storage *ss,
 		if (msg->sm_version == SNMP_V1) {
 			stats->snmp_inbadversions++;
 			errstr = "invalid request for protocol version 1";
+			goto fail;
