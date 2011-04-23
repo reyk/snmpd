@@ -569,3 +569,4 @@ mib_hrstorage(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 	struct statfs		*mntbuf, *mnt;
 	int			 mntsize, maxsize;
 	u_int32_t		 units, size, used, fail = 0;
+	const char		*descr = NULL;
