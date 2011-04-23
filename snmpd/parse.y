@@ -571,3 +571,4 @@ lgetc(int quotec)
 	if (c == '\t' || c == ' ') {
 		/* Compress blanks to a single space. */
 		do {
+			c = getc(file->stream);
