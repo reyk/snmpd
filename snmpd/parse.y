@@ -569,3 +569,4 @@ lgetc(int quotec)
 		file->lineno++;
 	}
 	if (c == '\t' || c == ' ') {
+		/* Compress blanks to a single space. */
