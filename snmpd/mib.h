@@ -569,3 +569,4 @@
 #define OIDIDX_pfTableEntry		12
 #define MIB_pfTblIndex			MIB_pfTblEntry, 1
 #define MIB_pfTblName			MIB_pfTblEntry, 2
+#define MIB_pfTblAddresses		MIB_pfTblEntry, 3
