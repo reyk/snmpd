@@ -573,3 +573,4 @@
 #define MIB_pfTblAnchorRefs		MIB_pfTblEntry, 4
 #define MIB_pfTblRuleRefs		MIB_pfTblEntry, 5
 #define MIB_pfTblEvalsMatch		MIB_pfTblEntry, 6
+#define MIB_pfTblEvalsNoMatch		MIB_pfTblEntry, 7
