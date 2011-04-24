@@ -573,3 +573,4 @@ ber_printf_elements(struct ber_element *ber, char *fmt, ...)
 			ber = ber_add_string(ber, s);
 			break;
 		case 't':
+			class = va_arg(ap, int);
