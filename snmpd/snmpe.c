@@ -575,3 +575,4 @@ snmpe_parse(struct sockaddr_storage *ss,
 	case SNMP_C_GETREQ:
 		stats->snmp_ingetrequests++;
 		/* FALLTHROUGH */
+	case SNMP_C_GETNEXTREQ:
