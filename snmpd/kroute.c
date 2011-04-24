@@ -575,3 +575,4 @@ kif_insert(u_short if_index)
 
 	if (RB_INSERT(kif_tree, &kit, kif) != NULL)
 		fatalx("kif_insert: RB_INSERT");
+
