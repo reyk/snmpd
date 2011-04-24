@@ -574,3 +574,4 @@ mib_hrstorage(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 	u_int64_t		 physmem, realmem;
 	struct uvmexp		 uvm;
 	struct vmtotal		 vm;
+	size_t			 len;
