@@ -576,3 +576,4 @@
 #define MIB_pfTblEvalsNoMatch		MIB_pfTblEntry, 7
 #define MIB_pfTblInPassPkts		MIB_pfTblEntry, 8
 #define MIB_pfTblInPassBytes		MIB_pfTblEntry, 9
+#define MIB_pfTblInBlockPkts		MIB_pfTblEntry, 10
