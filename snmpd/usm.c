@@ -573,3 +573,4 @@ usm_crypt(struct snmp_message *msg, u_char *inbuf, int inlen, u_char *outbuf,
 	int			 len, len2;
 	int			 rv;
 	u_int32_t		 ivv;
+
