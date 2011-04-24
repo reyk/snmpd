@@ -574,3 +574,4 @@ kif_insert(u_short if_index)
 	TAILQ_INIT(&kif->addrs);
 
 	if (RB_INSERT(kif_tree, &kit, kif) != NULL)
+		fatalx("kif_insert: RB_INSERT");
