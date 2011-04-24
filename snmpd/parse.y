@@ -576,3 +576,4 @@ lgetc(int quotec)
 		ungetc(c, file->stream);
 		c = ' ';
 	}
+
