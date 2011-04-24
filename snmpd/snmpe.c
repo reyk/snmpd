@@ -573,3 +573,4 @@ snmpe_parse(struct sockaddr_storage *ss,
 		}
 		/* FALLTHROUGH */
 	case SNMP_C_GETREQ:
+		stats->snmp_ingetrequests++;
