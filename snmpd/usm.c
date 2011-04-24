@@ -574,3 +574,4 @@ usm_crypt(struct snmp_message *msg, u_char *inbuf, int inlen, u_char *outbuf,
 	int			 rv;
 	u_int32_t		 ivv;
 
+	if ((cipher = usm_get_cipher(msg->sm_user->uu_priv)) == NULL)
