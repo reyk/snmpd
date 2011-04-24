@@ -575,3 +575,4 @@ ber_printf_elements(struct ber_element *ber, char *fmt, ...)
 		case 't':
 			class = va_arg(ap, int);
 			type = va_arg(ap, unsigned long);
+			ber_set_header(ber, class, type);
