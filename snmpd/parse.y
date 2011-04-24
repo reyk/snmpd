@@ -574,3 +574,4 @@ lgetc(int quotec)
 			c = getc(file->stream);
 		} while (c == '\t' || c == ' ');
 		ungetc(c, file->stream);
+		c = ' ';
