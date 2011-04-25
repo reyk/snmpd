@@ -579,3 +579,4 @@ ber_printf_elements(struct ber_element *ber, char *fmt, ...)
 			break;
 		case 'x':
 			s = va_arg(ap, char *);
+			len = va_arg(ap, size_t);
