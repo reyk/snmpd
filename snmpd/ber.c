@@ -578,3 +578,4 @@ ber_printf_elements(struct ber_element *ber, char *fmt, ...)
 			ber_set_header(ber, class, type);
 			break;
 		case 'x':
+			s = va_arg(ap, char *);
