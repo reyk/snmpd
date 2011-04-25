@@ -578,3 +578,4 @@ usm_crypt(struct snmp_message *msg, u_char *inbuf, int inlen, u_char *outbuf,
 		return -1;
 
 	privkey = (u_char *)msg->sm_user->uu_privkey;
+#ifdef DEBUG
