@@ -577,3 +577,4 @@
 #define MIB_pfTblInPassPkts		MIB_pfTblEntry, 8
 #define MIB_pfTblInPassBytes		MIB_pfTblEntry, 9
 #define MIB_pfTblInBlockPkts		MIB_pfTblEntry, 10
+#define MIB_pfTblInBlockBytes		MIB_pfTblEntry, 11
