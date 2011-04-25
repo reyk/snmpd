@@ -577,3 +577,4 @@ lgetc(int quotec)
 		c = ' ';
 	}
 
+	while (c == EOF) {
