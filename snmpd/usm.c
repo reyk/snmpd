@@ -580,3 +580,4 @@ usm_crypt(struct snmp_message *msg, u_char *inbuf, int inlen, u_char *outbuf,
 	privkey = (u_char *)msg->sm_user->uu_privkey;
 #ifdef DEBUG
 	assert(privkey != NULL);
+#endif
