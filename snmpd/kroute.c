@@ -577,3 +577,4 @@ kif_insert(u_short if_index)
 		fatalx("kif_insert: RB_INSERT");
 
 	kr_state.ks_nkif++;
+	kr_state.ks_iflastchange = smi_getticks();
