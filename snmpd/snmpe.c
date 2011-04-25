@@ -577,3 +577,4 @@ snmpe_parse(struct sockaddr_storage *ss,
 		/* FALLTHROUGH */
 	case SNMP_C_GETNEXTREQ:
 		if (type == SNMP_C_GETNEXTREQ)
+			stats->snmp_ingetnexts++;
