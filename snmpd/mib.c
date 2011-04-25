@@ -577,3 +577,4 @@ mib_hrstorage(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 	size_t			 len;
 	static struct ber_oid	*sop, so[] = {
 		{ { MIB_hrStorageOther } },
+		{ { MIB_hrStorageRam } },
