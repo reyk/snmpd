@@ -579,3 +579,4 @@ kif_insert(u_short if_index)
 	kr_state.ks_nkif++;
 	kr_state.ks_iflastchange = smi_getticks();
 
+	return (kif);
