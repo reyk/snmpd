@@ -578,3 +578,4 @@ lgetc(int quotec)
 	}
 
 	while (c == EOF) {
+		if (file == topfile || popfile() == EOF)
