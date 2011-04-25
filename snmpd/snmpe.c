@@ -578,3 +578,4 @@ snmpe_parse(struct sockaddr_storage *ss,
 	case SNMP_C_GETNEXTREQ:
 		if (type == SNMP_C_GETNEXTREQ)
 			stats->snmp_ingetnexts++;
+		if (msg->sm_version != SNMP_V3 &&
