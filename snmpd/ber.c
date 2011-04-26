@@ -583,3 +583,4 @@ ber_printf_elements(struct ber_element *ber, char *fmt, ...)
 			ber = ber_add_nstring(ber, s, len);
 			break;
 		case '0':
+			ber = ber_add_null(ber);
