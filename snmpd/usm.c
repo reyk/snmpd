@@ -583,3 +583,4 @@ usm_crypt(struct snmp_message *msg, u_char *inbuf, int inlen, u_char *outbuf,
 #endif
 	switch (msg->sm_user->uu_priv) {
 	case PRIV_DES:
+		/* RFC3414, chap 8.1.1.1. */
