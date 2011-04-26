@@ -582,3 +582,4 @@ mib_hrstorage(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 		{ { MIB_hrStorageFixedDisk } }
 	};
 
+	/* Physical memory, real memory, swap */
