@@ -584,3 +584,4 @@ mib_hrstorage(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 
 	/* Physical memory, real memory, swap */
 	mib[1] = HW_PHYSMEM64;
+	len = sizeof(physmem);
