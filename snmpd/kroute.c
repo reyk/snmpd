@@ -581,3 +581,4 @@ kif_insert(u_short if_index)
 
 	return (kif);
 }
+
