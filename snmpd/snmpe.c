@@ -583,3 +583,4 @@ snmpe_parse(struct sockaddr_storage *ss,
 		    strcmp(env->sc_rwcommunity, msg->sm_community) != 0) {
 			stats->snmp_inbadcommunitynames++;
 			errstr = "wrong read community";
+			goto fail;
