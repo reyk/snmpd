@@ -581,3 +581,4 @@ lgetc(int quotec)
 		if (file == topfile || popfile() == EOF)
 			return (EOF);
 		c = getc(file->stream);
+	}
