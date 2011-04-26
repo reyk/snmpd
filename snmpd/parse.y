@@ -582,3 +582,4 @@ lgetc(int quotec)
 			return (EOF);
 		c = getc(file->stream);
 	}
+	return (c);
