@@ -581,3 +581,4 @@ ber_printf_elements(struct ber_element *ber, char *fmt, ...)
 			s = va_arg(ap, char *);
 			len = va_arg(ap, size_t);
 			ber = ber_add_nstring(ber, s, len);
+			break;
