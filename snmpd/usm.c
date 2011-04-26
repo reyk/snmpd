@@ -582,3 +582,4 @@ usm_crypt(struct snmp_message *msg, u_char *inbuf, int inlen, u_char *outbuf,
 	assert(privkey != NULL);
 #endif
 	switch (msg->sm_user->uu_priv) {
+	case PRIV_DES:
