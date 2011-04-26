@@ -583,3 +583,4 @@ lgetc(int quotec)
 		c = getc(file->stream);
 	}
 	return (c);
+}
