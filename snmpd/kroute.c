@@ -583,3 +583,4 @@ kif_insert(u_short if_index)
 }
 
 int
+kif_remove(struct kif_node *kif)
