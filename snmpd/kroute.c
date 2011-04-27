@@ -586,3 +586,4 @@ int
 kif_remove(struct kif_node *kif)
 {
 	struct kif_addr	*ka;
+
