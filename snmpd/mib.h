@@ -585,3 +585,4 @@
 #define MIB_pfTblOutBlockPkts		MIB_pfTblEntry, 16
 #define MIB_pfTblOutBlockBytes		MIB_pfTblEntry, 17
 #define MIB_pfTblOutXPassPkts		MIB_pfTblEntry, 18
+#define MIB_pfTblOutXPassBytes		MIB_pfTblEntry, 19
