@@ -586,3 +586,4 @@ usm_crypt(struct snmp_message *msg, u_char *inbuf, int inlen, u_char *outbuf,
 		/* RFC3414, chap 8.1.1.1. */
 		for (i = 0; i < 8; i++)
 			iv[i] = msg->sm_salt[i] ^ privkey[SNMP_USM_SALTLEN + i];
+		break;
