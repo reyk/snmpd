@@ -588,3 +588,4 @@ lgetc(int quotec)
 int
 lungetc(int c)
 {
+	if (c == EOF)
