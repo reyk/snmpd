@@ -587,3 +587,4 @@
 #define MIB_pfTblOutXPassPkts		MIB_pfTblEntry, 18
 #define MIB_pfTblOutXPassBytes		MIB_pfTblEntry, 19
 #define MIB_pfTblStatsCleared		MIB_pfTblEntry, 20
+#define MIB_pfTblAddrTable		MIB_pfTables, 129
