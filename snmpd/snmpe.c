@@ -587,3 +587,4 @@ snmpe_parse(struct sockaddr_storage *ss,
 		}
 		msg->sm_context = type;
 		break;
+	case SNMP_C_SETREQ:
