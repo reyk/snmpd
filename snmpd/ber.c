@@ -586,3 +586,4 @@ ber_printf_elements(struct ber_element *ber, char *fmt, ...)
 			ber = ber_add_null(ber);
 			break;
 		case '{':
+			ber = sub = ber_add_sequence(ber);
