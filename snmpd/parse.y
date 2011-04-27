@@ -586,3 +586,4 @@ lgetc(int quotec)
 }
 
 int
+lungetc(int c)
