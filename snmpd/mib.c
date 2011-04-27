@@ -586,3 +586,4 @@ mib_hrstorage(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 	mib[1] = HW_PHYSMEM64;
 	len = sizeof(physmem);
 	if (sysctl(mib, sizeofa(mib), &physmem, &len, NULL, 0) == -1)
+		return (-1);
