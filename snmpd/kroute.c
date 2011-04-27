@@ -587,3 +587,4 @@ kif_remove(struct kif_node *kif)
 {
 	struct kif_addr	*ka;
 
+	if (RB_REMOVE(kif_tree, &kit, kif) == NULL) {
