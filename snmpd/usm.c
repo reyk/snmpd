@@ -588,3 +588,4 @@ usm_crypt(struct snmp_message *msg, u_char *inbuf, int inlen, u_char *outbuf,
 			iv[i] = msg->sm_salt[i] ^ privkey[SNMP_USM_SALTLEN + i];
 		break;
 	case PRIV_AES:
+		/* RFC3826, chap 3.1.2.1. */
