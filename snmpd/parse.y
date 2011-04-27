@@ -585,3 +585,4 @@ lgetc(int quotec)
 	return (c);
 }
 
+int
