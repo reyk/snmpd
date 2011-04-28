@@ -591,3 +591,4 @@ ber_printf_elements(struct ber_element *ber, char *fmt, ...)
 		case '(':
 			ber = sub = ber_add_set(ber);
 			break;
+		case '}':
