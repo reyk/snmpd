@@ -589,3 +589,4 @@
 #define MIB_pfTblStatsCleared		MIB_pfTblEntry, 20
 #define MIB_pfTblAddrTable		MIB_pfTables, 129
 #define MIB_pfTblAddrEntry		MIB_pfTblAddrTable, 1
+#define OIDIDX_pfTblAddr		11
