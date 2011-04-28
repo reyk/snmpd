@@ -590,3 +590,4 @@ usm_crypt(struct snmp_message *msg, u_char *inbuf, int inlen, u_char *outbuf,
 	case PRIV_AES:
 		/* RFC3826, chap 3.1.2.1. */
 		ivv = htobe32(msg->sm_engine_boots);
+		memcpy(iv, &ivv, sizeof(ivv));
