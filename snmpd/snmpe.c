@@ -591,3 +591,4 @@ snmpe_parse(struct sockaddr_storage *ss,
 		stats->snmp_insetrequests++;
 		if (msg->sm_version != SNMP_V3 &&
 		    strcmp(env->sc_rwcommunity, msg->sm_community) != 0) {
+			if (strcmp(env->sc_rdcommunity, msg->sm_community) != 0)
