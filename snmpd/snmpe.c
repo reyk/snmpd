@@ -589,3 +589,4 @@ snmpe_parse(struct sockaddr_storage *ss,
 		break;
 	case SNMP_C_SETREQ:
 		stats->snmp_insetrequests++;
+		if (msg->sm_version != SNMP_V3 &&
