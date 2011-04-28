@@ -592,3 +592,4 @@
 #define OIDIDX_pfTblAddr		11
 #define MIB_pfTblAddrTblIndex		MIB_pfTblAddrEntry, 1
 #define MIB_pfTblAddrNet		MIB_pfTblAddrEntry, 2
+#define MIB_pfTblAddrMask		MIB_pfTblAddrEntry, 3
