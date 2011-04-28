@@ -589,3 +589,4 @@ int
 lungetc(int c)
 {
 	if (c == EOF)
+		return (EOF);
