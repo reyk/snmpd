@@ -592,3 +592,4 @@ lungetc(int c)
 		return (EOF);
 	if (parsebuf) {
 		parseindex--;
+		if (parseindex >= 0)
