@@ -591,3 +591,4 @@ kif_remove(struct kif_node *kif)
 		log_warnx("RB_REMOVE(kif_tree, &kit, kif)");
 		return (-1);
 	}
+
