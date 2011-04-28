@@ -589,3 +589,4 @@ mib_hrstorage(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 		return (-1);
 	mib[1] = HW_USERMEM64;
 	len = sizeof(realmem);
+	if (sysctl(mib, sizeofa(mib), &realmem, &len, NULL, 0) == -1)
