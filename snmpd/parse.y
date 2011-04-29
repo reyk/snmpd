@@ -594,3 +594,4 @@ lungetc(int c)
 		parseindex--;
 		if (parseindex >= 0)
 			return (c);
+	}
