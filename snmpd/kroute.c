@@ -596,3 +596,4 @@ kif_remove(struct kif_node *kif)
 		TAILQ_REMOVE(&kif->addrs, ka, entry);
 		ka_remove(ka);
 	}
+	free(kif);
