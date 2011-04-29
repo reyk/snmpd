@@ -595,3 +595,4 @@ usm_crypt(struct snmp_message *msg, u_char *inbuf, int inlen, u_char *outbuf,
 		memcpy(iv + sizeof(ivv), &ivv, sizeof(ivv));
 		memcpy(iv + 2 * sizeof(ivv), msg->sm_salt, SNMP_USM_SALTLEN);
 		break;
+	default:
