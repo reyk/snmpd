@@ -593,3 +593,4 @@ mib_hrstorage(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 		return (-1);
 	mib[0] = CTL_VM;
 	mib[1] = VM_UVMEXP;
+	len = sizeof(uvm);
