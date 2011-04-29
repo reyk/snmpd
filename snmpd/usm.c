@@ -594,3 +594,4 @@ usm_crypt(struct snmp_message *msg, u_char *inbuf, int inlen, u_char *outbuf,
 		ivv = htobe32(msg->sm_engine_time);
 		memcpy(iv + sizeof(ivv), &ivv, sizeof(ivv));
 		memcpy(iv + 2 * sizeof(ivv), msg->sm_salt, SNMP_USM_SALTLEN);
+		break;
