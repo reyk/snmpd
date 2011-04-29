@@ -593,3 +593,4 @@ kif_remove(struct kif_node *kif)
 	}
 
 	while ((ka = TAILQ_FIRST(&kif->addrs)) != NULL) {
+		TAILQ_REMOVE(&kif->addrs, ka, entry);
