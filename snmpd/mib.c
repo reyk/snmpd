@@ -595,3 +595,4 @@ mib_hrstorage(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 	mib[1] = VM_UVMEXP;
 	len = sizeof(uvm);
 	if (sysctl(mib, sizeofa(mib), &uvm, &len, NULL, 0) == -1)
+		return (-1);
