@@ -594,3 +594,4 @@ snmpe_parse(struct sockaddr_storage *ss,
 			if (strcmp(env->sc_rdcommunity, msg->sm_community) != 0)
 				stats->snmp_inbadcommunitynames++;
 			else
+				stats->snmp_inbadcommunityuses++;
