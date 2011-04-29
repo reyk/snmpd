@@ -595,3 +595,4 @@ lungetc(int c)
 		if (parseindex >= 0)
 			return (c);
 	}
+	if (pushback_index < MAXPUSHBACK-1)
