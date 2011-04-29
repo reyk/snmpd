@@ -595,3 +595,4 @@ ber_printf_elements(struct ber_element *ber, char *fmt, ...)
 		case ')':
 			ber = sub;
 			break;
+		case '.':
