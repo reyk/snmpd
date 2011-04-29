@@ -595,3 +595,4 @@
 #define MIB_pfTblAddrMask		MIB_pfTblAddrEntry, 3
 #define MIB_pfTblAddrCleared		MIB_pfTblAddrEntry, 4
 #define MIB_pfTblAddrInBlockPkts	MIB_pfTblAddrEntry, 5
+#define MIB_pfTblAddrInBlockBytes	MIB_pfTblAddrEntry, 6
