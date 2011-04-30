@@ -600,3 +600,4 @@ kif_remove(struct kif_node *kif)
 
 	kr_state.ks_nkif--;
 	kr_state.ks_iflastchange = smi_getticks();
+
