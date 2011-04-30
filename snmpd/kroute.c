@@ -597,3 +597,4 @@ kif_remove(struct kif_node *kif)
 		ka_remove(ka);
 	}
 	free(kif);
+
