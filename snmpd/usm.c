@@ -597,3 +597,4 @@ usm_crypt(struct snmp_message *msg, u_char *inbuf, int inlen, u_char *outbuf,
 		break;
 	default:
 		return -1;
+	}
