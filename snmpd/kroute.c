@@ -598,3 +598,4 @@ kif_remove(struct kif_node *kif)
 	}
 	free(kif);
 
+	kr_state.ks_nkif--;
