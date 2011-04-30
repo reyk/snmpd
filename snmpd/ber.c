@@ -598,3 +598,4 @@ ber_printf_elements(struct ber_element *ber, char *fmt, ...)
 		case '.':
 			ber = ber_add_eoc(ber);
 			break;
+		default:
