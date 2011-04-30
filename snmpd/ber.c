@@ -600,3 +600,4 @@ ber_printf_elements(struct ber_element *ber, char *fmt, ...)
 			break;
 		default:
 			break;
+		}
