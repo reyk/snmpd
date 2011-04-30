@@ -599,3 +599,4 @@ ber_printf_elements(struct ber_element *ber, char *fmt, ...)
 			ber = ber_add_eoc(ber);
 			break;
 		default:
+			break;
