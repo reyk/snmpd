@@ -599,3 +599,4 @@ snmpe_parse(struct sockaddr_storage *ss,
 			goto fail;
 		}
 		msg->sm_context = type;
+		break;
