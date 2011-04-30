@@ -597,3 +597,4 @@ snmpe_parse(struct sockaddr_storage *ss,
 				stats->snmp_inbadcommunityuses++;
 			errstr = "wrong write community";
 			goto fail;
+		}
