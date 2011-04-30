@@ -598,3 +598,4 @@ snmpe_parse(struct sockaddr_storage *ss,
 			errstr = "wrong write community";
 			goto fail;
 		}
+		msg->sm_context = type;
