@@ -599,3 +599,4 @@ lungetc(int c)
 		return (pushback_buffer[pushback_index++] = c);
 	else
 		return (EOF);
+}
