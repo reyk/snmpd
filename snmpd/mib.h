@@ -599,3 +599,4 @@
 #define MIB_pfTblAddrInPassPkts		MIB_pfTblAddrEntry, 7
 #define MIB_pfTblAddrInPassBytes	MIB_pfTblAddrEntry, 8
 #define MIB_pfTblAddrOutBlockPkts	MIB_pfTblAddrEntry, 9
+#define MIB_pfTblAddrOutBlockBytes	MIB_pfTblAddrEntry, 10
