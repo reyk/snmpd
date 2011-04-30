@@ -597,3 +597,4 @@ lungetc(int c)
 	}
 	if (pushback_index < MAXPUSHBACK-1)
 		return (pushback_buffer[pushback_index++] = c);
+	else
