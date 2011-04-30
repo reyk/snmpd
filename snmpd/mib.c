@@ -598,3 +598,4 @@ mib_hrstorage(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 		return (-1);
 	mib[1] = VM_METER;
 	len = sizeof(vm);
+	if (sysctl(mib, sizeofa(mib), &vm, &len, NULL, 0) == -1)
