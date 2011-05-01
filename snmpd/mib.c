@@ -601,3 +601,4 @@ mib_hrstorage(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 	if (sysctl(mib, sizeofa(mib), &vm, &len, NULL, 0) == -1)
 		return (-1);
 	maxsize = 10;
+
