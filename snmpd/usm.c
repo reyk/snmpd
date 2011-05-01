@@ -604,3 +604,4 @@ usm_crypt(struct snmp_message *msg, u_char *inbuf, int inlen, u_char *outbuf,
 
 	if (!do_encrypt)
 		EVP_CIPHER_CTX_set_padding(&ctx, 0);
+
