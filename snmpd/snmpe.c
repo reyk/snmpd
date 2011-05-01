@@ -602,3 +602,4 @@ snmpe_parse(struct sockaddr_storage *ss,
 		break;
 	case SNMP_C_GETRESP:
 		stats->snmp_ingetresponses++;
+		errstr = "response without request";
