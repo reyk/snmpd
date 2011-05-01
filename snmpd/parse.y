@@ -604,3 +604,4 @@ lungetc(int c)
 int
 findeol(void)
 {
+	int	c;
