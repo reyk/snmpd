@@ -601,3 +601,4 @@ lungetc(int c)
 		return (EOF);
 }
 
+int
