@@ -602,3 +602,4 @@ usm_crypt(struct snmp_message *msg, u_char *inbuf, int inlen, u_char *outbuf,
 	if (!EVP_CipherInit(&ctx, cipher, privkey, iv, do_encrypt))
 		return -1;
 
+	if (!do_encrypt)
