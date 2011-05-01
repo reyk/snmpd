@@ -602,3 +602,4 @@
 #define MIB_pfTblAddrOutBlockBytes	MIB_pfTblAddrEntry, 10
 #define MIB_pfTblAddrOutPassPkts	MIB_pfTblAddrEntry, 11
 #define MIB_pfTblAddrOutPassBytes	MIB_pfTblAddrEntry, 12
+#define MIB_pfLabels			MIB_pfMIBObjects, 10
