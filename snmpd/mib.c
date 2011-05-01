@@ -603,3 +603,4 @@ mib_hrstorage(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 	maxsize = 10;
 
 	/* Disks */
+	mntsize = getmntinfo(&mntbuf, MNT_NOWAIT);
