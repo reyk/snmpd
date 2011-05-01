@@ -604,3 +604,4 @@ kif_remove(struct kif_node *kif)
 	return (0);
 }
 
+void
