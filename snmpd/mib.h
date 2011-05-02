@@ -606,3 +606,4 @@
 #define MIB_pfLabelNumber		MIB_pfLabels, 1
 #define MIB_pfLabelTable		MIB_pfLabels, 128
 #define OIDIDX_pfLabel			11
+#define OIDIDX_pfLabelEntry		12
