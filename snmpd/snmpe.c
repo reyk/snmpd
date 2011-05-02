@@ -607,3 +607,4 @@ snmpe_parse(struct sockaddr_storage *ss,
 	case SNMP_C_TRAP:
 	case SNMP_C_TRAPV2:
 		if (msg->sm_version != SNMP_V3 &&
+		    strcmp(env->sc_trcommunity, msg->sm_community) != 0) {
