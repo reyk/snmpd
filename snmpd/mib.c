@@ -608,3 +608,4 @@ mib_hrstorage(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 		maxsize = 30 + mntsize;
 
 	/*
+	 * Get and verify the current row index.
