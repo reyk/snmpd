@@ -605,3 +605,4 @@ int
 findeol(void)
 {
 	int	c;
+
