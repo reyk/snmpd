@@ -605,3 +605,4 @@ kif_remove(struct kif_node *kif)
 }
 
 void
+kif_clear(void)
