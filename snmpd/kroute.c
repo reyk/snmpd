@@ -608,3 +608,4 @@ void
 kif_clear(void)
 {
 	struct kif_node	*kif;
+
