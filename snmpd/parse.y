@@ -606,3 +606,4 @@ findeol(void)
 {
 	int	c;
 
+	parsebuf = NULL;
