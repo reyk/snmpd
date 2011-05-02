@@ -607,3 +607,4 @@ mib_hrstorage(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 	if (mntsize)
 		maxsize = 30 + mntsize;
 
+	/*
