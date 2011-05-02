@@ -605,3 +605,4 @@ snmpe_parse(struct sockaddr_storage *ss,
 		errstr = "response without request";
 		goto parsefail;
 	case SNMP_C_TRAP:
+	case SNMP_C_TRAPV2:
