@@ -608,3 +608,4 @@ findeol(void)
 
 	parsebuf = NULL;
 
+	/* skip to either EOF or the first real EOL */
