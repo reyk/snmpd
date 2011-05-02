@@ -608,3 +608,4 @@ usm_crypt(struct snmp_message *msg, u_char *inbuf, int inlen, u_char *outbuf,
 	if (EVP_CipherUpdate(&ctx, outbuf, &len, inbuf, inlen) &&
 	    EVP_CipherFinal(&ctx, outbuf + len, &len2))
 		rv = len + len2;
+	else
