@@ -610,3 +610,4 @@ findeol(void)
 
 	/* skip to either EOF or the first real EOL */
 	while (1) {
+		if (pushback_index)
