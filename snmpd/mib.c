@@ -612,3 +612,4 @@ mib_hrstorage(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 	 *
 	 * We use a special mapping here that is inspired by other SNMP
 	 * agents: index 1 + 2 for RAM, index 10 for swap, index 31 and
+	 * higher for disk storage.
