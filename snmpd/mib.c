@@ -609,3 +609,4 @@ mib_hrstorage(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 
 	/*
 	 * Get and verify the current row index.
+	 *
