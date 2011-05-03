@@ -611,3 +611,4 @@ kif_clear(void)
 
 	while ((kif = RB_MIN(kif_tree, &kit)) != NULL)
 		kif_remove(kif);
+	kr_state.ks_nkif = 0;
