@@ -612,3 +612,4 @@ snmpe_parse(struct sockaddr_storage *ss,
 			errstr = "wrong trap community";
 			goto fail;
 		}
+		stats->snmp_intraps++;
