@@ -610,3 +610,4 @@ usm_crypt(struct snmp_message *msg, u_char *inbuf, int inlen, u_char *outbuf,
 		rv = len + len2;
 	else
 		rv = -1;
+
