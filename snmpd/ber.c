@@ -609,3 +609,4 @@ ber_printf_elements(struct ber_element *ber, char *fmt, ...)
 
 int
 ber_scanf_elements(struct ber_element *ber, char *fmt, ...)
+{
