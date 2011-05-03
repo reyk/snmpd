@@ -612,3 +612,4 @@
 #define MIB_pfLabelName			MIB_pfLabelEntry, 2
 #define MIB_pfLabelEvals		MIB_pfLabelEntry, 3
 #define MIB_pfLabelPkts			MIB_pfLabelEntry, 4
+#define MIB_pfLabelBytes		MIB_pfLabelEntry, 5
