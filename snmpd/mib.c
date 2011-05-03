@@ -610,3 +610,4 @@ mib_hrstorage(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 	/*
 	 * Get and verify the current row index.
 	 *
+	 * We use a special mapping here that is inspired by other SNMP
