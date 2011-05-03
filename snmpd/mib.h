@@ -610,3 +610,4 @@
 #define MIB_pfLabelEntry		MIB_pfLabelTable, 1
 #define MIB_pfLabelIndex		MIB_pfLabelEntry, 1
 #define MIB_pfLabelName			MIB_pfLabelEntry, 2
+#define MIB_pfLabelEvals		MIB_pfLabelEntry, 3
