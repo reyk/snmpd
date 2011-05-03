@@ -610,3 +610,4 @@ snmpe_parse(struct sockaddr_storage *ss,
 		    strcmp(env->sc_trcommunity, msg->sm_community) != 0) {
 			stats->snmp_inbadcommunitynames++;
 			errstr = "wrong trap community";
+			goto fail;
