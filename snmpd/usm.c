@@ -611,3 +611,4 @@ usm_crypt(struct snmp_message *msg, u_char *inbuf, int inlen, u_char *outbuf,
 	else
 		rv = -1;
 
+	EVP_CIPHER_CTX_cleanup(&ctx);
