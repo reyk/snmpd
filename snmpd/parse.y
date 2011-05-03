@@ -612,3 +612,4 @@ findeol(void)
 	while (1) {
 		if (pushback_index)
 			c = pushback_buffer[--pushback_index];
+		else
