@@ -610,3 +610,4 @@ kif_clear(void)
 	struct kif_node	*kif;
 
 	while ((kif = RB_MIN(kif_tree, &kit)) != NULL)
+		kif_remove(kif);
