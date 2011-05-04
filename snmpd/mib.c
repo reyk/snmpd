@@ -614,3 +614,4 @@ mib_hrstorage(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 	 * agents: index 1 + 2 for RAM, index 10 for swap, index 31 and
 	 * higher for disk storage.
 	 */
+	idx = o->bo_id[OIDIDX_hrStorageEntry];
