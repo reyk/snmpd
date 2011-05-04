@@ -616,3 +616,4 @@ usm_crypt(struct snmp_message *msg, u_char *inbuf, int inlen, u_char *outbuf,
 }
 
 /*
+ * RFC3414, Password to Key Algorithm
