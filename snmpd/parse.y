@@ -613,3 +613,4 @@ findeol(void)
 		if (pushback_index)
 			c = pushback_buffer[--pushback_index];
 		else
+			c = lgetc(0);
