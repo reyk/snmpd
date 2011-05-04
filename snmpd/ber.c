@@ -615,3 +615,4 @@ ber_scanf_elements(struct ber_element *ber, char *fmt, ...)
 	int			*d, level = -1;
 	unsigned long		*t;
 	long long		*i;
+	void			**ptr;
