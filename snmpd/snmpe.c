@@ -613,3 +613,4 @@ snmpe_parse(struct sockaddr_storage *ss,
 			goto fail;
 		}
 		stats->snmp_intraps++;
+		errstr = "received trap";
