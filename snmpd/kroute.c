@@ -615,3 +615,4 @@ kif_clear(void)
 	kr_state.ks_iflastchange = smi_getticks();
 }
 
+struct kif *
