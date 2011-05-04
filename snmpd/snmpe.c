@@ -616,3 +616,4 @@ snmpe_parse(struct sockaddr_storage *ss,
 		errstr = "received trap";
 		goto fail;
 	default:
+		errstr = "invalid context";
