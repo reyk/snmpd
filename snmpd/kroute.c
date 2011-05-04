@@ -614,3 +614,4 @@ kif_clear(void)
 	kr_state.ks_nkif = 0;
 	kr_state.ks_iflastchange = smi_getticks();
 }
+
