@@ -616,3 +616,4 @@ findeol(void)
 			c = lgetc(0);
 		if (c == '\n') {
 			file->lineno++;
+			break;
