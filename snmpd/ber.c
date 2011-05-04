@@ -616,3 +616,4 @@ ber_scanf_elements(struct ber_element *ber, char *fmt, ...)
 	unsigned long		*t;
 	long long		*i;
 	void			**ptr;
+	size_t			*len, ret = 0, n = strlen(fmt);
