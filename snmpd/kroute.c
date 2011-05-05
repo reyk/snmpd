@@ -618,3 +618,4 @@ kif_clear(void)
 struct kif *
 kif_update(u_short if_index, int flags, struct if_data *ifd,
     struct sockaddr_dl *sdl)
+{
