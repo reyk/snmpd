@@ -618,3 +618,4 @@ snmpe_parse(struct sockaddr_storage *ss,
 	default:
 		errstr = "invalid context";
 		goto parsefail;
+	}
