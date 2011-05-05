@@ -620,3 +620,4 @@ snmpe_parse(struct sockaddr_storage *ss,
 		goto parsefail;
 	}
 
+	/* SNMP PDU */
