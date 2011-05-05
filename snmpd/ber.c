@@ -620,3 +620,4 @@ ber_scanf_elements(struct ber_element *ber, char *fmt, ...)
 	char			**s;
 	off_t			*pos;
 	struct ber_oid		*o;
+	struct ber_element	*parent[_MAX_SEQ], **e;
