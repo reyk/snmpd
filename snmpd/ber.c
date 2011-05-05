@@ -619,3 +619,4 @@ ber_scanf_elements(struct ber_element *ber, char *fmt, ...)
 	size_t			*len, ret = 0, n = strlen(fmt);
 	char			**s;
 	off_t			*pos;
+	struct ber_oid		*o;
