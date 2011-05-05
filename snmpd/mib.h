@@ -617,3 +617,4 @@
 #define MIB_pfLabelInBytes		MIB_pfLabelEntry, 7
 #define MIB_pfLabelOutPkts		MIB_pfLabelEntry, 8
 #define MIB_pfLabelOutBytes		MIB_pfLabelEntry, 9
+#define MIB_pfLabelTotalStates		MIB_pfLabelEntry, 10
