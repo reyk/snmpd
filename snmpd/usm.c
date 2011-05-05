@@ -619,3 +619,4 @@ usm_crypt(struct snmp_message *msg, u_char *inbuf, int inlen, u_char *outbuf,
  * RFC3414, Password to Key Algorithm
  */
 char *
+usm_passwd2key(const EVP_MD *md, char *passwd, int *maxlen)
