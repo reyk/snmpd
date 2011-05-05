@@ -618,3 +618,4 @@ findeol(void)
 			file->lineno++;
 			break;
 		}
+		if (c == EOF)
