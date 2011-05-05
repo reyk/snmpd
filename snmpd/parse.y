@@ -620,3 +620,4 @@ findeol(void)
 		}
 		if (c == EOF)
 			break;
+	}
