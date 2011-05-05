@@ -618,3 +618,4 @@ mib_hrstorage(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 	if (idx > (u_int)maxsize)
 		return (1);
 	else if (idx > 2 && idx < 10)
+		idx = 10;
