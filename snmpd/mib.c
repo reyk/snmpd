@@ -623,3 +623,4 @@ mib_hrstorage(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 		idx = 31;
 
 	sop = &so[0];
+	switch (idx) {
