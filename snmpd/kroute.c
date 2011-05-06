@@ -624,3 +624,4 @@ kif_update(u_short if_index, int flags, struct if_data *ifd,
 	struct ifreq		 ifr;
 
 	if ((kif = kif_find(if_index)) == NULL)
+		if ((kif = kif_insert(if_index)) == NULL)
