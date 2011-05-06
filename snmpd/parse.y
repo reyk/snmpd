@@ -624,3 +624,4 @@ findeol(void)
 	return (ERROR);
 }
 
+int
