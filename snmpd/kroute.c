@@ -621,3 +621,4 @@ kif_update(u_short if_index, int flags, struct if_data *ifd,
 {
 	struct kif_node		*kif;
 	struct ether_addr	*ea;
+	struct ifreq		 ifr;
