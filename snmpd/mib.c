@@ -622,3 +622,4 @@ mib_hrstorage(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 	else if (idx > 10 && idx < 31)
 		idx = 31;
 
+	sop = &so[0];
