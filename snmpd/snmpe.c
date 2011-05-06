@@ -621,3 +621,4 @@ snmpe_parse(struct sockaddr_storage *ss,
 	}
 
 	/* SNMP PDU */
+	if (ber_scanf_elements(a, "iiie{et",
