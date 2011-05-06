@@ -621,3 +621,4 @@
 #define MIB_pfsyncStats			MIB_pfMIBObjects, 11
 #define MIB_pfsyncIpPktsRecv		MIB_pfsyncStats, 1
 #define MIB_pfsyncIp6PktsRecv		MIB_pfsyncStats, 2
+#define MIB_pfsyncPktDiscardsForBadInterface	MIB_pfsyncStats, 3
