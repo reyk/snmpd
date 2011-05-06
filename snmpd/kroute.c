@@ -623,3 +623,4 @@ kif_update(u_short if_index, int flags, struct if_data *ifd,
 	struct ether_addr	*ea;
 	struct ifreq		 ifr;
 
+	if ((kif = kif_find(if_index)) == NULL)
