@@ -624,3 +624,4 @@ snmpe_parse(struct sockaddr_storage *ss,
 	if (ber_scanf_elements(a, "iiie{et",
 	    &req, &errval, &erridx, &msg->sm_pduend,
 	    &msg->sm_varbind, &class, &type) != 0) {
+		stats->snmp_silentdrops++;
