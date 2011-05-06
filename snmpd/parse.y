@@ -622,3 +622,4 @@ findeol(void)
 			break;
 	}
 	return (ERROR);
+}
