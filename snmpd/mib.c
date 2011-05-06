@@ -624,3 +624,4 @@ mib_hrstorage(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 
 	sop = &so[0];
 	switch (idx) {
+	case 1:
