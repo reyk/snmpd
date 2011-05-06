@@ -621,3 +621,4 @@ findeol(void)
 		if (c == EOF)
 			break;
 	}
+	return (ERROR);
