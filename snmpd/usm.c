@@ -622,3 +622,4 @@ char *
 usm_passwd2key(const EVP_MD *md, char *passwd, int *maxlen)
 {
 	EVP_MD_CTX	 ctx;
+	int		 i, count;
