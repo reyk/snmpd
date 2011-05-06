@@ -621,3 +621,4 @@ usm_crypt(struct snmp_message *msg, u_char *inbuf, int inlen, u_char *outbuf,
 char *
 usm_passwd2key(const EVP_MD *md, char *passwd, int *maxlen)
 {
+	EVP_MD_CTX	 ctx;
