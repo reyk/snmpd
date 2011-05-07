@@ -626,3 +626,4 @@ ber_scanf_elements(struct ber_element *ber, char *fmt, ...)
 
 	va_start(ap, fmt);
 	while (*fmt) {
+		switch (*fmt++) {
