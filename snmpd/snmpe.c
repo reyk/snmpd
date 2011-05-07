@@ -625,3 +625,4 @@ snmpe_parse(struct sockaddr_storage *ss,
 	    &req, &errval, &erridx, &msg->sm_pduend,
 	    &msg->sm_varbind, &class, &type) != 0) {
 		stats->snmp_silentdrops++;
+		errstr = "invalid PDU";
