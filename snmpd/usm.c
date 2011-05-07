@@ -625,3 +625,4 @@ usm_passwd2key(const EVP_MD *md, char *passwd, int *maxlen)
 	int		 i, count;
 	u_char		*pw, *c;
 	u_char		 pwbuf[2 * EVP_MAX_MD_SIZE + SNMPD_MAXENGINEIDLEN];
+	u_char		 keybuf[EVP_MAX_MD_SIZE];
