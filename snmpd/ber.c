@@ -625,3 +625,4 @@ ber_scanf_elements(struct ber_element *ber, char *fmt, ...)
 	bzero(parent, sizeof(struct ber_element *) * _MAX_SEQ);
 
 	va_start(ap, fmt);
+	while (*fmt) {
