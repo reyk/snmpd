@@ -628,3 +628,4 @@
 #define MIB_pfsyncPktDiscardsForBadAction	MIB_pfsyncStats, 7
 #define MIB_pfsyncPktDiscardsForBadLength	MIB_pfsyncStats, 8
 #define MIB_pfsyncPktDiscardsForBadAuth		MIB_pfsyncStats, 9
+#define MIB_pfsyncPktDiscardsForStaleState	MIB_pfsyncStats, 10
