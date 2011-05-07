@@ -627,3 +627,4 @@ kif_update(u_short if_index, int flags, struct if_data *ifd,
 		if ((kif = kif_insert(if_index)) == NULL)
 			return (NULL);
 
+	kif->k.if_flags = flags;
