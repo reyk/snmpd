@@ -628,3 +628,4 @@ ber_scanf_elements(struct ber_element *ber, char *fmt, ...)
 	while (*fmt) {
 		switch (*fmt++) {
 		case 'B':
+			ptr = va_arg(ap, void **);
