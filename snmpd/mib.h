@@ -626,3 +626,4 @@
 #define MIB_pfsyncPktShorterThanHeader		MIB_pfsyncStats, 5
 #define MIB_pfsyncPktDiscardsForBadVersion	MIB_pfsyncStats, 6
 #define MIB_pfsyncPktDiscardsForBadAction	MIB_pfsyncStats, 7
+#define MIB_pfsyncPktDiscardsForBadLength	MIB_pfsyncStats, 8
