@@ -627,3 +627,4 @@ findeol(void)
 int
 yylex(void)
 {
+	char	 buf[8096];
