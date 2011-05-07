@@ -626,3 +626,4 @@ mib_hrstorage(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 	switch (idx) {
 	case 1:
 		descr = "Physical memory";
+		units = uvm.pagesize;
