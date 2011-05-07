@@ -628,3 +628,4 @@ mib_hrstorage(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 		descr = "Physical memory";
 		units = uvm.pagesize;
 		size = physmem / uvm.pagesize;
+		used = size - vm.t_free;
