@@ -628,3 +628,4 @@ snmpe_parse(struct sockaddr_storage *ss,
 		errstr = "invalid PDU";
 		goto fail;
 	}
+	if (class != BER_CLASS_UNIVERSAL || type != BER_TYPE_SEQUENCE) {
