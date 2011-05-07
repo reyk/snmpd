@@ -626,3 +626,4 @@ findeol(void)
 
 int
 yylex(void)
+{
