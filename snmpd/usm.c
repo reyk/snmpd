@@ -628,3 +628,4 @@ usm_passwd2key(const EVP_MD *md, char *passwd, int *maxlen)
 	u_char		 keybuf[EVP_MAX_MD_SIZE];
 	unsigned	 dlen;
 	char		*key;
+
