@@ -628,3 +628,4 @@ kif_update(u_short if_index, int flags, struct if_data *ifd,
 			return (NULL);
 
 	kif->k.if_flags = flags;
+	bcopy(ifd, &kif->k.if_data, sizeof(struct if_data));
