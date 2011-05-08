@@ -629,3 +629,4 @@ snmpe_parse(struct sockaddr_storage *ss,
 		goto fail;
 	}
 	if (class != BER_CLASS_UNIVERSAL || type != BER_TYPE_SEQUENCE) {
+		stats->snmp_silentdrops++;
