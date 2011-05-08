@@ -631,3 +631,4 @@ mib_hrstorage(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 		used = size - vm.t_free;
 		sop = &so[1];
 		break;
+	case 2:
