@@ -631,3 +631,4 @@ kif_update(u_short if_index, int flags, struct if_data *ifd,
 	bcopy(ifd, &kif->k.if_data, sizeof(struct if_data));
 	kif->k.if_ticks = smi_getticks();
 
+	if (sdl && sdl->sdl_family == AF_LINK) {
