@@ -630,3 +630,4 @@ snmpe_parse(struct sockaddr_storage *ss,
 	}
 	if (class != BER_CLASS_UNIVERSAL || type != BER_TYPE_SEQUENCE) {
 		stats->snmp_silentdrops++;
+		errstr = "invalid varbind";
