@@ -632,3 +632,4 @@ snmpe_parse(struct sockaddr_storage *ss,
 		stats->snmp_silentdrops++;
 		errstr = "invalid varbind";
 		goto fail;
+	}
