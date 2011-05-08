@@ -630,3 +630,4 @@ mib_hrstorage(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 		size = physmem / uvm.pagesize;
 		used = size - vm.t_free;
 		sop = &so[1];
+		break;
