@@ -630,3 +630,4 @@ yylex(void)
 	char	 buf[8096];
 	char	*p, *val;
 	int	 quotec, next, c;
+	int	 token;
