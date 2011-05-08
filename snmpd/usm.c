@@ -631,3 +631,4 @@ usm_passwd2key(const EVP_MD *md, char *passwd, int *maxlen)
 
 	EVP_DigestInit(&ctx, md);
 	pw = (u_char *)passwd;
+	for (count = 0; count < 1048576; count += 64) {
