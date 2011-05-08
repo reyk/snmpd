@@ -632,3 +632,4 @@ kif_update(u_short if_index, int flags, struct if_data *ifd,
 	kif->k.if_ticks = smi_getticks();
 
 	if (sdl && sdl->sdl_family == AF_LINK) {
+		if (sdl->sdl_nlen >= sizeof(kif->k.if_name))
