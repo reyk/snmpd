@@ -631,3 +631,4 @@ yylex(void)
 	char	*p, *val;
 	int	 quotec, next, c;
 	int	 token;
+
