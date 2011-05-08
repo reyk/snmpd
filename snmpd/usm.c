@@ -629,3 +629,4 @@ usm_passwd2key(const EVP_MD *md, char *passwd, int *maxlen)
 	unsigned	 dlen;
 	char		*key;
 
+	EVP_DigestInit(&ctx, md);
