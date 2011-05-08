@@ -632,3 +632,4 @@ yylex(void)
 	int	 quotec, next, c;
 	int	 token;
 
+top:
