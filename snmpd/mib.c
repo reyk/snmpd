@@ -632,3 +632,4 @@ mib_hrstorage(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 		sop = &so[1];
 		break;
 	case 2:
+		descr = "Real memory";
