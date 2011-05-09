@@ -634,3 +634,4 @@ yylex(void)
 
 top:
 	p = buf;
+	while ((c = lgetc(0)) == ' ' || c == '\t')
