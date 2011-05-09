@@ -635,3 +635,4 @@ kif_update(u_short if_index, int flags, struct if_data *ifd,
 		if (sdl->sdl_nlen >= sizeof(kif->k.if_name))
 			memcpy(kif->k.if_name, sdl->sdl_data,
 			    sizeof(kif->k.if_name) - 1);
+		else if (sdl->sdl_nlen > 0)
