@@ -636,3 +636,4 @@
 #define MIB_pfsyncNoMemory		MIB_pfsyncStats, 15
 #define MIB_pfsyncOutputErrors		MIB_pfsyncStats, 16
 #define MIB_sensorsMIBObjects		MIB_openBSD, 2
+#define MIB_sensors			MIB_sensorsMIBObjects, 1
