@@ -635,3 +635,4 @@ usm_passwd2key(const EVP_MD *md, char *passwd, int *maxlen)
 		c = pwbuf;
 		for (i = 0; i < 64; i++) {
 			if (*pw == '\0')
+				pw = (u_char *)passwd;
