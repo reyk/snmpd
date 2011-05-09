@@ -635,3 +635,4 @@ mib_hrstorage(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 		descr = "Real memory";
 		units = uvm.pagesize;
 		size = realmem / uvm.pagesize;
+		used = size - uvm.free;
