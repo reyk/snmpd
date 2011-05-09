@@ -636,3 +636,4 @@ ber_scanf_elements(struct ber_element *ber, char *fmt, ...)
 			break;
 		case 'b':
 			d = va_arg(ap, int *);
+			if (ber_get_boolean(ber, d) == -1)
