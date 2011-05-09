@@ -634,3 +634,4 @@ snmpe_parse(struct sockaddr_storage *ss,
 		goto fail;
 	}
 
+	msg->sm_request = req;
