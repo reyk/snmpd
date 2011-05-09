@@ -633,3 +633,4 @@ ber_scanf_elements(struct ber_element *ber, char *fmt, ...)
 			if (ber_get_bitstring(ber, ptr, len) == -1)
 				goto fail;
 			ret++;
+			break;
