@@ -633,3 +633,4 @@
 #define MIB_pfsyncPktDiscardsForBadState	MIB_pfsyncStats, 12
 #define MIB_pfsyncIpPktsSent		MIB_pfsyncStats, 13
 #define MIB_pfsyncIp6PktsSent		MIB_pfsyncStats, 14
+#define MIB_pfsyncNoMemory		MIB_pfsyncStats, 15
