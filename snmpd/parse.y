@@ -633,3 +633,4 @@ yylex(void)
 	int	 token;
 
 top:
+	p = buf;
