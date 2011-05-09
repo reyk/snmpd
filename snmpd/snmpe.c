@@ -636,3 +636,4 @@ snmpe_parse(struct sockaddr_storage *ss,
 
 	msg->sm_request = req;
 	msg->sm_error = errval;
+	msg->sm_errorindex = erridx;
