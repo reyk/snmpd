@@ -639,3 +639,4 @@ kif_update(u_short if_index, int flags, struct if_data *ifd,
 			memcpy(kif->k.if_name, sdl->sdl_data,
 			    sdl->sdl_nlen);
 		/* string already terminated via calloc() */
+
