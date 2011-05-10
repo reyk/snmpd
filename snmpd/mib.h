@@ -638,3 +638,4 @@
 #define MIB_sensorsMIBObjects		MIB_openBSD, 2
 #define MIB_sensors			MIB_sensorsMIBObjects, 1
 #define MIB_sensorNumber		MIB_sensors, 1
+#define MIB_sensorTable			MIB_sensors, 2
