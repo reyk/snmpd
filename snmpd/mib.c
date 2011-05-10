@@ -639,3 +639,4 @@ mib_hrstorage(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 		sop = &so[1];
 		break;
 	case 10:
+		descr = "Swap space";
