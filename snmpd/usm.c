@@ -638,3 +638,4 @@ usm_passwd2key(const EVP_MD *md, char *passwd, int *maxlen)
 				pw = (u_char *)passwd;
 			*c++ = *pw++;
 		}
+		EVP_DigestUpdate(&ctx, pwbuf, 64);
