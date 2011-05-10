@@ -640,3 +640,4 @@ kif_update(u_short if_index, int flags, struct if_data *ifd,
 			    sdl->sdl_nlen);
 		/* string already terminated via calloc() */
 
+		if ((ea = (struct ether_addr *)LLADDR(sdl)) != NULL)
