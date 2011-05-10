@@ -640,3 +640,4 @@ mib_hrstorage(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 		break;
 	case 10:
 		descr = "Swap space";
+		units = uvm.pagesize;
