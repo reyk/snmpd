@@ -639,3 +639,4 @@ snmpe_parse(struct sockaddr_storage *ss,
 	msg->sm_errorindex = erridx;
 
 	print_host(ss, host, sizeof(host));
+	if (msg->sm_version == SNMP_V3)
