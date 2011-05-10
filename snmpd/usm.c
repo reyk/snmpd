@@ -640,3 +640,4 @@ usm_passwd2key(const EVP_MD *md, char *passwd, int *maxlen)
 		}
 		EVP_DigestUpdate(&ctx, pwbuf, 64);
 	}
+	EVP_DigestFinal(&ctx, keybuf, &dlen);
