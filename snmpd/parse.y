@@ -637,3 +637,4 @@ top:
 	while ((c = lgetc(0)) == ' ' || c == '\t')
 		; /* nothing */
 
+	yylval.lineno = file->lineno;
