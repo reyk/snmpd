@@ -640,3 +640,4 @@ top:
 	yylval.lineno = file->lineno;
 	if (c == '#')
 		while ((c = lgetc(0)) != '\n' && c != EOF)
+			; /* nothing */
