@@ -638,3 +638,4 @@ snmpe_parse(struct sockaddr_storage *ss,
 	msg->sm_error = errval;
 	msg->sm_errorindex = erridx;
 
+	print_host(ss, host, sizeof(host));
