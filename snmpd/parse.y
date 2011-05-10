@@ -638,3 +638,4 @@ top:
 		; /* nothing */
 
 	yylval.lineno = file->lineno;
+	if (c == '#')
