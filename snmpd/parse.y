@@ -642,3 +642,4 @@ top:
 		while ((c = lgetc(0)) != '\n' && c != EOF)
 			; /* nothing */
 	if (c == '$' && parsebuf == NULL) {
+		while (1) {
