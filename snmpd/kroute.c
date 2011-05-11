@@ -642,3 +642,4 @@ kif_update(u_short if_index, int flags, struct if_data *ifd,
 
 		if ((ea = (struct ether_addr *)LLADDR(sdl)) != NULL)
 			bcopy(&ea->ether_addr_octet, kif->k.if_lladdr,
+			    ETHER_ADDR_LEN);
