@@ -643,3 +643,4 @@ snmpe_parse(struct sockaddr_storage *ss,
 		log_debug("snmpe_parse: %s: SNMPv3 context %d, flags %#x, "
 		    "secmodel %lld, user '%s', ctx-engine %s, ctx-name '%s', "
 		    "request %lld", host, msg->sm_context, msg->sm_flags,
+		    msg->sm_secmodel, msg->sm_username,
