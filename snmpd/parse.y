@@ -644,3 +644,4 @@ top:
 	if (c == '$' && parsebuf == NULL) {
 		while (1) {
 			if ((c = lgetc(0)) == EOF)
+				return (0);
