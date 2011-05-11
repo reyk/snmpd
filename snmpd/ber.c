@@ -644,3 +644,4 @@ ber_scanf_elements(struct ber_element *ber, char *fmt, ...)
 			e = va_arg(ap, struct ber_element **);
 			*e = ber;
 			ret++;
+			continue;
