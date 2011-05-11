@@ -643,3 +643,4 @@
 #define OIDIDX_sensor			11
 #define OIDIDX_sensorEntry		12
 #define MIB_sensorIndex			MIB_sensorEntry, 1
+#define MIB_sensorDescr			MIB_sensorEntry, 2
