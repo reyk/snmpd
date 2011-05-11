@@ -641,3 +641,4 @@ top:
 	if (c == '#')
 		while ((c = lgetc(0)) != '\n' && c != EOF)
 			; /* nothing */
+	if (c == '$' && parsebuf == NULL) {
