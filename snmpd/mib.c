@@ -647,3 +647,4 @@ mib_hrstorage(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 		break;
 	default:
 		mnt = &mntbuf[idx - 31];
+		descr = mnt->f_mntonname;
