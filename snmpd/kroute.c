@@ -645,3 +645,4 @@ kif_update(u_short if_index, int flags, struct if_data *ifd,
 			    ETHER_ADDR_LEN);
 	}
 
+	bzero(&ifr, sizeof(ifr));
