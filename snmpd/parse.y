@@ -646,3 +646,4 @@ top:
 			if ((c = lgetc(0)) == EOF)
 				return (0);
 
+			if (p + 1 >= buf + sizeof(buf) - 1) {
