@@ -645,3 +645,4 @@
 #define MIB_sensorIndex			MIB_sensorEntry, 1
 #define MIB_sensorDescr			MIB_sensorEntry, 2
 #define MIB_sensorType			MIB_sensorEntry, 3
+#define MIB_sensorDevice		MIB_sensorEntry, 4
