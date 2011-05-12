@@ -647,3 +647,4 @@ usm_passwd2key(const EVP_MD *md, char *passwd, int *maxlen)
 #ifdef DEBUG
 	assert(env->sc_engineid_len <= SNMPD_MAXENGINEIDLEN);
 #endif
+	memcpy(pwbuf, keybuf, dlen);
