@@ -645,3 +645,4 @@ ber_scanf_elements(struct ber_element *ber, char *fmt, ...)
 			*e = ber;
 			ret++;
 			continue;
+		case 'E':
