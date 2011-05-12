@@ -645,3 +645,4 @@ usm_passwd2key(const EVP_MD *md, char *passwd, int *maxlen)
 
 	/* Localize the key */
 #ifdef DEBUG
+	assert(env->sc_engineid_len <= SNMPD_MAXENGINEIDLEN);
