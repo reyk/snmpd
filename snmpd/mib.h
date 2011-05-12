@@ -648,3 +648,4 @@
 #define MIB_sensorDevice		MIB_sensorEntry, 4
 #define MIB_sensorValue			MIB_sensorEntry, 5
 #define MIB_sensorUnits			MIB_sensorEntry, 6
+#define MIB_sensorStatus		MIB_sensorEntry, 7
