@@ -648,3 +648,4 @@ usm_passwd2key(const EVP_MD *md, char *passwd, int *maxlen)
 	assert(env->sc_engineid_len <= SNMPD_MAXENGINEIDLEN);
 #endif
 	memcpy(pwbuf, keybuf, dlen);
+	memcpy(pwbuf + dlen, env->sc_engineid, env->sc_engineid_len);
