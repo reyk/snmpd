@@ -645,3 +645,4 @@ snmpe_parse(struct sockaddr_storage *ss,
 		    "request %lld", host, msg->sm_context, msg->sm_flags,
 		    msg->sm_secmodel, msg->sm_username,
 		    tohexstr(msg->sm_ctxengineid, msg->sm_ctxengineid_len),
+		    msg->sm_ctxname, msg->sm_request);
