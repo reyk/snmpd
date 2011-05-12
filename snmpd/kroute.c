@@ -646,3 +646,4 @@ kif_update(u_short if_index, int flags, struct if_data *ifd,
 	}
 
 	bzero(&ifr, sizeof(ifr));
+	strlcpy(ifr.ifr_name, kif->k.if_name, sizeof(ifr.ifr_name));
