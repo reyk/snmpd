@@ -647,3 +647,4 @@ snmpe_parse(struct sockaddr_storage *ss,
 		    tohexstr(msg->sm_ctxengineid, msg->sm_ctxengineid_len),
 		    msg->sm_ctxname, msg->sm_request);
 	else
+		log_debug("snmpe_parse: %s: SNMPv%d '%s' context %d "
