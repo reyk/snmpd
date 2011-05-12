@@ -647,3 +647,4 @@ top:
 				return (0);
 
 			if (p + 1 >= buf + sizeof(buf) - 1) {
+				yyerror("string too long");
