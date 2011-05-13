@@ -652,3 +652,4 @@ snmpe_parse(struct sockaddr_storage *ss,
 		    msg->sm_community, msg->sm_context, msg->sm_request);
 
 	errstr = "invalid varbind element";
+	for (i = 1, a = msg->sm_varbind, last = NULL;
