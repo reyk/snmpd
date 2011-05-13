@@ -649,3 +649,4 @@
 #define MIB_sensorValue			MIB_sensorEntry, 5
 #define MIB_sensorUnits			MIB_sensorEntry, 6
 #define MIB_sensorStatus		MIB_sensorEntry, 7
+#define MIB_relaydMIBObjects		MIB_openBSD, 3
