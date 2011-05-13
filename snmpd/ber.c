@@ -652,3 +652,4 @@ ber_scanf_elements(struct ber_element *ber, char *fmt, ...)
 			ret++;
 			break;
 		case 'i':
+			i = va_arg(ap, long long *);
