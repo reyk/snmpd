@@ -652,3 +652,4 @@ mib_hrstorage(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 		size = mnt->f_blocks;
 		used = mnt->f_blocks - mnt->f_bfree;
 		sop = &so[3];
+		break;
