@@ -651,3 +651,4 @@ top:
 				return (findeol());
 			}
 			if (isalnum(c) || c == '_') {
+				*p++ = (char)c;
