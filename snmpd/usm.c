@@ -651,3 +651,4 @@ usm_passwd2key(const EVP_MD *md, char *passwd, int *maxlen)
 	memcpy(pwbuf + dlen, env->sc_engineid, env->sc_engineid_len);
 	memcpy(pwbuf + dlen + env->sc_engineid_len, keybuf, dlen);
 
+	EVP_DigestInit(&ctx, md);
