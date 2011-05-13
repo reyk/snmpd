@@ -649,3 +649,4 @@ kif_update(u_short if_index, int flags, struct if_data *ifd,
 	strlcpy(ifr.ifr_name, kif->k.if_name, sizeof(ifr.ifr_name));
 	ifr.ifr_data = (caddr_t)&kif->k.if_descr;
 	if (ioctl(kr_state.ks_ifd, SIOCGIFDESCR, &ifr) == -1)
+		bzero(&kif->k.if_descr, sizeof(kif->k.if_descr));
