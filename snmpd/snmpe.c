@@ -649,3 +649,4 @@ snmpe_parse(struct sockaddr_storage *ss,
 	else
 		log_debug("snmpe_parse: %s: SNMPv%d '%s' context %d "
 		    "request %lld", host, msg->sm_version + 1,
+		    msg->sm_community, msg->sm_context, msg->sm_request);
