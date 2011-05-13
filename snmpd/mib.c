@@ -650,3 +650,4 @@ mib_hrstorage(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 		descr = mnt->f_mntonname;
 		units = mnt->f_bsize;
 		size = mnt->f_blocks;
+		used = mnt->f_blocks - mnt->f_bfree;
