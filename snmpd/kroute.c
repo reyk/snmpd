@@ -652,3 +652,4 @@ kif_update(u_short if_index, int flags, struct if_data *ifd,
 		bzero(&kif->k.if_descr, sizeof(kif->k.if_descr));
 
 	return (&kif->k);
+}
