@@ -649,3 +649,4 @@ ber_scanf_elements(struct ber_element *ber, char *fmt, ...)
 			i = va_arg(ap, long long *);
 			if (ber_get_enumerated(ber, i) == -1)
 				goto fail;
+			ret++;
