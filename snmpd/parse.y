@@ -650,3 +650,4 @@ top:
 				yyerror("string too long");
 				return (findeol());
 			}
+			if (isalnum(c) || c == '_') {
