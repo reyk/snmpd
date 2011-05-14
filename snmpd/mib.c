@@ -653,3 +653,4 @@ mib_hrstorage(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 		used = mnt->f_blocks - mnt->f_bfree;
 		sop = &so[3];
 		break;
+	}
