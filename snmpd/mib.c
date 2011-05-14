@@ -655,3 +655,4 @@ mib_hrstorage(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 		break;
 	}
 
+	/* Tables need to prepend the OID on their own */
