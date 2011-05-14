@@ -655,3 +655,4 @@
 #define MIB_memMIBVersion		MIB_memMIBObjects, 1
 #define OIDVER_OPENBSD_MEM		1
 #define MIB_memIfTable			MIB_memMIBObjects, 2
+#define MIB_memIfEntry			MIB_memIfTable, 1
