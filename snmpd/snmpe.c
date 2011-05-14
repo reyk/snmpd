@@ -656,3 +656,4 @@ snmpe_parse(struct sockaddr_storage *ss,
 	    a != NULL && i < SNMPD_MAXVARBIND; a = next, i++) {
 		next = a->be_next;
 
+		if (a->be_class != BER_CLASS_UNIVERSAL ||
