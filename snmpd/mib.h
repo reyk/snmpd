@@ -654,3 +654,4 @@
 #define MIB_memMIBObjects		MIB_openBSD, 5
 #define MIB_memMIBVersion		MIB_memMIBObjects, 1
 #define OIDVER_OPENBSD_MEM		1
+#define MIB_memIfTable			MIB_memMIBObjects, 2
