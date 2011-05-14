@@ -655,3 +655,4 @@ snmpe_parse(struct sockaddr_storage *ss,
 	for (i = 1, a = msg->sm_varbind, last = NULL;
 	    a != NULL && i < SNMPD_MAXVARBIND; a = next, i++) {
 		next = a->be_next;
+
