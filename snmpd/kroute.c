@@ -654,3 +654,4 @@ kif_update(u_short if_index, int flags, struct if_data *ifd,
 	return (&kif->k);
 }
 
+void
