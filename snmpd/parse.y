@@ -654,3 +654,4 @@ top:
 				*p++ = (char)c;
 				continue;
 			}
+			*p = '\0';
