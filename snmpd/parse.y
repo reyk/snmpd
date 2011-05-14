@@ -653,3 +653,4 @@ top:
 			if (isalnum(c) || c == '_') {
 				*p++ = (char)c;
 				continue;
+			}
