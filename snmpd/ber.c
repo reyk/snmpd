@@ -654,3 +654,4 @@ ber_scanf_elements(struct ber_element *ber, char *fmt, ...)
 		case 'i':
 			i = va_arg(ap, long long *);
 			if (ber_get_integer(ber, i) == -1)
+				goto fail;
