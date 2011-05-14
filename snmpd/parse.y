@@ -655,3 +655,4 @@ top:
 				continue;
 			}
 			*p = '\0';
+			lungetc(c);
