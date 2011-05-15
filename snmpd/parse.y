@@ -658,3 +658,4 @@ top:
 			lungetc(c);
 			break;
 		}
+		val = symget(buf);
