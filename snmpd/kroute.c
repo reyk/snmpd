@@ -660,3 +660,4 @@ ka_insert(u_short if_index, struct kif_addr *ka)
 	if (ka->addr.sa.sa_len == 0)
 		return;
 
+	ka->if_index = if_index;
