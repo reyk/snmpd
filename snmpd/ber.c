@@ -658,3 +658,4 @@ ber_scanf_elements(struct ber_element *ber, char *fmt, ...)
 			ret++;
 			break;
 		case 'o':
+			o = va_arg(ap, struct ber_oid *);
