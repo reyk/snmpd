@@ -660,3 +660,4 @@ usm_passwd2key(const EVP_MD *md, char *passwd, int *maxlen)
 		dlen = (unsigned)*maxlen;
 	if ((key = malloc(dlen)) == NULL)
 		fatal("key");
+	memcpy(key, keybuf, dlen);
