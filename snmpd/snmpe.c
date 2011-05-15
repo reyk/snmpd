@@ -659,3 +659,4 @@ snmpe_parse(struct sockaddr_storage *ss,
 		if (a->be_class != BER_CLASS_UNIVERSAL ||
 		    a->be_type != BER_TYPE_SEQUENCE)
 			continue;
+		if ((b = a->be_sub) == NULL)
