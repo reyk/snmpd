@@ -657,3 +657,4 @@ top:
 			*p = '\0';
 			lungetc(c);
 			break;
+		}
