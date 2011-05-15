@@ -660,3 +660,4 @@ top:
 		}
 		val = symget(buf);
 		if (val == NULL) {
+			yyerror("macro '%s' not defined", buf);
