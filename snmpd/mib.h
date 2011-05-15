@@ -658,3 +658,4 @@
 #define MIB_memIfEntry			MIB_memIfTable, 1
 #define OIDIDX_memIf			10
 #define OIDIDX_memIfEntry		11
+#define MIB_memIfName			MIB_memIfEntry, 1
