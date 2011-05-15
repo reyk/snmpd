@@ -657,3 +657,4 @@ kif_update(u_short if_index, int flags, struct if_data *ifd,
 void
 ka_insert(u_short if_index, struct kif_addr *ka)
 {
+	if (ka->addr.sa.sa_len == 0)
