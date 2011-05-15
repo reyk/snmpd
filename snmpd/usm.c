@@ -657,3 +657,4 @@ usm_passwd2key(const EVP_MD *md, char *passwd, int *maxlen)
 	EVP_MD_CTX_cleanup(&ctx);
 
 	if (*maxlen > 0 && dlen > (unsigned)*maxlen)
+		dlen = (unsigned)*maxlen;
