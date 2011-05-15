@@ -660,3 +660,4 @@
 #define OIDIDX_memIfEntry		11
 #define MIB_memIfName			MIB_memIfEntry, 1
 #define MIB_memIfLiveLocks		MIB_memIfEntry, 2
+#define MIB_carpMIBObjects		MIB_openBSD, 6
