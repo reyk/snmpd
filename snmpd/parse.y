@@ -659,3 +659,4 @@ top:
 			break;
 		}
 		val = symget(buf);
+		if (val == NULL) {
