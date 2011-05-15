@@ -658,3 +658,4 @@ usm_passwd2key(const EVP_MD *md, char *passwd, int *maxlen)
 
 	if (*maxlen > 0 && dlen > (unsigned)*maxlen)
 		dlen = (unsigned)*maxlen;
+	if ((key = malloc(dlen)) == NULL)
