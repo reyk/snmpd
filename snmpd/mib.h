@@ -659,3 +659,4 @@
 #define OIDIDX_memIf			10
 #define OIDIDX_memIfEntry		11
 #define MIB_memIfName			MIB_memIfEntry, 1
+#define MIB_memIfLiveLocks		MIB_memIfEntry, 2
