@@ -663,3 +663,4 @@
 #define MIB_carpMIBObjects		MIB_openBSD, 6
 #define MIB_carpSysctl			MIB_carpMIBObjects, 1
 #define MIB_carpAllow			MIB_carpSysctl, 1
+#define MIB_carpPreempt			MIB_carpSysctl, 2
