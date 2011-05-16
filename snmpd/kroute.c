@@ -663,3 +663,4 @@ ka_insert(u_short if_index, struct kif_addr *ka)
 	ka->if_index = if_index;
 	RB_INSERT(ka_tree, &kat, ka);
 }
+
