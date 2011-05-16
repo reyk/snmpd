@@ -662,3 +662,4 @@ ber_scanf_elements(struct ber_element *ber, char *fmt, ...)
 			if (ber_get_oid(ber, o) == -1)
 				goto fail;
 			ret++;
+			break;
