@@ -664,3 +664,4 @@ snmpe_parse(struct sockaddr_storage *ss,
 		for (state = 0; state < 2 && b != NULL; b = b->be_next) {
 			switch (state++) {
 			case 0:
+				if (ber_get_oid(b, &o) != 0)
