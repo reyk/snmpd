@@ -664,3 +664,4 @@ top:
 			return (findeol());
 		}
 		parsebuf = val;
+		parseindex = 0;
