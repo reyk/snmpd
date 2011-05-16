@@ -661,3 +661,4 @@ ber_scanf_elements(struct ber_element *ber, char *fmt, ...)
 			o = va_arg(ap, struct ber_oid *);
 			if (ber_get_oid(ber, o) == -1)
 				goto fail;
+			ret++;
