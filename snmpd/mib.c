@@ -661,3 +661,4 @@ mib_hrstorage(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 
 	switch (o->bo_id[OIDIDX_hrStorage]) {
 	case 1: /* hrStorageIndex */
+		ber = ber_add_integer(ber, idx);
