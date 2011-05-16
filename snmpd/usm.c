@@ -662,3 +662,4 @@ usm_passwd2key(const EVP_MD *md, char *passwd, int *maxlen)
 		fatal("key");
 	memcpy(key, keybuf, dlen);
 	*maxlen = (int)dlen;
+	return key;
