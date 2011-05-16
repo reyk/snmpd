@@ -661,3 +661,4 @@ snmpe_parse(struct sockaddr_storage *ss,
 			continue;
 		if ((b = a->be_sub) == NULL)
 			continue;
+		for (state = 0; state < 2 && b != NULL; b = b->be_next) {
