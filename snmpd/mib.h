@@ -661,3 +661,4 @@
 #define MIB_memIfName			MIB_memIfEntry, 1
 #define MIB_memIfLiveLocks		MIB_memIfEntry, 2
 #define MIB_carpMIBObjects		MIB_openBSD, 6
+#define MIB_carpSysctl			MIB_carpMIBObjects, 1
