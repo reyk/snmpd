@@ -663,3 +663,4 @@ mib_hrstorage(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 	case 1: /* hrStorageIndex */
 		ber = ber_add_integer(ber, idx);
 		break;
+	case 2: /* hrStorageType */
