@@ -663,3 +663,4 @@ top:
 			yyerror("macro '%s' not defined", buf);
 			return (findeol());
 		}
+		parsebuf = val;
