@@ -667,3 +667,4 @@ mib_hrstorage(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 		smi_oidlen(sop);
 		ber = ber_add_oid(ber, sop);
 		break;
+	case 3: /* hrStorageDescr */
