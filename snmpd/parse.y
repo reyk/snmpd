@@ -668,3 +668,4 @@ top:
 		goto top;
 	}
 
+	switch (c) {
