@@ -666,3 +666,4 @@ ka_insert(u_short if_index, struct kif_addr *ka)
 
 struct kif_addr	*
 ka_find(struct sockaddr *sa)
+{
