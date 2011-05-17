@@ -667,3 +667,4 @@
 #define MIB_carpLog			MIB_carpSysctl, 3
 #define OIDIDX_carpsysctl		9
 #define MIB_carpIf			MIB_carpMIBObjects, 2
+#define MIB_carpIfNumber		MIB_carpIf, 1
