@@ -665,3 +665,4 @@
 #define MIB_carpAllow			MIB_carpSysctl, 1
 #define MIB_carpPreempt			MIB_carpSysctl, 2
 #define MIB_carpLog			MIB_carpSysctl, 3
+#define OIDIDX_carpsysctl		9
