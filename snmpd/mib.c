@@ -668,3 +668,4 @@ mib_hrstorage(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 		ber = ber_add_oid(ber, sop);
 		break;
 	case 3: /* hrStorageDescr */
+		ber = ber_add_string(ber, descr);
