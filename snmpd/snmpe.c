@@ -666,3 +666,4 @@ snmpe_parse(struct sockaddr_storage *ss,
 			case 0:
 				if (ber_get_oid(b, &o) != 0)
 					goto varfail;
+				if (o.bo_n < BER_MIN_OID_LEN ||
