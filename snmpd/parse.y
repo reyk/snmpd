@@ -665,3 +665,4 @@ top:
 		}
 		parsebuf = val;
 		parseindex = 0;
+		goto top;
