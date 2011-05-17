@@ -668,3 +668,4 @@ struct kif_addr	*
 ka_find(struct sockaddr *sa)
 {
 	struct kif_addr		ka;
+
