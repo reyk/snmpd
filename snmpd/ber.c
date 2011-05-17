@@ -668,3 +668,4 @@ ber_scanf_elements(struct ber_element *ber, char *fmt, ...)
 			break;
 		case 's':
 			s = va_arg(ap, char **);
+			if (ber_get_string(ber, s) == -1)
