@@ -665,3 +665,4 @@ ber_scanf_elements(struct ber_element *ber, char *fmt, ...)
 			break;
 		case 'S':
 			ret++;
+			break;
