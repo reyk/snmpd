@@ -665,3 +665,4 @@ snmpe_parse(struct sockaddr_storage *ss,
 			switch (state++) {
 			case 0:
 				if (ber_get_oid(b, &o) != 0)
+					goto varfail;
