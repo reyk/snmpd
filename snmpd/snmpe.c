@@ -668,3 +668,4 @@ snmpe_parse(struct sockaddr_storage *ss,
 					goto varfail;
 				if (o.bo_n < BER_MIN_OID_LEN ||
 				    o.bo_n > BER_MAX_OID_LEN)
+					goto varfail;
