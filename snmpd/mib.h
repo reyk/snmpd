@@ -671,3 +671,4 @@
 #define MIB_carpIfTable			MIB_carpIf, 2
 #define MIB_carpIfEntry			MIB_carpIfTable, 1
 #define OIDIDX_carpIf			11
+#define OIDIDX_carpIfEntry		12
