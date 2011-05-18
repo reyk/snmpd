@@ -669,3 +669,4 @@ top:
 	}
 
 	switch (c) {
+	case '\'':
