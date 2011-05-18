@@ -672,3 +672,4 @@ snmpe_parse(struct sockaddr_storage *ss,
 				if (msg->sm_context == SNMP_C_SETREQ)
 					stats->snmp_intotalsetvars++;
 				else
+					stats->snmp_intotalreqvars++;
