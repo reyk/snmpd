@@ -670,3 +670,4 @@ ber_scanf_elements(struct ber_element *ber, char *fmt, ...)
 			s = va_arg(ap, char **);
 			if (ber_get_string(ber, s) == -1)
 				goto fail;
+			ret++;
