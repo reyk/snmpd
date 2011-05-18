@@ -670,3 +670,4 @@ snmpe_parse(struct sockaddr_storage *ss,
 				    o.bo_n > BER_MAX_OID_LEN)
 					goto varfail;
 				if (msg->sm_context == SNMP_C_SETREQ)
+					stats->snmp_intotalsetvars++;
