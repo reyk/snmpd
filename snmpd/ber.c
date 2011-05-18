@@ -672,3 +672,4 @@ ber_scanf_elements(struct ber_element *ber, char *fmt, ...)
 				goto fail;
 			ret++;
 			break;
+		case 't':
