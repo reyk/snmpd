@@ -671,3 +671,4 @@ top:
 	switch (c) {
 	case '\'':
 	case '"':
+		quotec = c;
