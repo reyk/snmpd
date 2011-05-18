@@ -672,3 +672,4 @@ top:
 	case '\'':
 	case '"':
 		quotec = c;
+		while (1) {
