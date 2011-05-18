@@ -669,3 +669,4 @@
 #define MIB_carpIf			MIB_carpMIBObjects, 2
 #define MIB_carpIfNumber		MIB_carpIf, 1
 #define MIB_carpIfTable			MIB_carpIf, 2
+#define MIB_carpIfEntry			MIB_carpIfTable, 1
