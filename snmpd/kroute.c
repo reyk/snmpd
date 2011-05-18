@@ -670,3 +670,4 @@ ka_find(struct sockaddr *sa)
 	struct kif_addr		ka;
 
 	if (sa == NULL)
+		return (RB_MIN(ka_tree, &kat));
