@@ -675,3 +675,4 @@ ka_find(struct sockaddr *sa)
 	bcopy(sa, &ka.addr.sa, sa->sa_len);
 	return (RB_FIND(ka_tree, &kat, &ka));
 }
+
