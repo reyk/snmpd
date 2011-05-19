@@ -673,3 +673,4 @@ ka_find(struct sockaddr *sa)
 		return (RB_MIN(ka_tree, &kat));
 	bzero(&ka.addr, sizeof(ka.addr));
 	bcopy(sa, &ka.addr.sa, sa->sa_len);
+	return (RB_FIND(ka_tree, &kat, &ka));
