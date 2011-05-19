@@ -676,3 +676,4 @@ ka_find(struct sockaddr *sa)
 	return (RB_FIND(ka_tree, &kat, &ka));
 }
 
+int
