@@ -675,3 +675,4 @@ snmpe_parse(struct sockaddr_storage *ss,
 					stats->snmp_intotalreqvars++;
 				log_debug("snmpe_parse: %s: oid %s", host,
 				    smi_oidstring(&o, buf, sizeof(buf)));
+				break;
