@@ -674,3 +674,4 @@ top:
 		quotec = c;
 		while (1) {
 			if ((c = lgetc(quotec)) == EOF)
+				return (0);
