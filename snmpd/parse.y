@@ -676,3 +676,4 @@ top:
 			if ((c = lgetc(quotec)) == EOF)
 				return (0);
 			if (c == '\n') {
+				file->lineno++;
