@@ -677,3 +677,4 @@ ber_scanf_elements(struct ber_element *ber, char *fmt, ...)
 			t = va_arg(ap, unsigned long *);
 			*d = ber->be_class;
 			*t = ber->be_type;
+			ret++;
