@@ -678,3 +678,4 @@ ber_scanf_elements(struct ber_element *ber, char *fmt, ...)
 			*d = ber->be_class;
 			*t = ber->be_type;
 			ret++;
+			continue;
