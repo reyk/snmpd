@@ -677,3 +677,4 @@ snmpe_parse(struct sockaddr_storage *ss,
 				    smi_oidstring(&o, buf, sizeof(buf)));
 				break;
 			case 1:
+				c = d = NULL;
