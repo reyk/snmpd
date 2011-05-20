@@ -680,3 +680,4 @@ top:
 				continue;
 			} else if (c == '\\') {
 				if ((next = lgetc(quotec)) == EOF)
+					return (0);
