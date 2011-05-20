@@ -677,3 +677,4 @@ top:
 				return (0);
 			if (c == '\n') {
 				file->lineno++;
+				continue;
