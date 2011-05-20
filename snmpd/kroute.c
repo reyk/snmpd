@@ -679,3 +679,4 @@ ka_find(struct sockaddr *sa)
 int
 ka_remove(struct kif_addr *ka)
 {
+	RB_REMOVE(ka_tree, &kat, ka);
