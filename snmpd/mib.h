@@ -677,3 +677,4 @@
 #define MIB_carpIfVhid			MIB_carpIfEntry, 3
 #define MIB_carpIfDev			MIB_carpIfEntry, 4
 #define MIB_carpIfAdvbase		MIB_carpIfEntry, 5
+#define MIB_carpIfAdvskew		MIB_carpIfEntry, 6
