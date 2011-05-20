@@ -680,3 +680,4 @@ snmpe_parse(struct sockaddr_storage *ss,
 				c = d = NULL;
 				switch (msg->sm_context) {
 				case SNMP_C_GETNEXTREQ:
+					c = ber_add_sequence(NULL);
