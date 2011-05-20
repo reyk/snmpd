@@ -678,3 +678,4 @@
 #define MIB_carpIfDev			MIB_carpIfEntry, 4
 #define MIB_carpIfAdvbase		MIB_carpIfEntry, 5
 #define MIB_carpIfAdvskew		MIB_carpIfEntry, 6
+#define MIB_carpIfState			MIB_carpIfEntry, 7
