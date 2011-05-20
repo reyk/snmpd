@@ -679,3 +679,4 @@ top:
 				file->lineno++;
 				continue;
 			} else if (c == '\\') {
+				if ((next = lgetc(quotec)) == EOF)
