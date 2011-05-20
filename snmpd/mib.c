@@ -677,3 +677,4 @@ mib_hrstorage(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 		ber = ber_add_integer(ber, size);
 		break;
 	case 6: /* hrStorageUsed */
+		ber = ber_add_integer(ber, used);
