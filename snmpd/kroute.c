@@ -680,3 +680,4 @@ int
 ka_remove(struct kif_addr *ka)
 {
 	RB_REMOVE(ka_tree, &kat, ka);
+	free(ka);
