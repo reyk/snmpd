@@ -678,3 +678,4 @@ top:
 			if (c == '\n') {
 				file->lineno++;
 				continue;
+			} else if (c == '\\') {
