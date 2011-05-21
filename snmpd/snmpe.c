@@ -682,3 +682,4 @@ snmpe_parse(struct sockaddr_storage *ss,
 				case SNMP_C_GETNEXTREQ:
 					c = ber_add_sequence(NULL);
 					if ((d = mps_getnextreq(c, &o)) != NULL)
+						break;
