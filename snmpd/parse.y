@@ -684,3 +684,4 @@ top:
 				if (next == quotec || c == ' ' || c == '\t')
 					c = next;
 				else if (next == '\n') {
+					file->lineno++;
