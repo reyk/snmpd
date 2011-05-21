@@ -683,3 +683,4 @@ top:
 					return (0);
 				if (next == quotec || c == ' ' || c == '\t')
 					c = next;
+				else if (next == '\n') {
