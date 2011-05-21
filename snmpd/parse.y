@@ -682,3 +682,4 @@ top:
 				if ((next = lgetc(quotec)) == EOF)
 					return (0);
 				if (next == quotec || c == ' ' || c == '\t')
+					c = next;
