@@ -681,3 +681,4 @@
 #define MIB_carpIfState			MIB_carpIfEntry, 7
 #define OIDIDX_carpstats		9
 #define MIB_carpStats			MIB_carpMIBObjects, 3
+#define MIB_carpIpPktsRecv		MIB_carpStats, 1
