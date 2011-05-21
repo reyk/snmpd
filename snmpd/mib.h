@@ -683,3 +683,4 @@
 #define MIB_carpStats			MIB_carpMIBObjects, 3
 #define MIB_carpIpPktsRecv		MIB_carpStats, 1
 #define MIB_carpIp6PktsRecv		MIB_carpStats, 2
+#define MIB_carpPktDiscardsBadIface	MIB_carpStats, 3
