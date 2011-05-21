@@ -684,3 +684,4 @@ ka_remove(struct kif_addr *ka)
 	return (0);
 }
 
+struct kif_addr *
