@@ -688,3 +688,4 @@
 #define MIB_carpPktShorterThanHdr	MIB_carpStats, 5
 #define MIB_carpDiscardsBadCksum	MIB_carpStats, 6
 #define MIB_carpDiscardsBadVersion	MIB_carpStats, 7
+#define MIB_carpDiscardsTooShort	MIB_carpStats, 8
