@@ -686,3 +686,4 @@ mib_hrstorage(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 	default:
 		return (-1);
 	}
+
