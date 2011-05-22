@@ -688,3 +688,4 @@ top:
 					continue;
 				} else
 					lungetc(next);
+			} else if (c == quotec) {
