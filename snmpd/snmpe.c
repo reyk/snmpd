@@ -686,3 +686,4 @@ snmpe_parse(struct sockaddr_storage *ss,
 					ber_free_elements(c);
 					c = NULL;
 					msg->sm_error = SNMP_ERROR_NOSUCHNAME;
+					msg->sm_errorindex = i;
