@@ -687,3 +687,4 @@ top:
 					file->lineno++;
 					continue;
 				} else
+					lungetc(next);
