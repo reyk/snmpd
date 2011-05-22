@@ -686,3 +686,4 @@ top:
 				else if (next == '\n') {
 					file->lineno++;
 					continue;
+				} else
