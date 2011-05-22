@@ -685,3 +685,4 @@
 #define MIB_carpIp6PktsRecv		MIB_carpStats, 2
 #define MIB_carpPktDiscardsBadIface	MIB_carpStats, 3
 #define MIB_carpPktDiscardsBadTtl	MIB_carpStats, 4
+#define MIB_carpPktShorterThanHdr	MIB_carpStats, 5
