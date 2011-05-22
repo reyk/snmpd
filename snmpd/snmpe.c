@@ -688,3 +688,4 @@ snmpe_parse(struct sockaddr_storage *ss,
 					msg->sm_error = SNMP_ERROR_NOSUCHNAME;
 					msg->sm_errorindex = i;
 					break;	/* ignore error */
+				case SNMP_C_GETREQ:
