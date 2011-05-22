@@ -685,3 +685,4 @@ top:
 					c = next;
 				else if (next == '\n') {
 					file->lineno++;
+					continue;
