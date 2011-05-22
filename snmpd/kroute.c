@@ -686,3 +686,4 @@ ka_remove(struct kif_addr *ka)
 
 struct kif_addr *
 kr_getaddr(struct sockaddr *sa)
+{
