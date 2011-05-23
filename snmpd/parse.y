@@ -690,3 +690,4 @@ top:
 					lungetc(next);
 			} else if (c == quotec) {
 				*p = '\0';
+				break;
