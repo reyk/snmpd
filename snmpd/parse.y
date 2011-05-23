@@ -691,3 +691,4 @@ top:
 			} else if (c == quotec) {
 				*p = '\0';
 				break;
+			}
