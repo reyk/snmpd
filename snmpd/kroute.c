@@ -690,3 +690,4 @@ kr_getaddr(struct sockaddr *sa)
 	return (ka_find(sa));
 }
 
+struct kif_addr *
