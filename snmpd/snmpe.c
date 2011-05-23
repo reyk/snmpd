@@ -689,3 +689,4 @@ snmpe_parse(struct sockaddr_storage *ss,
 					msg->sm_errorindex = i;
 					break;	/* ignore error */
 				case SNMP_C_GETREQ:
+					c = ber_add_sequence(NULL);
