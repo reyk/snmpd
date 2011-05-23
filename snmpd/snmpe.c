@@ -692,3 +692,4 @@ snmpe_parse(struct sockaddr_storage *ss,
 					c = ber_add_sequence(NULL);
 					if ((d = mps_getreq(c, &o,
 					    msg->sm_version)) != NULL)
+						break;
