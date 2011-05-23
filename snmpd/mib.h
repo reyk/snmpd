@@ -691,3 +691,4 @@
 #define MIB_carpDiscardsTooShort	MIB_carpStats, 8
 #define MIB_carpDiscardsBadAuth		MIB_carpStats, 9
 #define MIB_carpDiscardsBadVhid		MIB_carpStats, 10
+#define MIB_carpDiscardsBadAddrList	MIB_carpStats, 11
