@@ -692,3 +692,4 @@ top:
 				*p = '\0';
 				break;
 			}
+			if (p + 1 >= buf + sizeof(buf) - 1) {
