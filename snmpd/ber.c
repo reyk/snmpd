@@ -689,3 +689,4 @@ ber_scanf_elements(struct ber_element *ber, char *fmt, ...)
 		case '0':
 			if (ber->be_encoding != BER_TYPE_NULL)
 				goto fail;
+			ret++;
