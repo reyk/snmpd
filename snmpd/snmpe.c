@@ -690,3 +690,4 @@ snmpe_parse(struct sockaddr_storage *ss,
 					break;	/* ignore error */
 				case SNMP_C_GETREQ:
 					c = ber_add_sequence(NULL);
+					if ((d = mps_getreq(c, &o,
