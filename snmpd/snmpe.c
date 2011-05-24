@@ -693,3 +693,4 @@ snmpe_parse(struct sockaddr_storage *ss,
 					if ((d = mps_getreq(c, &o,
 					    msg->sm_version)) != NULL)
 						break;
+					msg->sm_error = SNMP_ERROR_NOSUCHNAME;
