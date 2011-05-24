@@ -693,3 +693,4 @@ kr_getaddr(struct sockaddr *sa)
 struct kif_addr *
 kr_getnextaddr(struct sockaddr *sa)
 {
+	struct kif_addr	*ka;
