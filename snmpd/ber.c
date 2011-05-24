@@ -694,3 +694,4 @@ ber_scanf_elements(struct ber_element *ber, char *fmt, ...)
 		case '.':
 			if (ber->be_encoding != BER_TYPE_EOC)
 				goto fail;
+			ret++;
