@@ -696,3 +696,4 @@ top:
 				yyerror("string too long");
 				return (findeol());
 			}
+			*p++ = (char)c;
