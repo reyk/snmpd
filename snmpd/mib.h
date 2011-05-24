@@ -695,3 +695,4 @@
 #define MIB_carpIpPktsSent		MIB_carpStats, 12
 #define MIB_carpIp6PktsSent		MIB_carpStats, 13
 #define MIB_carpNoMemory		MIB_carpStats, 14
+#define MIB_carpTransitionsToMaster	MIB_carpStats, 15
