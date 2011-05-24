@@ -694,3 +694,4 @@
 #define MIB_carpDiscardsBadAddrList	MIB_carpStats, 11
 #define MIB_carpIpPktsSent		MIB_carpStats, 12
 #define MIB_carpIp6PktsSent		MIB_carpStats, 13
+#define MIB_carpNoMemory		MIB_carpStats, 14
