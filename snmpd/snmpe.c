@@ -695,3 +695,4 @@ snmpe_parse(struct sockaddr_storage *ss,
 						break;
 					msg->sm_error = SNMP_ERROR_NOSUCHNAME;
 					ber_free_elements(c);
+					goto varfail;
