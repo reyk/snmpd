@@ -699,3 +699,4 @@ top:
 			*p++ = (char)c;
 		}
 		yylval.v.string = strdup(buf);
+		if (yylval.v.string == NULL)
