@@ -699,3 +699,4 @@ mib_hrdevice(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 	int			 mib[] = { CTL_HW, HW_MODEL };
 	size_t			 len;
 	char			 descr[BUFSIZ];
+	static struct ber_oid	*sop, so[] = {
