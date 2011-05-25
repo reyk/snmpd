@@ -699,3 +699,4 @@ snmpe_parse(struct sockaddr_storage *ss,
 				case SNMP_C_SETREQ:
 					if (env->sc_readonly == 0
 					    && mps_setreq(b, &o) == 0)
+						break;
