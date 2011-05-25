@@ -697,3 +697,4 @@ kr_getnextaddr(struct sockaddr *sa)
 
 	if ((ka = ka_find(sa)) == NULL)
 		return (NULL);
+	if (sa)
