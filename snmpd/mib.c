@@ -697,3 +697,4 @@ mib_hrdevice(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 	u_int32_t		 idx, fail = 0;
 	int			 status;
 	int			 mib[] = { CTL_HW, HW_MODEL };
+	size_t			 len;
