@@ -698,3 +698,4 @@ top:
 			}
 			*p++ = (char)c;
 		}
+		yylval.v.string = strdup(buf);
