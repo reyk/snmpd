@@ -698,3 +698,4 @@
 #define MIB_carpTransitionsToMaster	MIB_carpStats, 15
 #define MIB_localSystem			MIB_openBSD, 23
 #define MIB_SYSOID_DEFAULT		MIB_openBSD, 23, 1
+#define MIB_localTest			MIB_openBSD, 42
