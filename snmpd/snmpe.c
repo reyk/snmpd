@@ -698,3 +698,4 @@ snmpe_parse(struct sockaddr_storage *ss,
 					goto varfail;
 				case SNMP_C_SETREQ:
 					if (env->sc_readonly == 0
+					    && mps_setreq(b, &o) == 0)
