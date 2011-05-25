@@ -697,3 +697,4 @@ snmpe_parse(struct sockaddr_storage *ss,
 					ber_free_elements(c);
 					goto varfail;
 				case SNMP_C_SETREQ:
+					if (env->sc_readonly == 0
