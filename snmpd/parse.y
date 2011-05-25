@@ -697,3 +697,4 @@ top:
 				return (findeol());
 			}
 			*p++ = (char)c;
+		}
