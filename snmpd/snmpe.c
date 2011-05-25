@@ -700,3 +700,4 @@ snmpe_parse(struct sockaddr_storage *ss,
 					if (env->sc_readonly == 0
 					    && mps_setreq(b, &o) == 0)
 						break;
+					msg->sm_error = SNMP_ERROR_READONLY;
