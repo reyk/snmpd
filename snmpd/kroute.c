@@ -699,3 +699,4 @@ kr_getnextaddr(struct sockaddr *sa)
 		return (NULL);
 	if (sa)
 		ka = RB_NEXT(ka_tree, &kat, ka);
+
