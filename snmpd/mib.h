@@ -703,3 +703,4 @@
 #define MIB_TREE			{		\
 	{ MIBDECL(iso) },				\
 	{ MIBDECL(org) },				\
+	{ MIBDECL(dod) },				\
