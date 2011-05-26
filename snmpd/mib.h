@@ -704,3 +704,4 @@
 	{ MIBDECL(iso) },				\
 	{ MIBDECL(org) },				\
 	{ MIBDECL(dod) },				\
+	{ MIBDECL(internet) },				\
