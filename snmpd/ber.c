@@ -703,3 +703,4 @@ ber_scanf_elements(struct ber_element *ber, char *fmt, ...)
 			continue;
 		case '{':
 		case '(':
+			if (ber->be_encoding != BER_TYPE_SEQUENCE &&
