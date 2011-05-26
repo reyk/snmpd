@@ -702,3 +702,4 @@ snmpe_parse(struct sockaddr_storage *ss,
 						break;
 					msg->sm_error = SNMP_ERROR_READONLY;
 					goto varfail;
+				case SNMP_C_GETBULKREQ:
