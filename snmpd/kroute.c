@@ -704,3 +704,4 @@ kr_getnextaddr(struct sockaddr *sa)
 }
 
 /* misc */
+u_int8_t
