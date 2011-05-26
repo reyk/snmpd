@@ -701,3 +701,4 @@ ber_scanf_elements(struct ber_element *ber, char *fmt, ...)
 			*pos = ber_getpos(ber);
 			ret++;
 			continue;
+		case '{':
