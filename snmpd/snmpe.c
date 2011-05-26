@@ -703,3 +703,4 @@ snmpe_parse(struct sockaddr_storage *ss,
 					msg->sm_error = SNMP_ERROR_READONLY;
 					goto varfail;
 				case SNMP_C_GETBULKREQ:
+					j = msg->sm_maxrepetitions;
