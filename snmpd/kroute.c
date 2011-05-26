@@ -701,3 +701,4 @@ kr_getnextaddr(struct sockaddr *sa)
 		ka = RB_NEXT(ka_tree, &kat, ka);
 
 	return (ka);
+}
