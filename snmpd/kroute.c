@@ -702,3 +702,4 @@ kr_getnextaddr(struct sockaddr *sa)
 
 	return (ka);
 }
+
