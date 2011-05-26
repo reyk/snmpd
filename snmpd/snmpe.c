@@ -701,3 +701,4 @@ snmpe_parse(struct sockaddr_storage *ss,
 					    && mps_setreq(b, &o) == 0)
 						break;
 					msg->sm_error = SNMP_ERROR_READONLY;
+					goto varfail;
