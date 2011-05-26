@@ -701,3 +701,4 @@
 #define MIB_localTest			MIB_openBSD, 42
 
 #define MIB_TREE			{		\
+	{ MIBDECL(iso) },				\
