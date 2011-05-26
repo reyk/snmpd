@@ -704,3 +704,4 @@ top:
 		return (STRING);
 	}
 
+#define allowed_to_end_number(x) \
