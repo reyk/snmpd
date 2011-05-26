@@ -702,3 +702,4 @@ mib_hrdevice(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 	static struct ber_oid	*sop, so[] = {
 		{ { MIB_hrDeviceProcessor } },
 	};
+
