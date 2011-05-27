@@ -706,3 +706,4 @@ snmpe_parse(struct sockaddr_storage *ss,
 					j = msg->sm_maxrepetitions;
 					msg->sm_errorindex = 0;
 					msg->sm_error = SNMP_ERROR_NOSUCHNAME;
+					for (d = NULL, len = 0; j > 0; j--) {
