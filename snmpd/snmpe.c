@@ -705,3 +705,4 @@ snmpe_parse(struct sockaddr_storage *ss,
 				case SNMP_C_GETBULKREQ:
 					j = msg->sm_maxrepetitions;
 					msg->sm_errorindex = 0;
+					msg->sm_error = SNMP_ERROR_NOSUCHNAME;
