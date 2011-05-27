@@ -707,3 +707,4 @@
 	{ MIBDECL(internet) },				\
 	{ MIBDECL(directory) },				\
 	{ MIBDECL(mgmt) },				\
+	{ MIBDECL(mib_2) },				\
