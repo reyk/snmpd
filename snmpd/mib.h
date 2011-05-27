@@ -705,3 +705,4 @@
 	{ MIBDECL(org) },				\
 	{ MIBDECL(dod) },				\
 	{ MIBDECL(internet) },				\
+	{ MIBDECL(directory) },				\
