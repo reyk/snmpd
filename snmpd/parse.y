@@ -706,3 +706,4 @@ top:
 
 #define allowed_to_end_number(x) \
 	(isspace(x) || x == ')' || x ==',' || x == '/' || x == '}' || x == '=')
+
