@@ -705,3 +705,4 @@ kr_getnextaddr(struct sockaddr *sa)
 
 /* misc */
 u_int8_t
+prefixlen_classful(in_addr_t ina)
