@@ -706,3 +706,4 @@
 	{ MIBDECL(dod) },				\
 	{ MIBDECL(internet) },				\
 	{ MIBDECL(directory) },				\
+	{ MIBDECL(mgmt) },				\
