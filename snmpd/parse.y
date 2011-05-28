@@ -712,3 +712,4 @@ top:
 			*p++ = c;
 			if ((unsigned)(p-buf) >= sizeof(buf)) {
 				yyerror("string too long");
+				return (findeol());
