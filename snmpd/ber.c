@@ -710,3 +710,4 @@ ber_scanf_elements(struct ber_element *ber, char *fmt, ...)
 				goto fail;
 			parent[++level] = ber;
 			ber = ber->be_sub;
+			ret++;
