@@ -709,3 +709,4 @@ ber_scanf_elements(struct ber_element *ber, char *fmt, ...)
 			if (ber->be_sub == NULL || level >= _MAX_SEQ-1)
 				goto fail;
 			parent[++level] = ber;
+			ber = ber->be_sub;
