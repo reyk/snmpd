@@ -711,3 +711,4 @@ top:
 		do {
 			*p++ = c;
 			if ((unsigned)(p-buf) >= sizeof(buf)) {
+				yyerror("string too long");
