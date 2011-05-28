@@ -710,3 +710,4 @@ top:
 	if (c == '-' || isdigit(c)) {
 		do {
 			*p++ = c;
+			if ((unsigned)(p-buf) >= sizeof(buf)) {
