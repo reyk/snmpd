@@ -712,3 +712,4 @@
 	{ MIBDECL(sysDescr) },				\
 	{ MIBDECL(sysOID) },				\
 	{ MIBDECL(sysUpTime) },				\
+	{ MIBDECL(sysContact) },			\
