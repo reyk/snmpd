@@ -709,3 +709,4 @@ snmpe_parse(struct sockaddr_storage *ss,
 					for (d = NULL, len = 0; j > 0; j--) {
 						e = ber_add_sequence(NULL);
 						if (c == NULL)
+							c = e;
