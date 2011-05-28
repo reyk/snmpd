@@ -711,3 +711,4 @@
 	{ MIBDECL(system) },				\
 	{ MIBDECL(sysDescr) },				\
 	{ MIBDECL(sysOID) },				\
+	{ MIBDECL(sysUpTime) },				\
