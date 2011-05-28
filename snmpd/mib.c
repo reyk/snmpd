@@ -712,3 +712,4 @@ mib_hrdevice(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 	o->bo_id[OIDIDX_hrDeviceEntry] = idx;
 	ber = ber_add_oid(ber, o);
 
+	len = sizeof(descr);
