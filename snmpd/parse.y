@@ -709,3 +709,4 @@ top:
 
 	if (c == '-' || isdigit(c)) {
 		do {
+			*p++ = c;
