@@ -710,3 +710,4 @@
 	{ MIBDECL(mib_2) },				\
 	{ MIBDECL(system) },				\
 	{ MIBDECL(sysDescr) },				\
+	{ MIBDECL(sysOID) },				\
