@@ -710,3 +710,4 @@ snmpe_parse(struct sockaddr_storage *ss,
 						e = ber_add_sequence(NULL);
 						if (c == NULL)
 							c = e;
+						f = mps_getnextreq(e, &o);
