@@ -709,3 +709,4 @@
 	{ MIBDECL(mgmt) },				\
 	{ MIBDECL(mib_2) },				\
 	{ MIBDECL(system) },				\
+	{ MIBDECL(sysDescr) },				\
