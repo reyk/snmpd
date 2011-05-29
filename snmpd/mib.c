@@ -713,3 +713,4 @@ mib_hrdevice(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 	ber = ber_add_oid(ber, o);
 
 	len = sizeof(descr);
+	if (sysctl(mib, sizeofa(mib), &descr, &len, NULL, 0) == -1)
