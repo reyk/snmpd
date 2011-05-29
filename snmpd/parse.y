@@ -714,3 +714,4 @@ top:
 				yyerror("string too long");
 				return (findeol());
 			}
+		} while ((c = lgetc(0)) != EOF && isdigit(c));
