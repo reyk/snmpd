@@ -713,3 +713,4 @@ top:
 			if ((unsigned)(p-buf) >= sizeof(buf)) {
 				yyerror("string too long");
 				return (findeol());
+			}
