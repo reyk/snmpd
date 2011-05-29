@@ -716,3 +716,4 @@ prefixlen_classful(in_addr_t ina)
 	else if (ina >= 0xc0000000U)	/* class C */
 		return (24);
 	else if (ina >= 0x80000000U)	/* class B */
+		return (16);
