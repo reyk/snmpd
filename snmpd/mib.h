@@ -715,3 +715,4 @@
 	{ MIBDECL(sysContact) },			\
 	{ MIBDECL(sysName) },				\
 	{ MIBDECL(sysLocation) },			\
+	{ MIBDECL(sysServices) },			\
