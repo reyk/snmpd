@@ -715,3 +715,4 @@ snmpe_parse(struct sockaddr_storage *ss,
 							ber_free_elements(e);
 							if (d == NULL)
 								goto varfail;
+							break;
