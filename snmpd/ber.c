@@ -713,3 +713,4 @@ ber_scanf_elements(struct ber_element *ber, char *fmt, ...)
 			ret++;
 			continue;
 		case '}':
+		case ')':
