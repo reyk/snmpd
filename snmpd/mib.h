@@ -714,3 +714,4 @@
 	{ MIBDECL(sysUpTime) },				\
 	{ MIBDECL(sysContact) },			\
 	{ MIBDECL(sysName) },				\
+	{ MIBDECL(sysLocation) },			\
