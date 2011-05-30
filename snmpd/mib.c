@@ -718,3 +718,4 @@ mib_hrdevice(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 	/* unknown(1), running(2), warning(3), testing(4), down(5) */
 	status = 2;
 	sop = &so[0];
+
