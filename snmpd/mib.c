@@ -719,3 +719,4 @@ mib_hrdevice(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 	status = 2;
 	sop = &so[0];
 
+	switch (o->bo_id[OIDIDX_hrDevice]) {
