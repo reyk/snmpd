@@ -717,3 +717,4 @@ snmpe_parse(struct sockaddr_storage *ss,
 								goto varfail;
 							break;
 						}
+						len += ber_calc_len(e);
