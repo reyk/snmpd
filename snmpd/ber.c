@@ -717,3 +717,4 @@ ber_scanf_elements(struct ber_element *ber, char *fmt, ...)
 			if (parent[level] == NULL)
 				goto fail;
 			ber = parent[level--];
+			ret++;
