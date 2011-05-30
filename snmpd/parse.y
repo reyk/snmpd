@@ -720,3 +720,4 @@ top:
 			goto nodigits;
 		if (c == EOF || allowed_to_end_number(c)) {
 			const char *errstr = NULL;
+
