@@ -718,3 +718,4 @@ snmpe_parse(struct sockaddr_storage *ss,
 							break;
 						}
 						len += ber_calc_len(e);
+						if (len > SNMPD_MAXVARBINDLEN) {
