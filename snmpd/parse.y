@@ -718,3 +718,4 @@ top:
 		lungetc(c);
 		if (p == buf + 1 && buf[0] == '-')
 			goto nodigits;
+		if (c == EOF || allowed_to_end_number(c)) {
