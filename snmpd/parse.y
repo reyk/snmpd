@@ -717,3 +717,4 @@ top:
 		} while ((c = lgetc(0)) != EOF && isdigit(c));
 		lungetc(c);
 		if (p == buf + 1 && buf[0] == '-')
+			goto nodigits;
