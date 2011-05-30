@@ -720,3 +720,4 @@ prefixlen_classful(in_addr_t ina)
 	else				/* class A */
 		return (8);
 }
+
