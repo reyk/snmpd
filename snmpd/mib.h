@@ -720,3 +720,4 @@
 	{ MIBDECL(sysORTable) },			\
 	{ MIBDECL(sysOREntry) },			\
 	{ MIBDECL(sysORIndex) },			\
+	{ MIBDECL(sysORID) },				\
