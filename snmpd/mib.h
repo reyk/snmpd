@@ -718,3 +718,4 @@
 	{ MIBDECL(sysServices) },			\
 	{ MIBDECL(sysORLastChange) },			\
 	{ MIBDECL(sysORTable) },			\
+	{ MIBDECL(sysOREntry) },			\
