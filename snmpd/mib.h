@@ -717,3 +717,4 @@
 	{ MIBDECL(sysLocation) },			\
 	{ MIBDECL(sysServices) },			\
 	{ MIBDECL(sysORLastChange) },			\
+	{ MIBDECL(sysORTable) },			\
