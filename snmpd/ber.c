@@ -723,3 +723,4 @@ ber_scanf_elements(struct ber_element *ber, char *fmt, ...)
 			goto fail;
 		}
 
+		if (ber->be_next == NULL)
