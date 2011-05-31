@@ -723,3 +723,4 @@ mib_hrdevice(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 	case 1: /* hrDeviceIndex */
 		ber = ber_add_integer(ber, idx);
 		break;
+	case 2: /* hrDeviceType */
