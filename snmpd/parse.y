@@ -722,3 +722,4 @@ top:
 			const char *errstr = NULL;
 
 			*p = '\0';
+			yylval.v.number = strtonum(buf, LLONG_MIN,
