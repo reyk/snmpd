@@ -721,3 +721,4 @@ prefixlen_classful(in_addr_t ina)
 		return (8);
 }
 
+u_int8_t
