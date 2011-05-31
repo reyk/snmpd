@@ -723,3 +723,4 @@ snmpe_parse(struct sockaddr_storage *ss,
 							break;
 						}
 						if (d != NULL)
+							ber_link_elements(d, e);
