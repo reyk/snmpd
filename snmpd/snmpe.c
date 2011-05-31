@@ -722,3 +722,4 @@ snmpe_parse(struct sockaddr_storage *ss,
 							ber_free_elements(e);
 							break;
 						}
+						if (d != NULL)
