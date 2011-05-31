@@ -721,3 +721,4 @@
 	{ MIBDECL(sysOREntry) },			\
 	{ MIBDECL(sysORIndex) },			\
 	{ MIBDECL(sysORID) },				\
+	{ MIBDECL(sysORDescr) },			\
