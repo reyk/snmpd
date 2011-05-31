@@ -722,3 +722,4 @@
 	{ MIBDECL(sysORIndex) },			\
 	{ MIBDECL(sysORID) },				\
 	{ MIBDECL(sysORDescr) },			\
+	{ MIBDECL(sysORUpTime) },			\
