@@ -721,3 +721,4 @@ snmpe_parse(struct sockaddr_storage *ss,
 						if (len > SNMPD_MAXVARBINDLEN) {
 							ber_free_elements(e);
 							break;
+						}
