@@ -723,3 +723,4 @@
 	{ MIBDECL(sysORID) },				\
 	{ MIBDECL(sysORDescr) },			\
 	{ MIBDECL(sysORUpTime) },			\
+	{ MIBDECL(transmission) },			\
