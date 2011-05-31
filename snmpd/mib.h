@@ -724,3 +724,4 @@
 	{ MIBDECL(sysORDescr) },			\
 	{ MIBDECL(sysORUpTime) },			\
 	{ MIBDECL(transmission) },			\
+	{ MIBDECL(snmp) },				\
