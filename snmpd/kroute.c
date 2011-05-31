@@ -724,3 +724,4 @@ prefixlen_classful(in_addr_t ina)
 u_int8_t
 mask2prefixlen(in_addr_t ina)
 {
+	if (ina == 0)
