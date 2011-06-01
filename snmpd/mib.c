@@ -725,3 +725,4 @@ mib_hrdevice(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 		break;
 	case 2: /* hrDeviceType */
 		smi_oidlen(sop);
+		ber = ber_add_oid(ber, sop);
