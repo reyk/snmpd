@@ -727,3 +727,4 @@ ber_scanf_elements(struct ber_element *ber, char *fmt, ...)
 			continue;
 		ber = ber->be_next;
 	}
+	va_end(ap);
