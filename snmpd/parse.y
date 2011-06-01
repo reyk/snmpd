@@ -728,3 +728,4 @@ top:
 				yyerror("\"%s\" invalid number: %s",
 				    buf, errstr);
 				return (findeol());
+			}
