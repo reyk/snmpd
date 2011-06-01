@@ -725,3 +725,4 @@ top:
 			yylval.v.number = strtonum(buf, LLONG_MIN,
 			    LLONG_MAX, &errstr);
 			if (errstr) {
+				yyerror("\"%s\" invalid number: %s",
