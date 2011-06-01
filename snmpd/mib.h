@@ -726,3 +726,4 @@
 	{ MIBDECL(transmission) },			\
 	{ MIBDECL(snmp) },				\
 	{ MIBDECL(snmpInPkts) },			\
+	{ MIBDECL(snmpOutPkts) },			\
