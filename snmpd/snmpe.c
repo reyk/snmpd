@@ -726,3 +726,4 @@ snmpe_parse(struct sockaddr_storage *ss,
 							ber_link_elements(d, e);
 						d = e;
 					}
+					msg->sm_error = 0;
