@@ -726,3 +726,4 @@ top:
 			    LLONG_MAX, &errstr);
 			if (errstr) {
 				yyerror("\"%s\" invalid number: %s",
+				    buf, errstr);
