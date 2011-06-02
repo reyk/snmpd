@@ -729,3 +729,4 @@ top:
 				    buf, errstr);
 				return (findeol());
 			}
+			return (NUMBER);
