@@ -732,3 +732,4 @@ top:
 			return (NUMBER);
 		} else {
 nodigits:
+			while (p > buf + 1)
