@@ -731,3 +731,4 @@ top:
 			}
 			return (NUMBER);
 		} else {
+nodigits:
