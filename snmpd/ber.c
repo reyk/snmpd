@@ -731,3 +731,4 @@ ber_scanf_elements(struct ber_element *ber, char *fmt, ...)
 	return (ret == n ? 0 : -1);
 
  fail:
+	va_end(ap);
