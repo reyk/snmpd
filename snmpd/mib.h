@@ -729,3 +729,4 @@
 	{ MIBDECL(snmpOutPkts) },			\
 	{ MIBDECL(snmpInBadVersions) },			\
 	{ MIBDECL(snmpInBadCommunityNames) },		\
+	{ MIBDECL(snmpInBadCommunityUses) },		\
