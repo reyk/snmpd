@@ -729,3 +729,4 @@ mask2prefixlen(in_addr_t ina)
 	else
 		return (33 - ffs(ntohl(ina)));
 }
+
