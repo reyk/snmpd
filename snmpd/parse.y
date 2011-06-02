@@ -730,3 +730,4 @@ top:
 				return (findeol());
 			}
 			return (NUMBER);
+		} else {
