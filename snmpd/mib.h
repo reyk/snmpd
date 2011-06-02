@@ -732,3 +732,4 @@
 	{ MIBDECL(snmpInBadCommunityUses) },		\
 	{ MIBDECL(snmpInASNParseErrs) },		\
 	{ MIBDECL(snmpInTooBigs) },			\
+	{ MIBDECL(snmpInNoSuchNames) },			\
