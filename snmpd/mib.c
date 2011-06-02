@@ -729,3 +729,4 @@ mib_hrdevice(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 		break;
 	case 3: /* hrDeviceDescr */
 		ber = ber_add_string(ber, descr);
+		break;
