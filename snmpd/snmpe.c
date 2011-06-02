@@ -731,3 +731,4 @@ snmpe_parse(struct sockaddr_storage *ss,
 				default:
 					goto varfail;
 				}
+				if (c == NULL)
