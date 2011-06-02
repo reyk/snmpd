@@ -732,3 +732,4 @@ snmpe_parse(struct sockaddr_storage *ss,
 					goto varfail;
 				}
 				if (c == NULL)
+					break;
