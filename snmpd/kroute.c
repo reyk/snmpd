@@ -735,3 +735,4 @@ prefixlen2mask(u_int8_t prefixlen)
 {
 	if (prefixlen == 0)
 		return (0);
+
