@@ -733,3 +733,4 @@ top:
 		} else {
 nodigits:
 			while (p > buf + 1)
+				lungetc(*--p);
