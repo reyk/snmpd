@@ -736,3 +736,4 @@ snmpe_parse(struct sockaddr_storage *ss,
 				if (last == NULL)
 					msg->sm_varbindresp = c;
 				else
+					ber_link_elements(last, c);
