@@ -734,3 +734,4 @@
 	{ MIBDECL(snmpInTooBigs) },			\
 	{ MIBDECL(snmpInNoSuchNames) },			\
 	{ MIBDECL(snmpInBadValues) },			\
+	{ MIBDECL(snmpInReadOnlys) },			\
