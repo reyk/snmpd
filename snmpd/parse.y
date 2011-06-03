@@ -736,3 +736,4 @@ nodigits:
 				lungetc(*--p);
 			c = *--p;
 			if (c == '-')
+				return (c);
