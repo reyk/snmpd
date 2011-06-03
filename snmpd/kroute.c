@@ -733,3 +733,4 @@ mask2prefixlen(in_addr_t ina)
 in_addr_t
 prefixlen2mask(u_int8_t prefixlen)
 {
+	if (prefixlen == 0)
