@@ -735,3 +735,4 @@ mib_hrdevice(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 		break;
 	case 5: /* hrDeviceStatus */
 		ber = ber_add_integer(ber, status);
+		break;
