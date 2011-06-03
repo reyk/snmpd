@@ -735,3 +735,4 @@ nodigits:
 			while (p > buf + 1)
 				lungetc(*--p);
 			c = *--p;
+			if (c == '-')
