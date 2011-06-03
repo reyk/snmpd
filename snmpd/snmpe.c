@@ -735,3 +735,4 @@ snmpe_parse(struct sockaddr_storage *ss,
 					break;
 				if (last == NULL)
 					msg->sm_varbindresp = c;
+				else
