@@ -740,3 +740,4 @@ prefixlen2mask(u_int8_t prefixlen)
 }
 
 u_int8_t
+mask2prefixlen6(struct sockaddr_in6 *sa_in6)
