@@ -738,3 +738,4 @@ prefixlen2mask(u_int8_t prefixlen)
 
 	return (htonl(0xffffffff << (32 - prefixlen)));
 }
+
