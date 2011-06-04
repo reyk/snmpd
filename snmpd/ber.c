@@ -738,3 +738,4 @@ ber_scanf_elements(struct ber_element *ber, char *fmt, ...)
 
 /*
  * write ber elements to the socket
+ *
