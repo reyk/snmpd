@@ -737,3 +737,4 @@ mib_hrdevice(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 		ber = ber_add_integer(ber, status);
 		break;
 	case 6: /* hrDeviceErrors */
+		ber = ber_add_integer(ber, fail);
