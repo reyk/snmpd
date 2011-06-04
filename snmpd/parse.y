@@ -737,3 +737,4 @@ nodigits:
 			c = *--p;
 			if (c == '-')
 				return (c);
+		}
