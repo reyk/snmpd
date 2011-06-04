@@ -737,3 +737,4 @@
 	{ MIBDECL(snmpInReadOnlys) },			\
 	{ MIBDECL(snmpInGenErrs) },			\
 	{ MIBDECL(snmpInTotalReqVars) },		\
+	{ MIBDECL(snmpInTotalSetVars) },		\
