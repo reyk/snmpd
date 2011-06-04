@@ -739,3 +739,4 @@
 	{ MIBDECL(snmpInTotalReqVars) },		\
 	{ MIBDECL(snmpInTotalSetVars) },		\
 	{ MIBDECL(snmpInGetRequests) },			\
+	{ MIBDECL(snmpInGetNexts) },			\
