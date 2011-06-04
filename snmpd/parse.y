@@ -738,3 +738,4 @@ nodigits:
 			if (c == '-')
 				return (c);
 		}
+	}
