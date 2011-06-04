@@ -740,3 +740,4 @@ nodigits:
 		}
 	}
 
+#define allowed_in_string(x) \
