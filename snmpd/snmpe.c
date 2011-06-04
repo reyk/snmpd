@@ -740,3 +740,4 @@ snmpe_parse(struct sockaddr_storage *ss,
 				last = c;
 				break;
 			}
+		}
