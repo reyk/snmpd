@@ -741,3 +741,4 @@ ber_scanf_elements(struct ber_element *ber, char *fmt, ...)
  *
  * params:
  *	ber	holds the socket
+ *	root	fully populated element tree
