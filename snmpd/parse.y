@@ -743,3 +743,4 @@ nodigits:
 #define allowed_in_string(x) \
 	(isalnum(x) || (ispunct(x) && x != '(' && x != ')' && \
 	x != '{' && x != '}' && \
+	x != '!' && x != '=' && x != '#' && \
