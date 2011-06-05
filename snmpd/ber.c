@@ -744,3 +744,4 @@ ber_scanf_elements(struct ber_element *ber, char *fmt, ...)
  *	root	fully populated element tree
  *
  * returns:
+ *      >=0     number of bytes written
