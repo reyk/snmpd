@@ -742,3 +742,4 @@
 	{ MIBDECL(snmpInGetNexts) },			\
 	{ MIBDECL(snmpInSetRequests) },			\
 	{ MIBDECL(snmpInGetResponses) },		\
+	{ MIBDECL(snmpInTraps) },			\
