@@ -743,3 +743,4 @@ snmpe_parse(struct sockaddr_storage *ss,
 		}
 		if (state < 2)  {
 			log_debug("snmpe_parse: state %d", state);
+			goto varfail;
