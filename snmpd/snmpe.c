@@ -741,3 +741,4 @@ snmpe_parse(struct sockaddr_storage *ss,
 				break;
 			}
 		}
+		if (state < 2)  {
