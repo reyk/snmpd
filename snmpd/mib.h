@@ -743,3 +743,4 @@
 	{ MIBDECL(snmpInSetRequests) },			\
 	{ MIBDECL(snmpInGetResponses) },		\
 	{ MIBDECL(snmpInTraps) },			\
+	{ MIBDECL(snmpOutTooBigs) },			\
