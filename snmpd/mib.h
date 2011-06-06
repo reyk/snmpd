@@ -745,3 +745,4 @@
 	{ MIBDECL(snmpInTraps) },			\
 	{ MIBDECL(snmpOutTooBigs) },			\
 	{ MIBDECL(snmpOutNoSuchNames) },		\
+	{ MIBDECL(snmpOutBadValues) },			\
