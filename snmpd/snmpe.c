@@ -745,3 +745,4 @@ snmpe_parse(struct sockaddr_storage *ss,
 			log_debug("snmpe_parse: state %d", state);
 			goto varfail;
 		}
+	}
