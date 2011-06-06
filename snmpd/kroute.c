@@ -746,3 +746,4 @@ mask2prefixlen6(struct sockaddr_in6 *sa_in6)
 
 	/*
 	 * sin6_len is the size of the sockaddr so substract the offset of
+	 * the possibly truncated sin6_addr struct.
