@@ -746,3 +746,4 @@
 	{ MIBDECL(snmpOutTooBigs) },			\
 	{ MIBDECL(snmpOutNoSuchNames) },		\
 	{ MIBDECL(snmpOutBadValues) },			\
+	{ MIBDECL(snmpOutGenErrs) },			\
