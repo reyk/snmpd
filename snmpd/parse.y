@@ -747,3 +747,4 @@ nodigits:
 	x != ','))
 
 	if (isalnum(c) || c == ':' || c == '_') {
+		do {
