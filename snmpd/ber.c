@@ -747,3 +747,4 @@ ber_scanf_elements(struct ber_element *ber, char *fmt, ...)
  *      >=0     number of bytes written
  *	-1	on failure and sets errno
  */
+int
