@@ -748,3 +748,4 @@ nodigits:
 
 	if (isalnum(c) || c == ':' || c == '_') {
 		do {
+			*p++ = c;
