@@ -745,3 +745,4 @@ mask2prefixlen6(struct sockaddr_in6 *sa_in6)
 	u_int8_t	 l = 0, *ap, *ep;
 
 	/*
+	 * sin6_len is the size of the sockaddr so substract the offset of
