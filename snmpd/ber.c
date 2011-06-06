@@ -748,3 +748,4 @@ ber_scanf_elements(struct ber_element *ber, char *fmt, ...)
  *	-1	on failure and sets errno
  */
 int
+ber_write_elements(struct ber *ber, struct ber_element *root)
