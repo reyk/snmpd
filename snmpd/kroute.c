@@ -749,3 +749,4 @@ mask2prefixlen6(struct sockaddr_in6 *sa_in6)
 	 * the possibly truncated sin6_addr struct.
 	 */
 	ap = (u_int8_t *)&sa_in6->sin6_addr;
+	ep = (u_int8_t *)sa_in6 + sa_in6->sin6_len;
