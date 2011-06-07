@@ -752,3 +752,4 @@
 	{ MIBDECL(snmpOutSetRequests) },		\
 	{ MIBDECL(snmpOutGetResponses) },		\
 	{ MIBDECL(snmpOutTraps) },			\
+	{ MIBDECL(snmpEnableAuthenTraps) },		\
