@@ -749,3 +749,4 @@ ber_scanf_elements(struct ber_element *ber, char *fmt, ...)
  */
 int
 ber_write_elements(struct ber *ber, struct ber_element *root)
+{
