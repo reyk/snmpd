@@ -749,3 +749,4 @@ mib_hrdevice(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 
 int
 mib_hrprocessor(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
+{
