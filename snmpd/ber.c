@@ -751,3 +751,4 @@ int
 ber_write_elements(struct ber *ber, struct ber_element *root)
 {
 	size_t len;
+
