@@ -750,3 +750,4 @@ snmpe_parse(struct sockaddr_storage *ss,
 	return (0);
  varfail:
 	log_debug("snmpe_parse: %s: %s, error index %d", host, errstr, i);
+	if (msg->sm_error == 0)
