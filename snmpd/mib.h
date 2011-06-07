@@ -749,3 +749,4 @@
 	{ MIBDECL(snmpOutGenErrs) },			\
 	{ MIBDECL(snmpOutGetRequests) },		\
 	{ MIBDECL(snmpOutGetNexts) },			\
+	{ MIBDECL(snmpOutSetRequests) },		\
