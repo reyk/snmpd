@@ -752,3 +752,4 @@ mask2prefixlen6(struct sockaddr_in6 *sa_in6)
 	ep = (u_int8_t *)sa_in6 + sa_in6->sin6_len;
 	for (; ap < ep; ap++) {
 		/* this "beauty" is adopted from sbin/route/show.c ... */
+		switch (*ap) {
