@@ -755,3 +755,4 @@ nodigits:
 			}
 		} while ((c = lgetc(0)) != EOF && (allowed_in_string(c)));
 		lungetc(c);
+		*p = '\0';
