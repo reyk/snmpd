@@ -756,3 +756,4 @@
 	{ MIBDECL(snmpSilentDrops) },			\
 	{ MIBDECL(snmpProxyDrops) },			\
 	{ MIBDECL(experimental) },			\
+	{ MIBDECL(private) },				\
