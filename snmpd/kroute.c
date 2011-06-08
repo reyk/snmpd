@@ -755,3 +755,4 @@ mask2prefixlen6(struct sockaddr_in6 *sa_in6)
 		switch (*ap) {
 		case 0xff:
 			l += 8;
+			break;
