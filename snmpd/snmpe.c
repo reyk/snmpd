@@ -754,3 +754,4 @@ snmpe_parse(struct sockaddr_storage *ss,
 		msg->sm_error = SNMP_ERROR_GENERR;
 	msg->sm_errorindex = i;
 	return (0);
+ parsefail:
