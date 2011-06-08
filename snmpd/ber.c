@@ -756,3 +756,4 @@ ber_write_elements(struct ber *ber, struct ber_element *root)
 	len = ber_calc_len(root);
 	DPRINTF("write ber element of %zd bytes length\n", len);
 
+	if (ber->br_wbuf != NULL && ber->br_wbuf + len > ber->br_wend) {
