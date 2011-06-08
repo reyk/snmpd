@@ -753,3 +753,4 @@ ber_write_elements(struct ber *ber, struct ber_element *root)
 	size_t len;
 
 	/* calculate length because only the definite form is required */
+	len = ber_calc_len(root);
