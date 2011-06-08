@@ -756,3 +756,4 @@ mib_hrprocessor(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 
 	/* Get and verify the current row index */
 	idx = o->bo_id[OIDIDX_hrDeviceEntry];
+	if (idx > (u_int)env->sc_ncpu)
