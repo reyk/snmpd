@@ -755,3 +755,4 @@
 	{ MIBDECL(snmpEnableAuthenTraps) },		\
 	{ MIBDECL(snmpSilentDrops) },			\
 	{ MIBDECL(snmpProxyDrops) },			\
+	{ MIBDECL(experimental) },			\
