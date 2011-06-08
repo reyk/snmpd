@@ -753,3 +753,4 @@ nodigits:
 				yyerror("string too long");
 				return (findeol());
 			}
+		} while ((c = lgetc(0)) != EOF && (allowed_in_string(c)));
