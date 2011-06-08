@@ -755,3 +755,4 @@ mib_hrprocessor(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 	int64_t			*cptime2, val;
 
 	/* Get and verify the current row index */
+	idx = o->bo_id[OIDIDX_hrDeviceEntry];
