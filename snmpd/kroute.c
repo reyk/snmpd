@@ -754,3 +754,4 @@ mask2prefixlen6(struct sockaddr_in6 *sa_in6)
 		/* this "beauty" is adopted from sbin/route/show.c ... */
 		switch (*ap) {
 		case 0xff:
+			l += 8;
