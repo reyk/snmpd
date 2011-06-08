@@ -755,3 +755,4 @@ ber_write_elements(struct ber *ber, struct ber_element *root)
 	/* calculate length because only the definite form is required */
 	len = ber_calc_len(root);
 	DPRINTF("write ber element of %zd bytes length\n", len);
+
