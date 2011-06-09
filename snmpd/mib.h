@@ -759,3 +759,4 @@
 	{ MIBDECL(private) },				\
 	{ MIBDECL(enterprises) },			\
 	{ MIBDECL(security) },				\
+	{ MIBDECL(snmpV2) },				\
