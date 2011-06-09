@@ -760,3 +760,4 @@ nodigits:
 			if ((yylval.v.string = strdup(buf)) == NULL)
 				err(1, "yylex: strdup");
 		return (token);
+	}
