@@ -760,3 +760,4 @@ mask2prefixlen6(struct sockaddr_in6 *sa_in6)
 			l += 7;
 			return (l);
 		case 0xfc:
+			l += 6;
