@@ -757,3 +757,4 @@
 	{ MIBDECL(snmpProxyDrops) },			\
 	{ MIBDECL(experimental) },			\
 	{ MIBDECL(private) },				\
+	{ MIBDECL(enterprises) },			\
