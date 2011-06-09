@@ -760,3 +760,4 @@
 	{ MIBDECL(enterprises) },			\
 	{ MIBDECL(security) },				\
 	{ MIBDECL(snmpV2) },				\
+	{ MIBDECL(snmpDomains) },			\
