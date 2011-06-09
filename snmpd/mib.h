@@ -758,3 +758,4 @@
 	{ MIBDECL(experimental) },			\
 	{ MIBDECL(private) },				\
 	{ MIBDECL(enterprises) },			\
+	{ MIBDECL(security) },				\
