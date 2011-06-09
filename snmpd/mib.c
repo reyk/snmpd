@@ -758,3 +758,4 @@ mib_hrprocessor(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 	idx = o->bo_id[OIDIDX_hrDeviceEntry];
 	if (idx > (u_int)env->sc_ncpu)
 		return (1);
+	else if (idx < 1)
