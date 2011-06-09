@@ -758,3 +758,4 @@ ber_write_elements(struct ber *ber, struct ber_element *root)
 
 	if (ber->br_wbuf != NULL && ber->br_wbuf + len > ber->br_wend) {
 		free(ber->br_wbuf);
+		ber->br_wbuf = NULL;
