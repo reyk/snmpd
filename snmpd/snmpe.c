@@ -757,3 +757,4 @@ snmpe_parse(struct sockaddr_storage *ss,
  parsefail:
 	stats->snmp_inasnparseerrs++;
  fail:
+	print_host(ss, host, sizeof(host));
