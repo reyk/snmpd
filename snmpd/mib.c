@@ -759,3 +759,4 @@ mib_hrprocessor(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 	if (idx > (u_int)env->sc_ncpu)
 		return (1);
 	else if (idx < 1)
+		idx = 1;
