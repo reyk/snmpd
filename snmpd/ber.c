@@ -760,3 +760,4 @@ ber_write_elements(struct ber *ber, struct ber_element *root)
 		free(ber->br_wbuf);
 		ber->br_wbuf = NULL;
 	}
+	if (ber->br_wbuf == NULL) {
