@@ -764,3 +764,4 @@ nodigits:
 	if (c == '\n') {
 		yylval.lineno = file->lineno;
 		file->lineno++;
+	}
