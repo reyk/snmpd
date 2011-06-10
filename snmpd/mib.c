@@ -762,3 +762,4 @@ mib_hrprocessor(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 		idx = 1;
 
 	/* Tables need to prepend the OID on their own */
+	o->bo_id[OIDIDX_hrDeviceEntry] = idx;
