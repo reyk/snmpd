@@ -762,3 +762,4 @@
 	{ MIBDECL(snmpV2) },				\
 	{ MIBDECL(snmpDomains) },			\
 	{ MIBDECL(snmpProxies) },			\
+	{ MIBDECL(snmpModules) },			\
