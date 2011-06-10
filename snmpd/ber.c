@@ -762,3 +762,4 @@ ber_write_elements(struct ber *ber, struct ber_element *root)
 	}
 	if (ber->br_wbuf == NULL) {
 		if ((ber->br_wbuf = malloc(len)) == NULL)
+			return -1;
