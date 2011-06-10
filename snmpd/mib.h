@@ -764,3 +764,4 @@
 	{ MIBDECL(snmpProxies) },			\
 	{ MIBDECL(snmpModules) },			\
 	{ MIBDECL(snmpMIB) },				\
+	{ MIBDECL(snmpMIBObjects) },			\
