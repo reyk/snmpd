@@ -761,3 +761,4 @@ snmpe_parse(struct sockaddr_storage *ss,
 	log_debug("snmpe_parse: %s: %s", host, errstr);
 	return (-1);
 }
+
