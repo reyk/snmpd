@@ -761,3 +761,4 @@ mib_hrprocessor(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 	else if (idx < 1)
 		idx = 1;
 
+	/* Tables need to prepend the OID on their own */
