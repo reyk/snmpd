@@ -761,3 +761,4 @@ nodigits:
 				err(1, "yylex: strdup");
 		return (token);
 	}
+	if (c == '\n') {
