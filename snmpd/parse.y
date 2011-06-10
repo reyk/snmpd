@@ -762,3 +762,4 @@ nodigits:
 		return (token);
 	}
 	if (c == '\n') {
+		yylval.lineno = file->lineno;
