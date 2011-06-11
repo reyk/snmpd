@@ -767,3 +767,4 @@
 	{ MIBDECL(snmpMIBObjects) },			\
 	{ MIBDECL(snmpTrap) },				\
 	{ MIBDECL(snmpTrapOID) },			\
+	{ MIBDECL(snmpTrapEnterprise) },		\
