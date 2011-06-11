@@ -765,3 +765,4 @@
 	{ MIBDECL(snmpModules) },			\
 	{ MIBDECL(snmpMIB) },				\
 	{ MIBDECL(snmpMIBObjects) },			\
+	{ MIBDECL(snmpTrap) },				\
