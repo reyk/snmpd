@@ -767,3 +767,4 @@ nodigits:
 	}
 	if (c == EOF)
 		return (0);
+	return (c);
