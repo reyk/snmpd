@@ -765,3 +765,4 @@ snmpe_parse(struct sockaddr_storage *ss,
 void
 snmpe_recvmsg(int fd, short sig, void *arg)
 {
+	struct snmp_stats	*stats = &env->sc_stats;
