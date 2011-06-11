@@ -767,3 +767,4 @@ ber_write_elements(struct ber *ber, struct ber_element *root)
 	}
 
 	/* reset write pointer */
+	ber->br_wptr = ber->br_wbuf;
