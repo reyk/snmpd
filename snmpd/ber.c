@@ -766,3 +766,4 @@ ber_write_elements(struct ber *ber, struct ber_element *root)
 		ber->br_wend = ber->br_wbuf + len;
 	}
 
+	/* reset write pointer */
