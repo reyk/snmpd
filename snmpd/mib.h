@@ -768,3 +768,4 @@
 	{ MIBDECL(snmpTrap) },				\
 	{ MIBDECL(snmpTrapOID) },			\
 	{ MIBDECL(snmpTrapEnterprise) },		\
+	{ MIBDECL(snmpTraps) },				\
