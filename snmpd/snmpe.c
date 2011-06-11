@@ -766,3 +766,4 @@ void
 snmpe_recvmsg(int fd, short sig, void *arg)
 {
 	struct snmp_stats	*stats = &env->sc_stats;
+	struct sockaddr_storage	 ss;
