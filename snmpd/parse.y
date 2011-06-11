@@ -766,3 +766,4 @@ nodigits:
 		file->lineno++;
 	}
 	if (c == EOF)
+		return (0);
