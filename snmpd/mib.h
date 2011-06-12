@@ -770,3 +770,4 @@
 	{ MIBDECL(snmpTrapEnterprise) },		\
 	{ MIBDECL(snmpTraps) },				\
 	{ MIBDECL(coldStart) },				\
+	{ MIBDECL(warmStart) },				\
