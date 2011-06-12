@@ -771,3 +771,4 @@ mib_hrprocessor(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 		break;
 	case 2: /* hrProcessorLoad */
 		/*
+		 * The percentage of time that the system was not
