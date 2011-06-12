@@ -771,3 +771,4 @@
 	{ MIBDECL(snmpTraps) },				\
 	{ MIBDECL(coldStart) },				\
 	{ MIBDECL(warmStart) },				\
+	{ MIBDECL(linkDown) },				\
