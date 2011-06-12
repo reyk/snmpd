@@ -769,3 +769,4 @@
 	{ MIBDECL(snmpTrapOID) },			\
 	{ MIBDECL(snmpTrapEnterprise) },		\
 	{ MIBDECL(snmpTraps) },				\
+	{ MIBDECL(coldStart) },				\
