@@ -772,3 +772,4 @@ snmpe_recvmsg(int fd, short sig, void *arg)
 	ssize_t			 len;
 	struct ber		 ber;
 	struct ber_element	*req = NULL;
+	struct snmp_message	 msg;
