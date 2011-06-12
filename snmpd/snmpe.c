@@ -769,3 +769,4 @@ snmpe_recvmsg(int fd, short sig, void *arg)
 	struct sockaddr_storage	 ss;
 	u_int8_t		*ptr = NULL;
 	socklen_t		 slen;
+	ssize_t			 len;
