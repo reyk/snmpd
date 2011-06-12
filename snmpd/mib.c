@@ -772,3 +772,4 @@ mib_hrprocessor(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 	case 2: /* hrProcessorLoad */
 		/*
 		 * The percentage of time that the system was not
+		 * idle during the last minute.
