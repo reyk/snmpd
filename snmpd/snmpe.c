@@ -770,3 +770,4 @@ snmpe_recvmsg(int fd, short sig, void *arg)
 	u_int8_t		*ptr = NULL;
 	socklen_t		 slen;
 	ssize_t			 len;
+	struct ber		 ber;
