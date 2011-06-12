@@ -771,3 +771,4 @@ snmpe_recvmsg(int fd, short sig, void *arg)
 	socklen_t		 slen;
 	ssize_t			 len;
 	struct ber		 ber;
+	struct ber_element	*req = NULL;
