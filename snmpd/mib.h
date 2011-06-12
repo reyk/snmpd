@@ -772,3 +772,4 @@
 	{ MIBDECL(coldStart) },				\
 	{ MIBDECL(warmStart) },				\
 	{ MIBDECL(linkDown) },				\
+	{ MIBDECL(linkUp) },				\
