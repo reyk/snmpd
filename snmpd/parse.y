@@ -770,3 +770,4 @@ nodigits:
 	return (c);
 }
 
+int
