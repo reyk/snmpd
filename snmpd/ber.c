@@ -770,3 +770,4 @@ ber_write_elements(struct ber *ber, struct ber_element *root)
 	ber->br_wptr = ber->br_wbuf;
 
 	if (ber_dump_element(ber, root) == -1)
+		return -1;
