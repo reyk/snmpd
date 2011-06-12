@@ -772,3 +772,4 @@ ber_write_elements(struct ber *ber, struct ber_element *root)
 	if (ber_dump_element(ber, root) == -1)
 		return -1;
 
+	/* XXX this should be moved to a different function */
