@@ -772,3 +772,4 @@ nodigits:
 
 int
 check_file_secrecy(int fd, const char *fname)
+{
