@@ -775,3 +775,4 @@ mib_hrprocessor(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 		 * idle during the last minute.
 		 */
 		if (env->sc_cpustates == NULL)
+			return (-1);
