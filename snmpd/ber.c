@@ -775,3 +775,4 @@ ber_write_elements(struct ber *ber, struct ber_element *root)
 	/* XXX this should be moved to a different function */
 	if (ber->fd != -1)
 		return write(ber->fd, ber->br_wbuf, len);
+
