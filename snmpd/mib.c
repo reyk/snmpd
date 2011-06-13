@@ -776,3 +776,4 @@ mib_hrprocessor(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 		 */
 		if (env->sc_cpustates == NULL)
 			return (-1);
+		cptime2 = env->sc_cpustates + (CPUSTATES * (idx - 1));
