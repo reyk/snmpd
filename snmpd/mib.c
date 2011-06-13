@@ -774,3 +774,4 @@ mib_hrprocessor(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 		 * The percentage of time that the system was not
 		 * idle during the last minute.
 		 */
+		if (env->sc_cpustates == NULL)
