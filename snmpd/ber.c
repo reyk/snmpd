@@ -776,3 +776,4 @@ ber_write_elements(struct ber *ber, struct ber_element *root)
 	if (ber->fd != -1)
 		return write(ber->fd, ber->br_wbuf, len);
 
+	return (len);
