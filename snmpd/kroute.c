@@ -775,3 +775,4 @@ mask2prefixlen6(struct sockaddr_in6 *sa_in6)
 			l += 2;
 			return (l);
 		case 0x80:
+			l += 1;
