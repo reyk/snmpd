@@ -776,3 +776,4 @@ check_file_secrecy(int fd, const char *fname)
 	struct stat	st;
 
 	if (fstat(fd, &st)) {
+		log_warn("cannot stat %s", fname);
