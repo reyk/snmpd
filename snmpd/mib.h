@@ -773,3 +773,4 @@
 	{ MIBDECL(warmStart) },				\
 	{ MIBDECL(linkDown) },				\
 	{ MIBDECL(linkUp) },				\
+	{ MIBDECL(authenticationFailure) },		\
