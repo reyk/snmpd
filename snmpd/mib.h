@@ -776,3 +776,4 @@
 	{ MIBDECL(authenticationFailure) },		\
 	{ MIBDECL(egpNeighborLoss) },			\
 							\
+	{ MIBDECL(framework) },				\
