@@ -775,3 +775,4 @@
 	{ MIBDECL(linkUp) },				\
 	{ MIBDECL(authenticationFailure) },		\
 	{ MIBDECL(egpNeighborLoss) },			\
+							\
