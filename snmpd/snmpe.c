@@ -775,3 +775,4 @@ snmpe_recvmsg(int fd, short sig, void *arg)
 	struct snmp_message	 msg;
 
 	bzero(&msg, sizeof(msg));
+	slen = sizeof(ss);
