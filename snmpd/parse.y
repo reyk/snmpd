@@ -778,3 +778,4 @@ check_file_secrecy(int fd, const char *fname)
 	if (fstat(fd, &st)) {
 		log_warn("cannot stat %s", fname);
 		return (-1);
+	}
