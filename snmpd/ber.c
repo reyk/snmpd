@@ -779,3 +779,4 @@ ber_write_elements(struct ber *ber, struct ber_element *root)
 	return (len);
 }
 
+/*
