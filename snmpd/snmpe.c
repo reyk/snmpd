@@ -778,3 +778,4 @@ snmpe_recvmsg(int fd, short sig, void *arg)
 	slen = sizeof(ss);
 	if ((len = recvfrom(fd, msg.sm_data, sizeof(msg.sm_data), 0,
 	    (struct sockaddr *)&ss, &slen)) < 1)
+		return;
