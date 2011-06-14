@@ -780,3 +780,4 @@ snmpe_recvmsg(int fd, short sig, void *arg)
 	    (struct sockaddr *)&ss, &slen)) < 1)
 		return;
 
+	stats->snmp_inpkts++;
