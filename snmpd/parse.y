@@ -779,3 +779,4 @@ check_file_secrecy(int fd, const char *fname)
 		log_warn("cannot stat %s", fname);
 		return (-1);
 	}
+	if (st.st_uid != 0 && st.st_uid != getuid()) {
