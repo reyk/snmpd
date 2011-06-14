@@ -780,3 +780,4 @@
 	{ MIBDECL(frameworkObjects) },			\
 	{ MIBDECL(snmpEngine) },			\
 	{ MIBDECL(snmpEngineID) },			\
+	{ MIBDECL(snmpEngineBoots) },			\
