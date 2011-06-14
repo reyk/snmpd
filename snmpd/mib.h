@@ -777,3 +777,4 @@
 	{ MIBDECL(egpNeighborLoss) },			\
 							\
 	{ MIBDECL(framework) },				\
+	{ MIBDECL(frameworkObjects) },			\
