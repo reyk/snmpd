@@ -779,3 +779,4 @@ mib_hrprocessor(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 		cptime2 = env->sc_cpustates + (CPUSTATES * (idx - 1));
 		val = 100 -
 		    (cptime2[CP_IDLE] > 1000 ? 1000 : (cptime2[CP_IDLE] / 10));
+		ber = ber_add_integer(ber, val);
