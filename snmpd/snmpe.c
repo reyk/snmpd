@@ -784,3 +784,4 @@ snmpe_recvmsg(int fd, short sig, void *arg)
 	msg.sm_datalen = (size_t)len;
 
 	bzero(&ber, sizeof(ber));
+	ber.fd = -1;
