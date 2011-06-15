@@ -784,3 +784,4 @@ ber_write_elements(struct ber *ber, struct ber_element *root)
  *
  * params:
  *	ber	holds the socket and lot more
+ *	root	if NULL, build up an element tree from what we receive on
