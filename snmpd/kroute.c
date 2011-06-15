@@ -782,3 +782,4 @@ mask2prefixlen6(struct sockaddr_in6 *sa_in6)
 		default:
 			fatalx("non contiguous inet6 netmask");
 		}
+	}
