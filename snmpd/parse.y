@@ -782,3 +782,4 @@ check_file_secrecy(int fd, const char *fname)
 	if (st.st_uid != 0 && st.st_uid != getuid()) {
 		log_warnx("%s: owner not root or current user", fname);
 		return (-1);
+	}
