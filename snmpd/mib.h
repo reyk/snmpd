@@ -782,3 +782,4 @@
 	{ MIBDECL(snmpEngineID) },			\
 	{ MIBDECL(snmpEngineBoots) },			\
 	{ MIBDECL(snmpEngineTime) },			\
+	{ MIBDECL(snmpEngineMaxMsgSize) },		\
