@@ -781,3 +781,4 @@ snmpe_recvmsg(int fd, short sig, void *arg)
 		return;
 
 	stats->snmp_inpkts++;
+	msg.sm_datalen = (size_t)len;
