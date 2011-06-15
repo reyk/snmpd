@@ -784,3 +784,4 @@
 	{ MIBDECL(snmpEngineTime) },			\
 	{ MIBDECL(snmpEngineMaxMsgSize) },		\
 	{ MIBDECL(usm) },				\
+	{ MIBDECL(usmObjects) },			\
