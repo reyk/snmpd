@@ -782,3 +782,4 @@ ber_write_elements(struct ber *ber, struct ber_element *root)
 /*
  * read ber elements from the socket
  *
+ * params:
