@@ -781,3 +781,4 @@
 	{ MIBDECL(snmpEngine) },			\
 	{ MIBDECL(snmpEngineID) },			\
 	{ MIBDECL(snmpEngineBoots) },			\
+	{ MIBDECL(snmpEngineTime) },			\
