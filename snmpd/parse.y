@@ -783,3 +783,4 @@ check_file_secrecy(int fd, const char *fname)
 		log_warnx("%s: owner not root or current user", fname);
 		return (-1);
 	}
+	if (st.st_mode & (S_IRWXG | S_IRWXO)) {
