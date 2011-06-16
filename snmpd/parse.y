@@ -786,3 +786,4 @@ check_file_secrecy(int fd, const char *fname)
 	if (st.st_mode & (S_IRWXG | S_IRWXO)) {
 		log_warnx("%s: group/world readable/writeable", fname);
 		return (-1);
+	}
