@@ -787,3 +787,4 @@ ber_write_elements(struct ber *ber, struct ber_element *root)
  *	root	if NULL, build up an element tree from what we receive on
  *		the wire. If not null, use the specified encoding for the
  *		elements received.
+ *
