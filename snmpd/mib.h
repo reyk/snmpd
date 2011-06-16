@@ -787,3 +787,4 @@
 	{ MIBDECL(usmObjects) },			\
 	{ MIBDECL(usmStats) },				\
 	{ MIBDECL(usmStatsUnsupportedSecLevels) },	\
+	{ MIBDECL(usmStatsNotInTimeWindow) },		\
