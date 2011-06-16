@@ -786,3 +786,4 @@ snmpe_recvmsg(int fd, short sig, void *arg)
 	bzero(&ber, sizeof(ber));
 	ber.fd = -1;
 	ber_set_application(&ber, snmpe_application);
+	ber_set_readbuf(&ber, msg.sm_data, msg.sm_datalen);
