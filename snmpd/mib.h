@@ -786,3 +786,4 @@
 	{ MIBDECL(usm) },				\
 	{ MIBDECL(usmObjects) },			\
 	{ MIBDECL(usmStats) },				\
+	{ MIBDECL(usmStatsUnsupportedSecLevels) },	\
