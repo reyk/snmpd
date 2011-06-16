@@ -787,3 +787,4 @@ check_file_secrecy(int fd, const char *fname)
 		log_warnx("%s: group/world readable/writeable", fname);
 		return (-1);
 	}
+	return (0);
