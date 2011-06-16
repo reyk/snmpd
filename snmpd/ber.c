@@ -788,3 +788,4 @@ ber_write_elements(struct ber *ber, struct ber_element *root)
  *		the wire. If not null, use the specified encoding for the
  *		elements received.
  *
+ * returns:
