@@ -789,3 +789,4 @@ snmpe_recvmsg(int fd, short sig, void *arg)
 	ber_set_readbuf(&ber, msg.sm_data, msg.sm_datalen);
 
 	req = ber_read_elements(&ber, NULL);
+	if (req == NULL) {
