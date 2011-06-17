@@ -792,3 +792,4 @@
 	{ MIBDECL(usmStatsUnknownEngineId) },		\
 	{ MIBDECL(usmStatsWrongDigests) },		\
 	{ MIBDECL(usmStatsDecryptionErrors) },		\
+							\
