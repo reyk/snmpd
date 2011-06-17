@@ -789,3 +789,4 @@ mask2prefixlen6(struct sockaddr_in6 *sa_in6)
 
 struct in6_addr *
 prefixlen2mask6(u_int8_t prefixlen)
+{
