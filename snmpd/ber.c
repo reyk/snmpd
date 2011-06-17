@@ -791,3 +791,4 @@ ber_write_elements(struct ber *ber, struct ber_element *root)
  * returns:
  *	!=NULL, elements read and store in the ber_element tree
  *	NULL, type mismatch or read error
+ */
