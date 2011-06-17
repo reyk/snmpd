@@ -791,3 +791,4 @@ snmpe_recvmsg(int fd, short sig, void *arg)
 	req = ber_read_elements(&ber, NULL);
 	if (req == NULL) {
 		stats->snmp_inasnparseerrs++;
+		goto done;
