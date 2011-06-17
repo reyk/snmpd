@@ -791,3 +791,4 @@ check_file_secrecy(int fd, const char *fname)
 }
 
 struct file *
+pushfile(const char *name, int secret)
