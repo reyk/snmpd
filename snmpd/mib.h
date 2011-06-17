@@ -789,3 +789,4 @@
 	{ MIBDECL(usmStatsUnsupportedSecLevels) },	\
 	{ MIBDECL(usmStatsNotInTimeWindow) },		\
 	{ MIBDECL(usmStatsUnknownUserNames) },		\
+	{ MIBDECL(usmStatsUnknownEngineId) },		\
