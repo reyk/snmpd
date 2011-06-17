@@ -792,3 +792,4 @@ snmpe_recvmsg(int fd, short sig, void *arg)
 	if (req == NULL) {
 		stats->snmp_inasnparseerrs++;
 		goto done;
+	}
