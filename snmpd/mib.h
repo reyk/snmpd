@@ -790,3 +790,4 @@
 	{ MIBDECL(usmStatsNotInTimeWindow) },		\
 	{ MIBDECL(usmStatsUnknownUserNames) },		\
 	{ MIBDECL(usmStatsUnknownEngineId) },		\
+	{ MIBDECL(usmStatsWrongDigests) },		\
