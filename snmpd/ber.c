@@ -789,3 +789,4 @@ ber_write_elements(struct ber *ber, struct ber_element *root)
  *		elements received.
  *
  * returns:
+ *	!=NULL, elements read and store in the ber_element tree
