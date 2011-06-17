@@ -791,3 +791,4 @@ mib_hrprocessor(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 int
 mib_hrswrun(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 {
+	struct ber_element	*ber = *elm;
