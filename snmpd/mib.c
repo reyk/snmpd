@@ -795,3 +795,4 @@ mib_hrswrun(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 	struct kinfo_proc	*kinfo;
 	char			*s;
 
+	/* Get and verify the current row index */
