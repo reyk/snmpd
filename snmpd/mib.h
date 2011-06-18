@@ -793,3 +793,4 @@
 	{ MIBDECL(usmStatsWrongDigests) },		\
 	{ MIBDECL(usmStatsDecryptionErrors) },		\
 							\
+	{ MIBDECL(host) },				\
