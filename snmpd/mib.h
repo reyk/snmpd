@@ -795,3 +795,4 @@
 							\
 	{ MIBDECL(host) },				\
 	{ MIBDECL(hrSystem) },				\
+	{ MIBDECL(hrSystemUptime) },			\
