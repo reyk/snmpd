@@ -793,3 +793,4 @@ ber_write_elements(struct ber *ber, struct ber_element *root)
  *	NULL, type mismatch or read error
  */
 struct ber_element *
+ber_read_elements(struct ber *ber, struct ber_element *elm)
