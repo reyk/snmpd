@@ -794,3 +794,4 @@ snmpe_recvmsg(int fd, short sig, void *arg)
 		goto done;
 	}
 
+#ifdef DEBUG
