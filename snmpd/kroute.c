@@ -796,3 +796,4 @@ prefixlen2mask6(u_int8_t prefixlen)
 	bzero(&mask, sizeof(mask));
 	for (i = 0; i < prefixlen / 8; i++)
 		mask.s6_addr[i] = 0xff;
+	i = prefixlen % 8;
