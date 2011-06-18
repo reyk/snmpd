@@ -796,3 +796,4 @@ struct ber_element *
 ber_read_elements(struct ber *ber, struct ber_element *elm)
 {
 	struct ber_element *root = elm;
+
