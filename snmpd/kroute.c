@@ -794,3 +794,4 @@ prefixlen2mask6(u_int8_t prefixlen)
 	int			i;
 
 	bzero(&mask, sizeof(mask));
+	for (i = 0; i < prefixlen / 8; i++)
