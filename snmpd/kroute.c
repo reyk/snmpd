@@ -793,3 +793,4 @@ prefixlen2mask6(u_int8_t prefixlen)
 	static struct in6_addr	mask;
 	int			i;
 
+	bzero(&mask, sizeof(mask));
