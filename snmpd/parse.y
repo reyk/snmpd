@@ -794,3 +794,4 @@ struct file *
 pushfile(const char *name, int secret)
 {
 	struct file	*nfile;
+
