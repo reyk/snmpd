@@ -800,3 +800,4 @@ mib_hrswrun(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 		return (1);
 
 	if (kinfo == NULL)
+		return (1);
