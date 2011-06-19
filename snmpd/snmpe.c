@@ -797,3 +797,4 @@ snmpe_recvmsg(int fd, short sig, void *arg)
 #ifdef DEBUG
 	fprintf(stderr, "recv msg:\n");
 	snmpe_debug_elements(req);
+#endif
