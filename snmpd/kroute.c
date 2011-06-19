@@ -800,3 +800,4 @@ prefixlen2mask6(u_int8_t prefixlen)
 	if (i)
 		mask.s6_addr[prefixlen / 8] = 0xff00 >> i;
 
+	return (&mask);
