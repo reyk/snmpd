@@ -800,3 +800,4 @@
 	{ MIBDECL(hrSystemInitialLoadDevice) },		\
 	{ MIBDECL(hrSystemInitialLoadParameters) },	\
 	{ MIBDECL(hrSystemNumUsers) },			\
+	{ MIBDECL(hrSystemProcesses) },			\
