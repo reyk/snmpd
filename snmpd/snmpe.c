@@ -800,3 +800,4 @@ snmpe_recvmsg(int fd, short sig, void *arg)
 #endif
 
 	if (snmpe_parse(&ss, req, &msg) == -1) {
+		if (msg.sm_usmerr != 0 && MSG_REPORT(&msg))
