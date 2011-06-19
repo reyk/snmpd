@@ -799,3 +799,4 @@ pushfile(const char *name, int secret)
 		log_warn("malloc");
 		return (NULL);
 	}
+	if ((nfile->name = strdup(name)) == NULL) {
