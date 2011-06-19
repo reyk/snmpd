@@ -798,3 +798,4 @@ ber_read_elements(struct ber *ber, struct ber_element *elm)
 	struct ber_element *root = elm;
 
 	if (root == NULL) {
+		if ((root = ber_get_element(0)) == NULL)
