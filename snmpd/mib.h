@@ -797,3 +797,4 @@
 	{ MIBDECL(hrSystem) },				\
 	{ MIBDECL(hrSystemUptime) },			\
 	{ MIBDECL(hrSystemDate) },			\
+	{ MIBDECL(hrSystemInitialLoadDevice) },		\
