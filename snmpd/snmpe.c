@@ -799,3 +799,4 @@ snmpe_recvmsg(int fd, short sig, void *arg)
 	snmpe_debug_elements(req);
 #endif
 
+	if (snmpe_parse(&ss, req, &msg) == -1) {
