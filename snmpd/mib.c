@@ -799,3 +799,4 @@ mib_hrswrun(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 	if (kinfo_proc(o->bo_id[OIDIDX_hrSWRunEntry], &kinfo) == -1)
 		return (1);
 
+	if (kinfo == NULL)
