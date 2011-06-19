@@ -800,3 +800,4 @@ ber_read_elements(struct ber *ber, struct ber_element *elm)
 	if (root == NULL) {
 		if ((root = ber_get_element(0)) == NULL)
 			return NULL;
+	}
