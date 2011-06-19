@@ -799,3 +799,4 @@
 	{ MIBDECL(hrSystemDate) },			\
 	{ MIBDECL(hrSystemInitialLoadDevice) },		\
 	{ MIBDECL(hrSystemInitialLoadParameters) },	\
+	{ MIBDECL(hrSystemNumUsers) },			\
