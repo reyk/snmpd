@@ -803,3 +803,4 @@
 	{ MIBDECL(hrSystemProcesses) },			\
 	{ MIBDECL(hrSystemMaxProcesses) },		\
 	{ MIBDECL(hrStorage) },				\
+	{ MIBDECL(hrStorageTypes) },			\
