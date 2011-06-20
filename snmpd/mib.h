@@ -801,3 +801,4 @@
 	{ MIBDECL(hrSystemInitialLoadParameters) },	\
 	{ MIBDECL(hrSystemNumUsers) },			\
 	{ MIBDECL(hrSystemProcesses) },			\
+	{ MIBDECL(hrSystemMaxProcesses) },		\
