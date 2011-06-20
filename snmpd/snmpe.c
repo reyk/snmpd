@@ -803,3 +803,4 @@ snmpe_recvmsg(int fd, short sig, void *arg)
 		if (msg.sm_usmerr != 0 && MSG_REPORT(&msg))
 			usm_make_report(&msg);
 		else
+			goto done;
