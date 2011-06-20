@@ -802,3 +802,4 @@
 	{ MIBDECL(hrSystemNumUsers) },			\
 	{ MIBDECL(hrSystemProcesses) },			\
 	{ MIBDECL(hrSystemMaxProcesses) },		\
+	{ MIBDECL(hrStorage) },				\
