@@ -804,3 +804,4 @@ mib_hrswrun(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 
 	/* Tables need to prepend the OID on their own */
 	o->bo_id[OIDIDX_hrSWRunEntry] = kinfo->p_pid;
+	ber = ber_add_oid(ber, o);
