@@ -804,3 +804,4 @@ snmpe_recvmsg(int fd, short sig, void *arg)
 			usm_make_report(&msg);
 		else
 			goto done;
+	} else
