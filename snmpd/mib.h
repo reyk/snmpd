@@ -804,3 +804,4 @@
 	{ MIBDECL(hrSystemMaxProcesses) },		\
 	{ MIBDECL(hrStorage) },				\
 	{ MIBDECL(hrStorageTypes) },			\
+	{ MIBDECL(hrMemorySize) },			\
