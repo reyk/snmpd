@@ -802,3 +802,4 @@ mib_hrswrun(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 	if (kinfo == NULL)
 		return (1);
 
+	/* Tables need to prepend the OID on their own */
