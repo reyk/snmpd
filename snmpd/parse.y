@@ -802,3 +802,4 @@ pushfile(const char *name, int secret)
 	if ((nfile->name = strdup(name)) == NULL) {
 		log_warn("malloc");
 		free(nfile);
+		return (NULL);
