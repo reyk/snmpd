@@ -802,3 +802,4 @@ prefixlen2mask6(u_int8_t prefixlen)
 
 	return (&mask);
 }
+
