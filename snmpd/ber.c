@@ -803,3 +803,4 @@ ber_read_elements(struct ber *ber, struct ber_element *elm)
 	}
 
 	DPRINTF("read ber elements, root %p\n", root);
+
