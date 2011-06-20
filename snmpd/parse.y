@@ -804,3 +804,4 @@ pushfile(const char *name, int secret)
 		free(nfile);
 		return (NULL);
 	}
+	if ((nfile->stream = fopen(nfile->name, "r")) == NULL) {
