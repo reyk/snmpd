@@ -803,3 +803,4 @@ pushfile(const char *name, int secret)
 		log_warn("malloc");
 		free(nfile);
 		return (NULL);
+	}
