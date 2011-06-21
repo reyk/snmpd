@@ -806,3 +806,4 @@ pushfile(const char *name, int secret)
 	}
 	if ((nfile->stream = fopen(nfile->name, "r")) == NULL) {
 		log_warn("%s", nfile->name);
+		free(nfile->name);
