@@ -806,3 +806,4 @@ mib_hrswrun(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 	o->bo_id[OIDIDX_hrSWRunEntry] = kinfo->p_pid;
 	ber = ber_add_oid(ber, o);
 
+	switch (o->bo_id[OIDIDX_hrSWRun]) {
