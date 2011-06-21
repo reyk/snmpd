@@ -808,3 +808,4 @@
 	{ MIBDECL(hrStorageTable) },			\
 	{ MIBDECL(hrStorageEntry) },			\
 	{ MIBDECL(hrStorageIndex) },			\
+	{ MIBDECL(hrStorageType) },			\
