@@ -805,3 +805,4 @@
 	{ MIBDECL(hrStorage) },				\
 	{ MIBDECL(hrStorageTypes) },			\
 	{ MIBDECL(hrMemorySize) },			\
+	{ MIBDECL(hrStorageTable) },			\
