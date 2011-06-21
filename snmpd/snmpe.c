@@ -808,3 +808,4 @@ snmpe_recvmsg(int fd, short sig, void *arg)
 		msg.sm_context = SNMP_C_GETRESP;
 
 	if (msg.sm_varbindresp == NULL && msg.sm_pduend != NULL)
+		msg.sm_varbindresp = ber_unlink_elements(msg.sm_pduend);
