@@ -805,3 +805,4 @@ pushfile(const char *name, int secret)
 		return (NULL);
 	}
 	if ((nfile->stream = fopen(nfile->name, "r")) == NULL) {
+		log_warn("%s", nfile->name);
