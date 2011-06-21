@@ -807,3 +807,4 @@ snmpe_recvmsg(int fd, short sig, void *arg)
 	} else
 		msg.sm_context = SNMP_C_GETRESP;
 
+	if (msg.sm_varbindresp == NULL && msg.sm_pduend != NULL)
