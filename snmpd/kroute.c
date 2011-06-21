@@ -808,3 +808,4 @@ prefixlen2mask6(u_int8_t prefixlen)
 
 void
 get_rtaddrs(int addrs, struct sockaddr *sa, struct sockaddr **rti_info)
+{
