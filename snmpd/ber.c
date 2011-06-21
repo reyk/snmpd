@@ -806,3 +806,4 @@ ber_read_elements(struct ber *ber, struct ber_element *elm)
 
 	if (ber_read_element(ber, root) == -1) {
 		/* Cleanup if root was allocated by us */
+		if (elm == NULL)
