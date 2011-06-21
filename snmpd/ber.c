@@ -808,3 +808,4 @@ ber_read_elements(struct ber *ber, struct ber_element *elm)
 		/* Cleanup if root was allocated by us */
 		if (elm == NULL)
 			ber_free_elements(root);
+		return NULL;
