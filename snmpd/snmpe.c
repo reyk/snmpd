@@ -805,3 +805,4 @@ snmpe_recvmsg(int fd, short sig, void *arg)
 		else
 			goto done;
 	} else
+		msg.sm_context = SNMP_C_GETRESP;
