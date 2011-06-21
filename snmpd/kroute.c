@@ -805,3 +805,4 @@ prefixlen2mask6(u_int8_t prefixlen)
 
 #define	ROUNDUP(a)	\
     (((a) & (sizeof(long) - 1)) ? (1 + ((a) | (sizeof(long) - 1))) : (a))
+
