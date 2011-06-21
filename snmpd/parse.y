@@ -808,3 +808,4 @@ pushfile(const char *name, int secret)
 		log_warn("%s", nfile->name);
 		free(nfile->name);
 		free(nfile);
+		return (NULL);
