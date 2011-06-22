@@ -812,3 +812,4 @@ snmpe_recvmsg(int fd, short sig, void *arg)
 
 	switch (msg.sm_error) {
 	case SNMP_ERROR_TOOBIG:
+		stats->snmp_intoobigs++;
