@@ -810,3 +810,4 @@ pushfile(const char *name, int secret)
 		free(nfile);
 		return (NULL);
 	} else if (secret &&
+	    check_file_secrecy(fileno(nfile->stream), nfile->name)) {
