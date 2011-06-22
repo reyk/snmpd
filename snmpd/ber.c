@@ -809,3 +809,4 @@ ber_read_elements(struct ber *ber, struct ber_element *elm)
 		if (elm == NULL)
 			ber_free_elements(root);
 		return NULL;
+	}
