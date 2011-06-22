@@ -809,3 +809,4 @@ mib_hrswrun(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 	switch (o->bo_id[OIDIDX_hrSWRun]) {
 	case 1: /* hrSWRunIndex */
 		ber = ber_add_integer(ber, kinfo->p_pid);
+		break;
