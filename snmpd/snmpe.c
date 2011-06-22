@@ -811,3 +811,4 @@ snmpe_recvmsg(int fd, short sig, void *arg)
 		msg.sm_varbindresp = ber_unlink_elements(msg.sm_pduend);
 
 	switch (msg.sm_error) {
+	case SNMP_ERROR_TOOBIG:
