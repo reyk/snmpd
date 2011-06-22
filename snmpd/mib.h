@@ -809,3 +809,4 @@
 	{ MIBDECL(hrStorageEntry) },			\
 	{ MIBDECL(hrStorageIndex) },			\
 	{ MIBDECL(hrStorageType) },			\
+	{ MIBDECL(hrStorageDescr) },			\
