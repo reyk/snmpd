@@ -810,3 +810,4 @@ ber_read_elements(struct ber *ber, struct ber_element *elm)
 			ber_free_elements(root);
 		return NULL;
 	}
+
