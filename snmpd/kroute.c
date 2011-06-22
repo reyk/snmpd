@@ -810,3 +810,4 @@ void
 get_rtaddrs(int addrs, struct sockaddr *sa, struct sockaddr **rti_info)
 {
 	int	i;
+
