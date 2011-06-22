@@ -812,3 +812,4 @@
 	{ MIBDECL(hrStorageDescr) },			\
 	{ MIBDECL(hrStorageAllocationUnits) },		\
 	{ MIBDECL(hrStorageSize) },			\
+	{ MIBDECL(hrStorageUsed) },			\
