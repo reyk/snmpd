@@ -812,3 +812,4 @@ get_rtaddrs(int addrs, struct sockaddr *sa, struct sockaddr **rti_info)
 	int	i;
 
 	for (i = 0; i < RTAX_MAX; i++) {
+		if (addrs & (1 << i)) {
