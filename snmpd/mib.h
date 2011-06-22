@@ -810,3 +810,4 @@
 	{ MIBDECL(hrStorageIndex) },			\
 	{ MIBDECL(hrStorageType) },			\
 	{ MIBDECL(hrStorageDescr) },			\
+	{ MIBDECL(hrStorageAllocationUnits) },		\
