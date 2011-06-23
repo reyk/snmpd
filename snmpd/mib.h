@@ -816,3 +816,4 @@
 	{ MIBDECL(hrStorageAllocationFailures) },	\
 	{ MIBDECL(hrDevice) },				\
 	{ MIBDECL(hrDeviceTypes) },			\
+	{ MIBDECL(hrDeviceOther) },			\
