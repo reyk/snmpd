@@ -814,3 +814,4 @@ pushfile(const char *name, int secret)
 		fclose(nfile->stream);
 		free(nfile->name);
 		free(nfile);
+		return (NULL);
