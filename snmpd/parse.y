@@ -816,3 +816,4 @@ pushfile(const char *name, int secret)
 		free(nfile);
 		return (NULL);
 	}
+	nfile->lineno = 1;
