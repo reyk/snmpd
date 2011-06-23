@@ -816,3 +816,4 @@ snmpe_recvmsg(int fd, short sig, void *arg)
 		break;
 	case SNMP_ERROR_NOSUCHNAME:
 		stats->snmp_innosuchnames++;
+		break;
