@@ -815,3 +815,4 @@ pushfile(const char *name, int secret)
 		free(nfile->name);
 		free(nfile);
 		return (NULL);
+	}
