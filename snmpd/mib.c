@@ -814,3 +814,4 @@ mib_hrswrun(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 	case 4: /* hrSWRunPath */
 		ber = ber_add_string(ber, kinfo->p_comm);
 		break;
+	case 3: /* hrSWRunID */
