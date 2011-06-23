@@ -815,3 +815,4 @@ ber_read_elements(struct ber *ber, struct ber_element *elm)
 }
 
 off_t
+ber_getpos(struct ber_element *elm)
