@@ -816,3 +816,4 @@ get_rtaddrs(int addrs, struct sockaddr *sa, struct sockaddr **rti_info)
 			rti_info[i] = sa;
 			sa = (struct sockaddr *)((char *)(sa) +
 			    ROUNDUP(sa->sa_len));
+		} else
