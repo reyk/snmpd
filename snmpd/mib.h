@@ -813,3 +813,4 @@
 	{ MIBDECL(hrStorageAllocationUnits) },		\
 	{ MIBDECL(hrStorageSize) },			\
 	{ MIBDECL(hrStorageUsed) },			\
+	{ MIBDECL(hrStorageAllocationFailures) },	\
