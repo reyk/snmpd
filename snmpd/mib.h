@@ -820,3 +820,4 @@
 	{ MIBDECL(hrDeviceUnknown) },			\
 	{ MIBDECL(hrDeviceProcessor) },			\
 	{ MIBDECL(hrDeviceNetwork) },			\
+	{ MIBDECL(hrDevicePrinter) },			\
