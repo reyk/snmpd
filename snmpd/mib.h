@@ -818,3 +818,4 @@
 	{ MIBDECL(hrDeviceTypes) },			\
 	{ MIBDECL(hrDeviceOther) },			\
 	{ MIBDECL(hrDeviceUnknown) },			\
+	{ MIBDECL(hrDeviceProcessor) },			\
