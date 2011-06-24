@@ -820,3 +820,4 @@ pushfile(const char *name, int secret)
 	TAILQ_INSERT_TAIL(&files, nfile, entry);
 	return (nfile);
 }
+
