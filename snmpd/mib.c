@@ -820,3 +820,4 @@ mib_hrswrun(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 	case 5: /* hrSWRunParameters */
 		if (kinfo_args(kinfo, &s) == -1)
 			return (-1);
+
