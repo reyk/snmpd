@@ -817,3 +817,4 @@ pushfile(const char *name, int secret)
 		return (NULL);
 	}
 	nfile->lineno = 1;
+	TAILQ_INSERT_TAIL(&files, nfile, entry);
