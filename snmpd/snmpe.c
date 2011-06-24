@@ -820,3 +820,4 @@ snmpe_recvmsg(int fd, short sig, void *arg)
 	case SNMP_ERROR_BADVALUE:
 		stats->snmp_inbadvalues++;
 		break;
+	case SNMP_ERROR_READONLY:
