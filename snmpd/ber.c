@@ -820,3 +820,4 @@ ber_getpos(struct ber_element *elm)
 	return elm->be_offs;
 }
 
+void
