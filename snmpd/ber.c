@@ -822,3 +822,4 @@ ber_getpos(struct ber_element *elm)
 
 void
 ber_free_elements(struct ber_element *root)
+{
