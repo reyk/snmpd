@@ -824,3 +824,4 @@
 	{ MIBDECL(hrDeviceDiskStorage) },		\
 	{ MIBDECL(hrDeviceVideo) },			\
 	{ MIBDECL(hrDeviceAudio) },			\
+	{ MIBDECL(hrDeviceCoprocessor) },		\
