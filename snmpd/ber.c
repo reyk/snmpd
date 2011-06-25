@@ -824,3 +824,4 @@ void
 ber_free_elements(struct ber_element *root)
 {
 	if (root->be_sub && (root->be_encoding == BER_TYPE_SEQUENCE ||
+	    root->be_encoding == BER_TYPE_SET))
