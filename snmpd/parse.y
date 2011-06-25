@@ -821,3 +821,4 @@ pushfile(const char *name, int secret)
 	return (nfile);
 }
 
+int
