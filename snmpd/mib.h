@@ -823,3 +823,4 @@
 	{ MIBDECL(hrDevicePrinter) },			\
 	{ MIBDECL(hrDeviceDiskStorage) },		\
 	{ MIBDECL(hrDeviceVideo) },			\
+	{ MIBDECL(hrDeviceAudio) },			\
