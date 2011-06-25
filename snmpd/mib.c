@@ -821,3 +821,4 @@ mib_hrswrun(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 		if (kinfo_args(kinfo, &s) == -1)
 			return (-1);
 
+		ber = ber_add_string(ber, s);
