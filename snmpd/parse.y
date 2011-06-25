@@ -824,3 +824,4 @@ pushfile(const char *name, int secret)
 int
 popfile(void)
 {
+	struct file	*prev;
