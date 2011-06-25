@@ -821,3 +821,4 @@
 	{ MIBDECL(hrDeviceProcessor) },			\
 	{ MIBDECL(hrDeviceNetwork) },			\
 	{ MIBDECL(hrDevicePrinter) },			\
+	{ MIBDECL(hrDeviceDiskStorage) },		\
