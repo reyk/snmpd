@@ -827,3 +827,4 @@
 	{ MIBDECL(hrDeviceCoprocessor) },		\
 	{ MIBDECL(hrDeviceKeyboard) },			\
 	{ MIBDECL(hrDeviceModem) },			\
+	{ MIBDECL(hrDeviceParallelPort) },		\
