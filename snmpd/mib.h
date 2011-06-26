@@ -828,3 +828,4 @@
 	{ MIBDECL(hrDeviceKeyboard) },			\
 	{ MIBDECL(hrDeviceModem) },			\
 	{ MIBDECL(hrDeviceParallelPort) },		\
+	{ MIBDECL(hrDevicePointing) },			\
