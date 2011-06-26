@@ -825,3 +825,4 @@
 	{ MIBDECL(hrDeviceVideo) },			\
 	{ MIBDECL(hrDeviceAudio) },			\
 	{ MIBDECL(hrDeviceCoprocessor) },		\
+	{ MIBDECL(hrDeviceKeyboard) },			\
