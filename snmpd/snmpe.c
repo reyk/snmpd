@@ -827,3 +827,4 @@ snmpe_recvmsg(int fd, short sig, void *arg)
 	default:
 		stats->snmp_ingenerrs++;
 		break;
+	}
