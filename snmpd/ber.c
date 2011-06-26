@@ -828,3 +828,4 @@ ber_free_elements(struct ber_element *root)
 		ber_free_elements(root->be_sub);
 	if (root->be_next)
 		ber_free_elements(root->be_next);
+	if (root->be_free && (root->be_encoding == BER_TYPE_OCTETSTRING ||
