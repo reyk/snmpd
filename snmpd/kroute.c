@@ -825,3 +825,4 @@ get_rtaddrs(int addrs, struct sockaddr *sa, struct sockaddr **rti_info)
 void
 if_change(u_short if_index, int flags, struct if_data *ifd,
     struct sockaddr_dl *sdl)
+{
