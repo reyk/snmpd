@@ -828,3 +828,4 @@ popfile(void)
 
 	if ((prev = TAILQ_PREV(file, files, entry)) != NULL)
 		prev->errors += file->errors;
+
