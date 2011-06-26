@@ -826,3 +826,4 @@ void
 if_change(u_short if_index, int flags, struct if_data *ifd,
     struct sockaddr_dl *sdl)
 {
+	if (kif_update(if_index, flags, ifd, sdl) == NULL)
