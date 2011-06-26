@@ -825,3 +825,4 @@ int
 popfile(void)
 {
 	struct file	*prev;
+
