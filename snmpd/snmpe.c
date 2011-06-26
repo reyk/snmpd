@@ -825,3 +825,4 @@ snmpe_recvmsg(int fd, short sig, void *arg)
 		break;
 	case SNMP_ERROR_GENERR:
 	default:
+		stats->snmp_ingenerrs++;
