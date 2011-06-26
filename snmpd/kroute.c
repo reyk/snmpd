@@ -828,3 +828,4 @@ if_change(u_short if_index, int flags, struct if_data *ifd,
 {
 	if (kif_update(if_index, flags, ifd, sdl) == NULL)
 		log_warn("if_change:  kif_update(%u)", if_index);
+}
