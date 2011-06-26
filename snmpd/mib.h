@@ -826,3 +826,4 @@
 	{ MIBDECL(hrDeviceAudio) },			\
 	{ MIBDECL(hrDeviceCoprocessor) },		\
 	{ MIBDECL(hrDeviceKeyboard) },			\
+	{ MIBDECL(hrDeviceModem) },			\
