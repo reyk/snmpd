@@ -830,3 +830,4 @@ snmpe_recvmsg(int fd, short sig, void *arg)
 	}
 
 	/* Create new SNMP packet */
+	if (snmpe_encode(&msg) < 0)
