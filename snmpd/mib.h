@@ -832,3 +832,4 @@
 	{ MIBDECL(hrDeviceSerialPort) },		\
 	{ MIBDECL(hrDeviceTape) },			\
 	{ MIBDECL(hrDeviceClock) },			\
+	{ MIBDECL(hrDeviceVolatileMemory) },		\
