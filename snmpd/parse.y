@@ -830,3 +830,4 @@ popfile(void)
 		prev->errors += file->errors;
 
 	TAILQ_REMOVE(&files, file, entry);
+	fclose(file->stream);
