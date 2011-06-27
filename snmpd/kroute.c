@@ -831,3 +831,4 @@ if_change(u_short if_index, int flags, struct if_data *ifd,
 }
 
 void
+if_newaddr(u_short if_index, struct sockaddr *ifa, struct sockaddr *mask,
