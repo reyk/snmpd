@@ -829,3 +829,4 @@
 	{ MIBDECL(hrDeviceModem) },			\
 	{ MIBDECL(hrDeviceParallelPort) },		\
 	{ MIBDECL(hrDevicePointing) },			\
+	{ MIBDECL(hrDeviceSerialPort) },		\
