@@ -830,3 +830,4 @@
 	{ MIBDECL(hrDeviceParallelPort) },		\
 	{ MIBDECL(hrDevicePointing) },			\
 	{ MIBDECL(hrDeviceSerialPort) },		\
+	{ MIBDECL(hrDeviceTape) },			\
