@@ -832,3 +832,4 @@ popfile(void)
 	TAILQ_REMOVE(&files, file, entry);
 	fclose(file->stream);
 	free(file->name);
+	free(file);
