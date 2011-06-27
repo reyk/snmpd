@@ -829,3 +829,4 @@ snmpe_recvmsg(int fd, short sig, void *arg)
 		break;
 	}
 
+	/* Create new SNMP packet */
