@@ -830,3 +830,4 @@ if_change(u_short if_index, int flags, struct if_data *ifd,
 		log_warn("if_change:  kif_update(%u)", if_index);
 }
 
+void
