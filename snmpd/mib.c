@@ -829,3 +829,4 @@ mib_hrswrun(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 			ber = ber_add_integer(ber, 2);
 		} else {
 			/* application(4) */
+			ber = ber_add_integer(ber, 4);
