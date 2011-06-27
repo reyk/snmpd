@@ -832,3 +832,4 @@ ber_free_elements(struct ber_element *root)
 	    root->be_encoding == BER_TYPE_BITSTRING ||
 	    root->be_encoding == BER_TYPE_OBJECT))
 		free(root->be_val);
+	free(root);
