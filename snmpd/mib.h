@@ -831,3 +831,4 @@
 	{ MIBDECL(hrDevicePointing) },			\
 	{ MIBDECL(hrDeviceSerialPort) },		\
 	{ MIBDECL(hrDeviceTape) },			\
+	{ MIBDECL(hrDeviceClock) },			\
