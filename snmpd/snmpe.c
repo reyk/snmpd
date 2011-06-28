@@ -834,3 +834,4 @@ snmpe_recvmsg(int fd, short sig, void *arg)
 		goto done;
 
 	len = ber_write_elements(&ber, msg.sm_resp);
+	if (ber_get_writebuf(&ber, (void *)&ptr) == -1)
