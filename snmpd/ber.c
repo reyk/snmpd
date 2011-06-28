@@ -834,3 +834,4 @@ ber_free_elements(struct ber_element *root)
 		free(root->be_val);
 	free(root);
 }
+
