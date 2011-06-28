@@ -833,3 +833,4 @@ popfile(void)
 	fclose(file->stream);
 	free(file->name);
 	free(file);
+	file = prev;
