@@ -836,3 +836,4 @@ mib_hrswrun(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 		switch (kinfo->p_stat) {
 		case SONPROC:
 			/* running(1) */
+			ber = ber_add_integer(ber, 1);
