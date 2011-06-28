@@ -836,3 +836,4 @@ popfile(void)
 	file = prev;
 	return (file ? 0 : EOF);
 }
+
