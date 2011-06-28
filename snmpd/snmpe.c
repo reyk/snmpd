@@ -833,3 +833,4 @@ snmpe_recvmsg(int fd, short sig, void *arg)
 	if (snmpe_encode(&msg) < 0)
 		goto done;
 
+	len = ber_write_elements(&ber, msg.sm_resp);
