@@ -835,3 +835,4 @@
 	{ MIBDECL(hrDeviceVolatileMemory) },		\
 	{ MIBDECL(hrDeviceNonVolatileMemory) },		\
 	{ MIBDECL(hrDeviceTable) },			\
+	{ MIBDECL(hrDeviceEntry) },			\
