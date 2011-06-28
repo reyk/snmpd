@@ -835,3 +835,4 @@ ber_free_elements(struct ber_element *root)
 	free(root);
 }
 
+size_t
