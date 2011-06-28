@@ -834,3 +834,4 @@ void
 if_newaddr(u_short if_index, struct sockaddr *ifa, struct sockaddr *mask,
     struct sockaddr *brd)
 {
+	struct kif_node *kif;
