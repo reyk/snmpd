@@ -833,3 +833,4 @@
 	{ MIBDECL(hrDeviceTape) },			\
 	{ MIBDECL(hrDeviceClock) },			\
 	{ MIBDECL(hrDeviceVolatileMemory) },		\
+	{ MIBDECL(hrDeviceNonVolatileMemory) },		\
