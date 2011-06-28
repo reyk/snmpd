@@ -834,3 +834,4 @@ mib_hrswrun(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 		break;
 	case 7: /* hrSWRunStatus */
 		switch (kinfo->p_stat) {
+		case SONPROC:
