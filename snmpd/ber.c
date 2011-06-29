@@ -840,3 +840,4 @@ ber_calc_len(struct ber_element *root)
 {
 	unsigned long t;
 	size_t s;
+	size_t size = 2;	/* minimum 1 byte head and 1 byte size */
