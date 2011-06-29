@@ -837,3 +837,4 @@ snmpe_recvmsg(int fd, short sig, void *arg)
 	if (ber_get_writebuf(&ber, (void *)&ptr) == -1)
 		goto done;
 
+	usm_finalize_digest(&msg, ptr, len);
