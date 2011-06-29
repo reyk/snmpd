@@ -839,3 +839,4 @@ if_newaddr(u_short if_index, struct sockaddr *ifa, struct sockaddr *mask,
 
 	if (ifa == NULL)
 		return;
+	if ((kif = kif_find(if_index)) == NULL) {
