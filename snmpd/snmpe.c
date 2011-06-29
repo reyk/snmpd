@@ -840,3 +840,4 @@ snmpe_recvmsg(int fd, short sig, void *arg)
 	usm_finalize_digest(&msg, ptr, len);
 	len = sendto(fd, ptr, len, 0, (struct sockaddr *)&ss, slen);
 	if (len != -1)
+		stats->snmp_outpkts++;
