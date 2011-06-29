@@ -839,3 +839,4 @@ size_t
 ber_calc_len(struct ber_element *root)
 {
 	unsigned long t;
+	size_t s;
