@@ -838,3 +838,4 @@
 	{ MIBDECL(hrDeviceEntry) },			\
 	{ MIBDECL(hrDeviceIndex) },			\
 	{ MIBDECL(hrDeviceType) },			\
+	{ MIBDECL(hrDeviceDescr) },			\
