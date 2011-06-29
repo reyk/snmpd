@@ -838,3 +838,4 @@ snmpe_recvmsg(int fd, short sig, void *arg)
 		goto done;
 
 	usm_finalize_digest(&msg, ptr, len);
+	len = sendto(fd, ptr, len, 0, (struct sockaddr *)&ss, slen);
