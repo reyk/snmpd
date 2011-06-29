@@ -840,3 +840,4 @@ popfile(void)
 struct snmpd *
 parse_config(const char *filename, u_int flags)
 {
+	struct sym	*sym, *next;
