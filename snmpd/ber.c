@@ -837,3 +837,4 @@ ber_free_elements(struct ber_element *root)
 
 size_t
 ber_calc_len(struct ber_element *root)
+{
