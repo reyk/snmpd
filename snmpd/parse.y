@@ -837,3 +837,4 @@ popfile(void)
 	return (file ? 0 : EOF);
 }
 
+struct snmpd *
