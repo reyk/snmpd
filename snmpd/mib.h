@@ -841,3 +841,4 @@
 	{ MIBDECL(hrDeviceDescr) },			\
 	{ MIBDECL(hrDeviceID) },			\
 	{ MIBDECL(hrDeviceStatus) },			\
+	{ MIBDECL(hrDeviceErrors) },			\
