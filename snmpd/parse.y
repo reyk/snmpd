@@ -843,3 +843,4 @@ parse_config(const char *filename, u_int flags)
 	struct sym	*sym, *next;
 
 	if ((conf = calloc(1, sizeof(*conf))) == NULL) {
+		log_warn("cannot allocate memory");
