@@ -844,3 +844,4 @@ snmpe_recvmsg(int fd, short sig, void *arg)
 
  done:
 	ber_free(&ber);
+	if (req != NULL)
