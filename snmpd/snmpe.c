@@ -842,3 +842,4 @@ snmpe_recvmsg(int fd, short sig, void *arg)
 	if (len != -1)
 		stats->snmp_outpkts++;
 
+ done:
