@@ -843,3 +843,4 @@ ber_calc_len(struct ber_element *root)
 	size_t size = 2;	/* minimum 1 byte head and 1 byte size */
 
 	/* calculate the real length of a sequence or set */
+	if (root->be_sub && (root->be_encoding == BER_TYPE_SEQUENCE ||
