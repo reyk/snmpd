@@ -843,3 +843,4 @@
 	{ MIBDECL(hrDeviceStatus) },			\
 	{ MIBDECL(hrDeviceErrors) },			\
 	{ MIBDECL(hrProcessorTable) },			\
+	{ MIBDECL(hrProcessorEntry) },			\
