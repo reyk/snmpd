@@ -843,3 +843,4 @@ snmpe_recvmsg(int fd, short sig, void *arg)
 		stats->snmp_outpkts++;
 
  done:
+	ber_free(&ber);
