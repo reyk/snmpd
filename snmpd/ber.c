@@ -842,3 +842,4 @@ ber_calc_len(struct ber_element *root)
 	size_t s;
 	size_t size = 2;	/* minimum 1 byte head and 1 byte size */
 
+	/* calculate the real length of a sequence or set */
