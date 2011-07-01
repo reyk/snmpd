@@ -846,3 +846,4 @@ parse_config(const char *filename, u_int flags)
 		log_warn("cannot allocate memory");
 		return (NULL);
 	}
+
