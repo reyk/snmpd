@@ -845,3 +845,4 @@
 	{ MIBDECL(hrProcessorTable) },			\
 	{ MIBDECL(hrProcessorEntry) },			\
 	{ MIBDECL(hrProcessorFrwID) },			\
+	{ MIBDECL(hrProcessorLoad) },			\
