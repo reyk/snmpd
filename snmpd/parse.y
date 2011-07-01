@@ -848,3 +848,4 @@ parse_config(const char *filename, u_int flags)
 	}
 
 	conf->sc_flags = flags;
+	conf->sc_confpath = filename;
