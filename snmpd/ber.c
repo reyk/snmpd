@@ -847,3 +847,4 @@ ber_calc_len(struct ber_element *root)
 	    root->be_encoding == BER_TYPE_SET))
 		root->be_len = ber_calc_len(root->be_sub);
 
+	/* fix header length for extended types */
