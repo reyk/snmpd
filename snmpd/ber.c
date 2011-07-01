@@ -846,3 +846,4 @@ ber_calc_len(struct ber_element *root)
 	if (root->be_sub && (root->be_encoding == BER_TYPE_SEQUENCE ||
 	    root->be_encoding == BER_TYPE_SET))
 		root->be_len = ber_calc_len(root->be_sub);
+
