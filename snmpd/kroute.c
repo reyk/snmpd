@@ -846,3 +846,4 @@ if_newaddr(u_short if_index, struct sockaddr *ifa, struct sockaddr *mask,
 	}
 	if ((ka = ka_find(ifa)) == NULL) {
 		if ((ka = calloc(1, sizeof(struct kif_addr))) == NULL)
+			fatal("if_newaddr");
