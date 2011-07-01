@@ -848,3 +848,4 @@ if_newaddr(u_short if_index, struct sockaddr *ifa, struct sockaddr *mask,
 		if ((ka = calloc(1, sizeof(struct kif_addr))) == NULL)
 			fatal("if_newaddr");
 		bcopy(ifa, &ka->addr.sa, ifa->sa_len);
+		TAILQ_INSERT_TAIL(&kif->addrs, ka, entry);
