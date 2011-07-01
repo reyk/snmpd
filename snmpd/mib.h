@@ -846,3 +846,4 @@
 	{ MIBDECL(hrProcessorEntry) },			\
 	{ MIBDECL(hrProcessorFrwID) },			\
 	{ MIBDECL(hrProcessorLoad) },			\
+	{ MIBDECL(hrSWRun) },				\
