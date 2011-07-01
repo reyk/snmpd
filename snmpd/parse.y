@@ -847,3 +847,4 @@ parse_config(const char *filename, u_int flags)
 		return (NULL);
 	}
 
+	conf->sc_flags = flags;
