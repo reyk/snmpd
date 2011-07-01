@@ -846,3 +846,4 @@ snmpe_recvmsg(int fd, short sig, void *arg)
 	ber_free(&ber);
 	if (req != NULL)
 		ber_free_elements(req);
+	if (msg.sm_resp != NULL)
