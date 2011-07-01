@@ -848,3 +848,4 @@ ber_calc_len(struct ber_element *root)
 		root->be_len = ber_calc_len(root->be_sub);
 
 	/* fix header length for extended types */
+	if (root->be_type > BER_TYPE_SINGLE_MAX)
