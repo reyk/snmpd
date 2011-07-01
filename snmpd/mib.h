@@ -848,3 +848,4 @@
 	{ MIBDECL(hrProcessorLoad) },			\
 	{ MIBDECL(hrSWRun) },				\
 	{ MIBDECL(hrSWOSIndex) },			\
+	{ MIBDECL(hrSWRunTable) },			\
