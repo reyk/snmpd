@@ -845,3 +845,4 @@ if_newaddr(u_short if_index, struct sockaddr *ifa, struct sockaddr *mask,
 		return;
 	}
 	if ((ka = ka_find(ifa)) == NULL) {
+		if ((ka = calloc(1, sizeof(struct kif_addr))) == NULL)
