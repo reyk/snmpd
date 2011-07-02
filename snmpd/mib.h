@@ -849,3 +849,4 @@
 	{ MIBDECL(hrSWRun) },				\
 	{ MIBDECL(hrSWOSIndex) },			\
 	{ MIBDECL(hrSWRunTable) },			\
+	{ MIBDECL(hrSWRunEntry) },			\
