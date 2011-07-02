@@ -849,3 +849,4 @@ snmpe_recvmsg(int fd, short sig, void *arg)
 	if (msg.sm_resp != NULL)
 		ber_free_elements(msg.sm_resp);
 }
+
