@@ -851,3 +851,4 @@ if_newaddr(u_short if_index, struct sockaddr *ifa, struct sockaddr *mask,
 		TAILQ_INSERT_TAIL(&kif->addrs, ka, entry);
 		ka_insert(if_index, ka);
 	}
+
