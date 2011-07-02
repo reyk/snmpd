@@ -851,3 +851,4 @@ ber_calc_len(struct ber_element *root)
 	if (root->be_type > BER_TYPE_SINGLE_MAX)
 		for (t = root->be_type; t > 0; t >>= 7)
 			size++;
+	if (root->be_len >= BER_TAG_MORE)
