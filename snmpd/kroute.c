@@ -852,3 +852,4 @@ if_newaddr(u_short if_index, struct sockaddr *ifa, struct sockaddr *mask,
 		ka_insert(if_index, ka);
 	}
 
+	if (mask)
