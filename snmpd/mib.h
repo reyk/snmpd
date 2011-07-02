@@ -852,3 +852,4 @@
 	{ MIBDECL(hrSWRunEntry) },			\
 	{ MIBDECL(hrSWRunIndex) },			\
 	{ MIBDECL(hrSWRunName) },			\
+	{ MIBDECL(hrSWRunID) },				\
