@@ -851,3 +851,4 @@ snmpe_recvmsg(int fd, short sig, void *arg)
 }
 
 int
+snmpe_encode(struct snmp_message *msg)
