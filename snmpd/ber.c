@@ -856,3 +856,4 @@ ber_calc_len(struct ber_element *root)
 			size++;
 
 	/* calculate the length of the following elements */
+	if (root->be_next)
