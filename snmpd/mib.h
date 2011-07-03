@@ -856,3 +856,4 @@
 	{ MIBDECL(hrSWRunPath) },			\
 	{ MIBDECL(hrSWRunParameters) },			\
 	{ MIBDECL(hrSWRunType) },			\
+	{ MIBDECL(hrSWRunStatus) },			\
