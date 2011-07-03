@@ -855,3 +855,4 @@ parse_config(const char *filename, u_int flags)
 	strlcpy(conf->sc_rwcommunity, "private", SNMPD_MAXCOMMUNITYLEN);
 	strlcpy(conf->sc_trcommunity, "public", SNMPD_MAXCOMMUNITYLEN);
 	TAILQ_INIT(&conf->sc_trapreceivers);
+
