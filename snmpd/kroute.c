@@ -856,3 +856,4 @@ if_newaddr(u_short if_index, struct sockaddr *ifa, struct sockaddr *mask,
 		bcopy(mask, &ka->mask.sa, mask->sa_len);
 	else
 		bzero(&ka->mask, sizeof(ka->mask));
+	if (brd)
