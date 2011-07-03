@@ -855,3 +855,4 @@
 	{ MIBDECL(hrSWRunID) },				\
 	{ MIBDECL(hrSWRunPath) },			\
 	{ MIBDECL(hrSWRunParameters) },			\
+	{ MIBDECL(hrSWRunType) },			\
