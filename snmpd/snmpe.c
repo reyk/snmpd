@@ -855,3 +855,4 @@ snmpe_encode(struct snmp_message *msg)
 {
 	struct ber_element	*ehdr;
 	struct ber_element	*pdu, *epdu;
+
