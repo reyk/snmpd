@@ -853,3 +853,4 @@ parse_config(const char *filename, u_int flags)
 	conf->sc_address.port = SNMPD_PORT;
 	strlcpy(conf->sc_rdcommunity, "public", SNMPD_MAXCOMMUNITYLEN);
 	strlcpy(conf->sc_rwcommunity, "private", SNMPD_MAXCOMMUNITYLEN);
+	strlcpy(conf->sc_trcommunity, "public", SNMPD_MAXCOMMUNITYLEN);
