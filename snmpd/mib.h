@@ -859,3 +859,4 @@
 	{ MIBDECL(hrSWRunStatus) },			\
 	{ MIBDECL(hrSWRunPerf) },			\
 	{ MIBDECL(hrSWRunPerfTable) },			\
+	{ MIBDECL(hrSWRunPerfEntry) },			\
