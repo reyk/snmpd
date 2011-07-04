@@ -858,3 +858,4 @@ snmpe_encode(struct snmp_message *msg)
 
 	msg->sm_resp = ber_add_sequence(NULL);
 	if ((ehdr = ber_add_integer(msg->sm_resp, msg->sm_version)) == NULL)
+		return -1;
