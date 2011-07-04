@@ -858,3 +858,4 @@ parse_config(const char *filename, u_int flags)
 
 	if ((file = pushfile(filename, 0)) == NULL) {
 		free(conf);
+		return (NULL);
