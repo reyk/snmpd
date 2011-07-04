@@ -859,3 +859,4 @@ ber_calc_len(struct ber_element *root)
 	if (root->be_next)
 		size += ber_calc_len(root->be_next);
 
+	/* This is an empty element, do not use a minimal size */
