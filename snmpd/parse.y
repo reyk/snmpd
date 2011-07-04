@@ -857,3 +857,4 @@ parse_config(const char *filename, u_int flags)
 	TAILQ_INIT(&conf->sc_trapreceivers);
 
 	if ((file = pushfile(filename, 0)) == NULL) {
+		free(conf);
