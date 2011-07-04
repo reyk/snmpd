@@ -860,3 +860,4 @@ ber_calc_len(struct ber_element *root)
 		size += ber_calc_len(root->be_next);
 
 	/* This is an empty element, do not use a minimal size */
+	if (root->be_class != BER_CLASS_CONTEXT &&
