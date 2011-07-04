@@ -860,3 +860,4 @@ snmpe_encode(struct snmp_message *msg)
 	if ((ehdr = ber_add_integer(msg->sm_resp, msg->sm_version)) == NULL)
 		return -1;
 	if (msg->sm_version == SNMP_V3) {
+		char	f = MSG_SECLEVEL(msg);
