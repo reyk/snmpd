@@ -861,3 +861,4 @@ snmpe_encode(struct snmp_message *msg)
 		return -1;
 	if (msg->sm_version == SNMP_V3) {
 		char	f = MSG_SECLEVEL(msg);
+
