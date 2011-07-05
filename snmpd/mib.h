@@ -863,3 +863,4 @@
 	{ MIBDECL(hrSWRunPerfCPU) },			\
 	{ MIBDECL(hrSWRunPerfMem) },			\
 							\
+	{ MIBDECL(ifMIB) },				\
