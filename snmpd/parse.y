@@ -864,3 +864,4 @@ parse_config(const char *filename, u_int flags)
 	setservent(1);
 
 	yyparse();
+	errors = file->errors;
