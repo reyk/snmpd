@@ -864,3 +864,4 @@
 	{ MIBDECL(hrSWRunPerfMem) },			\
 							\
 	{ MIBDECL(ifMIB) },				\
+	{ MIBDECL(ifMIBObjects) },			\
