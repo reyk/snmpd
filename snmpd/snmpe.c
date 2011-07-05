@@ -862,3 +862,4 @@ snmpe_encode(struct snmp_message *msg)
 	if (msg->sm_version == SNMP_V3) {
 		char	f = MSG_SECLEVEL(msg);
 
+		if ((ehdr = ber_printf_elements(ehdr, "{iixi}", msg->sm_msgid,
