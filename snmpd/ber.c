@@ -864,3 +864,4 @@ ber_calc_len(struct ber_element *root)
 	    root->be_type == BER_TYPE_EOC && root->be_len == 0)
 		return (0);
 
+	return (root->be_len + size);
