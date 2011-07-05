@@ -861,3 +861,4 @@
 	{ MIBDECL(hrSWRunPerfTable) },			\
 	{ MIBDECL(hrSWRunPerfEntry) },			\
 	{ MIBDECL(hrSWRunPerfCPU) },			\
+	{ MIBDECL(hrSWRunPerfMem) },			\
