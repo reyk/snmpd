@@ -862,3 +862,4 @@ ber_calc_len(struct ber_element *root)
 	/* This is an empty element, do not use a minimal size */
 	if (root->be_class != BER_CLASS_CONTEXT &&
 	    root->be_type == BER_TYPE_EOC && root->be_len == 0)
+		return (0);
