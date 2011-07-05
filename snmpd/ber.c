@@ -863,3 +863,4 @@ ber_calc_len(struct ber_element *root)
 	if (root->be_class != BER_CLASS_CONTEXT &&
 	    root->be_type == BER_TYPE_EOC && root->be_len == 0)
 		return (0);
+
