@@ -862,3 +862,4 @@ parse_config(const char *filename, u_int flags)
 	}
 	topfile = file;
 	setservent(1);
+
