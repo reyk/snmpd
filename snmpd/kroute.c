@@ -867,3 +867,4 @@ void
 if_deladdr(u_short if_index, struct sockaddr *ifa, struct sockaddr *mask,
     struct sockaddr *brd)
 {
+	struct kif_node *kif;
