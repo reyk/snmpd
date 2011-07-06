@@ -866,3 +866,4 @@ mib_hrswrun(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 int
 kinfo_proc_comp(const void *a, const void *b)
 {
+	struct kinfo_proc * const *k1 = a;
