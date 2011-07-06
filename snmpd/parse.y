@@ -867,3 +867,4 @@ parse_config(const char *filename, u_int flags)
 	errors = file->errors;
 	popfile();
 
+	endservent();
