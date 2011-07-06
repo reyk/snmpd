@@ -865,3 +865,4 @@ snmpe_encode(struct snmp_message *msg)
 		if ((ehdr = ber_printf_elements(ehdr, "{iixi}", msg->sm_msgid,
 		    msg->sm_max_msg_size, &f, sizeof(f),
 		    msg->sm_secmodel)) == NULL)
+			return -1;
