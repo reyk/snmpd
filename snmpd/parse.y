@@ -865,3 +865,4 @@ parse_config(const char *filename, u_int flags)
 
 	yyparse();
 	errors = file->errors;
+	popfile();
