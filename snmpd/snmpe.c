@@ -867,3 +867,4 @@ snmpe_encode(struct snmp_message *msg)
 		    msg->sm_secmodel)) == NULL)
 			return -1;
 
+		/* XXX currently only USM supported */
