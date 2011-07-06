@@ -868,3 +868,4 @@ ber_calc_len(struct ber_element *root)
 }
 
 /*
+ * internal functions
