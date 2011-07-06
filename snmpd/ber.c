@@ -865,3 +865,4 @@ ber_calc_len(struct ber_element *root)
 		return (0);
 
 	return (root->be_len + size);
+}
