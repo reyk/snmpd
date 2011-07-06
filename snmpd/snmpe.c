@@ -866,3 +866,4 @@ snmpe_encode(struct snmp_message *msg)
 		    msg->sm_max_msg_size, &f, sizeof(f),
 		    msg->sm_secmodel)) == NULL)
 			return -1;
+
