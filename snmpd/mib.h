@@ -867,3 +867,4 @@
 	{ MIBDECL(ifMIBObjects) },			\
 	{ MIBDECL(ifXTable) },				\
 	{ MIBDECL(ifXEntry) },				\
+	{ MIBDECL(ifName) },				\
