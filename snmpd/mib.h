@@ -868,3 +868,4 @@
 	{ MIBDECL(ifXTable) },				\
 	{ MIBDECL(ifXEntry) },				\
 	{ MIBDECL(ifName) },				\
+	{ MIBDECL(ifInMulticastPkts) },			\
