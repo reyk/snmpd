@@ -869,3 +869,4 @@
 	{ MIBDECL(ifXEntry) },				\
 	{ MIBDECL(ifName) },				\
 	{ MIBDECL(ifInMulticastPkts) },			\
+	{ MIBDECL(ifInBroadcastPkts) },			\
