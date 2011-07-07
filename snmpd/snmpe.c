@@ -869,3 +869,4 @@ snmpe_encode(struct snmp_message *msg)
 
 		/* XXX currently only USM supported */
 		if ((ehdr = usm_encode(msg, ehdr)) == NULL)
+			return -1;
