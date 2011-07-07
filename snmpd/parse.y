@@ -870,3 +870,4 @@ parse_config(const char *filename, u_int flags)
 	endservent();
 
 	/* Free macros and check which have not been used. */
+	for (sym = TAILQ_FIRST(&symhead); sym != NULL; sym = next) {
