@@ -871,3 +871,4 @@ if_deladdr(u_short if_index, struct sockaddr *ifa, struct sockaddr *mask,
 	struct kif_addr *ka;
 
 	if (ifa == NULL)
+		return;
