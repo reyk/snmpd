@@ -869,3 +869,4 @@ parse_config(const char *filename, u_int flags)
 
 	endservent();
 
+	/* Free macros and check which have not been used. */
