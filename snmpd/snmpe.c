@@ -871,3 +871,4 @@ snmpe_encode(struct snmp_message *msg)
 		if ((ehdr = usm_encode(msg, ehdr)) == NULL)
 			return -1;
 	} else {
+		if ((ehdr = ber_add_string(ehdr, msg->sm_community)) == NULL)
