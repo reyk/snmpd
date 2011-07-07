@@ -870,3 +870,4 @@
 	{ MIBDECL(ifName) },				\
 	{ MIBDECL(ifInMulticastPkts) },			\
 	{ MIBDECL(ifInBroadcastPkts) },			\
+	{ MIBDECL(ifOutMulticastPkts) },		\
