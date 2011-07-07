@@ -869,3 +869,4 @@ kinfo_proc_comp(const void *a, const void *b)
 	struct kinfo_proc * const *k1 = a;
 	struct kinfo_proc * const *k2 = b;
 
+	return (((*k1)->p_pid > (*k2)->p_pid) ? 1 : -1);
