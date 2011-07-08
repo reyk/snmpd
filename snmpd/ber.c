@@ -873,3 +873,4 @@ ber_calc_len(struct ber_element *root)
 
 static int
 ber_dump_element(struct ber *ber, struct ber_element *root)
+{
