@@ -875,3 +875,4 @@ if_deladdr(u_short if_index, struct sockaddr *ifa, struct sockaddr *mask,
 	if ((kif = kif_find(if_index)) == NULL) {
 		log_warnx("if_deladdr: corresponding if %i not found",
 		    if_index);
+		return;
