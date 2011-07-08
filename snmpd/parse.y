@@ -876,3 +876,4 @@ parse_config(const char *filename, u_int flags)
 			fprintf(stderr, "warning: macro '%s' not "
 			    "used\n", sym->nam);
 		if (!sym->persist) {
+			free(sym->nam);
