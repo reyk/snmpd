@@ -873,3 +873,4 @@ kinfo_proc_comp(const void *a, const void *b)
 }
 
 int
+kinfo_proc(u_int32_t idx, struct kinfo_proc **kinfo)
