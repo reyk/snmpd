@@ -873,3 +873,4 @@
 	{ MIBDECL(ifOutMulticastPkts) },		\
 	{ MIBDECL(ifOutBroadcastPkts) },		\
 	{ MIBDECL(ifHCInOctets) },			\
+	{ MIBDECL(ifHCInUcastPkts) },			\
