@@ -875,3 +875,4 @@ static int
 ber_dump_element(struct ber *ber, struct ber_element *root)
 {
 	unsigned long long l;
+	int i;
