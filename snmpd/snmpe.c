@@ -875,3 +875,4 @@ snmpe_encode(struct snmp_message *msg)
 			return -1;
 	}
 
+	pdu = epdu = ber_add_sequence(NULL);
