@@ -876,3 +876,4 @@ snmpe_encode(struct snmp_message *msg)
 	}
 
 	pdu = epdu = ber_add_sequence(NULL);
+	if (msg->sm_version == SNMP_V3) {
