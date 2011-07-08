@@ -874,3 +874,4 @@ parse_config(const char *filename, u_int flags)
 		next = TAILQ_NEXT(sym, entry);
 		if ((conf->sc_flags & SNMPD_F_VERBOSE) && !sym->used)
 			fprintf(stderr, "warning: macro '%s' not "
+			    "used\n", sym->nam);
