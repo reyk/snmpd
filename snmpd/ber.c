@@ -879,3 +879,4 @@ ber_dump_element(struct ber *ber, struct ber_element *root)
 	uint8_t u;
 
 	ber_dump_header(ber, root);
+	if (root->be_cb)
