@@ -877,3 +877,4 @@ if_deladdr(u_short if_index, struct sockaddr *ifa, struct sockaddr *mask,
 		    if_index);
 		return;
 	}
+	if ((ka = ka_find(ifa)) == NULL)
