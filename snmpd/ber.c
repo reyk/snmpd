@@ -880,3 +880,4 @@ ber_dump_element(struct ber *ber, struct ber_element *root)
 
 	ber_dump_header(ber, root);
 	if (root->be_cb)
+		root->be_cb(root->be_cbarg, ber->br_wptr - ber->br_wbuf);
