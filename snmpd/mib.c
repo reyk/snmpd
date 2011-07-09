@@ -877,3 +877,4 @@ kinfo_proc(u_int32_t idx, struct kinfo_proc **kinfo)
 {
 	static struct kinfo_proc *kp = NULL;
 	static size_t		 nkp = 0;
+	int			 mib[] = { CTL_KERN, KERN_PROC,
