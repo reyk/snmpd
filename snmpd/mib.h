@@ -880,3 +880,4 @@
 	{ MIBDECL(ifHCOutUcastPkts) },			\
 	{ MIBDECL(ifHCOutMulticastPkts) },		\
 	{ MIBDECL(ifHCOutBroadcastPkts) },		\
+	{ MIBDECL(ifLinkUpDownTrapEnable) },		\
