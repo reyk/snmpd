@@ -879,3 +879,4 @@ if_deladdr(u_short if_index, struct sockaddr *ifa, struct sockaddr *mask,
 	}
 	if ((ka = ka_find(ifa)) == NULL)
 		return;
+
