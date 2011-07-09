@@ -880,3 +880,4 @@ snmpe_encode(struct snmp_message *msg)
 		if ((epdu = ber_printf_elements(epdu, "xs{", env->sc_engineid,
 		    env->sc_engineid_len, msg->sm_ctxname)) == NULL) {
 			ber_free_elements(pdu);
+			return -1;
