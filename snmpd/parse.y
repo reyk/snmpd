@@ -879,3 +879,4 @@ parse_config(const char *filename, u_int flags)
 			free(sym->nam);
 			free(sym->val);
 			TAILQ_REMOVE(&symhead, sym, entry);
+			free(sym);
