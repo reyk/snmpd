@@ -877,3 +877,4 @@ parse_config(const char *filename, u_int flags)
 			    "used\n", sym->nam);
 		if (!sym->persist) {
 			free(sym->nam);
+			free(sym->val);
