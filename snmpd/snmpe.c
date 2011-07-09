@@ -878,3 +878,4 @@ snmpe_encode(struct snmp_message *msg)
 	pdu = epdu = ber_add_sequence(NULL);
 	if (msg->sm_version == SNMP_V3) {
 		if ((epdu = ber_printf_elements(epdu, "xs{", env->sc_engineid,
+		    env->sc_engineid_len, msg->sm_ctxname)) == NULL) {
