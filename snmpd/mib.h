@@ -883,3 +883,4 @@
 	{ MIBDECL(ifLinkUpDownTrapEnable) },		\
 	{ MIBDECL(ifHighSpeed) },			\
 	{ MIBDECL(ifPromiscuousMode) },			\
+	{ MIBDECL(ifConnectorPresent) },		\
