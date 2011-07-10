@@ -882,3 +882,4 @@ kinfo_proc(u_int32_t idx, struct kinfo_proc **kinfo)
 	struct kinfo_proc	**klist;
 	size_t			 size, count, i;
 
+	for (;;) {
