@@ -884,3 +884,4 @@
 	{ MIBDECL(ifHighSpeed) },			\
 	{ MIBDECL(ifPromiscuousMode) },			\
 	{ MIBDECL(ifConnectorPresent) },		\
+	{ MIBDECL(ifAlias) },				\
