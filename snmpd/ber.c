@@ -884,3 +884,4 @@ ber_dump_element(struct ber *ber, struct ber_element *root)
 
 	switch (root->be_encoding) {
 	case BER_TYPE_BOOLEAN:
+	case BER_TYPE_INTEGER:
