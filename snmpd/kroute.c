@@ -884,3 +884,4 @@ if_deladdr(u_short if_index, struct sockaddr *ifa, struct sockaddr *mask,
 	ka_remove(ka);
 }
 
+void
