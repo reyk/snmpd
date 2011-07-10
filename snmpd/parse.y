@@ -881,3 +881,4 @@ parse_config(const char *filename, u_int flags)
 			TAILQ_REMOVE(&symhead, sym, entry);
 			free(sym);
 		}
+	}
