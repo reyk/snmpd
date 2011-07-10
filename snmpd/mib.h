@@ -881,3 +881,4 @@
 	{ MIBDECL(ifHCOutMulticastPkts) },		\
 	{ MIBDECL(ifHCOutBroadcastPkts) },		\
 	{ MIBDECL(ifLinkUpDownTrapEnable) },		\
+	{ MIBDECL(ifHighSpeed) },			\
