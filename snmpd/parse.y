@@ -884,3 +884,4 @@ parse_config(const char *filename, u_int flags)
 	}
 
 	if (errors) {
+		free(conf);
