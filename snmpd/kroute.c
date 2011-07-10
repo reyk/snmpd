@@ -881,3 +881,4 @@ if_deladdr(u_short if_index, struct sockaddr *ifa, struct sockaddr *mask,
 		return;
 
 	TAILQ_REMOVE(&kif->addrs, ka, entry);
+	ka_remove(ka);
