@@ -884,3 +884,4 @@ kinfo_proc(u_int32_t idx, struct kinfo_proc **kinfo)
 
 	for (;;) {
 		size = nkp * sizeof(*kp);
+		mib[5] = nkp;
