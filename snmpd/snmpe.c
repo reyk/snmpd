@@ -884,3 +884,4 @@ snmpe_encode(struct snmp_message *msg)
 		}
 	}
 
+	if (!ber_printf_elements(epdu, "tiii{e}.", BER_CLASS_CONTEXT,
