@@ -882,3 +882,4 @@ snmpe_encode(struct snmp_message *msg)
 			ber_free_elements(pdu);
 			return -1;
 		}
+	}
