@@ -882,3 +882,4 @@
 	{ MIBDECL(ifHCOutBroadcastPkts) },		\
 	{ MIBDECL(ifLinkUpDownTrapEnable) },		\
 	{ MIBDECL(ifHighSpeed) },			\
+	{ MIBDECL(ifPromiscuousMode) },			\
