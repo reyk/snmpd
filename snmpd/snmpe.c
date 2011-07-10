@@ -883,3 +883,4 @@ snmpe_encode(struct snmp_message *msg)
 			return -1;
 		}
 	}
+
