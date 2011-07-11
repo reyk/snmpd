@@ -886,3 +886,4 @@ ber_dump_element(struct ber *ber, struct ber_element *root)
 	case BER_TYPE_BOOLEAN:
 	case BER_TYPE_INTEGER:
 	case BER_TYPE_ENUMERATED:
+		l = (unsigned long long)root->be_numeric;
