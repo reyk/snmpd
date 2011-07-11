@@ -885,3 +885,4 @@
 	{ MIBDECL(ifPromiscuousMode) },			\
 	{ MIBDECL(ifConnectorPresent) },		\
 	{ MIBDECL(ifAlias) },				\
+	{ MIBDECL(ifCounterDiscontinuityTime) },	\
