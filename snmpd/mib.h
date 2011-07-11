@@ -888,3 +888,4 @@
 	{ MIBDECL(ifCounterDiscontinuityTime) },	\
 	{ MIBDECL(ifStackTable) },			\
 	{ MIBDECL(ifStackEntry) },			\
+	{ MIBDECL(ifRcvAddressTable) },			\
