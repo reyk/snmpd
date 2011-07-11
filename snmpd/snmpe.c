@@ -887,3 +887,4 @@ snmpe_encode(struct snmp_message *msg)
 	if (!ber_printf_elements(epdu, "tiii{e}.", BER_CLASS_CONTEXT,
 	    msg->sm_context, msg->sm_request,
 	    msg->sm_error, msg->sm_errorindex,
+	    msg->sm_varbindresp)) {
