@@ -888,3 +888,4 @@ kinfo_proc(u_int32_t idx, struct kinfo_proc **kinfo)
 		if (sysctl(mib, sizeofa(mib), kp, &size, NULL, 0) == -1) {
 			if (errno == ENOMEM) {
 				free(kp);
+				kp = NULL;
