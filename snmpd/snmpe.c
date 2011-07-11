@@ -888,3 +888,4 @@ snmpe_encode(struct snmp_message *msg)
 	    msg->sm_context, msg->sm_request,
 	    msg->sm_error, msg->sm_errorindex,
 	    msg->sm_varbindresp)) {
+		ber_free_elements(pdu);
