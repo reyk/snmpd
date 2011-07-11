@@ -886,3 +886,4 @@
 	{ MIBDECL(ifConnectorPresent) },		\
 	{ MIBDECL(ifAlias) },				\
 	{ MIBDECL(ifCounterDiscontinuityTime) },	\
+	{ MIBDECL(ifStackTable) },			\
