@@ -887,3 +887,4 @@
 	{ MIBDECL(ifAlias) },				\
 	{ MIBDECL(ifCounterDiscontinuityTime) },	\
 	{ MIBDECL(ifStackTable) },			\
+	{ MIBDECL(ifStackEntry) },			\
