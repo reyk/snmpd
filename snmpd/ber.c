@@ -888,3 +888,4 @@ ber_dump_element(struct ber *ber, struct ber_element *root)
 	case BER_TYPE_ENUMERATED:
 		l = (unsigned long long)root->be_numeric;
 		for (i = root->be_len; i > 0; i--) {
+			u = (l >> ((i - 1) * 8)) & 0xff;
