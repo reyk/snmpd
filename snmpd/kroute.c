@@ -887,3 +887,4 @@ if_deladdr(u_short if_index, struct sockaddr *ifa, struct sockaddr *mask,
 void
 if_announce(void *msg)
 {
+	struct if_announcemsghdr	*ifan;
