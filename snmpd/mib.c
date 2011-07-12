@@ -889,3 +889,4 @@ kinfo_proc(u_int32_t idx, struct kinfo_proc **kinfo)
 			if (errno == ENOMEM) {
 				free(kp);
 				kp = NULL;
+				nkp = 0;
