@@ -891,3 +891,4 @@ if_announce(void *msg)
 	struct kif_node			*kif;
 
 	ifan = msg;
+
