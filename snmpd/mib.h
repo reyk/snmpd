@@ -891,3 +891,4 @@
 	{ MIBDECL(ifRcvAddressTable) },			\
 	{ MIBDECL(ifRcvAddressEntry) },			\
 	{ MIBDECL(ifRcvAddressStatus) },		\
+	{ MIBDECL(ifRcvAddressType) },			\
