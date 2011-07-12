@@ -890,3 +890,4 @@ snmpe_encode(struct snmp_message *msg)
 	    msg->sm_varbindresp)) {
 		ber_free_elements(pdu);
 		return -1;
+	}
