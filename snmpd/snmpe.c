@@ -892,3 +892,4 @@ snmpe_encode(struct snmp_message *msg)
 		return -1;
 	}
 
+	if (MSG_HAS_PRIV(msg))
