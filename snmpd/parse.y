@@ -891,3 +891,4 @@ parse_config(const char *filename, u_int flags)
 	return (conf);
 }
 
+int
