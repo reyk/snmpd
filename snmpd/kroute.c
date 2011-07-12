@@ -890,3 +890,4 @@ if_announce(void *msg)
 	struct if_announcemsghdr	*ifan;
 	struct kif_node			*kif;
 
+	ifan = msg;
