@@ -892,3 +892,4 @@
 	{ MIBDECL(ifRcvAddressEntry) },			\
 	{ MIBDECL(ifRcvAddressStatus) },		\
 	{ MIBDECL(ifRcvAddressType) },			\
+	{ MIBDECL(ifStackLastChange) },			\
