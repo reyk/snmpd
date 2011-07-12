@@ -889,3 +889,4 @@
 	{ MIBDECL(ifStackTable) },			\
 	{ MIBDECL(ifStackEntry) },			\
 	{ MIBDECL(ifRcvAddressTable) },			\
+	{ MIBDECL(ifRcvAddressEntry) },			\
