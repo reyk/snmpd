@@ -892,3 +892,4 @@ if_announce(void *msg)
 
 	ifan = msg;
 
+	switch (ifan->ifan_what) {
