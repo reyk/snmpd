@@ -891,3 +891,4 @@ ber_dump_element(struct ber *ber, struct ber_element *root)
 			u = (l >> ((i - 1) * 8)) & 0xff;
 			ber_putc(ber, u);
 		}
+		break;
