@@ -895,3 +895,4 @@
 	{ MIBDECL(ifStackLastChange) },			\
 	{ MIBDECL(interfaces) },			\
 	{ MIBDECL(ifNumber) },				\
+	{ MIBDECL(ifTable) },				\
