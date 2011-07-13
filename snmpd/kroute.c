@@ -894,3 +894,4 @@ if_announce(void *msg)
 
 	switch (ifan->ifan_what) {
 	case IFAN_ARRIVAL:
+		kif = kif_insert(ifan->ifan_index);
