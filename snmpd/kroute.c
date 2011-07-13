@@ -893,3 +893,4 @@ if_announce(void *msg)
 	ifan = msg;
 
 	switch (ifan->ifan_what) {
+	case IFAN_ARRIVAL:
