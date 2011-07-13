@@ -896,3 +896,4 @@
 	{ MIBDECL(interfaces) },			\
 	{ MIBDECL(ifNumber) },				\
 	{ MIBDECL(ifTable) },				\
+	{ MIBDECL(ifEntry) },				\
