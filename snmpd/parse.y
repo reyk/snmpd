@@ -894,3 +894,4 @@ parse_config(const char *filename, u_int flags)
 int
 symset(const char *nam, const char *val, int persist)
 {
+	struct sym	*sym;
