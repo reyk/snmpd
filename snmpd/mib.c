@@ -893,3 +893,4 @@ kinfo_proc(u_int32_t idx, struct kinfo_proc **kinfo)
 				continue;
 			}
 
+			return (-1);
