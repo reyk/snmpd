@@ -894,3 +894,4 @@ snmpe_encode(struct snmp_message *msg)
 
 	if (MSG_HAS_PRIV(msg))
 		pdu = usm_encrypt(msg, pdu);
+	ber_link_elements(ehdr, pdu);
