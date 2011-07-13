@@ -894,3 +894,4 @@
 	{ MIBDECL(ifRcvAddressType) },			\
 	{ MIBDECL(ifStackLastChange) },			\
 	{ MIBDECL(interfaces) },			\
+	{ MIBDECL(ifNumber) },				\
