@@ -895,3 +895,4 @@ int
 symset(const char *nam, const char *val, int persist)
 {
 	struct sym	*sym;
+
