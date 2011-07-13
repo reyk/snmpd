@@ -894,3 +894,4 @@ ber_dump_element(struct ber *ber, struct ber_element *root)
 		break;
 	case BER_TYPE_BITSTRING:
 		return -1;
+	case BER_TYPE_OCTETSTRING:
