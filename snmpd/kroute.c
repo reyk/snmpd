@@ -895,3 +895,4 @@ if_announce(void *msg)
 	switch (ifan->ifan_what) {
 	case IFAN_ARRIVAL:
 		kif = kif_insert(ifan->ifan_index);
+		strlcpy(kif->k.if_name, ifan->ifan_name,
