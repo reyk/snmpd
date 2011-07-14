@@ -899,3 +899,4 @@
 	{ MIBDECL(ifEntry) },				\
 	{ MIBDECL(ifIndex) },				\
 	{ MIBDECL(ifDescr) },				\
+	{ MIBDECL(ifType) },				\
