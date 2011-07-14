@@ -900,3 +900,4 @@ symset(const char *nam, const char *val, int persist)
 	    sym = TAILQ_NEXT(sym, entry))
 		;	/* nothing */
 
+	if (sym != NULL) {
