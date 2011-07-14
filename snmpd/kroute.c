@@ -900,3 +900,4 @@ if_announce(void *msg)
 		break;
 	case IFAN_DEPARTURE:
 		kif = kif_find(ifan->ifan_index);
+		kif_remove(kif);
