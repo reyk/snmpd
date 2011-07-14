@@ -899,3 +899,4 @@ ber_dump_element(struct ber *ber, struct ber_element *root)
 		ber_write(ber, root->be_val, root->be_len);
 		break;
 	case BER_TYPE_NULL:	/* no payload */
+	case BER_TYPE_EOC:
