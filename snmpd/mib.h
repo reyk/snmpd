@@ -900,3 +900,4 @@
 	{ MIBDECL(ifIndex) },				\
 	{ MIBDECL(ifDescr) },				\
 	{ MIBDECL(ifType) },				\
+	{ MIBDECL(ifMtu) },				\
