@@ -899,3 +899,4 @@ kinfo_proc(u_int32_t idx, struct kinfo_proc **kinfo)
 		count = size / sizeof(*kp);
 		if (count <= nkp)
 			break;
+
