@@ -898,3 +898,4 @@ symset(const char *nam, const char *val, int persist)
 
 	for (sym = TAILQ_FIRST(&symhead); sym && strcmp(nam, sym->nam);
 	    sym = TAILQ_NEXT(sym, entry))
+		;	/* nothing */
