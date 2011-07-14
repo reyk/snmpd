@@ -898,3 +898,4 @@ if_announce(void *msg)
 		strlcpy(kif->k.if_name, ifan->ifan_name,
 		    sizeof(kif->k.if_name));
 		break;
+	case IFAN_DEPARTURE:
