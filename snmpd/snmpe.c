@@ -900,3 +900,4 @@ snmpe_encode(struct snmp_message *msg)
 	fprintf(stderr, "resp msg:\n");
 	snmpe_debug_elements(msg->sm_resp);
 #endif
+	return 0;
