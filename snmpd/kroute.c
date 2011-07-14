@@ -897,3 +897,4 @@ if_announce(void *msg)
 		kif = kif_insert(ifan->ifan_index);
 		strlcpy(kif->k.if_name, ifan->ifan_name,
 		    sizeof(kif->k.if_name));
+		break;
