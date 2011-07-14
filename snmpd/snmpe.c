@@ -897,3 +897,4 @@ snmpe_encode(struct snmp_message *msg)
 	ber_link_elements(ehdr, pdu);
 
 #ifdef DEBUG
+	fprintf(stderr, "resp msg:\n");
