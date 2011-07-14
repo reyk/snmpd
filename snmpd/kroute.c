@@ -899,3 +899,4 @@ if_announce(void *msg)
 		    sizeof(kif->k.if_name));
 		break;
 	case IFAN_DEPARTURE:
+		kif = kif_find(ifan->ifan_index);
