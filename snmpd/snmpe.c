@@ -898,3 +898,4 @@ snmpe_encode(struct snmp_message *msg)
 
 #ifdef DEBUG
 	fprintf(stderr, "resp msg:\n");
+	snmpe_debug_elements(msg->sm_resp);
