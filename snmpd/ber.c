@@ -897,3 +897,4 @@ ber_dump_element(struct ber *ber, struct ber_element *root)
 	case BER_TYPE_OCTETSTRING:
 	case BER_TYPE_OBJECT:
 		ber_write(ber, root->be_val, root->be_len);
+		break;
