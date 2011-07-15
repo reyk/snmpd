@@ -903,3 +903,4 @@ symset(const char *nam, const char *val, int persist)
 	if (sym != NULL) {
 		if (sym->persist == 1)
 			return (0);
+		else {
