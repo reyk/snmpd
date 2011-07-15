@@ -903,3 +903,4 @@ if_announce(void *msg)
 		kif_remove(kif);
 		break;
 	}
+}
