@@ -901,3 +901,4 @@
 	{ MIBDECL(ifDescr) },				\
 	{ MIBDECL(ifType) },				\
 	{ MIBDECL(ifMtu) },				\
+	{ MIBDECL(ifSpeed) },				\
