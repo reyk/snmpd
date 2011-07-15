@@ -902,3 +902,4 @@
 	{ MIBDECL(ifType) },				\
 	{ MIBDECL(ifMtu) },				\
 	{ MIBDECL(ifSpeed) },				\
+	{ MIBDECL(ifPhysAddress) },			\
