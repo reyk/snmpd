@@ -903,3 +903,4 @@
 	{ MIBDECL(ifMtu) },				\
 	{ MIBDECL(ifSpeed) },				\
 	{ MIBDECL(ifPhysAddress) },			\
+	{ MIBDECL(ifAdminStatus) },			\
