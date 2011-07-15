@@ -902,3 +902,4 @@ ber_dump_element(struct ber *ber, struct ber_element *root)
 	case BER_TYPE_EOC:
 		break;
 	case BER_TYPE_SEQUENCE:
+	case BER_TYPE_SET:
