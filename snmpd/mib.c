@@ -901,3 +901,4 @@ kinfo_proc(u_int32_t idx, struct kinfo_proc **kinfo)
 			break;
 
 		kp = malloc(size);
+		if (kp == NULL) {
