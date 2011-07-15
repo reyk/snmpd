@@ -903,3 +903,4 @@ ber_dump_element(struct ber *ber, struct ber_element *root)
 		break;
 	case BER_TYPE_SEQUENCE:
 	case BER_TYPE_SET:
+		if (root->be_sub && ber_dump_element(ber, root->be_sub) == -1)
