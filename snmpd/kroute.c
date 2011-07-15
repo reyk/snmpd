@@ -902,3 +902,4 @@ if_announce(void *msg)
 		kif = kif_find(ifan->ifan_index);
 		kif_remove(kif);
 		break;
+	}
