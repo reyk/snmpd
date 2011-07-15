@@ -904,3 +904,4 @@
 	{ MIBDECL(ifSpeed) },				\
 	{ MIBDECL(ifPhysAddress) },			\
 	{ MIBDECL(ifAdminStatus) },			\
+	{ MIBDECL(ifOperStatus) },			\
