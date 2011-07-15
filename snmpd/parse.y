@@ -901,3 +901,4 @@ symset(const char *nam, const char *val, int persist)
 		;	/* nothing */
 
 	if (sym != NULL) {
+		if (sym->persist == 1)
