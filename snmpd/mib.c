@@ -904,3 +904,4 @@ kinfo_proc(u_int32_t idx, struct kinfo_proc **kinfo)
 		if (kp == NULL) {
 			nkp = 0;
 			return (-1);
+		}
