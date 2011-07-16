@@ -908,3 +908,4 @@ symset(const char *nam, const char *val, int persist)
 			free(sym->val);
 			TAILQ_REMOVE(&symhead, sym, entry);
 			free(sym);
+		}
