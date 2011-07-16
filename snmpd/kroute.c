@@ -907,3 +907,4 @@ if_announce(void *msg)
 
 int
 fetchtable(void)
+{
