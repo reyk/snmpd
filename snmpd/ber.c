@@ -907,3 +907,4 @@ ber_dump_element(struct ber *ber, struct ber_element *root)
 			return -1;
 		break;
 	}
+
