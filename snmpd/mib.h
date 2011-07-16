@@ -908,3 +908,4 @@
 	{ MIBDECL(ifLastChange) },			\
 	{ MIBDECL(ifInOctets) },			\
 	{ MIBDECL(ifInUcastPkts) },			\
+	{ MIBDECL(ifInNUcastPkts) },			\
