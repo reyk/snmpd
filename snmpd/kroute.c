@@ -905,3 +905,4 @@ if_announce(void *msg)
 	}
 }
 
+int
