@@ -907,3 +907,4 @@
 	{ MIBDECL(ifOperStatus) },			\
 	{ MIBDECL(ifLastChange) },			\
 	{ MIBDECL(ifInOctets) },			\
+	{ MIBDECL(ifInUcastPkts) },			\
