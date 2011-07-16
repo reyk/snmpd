@@ -908,3 +908,4 @@ if_announce(void *msg)
 int
 fetchtable(void)
 {
+	int			 mib[7];
