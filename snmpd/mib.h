@@ -905,3 +905,4 @@
 	{ MIBDECL(ifPhysAddress) },			\
 	{ MIBDECL(ifAdminStatus) },			\
 	{ MIBDECL(ifOperStatus) },			\
+	{ MIBDECL(ifLastChange) },			\
