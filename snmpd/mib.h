@@ -906,3 +906,4 @@
 	{ MIBDECL(ifAdminStatus) },			\
 	{ MIBDECL(ifOperStatus) },			\
 	{ MIBDECL(ifLastChange) },			\
+	{ MIBDECL(ifInOctets) },			\
