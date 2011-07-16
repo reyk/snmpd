@@ -905,3 +905,4 @@ kinfo_proc(u_int32_t idx, struct kinfo_proc **kinfo)
 			nkp = 0;
 			return (-1);
 		}
+		nkp = count;
