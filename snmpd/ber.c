@@ -906,3 +906,4 @@ ber_dump_element(struct ber *ber, struct ber_element *root)
 		if (root->be_sub && ber_dump_element(ber, root->be_sub) == -1)
 			return -1;
 		break;
+	}
