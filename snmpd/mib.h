@@ -909,3 +909,4 @@
 	{ MIBDECL(ifInOctets) },			\
 	{ MIBDECL(ifInUcastPkts) },			\
 	{ MIBDECL(ifInNUcastPkts) },			\
+	{ MIBDECL(ifInDiscards) },			\
