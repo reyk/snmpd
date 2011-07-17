@@ -911,3 +911,4 @@
 	{ MIBDECL(ifInNUcastPkts) },			\
 	{ MIBDECL(ifInDiscards) },			\
 	{ MIBDECL(ifInErrors) },			\
+	{ MIBDECL(ifInUnknownProtos) },			\
