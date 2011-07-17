@@ -909,3 +909,4 @@ ber_dump_element(struct ber *ber, struct ber_element *root)
 	}
 
 	if (root->be_next == NULL)
+		return 0;
