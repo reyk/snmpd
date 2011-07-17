@@ -912,3 +912,4 @@ kinfo_proc(u_int32_t idx, struct kinfo_proc **kinfo)
 	if (klist == NULL)
 		return (-1);
 
+	for (i = 0; i < count; i++)
