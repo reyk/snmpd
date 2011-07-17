@@ -912,3 +912,4 @@ fetchtable(void)
 	size_t			 len;
 	char			*buf;
 	int			 rv;
+
