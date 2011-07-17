@@ -910,3 +910,4 @@ symset(const char *nam, const char *val, int persist)
 			free(sym);
 		}
 	}
+	if ((sym = calloc(1, sizeof(*sym))) == NULL)
