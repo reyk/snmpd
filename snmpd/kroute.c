@@ -909,3 +909,4 @@ int
 fetchtable(void)
 {
 	int			 mib[7];
+	size_t			 len;
