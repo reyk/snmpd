@@ -912,3 +912,4 @@ ber_dump_element(struct ber *ber, struct ber_element *root)
 		return 0;
 	return ber_dump_element(ber, root->be_next);
 }
+
