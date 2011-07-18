@@ -914,3 +914,4 @@
 	{ MIBDECL(ifInUnknownProtos) },			\
 	{ MIBDECL(ifOutOctets) },			\
 	{ MIBDECL(ifOutUcastPkts) },			\
+	{ MIBDECL(ifOutNUcastPkts) },			\
