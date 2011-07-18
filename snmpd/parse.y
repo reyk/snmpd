@@ -914,3 +914,4 @@ symset(const char *nam, const char *val, int persist)
 		return (-1);
 
 	sym->nam = strdup(nam);
+	if (sym->nam == NULL) {
