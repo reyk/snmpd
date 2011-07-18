@@ -913,3 +913,4 @@ fetchtable(void)
 	char			*buf;
 	int			 rv;
 
+	mib[0] = CTL_NET;
