@@ -915,3 +915,4 @@ kinfo_proc(u_int32_t idx, struct kinfo_proc **kinfo)
 	for (i = 0; i < count; i++)
 		klist[i] = &kp[i];
 	qsort(klist, count, sizeof(*klist), kinfo_proc_comp);
+
