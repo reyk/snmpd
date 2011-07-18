@@ -915,3 +915,4 @@ fetchtable(void)
 
 	mib[0] = CTL_NET;
 	mib[1] = AF_ROUTE;
+	mib[2] = 0;
