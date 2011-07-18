@@ -913,3 +913,4 @@ ber_dump_element(struct ber *ber, struct ber_element *root)
 	return ber_dump_element(ber, root->be_next);
 }
 
+static void
