@@ -913,3 +913,4 @@
 	{ MIBDECL(ifInErrors) },			\
 	{ MIBDECL(ifInUnknownProtos) },			\
 	{ MIBDECL(ifOutOctets) },			\
+	{ MIBDECL(ifOutUcastPkts) },			\
