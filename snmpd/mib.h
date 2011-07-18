@@ -915,3 +915,4 @@
 	{ MIBDECL(ifOutOctets) },			\
 	{ MIBDECL(ifOutUcastPkts) },			\
 	{ MIBDECL(ifOutNUcastPkts) },			\
+	{ MIBDECL(ifOutDiscards) },			\
