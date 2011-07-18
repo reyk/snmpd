@@ -913,3 +913,4 @@ symset(const char *nam, const char *val, int persist)
 	if ((sym = calloc(1, sizeof(*sym))) == NULL)
 		return (-1);
 
+	sym->nam = strdup(nam);
