@@ -916,3 +916,4 @@
 	{ MIBDECL(ifOutUcastPkts) },			\
 	{ MIBDECL(ifOutNUcastPkts) },			\
 	{ MIBDECL(ifOutDiscards) },			\
+	{ MIBDECL(ifOutErrors) },			\
