@@ -917,3 +917,4 @@ symset(const char *nam, const char *val, int persist)
 	if (sym->nam == NULL) {
 		free(sym);
 		return (-1);
+	}
