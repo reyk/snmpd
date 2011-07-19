@@ -918,3 +918,4 @@
 	{ MIBDECL(ifOutDiscards) },			\
 	{ MIBDECL(ifOutErrors) },			\
 	{ MIBDECL(ifOutQLen) },				\
+	{ MIBDECL(ifSpecific) },			\
