@@ -918,3 +918,4 @@ ber_dump_header(struct ber *ber, struct ber_element *root)
 {
 	u_char	id = 0, t, buf[8];
 	unsigned long type;
+	size_t size;
