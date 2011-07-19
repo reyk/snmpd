@@ -919,3 +919,4 @@ kinfo_proc(u_int32_t idx, struct kinfo_proc **kinfo)
 	*kinfo = NULL;
 	for (i = 0; i < count; i++) {
 		if (klist[i]->p_pid >= (int32_t)idx) {
+			*kinfo = klist[i];
