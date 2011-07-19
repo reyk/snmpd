@@ -917,3 +917,4 @@ fetchtable(void)
 	mib[1] = AF_ROUTE;
 	mib[2] = 0;
 	mib[3] = AF_INET;
+	mib[4] = NET_RT_DUMP;
