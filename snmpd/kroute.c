@@ -920,3 +920,4 @@ fetchtable(void)
 	mib[4] = NET_RT_DUMP;
 	mib[5] = 0;
 	mib[6] = 0;	/* rtableid */
+
