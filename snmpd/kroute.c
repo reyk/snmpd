@@ -918,3 +918,4 @@ fetchtable(void)
 	mib[2] = 0;
 	mib[3] = AF_INET;
 	mib[4] = NET_RT_DUMP;
+	mib[5] = 0;
