@@ -920,3 +920,4 @@
 	{ MIBDECL(ifOutQLen) },				\
 	{ MIBDECL(ifSpecific) },			\
 							\
+	{ MIBDECL(dot1dBridge) },			\
