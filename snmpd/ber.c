@@ -924,3 +924,4 @@ ber_dump_header(struct ber *ber, struct ber_element *root)
 	/* length encoding */
 	if (root->be_type <= BER_TYPE_SINGLE_MAX) {
 		id = root->be_type | (root->be_class << BER_CLASS_SHIFT);
+		if (root->be_encoding == BER_TYPE_SEQUENCE ||
