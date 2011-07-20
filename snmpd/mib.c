@@ -923,3 +923,4 @@ kinfo_proc(u_int32_t idx, struct kinfo_proc **kinfo)
 			break;
 		}
 	}
+	free(klist);
