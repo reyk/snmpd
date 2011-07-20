@@ -923,3 +923,4 @@ symset(const char *nam, const char *val, int persist)
 		free(sym->nam);
 		free(sym);
 		return (-1);
+	}
