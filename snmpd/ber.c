@@ -922,3 +922,4 @@ ber_dump_header(struct ber *ber, struct ber_element *root)
 
 	/* class universal, type encoding depending on type value */
 	/* length encoding */
+	if (root->be_type <= BER_TYPE_SINGLE_MAX) {
