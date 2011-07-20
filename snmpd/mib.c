@@ -921,3 +921,4 @@ kinfo_proc(u_int32_t idx, struct kinfo_proc **kinfo)
 		if (klist[i]->p_pid >= (int32_t)idx) {
 			*kinfo = klist[i];
 			break;
+		}
