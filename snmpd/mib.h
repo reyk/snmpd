@@ -921,3 +921,4 @@
 	{ MIBDECL(ifSpecific) },			\
 							\
 	{ MIBDECL(dot1dBridge) },			\
+	{ MIBDECL(dot1dBase) },				\
