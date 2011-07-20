@@ -921,3 +921,4 @@ ber_dump_header(struct ber *ber, struct ber_element *root)
 	size_t size;
 
 	/* class universal, type encoding depending on type value */
+	/* length encoding */
