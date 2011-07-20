@@ -922,3 +922,4 @@
 							\
 	{ MIBDECL(dot1dBridge) },			\
 	{ MIBDECL(dot1dBase) },				\
+	{ MIBDECL(dot1dBaseBridgeAddress) },		\
