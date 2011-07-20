@@ -921,3 +921,4 @@ fetchtable(void)
 	mib[5] = 0;
 	mib[6] = 0;	/* rtableid */
 
+	if (sysctl(mib, 7, NULL, &len, NULL, 0) == -1) {
