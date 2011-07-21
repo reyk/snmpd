@@ -925,3 +925,4 @@ symset(const char *nam, const char *val, int persist)
 		return (-1);
 	}
 	sym->used = 0;
+	sym->persist = persist;
