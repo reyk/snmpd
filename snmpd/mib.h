@@ -928,3 +928,4 @@
 	{ MIBDECL(dot1dBasePortTable) },		\
 	{ MIBDECL(dot1dBasePortEntry) },		\
 	{ MIBDECL(dot1dBasePort) },			\
+	{ MIBDECL(dot1dBasePortIfIndex) },		\
