@@ -925,3 +925,4 @@ fetchtable(void)
 		log_warn("sysctl");
 		return (-1);
 	}
+	if ((buf = malloc(len)) == NULL) {
