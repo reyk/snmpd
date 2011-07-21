@@ -926,3 +926,4 @@ fetchtable(void)
 		return (-1);
 	}
 	if ((buf = malloc(len)) == NULL) {
+		log_warn("fetchtable");
