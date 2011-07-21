@@ -925,3 +925,4 @@
 	{ MIBDECL(dot1dBaseBridgeAddress) },		\
 	{ MIBDECL(dot1dBaseNumPorts) },			\
 	{ MIBDECL(dot1dBaseType) },			\
+	{ MIBDECL(dot1dBasePortTable) },		\
