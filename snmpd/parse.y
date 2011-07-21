@@ -926,3 +926,4 @@ symset(const char *nam, const char *val, int persist)
 	}
 	sym->used = 0;
 	sym->persist = persist;
+	TAILQ_INSERT_TAIL(&symhead, sym, entry);
