@@ -930,3 +930,4 @@ kinfo_proc(u_int32_t idx, struct kinfo_proc **kinfo)
 
 int
 kinfo_args(struct kinfo_proc *kinfo, char **s)
+{
