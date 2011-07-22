@@ -932,3 +932,4 @@ int
 kinfo_args(struct kinfo_proc *kinfo, char **s)
 {
 	static char		 str[128];
+	static char		*buf = NULL;
