@@ -931,3 +931,4 @@
 	{ MIBDECL(dot1dBasePortIfIndex) },		\
 	{ MIBDECL(dot1dBasePortCircuit) },		\
 	{ MIBDECL(dot1dBasePortDelayExceededDiscards) },\
+	{ MIBDECL(dot1dBasePortMtuExceededDiscards) },	\
