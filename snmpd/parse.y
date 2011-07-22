@@ -930,3 +930,4 @@ symset(const char *nam, const char *val, int persist)
 	return (0);
 }
 
+int
