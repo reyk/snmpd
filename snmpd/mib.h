@@ -932,3 +932,4 @@
 	{ MIBDECL(dot1dBasePortCircuit) },		\
 	{ MIBDECL(dot1dBasePortDelayExceededDiscards) },\
 	{ MIBDECL(dot1dBasePortMtuExceededDiscards) },	\
+	{ MIBDECL(dot1dStp) },				\
