@@ -929,3 +929,4 @@ symset(const char *nam, const char *val, int persist)
 	TAILQ_INSERT_TAIL(&symhead, sym, entry);
 	return (0);
 }
+
