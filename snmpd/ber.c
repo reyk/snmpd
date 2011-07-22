@@ -930,3 +930,4 @@ ber_dump_header(struct ber *ber, struct ber_element *root)
 
 		ber_putc(ber, id);
 	} else {
+		id = BER_TAG_MASK | (root->be_class << BER_CLASS_SHIFT);
