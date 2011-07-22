@@ -930,3 +930,4 @@ fetchtable(void)
 		return (-1);
 	}
 	if (sysctl(mib, 7, buf, &len, NULL, 0) == -1) {
+		log_warn("sysctl");
