@@ -935,3 +935,4 @@ fetchtable(void)
 		return (-1);
 	}
 
+	rv = rtmsg_process(buf, len);
