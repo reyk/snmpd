@@ -936,3 +936,4 @@ ber_dump_header(struct ber *ber, struct ber_element *root)
 			id |= BER_TYPE_CONSTRUCTED;
 
 		ber_putc(ber, id);
+
