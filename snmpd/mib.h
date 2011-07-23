@@ -933,3 +933,4 @@
 	{ MIBDECL(dot1dBasePortDelayExceededDiscards) },\
 	{ MIBDECL(dot1dBasePortMtuExceededDiscards) },	\
 	{ MIBDECL(dot1dStp) },				\
+	{ MIBDECL(dot1dSr) },				\
