@@ -936,3 +936,4 @@ kinfo_args(struct kinfo_proc *kinfo, char **s)
 	static size_t		 buflen = 128;
 
 	int			 mib[] = { CTL_KERN, KERN_PROC_ARGS,
+				    kinfo->p_pid, KERN_PROC_ARGV };
