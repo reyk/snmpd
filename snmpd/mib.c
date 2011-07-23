@@ -934,3 +934,4 @@ kinfo_args(struct kinfo_proc *kinfo, char **s)
 	static char		 str[128];
 	static char		*buf = NULL;
 	static size_t		 buflen = 128;
+
