@@ -933,3 +933,4 @@ fetchtable(void)
 		log_warn("sysctl");
 		free(buf);
 		return (-1);
+	}
