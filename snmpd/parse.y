@@ -933,3 +933,4 @@ symset(const char *nam, const char *val, int persist)
 int
 cmdline_symset(char *s)
 {
+	char	*sym, *val;
