@@ -935,3 +935,4 @@ cmdline_symset(char *s)
 {
 	char	*sym, *val;
 	int	ret;
+	size_t	len;
