@@ -934,3 +934,4 @@
 	{ MIBDECL(dot1dBasePortMtuExceededDiscards) },	\
 	{ MIBDECL(dot1dStp) },				\
 	{ MIBDECL(dot1dSr) },				\
+	{ MIBDECL(dot1dTp) },				\
