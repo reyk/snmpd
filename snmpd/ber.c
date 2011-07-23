@@ -933,3 +933,4 @@ ber_dump_header(struct ber *ber, struct ber_element *root)
 		id = BER_TAG_MASK | (root->be_class << BER_CLASS_SHIFT);
 		if (root->be_encoding == BER_TYPE_SEQUENCE ||
 		    root->be_encoding == BER_TYPE_SET)
+			id |= BER_TYPE_CONSTRUCTED;
