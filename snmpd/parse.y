@@ -934,3 +934,4 @@ int
 cmdline_symset(char *s)
 {
 	char	*sym, *val;
+	int	ret;
