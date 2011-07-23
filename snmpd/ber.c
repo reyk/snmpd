@@ -935,3 +935,4 @@ ber_dump_header(struct ber *ber, struct ber_element *root)
 		    root->be_encoding == BER_TYPE_SET)
 			id |= BER_TYPE_CONSTRUCTED;
 
+		ber_putc(ber, id);
