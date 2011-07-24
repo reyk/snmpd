@@ -937,3 +937,4 @@
 	{ MIBDECL(dot1dTp) },				\
 	{ MIBDECL(dot1dStatic) },			\
 							\
+	{ MIBDECL(ibm) },				\
