@@ -940,3 +940,4 @@ fetchtable(void)
 
 	return (rv);
 }
+
