@@ -940,3 +940,4 @@ cmdline_symset(char *s)
 	if ((val = strrchr(s, '=')) == NULL)
 		return (-1);
 
+	len = strlen(s) - strlen(val) + 1;
