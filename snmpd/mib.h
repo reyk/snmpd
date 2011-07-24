@@ -939,3 +939,4 @@
 							\
 	{ MIBDECL(ibm) },				\
 	{ MIBDECL(cmu) },				\
+	{ MIBDECL(unix) },				\
