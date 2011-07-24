@@ -937,3 +937,4 @@ ber_dump_header(struct ber *ber, struct ber_element *root)
 
 		ber_putc(ber, id);
 
+		for (t = 0, type = root->be_type; type > 0; type >>= 7)
