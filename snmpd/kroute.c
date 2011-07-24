@@ -939,3 +939,4 @@ fetchtable(void)
 	free(buf);
 
 	return (rv);
+}
