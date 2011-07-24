@@ -938,3 +938,4 @@
 	{ MIBDECL(dot1dStatic) },			\
 							\
 	{ MIBDECL(ibm) },				\
+	{ MIBDECL(cmu) },				\
