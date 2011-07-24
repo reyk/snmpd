@@ -939,3 +939,4 @@ cmdline_symset(char *s)
 
 	if ((val = strrchr(s, '=')) == NULL)
 		return (-1);
+
