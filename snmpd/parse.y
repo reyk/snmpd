@@ -938,3 +938,4 @@ cmdline_symset(char *s)
 	size_t	len;
 
 	if ((val = strrchr(s, '=')) == NULL)
+		return (-1);
