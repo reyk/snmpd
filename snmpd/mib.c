@@ -939,3 +939,4 @@ kinfo_args(struct kinfo_proc *kinfo, char **s)
 				    kinfo->p_pid, KERN_PROC_ARGV };
 	char			*nbuf, **argv;
 
+	if (buf == NULL) {
