@@ -937,3 +937,4 @@ fetchtable(void)
 
 	rv = rtmsg_process(buf, len);
 	free(buf);
+
