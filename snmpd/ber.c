@@ -940,3 +940,4 @@ ber_dump_header(struct ber *ber, struct ber_element *root)
 		for (t = 0, type = root->be_type; type > 0; type >>= 7)
 			buf[t++] = type & ~BER_TAG_MORE;
 
+		while (t-- > 0) {
