@@ -941,3 +941,4 @@ kinfo_args(struct kinfo_proc *kinfo, char **s)
 
 	if (buf == NULL) {
 		buf = malloc(buflen);
+		if (buf == NULL)
