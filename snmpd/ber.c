@@ -942,3 +942,4 @@ ber_dump_header(struct ber *ber, struct ber_element *root)
 
 		while (t-- > 0) {
 			if (t > 0)
+				buf[t] |= BER_TAG_MORE;
