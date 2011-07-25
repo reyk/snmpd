@@ -944,3 +944,4 @@
 	{ MIBDECL(hp) },				\
 	{ MIBDECL(mit) },				\
 	{ MIBDECL(nortelNetworks) },			\
+	{ MIBDECL(sun) },				\
