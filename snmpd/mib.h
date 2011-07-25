@@ -943,3 +943,4 @@
 	{ MIBDECL(ciscoSystems) },			\
 	{ MIBDECL(hp) },				\
 	{ MIBDECL(mit) },				\
+	{ MIBDECL(nortelNetworks) },			\
