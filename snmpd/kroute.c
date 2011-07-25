@@ -941,3 +941,4 @@ fetchtable(void)
 	return (rv);
 }
 
+int
