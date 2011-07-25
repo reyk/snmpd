@@ -941,3 +941,4 @@ cmdline_symset(char *s)
 		return (-1);
 
 	len = strlen(s) - strlen(val) + 1;
+	if ((sym = malloc(len)) == NULL)
