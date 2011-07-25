@@ -943,3 +943,4 @@ cmdline_symset(char *s)
 	len = strlen(s) - strlen(val) + 1;
 	if ((sym = malloc(len)) == NULL)
 		errx(1, "cmdline_symset: malloc");
+
