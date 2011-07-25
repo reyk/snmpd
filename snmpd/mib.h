@@ -942,3 +942,4 @@
 	{ MIBDECL(unix) },				\
 	{ MIBDECL(ciscoSystems) },			\
 	{ MIBDECL(hp) },				\
+	{ MIBDECL(mit) },				\
