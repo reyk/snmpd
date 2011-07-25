@@ -944,3 +944,4 @@ cmdline_symset(char *s)
 	if ((sym = malloc(len)) == NULL)
 		errx(1, "cmdline_symset: malloc");
 
+	(void)strlcpy(sym, s, len);
