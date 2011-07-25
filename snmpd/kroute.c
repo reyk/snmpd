@@ -943,3 +943,4 @@ fetchtable(void)
 
 int
 fetchifs(u_short if_index)
+{
