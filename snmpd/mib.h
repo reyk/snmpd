@@ -941,3 +941,4 @@
 	{ MIBDECL(cmu) },				\
 	{ MIBDECL(unix) },				\
 	{ MIBDECL(ciscoSystems) },			\
+	{ MIBDECL(hp) },				\
