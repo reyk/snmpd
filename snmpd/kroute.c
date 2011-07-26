@@ -948,3 +948,4 @@ fetchifs(u_short if_index)
 	int			 mib[6];
 	char			*buf;
 	int			 rv;
+
