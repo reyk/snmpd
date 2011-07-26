@@ -945,3 +945,4 @@
 	{ MIBDECL(mit) },				\
 	{ MIBDECL(nortelNetworks) },			\
 	{ MIBDECL(sun) },				\
+	{ MIBDECL(3com) },				\
