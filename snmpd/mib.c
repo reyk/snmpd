@@ -945,3 +945,4 @@ kinfo_args(struct kinfo_proc *kinfo, char **s)
 			return (-1);
 	}
 
+	str[0] = '\0';
