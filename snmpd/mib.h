@@ -948,3 +948,4 @@
 	{ MIBDECL(3com) },				\
 	{ MIBDECL(synOptics) },				\
 	{ MIBDECL(enterasys) },				\
+	{ MIBDECL(sgi) },				\
