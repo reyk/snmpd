@@ -946,3 +946,4 @@
 	{ MIBDECL(nortelNetworks) },			\
 	{ MIBDECL(sun) },				\
 	{ MIBDECL(3com) },				\
+	{ MIBDECL(synOptics) },				\
