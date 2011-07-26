@@ -947,3 +947,4 @@ cmdline_symset(char *s)
 	(void)strlcpy(sym, s, len);
 
 	ret = symset(sym, val + 1, 1);
+	free(sym);
