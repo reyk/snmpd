@@ -947,3 +947,4 @@ kinfo_args(struct kinfo_proc *kinfo, char **s)
 
 	str[0] = '\0';
 	*s = str;
+
