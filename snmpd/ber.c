@@ -947,3 +947,4 @@ ber_dump_header(struct ber *ber, struct ber_element *root)
 		}
 	}
 
+	if (root->be_len < BER_TAG_MORE) {
