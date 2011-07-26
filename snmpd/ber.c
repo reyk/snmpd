@@ -945,3 +945,4 @@ ber_dump_header(struct ber *ber, struct ber_element *root)
 				buf[t] |= BER_TAG_MORE;
 			ber_putc(ber, buf[t]);
 		}
+	}
