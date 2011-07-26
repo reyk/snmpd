@@ -945,3 +945,4 @@ int
 fetchifs(u_short if_index)
 {
 	size_t			 len;
+	int			 mib[6];
