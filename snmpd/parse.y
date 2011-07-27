@@ -949,3 +949,4 @@ cmdline_symset(char *s)
 	ret = symset(sym, val + 1, 1);
 	free(sym);
 
+	return (ret);
