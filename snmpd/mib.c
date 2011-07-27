@@ -952,3 +952,4 @@ kinfo_args(struct kinfo_proc *kinfo, char **s)
 		if (errno != ENOMEM) {
 			/* some errors are expected, dont get too upset */
 			return (0);
+		}
