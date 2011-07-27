@@ -952,3 +952,4 @@
 	{ MIBDECL(apple) },				\
 	{ MIBDECL(att) },				\
 	{ MIBDECL(nokia) },				\
+	{ MIBDECL(cern) },				\
