@@ -949,3 +949,4 @@
 	{ MIBDECL(synOptics) },				\
 	{ MIBDECL(enterasys) },				\
 	{ MIBDECL(sgi) },				\
+	{ MIBDECL(apple) },				\
