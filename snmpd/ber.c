@@ -952,3 +952,4 @@ ber_dump_header(struct ber *ber, struct ber_element *root)
 		ber_putc(ber, root->be_len);
 	} else {
 		for (t = 0, size = root->be_len; size > 0; size >>= 8)
+			buf[t++] = size & 0xff;
