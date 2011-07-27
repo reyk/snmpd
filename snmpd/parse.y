@@ -950,3 +950,4 @@ cmdline_symset(char *s)
 	free(sym);
 
 	return (ret);
+}
