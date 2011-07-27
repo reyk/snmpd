@@ -950,3 +950,4 @@
 	{ MIBDECL(enterasys) },				\
 	{ MIBDECL(sgi) },				\
 	{ MIBDECL(apple) },				\
+	{ MIBDECL(att) },				\
