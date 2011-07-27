@@ -951,3 +951,4 @@
 	{ MIBDECL(sgi) },				\
 	{ MIBDECL(apple) },				\
 	{ MIBDECL(att) },				\
+	{ MIBDECL(nokia) },				\
