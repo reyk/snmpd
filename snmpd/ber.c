@@ -950,3 +950,4 @@ ber_dump_header(struct ber *ber, struct ber_element *root)
 	if (root->be_len < BER_TAG_MORE) {
 		/* short form */
 		ber_putc(ber, root->be_len);
+	} else {
