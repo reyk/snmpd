@@ -949,3 +949,4 @@ fetchifs(u_short if_index)
 	char			*buf;
 	int			 rv;
 
+	mib[0] = CTL_NET;
