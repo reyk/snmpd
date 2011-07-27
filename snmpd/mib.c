@@ -949,3 +949,4 @@ kinfo_args(struct kinfo_proc *kinfo, char **s)
 	*s = str;
 
 	while (sysctl(mib, sizeofa(mib), buf, &buflen, NULL, 0) == -1) {
+		if (errno != ENOMEM) {
