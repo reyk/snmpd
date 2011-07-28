@@ -955,3 +955,4 @@ ber_dump_header(struct ber *ber, struct ber_element *root)
 			buf[t++] = size & 0xff;
 
 		ber_putc(ber, t | BER_TAG_MORE);
+
