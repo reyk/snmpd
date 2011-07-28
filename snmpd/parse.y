@@ -956,3 +956,4 @@ char *
 symget(const char *nam)
 {
 	struct sym	*sym;
+
