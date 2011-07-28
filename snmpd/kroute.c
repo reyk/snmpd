@@ -953,3 +953,4 @@ fetchifs(u_short if_index)
 	mib[1] = AF_ROUTE;
 	mib[2] = 0;
 	mib[3] = 0;	/* wildcard address family */
+	mib[4] = NET_RT_IFLIST;
