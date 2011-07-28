@@ -955,3 +955,4 @@
 	{ MIBDECL(cern) },				\
 	{ MIBDECL(fsc) },				\
 	{ MIBDECL(compaq) },				\
+	{ MIBDECL(dell) },				\
