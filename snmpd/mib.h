@@ -954,3 +954,4 @@
 	{ MIBDECL(nokia) },				\
 	{ MIBDECL(cern) },				\
 	{ MIBDECL(fsc) },				\
+	{ MIBDECL(compaq) },				\
