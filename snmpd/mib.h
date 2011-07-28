@@ -953,3 +953,4 @@
 	{ MIBDECL(att) },				\
 	{ MIBDECL(nokia) },				\
 	{ MIBDECL(cern) },				\
+	{ MIBDECL(fsc) },				\
