@@ -956,3 +956,4 @@
 	{ MIBDECL(fsc) },				\
 	{ MIBDECL(compaq) },				\
 	{ MIBDECL(dell) },				\
+	{ MIBDECL(alteon) },				\
