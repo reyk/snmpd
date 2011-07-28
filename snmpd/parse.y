@@ -955,3 +955,4 @@ cmdline_symset(char *s)
 char *
 symget(const char *nam)
 {
+	struct sym	*sym;
