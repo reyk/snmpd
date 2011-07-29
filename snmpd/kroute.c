@@ -960,3 +960,4 @@ fetchifs(u_short if_index)
 		log_warn("sysctl");
 		return (-1);
 	}
+	if ((buf = malloc(len)) == NULL) {
