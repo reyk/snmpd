@@ -960,3 +960,4 @@ ber_dump_header(struct ber *ber, struct ber_element *root)
 			ber_putc(ber, buf[--t]);
 	}
 }
+
