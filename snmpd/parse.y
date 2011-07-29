@@ -958,3 +958,4 @@ symget(const char *nam)
 	struct sym	*sym;
 
 	TAILQ_FOREACH(sym, &symhead, entry)
+		if (strcmp(nam, sym->nam) == 0) {
