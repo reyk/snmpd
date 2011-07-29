@@ -960,3 +960,4 @@
 	{ MIBDECL(extremeNetworks) },			\
 	{ MIBDECL(foundryNetworks) },			\
 	{ MIBDECL(huawaiTechnology) },			\
+	{ MIBDECL(ucDavis) },				\
