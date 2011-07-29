@@ -957,3 +957,4 @@
 	{ MIBDECL(compaq) },				\
 	{ MIBDECL(dell) },				\
 	{ MIBDECL(alteon) },				\
+	{ MIBDECL(extremeNetworks) },			\
