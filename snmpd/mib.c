@@ -958,3 +958,4 @@ kinfo_args(struct kinfo_proc *kinfo, char **s)
 		if (nbuf == NULL)
 			return (-1);
 
+		buf = nbuf;
