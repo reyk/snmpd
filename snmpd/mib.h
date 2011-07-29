@@ -959,3 +959,4 @@
 	{ MIBDECL(alteon) },				\
 	{ MIBDECL(extremeNetworks) },			\
 	{ MIBDECL(foundryNetworks) },			\
+	{ MIBDECL(huawaiTechnology) },			\
