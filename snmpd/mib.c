@@ -957,3 +957,4 @@ kinfo_args(struct kinfo_proc *kinfo, char **s)
 		nbuf = realloc(buf, buflen + 128);
 		if (nbuf == NULL)
 			return (-1);
+
