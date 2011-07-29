@@ -958,3 +958,4 @@
 	{ MIBDECL(dell) },				\
 	{ MIBDECL(alteon) },				\
 	{ MIBDECL(extremeNetworks) },			\
+	{ MIBDECL(foundryNetworks) },			\
