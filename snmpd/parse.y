@@ -960,3 +960,4 @@ symget(const char *nam)
 	TAILQ_FOREACH(sym, &symhead, entry)
 		if (strcmp(nam, sym->nam) == 0) {
 			sym->used = 1;
+			return (sym->val);
