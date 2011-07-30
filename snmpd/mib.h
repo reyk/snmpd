@@ -964,3 +964,4 @@
 	{ MIBDECL(checkPoint) },			\
 	{ MIBDECL(juniper) },				\
 	{ MIBDECL(force10Networks) },			\
+	{ MIBDECL(alcatelLucent) },			\
