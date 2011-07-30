@@ -961,3 +961,4 @@ kinfo_args(struct kinfo_proc *kinfo, char **s)
 		buf = nbuf;
 		buflen += 128;
 	}
+
