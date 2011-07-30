@@ -964,3 +964,4 @@ kinfo_args(struct kinfo_proc *kinfo, char **s)
 
 	argv = (char **)buf;
 	if (argv[0] == NULL)
+		return (0);
