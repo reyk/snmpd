@@ -961,3 +961,4 @@ fetchifs(u_short if_index)
 		return (-1);
 	}
 	if ((buf = malloc(len)) == NULL) {
+		log_warn("fetchif");
