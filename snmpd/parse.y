@@ -962,3 +962,4 @@ symget(const char *nam)
 			sym->used = 1;
 			return (sym->val);
 		}
+	return (NULL);
