@@ -961,3 +961,4 @@
 	{ MIBDECL(foundryNetworks) },			\
 	{ MIBDECL(huawaiTechnology) },			\
 	{ MIBDECL(ucDavis) },				\
+	{ MIBDECL(checkPoint) },			\
