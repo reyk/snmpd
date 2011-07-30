@@ -964,3 +964,4 @@ ber_dump_header(struct ber *ber, struct ber_element *root)
 static void
 ber_putc(struct ber *ber, u_char c)
 {
+	if (ber->br_wptr + 1 <= ber->br_wend)
