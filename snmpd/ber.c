@@ -967,3 +967,4 @@ ber_putc(struct ber *ber, u_char c)
 	if (ber->br_wptr + 1 <= ber->br_wend)
 		*ber->br_wptr = c;
 	ber->br_wptr++;
+}
