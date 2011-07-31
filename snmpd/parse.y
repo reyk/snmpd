@@ -968,3 +968,4 @@ symget(const char *nam)
 struct address *
 host_v4(const char *s)
 {
+	struct in_addr		 ina;
