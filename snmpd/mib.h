@@ -967,3 +967,4 @@
 	{ MIBDECL(alcatelLucent) },			\
 	{ MIBDECL(snom) },				\
 	{ MIBDECL(google) },				\
+	{ MIBDECL(f5Networks) },			\
