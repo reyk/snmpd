@@ -968,3 +968,4 @@ fetchifs(u_short if_index)
 		log_warn("sysctl");
 		free(buf);
 		return (-1);
+	}
