@@ -965,3 +965,4 @@ symget(const char *nam)
 	return (NULL);
 }
 
+struct address *
