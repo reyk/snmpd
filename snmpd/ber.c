@@ -968,3 +968,4 @@ ber_putc(struct ber *ber, u_char c)
 		*ber->br_wptr = c;
 	ber->br_wptr++;
 }
+
