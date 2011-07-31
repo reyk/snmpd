@@ -965,3 +965,4 @@
 	{ MIBDECL(juniper) },				\
 	{ MIBDECL(force10Networks) },			\
 	{ MIBDECL(alcatelLucent) },			\
+	{ MIBDECL(snom) },				\
