@@ -965,3 +965,4 @@ fetchifs(u_short if_index)
 		return (-1);
 	}
 	if (sysctl(mib, 6, buf, &len, NULL, 0) == -1) {
+		log_warn("sysctl");
