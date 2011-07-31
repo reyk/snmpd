@@ -968,3 +968,4 @@
 	{ MIBDECL(snom) },				\
 	{ MIBDECL(google) },				\
 	{ MIBDECL(f5Networks) },			\
+	{ MIBDECL(sFlow) },				\
