@@ -970,3 +970,4 @@
 	{ MIBDECL(f5Networks) },			\
 	{ MIBDECL(sFlow) },				\
 	{ MIBDECL(microSystems) },			\
+	{ MIBDECL(vantronix) },				\
