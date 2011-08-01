@@ -969,3 +969,4 @@
 	{ MIBDECL(google) },				\
 	{ MIBDECL(f5Networks) },			\
 	{ MIBDECL(sFlow) },				\
+	{ MIBDECL(microSystems) },			\
