@@ -970,3 +970,4 @@ fetchifs(u_short if_index)
 		return (-1);
 	}
 
+	rv = rtmsg_process(buf, len);
