@@ -971,3 +971,4 @@ host_v4(const char *s)
 	struct in_addr		 ina;
 	struct sockaddr_in	*sain;
 	struct address		*h;
+
