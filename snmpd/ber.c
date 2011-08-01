@@ -969,3 +969,4 @@ ber_putc(struct ber *ber, u_char c)
 	ber->br_wptr++;
 }
 
+static void
