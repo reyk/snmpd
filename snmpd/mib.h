@@ -971,3 +971,4 @@
 	{ MIBDECL(sFlow) },				\
 	{ MIBDECL(microSystems) },			\
 	{ MIBDECL(vantronix) },				\
+	{ MIBDECL(openBSD) },				\
