@@ -972,3 +972,4 @@ ber_putc(struct ber *ber, u_char c)
 static void
 ber_write(struct ber *ber, void *buf, size_t len)
 {
+	if (ber->br_wptr + len <= ber->br_wend)
