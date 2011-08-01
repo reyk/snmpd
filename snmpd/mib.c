@@ -971,3 +971,4 @@ kinfo_args(struct kinfo_proc *kinfo, char **s)
 		strlcat(str, *argv, sizeof(str));
 		argv++;
 		if (*argv != NULL)
+			strlcat(str, " ", sizeof(str));
