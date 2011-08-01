@@ -972,3 +972,4 @@
 	{ MIBDECL(microSystems) },			\
 	{ MIBDECL(vantronix) },				\
 	{ MIBDECL(openBSD) },				\
+							\
