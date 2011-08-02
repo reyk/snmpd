@@ -974,3 +974,4 @@
 	{ MIBDECL(openBSD) },				\
 							\
 	{ MIBDECL(ucdExperimental) },			\
+	{ MIBDECL(ucdDiskIOMIB) },			\
