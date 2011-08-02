@@ -973,3 +973,4 @@
 	{ MIBDECL(vantronix) },				\
 	{ MIBDECL(openBSD) },				\
 							\
+	{ MIBDECL(ucdExperimental) },			\
