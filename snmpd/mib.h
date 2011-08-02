@@ -975,3 +975,4 @@
 							\
 	{ MIBDECL(ucdExperimental) },			\
 	{ MIBDECL(ucdDiskIOMIB) },			\
+	{ MIBDECL(diskIOTable) },			\
