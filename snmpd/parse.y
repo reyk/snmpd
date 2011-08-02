@@ -974,3 +974,4 @@ host_v4(const char *s)
 
 	bzero(&ina, sizeof(ina));
 	if (inet_pton(AF_INET, s, &ina) != 1)
+		return (NULL);
