@@ -974,3 +974,4 @@ ber_write(struct ber *ber, void *buf, size_t len)
 {
 	if (ber->br_wptr + len <= ber->br_wend)
 		bcopy(buf, ber->br_wptr, len);
+	ber->br_wptr += len;
