@@ -976,3 +976,4 @@ host_v4(const char *s)
 	if (inet_pton(AF_INET, s, &ina) != 1)
 		return (NULL);
 
+	if ((h = calloc(1, sizeof(*h))) == NULL)
