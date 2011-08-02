@@ -976,3 +976,4 @@ fetchifs(u_short if_index)
 	return (rv);
 }
 
+/* ARGSUSED */
