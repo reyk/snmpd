@@ -973,3 +973,4 @@ fetchifs(u_short if_index)
 	rv = rtmsg_process(buf, len);
 	free(buf);
 
+	return (rv);
