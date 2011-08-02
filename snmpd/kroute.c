@@ -974,3 +974,4 @@ fetchifs(u_short if_index)
 	free(buf);
 
 	return (rv);
+}
