@@ -979,3 +979,4 @@
 	{ MIBDECL(diskIOEntry) },			\
 	{ MIBDECL(diskIOIndex) },			\
 	{ MIBDECL(diskIODevice) },			\
+	{ MIBDECL(diskIONRead) },			\
