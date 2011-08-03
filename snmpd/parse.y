@@ -980,3 +980,4 @@ host_v4(const char *s)
 		fatal(NULL);
 	sain = (struct sockaddr_in *)&h->ss;
 	sain->sin_len = sizeof(struct sockaddr_in);
+	sain->sin_family = AF_INET;
