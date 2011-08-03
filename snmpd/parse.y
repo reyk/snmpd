@@ -978,3 +978,4 @@ host_v4(const char *s)
 
 	if ((h = calloc(1, sizeof(*h))) == NULL)
 		fatal(NULL);
+	sain = (struct sockaddr_in *)&h->ss;
