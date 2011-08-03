@@ -977,3 +977,4 @@ ber_write(struct ber *ber, void *buf, size_t len)
 	ber->br_wptr += len;
 }
 
+/*
