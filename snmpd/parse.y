@@ -977,3 +977,4 @@ host_v4(const char *s)
 		return (NULL);
 
 	if ((h = calloc(1, sizeof(*h))) == NULL)
+		fatal(NULL);
