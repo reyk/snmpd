@@ -978,3 +978,4 @@
 	{ MIBDECL(diskIOTable) },			\
 	{ MIBDECL(diskIOEntry) },			\
 	{ MIBDECL(diskIOIndex) },			\
+	{ MIBDECL(diskIODevice) },			\
