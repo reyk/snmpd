@@ -980,3 +980,4 @@ ber_write(struct ber *ber, void *buf, size_t len)
 /*
  * extract a BER encoded tag. There are two types, a short and long form.
  */
+static ssize_t
