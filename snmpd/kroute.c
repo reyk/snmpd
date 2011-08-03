@@ -980,3 +980,4 @@ fetchifs(u_short if_index)
 void
 dispatch_rtmsg(int fd, short event, void *arg)
 {
+	char			 buf[RT_BUF_SIZE];
