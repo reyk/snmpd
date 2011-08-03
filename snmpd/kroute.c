@@ -978,3 +978,4 @@ fetchifs(u_short if_index)
 
 /* ARGSUSED */
 void
+dispatch_rtmsg(int fd, short event, void *arg)
