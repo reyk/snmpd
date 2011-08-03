@@ -977,3 +977,4 @@
 	{ MIBDECL(ucdDiskIOMIB) },			\
 	{ MIBDECL(diskIOTable) },			\
 	{ MIBDECL(diskIOEntry) },			\
+	{ MIBDECL(diskIOIndex) },			\
