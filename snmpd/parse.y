@@ -982,3 +982,4 @@ host_v4(const char *s)
 	sain->sin_len = sizeof(struct sockaddr_in);
 	sain->sin_family = AF_INET;
 	sain->sin_addr.s_addr = ina.s_addr;
+
