@@ -983,3 +983,4 @@ ber_write(struct ber *ber, void *buf, size_t len)
 static ssize_t
 get_id(struct ber *b, unsigned long *tag, int *class, int *cstruct)
 {
+	u_char u;
