@@ -983,3 +983,4 @@ host_v4(const char *s)
 	sain->sin_family = AF_INET;
 	sain->sin_addr.s_addr = ina.s_addr;
 
+	return (h);
