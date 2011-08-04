@@ -984,3 +984,4 @@ static ssize_t
 get_id(struct ber *b, unsigned long *tag, int *class, int *cstruct)
 {
 	u_char u;
+	size_t i = 0;
