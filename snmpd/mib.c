@@ -984,3 +984,4 @@ kinfo_args(struct kinfo_proc *kinfo, char **s)
 int	 mib_ifnumber(struct oid *, struct ber_oid *, struct ber_element **);
 struct kif
 	*mib_ifget(u_int);
+int	 mib_iftable(struct oid *, struct ber_oid *, struct ber_element **);
