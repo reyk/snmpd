@@ -981,3 +981,4 @@ kinfo_args(struct kinfo_proc *kinfo, char **s)
  * Defined in IF-MIB.txt (RFCs 1229, 1573, 2233, 2863)
  */
 
+int	 mib_ifnumber(struct oid *, struct ber_oid *, struct ber_element **);
