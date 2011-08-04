@@ -983,3 +983,4 @@ dispatch_rtmsg(int fd, short event, void *arg)
 	char			 buf[RT_BUF_SIZE];
 	ssize_t			 n;
 
+	if ((n = read(fd, &buf, sizeof(buf))) == -1) {
