@@ -982,3 +982,4 @@
 	{ MIBDECL(diskIONRead) },			\
 	{ MIBDECL(diskIONWritten) },			\
 	{ MIBDECL(diskIOReads) },			\
+	{ MIBDECL(diskIOWrites) },			\
