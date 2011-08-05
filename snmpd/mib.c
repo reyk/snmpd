@@ -988,3 +988,4 @@ int	 mib_iftable(struct oid *, struct ber_oid *, struct ber_element **);
 int	 mib_ifxtable(struct oid *, struct ber_oid *, struct ber_element **);
 int	 mib_ifstacklast(struct oid *, struct ber_oid *, struct ber_element **);
 int	 mib_ifrcvtable(struct oid *, struct ber_oid *, struct ber_element **);
+
