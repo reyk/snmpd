@@ -987,3 +987,4 @@
 	{ MIBDECL(diskIONWrittenX) },			\
 							\
 	{ MIBDECL(pfMIBObjects) },			\
+	{ MIBDECL(pfInfo) },				\
