@@ -985,3 +985,4 @@ host_v4(const char *s)
 
 	return (h);
 }
+
