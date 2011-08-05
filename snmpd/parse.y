@@ -988,3 +988,4 @@ host_v4(const char *s)
 
 struct address *
 host_v6(const char *s)
+{
