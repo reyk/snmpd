@@ -985,3 +985,4 @@ dispatch_rtmsg(int fd, short event, void *arg)
 
 	if ((n = read(fd, &buf, sizeof(buf))) == -1) {
 		log_warn("dispatch_rtmsg: read error");
+		return;
