@@ -989,3 +989,4 @@ int	 mib_ifxtable(struct oid *, struct ber_oid *, struct ber_element **);
 int	 mib_ifstacklast(struct oid *, struct ber_oid *, struct ber_element **);
 int	 mib_ifrcvtable(struct oid *, struct ber_oid *, struct ber_element **);
 
+static u_int8_t ether_zeroaddr[] = { 0x00, 0x00, 0x00, 0x00, 0x00, 0x00 };
