@@ -991,3 +991,4 @@ get_id(struct ber *b, unsigned long *tag, int *class, int *cstruct)
 		return -1;
 
 	*class = (u >> BER_CLASS_SHIFT) & BER_CLASS_MASK;
+	*cstruct = (u & BER_TYPE_CONSTRUCTED) == BER_TYPE_CONSTRUCTED;
