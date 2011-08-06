@@ -992,3 +992,4 @@
 	{ MIBDECL(pfRuntime) },				\
 	{ MIBDECL(pfDebug) },				\
 	{ MIBDECL(pfHostid) },				\
+	{ MIBDECL(pfCounters) },			\
