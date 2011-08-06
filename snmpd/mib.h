@@ -989,3 +989,4 @@
 	{ MIBDECL(pfMIBObjects) },			\
 	{ MIBDECL(pfInfo) },				\
 	{ MIBDECL(pfRunning) },				\
+	{ MIBDECL(pfRuntime) },				\
