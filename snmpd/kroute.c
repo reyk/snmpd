@@ -989,3 +989,4 @@ dispatch_rtmsg(int fd, short event, void *arg)
 	}
 
 	if (n == 0) {
+		log_warnx("routing socket closed");
