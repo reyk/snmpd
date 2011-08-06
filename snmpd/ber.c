@@ -990,3 +990,4 @@ get_id(struct ber *b, unsigned long *tag, int *class, int *cstruct)
 	if (ber_getc(b, &u) == -1)
 		return -1;
 
+	*class = (u >> BER_CLASS_SHIFT) & BER_CLASS_MASK;
