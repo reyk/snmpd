@@ -992,3 +992,4 @@ int	 mib_ifrcvtable(struct oid *, struct ber_oid *, struct ber_element **);
 static u_int8_t ether_zeroaddr[] = { 0x00, 0x00, 0x00, 0x00, 0x00, 0x00 };
 
 static struct oid if_mib[] = {
+	{ MIB(ifMIB),			OID_MIB },
