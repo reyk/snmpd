@@ -990,3 +990,4 @@
 	{ MIBDECL(pfInfo) },				\
 	{ MIBDECL(pfRunning) },				\
 	{ MIBDECL(pfRuntime) },				\
+	{ MIBDECL(pfDebug) },				\
