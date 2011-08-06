@@ -992,3 +992,4 @@ host_v6(const char *s)
 	struct addrinfo		 hints, *res;
 	struct sockaddr_in6	*sa_in6;
 	struct address		*h = NULL;
+
