@@ -996,3 +996,4 @@
 	{ MIBDECL(pfCntMatch) },			\
 	{ MIBDECL(pfCntBadOffset) },			\
 	{ MIBDECL(pfCntFragment) },			\
+	{ MIBDECL(pfCntShort) },			\
