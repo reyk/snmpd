@@ -993,3 +993,4 @@ dispatch_rtmsg(int fd, short event, void *arg)
 		return;
 	}
 
+	rtmsg_process(buf, n);
