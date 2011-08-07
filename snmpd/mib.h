@@ -994,3 +994,4 @@
 	{ MIBDECL(pfHostid) },				\
 	{ MIBDECL(pfCounters) },			\
 	{ MIBDECL(pfCntMatch) },			\
+	{ MIBDECL(pfCntBadOffset) },			\
