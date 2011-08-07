@@ -995,3 +995,4 @@
 	{ MIBDECL(pfCounters) },			\
 	{ MIBDECL(pfCntMatch) },			\
 	{ MIBDECL(pfCntBadOffset) },			\
+	{ MIBDECL(pfCntFragment) },			\
