@@ -994,3 +994,4 @@ static u_int8_t ether_zeroaddr[] = { 0x00, 0x00, 0x00, 0x00, 0x00, 0x00 };
 static struct oid if_mib[] = {
 	{ MIB(ifMIB),			OID_MIB },
 	{ MIB(ifName),			OID_TRD, mib_ifxtable },
+	{ MIB(ifInMulticastPkts),	OID_TRD, mib_ifxtable },
