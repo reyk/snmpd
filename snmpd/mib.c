@@ -995,3 +995,4 @@ static struct oid if_mib[] = {
 	{ MIB(ifMIB),			OID_MIB },
 	{ MIB(ifName),			OID_TRD, mib_ifxtable },
 	{ MIB(ifInMulticastPkts),	OID_TRD, mib_ifxtable },
+	{ MIB(ifInBroadcastPkts),	OID_TRD, mib_ifxtable },
