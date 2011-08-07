@@ -993,3 +993,4 @@
 	{ MIBDECL(pfDebug) },				\
 	{ MIBDECL(pfHostid) },				\
 	{ MIBDECL(pfCounters) },			\
+	{ MIBDECL(pfCntMatch) },			\
