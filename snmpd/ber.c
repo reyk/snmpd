@@ -995,3 +995,4 @@ get_id(struct ber *b, unsigned long *tag, int *class, int *cstruct)
 
 	if ((u & BER_TAG_MASK) != BER_TAG_MASK) {
 		*tag = u & BER_TAG_MASK;
+		return 1;
