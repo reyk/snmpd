@@ -994,3 +994,4 @@ host_v6(const char *s)
 	struct address		*h = NULL;
 
 	bzero(&hints, sizeof(hints));
+	hints.ai_family = AF_INET6;
