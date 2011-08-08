@@ -997,3 +997,4 @@
 	{ MIBDECL(pfCntBadOffset) },			\
 	{ MIBDECL(pfCntFragment) },			\
 	{ MIBDECL(pfCntShort) },			\
+	{ MIBDECL(pfCntNormalize) },			\
