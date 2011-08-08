@@ -997,3 +997,4 @@ host_v6(const char *s)
 	hints.ai_family = AF_INET6;
 	hints.ai_socktype = SOCK_DGRAM; /* dummy */
 	hints.ai_flags = AI_NUMERICHOST;
+	if (getaddrinfo(s, "0", &hints, &res) == 0) {
