@@ -998,3 +998,4 @@
 	{ MIBDECL(pfCntFragment) },			\
 	{ MIBDECL(pfCntShort) },			\
 	{ MIBDECL(pfCntNormalize) },			\
+	{ MIBDECL(pfCntMemory) },			\
