@@ -1000,3 +1000,4 @@
 	{ MIBDECL(pfCntNormalize) },			\
 	{ MIBDECL(pfCntMemory) },			\
 	{ MIBDECL(pfCntTimestamp) },			\
+	{ MIBDECL(pfCntCongestion) },			\
