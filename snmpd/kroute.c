@@ -999,3 +999,4 @@ dispatch_rtmsg(int fd, short event, void *arg)
 int
 rtmsg_process(char *buf, int len)
 {
+	struct rt_msghdr	*rtm;
