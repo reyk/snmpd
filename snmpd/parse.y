@@ -1000,3 +1000,4 @@ host_v6(const char *s)
 	if (getaddrinfo(s, "0", &hints, &res) == 0) {
 		if ((h = calloc(1, sizeof(*h))) == NULL)
 			fatal(NULL);
+		sa_in6 = (struct sockaddr_in6 *)&h->ss;
