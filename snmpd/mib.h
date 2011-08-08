@@ -999,3 +999,4 @@
 	{ MIBDECL(pfCntShort) },			\
 	{ MIBDECL(pfCntNormalize) },			\
 	{ MIBDECL(pfCntMemory) },			\
+	{ MIBDECL(pfCntTimestamp) },			\
