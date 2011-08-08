@@ -997,3 +997,4 @@ get_id(struct ber *b, unsigned long *tag, int *class, int *cstruct)
 		*tag = u & BER_TAG_MASK;
 		return 1;
 	}
+
