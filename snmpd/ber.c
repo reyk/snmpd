@@ -1000,3 +1000,4 @@ get_id(struct ber *b, unsigned long *tag, int *class, int *cstruct)
 
 	do {
 		if (ber_getc(b, &u) == -1)
+			return -1;
