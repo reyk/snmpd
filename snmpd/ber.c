@@ -1001,3 +1001,4 @@ get_id(struct ber *b, unsigned long *tag, int *class, int *cstruct)
 	do {
 		if (ber_getc(b, &u) == -1)
 			return -1;
+		t = (t << 7) | (u & ~BER_TAG_MORE);
