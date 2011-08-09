@@ -1001,3 +1001,4 @@ rtmsg_process(char *buf, int len)
 {
 	struct rt_msghdr	*rtm;
 	struct if_msghdr	 ifm;
+	struct ifa_msghdr	*ifam;
