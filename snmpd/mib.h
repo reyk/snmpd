@@ -1002,3 +1002,4 @@
 	{ MIBDECL(pfCntTimestamp) },			\
 	{ MIBDECL(pfCntCongestion) },			\
 	{ MIBDECL(pfCntIpOptions) },			\
+	{ MIBDECL(pfCntProtoCksum) },			\
