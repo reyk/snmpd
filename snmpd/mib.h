@@ -1004,3 +1004,4 @@
 	{ MIBDECL(pfCntIpOptions) },			\
 	{ MIBDECL(pfCntProtoCksum) },			\
 	{ MIBDECL(pfCntStateMismatch) },		\
+	{ MIBDECL(pfCntStateInsert) },			\
