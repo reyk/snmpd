@@ -1004,3 +1004,4 @@ rtmsg_process(char *buf, int len)
 	struct ifa_msghdr	*ifam;
 	struct sockaddr		*sa, *rti_info[RTAX_MAX];
 	int			 offset;
+	char			*next;
