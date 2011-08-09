@@ -1002,3 +1002,4 @@ host_v6(const char *s)
 			fatal(NULL);
 		sa_in6 = (struct sockaddr_in6 *)&h->ss;
 		sa_in6->sin6_len = sizeof(struct sockaddr_in6);
+		sa_in6->sin6_family = AF_INET6;
