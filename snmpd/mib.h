@@ -1003,3 +1003,4 @@
 	{ MIBDECL(pfCntCongestion) },			\
 	{ MIBDECL(pfCntIpOptions) },			\
 	{ MIBDECL(pfCntProtoCksum) },			\
+	{ MIBDECL(pfCntStateMismatch) },		\
