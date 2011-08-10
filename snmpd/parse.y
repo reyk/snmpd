@@ -1007,3 +1007,4 @@ host_v6(const char *s)
 		    &((struct sockaddr_in6 *)res->ai_addr)->sin6_addr,
 		    sizeof(sa_in6->sin6_addr));
 		sa_in6->sin6_scope_id =
+		    ((struct sockaddr_in6 *)res->ai_addr)->sin6_scope_id;
