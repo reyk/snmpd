@@ -1008,3 +1008,4 @@ static struct oid if_mib[] = {
 	{ MIB(ifHCOutBroadcastPkts),	OID_TRD, mib_ifxtable },
 	{ MIB(ifLinkUpDownTrapEnable),	OID_TRD, mib_ifxtable },
 	{ MIB(ifHighSpeed),		OID_TRD, mib_ifxtable },
+	{ MIB(ifPromiscuousMode),	OID_TRD, mib_ifxtable },
