@@ -1005,3 +1005,4 @@ static struct oid if_mib[] = {
 	{ MIB(ifHCOutOctets),		OID_TRD, mib_ifxtable },
 	{ MIB(ifHCOutUcastPkts),	OID_TRD, mib_ifxtable },
 	{ MIB(ifHCOutMulticastPkts),	OID_TRD, mib_ifxtable },
+	{ MIB(ifHCOutBroadcastPkts),	OID_TRD, mib_ifxtable },
