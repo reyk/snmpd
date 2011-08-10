@@ -1007,3 +1007,4 @@ get_id(struct ber *b, unsigned long *tag, int *class, int *cstruct)
 
 	if (i > sizeof(unsigned long)) {
 		errno = ERANGE;
+		return -1;
