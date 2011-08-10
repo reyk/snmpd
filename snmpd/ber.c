@@ -1006,3 +1006,4 @@ get_id(struct ber *b, unsigned long *tag, int *class, int *cstruct)
 	} while (u & BER_TAG_MORE);
 
 	if (i > sizeof(unsigned long)) {
+		errno = ERANGE;
