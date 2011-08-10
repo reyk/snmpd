@@ -1006,3 +1006,4 @@ host_v6(const char *s)
 		memcpy(&sa_in6->sin6_addr,
 		    &((struct sockaddr_in6 *)res->ai_addr)->sin6_addr,
 		    sizeof(sa_in6->sin6_addr));
+		sa_in6->sin6_scope_id =
