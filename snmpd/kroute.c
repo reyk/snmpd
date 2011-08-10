@@ -1007,3 +1007,4 @@ rtmsg_process(char *buf, int len)
 	char			*next;
 
 	for (offset = 0; offset < len; offset += rtm->rtm_msglen) {
+		next = buf + offset;
