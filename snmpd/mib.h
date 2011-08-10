@@ -1008,3 +1008,4 @@
 	{ MIBDECL(pfCntStateLimit) },			\
 	{ MIBDECL(pfCntSrcLimit) },			\
 	{ MIBDECL(pfCntSynproxy) },			\
+	{ MIBDECL(pfCntTranslate) },			\
