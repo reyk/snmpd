@@ -1008,3 +1008,4 @@ rtmsg_process(char *buf, int len)
 
 	for (offset = 0; offset < len; offset += rtm->rtm_msglen) {
 		next = buf + offset;
+		rtm = (struct rt_msghdr *)next;
