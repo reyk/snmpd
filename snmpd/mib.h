@@ -1006,3 +1006,4 @@
 	{ MIBDECL(pfCntStateMismatch) },		\
 	{ MIBDECL(pfCntStateInsert) },			\
 	{ MIBDECL(pfCntStateLimit) },			\
+	{ MIBDECL(pfCntSrcLimit) },			\
