@@ -1010,3 +1010,4 @@
 	{ MIBDECL(pfCntSynproxy) },			\
 	{ MIBDECL(pfCntTranslate) },			\
 	{ MIBDECL(pfStateTable) },			\
+	{ MIBDECL(pfStateCount) },			\
