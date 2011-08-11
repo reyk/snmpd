@@ -1010,3 +1010,4 @@ static struct oid if_mib[] = {
 	{ MIB(ifHighSpeed),		OID_TRD, mib_ifxtable },
 	{ MIB(ifPromiscuousMode),	OID_TRD, mib_ifxtable },
 	{ MIB(ifConnectorPresent),	OID_TRD, mib_ifxtable },
+	{ MIB(ifAlias),			OID_TRD, mib_ifxtable },
