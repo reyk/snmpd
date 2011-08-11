@@ -1012,3 +1012,4 @@ static struct oid if_mib[] = {
 	{ MIB(ifConnectorPresent),	OID_TRD, mib_ifxtable },
 	{ MIB(ifAlias),			OID_TRD, mib_ifxtable },
 	{ MIB(ifCounterDiscontinuityTime), OID_TRD, mib_ifxtable },
+	{ MIB(ifRcvAddressStatus),	OID_TRD, mib_ifrcvtable },
