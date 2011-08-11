@@ -1012,3 +1012,4 @@ get_id(struct ber *b, unsigned long *tag, int *class, int *cstruct)
 
 	*tag = t;
 	return i + 1;
+}
