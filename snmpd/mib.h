@@ -1011,3 +1011,4 @@
 	{ MIBDECL(pfCntTranslate) },			\
 	{ MIBDECL(pfStateTable) },			\
 	{ MIBDECL(pfStateCount) },			\
+	{ MIBDECL(pfStateSearches) },			\
