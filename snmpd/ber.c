@@ -1009,3 +1009,4 @@ get_id(struct ber *b, unsigned long *tag, int *class, int *cstruct)
 		errno = ERANGE;
 		return -1;
 	}
+
