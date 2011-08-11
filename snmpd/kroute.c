@@ -1010,3 +1010,4 @@ rtmsg_process(char *buf, int len)
 		next = buf + offset;
 		rtm = (struct rt_msghdr *)next;
 		if (rtm->rtm_version != RTM_VERSION)
+			continue;
