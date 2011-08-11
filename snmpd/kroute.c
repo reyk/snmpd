@@ -1012,3 +1012,4 @@ rtmsg_process(char *buf, int len)
 		if (rtm->rtm_version != RTM_VERSION)
 			continue;
 
+		sa = (struct sockaddr *)(next + rtm->rtm_hdrlen);
