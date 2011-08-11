@@ -1011,3 +1011,4 @@ host_v6(const char *s)
 
 		freeaddrinfo(res);
 	}
+
