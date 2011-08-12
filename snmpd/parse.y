@@ -1015,3 +1015,4 @@ host_v6(const char *s)
 	return (h);
 }
 
+int
