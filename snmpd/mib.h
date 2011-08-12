@@ -1015,3 +1015,4 @@
 	{ MIBDECL(pfStateInserts) },			\
 	{ MIBDECL(pfStateRemovals) },			\
 	{ MIBDECL(pfLogInterface) },			\
+	{ MIBDECL(pfLogIfName) },			\
