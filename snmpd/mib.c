@@ -1014,3 +1014,4 @@ static struct oid if_mib[] = {
 	{ MIB(ifCounterDiscontinuityTime), OID_TRD, mib_ifxtable },
 	{ MIB(ifRcvAddressStatus),	OID_TRD, mib_ifrcvtable },
 	{ MIB(ifRcvAddressType),	OID_TRD, mib_ifrcvtable },
+	{ MIB(ifStackLastChange),	OID_RD, mib_ifstacklast },
