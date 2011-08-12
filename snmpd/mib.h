@@ -1016,3 +1016,4 @@
 	{ MIBDECL(pfStateRemovals) },			\
 	{ MIBDECL(pfLogInterface) },			\
 	{ MIBDECL(pfLogIfName) },			\
+	{ MIBDECL(pfLogIfIpBytesIn) },			\
