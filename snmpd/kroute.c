@@ -1014,3 +1014,4 @@ rtmsg_process(char *buf, int len)
 
 		sa = (struct sockaddr *)(next + rtm->rtm_hdrlen);
 		get_rtaddrs(rtm->rtm_addrs, sa, rti_info);
+
