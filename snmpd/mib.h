@@ -1014,3 +1014,4 @@
 	{ MIBDECL(pfStateSearches) },			\
 	{ MIBDECL(pfStateInserts) },			\
 	{ MIBDECL(pfStateRemovals) },			\
+	{ MIBDECL(pfLogInterface) },			\
