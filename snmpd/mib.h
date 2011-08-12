@@ -1013,3 +1013,4 @@
 	{ MIBDECL(pfStateCount) },			\
 	{ MIBDECL(pfStateSearches) },			\
 	{ MIBDECL(pfStateInserts) },			\
+	{ MIBDECL(pfStateRemovals) },			\
