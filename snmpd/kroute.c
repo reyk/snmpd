@@ -1016,3 +1016,4 @@ rtmsg_process(char *buf, int len)
 		get_rtaddrs(rtm->rtm_addrs, sa, rti_info);
 
 		switch (rtm->rtm_type) {
+		case RTM_ADD:
