@@ -1018,3 +1018,4 @@
 	{ MIBDECL(pfLogIfName) },			\
 	{ MIBDECL(pfLogIfIpBytesIn) },			\
 	{ MIBDECL(pfLogIfIpBytesOut) },			\
+	{ MIBDECL(pfLogIfIpPktsInPass) },		\
