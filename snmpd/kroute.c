@@ -1020,3 +1020,4 @@ rtmsg_process(char *buf, int len)
 		case RTM_GET:
 		case RTM_CHANGE:
 		case RTM_DELETE:
+			if (rtm->rtm_errno)		 /* failed attempts */
