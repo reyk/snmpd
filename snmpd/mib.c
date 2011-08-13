@@ -1018,3 +1018,4 @@ static struct oid if_mib[] = {
 	{ MIB(ifNumber),		OID_RD, mib_ifnumber },
 	{ MIB(ifIndex),			OID_TRD, mib_iftable },
 	{ MIB(ifDescr),			OID_TRD, mib_iftable },
+	{ MIB(ifType),			OID_TRD, mib_iftable },
