@@ -1017,3 +1017,4 @@
 	{ MIBDECL(pfLogInterface) },			\
 	{ MIBDECL(pfLogIfName) },			\
 	{ MIBDECL(pfLogIfIpBytesIn) },			\
+	{ MIBDECL(pfLogIfIpBytesOut) },			\
