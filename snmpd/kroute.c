@@ -1018,3 +1018,4 @@ rtmsg_process(char *buf, int len)
 		switch (rtm->rtm_type) {
 		case RTM_ADD:
 		case RTM_GET:
+		case RTM_CHANGE:
