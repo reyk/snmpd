@@ -1017,3 +1017,4 @@ get_id(struct ber *b, unsigned long *tag, int *class, int *cstruct)
 /*
  * extract length of a ber object -- if length is unknown an error is returned.
  */
+static ssize_t
