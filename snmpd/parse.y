@@ -1023,3 +1023,4 @@ host_dns(const char *s, struct addresslist *al, int max,
 	int			 error, cnt = 0;
 	struct sockaddr_in	*sain;
 	struct sockaddr_in6	*sin6;
+	struct address		*h;
