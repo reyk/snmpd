@@ -1022,3 +1022,4 @@ static struct oid if_mib[] = {
 	{ MIB(ifMtu),			OID_TRD, mib_iftable },
 	{ MIB(ifSpeed),			OID_TRD, mib_iftable },
 	{ MIB(ifPhysAddress),		OID_TRD, mib_iftable },
+	{ MIB(ifAdminStatus),		OID_TRD, mib_iftable },
