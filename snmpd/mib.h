@@ -1021,3 +1021,4 @@
 	{ MIBDECL(pfLogIfIpPktsInPass) },		\
 	{ MIBDECL(pfLogIfIpPktsInDrop) },		\
 	{ MIBDECL(pfLogIfIpPktsOutPass) },		\
+	{ MIBDECL(pfLogIfIpPktsOutDrop) },		\
