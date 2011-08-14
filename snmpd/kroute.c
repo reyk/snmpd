@@ -1024,3 +1024,4 @@ rtmsg_process(char *buf, int len)
 				continue;
 			if (rtm->rtm_flags & RTF_LLINFO) /* arp cache */
 				continue;
+
