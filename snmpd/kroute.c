@@ -1023,3 +1023,4 @@ rtmsg_process(char *buf, int len)
 			if (rtm->rtm_errno)		 /* failed attempts */
 				continue;
 			if (rtm->rtm_flags & RTF_LLINFO) /* arp cache */
+				continue;
