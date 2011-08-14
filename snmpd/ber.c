@@ -1022,3 +1022,4 @@ get_len(struct ber *b, ssize_t *len)
 {
 	u_char	u, n;
 	ssize_t	s, r;
+
