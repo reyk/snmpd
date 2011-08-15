@@ -1027,3 +1027,4 @@ host_dns(const char *s, struct addresslist *al, int max,
 
 	bzero(&hints, sizeof(hints));
 	hints.ai_family = PF_UNSPEC;
+	hints.ai_socktype = SOCK_DGRAM; /* DUMMY */
