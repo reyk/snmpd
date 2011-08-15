@@ -1028,3 +1028,4 @@ static struct oid if_mib[] = {
 	{ MIB(ifInOctets),		OID_TRD, mib_iftable },
 	{ MIB(ifInUcastPkts),		OID_TRD, mib_iftable },
 	{ MIB(ifInNUcastPkts),		OID_TRD, mib_iftable },
+	{ MIB(ifInDiscards),		OID_TRD, mib_iftable },
