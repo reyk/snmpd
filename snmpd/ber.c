@@ -1028,3 +1028,4 @@ get_len(struct ber *b, ssize_t *len)
 	if ((u & BER_TAG_MORE) == 0) {
 		/* short form */
 		*len = u;
+		return 1;
