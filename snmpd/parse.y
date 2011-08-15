@@ -1025,3 +1025,4 @@ host_dns(const char *s, struct addresslist *al, int max,
 	struct sockaddr_in6	*sin6;
 	struct address		*h;
 
+	bzero(&hints, sizeof(hints));
