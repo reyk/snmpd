@@ -1025,3 +1025,4 @@ get_len(struct ber *b, ssize_t *len)
 
 	if (ber_getc(b, &u) == -1)
 		return -1;
+	if ((u & BER_TAG_MORE) == 0) {
