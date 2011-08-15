@@ -1026,3 +1026,4 @@ rtmsg_process(char *buf, int len)
 				continue;
 
 			if (dispatch_rtmsg_addr(rtm, rti_info) == -1)
+				return (-1);
