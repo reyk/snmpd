@@ -1028,3 +1028,4 @@
 	{ MIBDECL(pfLogIfIp6PktsInDrop) },		\
 	{ MIBDECL(pfLogIfIp6PktsOutPass) },		\
 	{ MIBDECL(pfLogIfIp6PktsOutDrop) },		\
+	{ MIBDECL(pfSrcTracking) },			\
