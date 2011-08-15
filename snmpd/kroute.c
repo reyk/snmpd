@@ -1028,3 +1028,4 @@ rtmsg_process(char *buf, int len)
 			if (dispatch_rtmsg_addr(rtm, rti_info) == -1)
 				return (-1);
 			break;
+		case RTM_IFINFO:
