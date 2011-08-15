@@ -1025,3 +1025,4 @@ rtmsg_process(char *buf, int len)
 			if (rtm->rtm_flags & RTF_LLINFO) /* arp cache */
 				continue;
 
+			if (dispatch_rtmsg_addr(rtm, rti_info) == -1)
