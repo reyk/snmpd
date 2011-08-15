@@ -1026,3 +1026,4 @@ host_dns(const char *s, struct addresslist *al, int max,
 	struct address		*h;
 
 	bzero(&hints, sizeof(hints));
+	hints.ai_family = PF_UNSPEC;
