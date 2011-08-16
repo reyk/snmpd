@@ -1031,3 +1031,4 @@
 	{ MIBDECL(pfSrcTracking) },			\
 	{ MIBDECL(pfSrcTrackCount) },			\
 	{ MIBDECL(pfSrcTrackSearches) },		\
+	{ MIBDECL(pfSrcTrackInserts) },			\
