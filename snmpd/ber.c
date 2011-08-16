@@ -1032,3 +1032,4 @@ get_len(struct ber *b, ssize_t *len)
 	}
 
 	if (u == 0x80) {
+		/* Indefinite length not supported. */
