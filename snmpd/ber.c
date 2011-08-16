@@ -1029,3 +1029,4 @@ get_len(struct ber *b, ssize_t *len)
 		/* short form */
 		*len = u;
 		return 1;
+	}
