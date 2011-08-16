@@ -1029,3 +1029,4 @@ rtmsg_process(char *buf, int len)
 				return (-1);
 			break;
 		case RTM_IFINFO:
+			memcpy(&ifm, next, sizeof(ifm));
