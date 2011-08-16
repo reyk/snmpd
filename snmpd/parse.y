@@ -1032,3 +1032,4 @@ host_dns(const char *s, struct addresslist *al, int max,
 	if (error == EAI_AGAIN || error == EAI_NODATA || error == EAI_NONAME)
 		return (0);
 	if (error) {
+		log_warnx("host_dns: could not parse \"%s\": %s", s,
