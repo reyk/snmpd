@@ -1030,3 +1030,4 @@ rtmsg_process(char *buf, int len)
 			break;
 		case RTM_IFINFO:
 			memcpy(&ifm, next, sizeof(ifm));
+			if_change(ifm.ifm_index, ifm.ifm_flags, &ifm.ifm_data,
