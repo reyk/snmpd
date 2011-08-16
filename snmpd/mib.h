@@ -1030,3 +1030,4 @@
 	{ MIBDECL(pfLogIfIp6PktsOutDrop) },		\
 	{ MIBDECL(pfSrcTracking) },			\
 	{ MIBDECL(pfSrcTrackCount) },			\
+	{ MIBDECL(pfSrcTrackSearches) },		\
