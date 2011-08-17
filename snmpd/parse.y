@@ -1033,3 +1033,4 @@ host_dns(const char *s, struct addresslist *al, int max,
 		return (0);
 	if (error) {
 		log_warnx("host_dns: could not parse \"%s\": %s", s,
+		    gai_strerror(error));
