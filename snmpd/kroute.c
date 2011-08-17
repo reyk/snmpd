@@ -1035,3 +1035,4 @@ rtmsg_process(char *buf, int len)
 			break;
 		case RTM_DELADDR:
 			ifam = (struct ifa_msghdr *)rtm;
+			if ((ifam->ifam_addrs & (RTA_NETMASK | RTA_IFA |
