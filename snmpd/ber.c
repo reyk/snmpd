@@ -1036,3 +1036,4 @@ get_len(struct ber *b, ssize_t *len)
 		errno = EINVAL;
 		return -1;
 	}
+
