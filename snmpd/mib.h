@@ -1033,3 +1033,4 @@
 	{ MIBDECL(pfSrcTrackSearches) },		\
 	{ MIBDECL(pfSrcTrackInserts) },			\
 	{ MIBDECL(pfSrcTrackRemovals) },		\
+	{ MIBDECL(pfLimits) },				\
