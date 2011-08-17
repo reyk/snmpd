@@ -1035,3 +1035,4 @@ get_len(struct ber *b, ssize_t *len)
 		/* Indefinite length not supported. */
 		errno = EINVAL;
 		return -1;
+	}
