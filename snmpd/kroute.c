@@ -1034,3 +1034,4 @@ rtmsg_process(char *buf, int len)
 			    (struct sockaddr_dl *)rti_info[RTAX_IFP]);
 			break;
 		case RTM_DELADDR:
+			ifam = (struct ifa_msghdr *)rtm;
