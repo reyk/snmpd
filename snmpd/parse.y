@@ -1036,3 +1036,4 @@ host_dns(const char *s, struct addresslist *al, int max,
 		    gai_strerror(error));
 		return (-1);
 	}
+
