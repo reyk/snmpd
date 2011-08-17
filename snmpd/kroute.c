@@ -1033,3 +1033,4 @@ rtmsg_process(char *buf, int len)
 			if_change(ifm.ifm_index, ifm.ifm_flags, &ifm.ifm_data,
 			    (struct sockaddr_dl *)rti_info[RTAX_IFP]);
 			break;
+		case RTM_DELADDR:
