@@ -1036,3 +1036,4 @@
 	{ MIBDECL(pfLimits) },				\
 	{ MIBDECL(pfLimitStates) },			\
 	{ MIBDECL(pfLimitSourceNodes) },		\
+	{ MIBDECL(pfLimitFragments) },			\
