@@ -1037,3 +1037,4 @@ host_dns(const char *s, struct addresslist *al, int max,
 		return (-1);
 	}
 
+	for (res = res0; res && cnt < max; res = res->ai_next) {
