@@ -1038,3 +1038,4 @@
 	{ MIBDECL(pfLimitSourceNodes) },		\
 	{ MIBDECL(pfLimitFragments) },			\
 	{ MIBDECL(pfLimitMaxTables) },			\
+	{ MIBDECL(pfLimitMaxTableEntries) },		\
