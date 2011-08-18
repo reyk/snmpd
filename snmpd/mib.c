@@ -1038,3 +1038,4 @@ static struct oid if_mib[] = {
 	{ MIB(ifOutErrors),		OID_TRD, mib_iftable },
 	{ MIB(ifOutQLen),		OID_TRD, mib_iftable },
 	{ MIB(ifSpecific),		OID_TRD, mib_iftable },
+	{ MIBEND }
