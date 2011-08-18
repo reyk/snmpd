@@ -1038,3 +1038,4 @@ rtmsg_process(char *buf, int len)
 			if ((ifam->ifam_addrs & (RTA_NETMASK | RTA_IFA |
 			    RTA_BRD)) == 0)
 				break;
+
