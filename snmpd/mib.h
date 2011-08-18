@@ -1037,3 +1037,4 @@
 	{ MIBDECL(pfLimitStates) },			\
 	{ MIBDECL(pfLimitSourceNodes) },		\
 	{ MIBDECL(pfLimitFragments) },			\
+	{ MIBDECL(pfLimitMaxTables) },			\
