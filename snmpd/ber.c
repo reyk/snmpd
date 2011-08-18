@@ -1039,3 +1039,4 @@ get_len(struct ber *b, ssize_t *len)
 
 	n = u & ~BER_TAG_MORE;
 	if (sizeof(ssize_t) < n) {
+		errno = ERANGE;
