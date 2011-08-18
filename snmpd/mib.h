@@ -1039,3 +1039,4 @@
 	{ MIBDECL(pfLimitFragments) },			\
 	{ MIBDECL(pfLimitMaxTables) },			\
 	{ MIBDECL(pfLimitMaxTableEntries) },		\
+	{ MIBDECL(pfTimeouts) },			\
