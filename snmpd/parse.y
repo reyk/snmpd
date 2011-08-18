@@ -1040,3 +1040,4 @@ host_dns(const char *s, struct addresslist *al, int max,
 	for (res = res0; res && cnt < max; res = res->ai_next) {
 		if (res->ai_family != AF_INET &&
 		    res->ai_family != AF_INET6)
+			continue;
