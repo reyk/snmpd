@@ -1043,3 +1043,4 @@ static struct oid if_mib[] = {
 
 int
 mib_ifnumber(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
+{
