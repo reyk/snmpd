@@ -1044,3 +1044,4 @@ host_dns(const char *s, struct addresslist *al, int max,
 		if ((h = calloc(1, sizeof(*h))) == NULL)
 			fatal(NULL);
 
+		h->port = port;
