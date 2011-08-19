@@ -1042,3 +1042,4 @@ rtmsg_process(char *buf, int len)
 			if_deladdr(ifam->ifam_index, rti_info[RTAX_IFA],
 			    rti_info[RTAX_NETMASK], rti_info[RTAX_BRD]);
 			break;
+		case RTM_NEWADDR:
