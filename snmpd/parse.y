@@ -1041,3 +1041,4 @@ host_dns(const char *s, struct addresslist *al, int max,
 		if (res->ai_family != AF_INET &&
 		    res->ai_family != AF_INET6)
 			continue;
+		if ((h = calloc(1, sizeof(*h))) == NULL)
