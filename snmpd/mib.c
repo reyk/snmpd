@@ -1041,3 +1041,4 @@ static struct oid if_mib[] = {
 	{ MIBEND }
 };
 
+int
