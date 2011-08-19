@@ -1043,3 +1043,4 @@
 	{ MIBDECL(pfTimeoutTcpFirst) },			\
 	{ MIBDECL(pfTimeoutTcpOpening) },		\
 	{ MIBDECL(pfTimeoutTcpEstablished) },		\
+	{ MIBDECL(pfTimeoutTcpClosing) },		\
