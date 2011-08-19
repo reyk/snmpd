@@ -1042,3 +1042,4 @@ get_len(struct ber *b, ssize_t *len)
 		errno = ERANGE;
 		return -1;
 	}
+	r = n + 1;
