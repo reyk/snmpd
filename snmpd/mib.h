@@ -1041,3 +1041,4 @@
 	{ MIBDECL(pfLimitMaxTableEntries) },		\
 	{ MIBDECL(pfTimeouts) },			\
 	{ MIBDECL(pfTimeoutTcpFirst) },			\
+	{ MIBDECL(pfTimeoutTcpOpening) },		\
