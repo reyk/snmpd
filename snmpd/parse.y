@@ -1043,3 +1043,4 @@ host_dns(const char *s, struct addresslist *al, int max,
 			continue;
 		if ((h = calloc(1, sizeof(*h))) == NULL)
 			fatal(NULL);
+
