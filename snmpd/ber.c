@@ -1041,3 +1041,4 @@ get_len(struct ber *b, ssize_t *len)
 	if (sizeof(ssize_t) < n) {
 		errno = ERANGE;
 		return -1;
+	}
