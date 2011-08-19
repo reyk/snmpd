@@ -1044,3 +1044,4 @@ get_len(struct ber *b, ssize_t *len)
 	}
 	r = n + 1;
 
+	for (s = 0; n > 0; n--) {
