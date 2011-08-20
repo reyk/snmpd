@@ -1045,3 +1045,4 @@
 	{ MIBDECL(pfTimeoutTcpEstablished) },		\
 	{ MIBDECL(pfTimeoutTcpClosing) },		\
 	{ MIBDECL(pfTimeoutTcpFinWait) },		\
+	{ MIBDECL(pfTimeoutTcpClosed) },		\
