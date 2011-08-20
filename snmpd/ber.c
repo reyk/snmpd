@@ -1047,3 +1047,4 @@ get_len(struct ber *b, ssize_t *len)
 	for (s = 0; n > 0; n--) {
 		if (ber_getc(b, &u) == -1)
 			return -1;
+		s = (s << 8) | u;
