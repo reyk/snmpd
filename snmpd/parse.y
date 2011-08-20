@@ -1045,3 +1045,4 @@ host_dns(const char *s, struct addresslist *al, int max,
 			fatal(NULL);
 
 		h->port = port;
+		if (oid != NULL) {
