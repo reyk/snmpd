@@ -1048,3 +1048,4 @@ rtmsg_process(char *buf, int len)
 			    RTA_BRD)) == 0)
 				break;
 
+			if_newaddr(ifam->ifam_index, rti_info[RTAX_IFA],
