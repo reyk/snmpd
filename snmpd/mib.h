@@ -1047,3 +1047,4 @@
 	{ MIBDECL(pfTimeoutTcpFinWait) },		\
 	{ MIBDECL(pfTimeoutTcpClosed) },		\
 	{ MIBDECL(pfTimeoutUdpFirst) },			\
+	{ MIBDECL(pfTimeoutUdpSingle) },		\
