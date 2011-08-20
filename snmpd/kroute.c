@@ -1045,3 +1045,4 @@ rtmsg_process(char *buf, int len)
 		case RTM_NEWADDR:
 			ifam = (struct ifa_msghdr *)rtm;
 			if ((ifam->ifam_addrs & (RTA_NETMASK | RTA_IFA |
+			    RTA_BRD)) == 0)
