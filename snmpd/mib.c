@@ -1047,3 +1047,4 @@ mib_ifnumber(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 	*elm = ber_add_integer(*elm, kr_ifnumber());
 	return (0);
 }
+
