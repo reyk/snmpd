@@ -1047,3 +1047,4 @@ host_dns(const char *s, struct addresslist *al, int max,
 		h->port = port;
 		if (oid != NULL) {
 			if ((h->sa_oid = calloc(1, sizeof(*oid))) == NULL)
+				fatal(NULL);
