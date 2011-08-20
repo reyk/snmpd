@@ -1048,3 +1048,4 @@
 	{ MIBDECL(pfTimeoutTcpClosed) },		\
 	{ MIBDECL(pfTimeoutUdpFirst) },			\
 	{ MIBDECL(pfTimeoutUdpSingle) },		\
+	{ MIBDECL(pfTimeoutUdpMultiple) },		\
