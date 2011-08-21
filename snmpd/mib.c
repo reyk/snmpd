@@ -1052,3 +1052,4 @@ struct kif *
 mib_ifget(u_int idx)
 {
 	struct kif	*kif;
+
