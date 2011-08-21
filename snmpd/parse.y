@@ -1051,3 +1051,4 @@ host_dns(const char *s, struct addresslist *al, int max,
 			bcopy(oid, h->sa_oid, sizeof(*oid));
 		}
 		if (cmn != NULL) {
+			if ((h->sa_community = strdup(cmn)) == NULL)
