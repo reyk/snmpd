@@ -1049,3 +1049,4 @@ host_dns(const char *s, struct addresslist *al, int max,
 			if ((h->sa_oid = calloc(1, sizeof(*oid))) == NULL)
 				fatal(NULL);
 			bcopy(oid, h->sa_oid, sizeof(*oid));
+		}
