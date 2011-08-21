@@ -1050,3 +1050,4 @@ host_dns(const char *s, struct addresslist *al, int max,
 				fatal(NULL);
 			bcopy(oid, h->sa_oid, sizeof(*oid));
 		}
+		if (cmn != NULL) {
