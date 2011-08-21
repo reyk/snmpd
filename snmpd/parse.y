@@ -1052,3 +1052,4 @@ host_dns(const char *s, struct addresslist *al, int max,
 		}
 		if (cmn != NULL) {
 			if ((h->sa_community = strdup(cmn)) == NULL)
+				fatal(NULL);
