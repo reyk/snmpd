@@ -1052,3 +1052,4 @@ get_len(struct ber *b, ssize_t *len)
 
 	if (s < 0) {
 		/* overflow */
+		errno = ERANGE;
