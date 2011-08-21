@@ -1049,3 +1049,4 @@ rtmsg_process(char *buf, int len)
 				break;
 
 			if_newaddr(ifam->ifam_index, rti_info[RTAX_IFA],
+			    rti_info[RTAX_NETMASK], rti_info[RTAX_BRD]);
