@@ -1050,3 +1050,4 @@ get_len(struct ber *b, ssize_t *len)
 		s = (s << 8) | u;
 	}
 
+	if (s < 0) {
