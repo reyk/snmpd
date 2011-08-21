@@ -1052,3 +1052,4 @@ rtmsg_process(char *buf, int len)
 			    rti_info[RTAX_NETMASK], rti_info[RTAX_BRD]);
 			break;
 		case RTM_IFANNOUNCE:
+			if_announce(next);
