@@ -1050,3 +1050,4 @@ mib_ifnumber(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 
 struct kif *
 mib_ifget(u_int idx)
+{
