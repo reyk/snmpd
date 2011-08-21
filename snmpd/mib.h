@@ -1052,3 +1052,4 @@
 	{ MIBDECL(pfTimeoutIcmpFirst) },		\
 	{ MIBDECL(pfTimeoutIcmpError) },		\
 	{ MIBDECL(pfTimeoutOtherFirst) },		\
+	{ MIBDECL(pfTimeoutOtherSingle) },		\
