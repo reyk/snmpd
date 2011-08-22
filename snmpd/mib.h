@@ -1054,3 +1054,4 @@
 	{ MIBDECL(pfTimeoutOtherFirst) },		\
 	{ MIBDECL(pfTimeoutOtherSingle) },		\
 	{ MIBDECL(pfTimeoutOtherMultiple) },		\
+	{ MIBDECL(pfTimeoutFragment) },			\
