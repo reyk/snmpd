@@ -1056,3 +1056,4 @@
 	{ MIBDECL(pfTimeoutOtherMultiple) },		\
 	{ MIBDECL(pfTimeoutFragment) },			\
 	{ MIBDECL(pfTimeoutInterval) },			\
+	{ MIBDECL(pfTimeoutAdaptiveStart) },		\
