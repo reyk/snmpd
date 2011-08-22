@@ -1053,3 +1053,4 @@ rtmsg_process(char *buf, int len)
 			break;
 		case RTM_IFANNOUNCE:
 			if_announce(next);
+			break;
