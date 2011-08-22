@@ -1056,3 +1056,4 @@ mib_ifget(u_int idx)
 	if ((kif = kr_getif(idx)) == NULL) {
 		/*
 		 * It may happen that an interface with a specific index
+		 * does not exist or has been removed. Jump to the next
