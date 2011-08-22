@@ -1055,3 +1055,4 @@ rtmsg_process(char *buf, int len)
 			if_announce(next);
 			break;
 		default:
+			/* ignore for now */
