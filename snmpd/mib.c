@@ -1054,3 +1054,4 @@ mib_ifget(u_int idx)
 	struct kif	*kif;
 
 	if ((kif = kr_getif(idx)) == NULL) {
+		/*
