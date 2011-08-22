@@ -1055,3 +1055,4 @@ host_dns(const char *s, struct addresslist *al, int max,
 				fatal(NULL);
 		}
 
+		h->ss.ss_family = res->ai_family;
