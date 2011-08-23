@@ -1059,3 +1059,4 @@ mib_ifget(u_int idx)
 		 * does not exist or has been removed. Jump to the next
 		 * available interface index.
 		 */
+		for (kif = kr_getif(0); kif != NULL;
