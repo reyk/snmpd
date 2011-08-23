@@ -1057,3 +1057,4 @@ host_dns(const char *s, struct addresslist *al, int max,
 
 		h->ss.ss_family = res->ai_family;
 		if (res->ai_family == AF_INET) {
+			sain = (struct sockaddr_in *)&h->ss;
