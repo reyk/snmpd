@@ -1060,3 +1060,4 @@ mib_ifget(u_int idx)
 		 * available interface index.
 		 */
 		for (kif = kr_getif(0); kif != NULL;
+		    kif = kr_getnextif(kif->if_index))
