@@ -1060,3 +1060,4 @@ host_dns(const char *s, struct addresslist *al, int max,
 			sain = (struct sockaddr_in *)&h->ss;
 			sain->sin_len = sizeof(struct sockaddr_in);
 			sain->sin_addr.s_addr = ((struct sockaddr_in *)
+			    res->ai_addr)->sin_addr.s_addr;
