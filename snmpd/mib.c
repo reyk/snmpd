@@ -1057,3 +1057,4 @@ mib_ifget(u_int idx)
 		/*
 		 * It may happen that an interface with a specific index
 		 * does not exist or has been removed. Jump to the next
+		 * available interface index.
