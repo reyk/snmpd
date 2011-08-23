@@ -1057,3 +1057,4 @@ rtmsg_process(char *buf, int len)
 		default:
 			/* ignore for now */
 			break;
+		}
