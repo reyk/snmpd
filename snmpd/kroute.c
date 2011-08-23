@@ -1058,3 +1058,4 @@ rtmsg_process(char *buf, int len)
 			/* ignore for now */
 			break;
 		}
+	}
