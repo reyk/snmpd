@@ -1057,3 +1057,4 @@
 	{ MIBDECL(pfTimeoutFragment) },			\
 	{ MIBDECL(pfTimeoutInterval) },			\
 	{ MIBDECL(pfTimeoutAdaptiveStart) },		\
+	{ MIBDECL(pfTimeoutAdaptiveEnd) },		\
