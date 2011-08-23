@@ -1058,3 +1058,4 @@
 	{ MIBDECL(pfTimeoutInterval) },			\
 	{ MIBDECL(pfTimeoutAdaptiveStart) },		\
 	{ MIBDECL(pfTimeoutAdaptiveEnd) },		\
+	{ MIBDECL(pfTimeoutSrcTrack) },			\
