@@ -1064,3 +1064,4 @@
 	{ MIBDECL(pfIfTable) },				\
 	{ MIBDECL(pfIfEntry) },				\
 	{ MIBDECL(pfIfIndex) },				\
+	{ MIBDECL(pfIfDescr) },				\
