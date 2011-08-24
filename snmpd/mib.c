@@ -1061,3 +1061,4 @@ mib_ifget(u_int idx)
 		 */
 		for (kif = kr_getif(0); kif != NULL;
 		    kif = kr_getnextif(kif->if_index))
+			if (kif->if_index > idx)
