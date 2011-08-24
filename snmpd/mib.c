@@ -1064,3 +1064,4 @@ mib_ifget(u_int idx)
 			if (kif->if_index > idx)
 				break;
 		if (kif == NULL)
+			return (NULL);
