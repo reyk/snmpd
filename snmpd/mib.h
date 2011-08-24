@@ -1062,3 +1062,4 @@
 	{ MIBDECL(pfInterfaces) },			\
 	{ MIBDECL(pfIfNumber) },			\
 	{ MIBDECL(pfIfTable) },				\
+	{ MIBDECL(pfIfEntry) },				\
