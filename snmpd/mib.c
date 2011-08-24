@@ -1063,3 +1063,4 @@ mib_ifget(u_int idx)
 		    kif = kr_getnextif(kif->if_index))
 			if (kif->if_index > idx)
 				break;
+		if (kif == NULL)
