@@ -1063,3 +1063,4 @@ get_len(struct ber *b, ssize_t *len)
 static ssize_t
 ber_read_element(struct ber *ber, struct ber_element *elm)
 {
+	long long val = 0;
