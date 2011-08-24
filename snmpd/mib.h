@@ -1061,3 +1061,4 @@
 	{ MIBDECL(pfTimeoutSrcTrack) },			\
 	{ MIBDECL(pfInterfaces) },			\
 	{ MIBDECL(pfIfNumber) },			\
+	{ MIBDECL(pfIfTable) },				\
