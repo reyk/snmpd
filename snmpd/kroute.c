@@ -1061,3 +1061,4 @@ rtmsg_process(char *buf, int len)
 	}
 
 	return (offset);
+}
