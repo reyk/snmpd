@@ -1065,3 +1065,4 @@
 	{ MIBDECL(pfIfEntry) },				\
 	{ MIBDECL(pfIfIndex) },				\
 	{ MIBDECL(pfIfDescr) },				\
+	{ MIBDECL(pfIfType) },				\
