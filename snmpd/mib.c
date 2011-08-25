@@ -1068,3 +1068,4 @@ mib_ifget(u_int idx)
 	}
 	idx = kif->if_index;
 
+	/* Update interface information */
