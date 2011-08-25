@@ -1067,3 +1067,4 @@ int
 dispatch_rtmsg_addr(struct rt_msghdr *rtm, struct sockaddr *rti_info[RTAX_MAX])
 {
 	struct sockaddr		*sa, *psa;
+	struct sockaddr_in	*sa_in, *psa_in = NULL;
