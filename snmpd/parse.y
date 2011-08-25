@@ -1067,3 +1067,4 @@ host_dns(const char *s, struct addresslist *al, int max,
 			memcpy(&sin6->sin6_addr, &((struct sockaddr_in6 *)
 			    res->ai_addr)->sin6_addr, sizeof(struct in6_addr));
 		}
+
