@@ -1066,3 +1066,4 @@ ber_read_element(struct ber *ber, struct ber_element *elm)
 	long long val = 0;
 	struct ber_element *next;
 	unsigned long type;
+	int i, class, cstruct;
