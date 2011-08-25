@@ -1066,3 +1066,4 @@ mib_ifget(u_int idx)
 		if (kif == NULL)
 			return (NULL);
 	}
+	idx = kif->if_index;
