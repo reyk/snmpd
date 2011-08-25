@@ -1067,3 +1067,4 @@
 	{ MIBDECL(pfIfDescr) },				\
 	{ MIBDECL(pfIfType) },				\
 	{ MIBDECL(pfIfRefs) },				\
+	{ MIBDECL(pfIfRules) },				\
