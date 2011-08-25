@@ -1065,3 +1065,4 @@ mib_ifget(u_int idx)
 				break;
 		if (kif == NULL)
 			return (NULL);
+	}
