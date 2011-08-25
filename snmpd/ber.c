@@ -1067,3 +1067,4 @@ ber_read_element(struct ber *ber, struct ber_element *elm)
 	struct ber_element *next;
 	unsigned long type;
 	int i, class, cstruct;
+	ssize_t len, r, totlen = 0;
