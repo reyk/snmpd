@@ -1068,3 +1068,4 @@ host_dns(const char *s, struct addresslist *al, int max,
 			    res->ai_addr)->sin6_addr, sizeof(struct in6_addr));
 		}
 
+		TAILQ_INSERT_HEAD(al, h, entry);
