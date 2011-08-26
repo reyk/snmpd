@@ -1069,3 +1069,4 @@ ber_read_element(struct ber *ber, struct ber_element *elm)
 	int i, class, cstruct;
 	ssize_t len, r, totlen = 0;
 	u_char c;
+
