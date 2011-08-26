@@ -1072,3 +1072,4 @@ ber_read_element(struct ber *ber, struct ber_element *elm)
 
 	if ((r = get_id(ber, &type, &class, &cstruct)) == -1)
 		return -1;
+	DPRINTF("ber read got class %d type %lu, %s\n",
