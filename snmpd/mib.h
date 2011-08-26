@@ -1072,3 +1072,4 @@
 	{ MIBDECL(pfIfIn4PassBytes) },			\
 	{ MIBDECL(pfIfIn4BlockPkts) },			\
 	{ MIBDECL(pfIfIn4BlockBytes) },			\
+	{ MIBDECL(pfIfOut4PassPkts) },			\
