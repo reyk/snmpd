@@ -1070,3 +1070,4 @@ dispatch_rtmsg_addr(struct rt_msghdr *rtm, struct sockaddr *rti_info[RTAX_MAX])
 	struct sockaddr_in	*sa_in, *psa_in = NULL;
 	struct sockaddr_in6	*sa_in6, *psa_in6 = NULL;
 	struct kroute_node	*kr;
+	struct kroute6_node	*kr6;
