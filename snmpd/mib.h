@@ -1069,3 +1069,4 @@
 	{ MIBDECL(pfIfRefs) },				\
 	{ MIBDECL(pfIfRules) },				\
 	{ MIBDECL(pfIfIn4PassPkts) },			\
+	{ MIBDECL(pfIfIn4PassBytes) },			\
