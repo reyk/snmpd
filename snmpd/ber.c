@@ -1070,3 +1070,4 @@ ber_read_element(struct ber *ber, struct ber_element *elm)
 	ssize_t len, r, totlen = 0;
 	u_char c;
 
+	if ((r = get_id(ber, &type, &class, &cstruct)) == -1)
