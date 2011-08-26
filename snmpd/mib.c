@@ -1071,3 +1071,4 @@ mib_ifget(u_int idx)
 	/* Update interface information */
 	kr_updateif(idx);
 	if ((kif = kr_getif(idx)) == NULL) {
+		log_debug("mib_ifxtable: interface %d disappeared?", idx);
