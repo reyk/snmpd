@@ -1076,3 +1076,4 @@ ber_read_element(struct ber *ber, struct ber_element *elm)
 	    class, type, cstruct ? "constructive" : "primitive");
 	totlen += r;
 	if ((r = get_len(ber, &len)) == -1)
+		return -1;
