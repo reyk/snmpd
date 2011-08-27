@@ -1076,3 +1076,4 @@ mib_ifget(u_int idx)
 	}
 
 	return (kif);
+}
