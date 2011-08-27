@@ -1074,3 +1074,4 @@ mib_ifget(u_int idx)
 		log_debug("mib_ifxtable: interface %d disappeared?", idx);
 		return (NULL);
 	}
+
