@@ -1076,3 +1076,4 @@ host_dns(const char *s, struct addresslist *al, int max,
 		    s, max);
 	}
 	freeaddrinfo(res0);
+	if (oid != NULL)
