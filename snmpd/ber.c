@@ -1075,3 +1075,4 @@ ber_read_element(struct ber *ber, struct ber_element *elm)
 	DPRINTF("ber read got class %d type %lu, %s\n",
 	    class, type, cstruct ? "constructive" : "primitive");
 	totlen += r;
+	if ((r = get_len(ber, &len)) == -1)
