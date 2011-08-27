@@ -1075,3 +1075,4 @@ host_dns(const char *s, struct addresslist *al, int max,
 		log_warnx("host_dns: %s resolves to more than %d hosts",
 		    s, max);
 	}
+	freeaddrinfo(res0);
