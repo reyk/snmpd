@@ -1075,3 +1075,4 @@ dispatch_rtmsg_addr(struct rt_msghdr *rtm, struct sockaddr *rti_info[RTAX_MAX])
 	u_int16_t		 ifindex;
 	u_int8_t		 prefixlen;
 	u_int8_t		 prio;
+
