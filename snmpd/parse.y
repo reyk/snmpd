@@ -1074,3 +1074,4 @@ host_dns(const char *s, struct addresslist *al, int max,
 	if (cnt == max && res) {
 		log_warnx("host_dns: %s resolves to more than %d hosts",
 		    s, max);
+	}
