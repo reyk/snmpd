@@ -1077,3 +1077,4 @@ ber_read_element(struct ber *ber, struct ber_element *elm)
 	totlen += r;
 	if ((r = get_len(ber, &len)) == -1)
 		return -1;
+	DPRINTF("ber read element size %zd\n", len);
