@@ -1078,3 +1078,4 @@
 	{ MIBDECL(pfIfOut4BlockBytes) },		\
 	{ MIBDECL(pfIfIn6PassPkts) },			\
 	{ MIBDECL(pfIfIn6PassBytes) },			\
+	{ MIBDECL(pfIfIn6BlockPkts) },			\
