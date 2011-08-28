@@ -1080,3 +1080,4 @@ ber_read_element(struct ber *ber, struct ber_element *elm)
 	DPRINTF("ber read element size %zd\n", len);
 	totlen += r + len;
 
+	/* If using an external buffer and the total size of the element
