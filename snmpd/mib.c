@@ -1079,3 +1079,4 @@ mib_ifget(u_int idx)
 }
 
 int
+mib_iftable(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
