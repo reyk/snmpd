@@ -1079,3 +1079,4 @@ host_dns(const char *s, struct addresslist *al, int max,
 	if (oid != NULL)
 		free(oid);
 	if (cmn != NULL)
+		free(cmn);
