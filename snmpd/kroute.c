@@ -1078,3 +1078,4 @@ dispatch_rtmsg_addr(struct rt_msghdr *rtm, struct sockaddr *rti_info[RTAX_MAX])
 
 	flags = 0;
 	ifindex = 0;
+	prefixlen = 0;
