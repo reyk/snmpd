@@ -1080,3 +1080,4 @@ host_dns(const char *s, struct addresslist *al, int max,
 		free(oid);
 	if (cmn != NULL)
 		free(cmn);
+	return (cnt);
