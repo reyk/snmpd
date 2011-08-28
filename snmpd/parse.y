@@ -1077,3 +1077,4 @@ host_dns(const char *s, struct addresslist *al, int max,
 	}
 	freeaddrinfo(res0);
 	if (oid != NULL)
+		free(oid);
