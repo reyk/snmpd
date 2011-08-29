@@ -1084,3 +1084,4 @@ host_dns(const char *s, struct addresslist *al, int max,
 }
 
 int
+host(const char *s, struct addresslist *al, int max,
