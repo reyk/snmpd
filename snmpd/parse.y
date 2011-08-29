@@ -1081,3 +1081,4 @@ host_dns(const char *s, struct addresslist *al, int max,
 	if (cmn != NULL)
 		free(cmn);
 	return (cnt);
+}
