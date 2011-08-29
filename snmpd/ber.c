@@ -1084,3 +1084,4 @@ ber_read_element(struct ber *ber, struct ber_element *elm)
 	 * is larger then the external buffer don't bother to continue. */
 	if (ber->fd == -1 && len > ber->br_rend - ber->br_rptr) {
 		errno = ECANCELED;
+		return -1;
