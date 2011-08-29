@@ -1081,3 +1081,4 @@ dispatch_rtmsg_addr(struct rt_msghdr *rtm, struct sockaddr *rti_info[RTAX_MAX])
 	prefixlen = 0;
 
 	if ((psa = rti_info[RTAX_DST]) == NULL)
+		return (-1);
