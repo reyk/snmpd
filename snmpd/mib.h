@@ -1087,3 +1087,4 @@
 	{ MIBDECL(pfTables) },				\
 	{ MIBDECL(pfTblNumber) },			\
 	{ MIBDECL(pfTblTable) },			\
+	{ MIBDECL(pfTblEntry) },			\
