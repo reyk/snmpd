@@ -1086,3 +1086,4 @@ host_dns(const char *s, struct addresslist *al, int max,
 int
 host(const char *s, struct addresslist *al, int max,
     in_port_t port, struct ber_oid *oid, char *cmn)
+{
