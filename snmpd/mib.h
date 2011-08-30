@@ -1086,3 +1086,4 @@
 	{ MIBDECL(pfIfOut6BlockBytes) },		\
 	{ MIBDECL(pfTables) },				\
 	{ MIBDECL(pfTblNumber) },			\
+	{ MIBDECL(pfTblTable) },			\
