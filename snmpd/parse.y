@@ -1088,3 +1088,4 @@ host(const char *s, struct addresslist *al, int max,
     in_port_t port, struct ber_oid *oid, char *cmn)
 {
 	struct address	*h;
+
