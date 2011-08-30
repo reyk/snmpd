@@ -1086,3 +1086,4 @@ mib_iftable(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 	struct kif		*kif;
 	long long		 i;
 	size_t			 len;
+	int			 ifq;
