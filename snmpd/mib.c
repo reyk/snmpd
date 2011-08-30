@@ -1088,3 +1088,4 @@ mib_iftable(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 	size_t			 len;
 	int			 ifq;
 	int			 mib[] = { CTL_NET, AF_INET, IPPROTO_IP, 0, 0 };
+
