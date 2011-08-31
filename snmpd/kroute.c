@@ -1089,3 +1089,4 @@ dispatch_rtmsg_addr(struct rt_msghdr *rtm, struct sockaddr *rti_info[RTAX_MAX])
 		flags |= F_BLACKHOLE;
 	if (rtm->rtm_flags & RTF_REJECT)
 		flags |= F_REJECT;
+	if (rtm->rtm_flags & RTF_DYNAMIC)
