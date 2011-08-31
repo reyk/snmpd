@@ -1089,3 +1089,4 @@ mib_iftable(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 	int			 ifq;
 	int			 mib[] = { CTL_NET, AF_INET, IPPROTO_IP, 0, 0 };
 
+	/* Get and verify the current row index */
