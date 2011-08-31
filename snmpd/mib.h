@@ -1091,3 +1091,4 @@
 	{ MIBDECL(pfTblIndex) },			\
 	{ MIBDECL(pfTblName) },				\
 	{ MIBDECL(pfTblAddresses) },			\
+	{ MIBDECL(pfTblAnchorRefs) },			\
