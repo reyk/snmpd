@@ -1091,3 +1091,4 @@ host(const char *s, struct addresslist *al, int max,
 
 	h = host_v4(s);
 
+	/* IPv6 address? */
