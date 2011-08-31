@@ -1089,3 +1089,4 @@ host(const char *s, struct addresslist *al, int max,
 {
 	struct address	*h;
 
+	h = host_v4(s);
