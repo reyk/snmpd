@@ -1091,3 +1091,4 @@ ber_read_element(struct ber *ber, struct ber_element *elm)
 	elm->be_len = len;
 	elm->be_offs = ber->br_offs;	/* element position within stream */
 	elm->be_class = class;
+
