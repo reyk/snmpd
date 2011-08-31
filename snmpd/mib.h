@@ -1090,3 +1090,4 @@
 	{ MIBDECL(pfTblEntry) },			\
 	{ MIBDECL(pfTblIndex) },			\
 	{ MIBDECL(pfTblName) },				\
+	{ MIBDECL(pfTblAddresses) },			\
