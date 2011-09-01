@@ -1095,3 +1095,4 @@
 	{ MIBDECL(pfTblRuleRefs) },			\
 	{ MIBDECL(pfTblEvalsMatch) },			\
 	{ MIBDECL(pfTblEvalsNoMatch) },			\
+	{ MIBDECL(pfTblInPassPkts) },			\
