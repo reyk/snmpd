@@ -1095,3 +1095,4 @@ host(const char *s, struct addresslist *al, int max,
 	if (h == NULL)
 		h = host_v6(s);
 
+	if (h != NULL) {
