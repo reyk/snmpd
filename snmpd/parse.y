@@ -1093,3 +1093,4 @@ host(const char *s, struct addresslist *al, int max,
 
 	/* IPv6 address? */
 	if (h == NULL)
+		h = host_v6(s);
