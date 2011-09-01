@@ -1093,3 +1093,4 @@ dispatch_rtmsg_addr(struct rt_msghdr *rtm, struct sockaddr *rti_info[RTAX_MAX])
 		flags |= F_DYNAMIC;
 #ifdef RTF_MPATH
 	if (rtm->rtm_flags & RTF_MPATH)
+		mpath = 1;
