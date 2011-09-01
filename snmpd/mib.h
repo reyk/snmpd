@@ -1094,3 +1094,4 @@
 	{ MIBDECL(pfTblAnchorRefs) },			\
 	{ MIBDECL(pfTblRuleRefs) },			\
 	{ MIBDECL(pfTblEvalsMatch) },			\
+	{ MIBDECL(pfTblEvalsNoMatch) },			\
