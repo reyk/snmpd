@@ -1093,3 +1093,4 @@ ber_read_element(struct ber *ber, struct ber_element *elm)
 	elm->be_class = class;
 
 	if (elm->be_encoding == 0) {
+		/* try to figure out the encoding via class, type and cstruct */
