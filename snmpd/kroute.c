@@ -1096,3 +1096,4 @@ dispatch_rtmsg_addr(struct rt_msghdr *rtm, struct sockaddr *rti_info[RTAX_MAX])
 		mpath = 1;
 #endif
 
+	prio = rtm->rtm_priority;
