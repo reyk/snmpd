@@ -1096,3 +1096,4 @@ host(const char *s, struct addresslist *al, int max,
 		h = host_v6(s);
 
 	if (h != NULL) {
+		h->port = port;
