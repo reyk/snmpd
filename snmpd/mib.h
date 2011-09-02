@@ -1098,3 +1098,4 @@
 	{ MIBDECL(pfTblInPassPkts) },			\
 	{ MIBDECL(pfTblInPassBytes) },			\
 	{ MIBDECL(pfTblInBlockPkts) },			\
+	{ MIBDECL(pfTblInBlockBytes) },			\
