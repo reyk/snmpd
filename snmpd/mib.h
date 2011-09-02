@@ -1097,3 +1097,4 @@
 	{ MIBDECL(pfTblEvalsNoMatch) },			\
 	{ MIBDECL(pfTblInPassPkts) },			\
 	{ MIBDECL(pfTblInPassBytes) },			\
+	{ MIBDECL(pfTblInBlockPkts) },			\
