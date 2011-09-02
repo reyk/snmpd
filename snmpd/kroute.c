@@ -1097,3 +1097,4 @@ dispatch_rtmsg_addr(struct rt_msghdr *rtm, struct sockaddr *rti_info[RTAX_MAX])
 #endif
 
 	prio = rtm->rtm_priority;
+	switch (psa->sa_family) {
