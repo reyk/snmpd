@@ -1099,3 +1099,4 @@ ber_read_element(struct ber *ber, struct ber_element *elm)
 		else if (class == BER_CLASS_UNIVERSAL)
 			elm->be_encoding = type;
 		else if (ber->br_application != NULL) {
+			/*
