@@ -1098,3 +1098,4 @@ host(const char *s, struct addresslist *al, int max,
 	if (h != NULL) {
 		h->port = port;
 		h->sa_oid = oid;
+		h->sa_community = cmn;
