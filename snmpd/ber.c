@@ -1100,3 +1100,4 @@ ber_read_element(struct ber *ber, struct ber_element *elm)
 			elm->be_encoding = type;
 		else if (ber->br_application != NULL) {
 			/*
+			 * Ask the application to map the encoding to a
