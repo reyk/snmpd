@@ -1100,3 +1100,4 @@ dispatch_rtmsg_addr(struct rt_msghdr *rtm, struct sockaddr *rti_info[RTAX_MAX])
 	switch (psa->sa_family) {
 	case AF_INET:
 		psa_in = (struct sockaddr_in *)psa;
+		sa_in = (struct sockaddr_in *)rti_info[RTAX_NETMASK];
