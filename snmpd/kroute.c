@@ -1099,3 +1099,4 @@ dispatch_rtmsg_addr(struct rt_msghdr *rtm, struct sockaddr *rti_info[RTAX_MAX])
 	prio = rtm->rtm_priority;
 	switch (psa->sa_family) {
 	case AF_INET:
+		psa_in = (struct sockaddr_in *)psa;
