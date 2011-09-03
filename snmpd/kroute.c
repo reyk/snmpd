@@ -1102,3 +1102,4 @@ dispatch_rtmsg_addr(struct rt_msghdr *rtm, struct sockaddr *rti_info[RTAX_MAX])
 		psa_in = (struct sockaddr_in *)psa;
 		sa_in = (struct sockaddr_in *)rti_info[RTAX_NETMASK];
 		if (sa_in != NULL) {
+			if (sa_in->sin_len != 0)
