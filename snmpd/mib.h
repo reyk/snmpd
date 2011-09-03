@@ -1101,3 +1101,4 @@
 	{ MIBDECL(pfTblInBlockBytes) },			\
 	{ MIBDECL(pfTblInXPassPkts) },			\
 	{ MIBDECL(pfTblInXPassBytes) },			\
+	{ MIBDECL(pfTblOutPassPkts) },			\
