@@ -1104,3 +1104,4 @@ host(const char *s, struct addresslist *al, int max,
 		return (1);
 	}
 
+	return (host_dns(s, al, max, port, oid, cmn));
