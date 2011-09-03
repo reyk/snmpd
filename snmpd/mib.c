@@ -1104,3 +1104,4 @@ mib_iftable(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 		break;
 	case 2:
 		/*
+		 * The ifDescr should contain a vendor, product, etc.
