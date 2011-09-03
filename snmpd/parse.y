@@ -1101,3 +1101,4 @@ host(const char *s, struct addresslist *al, int max,
 		h->sa_community = cmn;
 
 		TAILQ_INSERT_HEAD(al, h, entry);
+		return (1);
