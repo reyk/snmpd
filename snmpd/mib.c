@@ -1102,3 +1102,4 @@ mib_iftable(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 	case 1:
 		ber = ber_add_integer(ber, kif->if_index);
 		break;
+	case 2:
