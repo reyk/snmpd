@@ -1102,3 +1102,4 @@ ber_read_element(struct ber *ber, struct ber_element *elm)
 			/*
 			 * Ask the application to map the encoding to a
 			 * universal type. For example, a SMI IpAddress
+			 * type is defined as 4 byte OCTET STRING.
