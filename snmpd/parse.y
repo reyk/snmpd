@@ -1102,3 +1102,4 @@ host(const char *s, struct addresslist *al, int max,
 
 		TAILQ_INSERT_HEAD(al, h, entry);
 		return (1);
+	}
