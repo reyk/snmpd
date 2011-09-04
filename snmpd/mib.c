@@ -1108,3 +1108,4 @@ mib_iftable(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 		 * but we just use the interface name (like ifName).
 		 * The interface name includes the driver name on OpenBSD.
 		 */
+		ber = ber_add_string(ber, kif->if_name);
