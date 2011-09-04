@@ -1105,3 +1105,4 @@ ber_read_element(struct ber *ber, struct ber_element *elm)
 			 * type is defined as 4 byte OCTET STRING.
 			 */
 			elm->be_encoding = (*ber->br_application)(elm);
+		} else
