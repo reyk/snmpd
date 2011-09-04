@@ -1108,3 +1108,4 @@
 	{ MIBDECL(pfTblOutXPassPkts) },			\
 	{ MIBDECL(pfTblOutXPassBytes) },		\
 	{ MIBDECL(pfTblStatsCleared) },			\
+	{ MIBDECL(pfTblAddrTable) },			\
