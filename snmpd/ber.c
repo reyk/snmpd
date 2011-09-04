@@ -1106,3 +1106,4 @@ ber_read_element(struct ber *ber, struct ber_element *elm)
 			 */
 			elm->be_encoding = (*ber->br_application)(elm);
 		} else
+			/* last resort option */
