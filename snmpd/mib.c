@@ -1105,3 +1105,4 @@ mib_iftable(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 	case 2:
 		/*
 		 * The ifDescr should contain a vendor, product, etc.
+		 * but we just use the interface name (like ifName).
