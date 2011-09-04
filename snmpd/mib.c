@@ -1106,3 +1106,4 @@ mib_iftable(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 		/*
 		 * The ifDescr should contain a vendor, product, etc.
 		 * but we just use the interface name (like ifName).
+		 * The interface name includes the driver name on OpenBSD.
