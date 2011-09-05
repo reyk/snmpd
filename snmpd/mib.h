@@ -1111,3 +1111,4 @@
 	{ MIBDECL(pfTblAddrTable) },			\
 	{ MIBDECL(pfTblAddrEntry) },			\
 	{ MIBDECL(pfTblAddrTblIndex) },			\
+	{ MIBDECL(pfTblAddrNet) },			\
