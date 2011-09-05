@@ -1111,3 +1111,4 @@ ber_read_element(struct ber *ber, struct ber_element *elm)
 	}
 
 	switch (elm->be_encoding) {
+	case BER_TYPE_EOC:	/* End-Of-Content */
