@@ -1112,3 +1112,4 @@ dispatch_rtmsg_addr(struct rt_msghdr *rtm, struct sockaddr *rti_info[RTAX_MAX])
 			    prefixlen_classful(psa_in->sin_addr.s_addr);
 		break;
 	case AF_INET6:
+		psa_in6 = (struct sockaddr_in6 *)psa;
