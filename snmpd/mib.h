@@ -1110,3 +1110,4 @@
 	{ MIBDECL(pfTblStatsCleared) },			\
 	{ MIBDECL(pfTblAddrTable) },			\
 	{ MIBDECL(pfTblAddrEntry) },			\
+	{ MIBDECL(pfTblAddrTblIndex) },			\
