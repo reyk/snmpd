@@ -1109,3 +1109,4 @@ ber_read_element(struct ber *ber, struct ber_element *elm)
 			/* last resort option */
 			elm->be_encoding = BER_TYPE_NULL;
 	}
+
