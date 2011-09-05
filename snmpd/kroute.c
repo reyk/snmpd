@@ -1109,3 +1109,4 @@ dispatch_rtmsg_addr(struct rt_msghdr *rtm, struct sockaddr *rti_info[RTAX_MAX])
 			prefixlen = 32;
 		else
 			prefixlen =
+			    prefixlen_classful(psa_in->sin_addr.s_addr);
