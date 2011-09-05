@@ -1110,3 +1110,4 @@ mib_iftable(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 		 */
 		ber = ber_add_string(ber, kif->if_name);
 		break;
+	case 3:
