@@ -1114,3 +1114,4 @@ ber_read_element(struct ber *ber, struct ber_element *elm)
 	case BER_TYPE_EOC:	/* End-Of-Content */
 		break;
 	case BER_TYPE_BOOLEAN:
+	case BER_TYPE_INTEGER:
