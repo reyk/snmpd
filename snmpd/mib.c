@@ -1114,3 +1114,4 @@ mib_iftable(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 		if (kif->if_type >= 0xf0) {
 			/*
 			 * It does not make sense to announce the private
+			 * interface types for CARP, ENC, PFSYNC, etc.
