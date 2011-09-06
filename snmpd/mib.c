@@ -1113,3 +1113,4 @@ mib_iftable(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 	case 3:
 		if (kif->if_type >= 0xf0) {
 			/*
+			 * It does not make sense to announce the private
