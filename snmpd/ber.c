@@ -1115,3 +1115,4 @@ ber_read_element(struct ber *ber, struct ber_element *elm)
 		break;
 	case BER_TYPE_BOOLEAN:
 	case BER_TYPE_INTEGER:
+	case BER_TYPE_ENUMERATED:
