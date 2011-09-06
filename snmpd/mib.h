@@ -1114,3 +1114,4 @@
 	{ MIBDECL(pfTblAddrNet) },			\
 	{ MIBDECL(pfTblAddrMask) },			\
 	{ MIBDECL(pfTblAddrCleared) },			\
+	{ MIBDECL(pfTblAddrInBlockPkts) },		\
