@@ -1115,3 +1115,4 @@
 	{ MIBDECL(pfTblAddrMask) },			\
 	{ MIBDECL(pfTblAddrCleared) },			\
 	{ MIBDECL(pfTblAddrInBlockPkts) },		\
+	{ MIBDECL(pfTblAddrInBlockBytes) },		\
