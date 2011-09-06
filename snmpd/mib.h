@@ -1113,3 +1113,4 @@
 	{ MIBDECL(pfTblAddrTblIndex) },			\
 	{ MIBDECL(pfTblAddrNet) },			\
 	{ MIBDECL(pfTblAddrMask) },			\
+	{ MIBDECL(pfTblAddrCleared) },			\
