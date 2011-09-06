@@ -1116,3 +1116,4 @@ ber_read_element(struct ber *ber, struct ber_element *elm)
 	case BER_TYPE_BOOLEAN:
 	case BER_TYPE_INTEGER:
 	case BER_TYPE_ENUMERATED:
+		if (len > (ssize_t)sizeof(long long))
