@@ -1115,3 +1115,4 @@ mib_iftable(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 			/*
 			 * It does not make sense to announce the private
 			 * interface types for CARP, ENC, PFSYNC, etc.
+			 */
