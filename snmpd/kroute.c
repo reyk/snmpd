@@ -1114,3 +1114,4 @@ dispatch_rtmsg_addr(struct rt_msghdr *rtm, struct sockaddr *rti_info[RTAX_MAX])
 	case AF_INET6:
 		psa_in6 = (struct sockaddr_in6 *)psa;
 		sa_in6 = (struct sockaddr_in6 *)rti_info[RTAX_NETMASK];
+		if (sa_in6 != NULL) {
