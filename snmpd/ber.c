@@ -1119,3 +1119,4 @@ ber_read_element(struct ber *ber, struct ber_element *elm)
 		if (len > (ssize_t)sizeof(long long))
 			return -1;
 		for (i = 0; i < len; i++) {
+			if (ber_getc(ber, &c) != 1)
