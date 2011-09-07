@@ -1120,3 +1120,4 @@ mib_iftable(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 		} else
 			ber = ber_add_integer(ber, kif->if_type);
 		break;
+	case 4:
