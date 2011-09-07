@@ -1117,3 +1117,4 @@ dispatch_rtmsg_addr(struct rt_msghdr *rtm, struct sockaddr *rti_info[RTAX_MAX])
 		if (sa_in6 != NULL) {
 			if (sa_in6->sin6_len != 0)
 				prefixlen = mask2prefixlen6(sa_in6);
+		} else if (rtm->rtm_flags & RTF_HOST)
