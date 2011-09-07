@@ -1120,3 +1120,4 @@ dispatch_rtmsg_addr(struct rt_msghdr *rtm, struct sockaddr *rti_info[RTAX_MAX])
 		} else if (rtm->rtm_flags & RTF_HOST)
 			prefixlen = 128;
 		else
+			fatalx("in6 net addr without netmask");
