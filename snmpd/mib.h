@@ -1121,3 +1121,4 @@
 	{ MIBDECL(pfTblAddrOutBlockPkts) },		\
 	{ MIBDECL(pfTblAddrOutBlockBytes) },		\
 	{ MIBDECL(pfTblAddrOutPassPkts) },		\
+	{ MIBDECL(pfTblAddrOutPassBytes) },		\
