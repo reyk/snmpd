@@ -1122,3 +1122,4 @@ ber_read_element(struct ber *ber, struct ber_element *elm)
 			if (ber_getc(ber, &c) != 1)
 				return -1;
 			val <<= 8;
+			val |= c;
