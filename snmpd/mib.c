@@ -1124,3 +1124,4 @@ mib_iftable(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 		ber = ber_add_integer(ber, kif->if_mtu);
 		break;
 	case 5:
+		ber = ber_add_integer(ber, kif->if_baudrate);
