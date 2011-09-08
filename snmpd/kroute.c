@@ -1123,3 +1123,4 @@ dispatch_rtmsg_addr(struct rt_msghdr *rtm, struct sockaddr *rti_info[RTAX_MAX])
 			fatalx("in6 net addr without netmask");
 		break;
 	default:
+		return (0);
