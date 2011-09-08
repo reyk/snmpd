@@ -1124,3 +1124,4 @@ dispatch_rtmsg_addr(struct rt_msghdr *rtm, struct sockaddr *rti_info[RTAX_MAX])
 		break;
 	default:
 		return (0);
+	}
