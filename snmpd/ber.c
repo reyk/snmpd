@@ -1124,3 +1124,4 @@ ber_read_element(struct ber *ber, struct ber_element *elm)
 			val <<= 8;
 			val |= c;
 		}
+
