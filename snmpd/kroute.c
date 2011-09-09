@@ -1127,3 +1127,4 @@ dispatch_rtmsg_addr(struct rt_msghdr *rtm, struct sockaddr *rti_info[RTAX_MAX])
 	}
 
 	if ((sa = rti_info[RTAX_GATEWAY]) != NULL)
+		switch (sa->sa_family) {
