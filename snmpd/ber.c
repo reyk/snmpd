@@ -1125,3 +1125,4 @@ ber_read_element(struct ber *ber, struct ber_element *elm)
 			val |= c;
 		}
 
+		/* sign extend if MSB is set */
