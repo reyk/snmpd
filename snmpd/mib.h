@@ -1127,3 +1127,4 @@
 	{ MIBDECL(pfLabelTable) },			\
 	{ MIBDECL(pfLabelEntry) },			\
 	{ MIBDECL(pfLabelIndex) },			\
+	{ MIBDECL(pfLabelName) },			\
