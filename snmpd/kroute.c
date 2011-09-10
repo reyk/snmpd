@@ -1132,3 +1132,4 @@ dispatch_rtmsg_addr(struct rt_msghdr *rtm, struct sockaddr *rti_info[RTAX_MAX])
 			flags |= F_CONNECTED;
 			ifindex = rtm->rtm_index;
 			sa = NULL;
+			mpath = 0;	/* link local stuff can't be mpath */
