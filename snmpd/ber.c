@@ -1129,3 +1129,4 @@ ber_read_element(struct ber *ber, struct ber_element *elm)
 		if (val >> ((i - 1) * 8) & 0x80)
 			val |= ULLONG_MAX << (i * 8);
 		elm->be_numeric = val;
+		break;
