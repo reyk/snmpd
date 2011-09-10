@@ -1131,3 +1131,4 @@ dispatch_rtmsg_addr(struct rt_msghdr *rtm, struct sockaddr *rti_info[RTAX_MAX])
 		case AF_LINK:
 			flags |= F_CONNECTED;
 			ifindex = rtm->rtm_index;
+			sa = NULL;
