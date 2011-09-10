@@ -1130,3 +1130,4 @@ ber_read_element(struct ber *ber, struct ber_element *elm)
 			val |= ULLONG_MAX << (i * 8);
 		elm->be_numeric = val;
 		break;
+	case BER_TYPE_BITSTRING:
