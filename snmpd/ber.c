@@ -1131,3 +1131,4 @@ ber_read_element(struct ber *ber, struct ber_element *elm)
 		elm->be_numeric = val;
 		break;
 	case BER_TYPE_BITSTRING:
+		elm->be_val = malloc(len);
