@@ -1134,3 +1134,4 @@ mib_iftable(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 		} else {
 			ber = ber_add_nstring(ber, kif->if_lladdr,
 			    sizeof(kif->if_lladdr));
+		}
