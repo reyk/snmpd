@@ -1135,3 +1135,4 @@
 	{ MIBDECL(pfLabelInBytes) },			\
 	{ MIBDECL(pfLabelOutPkts) },			\
 	{ MIBDECL(pfLabelOutBytes) },			\
+	{ MIBDECL(pfLabelTotalStates) },		\
