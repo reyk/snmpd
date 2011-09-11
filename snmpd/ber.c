@@ -1134,3 +1134,4 @@ ber_read_element(struct ber *ber, struct ber_element *elm)
 		elm->be_val = malloc(len);
 		if (elm->be_val == NULL)
 			return -1;
+		elm->be_free = 1;
