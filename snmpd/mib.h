@@ -1136,3 +1136,4 @@
 	{ MIBDECL(pfLabelOutPkts) },			\
 	{ MIBDECL(pfLabelOutBytes) },			\
 	{ MIBDECL(pfLabelTotalStates) },		\
+	{ MIBDECL(pfsyncStats) },			\
