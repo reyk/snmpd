@@ -1140,3 +1140,4 @@ ber_read_element(struct ber *ber, struct ber_element *elm)
 		break;
 	case BER_TYPE_OCTETSTRING:
 	case BER_TYPE_OBJECT:
+		elm->be_val = malloc(len + 1);
