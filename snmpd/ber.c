@@ -1137,3 +1137,4 @@ ber_read_element(struct ber *ber, struct ber_element *elm)
 		elm->be_free = 1;
 		elm->be_len = len;
 		ber_read(ber, elm->be_val, len);
+		break;
