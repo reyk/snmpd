@@ -1139,3 +1139,4 @@
 	{ MIBDECL(pfsyncStats) },			\
 	{ MIBDECL(pfsyncIpPktsRecv) },			\
 	{ MIBDECL(pfsyncIp6PktsRecv) },			\
+	{ MIBDECL(pfsyncPktDiscardsForBadInterface) },	\
