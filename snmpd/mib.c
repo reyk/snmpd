@@ -1139,3 +1139,4 @@ mib_iftable(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 	case 7:
 		/* ifAdminStatus up(1), down(2), testing(3) */
 		i = (kif->if_flags & IFF_UP) ? 1 : 2;
+		ber = ber_add_integer(ber, i);
