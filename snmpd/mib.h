@@ -1140,3 +1140,4 @@
 	{ MIBDECL(pfsyncIpPktsRecv) },			\
 	{ MIBDECL(pfsyncIp6PktsRecv) },			\
 	{ MIBDECL(pfsyncPktDiscardsForBadInterface) },	\
+	{ MIBDECL(pfsyncPktDiscardsForBadTtl) },	\
