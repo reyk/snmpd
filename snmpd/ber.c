@@ -1139,3 +1139,4 @@ ber_read_element(struct ber *ber, struct ber_element *elm)
 		ber_read(ber, elm->be_val, len);
 		break;
 	case BER_TYPE_OCTETSTRING:
+	case BER_TYPE_OBJECT:
