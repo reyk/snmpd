@@ -1143,3 +1143,4 @@ mib_iftable(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 		break;
 	case 8:
 		/* ifOperStatus */
+		if ((kif->if_flags & IFF_UP) == 0)
