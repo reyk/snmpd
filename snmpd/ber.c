@@ -1144,3 +1144,4 @@ ber_read_element(struct ber *ber, struct ber_element *elm)
 		if (elm->be_val == NULL)
 			return -1;
 		elm->be_free = 1;
+		elm->be_len = len;
