@@ -1143,3 +1143,4 @@
 	{ MIBDECL(pfsyncPktDiscardsForBadTtl) },	\
 	{ MIBDECL(pfsyncPktShorterThanHeader) },	\
 	{ MIBDECL(pfsyncPktDiscardsForBadVersion) },	\
+	{ MIBDECL(pfsyncPktDiscardsForBadAction) },	\
