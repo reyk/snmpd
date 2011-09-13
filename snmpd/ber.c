@@ -1142,3 +1142,4 @@ ber_read_element(struct ber *ber, struct ber_element *elm)
 	case BER_TYPE_OBJECT:
 		elm->be_val = malloc(len + 1);
 		if (elm->be_val == NULL)
+			return -1;
