@@ -1145,3 +1145,4 @@
 	{ MIBDECL(pfsyncPktDiscardsForBadVersion) },	\
 	{ MIBDECL(pfsyncPktDiscardsForBadAction) },	\
 	{ MIBDECL(pfsyncPktDiscardsForBadLength) },	\
+	{ MIBDECL(pfsyncPktDiscardsForBadAuth) },	\
