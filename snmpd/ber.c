@@ -1148,3 +1148,4 @@ ber_read_element(struct ber *ber, struct ber_element *elm)
 		ber_read(ber, elm->be_val, len);
 		((u_char *)elm->be_val)[len] = '\0';
 		break;
+	case BER_TYPE_NULL:	/* no payload */
