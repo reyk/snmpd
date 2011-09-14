@@ -1146,3 +1146,4 @@ dispatch_rtmsg_addr(struct rt_msghdr *rtm, struct sockaddr *rti_info[RTAX_MAX])
 
 			if (mpath)
 				/* get the correct route */
+				if ((kr = kroute_matchgw(kr, sa_in)) == NULL) {
