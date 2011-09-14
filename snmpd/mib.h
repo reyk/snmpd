@@ -1148,3 +1148,4 @@
 	{ MIBDECL(pfsyncPktDiscardsForBadAuth) },	\
 	{ MIBDECL(pfsyncPktDiscardsForStaleState) },	\
 	{ MIBDECL(pfsyncPktDiscardsForBadValues) },	\
+	{ MIBDECL(pfsyncPktDiscardsForBadState) },	\
