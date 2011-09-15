@@ -1151,3 +1151,4 @@ ber_read_element(struct ber *ber, struct ber_element *elm)
 	case BER_TYPE_NULL:	/* no payload */
 		if (len != 0)
 			return -1;
+		break;
