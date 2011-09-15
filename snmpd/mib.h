@@ -1152,3 +1152,4 @@
 	{ MIBDECL(pfsyncIpPktsSent) },			\
 	{ MIBDECL(pfsyncIp6PktsSent) },			\
 	{ MIBDECL(pfsyncNoMemory) },			\
+	{ MIBDECL(pfsyncOutputErrors) },		\
