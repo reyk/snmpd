@@ -1149,3 +1149,4 @@
 	{ MIBDECL(pfsyncPktDiscardsForStaleState) },	\
 	{ MIBDECL(pfsyncPktDiscardsForBadValues) },	\
 	{ MIBDECL(pfsyncPktDiscardsForBadState) },	\
+	{ MIBDECL(pfsyncIpPktsSent) },			\
