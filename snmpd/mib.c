@@ -1149,3 +1149,4 @@ mib_iftable(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 			i = 4;	/* unknown(4) */
 		else if (LINK_STATE_IS_UP(kif->if_link_state))
 			i = 1;	/* up(1) */
+		else
