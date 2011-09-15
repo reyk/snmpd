@@ -1151,3 +1151,4 @@ mib_iftable(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 			i = 1;	/* up(1) */
 		else
 			i = 7;	/* lowerLayerDown(7) or dormant(5)? */
+		ber = ber_add_integer(ber, i);
