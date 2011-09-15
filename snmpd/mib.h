@@ -1151,3 +1151,4 @@
 	{ MIBDECL(pfsyncPktDiscardsForBadState) },	\
 	{ MIBDECL(pfsyncIpPktsSent) },			\
 	{ MIBDECL(pfsyncIp6PktsSent) },			\
+	{ MIBDECL(pfsyncNoMemory) },			\
