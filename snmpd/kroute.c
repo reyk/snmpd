@@ -1149,3 +1149,4 @@ dispatch_rtmsg_addr(struct rt_msghdr *rtm, struct sockaddr *rti_info[RTAX_MAX])
 				if ((kr = kroute_matchgw(kr, sa_in)) == NULL) {
 					log_warnx("dispatch_rtmsg[delete] "
 					    "mpath route not found");
+					return (0);
