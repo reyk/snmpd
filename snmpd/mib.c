@@ -1155,3 +1155,4 @@ mib_iftable(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 		break;
 	case 9:
 		ber = ber_add_integer(ber, kif->if_ticks);
+		ber_set_header(ber, BER_CLASS_APPLICATION, SNMP_T_TIMETICKS);
