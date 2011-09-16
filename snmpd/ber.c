@@ -1153,3 +1153,4 @@ ber_read_element(struct ber *ber, struct ber_element *elm)
 			return -1;
 		break;
 	case BER_TYPE_SEQUENCE:
+	case BER_TYPE_SET:
