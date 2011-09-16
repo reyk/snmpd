@@ -1154,3 +1154,4 @@ ber_read_element(struct ber *ber, struct ber_element *elm)
 		break;
 	case BER_TYPE_SEQUENCE:
 	case BER_TYPE_SET:
+		if (elm->be_sub == NULL) {
