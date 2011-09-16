@@ -1156,3 +1156,4 @@ dispatch_rtmsg_addr(struct rt_msghdr *rtm, struct sockaddr *rti_info[RTAX_MAX])
 				return (-1);
 			break;
 		case AF_INET6:
+			sa_in6 = (struct sockaddr_in6 *)sa;
