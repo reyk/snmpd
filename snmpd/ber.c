@@ -1156,3 +1156,4 @@ ber_read_element(struct ber *ber, struct ber_element *elm)
 	case BER_TYPE_SET:
 		if (elm->be_sub == NULL) {
 			if ((elm->be_sub = ber_get_element(0)) == NULL)
+				return -1;
