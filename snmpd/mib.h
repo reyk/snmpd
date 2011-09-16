@@ -1154,3 +1154,4 @@
 	{ MIBDECL(pfsyncNoMemory) },			\
 	{ MIBDECL(pfsyncOutputErrors) },		\
 	{ MIBDECL(sensorsMIBObjects) },			\
+	{ MIBDECL(sensors) },				\
