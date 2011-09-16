@@ -1156,3 +1156,4 @@
 	{ MIBDECL(sensorsMIBObjects) },			\
 	{ MIBDECL(sensors) },				\
 	{ MIBDECL(sensorNumber) },			\
+	{ MIBDECL(sensorTable) },			\
