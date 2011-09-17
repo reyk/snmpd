@@ -1159,3 +1159,4 @@
 	{ MIBDECL(sensorTable) },			\
 	{ MIBDECL(sensorEntry) },			\
 	{ MIBDECL(sensorIndex) },			\
+	{ MIBDECL(sensorDescr) },			\
