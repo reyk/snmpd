@@ -1160,3 +1160,4 @@ ber_read_element(struct ber *ber, struct ber_element *elm)
 		}
 		next = elm->be_sub;
 		while (len > 0) {
+			r = ber_read_element(ber, next);
