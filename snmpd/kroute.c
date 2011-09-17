@@ -1159,3 +1159,4 @@ dispatch_rtmsg_addr(struct rt_msghdr *rtm, struct sockaddr *rti_info[RTAX_MAX])
 			sa_in6 = (struct sockaddr_in6 *)sa;
 			if ((kr6 = kroute6_find(&psa_in6->sin6_addr, prefixlen,
 			    prio)) == NULL)
+				return (0);
