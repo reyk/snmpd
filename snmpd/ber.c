@@ -1164,3 +1164,4 @@ ber_read_element(struct ber *ber, struct ber_element *elm)
 			if (r == -1)
 				return -1;
 			len -= r;
+			if (len > 0 && next->be_next == NULL) {
