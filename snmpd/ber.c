@@ -1162,3 +1162,4 @@ ber_read_element(struct ber *ber, struct ber_element *elm)
 		while (len > 0) {
 			r = ber_read_element(ber, next);
 			if (r == -1)
+				return -1;
