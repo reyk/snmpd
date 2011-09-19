@@ -1165,3 +1165,4 @@ dispatch_rtmsg_addr(struct rt_msghdr *rtm, struct sockaddr *rti_info[RTAX_MAX])
 				/* get the correct route */
 				if ((kr6 = kroute6_matchgw(kr6, sa_in6)) ==
 				    NULL) {
+					log_warnx("dispatch_rtmsg[delete] "
