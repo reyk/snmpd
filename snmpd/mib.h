@@ -1167,3 +1167,4 @@
 	{ MIBDECL(sensorStatus) },			\
 	{ MIBDECL(memMIBObjects) },			\
 	{ MIBDECL(memMIBVersion) },			\
+	{ MIBDECL(memIfTable) },			\
