@@ -1165,3 +1165,4 @@
 	{ MIBDECL(sensorValue) },			\
 	{ MIBDECL(sensorUnits) },			\
 	{ MIBDECL(sensorStatus) },			\
+	{ MIBDECL(memMIBObjects) },			\
