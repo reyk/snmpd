@@ -1166,3 +1166,4 @@ dispatch_rtmsg_addr(struct rt_msghdr *rtm, struct sockaddr *rti_info[RTAX_MAX])
 				if ((kr6 = kroute6_matchgw(kr6, sa_in6)) ==
 				    NULL) {
 					log_warnx("dispatch_rtmsg[delete] "
+					    "IPv6 mpath route not found");
