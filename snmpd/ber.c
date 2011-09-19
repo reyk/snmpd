@@ -1168,3 +1168,4 @@ ber_read_element(struct ber *ber, struct ber_element *elm)
 				if ((next->be_next = ber_get_element(0)) ==
 				    NULL)
 					return -1;
+			}
