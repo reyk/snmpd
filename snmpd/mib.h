@@ -1172,3 +1172,4 @@
 	{ MIBDECL(memIfName) },				\
 	{ MIBDECL(memIfLiveLocks) },			\
 	{ MIBDECL(carpMIBObjects) },			\
+	{ MIBDECL(carpSysctl) },			\
