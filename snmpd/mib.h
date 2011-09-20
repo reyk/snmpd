@@ -1170,3 +1170,4 @@
 	{ MIBDECL(memIfTable) },			\
 	{ MIBDECL(memIfEntry) },			\
 	{ MIBDECL(memIfName) },				\
+	{ MIBDECL(memIfLiveLocks) },			\
