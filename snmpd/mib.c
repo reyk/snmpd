@@ -1171,3 +1171,4 @@ mib_iftable(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 		break;
 	case 13:
 		mib[3] = IPCTL_IFQUEUE;
+		mib[4] = IFQCTL_DROPS;
