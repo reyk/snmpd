@@ -1169,3 +1169,4 @@
 	{ MIBDECL(memMIBVersion) },			\
 	{ MIBDECL(memIfTable) },			\
 	{ MIBDECL(memIfEntry) },			\
+	{ MIBDECL(memIfName) },				\
