@@ -1169,3 +1169,4 @@ dispatch_rtmsg_addr(struct rt_msghdr *rtm, struct sockaddr *rti_info[RTAX_MAX])
 					    "IPv6 mpath route not found");
 					return (0);
 				}
+
