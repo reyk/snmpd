@@ -1170,3 +1170,4 @@ ber_read_element(struct ber *ber, struct ber_element *elm)
 					return -1;
 			}
 			next = next->be_next;
+		}
