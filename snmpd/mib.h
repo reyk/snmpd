@@ -1174,3 +1174,4 @@
 	{ MIBDECL(carpMIBObjects) },			\
 	{ MIBDECL(carpSysctl) },			\
 	{ MIBDECL(carpAllow) },				\
+	{ MIBDECL(carpPreempt) },			\
