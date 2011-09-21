@@ -1175,3 +1175,4 @@
 	{ MIBDECL(carpSysctl) },			\
 	{ MIBDECL(carpAllow) },				\
 	{ MIBDECL(carpPreempt) },			\
+	{ MIBDECL(carpLog) },				\
