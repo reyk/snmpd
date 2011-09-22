@@ -1177,3 +1177,4 @@ mib_iftable(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 			log_info("mib_iftable: %s: invalid ifq: %s",
 			    kif->if_name, strerror(errno));
 			return (-1);
+		}
