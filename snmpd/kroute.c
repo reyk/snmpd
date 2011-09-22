@@ -1179,3 +1179,4 @@ dispatch_rtmsg_addr(struct rt_msghdr *rtm, struct sockaddr *rti_info[RTAX_MAX])
 
 	if (sa == NULL && !(flags & F_CONNECTED))
 		return (0);
+
