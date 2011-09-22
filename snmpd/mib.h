@@ -1177,3 +1177,4 @@
 	{ MIBDECL(carpPreempt) },			\
 	{ MIBDECL(carpLog) },				\
 	{ MIBDECL(carpIf) },				\
+	{ MIBDECL(carpIfNumber) },			\
