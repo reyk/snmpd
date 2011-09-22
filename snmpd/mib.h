@@ -1178,3 +1178,4 @@
 	{ MIBDECL(carpLog) },				\
 	{ MIBDECL(carpIf) },				\
 	{ MIBDECL(carpIfNumber) },			\
+	{ MIBDECL(carpIfTable) },			\
