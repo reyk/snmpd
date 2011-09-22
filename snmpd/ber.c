@@ -1177,3 +1177,4 @@ ber_read_element(struct ber *ber, struct ber_element *elm)
 }
 
 static ssize_t
+ber_readbuf(struct ber *b, void *buf, size_t nbytes)
