@@ -1183,3 +1183,4 @@ ber_readbuf(struct ber *b, void *buf, size_t nbytes)
 	size_t	 len;
 
 	if (b->br_rbuf == NULL)
+		return -1;
