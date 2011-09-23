@@ -1181,3 +1181,4 @@ ber_readbuf(struct ber *b, void *buf, size_t nbytes)
 {
 	size_t	 sz;
 	size_t	 len;
+
