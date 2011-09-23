@@ -1183,3 +1183,4 @@ dispatch_rtmsg_addr(struct rt_msghdr *rtm, struct sockaddr *rti_info[RTAX_MAX])
 	switch (psa->sa_family) {
 	case AF_INET:
 		sa_in = (struct sockaddr_in *)sa;
+		if ((kr = kroute_find(psa_in->sin_addr.s_addr, prefixlen,
