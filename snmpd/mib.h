@@ -1181,3 +1181,4 @@
 	{ MIBDECL(carpIfTable) },			\
 	{ MIBDECL(carpIfEntry) },			\
 	{ MIBDECL(carpIfIndex) },			\
+	{ MIBDECL(carpIfDescr) },			\
