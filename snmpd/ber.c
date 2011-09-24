@@ -1188,3 +1188,4 @@ ber_readbuf(struct ber *b, void *buf, size_t nbytes)
 	sz = b->br_rend - b->br_rptr;
 	len = MIN(nbytes, sz);
 	if (len == 0) {
+		errno = ECANCELED;
