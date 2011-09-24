@@ -1187,3 +1187,4 @@
 	{ MIBDECL(carpIfAdvbase) },			\
 	{ MIBDECL(carpIfAdvskew) },			\
 	{ MIBDECL(carpIfState) },			\
+	{ MIBDECL(carpStats) },				\
