@@ -1186,3 +1186,4 @@ ber_readbuf(struct ber *b, void *buf, size_t nbytes)
 		return -1;
 
 	sz = b->br_rend - b->br_rptr;
+	len = MIN(nbytes, sz);
