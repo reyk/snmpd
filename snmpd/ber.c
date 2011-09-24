@@ -1185,3 +1185,4 @@ ber_readbuf(struct ber *b, void *buf, size_t nbytes)
 	if (b->br_rbuf == NULL)
 		return -1;
 
+	sz = b->br_rend - b->br_rptr;
