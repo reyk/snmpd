@@ -1185,3 +1185,4 @@
 	{ MIBDECL(carpIfVhid) },			\
 	{ MIBDECL(carpIfDev) },				\
 	{ MIBDECL(carpIfAdvbase) },			\
+	{ MIBDECL(carpIfAdvskew) },			\
