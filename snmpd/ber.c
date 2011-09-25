@@ -1192,3 +1192,4 @@ ber_readbuf(struct ber *b, void *buf, size_t nbytes)
 		return (-1);	/* end of buffer and parser wants more data */
 	}
 
+	bcopy(b->br_rptr, buf, len);
