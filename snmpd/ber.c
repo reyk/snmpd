@@ -1191,3 +1191,4 @@ ber_readbuf(struct ber *b, void *buf, size_t nbytes)
 		errno = ECANCELED;
 		return (-1);	/* end of buffer and parser wants more data */
 	}
+
