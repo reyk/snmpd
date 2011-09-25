@@ -1191,3 +1191,4 @@
 	{ MIBDECL(carpIpPktsRecv) },			\
 	{ MIBDECL(carpIp6PktsRecv) },			\
 	{ MIBDECL(carpPktDiscardsBadIface) },		\
+	{ MIBDECL(carpPktDiscardsBadTtl) },		\
