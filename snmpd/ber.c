@@ -1193,3 +1193,4 @@ ber_readbuf(struct ber *b, void *buf, size_t nbytes)
 	}
 
 	bcopy(b->br_rptr, buf, len);
+	b->br_rptr += len;
