@@ -1195,3 +1195,4 @@ dispatch_rtmsg_addr(struct rt_msghdr *rtm, struct sockaddr *rti_info[RTAX_MAX])
 				goto add4;
 
 			if (sa_in != NULL)
+				kr->r.nexthop.s_addr =
