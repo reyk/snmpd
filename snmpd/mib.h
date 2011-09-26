@@ -1195,3 +1195,4 @@
 	{ MIBDECL(carpPktShorterThanHdr) },		\
 	{ MIBDECL(carpDiscardsBadCksum) },		\
 	{ MIBDECL(carpDiscardsBadVersion) },		\
+	{ MIBDECL(carpDiscardsTooShort) },		\
