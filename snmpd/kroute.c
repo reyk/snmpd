@@ -1193,3 +1193,4 @@ dispatch_rtmsg_addr(struct rt_msghdr *rtm, struct sockaddr *rti_info[RTAX_MAX])
 				return (-1);
 			} else if (mpath && rtm->rtm_type == RTM_ADD)
 				goto add4;
+
