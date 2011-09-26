@@ -1196,3 +1196,4 @@ dispatch_rtmsg_addr(struct rt_msghdr *rtm, struct sockaddr *rti_info[RTAX_MAX])
 
 			if (sa_in != NULL)
 				kr->r.nexthop.s_addr =
+				    sa_in->sin_addr.s_addr;
