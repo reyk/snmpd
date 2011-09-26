@@ -1196,3 +1196,4 @@
 	{ MIBDECL(carpDiscardsBadCksum) },		\
 	{ MIBDECL(carpDiscardsBadVersion) },		\
 	{ MIBDECL(carpDiscardsTooShort) },		\
+	{ MIBDECL(carpDiscardsBadAuth) },		\
