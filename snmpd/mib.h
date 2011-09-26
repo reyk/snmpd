@@ -1193,3 +1193,4 @@
 	{ MIBDECL(carpPktDiscardsBadIface) },		\
 	{ MIBDECL(carpPktDiscardsBadTtl) },		\
 	{ MIBDECL(carpPktShorterThanHdr) },		\
+	{ MIBDECL(carpDiscardsBadCksum) },		\
