@@ -1198,3 +1198,4 @@ ber_readbuf(struct ber *b, void *buf, size_t nbytes)
 	return (len);
 }
 
+void
