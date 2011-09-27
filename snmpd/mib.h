@@ -1200,3 +1200,4 @@
 	{ MIBDECL(carpDiscardsBadVhid) },		\
 	{ MIBDECL(carpDiscardsBadAddrList) },		\
 	{ MIBDECL(carpIpPktsSent) },			\
+	{ MIBDECL(carpIp6PktsSent) },			\
