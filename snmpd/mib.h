@@ -1199,3 +1199,4 @@
 	{ MIBDECL(carpDiscardsBadAuth) },		\
 	{ MIBDECL(carpDiscardsBadVhid) },		\
 	{ MIBDECL(carpDiscardsBadAddrList) },		\
+	{ MIBDECL(carpIpPktsSent) },			\
