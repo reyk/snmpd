@@ -1198,3 +1198,4 @@
 	{ MIBDECL(carpDiscardsTooShort) },		\
 	{ MIBDECL(carpDiscardsBadAuth) },		\
 	{ MIBDECL(carpDiscardsBadVhid) },		\
+	{ MIBDECL(carpDiscardsBadAddrList) },		\
