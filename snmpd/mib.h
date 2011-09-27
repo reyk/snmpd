@@ -1197,3 +1197,4 @@
 	{ MIBDECL(carpDiscardsBadVersion) },		\
 	{ MIBDECL(carpDiscardsTooShort) },		\
 	{ MIBDECL(carpDiscardsBadAuth) },		\
+	{ MIBDECL(carpDiscardsBadVhid) },		\
