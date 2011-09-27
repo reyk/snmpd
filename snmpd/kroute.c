@@ -1200,3 +1200,4 @@ dispatch_rtmsg_addr(struct rt_msghdr *rtm, struct sockaddr *rti_info[RTAX_MAX])
 			else
 				kr->r.nexthop.s_addr = 0;
 			kr->r.flags = flags;
+			kr->r.if_index = ifindex;
