@@ -1201,3 +1201,4 @@ ber_readbuf(struct ber *b, void *buf, size_t nbytes)
 void
 ber_set_readbuf(struct ber *b, void *buf, size_t len)
 {
+	b->br_rbuf = b->br_rptr = buf;
