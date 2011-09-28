@@ -1203,3 +1203,4 @@ dispatch_rtmsg_addr(struct rt_msghdr *rtm, struct sockaddr *rti_info[RTAX_MAX])
 			kr->r.if_index = ifindex;
 			kr->r.ticks = smi_getticks();
 		} else {
+add4:
