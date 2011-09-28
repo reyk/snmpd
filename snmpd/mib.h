@@ -1201,3 +1201,4 @@
 	{ MIBDECL(carpDiscardsBadAddrList) },		\
 	{ MIBDECL(carpIpPktsSent) },			\
 	{ MIBDECL(carpIp6PktsSent) },			\
+	{ MIBDECL(carpNoMemory) },			\
