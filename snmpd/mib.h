@@ -1203,3 +1203,4 @@
 	{ MIBDECL(carpIp6PktsSent) },			\
 	{ MIBDECL(carpNoMemory) },			\
 	{ MIBDECL(carpTransitionsToMaster) },		\
+	{ MIBDECL(localSystem) },			\
