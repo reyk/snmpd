@@ -1207,3 +1207,4 @@ add4:
 			if ((kr = calloc(1,
 			    sizeof(struct kroute_node))) == NULL) {
 				log_warn("dispatch_rtmsg");
+				return (-1);
