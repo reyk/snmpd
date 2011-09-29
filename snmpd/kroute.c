@@ -1208,3 +1208,4 @@ add4:
 			    sizeof(struct kroute_node))) == NULL) {
 				log_warn("dispatch_rtmsg");
 				return (-1);
+			}
