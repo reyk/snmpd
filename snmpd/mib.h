@@ -1208,3 +1208,4 @@
 							\
 	{ MIBDECL(ipMIB) },				\
 	{ MIBDECL(ipForwarding) },			\
+	{ MIBDECL(ipDefaultTTL) },			\
