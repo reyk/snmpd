@@ -1206,3 +1206,4 @@ dispatch_rtmsg_addr(struct rt_msghdr *rtm, struct sockaddr *rti_info[RTAX_MAX])
 add4:
 			if ((kr = calloc(1,
 			    sizeof(struct kroute_node))) == NULL) {
+				log_warn("dispatch_rtmsg");
