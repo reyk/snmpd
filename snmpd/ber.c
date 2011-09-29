@@ -1206,3 +1206,4 @@ ber_set_readbuf(struct ber *b, void *buf, size_t len)
 }
 
 ssize_t
+ber_get_writebuf(struct ber *b, void **buf)
