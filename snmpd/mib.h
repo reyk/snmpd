@@ -1207,3 +1207,4 @@
 	{ MIBDECL(localTest) },				\
 							\
 	{ MIBDECL(ipMIB) },				\
+	{ MIBDECL(ipForwarding) },			\
