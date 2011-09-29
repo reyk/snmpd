@@ -1206,3 +1206,4 @@
 	{ MIBDECL(localSystem) },			\
 	{ MIBDECL(localTest) },				\
 							\
+	{ MIBDECL(ipMIB) },				\
