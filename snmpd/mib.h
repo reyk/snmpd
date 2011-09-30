@@ -1210,3 +1210,4 @@
 	{ MIBDECL(ipForwarding) },			\
 	{ MIBDECL(ipDefaultTTL) },			\
 	{ MIBDECL(ipInReceives) },			\
+	{ MIBDECL(ipInHdrErrors) },			\
