@@ -1209,3 +1209,4 @@
 	{ MIBDECL(ipMIB) },				\
 	{ MIBDECL(ipForwarding) },			\
 	{ MIBDECL(ipDefaultTTL) },			\
+	{ MIBDECL(ipInReceives) },			\
