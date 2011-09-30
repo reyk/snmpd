@@ -1211,3 +1211,4 @@
 	{ MIBDECL(ipDefaultTTL) },			\
 	{ MIBDECL(ipInReceives) },			\
 	{ MIBDECL(ipInHdrErrors) },			\
+	{ MIBDECL(ipInAddrErrors) },			\
