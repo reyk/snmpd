@@ -1209,3 +1209,4 @@ add4:
 				log_warn("dispatch_rtmsg");
 				return (-1);
 			}
+			kr->r.prefix.s_addr = psa_in->sin_addr.s_addr;
