@@ -1211,3 +1211,4 @@ add4:
 			}
 			kr->r.prefix.s_addr = psa_in->sin_addr.s_addr;
 			kr->r.prefixlen = prefixlen;
+			if (sa_in != NULL)
