@@ -1212,3 +1212,4 @@
 	{ MIBDECL(ipInReceives) },			\
 	{ MIBDECL(ipInHdrErrors) },			\
 	{ MIBDECL(ipInAddrErrors) },			\
+	{ MIBDECL(ipForwDatagrams) },			\
