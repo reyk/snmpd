@@ -1210,3 +1210,4 @@ add4:
 				return (-1);
 			}
 			kr->r.prefix.s_addr = psa_in->sin_addr.s_addr;
+			kr->r.prefixlen = prefixlen;
