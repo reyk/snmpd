@@ -1210,3 +1210,4 @@ mib_iftable(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 		ber_set_header(ber, BER_CLASS_APPLICATION, SNMP_T_COUNTER32);
 		break;
 	case 21:
+		mib[3] = IPCTL_IFQUEUE;
