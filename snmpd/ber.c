@@ -1209,3 +1209,4 @@ ssize_t
 ber_get_writebuf(struct ber *b, void **buf)
 {
 	if (b->br_wbuf == NULL)
+		return -1;
