@@ -1216,3 +1216,4 @@
 	{ MIBDECL(ipInUnknownProtos) },			\
 	{ MIBDECL(ipInDiscards) },			\
 	{ MIBDECL(ipInDelivers) },			\
+	{ MIBDECL(ipOutRequests) },			\
