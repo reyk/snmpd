@@ -1216,3 +1216,4 @@ add4:
 			else
 				kr->r.nexthop.s_addr = 0;
 			kr->r.flags = flags;
+			kr->r.if_index = ifindex;
