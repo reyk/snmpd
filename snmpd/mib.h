@@ -1215,3 +1215,4 @@
 	{ MIBDECL(ipForwDatagrams) },			\
 	{ MIBDECL(ipInUnknownProtos) },			\
 	{ MIBDECL(ipInDiscards) },			\
+	{ MIBDECL(ipInDelivers) },			\
