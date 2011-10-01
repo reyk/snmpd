@@ -1213,3 +1213,4 @@ add4:
 			kr->r.prefixlen = prefixlen;
 			if (sa_in != NULL)
 				kr->r.nexthop.s_addr = sa_in->sin_addr.s_addr;
+			else
