@@ -1215,3 +1215,4 @@ mib_iftable(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 		len = sizeof(ifq);
 		if (sysctl(mib, sizeofa(mib), &ifq, &len, 0, 0) == -1) {
 			log_info("mib_iftable: %s: invalid ifq: %s",
+			    kif->if_name, strerror(errno));
