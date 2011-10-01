@@ -1214,3 +1214,4 @@
 	{ MIBDECL(ipInAddrErrors) },			\
 	{ MIBDECL(ipForwDatagrams) },			\
 	{ MIBDECL(ipInUnknownProtos) },			\
+	{ MIBDECL(ipInDiscards) },			\
