@@ -1215,3 +1215,4 @@ add4:
 				kr->r.nexthop.s_addr = sa_in->sin_addr.s_addr;
 			else
 				kr->r.nexthop.s_addr = 0;
+			kr->r.flags = flags;
