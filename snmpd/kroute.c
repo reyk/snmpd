@@ -1214,3 +1214,4 @@ add4:
 			if (sa_in != NULL)
 				kr->r.nexthop.s_addr = sa_in->sin_addr.s_addr;
 			else
+				kr->r.nexthop.s_addr = 0;
