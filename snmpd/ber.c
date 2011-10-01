@@ -1214,3 +1214,4 @@ ber_get_writebuf(struct ber *b, void **buf)
 	return (b->br_wend - b->br_wbuf);
 }
 
+void
