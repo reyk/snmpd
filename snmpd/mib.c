@@ -1213,3 +1213,4 @@ mib_iftable(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 		mib[3] = IPCTL_IFQUEUE;
 		mib[4] = IFQCTL_LEN;
 		len = sizeof(ifq);
+		if (sysctl(mib, sizeofa(mib), &ifq, &len, 0, 0) == -1) {
