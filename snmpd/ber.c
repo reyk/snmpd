@@ -1217,3 +1217,4 @@ ber_get_writebuf(struct ber *b, void **buf)
 void
 ber_set_application(struct ber *b, unsigned long (*cb)(struct ber_element *))
 {
+	b->br_application = cb;
