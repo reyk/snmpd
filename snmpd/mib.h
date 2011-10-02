@@ -1217,3 +1217,4 @@
 	{ MIBDECL(ipInDiscards) },			\
 	{ MIBDECL(ipInDelivers) },			\
 	{ MIBDECL(ipOutRequests) },			\
+	{ MIBDECL(ipOutDiscards) },			\
