@@ -1220,3 +1220,4 @@ add4:
 			kr->r.ticks = smi_getticks();
 			kr->r.priority = prio;
 
+			kroute_insert(kr);
