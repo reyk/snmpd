@@ -1219,3 +1219,4 @@ add4:
 			kr->r.if_index = ifindex;
 			kr->r.ticks = smi_getticks();
 			kr->r.priority = prio;
+
