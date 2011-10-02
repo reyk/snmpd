@@ -1218,3 +1218,4 @@
 	{ MIBDECL(ipInDelivers) },			\
 	{ MIBDECL(ipOutRequests) },			\
 	{ MIBDECL(ipOutDiscards) },			\
+	{ MIBDECL(ipOutNoRoutes) },			\
