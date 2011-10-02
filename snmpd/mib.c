@@ -1218,3 +1218,4 @@ mib_iftable(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 			    kif->if_name, strerror(errno));
 			return (-1);
 		}
+		ber = ber_add_integer(ber, ifq);
