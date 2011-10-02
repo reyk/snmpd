@@ -1220,3 +1220,4 @@
 	{ MIBDECL(ipOutDiscards) },			\
 	{ MIBDECL(ipOutNoRoutes) },			\
 	{ MIBDECL(ipReasmTimeout) },			\
+	{ MIBDECL(ipReasmReqds) },			\
