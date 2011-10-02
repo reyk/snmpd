@@ -1217,3 +1217,4 @@ add4:
 				kr->r.nexthop.s_addr = 0;
 			kr->r.flags = flags;
 			kr->r.if_index = ifindex;
+			kr->r.ticks = smi_getticks();
