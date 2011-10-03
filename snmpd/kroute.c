@@ -1224,3 +1224,4 @@ add4:
 		}
 		break;
 	case AF_INET6:
+		sa_in6 = (struct sockaddr_in6 *)sa;
