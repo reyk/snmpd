@@ -1222,3 +1222,4 @@
 	{ MIBDECL(ipReasmTimeout) },			\
 	{ MIBDECL(ipReasmReqds) },			\
 	{ MIBDECL(ipReasmOKs) },			\
+	{ MIBDECL(ipReasmFails) },			\
