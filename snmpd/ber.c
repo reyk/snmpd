@@ -1221,3 +1221,4 @@ ber_set_application(struct ber *b, unsigned long (*cb)(struct ber_element *))
 }
 
 void
+ber_set_writecallback(struct ber_element *elm, void (*cb)(void *, size_t),
