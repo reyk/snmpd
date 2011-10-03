@@ -1221,3 +1221,4 @@
 	{ MIBDECL(ipOutNoRoutes) },			\
 	{ MIBDECL(ipReasmTimeout) },			\
 	{ MIBDECL(ipReasmReqds) },			\
+	{ MIBDECL(ipReasmOKs) },			\
