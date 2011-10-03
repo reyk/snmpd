@@ -1223,3 +1223,4 @@ mib_iftable(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 		break;
 	case 22:
 		ber = ber_add_oid(ber, &zerodotzero);
+		break;
