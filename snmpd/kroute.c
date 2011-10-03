@@ -1221,3 +1221,4 @@ add4:
 			kr->r.priority = prio;
 
 			kroute_insert(kr);
+		}
