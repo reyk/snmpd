@@ -1223,3 +1223,4 @@ add4:
 			kroute_insert(kr);
 		}
 		break;
+	case AF_INET6:
