@@ -1224,3 +1224,4 @@
 	{ MIBDECL(ipReasmOKs) },			\
 	{ MIBDECL(ipReasmFails) },			\
 	{ MIBDECL(ipFragOKs) },				\
+	{ MIBDECL(ipFragFails) },			\
