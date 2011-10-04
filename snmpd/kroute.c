@@ -1228,3 +1228,4 @@ add4:
 		if ((kr6 = kroute6_find(&psa_in6->sin6_addr, prefixlen,
 		    prio)) != NULL) {
 			/* get the correct route */
+			if (mpath && rtm->rtm_type == RTM_CHANGE &&
