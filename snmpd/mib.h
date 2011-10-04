@@ -1226,3 +1226,4 @@
 	{ MIBDECL(ipFragOKs) },				\
 	{ MIBDECL(ipFragFails) },			\
 	{ MIBDECL(ipFragCreates) },			\
+	{ MIBDECL(ipRoutingDiscards) },			\
