@@ -1225,3 +1225,4 @@ add4:
 		break;
 	case AF_INET6:
 		sa_in6 = (struct sockaddr_in6 *)sa;
+		if ((kr6 = kroute6_find(&psa_in6->sin6_addr, prefixlen,
