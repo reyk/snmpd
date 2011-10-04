@@ -1228,3 +1228,4 @@
 	{ MIBDECL(ipFragCreates) },			\
 	{ MIBDECL(ipRoutingDiscards) },			\
 	{ MIBDECL(ipAddrTable) },			\
+	{ MIBDECL(ipAddrEntry) },			\
