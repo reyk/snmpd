@@ -1228,3 +1228,4 @@ ber_set_writecallback(struct ber_element *elm, void (*cb)(void *, size_t),
 	elm->be_cbarg = arg;
 }
 
+
