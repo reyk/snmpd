@@ -1227,3 +1227,4 @@ add4:
 		sa_in6 = (struct sockaddr_in6 *)sa;
 		if ((kr6 = kroute6_find(&psa_in6->sin6_addr, prefixlen,
 		    prio)) != NULL) {
+			/* get the correct route */
