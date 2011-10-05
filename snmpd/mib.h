@@ -1232,3 +1232,4 @@
 	{ MIBDECL(ipAdEntAddr) },			\
 	{ MIBDECL(ipAdEntIfIndex) },			\
 	{ MIBDECL(ipAdEntNetMask) },			\
+	{ MIBDECL(ipAdEntBcastAddr) },			\
