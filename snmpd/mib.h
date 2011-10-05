@@ -1229,3 +1229,4 @@
 	{ MIBDECL(ipRoutingDiscards) },			\
 	{ MIBDECL(ipAddrTable) },			\
 	{ MIBDECL(ipAddrEntry) },			\
+	{ MIBDECL(ipAdEntAddr) },			\
