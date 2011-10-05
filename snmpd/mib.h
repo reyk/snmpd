@@ -1230,3 +1230,4 @@
 	{ MIBDECL(ipAddrTable) },			\
 	{ MIBDECL(ipAddrEntry) },			\
 	{ MIBDECL(ipAdEntAddr) },			\
+	{ MIBDECL(ipAdEntIfIndex) },			\
