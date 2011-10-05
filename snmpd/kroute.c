@@ -1231,3 +1231,4 @@ add4:
 			if (mpath && rtm->rtm_type == RTM_CHANGE &&
 			    (kr6 = kroute6_matchgw(kr6, sa_in6)) ==
 			    NULL) {
+				log_warnx("dispatch_rtmsg[change] "
