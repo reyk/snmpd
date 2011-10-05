@@ -1229,3 +1229,4 @@ add4:
 		    prio)) != NULL) {
 			/* get the correct route */
 			if (mpath && rtm->rtm_type == RTM_CHANGE &&
+			    (kr6 = kroute6_matchgw(kr6, sa_in6)) ==
