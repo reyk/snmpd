@@ -1231,3 +1231,4 @@
 	{ MIBDECL(ipAddrEntry) },			\
 	{ MIBDECL(ipAdEntAddr) },			\
 	{ MIBDECL(ipAdEntIfIndex) },			\
+	{ MIBDECL(ipAdEntNetMask) },			\
