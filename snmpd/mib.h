@@ -1233,3 +1233,4 @@
 	{ MIBDECL(ipAdEntIfIndex) },			\
 	{ MIBDECL(ipAdEntNetMask) },			\
 	{ MIBDECL(ipAdEntBcastAddr) },			\
+	{ MIBDECL(ipAdEntReasmMaxSize) },		\
