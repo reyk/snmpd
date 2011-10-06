@@ -1235,3 +1235,4 @@
 	{ MIBDECL(ipAdEntBcastAddr) },			\
 	{ MIBDECL(ipAdEntReasmMaxSize) },		\
 	{ MIBDECL(ipNetToMediaTable) },			\
+	{ MIBDECL(ipNetToMediaEntry) },			\
