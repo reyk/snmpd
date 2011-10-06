@@ -1233,3 +1233,4 @@ add4:
 			    NULL) {
 				log_warnx("dispatch_rtmsg[change] "
 				    "IPv6 mpath route not found");
+				return (-1);
