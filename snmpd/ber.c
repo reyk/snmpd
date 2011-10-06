@@ -1236,3 +1236,4 @@ ber_free(struct ber *b)
 		free (b->br_wbuf);
 }
 
+static ssize_t
