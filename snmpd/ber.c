@@ -1235,3 +1235,4 @@ ber_free(struct ber *b)
 	if (b->br_wbuf != NULL)
 		free (b->br_wbuf);
 }
+
