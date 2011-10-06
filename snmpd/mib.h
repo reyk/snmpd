@@ -1234,3 +1234,4 @@
 	{ MIBDECL(ipAdEntNetMask) },			\
 	{ MIBDECL(ipAdEntBcastAddr) },			\
 	{ MIBDECL(ipAdEntReasmMaxSize) },		\
+	{ MIBDECL(ipNetToMediaTable) },			\
