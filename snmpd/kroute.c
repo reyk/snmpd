@@ -1235,3 +1235,4 @@ add4:
 				    "IPv6 mpath route not found");
 				return (-1);
 			} else if (mpath && rtm->rtm_type == RTM_ADD)
+				goto add6;
