@@ -1236,3 +1236,4 @@
 	{ MIBDECL(ipAdEntReasmMaxSize) },		\
 	{ MIBDECL(ipNetToMediaTable) },			\
 	{ MIBDECL(ipNetToMediaEntry) },			\
+	{ MIBDECL(ipNetToMediaIfIndex) },		\
