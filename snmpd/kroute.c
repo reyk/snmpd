@@ -1236,3 +1236,4 @@ add4:
 				return (-1);
 			} else if (mpath && rtm->rtm_type == RTM_ADD)
 				goto add6;
+
