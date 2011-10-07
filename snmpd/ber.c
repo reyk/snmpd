@@ -1238,3 +1238,4 @@ ber_free(struct ber *b)
 
 static ssize_t
 ber_getc(struct ber *b, u_char *c)
+{
