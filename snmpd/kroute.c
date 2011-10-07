@@ -1240,3 +1240,4 @@ add4:
 			if (sa_in6 != NULL)
 				memcpy(&kr6->r.nexthop,
 				    &sa_in6->sin6_addr,
+				    sizeof(struct in6_addr));
