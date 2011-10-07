@@ -1238,3 +1238,4 @@ add4:
 				goto add6;
 
 			if (sa_in6 != NULL)
+				memcpy(&kr6->r.nexthop,
