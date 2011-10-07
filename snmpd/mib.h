@@ -1237,3 +1237,4 @@
 	{ MIBDECL(ipNetToMediaTable) },			\
 	{ MIBDECL(ipNetToMediaEntry) },			\
 	{ MIBDECL(ipNetToMediaIfIndex) },		\
+	{ MIBDECL(ipNetToMediaPhysAddress) },		\
