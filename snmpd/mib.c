@@ -1240,3 +1240,4 @@ mib_ifxtable(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 	int			 i = 0;
 
 	/* Get and verify the current row index */
+	idx = o->bo_id[OIDIDX_ifXEntry];
