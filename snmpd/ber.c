@@ -1242,3 +1242,4 @@ ber_getc(struct ber *b, u_char *c)
 	return ber_read(b, c, 1);
 }
 
+static ssize_t
