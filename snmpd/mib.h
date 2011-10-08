@@ -1242,3 +1242,4 @@
 	{ MIBDECL(ipNetToMediaType) },			\
 	{ MIBDECL(ipNetToMediaType) },			\
 							\
+	{ MIBDECL(ipfMIB) },				\
