@@ -1243,3 +1243,4 @@ mib_ifxtable(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 	idx = o->bo_id[OIDIDX_ifXEntry];
 	if ((kif = mib_ifget(idx)) == NULL)
 		return (1);
+
