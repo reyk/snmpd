@@ -1244,3 +1244,4 @@ ber_getc(struct ber *b, u_char *c)
 
 static ssize_t
 ber_read(struct ber *ber, void *buf, size_t len)
+{
