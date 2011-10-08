@@ -1243,3 +1243,4 @@
 	{ MIBDECL(ipNetToMediaType) },			\
 							\
 	{ MIBDECL(ipfMIB) },				\
+	{ MIBDECL(ipfInetCidrRouteNumber) },		\
