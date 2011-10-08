@@ -1243,3 +1243,4 @@ add4:
 				    sizeof(struct in6_addr));
 			else
 				memcpy(&kr6->r.nexthop,
+				    &in6addr_any,
