@@ -1245,3 +1245,4 @@
 	{ MIBDECL(ipfMIB) },				\
 	{ MIBDECL(ipfInetCidrRouteNumber) },		\
 	{ MIBDECL(ipfInetCidrRouteTable) },		\
+	{ MIBDECL(ipfInetCidrRouteEntry) },		\
