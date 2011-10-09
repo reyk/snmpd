@@ -1246,3 +1246,4 @@
 	{ MIBDECL(ipfInetCidrRouteNumber) },		\
 	{ MIBDECL(ipfInetCidrRouteTable) },		\
 	{ MIBDECL(ipfInetCidrRouteEntry) },		\
+	{ MIBDECL(ipfRouteEntIfIndex) },		\
