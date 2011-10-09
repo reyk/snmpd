@@ -1246,3 +1246,4 @@ add4:
 				    &in6addr_any,
 				    sizeof(struct in6_addr));
 
+			kr6->r.flags = flags;
