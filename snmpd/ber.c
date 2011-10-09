@@ -1246,3 +1246,4 @@ static ssize_t
 ber_read(struct ber *ber, void *buf, size_t len)
 {
 	u_char *b = buf;
+	ssize_t	r, remain = len;
