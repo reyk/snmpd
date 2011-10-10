@@ -1252,3 +1252,4 @@ add4:
 		} else {
 add6:
 			if ((kr6 = calloc(1,
+			    sizeof(struct kroute6_node))) == NULL) {
