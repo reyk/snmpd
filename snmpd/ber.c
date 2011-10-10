@@ -1249,3 +1249,4 @@ ber_read(struct ber *ber, void *buf, size_t len)
 	ssize_t	r, remain = len;
 
 	/*
+	 * XXX calling read here is wrong in many ways. The most obvious one
