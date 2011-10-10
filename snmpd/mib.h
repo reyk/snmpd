@@ -1250,3 +1250,4 @@
 	{ MIBDECL(ipfRouteEntType) },			\
 	{ MIBDECL(ipfRouteEntProto) },			\
 	{ MIBDECL(ipfRouteEntAge) },			\
+	{ MIBDECL(ipfRouteEntNextHopAS) },		\
