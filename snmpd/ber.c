@@ -1252,3 +1252,4 @@ ber_read(struct ber *ber, void *buf, size_t len)
 	 * XXX calling read here is wrong in many ways. The most obvious one
 	 * being that we will block till data arrives.
 	 * But for now it is _good enough_ *gulp*
+	 */
