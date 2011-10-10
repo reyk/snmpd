@@ -1251,3 +1251,4 @@ add4:
 			kr6->r.ticks = smi_getticks();
 		} else {
 add6:
+			if ((kr6 = calloc(1,
