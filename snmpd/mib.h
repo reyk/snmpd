@@ -1249,3 +1249,4 @@
 	{ MIBDECL(ipfRouteEntIfIndex) },		\
 	{ MIBDECL(ipfRouteEntType) },			\
 	{ MIBDECL(ipfRouteEntProto) },			\
+	{ MIBDECL(ipfRouteEntAge) },			\
