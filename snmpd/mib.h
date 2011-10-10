@@ -1251,3 +1251,4 @@
 	{ MIBDECL(ipfRouteEntProto) },			\
 	{ MIBDECL(ipfRouteEntAge) },			\
 	{ MIBDECL(ipfRouteEntNextHopAS) },		\
+	{ MIBDECL(ipfRouteEntRouteMetric1) },		\
