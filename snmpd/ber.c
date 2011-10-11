@@ -1254,3 +1254,4 @@ ber_read(struct ber *ber, void *buf, size_t len)
 	 * But for now it is _good enough_ *gulp*
 	 */
 
+	while (remain > 0) {
