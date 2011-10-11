@@ -1256,3 +1256,4 @@ add6:
 				log_warn("dispatch_rtmsg");
 				return (-1);
 			}
+			memcpy(&kr6->r.prefix, &psa_in6->sin6_addr,
