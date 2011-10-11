@@ -1255,3 +1255,4 @@
 	{ MIBDECL(ipfRouteEntRouteMetric2) },		\
 	{ MIBDECL(ipfRouteEntRouteMetric3) },		\
 	{ MIBDECL(ipfRouteEntRouteMetric4) },		\
+	{ MIBDECL(ipfRouteEntRouteMetric5) },		\
