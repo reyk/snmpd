@@ -1257,3 +1257,4 @@
 	{ MIBDECL(ipfRouteEntRouteMetric4) },		\
 	{ MIBDECL(ipfRouteEntRouteMetric5) },		\
 	{ MIBDECL(ipfRouteEntStatus) },			\
+	{ MIBEND }					\
