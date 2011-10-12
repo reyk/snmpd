@@ -1258,3 +1258,4 @@ ber_read(struct ber *ber, void *buf, size_t len)
 		if (ber->fd == -1)
 			r = ber_readbuf(ber, b, remain);
 		else
+			r = read(ber->fd, b, remain);
