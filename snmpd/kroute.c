@@ -1257,3 +1257,4 @@ add6:
 				return (-1);
 			}
 			memcpy(&kr6->r.prefix, &psa_in6->sin6_addr,
+			    sizeof(struct in6_addr));
