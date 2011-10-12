@@ -1260,3 +1260,4 @@
 	{ MIBEND }					\
 }
 
+ void	 mib_init(void);
