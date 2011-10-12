@@ -1259,3 +1259,4 @@ add6:
 			memcpy(&kr6->r.prefix, &psa_in6->sin6_addr,
 			    sizeof(struct in6_addr));
 			kr6->r.prefixlen = prefixlen;
+			if (sa_in6 != NULL)
