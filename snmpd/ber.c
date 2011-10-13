@@ -1264,3 +1264,4 @@ ber_read(struct ber *ber, void *buf, size_t len)
 				continue;
 			return -1;
 		}
+		if (r == 0)
