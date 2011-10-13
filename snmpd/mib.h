@@ -1262,3 +1262,4 @@
 
  void	 mib_init(void);
 
+#endif /* _SNMPD_MIB_H */
