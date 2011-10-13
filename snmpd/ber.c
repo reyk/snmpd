@@ -1263,3 +1263,4 @@ ber_read(struct ber *ber, void *buf, size_t len)
 			if (errno == EINTR || errno == EAGAIN)
 				continue;
 			return -1;
+		}
