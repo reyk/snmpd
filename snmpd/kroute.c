@@ -1263,3 +1263,4 @@ add6:
 				memcpy(&kr6->r.nexthop, &sa_in6->sin6_addr,
 				    sizeof(struct in6_addr));
 			else
+				memcpy(&kr6->r.nexthop, &in6addr_any,
