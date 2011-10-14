@@ -1266,3 +1266,4 @@ add6:
 				memcpy(&kr6->r.nexthop, &in6addr_any,
 				    sizeof(struct in6_addr));
 			kr6->r.flags = flags;
+			kr6->r.if_index = ifindex;
