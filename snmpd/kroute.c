@@ -1267,3 +1267,4 @@ add6:
 				    sizeof(struct in6_addr));
 			kr6->r.flags = flags;
 			kr6->r.if_index = ifindex;
+			kr6->r.ticks = smi_getticks();
