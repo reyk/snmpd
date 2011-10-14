@@ -1268,3 +1268,4 @@ add6:
 			kr6->r.flags = flags;
 			kr6->r.if_index = ifindex;
 			kr6->r.ticks = smi_getticks();
+			kr6->r.priority = prio;
