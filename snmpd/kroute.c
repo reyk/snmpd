@@ -1270,3 +1270,4 @@ add6:
 			kr6->r.ticks = smi_getticks();
 			kr6->r.priority = prio;
 
+			kroute6_insert(kr6);
