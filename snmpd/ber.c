@@ -1271,3 +1271,4 @@ ber_read(struct ber *ber, void *buf, size_t len)
 	}
 	r = b - (u_char *)buf;
 	ber->br_offs += r;
+	return r;
