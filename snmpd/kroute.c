@@ -1271,3 +1271,4 @@ add6:
 			kr6->r.priority = prio;
 
 			kroute6_insert(kr6);
+		}
