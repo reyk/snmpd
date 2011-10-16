@@ -1275,3 +1275,4 @@ add6:
 		break;
 	}
 
+	return (0);
