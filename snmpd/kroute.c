@@ -1273,3 +1273,4 @@ add6:
 			kroute6_insert(kr6);
 		}
 		break;
+	}
