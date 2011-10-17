@@ -1278,3 +1278,4 @@ add6:
 	return (0);
 }
 
+struct kroute *
