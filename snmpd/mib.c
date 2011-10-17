@@ -1279,3 +1279,4 @@ mib_ifxtable(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 	case 8:
 		ber = ber_add_integer(ber, (u_int64_t)kif->if_imcasts);
 		ber_set_header(ber, BER_CLASS_APPLICATION, SNMP_T_COUNTER64);
+		break;
