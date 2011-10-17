@@ -1279,3 +1279,4 @@ add6:
 }
 
 struct kroute *
+kroute_first(void)
