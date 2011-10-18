@@ -1283,3 +1283,4 @@ kroute_first(void)
 {
 	struct kroute_node	*kn;
 
+	kn = RB_MIN(kroute_tree, &krt);
