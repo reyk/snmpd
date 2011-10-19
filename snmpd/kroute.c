@@ -1285,3 +1285,4 @@ kroute_first(void)
 
 	kn = RB_MIN(kroute_tree, &krt);
 	return (&kn->r);
+}
