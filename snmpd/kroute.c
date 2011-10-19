@@ -1287,3 +1287,4 @@ kroute_first(void)
 	return (&kn->r);
 }
 
+struct kroute *
