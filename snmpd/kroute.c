@@ -1292,3 +1292,4 @@ kroute_getaddr(in_addr_t prefix, u_int8_t prefixlen, u_int8_t prio, int next)
 {
 	struct kroute_node	*kn;
 
+	kn = kroute_find(prefix, prefixlen, prio);
