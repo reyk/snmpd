@@ -1297,3 +1297,4 @@ kroute_getaddr(in_addr_t prefix, u_int8_t prefixlen, u_int8_t prio, int next)
 		kn = RB_NEXT(kroute_tree, &krt, kn);
 	if (kn != NULL)
 		return (&kn->r);
+	else
