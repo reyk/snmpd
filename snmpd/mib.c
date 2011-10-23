@@ -1304,3 +1304,4 @@ mib_ifxtable(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 		ber = ber_add_integer(ber, 0);	/* enabled(1), disabled(2) */
 		break;
 	case 15:
+		i = kif->if_baudrate >= 1000000 ?
