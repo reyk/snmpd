@@ -1303,3 +1303,4 @@ mib_ifxtable(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 	case 14:
 		ber = ber_add_integer(ber, 0);	/* enabled(1), disabled(2) */
 		break;
+	case 15:
