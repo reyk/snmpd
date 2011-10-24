@@ -1307,3 +1307,4 @@ mib_ifxtable(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 		i = kif->if_baudrate >= 1000000 ?
 		    kif->if_baudrate / 1000000 : 0;
 		ber = ber_add_integer(ber, i);
+		ber_set_header(ber, BER_CLASS_APPLICATION, SNMP_T_GAUGE32);
