@@ -1306,3 +1306,4 @@ mib_ifxtable(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 	case 15:
 		i = kif->if_baudrate >= 1000000 ?
 		    kif->if_baudrate / 1000000 : 0;
+		ber = ber_add_integer(ber, i);
