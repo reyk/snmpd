@@ -1312,3 +1312,4 @@ mib_ifxtable(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 	case 16:
 		/* ifPromiscuousMode: true(1), false(2) */
 		i = kif->if_flags & IFF_PROMISC ? 1 : 2;
+		ber = ber_add_integer(ber, i);
