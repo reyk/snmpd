@@ -1314,3 +1314,4 @@ mib_ifxtable(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 		i = kif->if_flags & IFF_PROMISC ? 1 : 2;
 		ber = ber_add_integer(ber, i);
 		break;
+	case 17:
