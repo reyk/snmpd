@@ -1316,3 +1316,4 @@ mib_ifxtable(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 		break;
 	case 17:
 		/* ifConnectorPresent: false(2), true(1) */
+		i = kif->if_type == IFT_ETHER ? 1 : 2;
