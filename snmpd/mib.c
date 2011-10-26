@@ -1315,3 +1315,4 @@ mib_ifxtable(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 		ber = ber_add_integer(ber, i);
 		break;
 	case 17:
+		/* ifConnectorPresent: false(2), true(1) */
