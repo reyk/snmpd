@@ -1318,3 +1318,4 @@ mib_ifxtable(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 		/* ifConnectorPresent: false(2), true(1) */
 		i = kif->if_type == IFT_ETHER ? 1 : 2;
 		ber = ber_add_integer(ber, i);
+		break;
