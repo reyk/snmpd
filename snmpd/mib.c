@@ -1323,3 +1323,4 @@ mib_ifxtable(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 		ber = ber_add_string(ber, kif->if_descr);
 		break;
 	case 19:
+		ber = ber_add_integer(ber, 0);
