@@ -1336,3 +1336,4 @@ mib_ifxtable(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 int
 mib_ifstacklast(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 {
+	struct ber_element	*ber = *elm;
