@@ -1341,3 +1341,4 @@ mib_ifstacklast(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 	ber_set_header(ber, BER_CLASS_APPLICATION, SNMP_T_TIMETICKS);
 	return (0);
 }
+
