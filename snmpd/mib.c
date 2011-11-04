@@ -1350,3 +1350,4 @@ mib_ifrcvtable(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 	struct kif		*kif;
 	u_int			 i = 0;
 
+	/* Get and verify the current row index */
