@@ -1355,3 +1355,4 @@ mib_ifrcvtable(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 	if ((kif = mib_ifget(idx)) == NULL)
 		return (1);
 
+	/*
