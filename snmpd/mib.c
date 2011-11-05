@@ -1356,3 +1356,4 @@ mib_ifrcvtable(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 		return (1);
 
 	/*
+	 * The lladdr of the interface will be encoded in the returned OID
