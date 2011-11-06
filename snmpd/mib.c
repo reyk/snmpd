@@ -1359,3 +1359,4 @@ mib_ifrcvtable(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 	 * The lladdr of the interface will be encoded in the returned OID
 	 * ifRcvAddressX.ifindex.6.x.x.x.x.x.x = val
 	 * Thanks to the virtual cloner interfaces, it is an easy 1:1
+	 * mapping in OpenBSD; only one lladdr (MAC) address per interface.
