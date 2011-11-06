@@ -1357,3 +1357,4 @@ mib_ifrcvtable(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 
 	/*
 	 * The lladdr of the interface will be encoded in the returned OID
+	 * ifRcvAddressX.ifindex.6.x.x.x.x.x.x = val
