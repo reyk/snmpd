@@ -1361,3 +1361,4 @@ mib_ifrcvtable(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 	 * Thanks to the virtual cloner interfaces, it is an easy 1:1
 	 * mapping in OpenBSD; only one lladdr (MAC) address per interface.
 	 */
+
