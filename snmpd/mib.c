@@ -1362,3 +1362,4 @@ mib_ifrcvtable(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 	 * mapping in OpenBSD; only one lladdr (MAC) address per interface.
 	 */
 
+	/* first set the base OID and caluculate the length */
