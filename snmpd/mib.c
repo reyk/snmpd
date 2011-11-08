@@ -1367,3 +1367,4 @@ mib_ifrcvtable(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 	o->bo_id[OIDIDX_ifRcvAddressEntry + idx++] = kif->if_index;
 	o->bo_id[OIDIDX_ifRcvAddressEntry + idx] = 0;
 	smi_oidlen(o);
+
