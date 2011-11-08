@@ -1365,3 +1365,4 @@ mib_ifrcvtable(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 	/* first set the base OID and caluculate the length */
 	idx = 0;
 	o->bo_id[OIDIDX_ifRcvAddressEntry + idx++] = kif->if_index;
+	o->bo_id[OIDIDX_ifRcvAddressEntry + idx] = 0;
