@@ -1370,3 +1370,4 @@ mib_ifrcvtable(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 
 	/* extend the OID with the lladdr length and octets */
 	o->bo_id[OIDIDX_ifRcvAddressEntry + idx++] = sizeof(kif->if_lladdr);
+	o->bo_n++;
