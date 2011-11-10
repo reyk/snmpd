@@ -1375,3 +1375,4 @@ mib_ifrcvtable(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 		o->bo_id[OIDIDX_ifRcvAddressEntry + idx++] = kif->if_lladdr[i];
 
 	/* write OID */
+	ber = ber_add_oid(ber, o);
