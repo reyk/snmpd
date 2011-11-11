@@ -1379,3 +1379,4 @@ mib_ifrcvtable(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 
 	switch (o->bo_id[OIDIDX_ifRcvAddress]) {
 	case 2:
+		/* ifRcvAddressStatus: RowStatus active(1), notInService(2) */
