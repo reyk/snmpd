@@ -1385,3 +1385,4 @@ mib_ifrcvtable(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 		break;
 	case 3:
 		/* ifRcvAddressType: other(1), volatile(2), nonVolatile(3) */
+		ber = ber_add_integer(ber, 1);
