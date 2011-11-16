@@ -1399,3 +1399,4 @@ mib_ifrcvtable(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
  * - OPENBSD-PF-MIB.txt
  * - OPENBSD-SENSORS-MIB.txt
  * - OPENBSD-CARP-MIB.txt
+ * (http://www.packetmischief.ca/openbsd-snmp-mibs/)
