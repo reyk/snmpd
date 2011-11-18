@@ -1405,3 +1405,4 @@ mib_ifrcvtable(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 struct carpif {
 	struct carpreq	 carpr;
 	struct kif	 kif;
+};
