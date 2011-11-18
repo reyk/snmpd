@@ -1407,3 +1407,4 @@ struct carpif {
 	struct kif	 kif;
 };
 
+int	 mib_pfinfo(struct oid *, struct ber_oid *, struct ber_element **);
