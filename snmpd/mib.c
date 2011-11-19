@@ -1410,3 +1410,4 @@ struct carpif {
 int	 mib_pfinfo(struct oid *, struct ber_oid *, struct ber_element **);
 int	 mib_pfcounters(struct oid *, struct ber_oid *, struct ber_element **);
 int	 mib_pfscounters(struct oid *, struct ber_oid *, struct ber_element **);
+int	 mib_pflogif(struct oid *, struct ber_oid *, struct ber_element **);
