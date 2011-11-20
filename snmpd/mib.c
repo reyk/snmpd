@@ -1416,3 +1416,4 @@ int	 mib_pflimits(struct oid *, struct ber_oid *, struct ber_element **);
 int	 mib_pftimeouts(struct oid *, struct ber_oid *, struct ber_element **);
 int	 mib_pfifnum(struct oid *, struct ber_oid *, struct ber_element **);
 int	 mib_pfiftable(struct oid *, struct ber_oid *, struct ber_element **);
+int	 mib_pftablenum(struct oid *, struct ber_oid *, struct ber_element **);
