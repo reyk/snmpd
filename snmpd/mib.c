@@ -1420,3 +1420,4 @@ int	 mib_pftablenum(struct oid *, struct ber_oid *, struct ber_element **);
 int	 mib_pftables(struct oid *, struct ber_oid *, struct ber_element **);
 int	 mib_pftableaddrs(struct oid *, struct ber_oid *, struct ber_element **);
 struct ber_oid *
+	 mib_pftableaddrstable(struct oid *, struct ber_oid *, struct ber_oid *);
