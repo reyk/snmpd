@@ -1424,3 +1424,4 @@ struct ber_oid *
 int	 mib_pflabelnum(struct oid *, struct ber_oid *, struct ber_element **);
 int	 mib_pflabels(struct oid *, struct ber_oid *, struct ber_element **);
 int	 mib_pfsyncstats(struct oid *, struct ber_oid *, struct ber_element **);
+
