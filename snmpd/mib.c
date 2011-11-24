@@ -1430,3 +1430,4 @@ int	 mib_sensors(struct oid *, struct ber_oid *, struct ber_element **);
 const char *mib_sensorunit(struct sensor *);
 char	*mib_sensorvalue(struct sensor *);
 
+int	 mib_carpsysctl(struct oid *, struct ber_oid *, struct ber_element **);
