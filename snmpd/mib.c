@@ -1434,3 +1434,4 @@ int	 mib_carpsysctl(struct oid *, struct ber_oid *, struct ber_element **);
 int	 mib_carpstats(struct oid *, struct ber_oid *, struct ber_element **);
 int	 mib_carpiftable(struct oid *, struct ber_oid *, struct ber_element **);
 int	 mib_carpifnum(struct oid *, struct ber_oid *, struct ber_element **);
+struct carpif
