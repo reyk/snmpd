@@ -1437,3 +1437,4 @@ int	 mib_carpifnum(struct oid *, struct ber_oid *, struct ber_element **);
 struct carpif
 	*mib_carpifget(u_int);
 int	 mib_memiftable(struct oid *, struct ber_oid *, struct ber_element **);
+
