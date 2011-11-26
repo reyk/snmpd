@@ -1440,3 +1440,4 @@ int	 mib_memiftable(struct oid *, struct ber_oid *, struct ber_element **);
 
 static struct oid openbsd_mib[] = {
 	{ MIB(pfMIBObjects),		OID_MIB },
+	{ MIB(pfRunning),		OID_RD, mib_pfinfo },
