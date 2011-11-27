@@ -1443,3 +1443,4 @@ static struct oid openbsd_mib[] = {
 	{ MIB(pfRunning),		OID_RD, mib_pfinfo },
 	{ MIB(pfRuntime),		OID_RD, mib_pfinfo },
 	{ MIB(pfDebug),			OID_RD, mib_pfinfo },
+	{ MIB(pfHostid),		OID_RD, mib_pfinfo },
