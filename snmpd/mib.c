@@ -1457,3 +1457,4 @@ static struct oid openbsd_mib[] = {
 	{ MIB(pfCntStateMismatch),	OID_RD, mib_pfcounters },
 	{ MIB(pfCntStateInsert),	OID_RD, mib_pfcounters },
 	{ MIB(pfCntStateLimit),		OID_RD, mib_pfcounters },
+	{ MIB(pfCntSrcLimit),		OID_RD, mib_pfcounters },
