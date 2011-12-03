@@ -1465,3 +1465,4 @@ static struct oid openbsd_mib[] = {
 	{ MIB(pfStateInserts),		OID_RD, mib_pfscounters },
 	{ MIB(pfStateRemovals),		OID_RD, mib_pfscounters },
 	{ MIB(pfLogIfName),		OID_RD, mib_pflogif },
+	{ MIB(pfLogIfIpBytesIn),	OID_RD, mib_pflogif },
