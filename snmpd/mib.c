@@ -1481,3 +1481,4 @@ static struct oid openbsd_mib[] = {
 	{ MIB(pfSrcTrackSearches),	OID_RD, mib_pfsrctrack },
 	{ MIB(pfSrcTrackInserts),	OID_RD, mib_pfsrctrack },
 	{ MIB(pfSrcTrackRemovals),	OID_RD, mib_pfsrctrack },
+	{ MIB(pfLimitStates),		OID_RD, mib_pflimits },
