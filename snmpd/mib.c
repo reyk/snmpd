@@ -1486,3 +1486,4 @@ static struct oid openbsd_mib[] = {
 	{ MIB(pfLimitFragments),	OID_RD, mib_pflimits },
 	{ MIB(pfLimitMaxTables),	OID_RD, mib_pflimits },
 	{ MIB(pfLimitMaxTableEntries),	OID_RD, mib_pflimits },
+	{ MIB(pfTimeoutTcpFirst),	OID_RD, mib_pftimeouts },
