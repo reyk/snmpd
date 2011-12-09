@@ -1490,3 +1490,4 @@ static struct oid openbsd_mib[] = {
 	{ MIB(pfTimeoutTcpOpening),	OID_RD, mib_pftimeouts },
 	{ MIB(pfTimeoutTcpEstablished),	OID_RD, mib_pftimeouts },
 	{ MIB(pfTimeoutTcpClosing),	OID_RD, mib_pftimeouts },
+	{ MIB(pfTimeoutTcpFinWait),	OID_RD, mib_pftimeouts },
