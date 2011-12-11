@@ -1499,3 +1499,4 @@ static struct oid openbsd_mib[] = {
 	{ MIB(pfTimeoutIcmpError),	OID_RD, mib_pftimeouts },
 	{ MIB(pfTimeoutOtherFirst),	OID_RD, mib_pftimeouts },
 	{ MIB(pfTimeoutOtherSingle),	OID_RD, mib_pftimeouts },
+	{ MIB(pfTimeoutOtherMultiple),	OID_RD, mib_pftimeouts },
