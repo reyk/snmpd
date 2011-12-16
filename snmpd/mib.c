@@ -1518,3 +1518,4 @@ static struct oid openbsd_mib[] = {
 	{ MIB(pfIfOut4PassPkts),	OID_TRD, mib_pfiftable },
 	{ MIB(pfIfOut4PassBytes),	OID_TRD, mib_pfiftable },
 	{ MIB(pfIfOut4BlockPkts),	OID_TRD, mib_pfiftable },
+	{ MIB(pfIfOut4BlockBytes),	OID_TRD, mib_pfiftable },
