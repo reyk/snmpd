@@ -1561,3 +1561,4 @@ static struct oid openbsd_mib[] = {
 	{ MIB(pfTblAddrInBlockBytes),	OID_TRD, mib_pftableaddrs,
 	    NULL, mib_pftableaddrstable },
 	{ MIB(pfTblAddrInPassPkts),	OID_TRD, mib_pftableaddrs,
+	    NULL, mib_pftableaddrstable },
