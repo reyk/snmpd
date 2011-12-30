@@ -1576,3 +1576,4 @@ static struct oid openbsd_mib[] = {
 	{ MIB(pfLabelIndex),		OID_TRD, mib_pflabels },
 	{ MIB(pfLabelName),		OID_TRD, mib_pflabels },
 	{ MIB(pfLabelEvals),		OID_TRD, mib_pflabels },
+	{ MIB(pfLabelPkts),		OID_TRD, mib_pflabels },
