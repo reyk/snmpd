@@ -1600,3 +1600,4 @@ static struct oid openbsd_mib[] = {
 	{ MIB(pfsyncNoMemory),		OID_RD, mib_pfsyncstats },
 	{ MIB(pfsyncOutputErrors),	OID_RD, mib_pfsyncstats },
 	{ MIB(sensorsMIBObjects),	OID_MIB },
+	{ MIB(sensorNumber),		OID_RD,	mib_sensornum },
