@@ -1609,3 +1609,4 @@ static struct oid openbsd_mib[] = {
 	{ MIB(sensorUnits),		OID_TRD, mib_sensors },
 	{ MIB(sensorStatus),		OID_TRD, mib_sensors },
 	{ MIB(carpMIBObjects),		OID_MIB },
+	{ MIB(carpAllow),		OID_RD, mib_carpsysctl },
