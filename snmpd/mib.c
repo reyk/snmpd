@@ -1621,3 +1621,4 @@ static struct oid openbsd_mib[] = {
 	{ MIB(carpDiscardsBadVersion),	OID_RD, mib_carpstats },
 	{ MIB(carpDiscardsTooShort),	OID_RD, mib_carpstats },
 	{ MIB(carpDiscardsBadAuth),	OID_RD, mib_carpstats },
+	{ MIB(carpDiscardsBadVhid),	OID_RD, mib_carpstats },
