@@ -1629,3 +1629,4 @@ static struct oid openbsd_mib[] = {
 	{ MIB(carpTransitionsToMaster),	OID_RD, mib_carpstats },
 	{ MIB(carpIfNumber),		OID_RD, mib_carpifnum },
 	{ MIB(carpIfIndex),		OID_TRD, mib_carpiftable },
+	{ MIB(carpIfDescr),		OID_TRD, mib_carpiftable },
