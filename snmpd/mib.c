@@ -1636,3 +1636,4 @@ static struct oid openbsd_mib[] = {
 	{ MIB(carpIfAdvskew),		OID_TRD, mib_carpiftable },
 	{ MIB(carpIfState),		OID_TRD, mib_carpiftable },
 	{ MIB(memMIBObjects),		OID_MIB },
+	{ MIB(memMIBVersion),		OID_RD, mps_getint, NULL, NULL,
