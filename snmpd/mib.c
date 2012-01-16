@@ -1644,3 +1644,4 @@ static struct oid openbsd_mib[] = {
 };
 
 int
+mib_pfinfo(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
