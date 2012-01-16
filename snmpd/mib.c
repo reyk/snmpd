@@ -1641,3 +1641,4 @@ static struct oid openbsd_mib[] = {
 	{ MIB(memIfName),		OID_TRD, mib_memiftable },
 	{ MIB(memIfLiveLocks),		OID_TRD, mib_memiftable },
 	{ MIBEND }
+};
