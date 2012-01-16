@@ -1643,3 +1643,4 @@ static struct oid openbsd_mib[] = {
 	{ MIBEND }
 };
 
+int
