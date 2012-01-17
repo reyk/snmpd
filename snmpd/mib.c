@@ -1647,3 +1647,4 @@ int
 mib_pfinfo(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 {
 	struct pf_status	 s;
+	time_t			 runtime;
