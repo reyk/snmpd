@@ -1650,3 +1650,4 @@ mib_pfinfo(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 	time_t			 runtime;
 	char			 str[11];
 
+	if (pf_get_stats(&s))
