@@ -1651,3 +1651,4 @@ mib_pfinfo(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 	char			 str[11];
 
 	if (pf_get_stats(&s))
+		return (-1);
