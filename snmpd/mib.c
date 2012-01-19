@@ -1655,3 +1655,4 @@ mib_pfinfo(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 
 	switch (oid->o_oid[OIDIDX_pfstatus]) {
 	case 1:
+		*elm = ber_add_integer(*elm, s.running);
