@@ -1657,3 +1657,4 @@ mib_pfinfo(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 	case 1:
 		*elm = ber_add_integer(*elm, s.running);
 		break;
+	case 2:
