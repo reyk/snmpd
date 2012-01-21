@@ -1661,3 +1661,4 @@ mib_pfinfo(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 		if (s.since > 0)
 			runtime = time(NULL) - s.since;
 		else
+			runtime = 0;
