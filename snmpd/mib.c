@@ -1663,3 +1663,4 @@ mib_pfinfo(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 		else
 			runtime = 0;
 		runtime *= 100;
+		*elm = ber_add_integer(*elm, runtime);
