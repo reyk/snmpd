@@ -1670,3 +1670,4 @@ mib_pfinfo(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 		*elm = ber_add_integer(*elm, s.debug);
 		break;
 	case 4:
+		snprintf(str, sizeof(str), "0x%08x", ntohl(s.hostid));
