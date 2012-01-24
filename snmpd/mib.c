@@ -1674,3 +1674,4 @@ mib_pfinfo(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 		*elm = ber_add_string(*elm, str);
 		break;
 	default:
+		return (-1);
