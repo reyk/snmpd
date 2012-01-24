@@ -1673,3 +1673,4 @@ mib_pfinfo(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 		snprintf(str, sizeof(str), "0x%08x", ntohl(s.hostid));
 		*elm = ber_add_string(*elm, str);
 		break;
+	default:
