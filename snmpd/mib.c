@@ -1685,3 +1685,4 @@ mib_pfcounters(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 {
 	struct pf_status	 s;
 	int			 i;
+	struct statsmap {
