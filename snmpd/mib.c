@@ -1689,3 +1689,4 @@ mib_pfcounters(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 		u_int8_t	 m_id;
 		u_int64_t	*m_ptr;
 	}			 mapping[] = {
+		{ 1, &s.counters[PFRES_MATCH] },
