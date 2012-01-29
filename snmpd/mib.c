@@ -1695,3 +1695,4 @@ mib_pfcounters(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 		{ 4, &s.counters[PFRES_SHORT] },
 		{ 5, &s.counters[PFRES_NORM] },
 		{ 6, &s.counters[PFRES_MEMORY] },
+		{ 7, &s.counters[PFRES_TS] },
