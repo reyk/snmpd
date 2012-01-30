@@ -1697,3 +1697,4 @@ mib_pfcounters(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 		{ 6, &s.counters[PFRES_MEMORY] },
 		{ 7, &s.counters[PFRES_TS] },
 		{ 8, &s.counters[PFRES_CONGEST] },
+		{ 9, &s.counters[PFRES_IPOPTIONS] },
