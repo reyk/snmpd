@@ -1701,3 +1701,4 @@ mib_pfcounters(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 		{ 10, &s.counters[PFRES_PROTCKSUM] },
 		{ 11, &s.counters[PFRES_BADSTATE] },
 		{ 12, &s.counters[PFRES_STATEINS] },
+		{ 13, &s.counters[PFRES_MAXSTATES] },
