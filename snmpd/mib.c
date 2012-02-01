@@ -1705,3 +1705,4 @@ mib_pfcounters(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 		{ 14, &s.counters[PFRES_SRCLIMIT] },
 		{ 15, &s.counters[PFRES_SYNPROXY] },
 		{ 16, &s.counters[PFRES_TRANSLATE] }
+	};
