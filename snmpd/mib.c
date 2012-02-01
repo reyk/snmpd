@@ -1707,3 +1707,4 @@ mib_pfcounters(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 		{ 16, &s.counters[PFRES_TRANSLATE] }
 	};
 
+	if (pf_get_stats(&s))
