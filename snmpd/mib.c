@@ -1726,3 +1726,4 @@ int
 mib_pfscounters(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 {
 	struct pf_status	 s;
+	int			 i;
