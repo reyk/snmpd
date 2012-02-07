@@ -1732,3 +1732,4 @@ mib_pfscounters(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 		u_int64_t	*m_ptr;
 	}			 mapping[] = {
 		{ 2, &s.fcounters[FCNT_STATE_SEARCH] },
+		{ 3, &s.fcounters[FCNT_STATE_INSERT] },
