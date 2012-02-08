@@ -1736,3 +1736,4 @@ mib_pfscounters(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 		{ 4, &s.fcounters[FCNT_STATE_REMOVALS] },
 	};
 
+	if (pf_get_stats(&s))
