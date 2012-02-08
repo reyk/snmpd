@@ -1733,3 +1733,4 @@ mib_pfscounters(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 	}			 mapping[] = {
 		{ 2, &s.fcounters[FCNT_STATE_SEARCH] },
 		{ 3, &s.fcounters[FCNT_STATE_INSERT] },
+		{ 4, &s.fcounters[FCNT_STATE_REMOVALS] },
