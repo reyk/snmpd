@@ -1747,3 +1747,4 @@ mib_pfscounters(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 	default:
 		for (i = 0;
 		    (u_int)i < (sizeof(mapping) / sizeof(mapping[0])); i++) {
+			if (oid->o_oid[OIDIDX_pfstatus] == mapping[i].m_id) {
