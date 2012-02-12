@@ -1750,3 +1750,4 @@ mib_pfscounters(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 			if (oid->o_oid[OIDIDX_pfstatus] == mapping[i].m_id) {
 				*elm = ber_add_integer(*elm, *mapping[i].m_ptr);
 				ber_set_header(*elm, BER_CLASS_APPLICATION,
+				    SNMP_T_COUNTER64);
