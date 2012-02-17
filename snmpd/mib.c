@@ -1771,3 +1771,4 @@ mib_pflogif(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 	}			 mapping[] = {
 		{ 2, &s.bcounters[IPV4][IN] },
 		{ 3, &s.bcounters[IPV4][OUT] },
+		{ 4, &s.pcounters[IPV4][IN][PF_PASS] },
