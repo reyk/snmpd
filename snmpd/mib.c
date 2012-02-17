@@ -1770,3 +1770,4 @@ mib_pflogif(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 		u_int64_t	*m_ptr;
 	}			 mapping[] = {
 		{ 2, &s.bcounters[IPV4][IN] },
+		{ 3, &s.bcounters[IPV4][OUT] },
