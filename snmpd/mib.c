@@ -1775,3 +1775,4 @@ mib_pflogif(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 		{ 5, &s.pcounters[IPV4][IN][PF_DROP] },
 		{ 6, &s.pcounters[IPV4][OUT][PF_PASS] },
 		{ 7, &s.pcounters[IPV4][OUT][PF_DROP] },
+		{ 8, &s.bcounters[IPV6][IN] },
