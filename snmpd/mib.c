@@ -1783,3 +1783,4 @@ mib_pflogif(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 		{ 13, &s.pcounters[IPV6][OUT][PF_DROP] }
 	};
 
+	if (pf_get_stats(&s))
