@@ -1789,3 +1789,4 @@ mib_pflogif(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 	switch (oid->o_oid[OIDIDX_pfstatus]) {
 	case 1:
 		*elm = ber_add_string(*elm, s.ifname);
+		break;
