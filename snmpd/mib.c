@@ -1816,3 +1816,4 @@ mib_pfsrctrack(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 		u_int64_t	*m_ptr;
 	}			 mapping[] = {
 		{ 2, &s.scounters[SCNT_SRC_NODE_SEARCH] },
+		{ 3, &s.scounters[SCNT_SRC_NODE_INSERT] },
