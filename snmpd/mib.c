@@ -1820,3 +1820,4 @@ mib_pfsrctrack(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 		{ 4, &s.scounters[SCNT_SRC_NODE_REMOVALS] }
 	};
 
+	if (pf_get_stats(&s))
