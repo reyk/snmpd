@@ -1823,3 +1823,4 @@ mib_pfsrctrack(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 	if (pf_get_stats(&s))
 		return (-1);
 
+	switch (oid->o_oid[OIDIDX_pfstatus]) {
