@@ -1827,3 +1827,4 @@ mib_pfsrctrack(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 	case 1:
 		*elm = ber_add_integer(*elm, s.src_nodes);
 		ber_set_header(*elm, BER_CLASS_APPLICATION, SNMP_T_UNSIGNED32);
+		break;
