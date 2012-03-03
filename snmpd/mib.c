@@ -1829,3 +1829,4 @@ mib_pfsrctrack(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 		ber_set_header(*elm, BER_CLASS_APPLICATION, SNMP_T_UNSIGNED32);
 		break;
 	default:
+		for (i = 0;
