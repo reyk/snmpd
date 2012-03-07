@@ -1847,3 +1847,4 @@ mib_pfsrctrack(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 int
 mib_pflimits(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 {
+	struct pfioc_limit	 pl;
