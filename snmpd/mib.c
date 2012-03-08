@@ -1852,3 +1852,4 @@ mib_pflimits(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 	extern int		 devpf;
 	struct statsmap {
 		u_int8_t	 m_id;
+		u_int8_t	 m_limit;
