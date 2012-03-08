@@ -1850,3 +1850,4 @@ mib_pflimits(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 	struct pfioc_limit	 pl;
 	int			 i;
 	extern int		 devpf;
+	struct statsmap {
