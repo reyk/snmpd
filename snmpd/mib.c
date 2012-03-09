@@ -1855,3 +1855,4 @@ mib_pflimits(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 		u_int8_t	 m_limit;
 	}			 mapping[] = {
 		{ 1, PF_LIMIT_STATES },
+		{ 2, PF_LIMIT_SRC_NODES },
