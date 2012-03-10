@@ -1858,3 +1858,4 @@ mib_pflimits(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 		{ 2, PF_LIMIT_SRC_NODES },
 		{ 3, PF_LIMIT_FRAGS },
 		{ 4, PF_LIMIT_TABLES },
+		{ 5, PF_LIMIT_TABLE_ENTRIES }
