@@ -1864,3 +1864,4 @@ mib_pflimits(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 	memset(&pl, 0, sizeof(pl));
 	pl.index = PF_LIMIT_MAX;
 
+	for (i = 0;
