@@ -1861,3 +1861,4 @@ mib_pflimits(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 		{ 5, PF_LIMIT_TABLE_ENTRIES }
 	};
 
+	memset(&pl, 0, sizeof(pl));
