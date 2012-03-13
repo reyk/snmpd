@@ -1869,3 +1869,4 @@ mib_pflimits(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 		if (oid->o_oid[OIDIDX_pfstatus] == mapping[i].m_id) {
 			pl.index = mapping[i].m_limit;
 			break;
+		}
