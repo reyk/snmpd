@@ -1874,3 +1874,4 @@ mib_pflimits(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 
 	if (pl.index == PF_LIMIT_MAX)
 		return (-1);
+
