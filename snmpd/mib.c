@@ -1877,3 +1877,4 @@ mib_pflimits(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 
 	if (ioctl(devpf, DIOCGETLIMIT, &pl)) {
 		log_warn("DIOCGETLIMIT");
+		return (-1);
