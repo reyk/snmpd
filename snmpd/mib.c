@@ -1881,3 +1881,4 @@ mib_pflimits(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 	}
 
 	*elm = ber_add_integer(*elm, pl.limit);
+	ber_set_header(*elm, BER_CLASS_APPLICATION, SNMP_T_UNSIGNED32);
