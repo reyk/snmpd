@@ -1891,3 +1891,4 @@ mib_pftimeouts(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 {
 	struct pfioc_tm		 pt;
 	int			 i;
+	extern int		 devpf;
