@@ -1898,3 +1898,4 @@ mib_pftimeouts(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 	}			 mapping[] = {
 		{ 1, PFTM_TCP_FIRST_PACKET },
 		{ 2, PFTM_TCP_OPENING },
+		{ 3, PFTM_TCP_ESTABLISHED },
