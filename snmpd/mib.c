@@ -1902,3 +1902,4 @@ mib_pftimeouts(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 		{ 4, PFTM_TCP_CLOSING },
 		{ 5, PFTM_TCP_FIN_WAIT },
 		{ 6, PFTM_TCP_CLOSED },
+		{ 7, PFTM_UDP_FIRST_PACKET },
