@@ -1906,3 +1906,4 @@ mib_pftimeouts(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 		{ 8, PFTM_UDP_SINGLE },
 		{ 9, PFTM_UDP_MULTIPLE },
 		{ 10, PFTM_ICMP_FIRST_PACKET },
+		{ 11, PFTM_ICMP_ERROR_REPLY },
