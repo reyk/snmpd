@@ -1913,3 +1913,4 @@ mib_pftimeouts(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 		{ 15, PFTM_FRAG },
 		{ 16, PFTM_INTERVAL },
 		{ 17, PFTM_ADAPTIVE_START },
+		{ 18, PFTM_ADAPTIVE_END },
