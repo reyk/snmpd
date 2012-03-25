@@ -1920,3 +1920,4 @@ mib_pftimeouts(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 	memset(&pt, 0, sizeof(pt));
 	pt.timeout = PFTM_MAX;
 
+	for (i = 0;
