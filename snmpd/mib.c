@@ -1924,3 +1924,4 @@ mib_pftimeouts(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 	    (u_int)i < (sizeof(mapping) / sizeof(mapping[0])); i++) {
 		if (oid->o_oid[OIDIDX_pfstatus] == mapping[i].m_id) {
 			pt.timeout = mapping[i].m_tm;
+			break;
