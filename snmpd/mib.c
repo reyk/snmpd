@@ -1928,3 +1928,4 @@ mib_pftimeouts(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 		}
 	}
 
+	if (pt.timeout == PFTM_MAX)
