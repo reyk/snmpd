@@ -1935,3 +1935,4 @@ mib_pftimeouts(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 		log_warn("DIOCGETTIMEOUT");
 		return (-1);
 	}
+
