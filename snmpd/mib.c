@@ -1933,3 +1933,4 @@ mib_pftimeouts(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 
 	if (ioctl(devpf, DIOCGETTIMEOUT, &pt)) {
 		log_warn("DIOCGETTIMEOUT");
+		return (-1);
