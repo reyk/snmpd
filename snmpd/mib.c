@@ -1947,3 +1947,4 @@ mib_pfifnum(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 	int	 c;
 
 	if ((c = pfi_count()) == -1)
+		return (-1);
