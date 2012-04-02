@@ -1952,3 +1952,4 @@ mib_pfifnum(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 	*elm = ber_add_integer(*elm, c);
 
 	return (0);
+}
