@@ -1959,3 +1959,4 @@ mib_pfiftable(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 {
 	struct ber_element	*ber = *elm;
 	struct pfi_kif		 pif;
+	int			 idx, iftype;
