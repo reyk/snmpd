@@ -1961,3 +1961,4 @@ mib_pfiftable(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 	struct pfi_kif		 pif;
 	int			 idx, iftype;
 
+	/* Get and verify the current row index */
