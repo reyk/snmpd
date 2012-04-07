@@ -1970,3 +1970,4 @@ mib_pfiftable(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 	ber = ber_add_oid(ber, o);
 
 	switch (o->bo_id[OIDIDX_pfInterface]) {
+	case 1:
