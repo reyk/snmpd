@@ -1974,3 +1974,4 @@ mib_pfiftable(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 		ber = ber_add_integer(ber, idx);
 		break;
 	case 2:
+		ber = ber_add_string(ber, pif.pfik_name);
