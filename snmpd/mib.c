@@ -1978,3 +1978,4 @@ mib_pfiftable(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 		break;
 	case 3:
 		iftype = (pif.pfik_ifp == NULL ? PFI_IFTYPE_GROUP
+		    : PFI_IFTYPE_INSTANCE);
