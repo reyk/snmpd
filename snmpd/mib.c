@@ -1977,3 +1977,4 @@ mib_pfiftable(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 		ber = ber_add_string(ber, pif.pfik_name);
 		break;
 	case 3:
+		iftype = (pif.pfik_ifp == NULL ? PFI_IFTYPE_GROUP
