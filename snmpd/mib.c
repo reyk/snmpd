@@ -1980,3 +1980,4 @@ mib_pfiftable(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 		iftype = (pif.pfik_ifp == NULL ? PFI_IFTYPE_GROUP
 		    : PFI_IFTYPE_INSTANCE);
 		ber = ber_add_integer(ber, iftype);
+		break;
