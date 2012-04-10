@@ -1984,3 +1984,4 @@ mib_pfiftable(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 	case 4:
 		ber = ber_add_integer(ber, pif.pfik_states);
 		ber_set_header(ber, BER_CLASS_APPLICATION, SNMP_T_UNSIGNED32);
+		break;
