@@ -2011,3 +2011,4 @@ mib_pfiftable(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 		break;
 	case 11:
 		ber = ber_add_integer(ber, pif.pfik_bytes[IPV4][OUT][PASS]);
+		ber_set_header(ber, BER_CLASS_APPLICATION, SNMP_T_COUNTER64);
