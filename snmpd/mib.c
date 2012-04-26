@@ -2046,3 +2046,4 @@ mib_pfiftable(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 		ber_set_header(ber, BER_CLASS_APPLICATION, SNMP_T_COUNTER64);
 		break;
 	case 20:
+		ber = ber_add_integer(ber, pif.pfik_packets[IPV6][OUT][BLOCK]);
