@@ -2064,3 +2064,4 @@ int
 mib_pftablenum(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 {
 	int	 c;
+
