@@ -2067,3 +2067,4 @@ mib_pftablenum(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 
 	if ((c = pft_count()) == -1)
 		return (-1);
+
