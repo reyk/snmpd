@@ -2079,3 +2079,4 @@ mib_pftables(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 	struct ber_element	*ber = *elm;
 	struct pfr_tstats	 ts;
 	time_t			 tzero;
+	int			 idx;
