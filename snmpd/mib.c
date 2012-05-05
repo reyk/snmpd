@@ -2081,3 +2081,4 @@ mib_pftables(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 	time_t			 tzero;
 	int			 idx;
 
+	/* Get and verify the current row index */
