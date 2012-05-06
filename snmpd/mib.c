@@ -2087,3 +2087,4 @@ mib_pftables(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 	if (pft_get_table(&ts, idx))
 		return (1);
 
+	ber = ber_add_oid(ber, o);
