@@ -2091,3 +2091,4 @@ mib_pftables(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 
 	switch (o->bo_id[OIDIDX_pfTable]) {
 	case 1:
+		ber = ber_add_integer(ber, idx);
