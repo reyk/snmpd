@@ -2097,3 +2097,4 @@ mib_pftables(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 		ber = ber_add_string(ber, ts.pfrts_name);
 		break;
 	case 3:
+		ber = ber_add_integer(ber, ts.pfrts_cnt);
