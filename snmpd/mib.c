@@ -2101,3 +2101,4 @@ mib_pftables(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 		break;
 	case 4:
 		ber = ber_add_integer(ber, ts.pfrts_refcnt[PFR_REFCNT_ANCHOR]);
+		break;
