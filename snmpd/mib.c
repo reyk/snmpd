@@ -2121,3 +2121,4 @@ mib_pftables(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 		ber = ber_add_integer(ber, ts.pfrts_bytes[IN][PFR_OP_PASS]);
 		ber_set_header(ber, BER_CLASS_APPLICATION, SNMP_T_COUNTER64);
 		break;
+	case 10:
