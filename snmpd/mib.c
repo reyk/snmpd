@@ -2163,3 +2163,4 @@ mib_pftables(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 		break;
 	case 20:
 		tzero = (time(NULL) - ts.pfrts_tzero) * 100;
+		ber = ber_add_integer(ber, tzero);
