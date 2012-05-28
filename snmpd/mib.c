@@ -2175,3 +2175,4 @@ mib_pftables(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 
 int
 mib_pftableaddrs(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
+{
