@@ -2177,3 +2177,4 @@ int
 mib_pftableaddrs(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 {
 	struct ber_element	*ber = *elm;
+	struct pfr_astats	 as;
