@@ -2180,3 +2180,4 @@ mib_pftableaddrs(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 	struct pfr_astats	 as;
 	int			 tblidx;
 
+	tblidx = o->bo_id[OIDIDX_pfTblAddr + 1];
