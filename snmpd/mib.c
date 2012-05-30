@@ -2183,3 +2183,4 @@ mib_pftableaddrs(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 	tblidx = o->bo_id[OIDIDX_pfTblAddr + 1];
 	mps_decodeinaddr(o, &as.pfras_a.pfra_ip4addr, OIDIDX_pfTblAddr + 2);
 	as.pfras_a.pfra_net = o->bo_id[OIDIDX_pfTblAddr + 6];
+
