@@ -2187,3 +2187,4 @@ mib_pftableaddrs(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 	if (pfta_get_addr(&as, tblidx))
 		return (-1);
 
+	/* write OID */
