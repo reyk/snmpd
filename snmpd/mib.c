@@ -2185,3 +2185,4 @@ mib_pftableaddrs(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 	as.pfras_a.pfra_net = o->bo_id[OIDIDX_pfTblAddr + 6];
 
 	if (pfta_get_addr(&as, tblidx))
+		return (-1);
