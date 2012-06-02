@@ -2195,3 +2195,4 @@ mib_pftableaddrs(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 		ber = ber_add_integer(ber, tblidx);
 		break;
 	case 2:
+		ber = ber_add_nstring(ber, (char *)&as.pfras_a.pfra_ip4addr,
