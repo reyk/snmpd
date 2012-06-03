@@ -2198,3 +2198,4 @@ mib_pftableaddrs(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 		ber = ber_add_nstring(ber, (char *)&as.pfras_a.pfra_ip4addr,
 		    sizeof(u_int32_t));
 		ber_set_header(ber, BER_CLASS_APPLICATION, SNMP_T_IPADDR);
+		break;
