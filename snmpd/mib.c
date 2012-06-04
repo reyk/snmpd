@@ -2203,3 +2203,4 @@ mib_pftableaddrs(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 		ber = ber_add_integer(ber, as.pfras_a.pfra_net);
 		break;
 	case 4:
+		ber = ber_add_integer(ber, (time(NULL) - as.pfras_tzero) * 100);
