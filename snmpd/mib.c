@@ -2210,3 +2210,4 @@ mib_pftableaddrs(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 		ber = ber_add_integer(ber, as.pfras_packets[IN][PFR_OP_BLOCK]);
 		ber_set_header(ber, BER_CLASS_APPLICATION, SNMP_T_COUNTER64);
 		break;
+	case 6:
