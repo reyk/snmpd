@@ -2247,3 +2247,4 @@ mib_pftableaddrs(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 
 struct ber_oid *
 mib_pftableaddrstable(struct oid *oid, struct ber_oid *o, struct ber_oid *no)
+{
