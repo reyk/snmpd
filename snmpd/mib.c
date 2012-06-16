@@ -2250,3 +2250,4 @@ mib_pftableaddrstable(struct oid *oid, struct ber_oid *o, struct ber_oid *no)
 {
 	struct pfr_astats	 as;
 	struct oid		 a, b;
+	u_int32_t		 id, tblidx;
