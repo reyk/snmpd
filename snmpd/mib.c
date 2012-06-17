@@ -2253,3 +2253,4 @@ mib_pftableaddrstable(struct oid *oid, struct ber_oid *o, struct ber_oid *no)
 	u_int32_t		 id, tblidx;
 
 	bcopy(&oid->o_id, no, sizeof(*no));
+	id = oid->o_oidlen - 1;
