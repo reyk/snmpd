@@ -2258,3 +2258,4 @@ mib_pftableaddrstable(struct oid *oid, struct ber_oid *o, struct ber_oid *no)
 	if (o->bo_n >= oid->o_oidlen) {
 		/*
 		 * Compare the requested and the matched OID to see
+		 * if we have to iterate to the next element.
