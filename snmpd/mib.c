@@ -2270,3 +2270,4 @@ mib_pftableaddrstable(struct oid *oid, struct ber_oid *o, struct ber_oid *no)
 			o->bo_id[id] = oid->o_oid[id];
 			bcopy(o, no, sizeof(*no));
 		}
+	}
