@@ -2269,3 +2269,4 @@ mib_pftableaddrstable(struct oid *oid, struct ber_oid *o, struct ber_oid *no)
 		if (smi_oid_cmp(&a, &b) == 0) {
 			o->bo_id[id] = oid->o_oid[id];
 			bcopy(o, no, sizeof(*no));
+		}
