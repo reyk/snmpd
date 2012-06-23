@@ -2280,3 +2280,4 @@ mib_pftableaddrstable(struct oid *oid, struct ber_oid *o, struct ber_oid *no)
 		if (pfta_get_first(&as))
 			return (NULL);
 		tblidx = 1;
+	} else {
