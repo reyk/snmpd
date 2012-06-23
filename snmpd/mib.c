@@ -2278,3 +2278,4 @@ mib_pftableaddrstable(struct oid *oid, struct ber_oid *o, struct ber_oid *no)
 
 	if (tblidx == 0) {
 		if (pfta_get_first(&as))
+			return (NULL);
