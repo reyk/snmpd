@@ -2277,3 +2277,4 @@ mib_pftableaddrstable(struct oid *oid, struct ber_oid *o, struct ber_oid *no)
 	as.pfras_a.pfra_net = no->bo_id[OIDIDX_pfTblAddr + 6];
 
 	if (tblidx == 0) {
+		if (pfta_get_first(&as))
