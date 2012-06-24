@@ -2282,3 +2282,4 @@ mib_pftableaddrstable(struct oid *oid, struct ber_oid *o, struct ber_oid *no)
 		tblidx = 1;
 	} else {
 		if (pfta_get_nextaddr(&as, &tblidx)) {
+			/* We reached the last addr in the last table.
