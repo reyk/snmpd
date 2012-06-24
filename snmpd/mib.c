@@ -2284,3 +2284,4 @@ mib_pftableaddrstable(struct oid *oid, struct ber_oid *o, struct ber_oid *no)
 		if (pfta_get_nextaddr(&as, &tblidx)) {
 			/* We reached the last addr in the last table.
 			 * When the next OIDIDX_pfTblAddr'th OID is requested,
+			 * get the first table address again.
