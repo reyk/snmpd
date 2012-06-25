@@ -2286,3 +2286,4 @@ mib_pftableaddrstable(struct oid *oid, struct ber_oid *o, struct ber_oid *no)
 			 * When the next OIDIDX_pfTblAddr'th OID is requested,
 			 * get the first table address again.
 			 */
+			o->bo_id[OIDIDX_pfTblAddr + 1] = 0;
