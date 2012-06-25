@@ -2288,3 +2288,4 @@ mib_pftableaddrstable(struct oid *oid, struct ber_oid *o, struct ber_oid *no)
 			 */
 			o->bo_id[OIDIDX_pfTblAddr + 1] = 0;
 			smi_oidlen(o);
+			return (NULL);
