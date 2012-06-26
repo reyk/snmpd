@@ -2292,3 +2292,4 @@ mib_pftableaddrstable(struct oid *oid, struct ber_oid *o, struct ber_oid *no)
 		}
 	}
 
+	no->bo_id[OIDIDX_pfTblAddr + 1] = tblidx;
