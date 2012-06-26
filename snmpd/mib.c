@@ -2291,3 +2291,4 @@ mib_pftableaddrstable(struct oid *oid, struct ber_oid *o, struct ber_oid *no)
 			return (NULL);
 		}
 	}
+
