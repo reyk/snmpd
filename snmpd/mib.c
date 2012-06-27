@@ -2294,3 +2294,4 @@ mib_pftableaddrstable(struct oid *oid, struct ber_oid *o, struct ber_oid *no)
 
 	no->bo_id[OIDIDX_pfTblAddr + 1] = tblidx;
 	mps_encodeinaddr(no, &as.pfras_a.pfra_ip4addr, OIDIDX_pfTblAddr + 2);
+	no->bo_id[OIDIDX_pfTblAddr + 6] = as.pfras_a.pfra_net;
