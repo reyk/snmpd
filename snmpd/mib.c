@@ -2297,3 +2297,4 @@ mib_pftableaddrstable(struct oid *oid, struct ber_oid *o, struct ber_oid *no)
 	no->bo_id[OIDIDX_pfTblAddr + 6] = as.pfras_a.pfra_net;
 	no->bo_n += 1;
 
+	smi_oidlen(o);
