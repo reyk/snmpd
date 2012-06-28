@@ -2298,3 +2298,4 @@ mib_pftableaddrstable(struct oid *oid, struct ber_oid *o, struct ber_oid *no)
 	no->bo_n += 1;
 
 	smi_oidlen(o);
+
