@@ -2303,3 +2303,4 @@ mib_pftableaddrstable(struct oid *oid, struct ber_oid *o, struct ber_oid *no)
 }
 
 int
+mib_pflabelnum(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
