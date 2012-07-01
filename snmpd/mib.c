@@ -2309,3 +2309,4 @@ mib_pflabelnum(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 	u_int32_t		 nr, mnr, lnr;
 	extern int		 devpf;
 
+	memset(&pr, 0, sizeof(pr));
