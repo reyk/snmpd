@@ -2310,3 +2310,4 @@ mib_pflabelnum(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 	extern int		 devpf;
 
 	memset(&pr, 0, sizeof(pr));
+	if (ioctl(devpf, DIOCGETRULES, &pr)) {
