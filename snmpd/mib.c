@@ -2320,3 +2320,4 @@ mib_pflabelnum(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 	for (nr = 0; nr < mnr; ++nr) {
 		pr.nr = nr;
 		if (ioctl(devpf, DIOCGETRULE, &pr)) {
+			log_warn("DIOCGETRULE");
