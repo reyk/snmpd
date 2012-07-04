@@ -2323,3 +2323,4 @@ mib_pflabelnum(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 			log_warn("DIOCGETRULE");
 			return (-1);
 		}
+
