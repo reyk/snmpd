@@ -2328,3 +2328,4 @@ mib_pflabelnum(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 			lnr++;
 	}
 
+	*elm = ber_add_integer(*elm, lnr);
