@@ -2325,3 +2325,4 @@ mib_pflabelnum(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 		}
 
 		if (pr.rule.label[0])
+			lnr++;
