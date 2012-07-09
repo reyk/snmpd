@@ -2343,3 +2343,4 @@ mib_pflabels(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 	u_int32_t		 idx;
 	extern int		 devpf;
 
+	/* Get and verify the current row index */
