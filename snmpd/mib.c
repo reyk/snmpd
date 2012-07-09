@@ -2342,3 +2342,4 @@ mib_pflabels(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 	u_int32_t		 nr, mnr, lnr;
 	u_int32_t		 idx;
 	extern int		 devpf;
+
