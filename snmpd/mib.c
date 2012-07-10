@@ -2346,3 +2346,4 @@ mib_pflabels(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 	/* Get and verify the current row index */
 	idx = o->bo_id[OIDIDX_pfLabelEntry];
 
+	memset(&pr, 0, sizeof(pr));
