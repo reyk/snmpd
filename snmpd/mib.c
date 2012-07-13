@@ -2359,3 +2359,4 @@ mib_pflabels(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 		if (ioctl(devpf, DIOCGETRULE, &pr)) {
 			log_warn("DIOCGETRULE");
 			return (-1);
+		}
