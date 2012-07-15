@@ -2367,3 +2367,4 @@ mib_pflabels(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 		}
 	}
 
+	if (r == NULL)
