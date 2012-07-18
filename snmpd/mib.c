@@ -2377,3 +2377,4 @@ mib_pflabels(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 		ber = ber_add_integer(ber, lnr);
 		break;
 	case 2:
+		ber = ber_add_string(ber, r->label);
