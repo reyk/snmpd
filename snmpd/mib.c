@@ -2423,3 +2423,4 @@ mib_pfsyncstats(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 {
 	int			 i;
 	int			 mib[] = { CTL_NET, AF_INET, IPPROTO_PFSYNC,
+				    PFSYNCCTL_STATS };
