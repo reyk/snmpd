@@ -2427,3 +2427,4 @@ mib_pfsyncstats(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 	size_t			 len = sizeof(struct pfsyncstats);
 	struct pfsyncstats	 s;
 	struct statsmap {
+		u_int8_t	 m_id;
