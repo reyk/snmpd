@@ -2431,3 +2431,4 @@ mib_pfsyncstats(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 		u_int64_t	*m_ptr;
 	}			 mapping[] = {
 		{ 1, &s.pfsyncs_ipackets },
+		{ 2, &s.pfsyncs_ipackets6 },
