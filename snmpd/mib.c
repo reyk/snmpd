@@ -2433,3 +2433,4 @@ mib_pfsyncstats(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 		{ 1, &s.pfsyncs_ipackets },
 		{ 2, &s.pfsyncs_ipackets6 },
 		{ 3, &s.pfsyncs_badif },
+		{ 4, &s.pfsyncs_badttl },
