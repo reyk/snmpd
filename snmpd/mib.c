@@ -2445,3 +2445,4 @@ mib_pfsyncstats(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 		{ 13, &s.pfsyncs_opackets },
 		{ 14, &s.pfsyncs_opackets6 },
 		{ 15, &s.pfsyncs_onomem },
+		{ 16, &s.pfsyncs_oerrors }
