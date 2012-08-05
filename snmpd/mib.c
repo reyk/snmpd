@@ -2450,3 +2450,4 @@ mib_pfsyncstats(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 
 	if (sysctl(mib, 4, &s, &len, NULL, 0) == -1) {
 		log_warn("sysctl");
+		return (-1);
