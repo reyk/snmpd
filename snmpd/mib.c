@@ -2452,3 +2452,4 @@ mib_pfsyncstats(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 		log_warn("sysctl");
 		return (-1);
 	}
+
