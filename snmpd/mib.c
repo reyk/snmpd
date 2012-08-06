@@ -2454,3 +2454,4 @@ mib_pfsyncstats(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 	}
 
 	for (i = 0;
+	    (u_int)i < (sizeof(mapping) / sizeof(mapping[0])); i++) {
