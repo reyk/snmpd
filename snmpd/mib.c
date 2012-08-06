@@ -2453,3 +2453,4 @@ mib_pfsyncstats(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 		return (-1);
 	}
 
+	for (i = 0;
