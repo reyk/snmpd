@@ -2476,3 +2476,4 @@ mib_sensornum(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 
 	for (i = c = 0; ; i++) {
 		mib[2] = i;
+		if (sysctl(mib, sizeofa(mib),
