@@ -2475,3 +2475,4 @@ mib_sensornum(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 	int			 i, c;
 
 	for (i = c = 0; ; i++) {
+		mib[2] = i;
