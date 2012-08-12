@@ -2480,3 +2480,4 @@ mib_sensornum(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 		    &sensordev, &len, NULL, 0) == -1) {
 			if (errno == ENXIO)
 				continue;
+			if (errno == ENOENT)
