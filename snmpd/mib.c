@@ -2487,3 +2487,4 @@ mib_sensornum(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 		c += sensordev.sensors_count;
 	}
 
+	*elm = ber_add_integer(*elm, c);
