@@ -2500,3 +2500,4 @@ mib_sensors(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 	struct sensor		 sensor;
 	size_t			 slen = sizeof(sensor);
 	char			 desc[32];
+	int			 mib[] = { CTL_HW, HW_SENSORS, 0, 0, 0 };
