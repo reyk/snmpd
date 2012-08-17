@@ -2498,3 +2498,4 @@ mib_sensors(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 	struct sensordev	 sensordev;
 	size_t			 len = sizeof(sensordev);
 	struct sensor		 sensor;
+	size_t			 slen = sizeof(sensor);
