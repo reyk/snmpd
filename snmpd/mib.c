@@ -2502,3 +2502,4 @@ mib_sensors(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 	char			 desc[32];
 	int			 mib[] = { CTL_HW, HW_SENSORS, 0, 0, 0 };
 	int			 i, j, k;
+	u_int32_t		 idx = 0, n;
