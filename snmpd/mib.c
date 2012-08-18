@@ -2504,3 +2504,4 @@ mib_sensors(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 	int			 i, j, k;
 	u_int32_t		 idx = 0, n;
 	char			*s;
+
