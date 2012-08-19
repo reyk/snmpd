@@ -2506,3 +2506,4 @@ mib_sensors(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 	char			*s;
 
 	/* Get and verify the current row index */
+	idx = o->bo_id[OIDIDX_sensorEntry];
