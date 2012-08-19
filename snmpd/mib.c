@@ -2505,3 +2505,4 @@ mib_sensors(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 	u_int32_t		 idx = 0, n;
 	char			*s;
 
+	/* Get and verify the current row index */
