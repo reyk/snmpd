@@ -2511,3 +2511,4 @@ mib_sensors(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 	for (i = 0, n = 1; ; i++) {
 		mib[2] = i;
 		if (sysctl(mib, 3, &sensordev, &len, NULL, 0) == -1) {
+			if (errno == ENXIO)
