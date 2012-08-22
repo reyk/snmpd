@@ -2520,3 +2520,4 @@ mib_sensors(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 		for (j = 0; j < SENSOR_MAX_TYPES; j++) {
 			mib[3] = j;
 			for (k = 0; k < sensordev.maxnumt[j]; k++, n++) {
+				mib[4] = k;
