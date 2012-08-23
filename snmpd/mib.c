@@ -2522,3 +2522,4 @@ mib_sensors(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 			for (k = 0; k < sensordev.maxnumt[j]; k++, n++) {
 				mib[4] = k;
 				if (sysctl(mib, 5,
+				    &sensor, &slen, NULL, 0) == -1) {
