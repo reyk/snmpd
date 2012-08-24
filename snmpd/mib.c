@@ -2528,3 +2528,4 @@ mib_sensors(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 					if (errno == ENOENT)
 						break;
 					return (-1);
+				}
