@@ -2525,3 +2525,4 @@ mib_sensors(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 				    &sensor, &slen, NULL, 0) == -1) {
 					if (errno == ENXIO)
 						continue;
+					if (errno == ENOENT)
