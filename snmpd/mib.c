@@ -2529,3 +2529,4 @@ mib_sensors(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 						break;
 					return (-1);
 				}
+				if (n == idx)
