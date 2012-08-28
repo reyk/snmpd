@@ -2541,3 +2541,4 @@ mib_sensors(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 
 	switch (o->bo_id[OIDIDX_sensor]) {
 	case 1:
+		ber = ber_add_integer(ber, (int32_t)n);
