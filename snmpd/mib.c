@@ -2544,3 +2544,4 @@ mib_sensors(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 		ber = ber_add_integer(ber, (int32_t)n);
 		break;
 	case 2:
+		if (sensor.desc[0] == '\0') {
