@@ -2546,3 +2546,4 @@ mib_sensors(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 	case 2:
 		if (sensor.desc[0] == '\0') {
 			snprintf(desc, sizeof(desc), "%s%d",
+			    sensor_type_s[sensor.type],
