@@ -2551,3 +2551,4 @@ mib_sensors(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 			ber = ber_add_string(ber, desc);
 		} else
 			ber = ber_add_string(ber, sensor.desc);
+		break;
