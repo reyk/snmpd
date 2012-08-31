@@ -2555,3 +2555,4 @@ mib_sensors(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 	case 3:
 		ber = ber_add_integer(ber, sensor.type);
 		break;
+	case 4:
