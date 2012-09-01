@@ -2560,3 +2560,4 @@ mib_sensors(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 		break;
 	case 5:
 		if ((s = mib_sensorvalue(&sensor)) == NULL)
+			return (-1);
