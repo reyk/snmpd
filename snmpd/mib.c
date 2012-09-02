@@ -2562,3 +2562,4 @@ mib_sensors(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 		if ((s = mib_sensorvalue(&sensor)) == NULL)
 			return (-1);
 		ber = ber_add_string(ber, s);
+		free(s);
