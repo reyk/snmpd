@@ -2567,3 +2567,4 @@ mib_sensors(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 	case 6:
 		ber = ber_add_string(ber, mib_sensorunit(&sensor));
 		break;
+	case 7:
