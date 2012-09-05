@@ -2575,3 +2575,4 @@ mib_sensors(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 	return (0);
 }
 
+#define SENSOR_DRIVE_STATES	(SENSOR_DRIVE_PFAIL + 1)
