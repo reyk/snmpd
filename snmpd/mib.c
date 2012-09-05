@@ -2576,3 +2576,4 @@ mib_sensors(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 }
 
 #define SENSOR_DRIVE_STATES	(SENSOR_DRIVE_PFAIL + 1)
+static const char * const sensor_drive_s[SENSOR_DRIVE_STATES] = {
