@@ -2580,3 +2580,4 @@ static const char * const sensor_drive_s[SENSOR_DRIVE_STATES] = {
 	NULL, "empty", "ready", "powerup", "online", "idle", "active",
 	"rebuild", "powerdown", "fail", "pfail"
 };
+
