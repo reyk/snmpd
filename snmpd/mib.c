@@ -2583,3 +2583,4 @@ static const char * const sensor_drive_s[SENSOR_DRIVE_STATES] = {
 
 static const char * const sensor_unit_s[SENSOR_MAX_TYPES + 1] = {
 	"degC",	"RPM", "V DC", "V AC", "Ohm", "W", "A", "Wh", "Ah",
+	"", "", "%", "lx", "", "sec", "%RH", "Hz", "degree", 
