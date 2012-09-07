@@ -2581,3 +2581,4 @@ static const char * const sensor_drive_s[SENSOR_DRIVE_STATES] = {
 	"rebuild", "powerdown", "fail", "pfail"
 };
 
+static const char * const sensor_unit_s[SENSOR_MAX_TYPES + 1] = {
