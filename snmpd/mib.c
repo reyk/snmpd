@@ -2586,3 +2586,4 @@ static const char * const sensor_unit_s[SENSOR_MAX_TYPES + 1] = {
 	"", "", "%", "lx", "", "sec", "%RH", "Hz", "degree", 
 	"mm", "Pa", "m/s^2", ""
 };
+
