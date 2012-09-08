@@ -2587,3 +2587,4 @@ static const char * const sensor_unit_s[SENSOR_MAX_TYPES + 1] = {
 	"mm", "Pa", "m/s^2", ""
 };
 
+const char *
