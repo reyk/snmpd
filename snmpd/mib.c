@@ -2591,3 +2591,4 @@ const char *
 mib_sensorunit(struct sensor *s)
 {
 	u_int	 idx;
+	idx = s->type > SENSOR_MAX_TYPES ?
