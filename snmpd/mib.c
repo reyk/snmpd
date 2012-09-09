@@ -2590,3 +2590,4 @@ static const char * const sensor_unit_s[SENSOR_MAX_TYPES + 1] = {
 const char *
 mib_sensorunit(struct sensor *s)
 {
+	u_int	 idx;
