@@ -2596,3 +2596,4 @@ mib_sensorunit(struct sensor *s)
 	return (sensor_unit_s[idx]);
 }
 
+char *
