@@ -2594,3 +2594,4 @@ mib_sensorunit(struct sensor *s)
 	idx = s->type > SENSOR_MAX_TYPES ?
 	    SENSOR_MAX_TYPES : s->type;
 	return (sensor_unit_s[idx]);
+}
