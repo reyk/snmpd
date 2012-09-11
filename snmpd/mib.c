@@ -2597,3 +2597,4 @@ mib_sensorunit(struct sensor *s)
 }
 
 char *
+mib_sensorvalue(struct sensor *s)
