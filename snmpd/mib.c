@@ -2603,3 +2603,4 @@ mib_sensorvalue(struct sensor *s)
 	int	 ret = -1;
 
 	switch (s->type) {
+	case SENSOR_TEMP:
