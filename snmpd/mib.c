@@ -2601,3 +2601,4 @@ mib_sensorvalue(struct sensor *s)
 {
 	char	*v;
 	int	 ret = -1;
+
