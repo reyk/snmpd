@@ -2605,3 +2605,4 @@ mib_sensorvalue(struct sensor *s)
 	switch (s->type) {
 	case SENSOR_TEMP:
 		ret = asprintf(&v, "%.2f",
+		    (s->value - 273150000) / 1000000.0);
