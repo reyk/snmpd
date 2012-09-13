@@ -2608,3 +2608,4 @@ mib_sensorvalue(struct sensor *s)
 		    (s->value - 273150000) / 1000000.0);
 		break;
 	case SENSOR_VOLTS_DC:
+	case SENSOR_VOLTS_AC:
