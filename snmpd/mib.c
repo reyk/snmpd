@@ -2607,3 +2607,4 @@ mib_sensorvalue(struct sensor *s)
 		ret = asprintf(&v, "%.2f",
 		    (s->value - 273150000) / 1000000.0);
 		break;
+	case SENSOR_VOLTS_DC:
