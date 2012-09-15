@@ -2614,3 +2614,4 @@ mib_sensorvalue(struct sensor *s)
 	case SENSOR_WATTHOUR:
 	case SENSOR_AMPHOUR:
 	case SENSOR_LUX:
+	case SENSOR_FREQ:
