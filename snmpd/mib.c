@@ -2618,3 +2618,4 @@ mib_sensorvalue(struct sensor *s)
 	case SENSOR_ACCEL:
 		ret = asprintf(&v, "%.2f", s->value / 1000000.0);
 		break;
+	case SENSOR_INDICATOR:
