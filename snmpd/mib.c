@@ -2620,3 +2620,4 @@ mib_sensorvalue(struct sensor *s)
 		break;
 	case SENSOR_INDICATOR:
 		ret = asprintf(&v, "%s", s->value ? "on" : "off");
+		break;
