@@ -2623,3 +2623,4 @@ mib_sensorvalue(struct sensor *s)
 		break;
 	case SENSOR_PERCENT:
 	case SENSOR_HUMIDITY:
+		ret = asprintf(&v, "%.2f%%", s->value / 1000.0);
