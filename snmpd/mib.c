@@ -2626,3 +2626,4 @@ mib_sensorvalue(struct sensor *s)
 		ret = asprintf(&v, "%.2f%%", s->value / 1000.0);
 		break;
 	case SENSOR_DISTANCE:
+	case SENSOR_PRESSURE:
