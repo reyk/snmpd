@@ -2631,3 +2631,4 @@ mib_sensorvalue(struct sensor *s)
 		break;
 	case SENSOR_TIMEDELTA:
 		ret = asprintf(&v, "%.6f", s->value / 1000000000.0);
+		break;
