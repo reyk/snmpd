@@ -2636,3 +2636,4 @@ mib_sensorvalue(struct sensor *s)
 		if (s->value > 0 && s->value < SENSOR_DRIVE_STATES) {
 			ret = asprintf(&v, "%s", sensor_drive_s[s->value]);
 			break;
+		}
