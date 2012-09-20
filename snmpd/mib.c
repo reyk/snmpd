@@ -2633,3 +2633,4 @@ mib_sensorvalue(struct sensor *s)
 		ret = asprintf(&v, "%.6f", s->value / 1000000000.0);
 		break;
 	case SENSOR_DRIVE:
+		if (s->value > 0 && s->value < SENSOR_DRIVE_STATES) {
