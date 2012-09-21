@@ -2638,3 +2638,4 @@ mib_sensorvalue(struct sensor *s)
 			break;
 		}
 		/* FALLTHROUGH */
+	case SENSOR_FANRPM:
