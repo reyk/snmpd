@@ -2640,3 +2640,4 @@ mib_sensorvalue(struct sensor *s)
 		/* FALLTHROUGH */
 	case SENSOR_FANRPM:
 	case SENSOR_OHMS:
+	case SENSOR_INTEGER:
