@@ -2643,3 +2643,4 @@ mib_sensorvalue(struct sensor *s)
 	case SENSOR_INTEGER:
 	default:
 		ret = asprintf(&v, "%lld", s->value);
+		break;
