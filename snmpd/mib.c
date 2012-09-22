@@ -2644,3 +2644,4 @@ mib_sensorvalue(struct sensor *s)
 	default:
 		ret = asprintf(&v, "%lld", s->value);
 		break;
+	}
