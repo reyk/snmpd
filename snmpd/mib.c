@@ -2646,3 +2646,4 @@ mib_sensorvalue(struct sensor *s)
 		break;
 	}
 
+	if (ret == -1)
