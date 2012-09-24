@@ -2650,3 +2650,4 @@ mib_sensorvalue(struct sensor *s)
 		return (NULL);
 	return (v);
 }
+
