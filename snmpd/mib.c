@@ -2653,3 +2653,4 @@ mib_sensorvalue(struct sensor *s)
 
 int
 mib_carpsysctl(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
+{
