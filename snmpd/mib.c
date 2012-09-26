@@ -2659,3 +2659,4 @@ mib_carpsysctl(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 	int	 v;
 
 	mib[3] = oid->o_oid[OIDIDX_carpsysctl];
+	len = sizeof(v);
