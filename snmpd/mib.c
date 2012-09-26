@@ -2658,3 +2658,4 @@ mib_carpsysctl(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 	int	 mib[] = { CTL_NET, PF_INET, IPPROTO_CARP, 0 };
 	int	 v;
 
+	mib[3] = oid->o_oid[OIDIDX_carpsysctl];
