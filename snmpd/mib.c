@@ -2663,3 +2663,4 @@ mib_carpsysctl(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 
 	if (sysctl(mib, 4, &v, &len, NULL, 0) == -1)
 		return (1);
+
