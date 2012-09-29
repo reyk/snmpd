@@ -2671,3 +2671,4 @@ mib_carpsysctl(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 int
 mib_carpstats(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 {
+	int			 mib[] = { CTL_NET, PF_INET, IPPROTO_CARP,
