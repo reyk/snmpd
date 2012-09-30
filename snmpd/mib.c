@@ -2675,3 +2675,4 @@ mib_carpstats(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 				    CARPCTL_STATS };
 	size_t			 len;
 	struct			 carpstats stats;
+	int			 i;
