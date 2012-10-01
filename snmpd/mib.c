@@ -2677,3 +2677,4 @@ mib_carpstats(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 	struct			 carpstats stats;
 	int			 i;
 	struct statsmap {
+		u_int8_t	 m_id;
