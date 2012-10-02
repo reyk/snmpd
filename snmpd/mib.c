@@ -2681,3 +2681,4 @@ mib_carpstats(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 		u_int64_t	*m_ptr;
 	}			 mapping[] = {
 		{ 1, &stats.carps_ipackets },
+		{ 2, &stats.carps_ipackets6 },
