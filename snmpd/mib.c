@@ -2689,3 +2689,4 @@ mib_carpstats(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 		{ 7, &stats.carps_badver },
 		{ 8, &stats.carps_badlen },
 		{ 9, &stats.carps_badauth },
+		{ 10, &stats.carps_badvhid },
