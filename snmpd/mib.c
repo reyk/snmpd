@@ -2700,3 +2700,4 @@ mib_carpstats(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 	len = sizeof(stats);
 
 	if (sysctl(mib, 4, &stats, &len, NULL, 0) == -1)
+		return (1);
