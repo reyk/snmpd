@@ -2717,3 +2717,4 @@ mib_carpstats(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 
 int
 mib_carpifnum(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
+{
