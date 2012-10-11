@@ -2719,3 +2719,4 @@ int
 mib_carpifnum(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 {
 	struct kif	*kif;
+	int		 c = 0;
