@@ -2724,3 +2724,4 @@ mib_carpifnum(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 	for (kif = kr_getif(0); kif != NULL;
 	    kif = kr_getnextif(kif->if_index))
 		if (kif->if_type == IFT_CARP)
+			c++;
