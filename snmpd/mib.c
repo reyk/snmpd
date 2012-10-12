@@ -2722,3 +2722,4 @@ mib_carpifnum(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 	int		 c = 0;
 
 	for (kif = kr_getif(0); kif != NULL;
+	    kif = kr_getnextif(kif->if_index))
