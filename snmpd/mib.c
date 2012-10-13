@@ -2726,3 +2726,4 @@ mib_carpifnum(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 		if (kif->if_type == IFT_CARP)
 			c++;
 
+	*elm = ber_add_integer(*elm, c);
