@@ -2735,3 +2735,4 @@ mib_carpifget(u_int idx)
 {
 	struct kif	*kif;
 	struct carpif	*cif;
+	int		 s;
