@@ -2737,3 +2737,4 @@ mib_carpifget(u_int idx)
 	struct carpif	*cif;
 	int		 s;
 	struct ifreq	 ifr;
+	struct carpreq	 carpr;
