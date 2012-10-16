@@ -2738,3 +2738,4 @@ mib_carpifget(u_int idx)
 	int		 s;
 	struct ifreq	 ifr;
 	struct carpreq	 carpr;
+
