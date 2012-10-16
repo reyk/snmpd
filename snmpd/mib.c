@@ -2740,3 +2740,4 @@ mib_carpifget(u_int idx)
 	struct carpreq	 carpr;
 
 	if ((kif = kr_getif(idx)) == NULL || kif->if_type != IFT_CARP) {
+		/*
