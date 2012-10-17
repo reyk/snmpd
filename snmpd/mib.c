@@ -2743,3 +2743,4 @@ mib_carpifget(u_int idx)
 		/*
 		 * It may happen that an interface with a specific index
 		 * does not exist, has been removed, or is not a carp(4)
+		 * interface. Jump to the next available carp(4) interface
