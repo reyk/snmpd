@@ -2742,3 +2742,4 @@ mib_carpifget(u_int idx)
 	if ((kif = kr_getif(idx)) == NULL || kif->if_type != IFT_CARP) {
 		/*
 		 * It may happen that an interface with a specific index
+		 * does not exist, has been removed, or is not a carp(4)
