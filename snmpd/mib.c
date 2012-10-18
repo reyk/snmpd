@@ -2747,3 +2747,4 @@ mib_carpifget(u_int idx)
 		 * index.
 		 */
 		for (kif = kr_getif(0); kif != NULL;
+		    kif = kr_getnextif(kif->if_index)) {
