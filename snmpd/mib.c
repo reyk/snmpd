@@ -2746,3 +2746,4 @@ mib_carpifget(u_int idx)
 		 * interface. Jump to the next available carp(4) interface
 		 * index.
 		 */
+		for (kif = kr_getif(0); kif != NULL;
