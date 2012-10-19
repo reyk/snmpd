@@ -2751,3 +2751,4 @@ mib_carpifget(u_int idx)
 			if (kif->if_type != IFT_CARP)
 				continue;
 			if (kif->if_index > idx)
+				break;
