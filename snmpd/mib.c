@@ -2752,3 +2752,4 @@ mib_carpifget(u_int idx)
 				continue;
 			if (kif->if_index > idx)
 				break;
+
