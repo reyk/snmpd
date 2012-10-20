@@ -2756,3 +2756,4 @@ mib_carpifget(u_int idx)
 		}
 		if (kif == NULL)
 			return (NULL);
+	}
