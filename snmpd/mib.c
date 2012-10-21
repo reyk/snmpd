@@ -2758,3 +2758,4 @@ mib_carpifget(u_int idx)
 			return (NULL);
 	}
 	idx = kif->if_index;
+
