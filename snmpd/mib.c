@@ -2759,3 +2759,4 @@ mib_carpifget(u_int idx)
 	}
 	idx = kif->if_index;
 
+	/* Update interface information */
