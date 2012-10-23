@@ -2765,3 +2765,4 @@ mib_carpifget(u_int idx)
 		log_debug("mib_carpifget: interface %d disappeared?", idx);
 		return (NULL);
 	}
+
