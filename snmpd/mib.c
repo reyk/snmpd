@@ -2766,3 +2766,4 @@ mib_carpifget(u_int idx)
 		return (NULL);
 	}
 
+	if ((s = socket(AF_INET, SOCK_DGRAM, 0)) == -1)
