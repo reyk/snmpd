@@ -2770,3 +2770,4 @@ mib_carpifget(u_int idx)
 		return (NULL);
 
 	memset(&ifr, 0, sizeof(ifr));
+	strlcpy(ifr.ifr_name, kif->if_name, sizeof(ifr.ifr_name));
