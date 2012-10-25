@@ -2774,3 +2774,4 @@ mib_carpifget(u_int idx)
 	memset((char *)&carpr, 0, sizeof(carpr));
 	ifr.ifr_data = (caddr_t)&carpr;
 
+	if (ioctl(s, SIOCGVH, (caddr_t)&ifr) == -1) {
