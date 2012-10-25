@@ -2773,3 +2773,4 @@ mib_carpifget(u_int idx)
 	strlcpy(ifr.ifr_name, kif->if_name, sizeof(ifr.ifr_name));
 	memset((char *)&carpr, 0, sizeof(carpr));
 	ifr.ifr_data = (caddr_t)&carpr;
+
