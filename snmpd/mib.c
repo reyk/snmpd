@@ -2777,3 +2777,4 @@ mib_carpifget(u_int idx)
 	if (ioctl(s, SIOCGVH, (caddr_t)&ifr) == -1) {
 		close(s);
 		return (NULL);
+	}
