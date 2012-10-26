@@ -2780,3 +2780,4 @@ mib_carpifget(u_int idx)
 	}
 
 	cif = malloc(sizeof(struct carpif));
+	if (cif != NULL) {
