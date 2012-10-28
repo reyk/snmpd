@@ -2786,3 +2786,4 @@ mib_carpifget(u_int idx)
 		memcpy(&cif->kif, kif, sizeof(struct kif));
 	}
 
+	close(s);
