@@ -2787,3 +2787,4 @@ mib_carpifget(u_int idx)
 	}
 
 	close(s);
+
