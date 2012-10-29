@@ -2791,3 +2791,4 @@ mib_carpifget(u_int idx)
 	return (cif);
 }
 
+int
