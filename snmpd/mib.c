@@ -2792,3 +2792,4 @@ mib_carpifget(u_int idx)
 }
 
 int
+mib_carpiftable(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
