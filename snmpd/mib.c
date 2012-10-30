@@ -2796,3 +2796,4 @@ mib_carpiftable(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 {
 	u_int32_t		 idx;
 	struct carpif		*cif;
+
