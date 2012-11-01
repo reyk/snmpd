@@ -2801,3 +2801,4 @@ mib_carpiftable(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 	idx = o->bo_id[OIDIDX_carpIfEntry];
 
 	if ((cif = mib_carpifget(idx)) == NULL)
+		return (1);
