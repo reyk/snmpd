@@ -2803,3 +2803,4 @@ mib_carpiftable(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 	if ((cif = mib_carpifget(idx)) == NULL)
 		return (1);
 
+	/* Tables need to prepend the OID on their own */
