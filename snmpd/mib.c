@@ -2808,3 +2808,4 @@ mib_carpiftable(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 	*elm = ber_add_oid(*elm, o);
 
 	switch (o->bo_id[OIDIDX_carpIf]) {
+	case 1:
