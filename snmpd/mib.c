@@ -2813,3 +2813,4 @@ mib_carpiftable(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 		break;
 	case 2:
 		*elm = ber_add_string(*elm, cif->kif.if_name);
+		break;
