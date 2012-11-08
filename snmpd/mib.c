@@ -2832,3 +2832,4 @@ mib_carpiftable(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 	default:
 		free(cif);
 		return (1);
+	}
