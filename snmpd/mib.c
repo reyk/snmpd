@@ -2845,3 +2845,4 @@ mib_memiftable(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 	u_int32_t		 idx = 0;
 	struct kif		*kif;
 
+	idx = o->bo_id[OIDIDX_memIfEntry];
