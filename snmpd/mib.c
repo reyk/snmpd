@@ -2851,3 +2851,4 @@ mib_memiftable(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 
 	o->bo_id[OIDIDX_memIfEntry] = kif->if_index;
 	ber = ber_add_oid(ber, o);
+
