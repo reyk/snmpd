@@ -2854,3 +2854,4 @@ mib_memiftable(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 
 	switch (o->bo_id[OIDIDX_memIf]) {
 	case 1:
+		ber = ber_add_string(ber, kif->if_name);
