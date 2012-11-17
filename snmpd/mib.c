@@ -2868,3 +2868,4 @@ mib_memiftable(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 }
 
 /*
+ * Defined in IP-MIB.txt
