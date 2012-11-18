@@ -2872,3 +2872,4 @@ mib_memiftable(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
  */
 
 int mib_getipstat(struct ipstat *);
+int mib_ipstat(struct oid *, struct ber_oid *, struct ber_element **);
