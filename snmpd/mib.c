@@ -2876,3 +2876,4 @@ int mib_ipstat(struct oid *, struct ber_oid *, struct ber_element **);
 int mib_ipforwarding(struct oid *, struct ber_oid *, struct ber_element **);
 int mib_ipdefaultttl(struct oid *, struct ber_oid *, struct ber_element **);
 int mib_ipinhdrerrs(struct oid *, struct ber_oid *, struct ber_element **);
+int mib_ipinaddrerrs(struct oid *, struct ber_oid *, struct ber_element **);
