@@ -2878,3 +2878,4 @@ int mib_ipdefaultttl(struct oid *, struct ber_oid *, struct ber_element **);
 int mib_ipinhdrerrs(struct oid *, struct ber_oid *, struct ber_element **);
 int mib_ipinaddrerrs(struct oid *, struct ber_oid *, struct ber_element **);
 int mib_ipforwdgrams(struct oid *, struct ber_oid *, struct ber_element **);
+int mib_ipindiscards(struct oid *, struct ber_oid *, struct ber_element **);
