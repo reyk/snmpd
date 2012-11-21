@@ -2881,3 +2881,4 @@ int mib_ipforwdgrams(struct oid *, struct ber_oid *, struct ber_element **);
 int mib_ipindiscards(struct oid *, struct ber_oid *, struct ber_element **);
 int mib_ipreasmfails(struct oid *, struct ber_oid *, struct ber_element **);
 int mib_ipfragfails(struct oid *, struct ber_oid *, struct ber_element **);
+int mib_iproutingdiscards(struct oid *, struct ber_oid *,
