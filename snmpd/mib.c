@@ -2884,3 +2884,4 @@ int mib_ipfragfails(struct oid *, struct ber_oid *, struct ber_element **);
 int mib_iproutingdiscards(struct oid *, struct ber_oid *,
     struct ber_element **);
 int mib_ipaddr(struct oid *, struct ber_oid *, struct ber_element **);
+struct ber_oid *
