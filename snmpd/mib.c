@@ -2887,3 +2887,4 @@ int mib_ipaddr(struct oid *, struct ber_oid *, struct ber_element **);
 struct ber_oid *
     mib_ipaddrtable(struct oid *, struct ber_oid *, struct ber_oid *);
 
+static struct oid ip_mib[] = {
