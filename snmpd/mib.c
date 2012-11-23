@@ -2889,3 +2889,4 @@ struct ber_oid *
 
 static struct oid ip_mib[] = {
 	{ MIB(ipMIB),			OID_MIB },
+	{ MIB(ipForwarding),		OID_RD, mib_ipforwarding },
