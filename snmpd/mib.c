@@ -2895,3 +2895,4 @@ static struct oid ip_mib[] = {
 	{ MIB(ipInHdrErrors),		OID_RD, mib_ipinhdrerrs },
 	{ MIB(ipInAddrErrors),		OID_RD, mib_ipinaddrerrs },
 	{ MIB(ipForwDatagrams),		OID_RD, mib_ipforwdgrams },
+	{ MIB(ipInUnknownProtos),	OID_RD, mib_ipstat },
