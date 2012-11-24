@@ -2894,3 +2894,4 @@ static struct oid ip_mib[] = {
 	{ MIB(ipInReceives),		OID_RD, mib_ipstat },
 	{ MIB(ipInHdrErrors),		OID_RD, mib_ipinhdrerrs },
 	{ MIB(ipInAddrErrors),		OID_RD, mib_ipinaddrerrs },
+	{ MIB(ipForwDatagrams),		OID_RD, mib_ipforwdgrams },
