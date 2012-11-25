@@ -2899,3 +2899,4 @@ static struct oid ip_mib[] = {
 #ifdef notyet
 	{ MIB(ipInDiscards) },
 #endif
+	{ MIB(ipInDelivers),		OID_RD, mib_ipstat },
