@@ -2898,3 +2898,4 @@ static struct oid ip_mib[] = {
 	{ MIB(ipInUnknownProtos),	OID_RD, mib_ipstat },
 #ifdef notyet
 	{ MIB(ipInDiscards) },
+#endif
