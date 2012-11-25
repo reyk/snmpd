@@ -2897,3 +2897,4 @@ static struct oid ip_mib[] = {
 	{ MIB(ipForwDatagrams),		OID_RD, mib_ipforwdgrams },
 	{ MIB(ipInUnknownProtos),	OID_RD, mib_ipstat },
 #ifdef notyet
+	{ MIB(ipInDiscards) },
