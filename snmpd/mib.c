@@ -2900,3 +2900,4 @@ static struct oid ip_mib[] = {
 	{ MIB(ipInDiscards) },
 #endif
 	{ MIB(ipInDelivers),		OID_RD, mib_ipstat },
+	{ MIB(ipOutRequests),		OID_RD, mib_ipstat },
