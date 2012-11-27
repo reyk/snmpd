@@ -2907,3 +2907,4 @@ static struct oid ip_mib[] = {
 	    NULL, IPFRAGTTL },
 	{ MIB(ipReasmReqds),		OID_RD, mib_ipstat },
 	{ MIB(ipReasmOKs),		OID_RD, mib_ipstat },
+	{ MIB(ipReasmFails),		OID_RD, mib_ipreasmfails },
