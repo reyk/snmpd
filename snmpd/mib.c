@@ -2910,3 +2910,4 @@ static struct oid ip_mib[] = {
 	{ MIB(ipReasmFails),		OID_RD, mib_ipreasmfails },
 	{ MIB(ipFragOKs),		OID_RD, mib_ipstat },
 	{ MIB(ipFragFails),		OID_RD, mib_ipfragfails },
+	{ MIB(ipFragCreates),		OID_RD, mib_ipstat },
