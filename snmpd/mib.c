@@ -2919,3 +2919,4 @@ static struct oid ip_mib[] = {
 	    mib_ipaddrtable },
 	{ MIB(ipAdEntBcastAddr),	OID_TRD, mib_ipaddr, NULL,
 	    mib_ipaddrtable },
+	{ MIB(ipAdEntReasmMaxSize),	OID_TRD, mib_ipaddr, NULL,
