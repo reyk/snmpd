@@ -2924,3 +2924,4 @@ static struct oid ip_mib[] = {
 #ifdef notyet
 	{ MIB(ipNetToMediaIfIndex) },
 	{ MIB(ipNetToMediaPhysAddress) },
+	{ MIB(ipNetToMediaNetAddress) },
