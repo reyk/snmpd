@@ -2923,3 +2923,4 @@ static struct oid ip_mib[] = {
 	    mib_ipaddrtable },
 #ifdef notyet
 	{ MIB(ipNetToMediaIfIndex) },
+	{ MIB(ipNetToMediaPhysAddress) },
