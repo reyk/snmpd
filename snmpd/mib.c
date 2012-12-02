@@ -2927,3 +2927,4 @@ static struct oid ip_mib[] = {
 	{ MIB(ipNetToMediaNetAddress) },
 	{ MIB(ipNetToMediaType) },
 	{ MIB(ipRoutingDiscards) },
+#endif
