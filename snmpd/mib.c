@@ -2925,3 +2925,4 @@ static struct oid ip_mib[] = {
 	{ MIB(ipNetToMediaIfIndex) },
 	{ MIB(ipNetToMediaPhysAddress) },
 	{ MIB(ipNetToMediaNetAddress) },
+	{ MIB(ipNetToMediaType) },
