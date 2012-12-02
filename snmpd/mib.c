@@ -2928,3 +2928,4 @@ static struct oid ip_mib[] = {
 	{ MIB(ipNetToMediaType) },
 	{ MIB(ipRoutingDiscards) },
 #endif
+	{ MIBEND }
