@@ -2931,3 +2931,4 @@ static struct oid ip_mib[] = {
 	{ MIBEND }
 };
 
+int
