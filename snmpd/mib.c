@@ -2934,3 +2934,4 @@ static struct oid ip_mib[] = {
 int
 mib_ipforwarding(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 {
+	int	mib[] = { CTL_NET, AF_INET, IPPROTO_IP, IPCTL_FORWARDING };
