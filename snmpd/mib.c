@@ -2954,3 +2954,4 @@ mib_ipdefaultttl(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 	size_t	len = sizeof(v);
 
 	if (sysctl(mib, sizeofa(mib), &v, &len, NULL, 0) == -1)
+		return (-1);
