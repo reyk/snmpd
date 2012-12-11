@@ -2964,3 +2964,4 @@ mib_ipdefaultttl(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 int
 mib_getipstat(struct ipstat *ipstat)
 {
+	int	 mib[] = { CTL_NET, AF_INET, IPPROTO_IP, IPCTL_STATS };
