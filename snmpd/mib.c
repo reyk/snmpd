@@ -2967,3 +2967,4 @@ mib_getipstat(struct ipstat *ipstat)
 	int	 mib[] = { CTL_NET, AF_INET, IPPROTO_IP, IPCTL_STATS };
 	size_t	 len = sizeof(*ipstat);
 
+	return (sysctl(mib, sizeofa(mib), ipstat, &len, NULL, 0));
