@@ -2968,3 +2968,4 @@ mib_getipstat(struct ipstat *ipstat)
 	size_t	 len = sizeof(*ipstat);
 
 	return (sysctl(mib, sizeofa(mib), ipstat, &len, NULL, 0));
+}
