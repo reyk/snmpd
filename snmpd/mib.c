@@ -2970,3 +2970,4 @@ mib_getipstat(struct ipstat *ipstat)
 	return (sysctl(mib, sizeofa(mib), ipstat, &len, NULL, 0));
 }
 
+int
