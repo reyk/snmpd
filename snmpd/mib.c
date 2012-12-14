@@ -2973,3 +2973,4 @@ mib_getipstat(struct ipstat *ipstat)
 int
 mib_ipstat(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 {
+	struct ipstat		 ipstat;
