@@ -2978,3 +2978,4 @@ mib_ipstat(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 	struct statsmap {
 		u_int8_t	 m_id;
 		u_long		*m_ptr;
+	}			 mapping[] = {
