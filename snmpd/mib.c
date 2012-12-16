@@ -2983,3 +2983,4 @@ mib_ipstat(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 		{ 7, &ipstat.ips_noproto },
 		{ 9, &ipstat.ips_delivered },
 		{ 10, &ipstat.ips_localout },
+		{ 11, &ipstat.ips_odropped },
