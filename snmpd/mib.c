@@ -2986,3 +2986,4 @@ mib_ipstat(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 		{ 11, &ipstat.ips_odropped },
 		{ 12, &ipstat.ips_noroute },
 		{ 14, &ipstat.ips_fragments },
+		{ 15, &ipstat.ips_reassembled },
