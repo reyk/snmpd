@@ -2988,3 +2988,4 @@ mib_ipstat(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 		{ 14, &ipstat.ips_fragments },
 		{ 15, &ipstat.ips_reassembled },
 		{ 17, &ipstat.ips_fragmented },
+		{ 19, &ipstat.ips_ofragments }
