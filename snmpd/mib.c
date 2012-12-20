@@ -2998,3 +2998,4 @@ mib_ipstat(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 	    (u_int)i < (sizeof(mapping) / sizeof(mapping[0])); i++) {
 		if (oid->o_oid[OIDIDX_ip] == mapping[i].m_id) {
 			*elm = ber_add_integer(*elm, *mapping[i].m_ptr);
+			ber_set_header(*elm,
