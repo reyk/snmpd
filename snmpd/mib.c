@@ -3002,3 +3002,4 @@ mib_ipstat(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 			    BER_CLASS_APPLICATION, SNMP_T_COUNTER32);
 			return (0);
 		}
+	}
