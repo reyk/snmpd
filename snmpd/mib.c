@@ -3012,3 +3012,4 @@ mib_ipinhdrerrs(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 {
 	u_int32_t	errors;
 	struct ipstat	ipstat;
+
