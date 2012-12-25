@@ -3017,3 +3017,4 @@ mib_ipinhdrerrs(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 		return (-1);
 
 	errors = ipstat.ips_badsum + ipstat.ips_badvers +
+	    ipstat.ips_tooshort + ipstat.ips_toosmall +
