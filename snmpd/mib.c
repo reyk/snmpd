@@ -3020,3 +3020,4 @@ mib_ipinhdrerrs(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 	    ipstat.ips_tooshort + ipstat.ips_toosmall +
 	    ipstat.ips_badhlen +  ipstat.ips_badlen +
 	    ipstat.ips_badoptions + ipstat.ips_toolong +
+	    ipstat.ips_badaddr;
