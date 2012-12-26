@@ -3022,3 +3022,4 @@ mib_ipinhdrerrs(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 	    ipstat.ips_badoptions + ipstat.ips_toolong +
 	    ipstat.ips_badaddr;
 
+	*elm = ber_add_integer(*elm, errors);
