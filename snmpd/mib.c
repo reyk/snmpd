@@ -3026,3 +3026,4 @@ mib_ipinhdrerrs(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 	ber_set_header(*elm, BER_CLASS_APPLICATION, SNMP_T_COUNTER32);
 
 	return (0);
+}
