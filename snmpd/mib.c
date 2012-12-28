@@ -3031,3 +3031,4 @@ mib_ipinhdrerrs(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 int
 mib_ipinaddrerrs(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 {
+	u_int32_t	errors;
