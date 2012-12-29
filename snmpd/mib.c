@@ -3034,3 +3034,4 @@ mib_ipinaddrerrs(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 	u_int32_t	errors;
 	struct ipstat	ipstat;
 
+	if (mib_getipstat(&ipstat) == -1)
