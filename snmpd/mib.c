@@ -3039,3 +3039,4 @@ mib_ipinaddrerrs(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 
 	errors = ipstat.ips_cantforward + ipstat.ips_badaddr;
 
+	*elm = ber_add_integer(*elm, errors);
