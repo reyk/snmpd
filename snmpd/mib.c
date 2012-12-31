@@ -3041,3 +3041,4 @@ mib_ipinaddrerrs(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 
 	*elm = ber_add_integer(*elm, errors);
 	ber_set_header(*elm, BER_CLASS_APPLICATION, SNMP_T_COUNTER32);
+
