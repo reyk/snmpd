@@ -3048,3 +3048,4 @@ mib_ipinaddrerrs(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 int
 mib_ipforwdgrams(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 {
+	u_int32_t	counter;
