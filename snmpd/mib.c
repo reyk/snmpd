@@ -3054,3 +3054,4 @@ mib_ipforwdgrams(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 	if (mib_getipstat(&ipstat) == -1)
 		return (-1);
 
+	counter = ipstat.ips_forward + ipstat.ips_redirectsent;
