@@ -3057,3 +3057,4 @@ mib_ipforwdgrams(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 	counter = ipstat.ips_forward + ipstat.ips_redirectsent;
 
 	*elm = ber_add_integer(*elm, counter);
+	ber_set_header(*elm, BER_CLASS_APPLICATION, SNMP_T_COUNTER32);
