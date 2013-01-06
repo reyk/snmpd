@@ -3065,3 +3065,4 @@ mib_ipforwdgrams(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 int
 mib_ipindiscards(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 {
+	return (0);
