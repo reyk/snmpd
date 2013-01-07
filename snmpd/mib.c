@@ -3069,3 +3069,4 @@ mib_ipindiscards(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 }
 
 int
+mib_ipreasmfails(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
