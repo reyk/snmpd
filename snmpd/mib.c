@@ -3074,3 +3074,4 @@ mib_ipreasmfails(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 	u_int32_t	counter;
 	struct ipstat	ipstat;
 
+	if (mib_getipstat(&ipstat) == -1)
