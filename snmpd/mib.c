@@ -3079,3 +3079,4 @@ mib_ipreasmfails(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 
 	counter = ipstat.ips_fragdropped + ipstat.ips_fragtimeout;
 
+	*elm = ber_add_integer(*elm, counter);
