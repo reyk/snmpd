@@ -3108,3 +3108,4 @@ mib_iproutingdiscards(struct oid *oid, struct ber_oid *o,
 	return (0);
 }
 
+struct ber_oid *
