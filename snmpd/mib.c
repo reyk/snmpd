@@ -3111,3 +3111,4 @@ mib_iproutingdiscards(struct oid *oid, struct ber_oid *o,
 struct ber_oid *
 mib_ipaddrtable(struct oid *oid, struct ber_oid *o, struct ber_oid *no)
 {
+	struct sockaddr_in	 addr;
