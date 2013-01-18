@@ -3115,3 +3115,4 @@ mib_ipaddrtable(struct oid *oid, struct ber_oid *o, struct ber_oid *no)
 	u_int32_t		 col, id;
 	struct oid		 a, b;
 	struct kif_addr		*ka;
+
