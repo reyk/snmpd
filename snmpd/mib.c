@@ -3117,3 +3117,4 @@ mib_ipaddrtable(struct oid *oid, struct ber_oid *o, struct ber_oid *no)
 	struct kif_addr		*ka;
 
 	bzero(&addr, sizeof(addr));
+	addr.sin_family = AF_INET;
