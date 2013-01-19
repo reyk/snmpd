@@ -3120,3 +3120,4 @@ mib_ipaddrtable(struct oid *oid, struct ber_oid *o, struct ber_oid *no)
 	addr.sin_family = AF_INET;
 	addr.sin_len = sizeof(addr);
 
+	bcopy(&oid->o_id, no, sizeof(*no));
