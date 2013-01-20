@@ -3124,3 +3124,4 @@ mib_ipaddrtable(struct oid *oid, struct ber_oid *o, struct ber_oid *no)
 	id = oid->o_oidlen - 1;
 
 	if (o->bo_n >= oid->o_oidlen) {
+		/*
