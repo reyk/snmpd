@@ -3121,3 +3121,4 @@ mib_ipaddrtable(struct oid *oid, struct ber_oid *o, struct ber_oid *no)
 	addr.sin_len = sizeof(addr);
 
 	bcopy(&oid->o_id, no, sizeof(*no));
+	id = oid->o_oidlen - 1;
