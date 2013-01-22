@@ -3129,3 +3129,4 @@ mib_ipaddrtable(struct oid *oid, struct ber_oid *o, struct ber_oid *no)
 		 * if we have to iterate to the next element.
 		 */
 		bzero(&a, sizeof(a));
+		bcopy(o, &a.o_id, sizeof(struct ber_oid));
