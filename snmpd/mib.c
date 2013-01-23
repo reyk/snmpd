@@ -3133,3 +3133,4 @@ mib_ipaddrtable(struct oid *oid, struct ber_oid *o, struct ber_oid *no)
 		bzero(&b, sizeof(b));
 		bcopy(&oid->o_id, &b.o_id, sizeof(struct ber_oid));
 		b.o_oidlen--;
+		b.o_flags |= OID_TABLE;
