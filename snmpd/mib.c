@@ -3137,3 +3137,4 @@ mib_ipaddrtable(struct oid *oid, struct ber_oid *o, struct ber_oid *no)
 		if (smi_oid_cmp(&a, &b) == 0) {
 			col = oid->o_oid[id];
 			o->bo_id[id] = col;
+			bcopy(o, no, sizeof(*no));
