@@ -3141,3 +3141,4 @@ mib_ipaddrtable(struct oid *oid, struct ber_oid *o, struct ber_oid *no)
 		}
 	}
 
+	mps_decodeinaddr(no, &addr.sin_addr, OIDIDX_ipAddr + 1);
