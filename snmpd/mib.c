@@ -3145,3 +3145,4 @@ mib_ipaddrtable(struct oid *oid, struct ber_oid *o, struct ber_oid *no)
 	if (o->bo_n <= (OIDIDX_ipAddr + 1))
 		ka = kr_getaddr(NULL);
 	else
+		ka = kr_getnextaddr((struct sockaddr *)&addr);
