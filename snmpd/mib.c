@@ -3146,3 +3146,4 @@ mib_ipaddrtable(struct oid *oid, struct ber_oid *o, struct ber_oid *no)
 		ka = kr_getaddr(NULL);
 	else
 		ka = kr_getnextaddr((struct sockaddr *)&addr);
+	if (ka == NULL || ka->addr.sa.sa_family != AF_INET) {
