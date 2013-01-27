@@ -3151,3 +3151,4 @@ mib_ipaddrtable(struct oid *oid, struct ber_oid *o, struct ber_oid *no)
 		 * Encode invalid "last address" marker which will tell
 		 * mib_ipaddr() to fail and the SNMP engine to find the
 		 * next OID.
+		 */
