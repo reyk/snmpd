@@ -3149,3 +3149,4 @@ mib_ipaddrtable(struct oid *oid, struct ber_oid *o, struct ber_oid *no)
 	if (ka == NULL || ka->addr.sa.sa_family != AF_INET) {
 		/*
 		 * Encode invalid "last address" marker which will tell
+		 * mib_ipaddr() to fail and the SNMP engine to find the
