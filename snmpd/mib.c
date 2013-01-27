@@ -3152,3 +3152,4 @@ mib_ipaddrtable(struct oid *oid, struct ber_oid *o, struct ber_oid *no)
 		 * mib_ipaddr() to fail and the SNMP engine to find the
 		 * next OID.
 		 */
+		mps_encodeinaddr(no, NULL, OIDIDX_ipAddr + 1);
