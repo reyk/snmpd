@@ -3153,3 +3153,4 @@ mib_ipaddrtable(struct oid *oid, struct ber_oid *o, struct ber_oid *no)
 		 * next OID.
 		 */
 		mps_encodeinaddr(no, NULL, OIDIDX_ipAddr + 1);
+	} else {
