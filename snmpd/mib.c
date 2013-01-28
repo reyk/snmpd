@@ -3154,3 +3154,4 @@ mib_ipaddrtable(struct oid *oid, struct ber_oid *o, struct ber_oid *no)
 		 */
 		mps_encodeinaddr(no, NULL, OIDIDX_ipAddr + 1);
 	} else {
+		/* Encode real IPv4 address */
