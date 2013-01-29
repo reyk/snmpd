@@ -3159,3 +3159,4 @@ mib_ipaddrtable(struct oid *oid, struct ber_oid *o, struct ber_oid *no)
 		mps_encodeinaddr(no, &addr.sin_addr, OIDIDX_ipAddr + 1);
 	}
 	smi_oidlen(o);
+
