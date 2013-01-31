@@ -3166,3 +3166,4 @@ mib_ipaddrtable(struct oid *oid, struct ber_oid *o, struct ber_oid *no)
 int
 mib_ipaddr(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 {
+	struct sockaddr_in	 addr;
