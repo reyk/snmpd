@@ -3168,3 +3168,4 @@ mib_ipaddr(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 {
 	struct sockaddr_in	 addr;
 	struct ber_element	*ber = *elm;
+	struct kif_addr		*ka;
