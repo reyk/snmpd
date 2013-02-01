@@ -3171,3 +3171,4 @@ mib_ipaddr(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 	struct kif_addr		*ka;
 	u_int32_t		 val;
 
+	bzero(&addr, sizeof(addr));
