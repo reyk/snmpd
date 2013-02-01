@@ -3172,3 +3172,4 @@ mib_ipaddr(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 	u_int32_t		 val;
 
 	bzero(&addr, sizeof(addr));
+	addr.sin_family = AF_INET;
