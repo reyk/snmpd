@@ -3175,3 +3175,4 @@ mib_ipaddr(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 	addr.sin_family = AF_INET;
 	addr.sin_len = sizeof(addr);
 
+	if (mps_decodeinaddr(o, &addr.sin_addr, OIDIDX_ipAddr + 1) == -1) {
