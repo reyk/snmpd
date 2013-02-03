@@ -3179,3 +3179,4 @@ mib_ipaddr(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 		/* Strip invalid address and fail */
 		o->bo_n = OIDIDX_ipAddr + 1;
 		return (1);
+	}
