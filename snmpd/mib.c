@@ -3180,3 +3180,4 @@ mib_ipaddr(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 		o->bo_n = OIDIDX_ipAddr + 1;
 		return (1);
 	}
+	ka = kr_getaddr((struct sockaddr *)&addr);
