@@ -3184,3 +3184,4 @@ mib_ipaddr(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 	if (ka == NULL || ka->addr.sa.sa_family != AF_INET)
 		return (1);
 
+	/* write OID */
