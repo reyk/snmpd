@@ -3181,3 +3181,4 @@ mib_ipaddr(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 		return (1);
 	}
 	ka = kr_getaddr((struct sockaddr *)&addr);
+	if (ka == NULL || ka->addr.sa.sa_family != AF_INET)
