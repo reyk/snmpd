@@ -3187,3 +3187,4 @@ mib_ipaddr(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 	/* write OID */
 	ber = ber_add_oid(ber, o);
 
+	switch (o->bo_id[OIDIDX_ipAddr]) {
