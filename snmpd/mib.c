@@ -3190,3 +3190,4 @@ mib_ipaddr(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 	switch (o->bo_id[OIDIDX_ipAddr]) {
 	case 1:
 		val = addr.sin_addr.s_addr;
+		ber = ber_add_nstring(ber, (char *)&val, sizeof(u_int32_t));
