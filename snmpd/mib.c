@@ -3198,3 +3198,4 @@ mib_ipaddr(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 		break;
 	case 3:
 		val = ka->mask.sin.sin_addr.s_addr;
+		ber = ber_add_nstring(ber, (char *)&val, sizeof(u_int32_t));
