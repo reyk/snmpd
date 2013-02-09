@@ -3201,3 +3201,4 @@ mib_ipaddr(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 		ber = ber_add_nstring(ber, (char *)&val, sizeof(u_int32_t));
 		ber_set_header(ber, BER_CLASS_APPLICATION, SNMP_T_IPADDR);
 		break;
+	case 4:
