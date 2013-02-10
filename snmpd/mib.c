@@ -3208,3 +3208,4 @@ mib_ipaddr(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 		ber = ber_add_integer(ber, IP_MAXPACKET);
 		break;
 	default:
+		return (-1);
