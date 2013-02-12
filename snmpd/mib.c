@@ -3214,3 +3214,4 @@ mib_ipaddr(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 	return (0);
 }
 
+/*
