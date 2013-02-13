@@ -3218,3 +3218,4 @@ mib_ipaddr(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
  * Defined in IP-FORWARD-MIB.txt (rfc4292)
  */
 
+int mib_ipfnroutes(struct oid *, struct ber_oid *, struct ber_element **);
