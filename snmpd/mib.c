@@ -3225,3 +3225,4 @@ int mib_ipfroute(struct oid *, struct ber_oid *, struct ber_element **);
 
 static struct oid ipf_mib[] = {
 	{ MIB(ipfMIB),			OID_MIB },
+	{ MIB(ipfInetCidrRouteNumber),	OID_RD, mib_ipfnroutes },
