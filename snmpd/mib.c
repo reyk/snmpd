@@ -3227,3 +3227,4 @@ static struct oid ipf_mib[] = {
 	{ MIB(ipfMIB),			OID_MIB },
 	{ MIB(ipfInetCidrRouteNumber),	OID_RD, mib_ipfnroutes },
 
+	{ MIB(ipfRouteEntIfIndex),	OID_TRD, mib_ipfroute, NULL,
