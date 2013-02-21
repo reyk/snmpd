@@ -3250,3 +3250,4 @@ static struct oid ipf_mib[] = {
 	{ MIB(ipfRouteEntStatus),	OID_TRD, mib_ipfroute, NULL,
 	    mib_ipfroutetable },
 	{ MIBEND }
+};
