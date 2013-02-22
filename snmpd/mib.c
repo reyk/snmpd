@@ -3256,3 +3256,4 @@ int
 mib_ipfnroutes(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 {
 	*elm = ber_add_integer(*elm, kr_routenumber());
+	ber_set_header(*elm, BER_CLASS_APPLICATION, SNMP_T_GAUGE32);
