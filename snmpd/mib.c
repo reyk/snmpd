@@ -3255,3 +3255,4 @@ static struct oid ipf_mib[] = {
 int
 mib_ipfnroutes(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 {
+	*elm = ber_add_integer(*elm, kr_routenumber());
