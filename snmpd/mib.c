@@ -3259,3 +3259,4 @@ mib_ipfnroutes(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 	ber_set_header(*elm, BER_CLASS_APPLICATION, SNMP_T_GAUGE32);
 
 	return (0);
+}
