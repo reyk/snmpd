@@ -3272,3 +3272,4 @@ mib_ipfroutetable(struct oid *oid, struct ber_oid *o, struct ber_oid *no)
 	u_int8_t		 prefixlen;
 	u_int8_t		 prio;
 
+	bzero(&addr, sizeof(addr));
