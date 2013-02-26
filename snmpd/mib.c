@@ -3269,3 +3269,4 @@ mib_ipfroutetable(struct oid *oid, struct ber_oid *o, struct ber_oid *no)
 	struct sockaddr_in	 addr;
 	struct kroute		*kr;
 	int			 af, atype, idx;
+	u_int8_t		 prefixlen;
