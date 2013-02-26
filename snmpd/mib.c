@@ -3270,3 +3270,4 @@ mib_ipfroutetable(struct oid *oid, struct ber_oid *o, struct ber_oid *no)
 	struct kroute		*kr;
 	int			 af, atype, idx;
 	u_int8_t		 prefixlen;
+	u_int8_t		 prio;
