@@ -3275,3 +3275,4 @@ mib_ipfroutetable(struct oid *oid, struct ber_oid *o, struct ber_oid *no)
 	bzero(&addr, sizeof(addr));
 	addr.sin_family = AF_INET;
 	addr.sin_len = sizeof(addr);
+
