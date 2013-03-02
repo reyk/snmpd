@@ -3287,3 +3287,4 @@ mib_ipfroutetable(struct oid *oid, struct ber_oid *o, struct ber_oid *no)
 		bzero(&a, sizeof(a));
 		bcopy(o, &a.o_id, sizeof(struct ber_oid));
 		bzero(&b, sizeof(b));
+		bcopy(&oid->o_id, &b.o_id, sizeof(struct ber_oid));
