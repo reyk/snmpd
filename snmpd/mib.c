@@ -3295,3 +3295,4 @@ mib_ipfroutetable(struct oid *oid, struct ber_oid *o, struct ber_oid *no)
 			o->bo_id[id] = col;
 			bcopy(o, no, sizeof(*no));
 		}
+	}
