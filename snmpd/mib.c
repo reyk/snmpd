@@ -3297,3 +3297,4 @@ mib_ipfroutetable(struct oid *oid, struct ber_oid *o, struct ber_oid *no)
 		}
 	}
 
+	af = no->bo_id[OIDIDX_ipfInetCidrRoute + 1];
