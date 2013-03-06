@@ -3303,3 +3303,4 @@ mib_ipfroutetable(struct oid *oid, struct ber_oid *o, struct ber_oid *no)
 	prio = o->bo_id[OIDIDX_ipfInetCidrRoute + 10];
 
 	if (af == 0)
+		kr = kroute_first();
