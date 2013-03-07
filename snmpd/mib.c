@@ -3306,3 +3306,4 @@ mib_ipfroutetable(struct oid *oid, struct ber_oid *o, struct ber_oid *no)
 		kr = kroute_first();
 	else
 		kr = kroute_getaddr(addr.sin_addr.s_addr, prefixlen, prio, 1);
+
