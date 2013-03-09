@@ -3315,3 +3315,4 @@ mib_ipfroutetable(struct oid *oid, struct ber_oid *o, struct ber_oid *no)
 	} else {
 		addr.sin_addr.s_addr = kr->prefix.s_addr;
 		prefixlen = kr->prefixlen;
+		prio = kr->priority;
