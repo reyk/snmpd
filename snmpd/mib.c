@@ -3322,3 +3322,4 @@ mib_ipfroutetable(struct oid *oid, struct ber_oid *o, struct ber_oid *no)
 	case AF_INET:
 		atype = 1;
 		break;
+	case AF_INET6:
