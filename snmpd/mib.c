@@ -3321,3 +3321,4 @@ mib_ipfroutetable(struct oid *oid, struct ber_oid *o, struct ber_oid *no)
 	switch (addr.sin_family) {
 	case AF_INET:
 		atype = 1;
+		break;
