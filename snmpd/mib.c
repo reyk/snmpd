@@ -3331,3 +3331,4 @@ mib_ipfroutetable(struct oid *oid, struct ber_oid *o, struct ber_oid *no)
 	}
 	idx = OIDIDX_ipfInetCidrRoute + 1;
 	no->bo_id[idx++] = atype;
+	no->bo_id[idx++] = 0x04;
