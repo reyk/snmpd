@@ -3337,3 +3337,4 @@ mib_ipfroutetable(struct oid *oid, struct ber_oid *o, struct ber_oid *no)
 	mps_encodeinaddr(no, &addr.sin_addr, idx);
 	no->bo_id[no->bo_n++] = prefixlen;
 	no->bo_id[no->bo_n++] = 0x02;
+	no->bo_n += 2; /* policy */
