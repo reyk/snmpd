@@ -3340,3 +3340,4 @@ mib_ipfroutetable(struct oid *oid, struct ber_oid *o, struct ber_oid *no)
 	no->bo_n += 2; /* policy */
 	no->bo_id[OIDIDX_ipfInetCidrRoute + 10]  = prio;
 
+	if (kr != NULL) {
