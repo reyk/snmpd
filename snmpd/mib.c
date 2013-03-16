@@ -3341,3 +3341,4 @@ mib_ipfroutetable(struct oid *oid, struct ber_oid *o, struct ber_oid *no)
 	no->bo_id[OIDIDX_ipfInetCidrRoute + 10]  = prio;
 
 	if (kr != NULL) {
+		no->bo_id[no->bo_n++] = atype;
