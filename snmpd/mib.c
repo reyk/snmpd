@@ -3348,3 +3348,4 @@ mib_ipfroutetable(struct oid *oid, struct ber_oid *o, struct ber_oid *no)
 		no->bo_n += 2;
 
 	smi_oidlen(o);
+
