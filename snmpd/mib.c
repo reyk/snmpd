@@ -3346,3 +3346,4 @@ mib_ipfroutetable(struct oid *oid, struct ber_oid *o, struct ber_oid *no)
 		mps_encodeinaddr(no, &kr->nexthop, no->bo_n);
 	} else
 		no->bo_n += 2;
+
