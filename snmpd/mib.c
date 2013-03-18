@@ -3352,3 +3352,4 @@ mib_ipfroutetable(struct oid *oid, struct ber_oid *o, struct ber_oid *no)
 	return (no);
 }
 
+int
