@@ -3353,3 +3353,4 @@ mib_ipfroutetable(struct oid *oid, struct ber_oid *o, struct ber_oid *no)
 }
 
 int
+mib_ipfroute(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
