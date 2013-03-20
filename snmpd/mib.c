@@ -3357,3 +3357,4 @@ mib_ipfroute(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 {
 	struct ber_element	*ber = *elm;
 	struct kroute		*kr;
+	struct sockaddr_in	 addr, nhaddr;
