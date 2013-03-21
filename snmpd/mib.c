@@ -3363,3 +3363,4 @@ mib_ipfroute(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 	u_int8_t		 prefixlen, prio, type, proto;
 
 
+	bzero(&addr, sizeof(addr));
