@@ -3367,3 +3367,4 @@ mib_ipfroute(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 	addr.sin_family = AF_INET;
 	addr.sin_len = sizeof(addr);
 
+	af = o->bo_id[OIDIDX_ipfInetCidrRoute + 1];
