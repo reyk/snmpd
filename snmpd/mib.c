@@ -3368,3 +3368,4 @@ mib_ipfroute(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 	addr.sin_len = sizeof(addr);
 
 	af = o->bo_id[OIDIDX_ipfInetCidrRoute + 1];
+	mps_decodeinaddr(o, &addr.sin_addr, OIDIDX_ipfInetCidrRoute + 3);
