@@ -3371,3 +3371,4 @@ mib_ipfroute(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 	mps_decodeinaddr(o, &addr.sin_addr, OIDIDX_ipfInetCidrRoute + 3);
 	mps_decodeinaddr(o, &nhaddr.sin_addr, OIDIDX_ipfInetCidrRoute + 23);
 	prefixlen = o->bo_id[OIDIDX_ipfInetCidrRoute + 7];
+	prio = o->bo_id[OIDIDX_ipfInetCidrRoute + 10];
