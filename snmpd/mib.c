@@ -3375,3 +3375,4 @@ mib_ipfroute(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 	kr = kroute_getaddr(addr.sin_addr.s_addr, prefixlen, prio, 0);
 	if (kr == NULL || af == 0) {
 		return (1);
+	}
