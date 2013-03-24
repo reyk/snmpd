@@ -3376,3 +3376,4 @@ mib_ipfroute(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 	if (kr == NULL || af == 0) {
 		return (1);
 	}
+
