@@ -3383,3 +3383,4 @@ mib_ipfroute(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 	switch (idx) {
 	case 7: /* IfIndex */
 		ber = ber_add_integer(ber, kr->if_index);
+		break;
