@@ -3385,3 +3385,4 @@ mib_ipfroute(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 		ber = ber_add_integer(ber, kr->if_index);
 		break;
 	case 8: /* Type */
+		if (kr->flags & F_REJECT)
