@@ -3387,3 +3387,4 @@ mib_ipfroute(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 	case 8: /* Type */
 		if (kr->flags & F_REJECT)
 			type = 2;
+		else if (kr->flags & F_BLACKHOLE)
