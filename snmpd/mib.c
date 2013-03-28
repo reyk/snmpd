@@ -3389,3 +3389,4 @@ mib_ipfroute(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 			type = 2;
 		else if (kr->flags & F_BLACKHOLE)
 			type = 5;
+		else if (kr->flags & F_CONNECTED)
