@@ -3391,3 +3391,4 @@ mib_ipfroute(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 			type = 5;
 		else if (kr->flags & F_CONNECTED)
 			type = 3;
+		else
