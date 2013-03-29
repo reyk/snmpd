@@ -3393,3 +3393,4 @@ mib_ipfroute(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 			type = 3;
 		else
 			type = 4;
+		ber = ber_add_integer(ber, type);
