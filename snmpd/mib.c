@@ -3399,3 +3399,4 @@ mib_ipfroute(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 		switch (kr->priority) {
 		case RTP_CONNECTED:
 			proto = 2;
+			break;
