@@ -3397,3 +3397,4 @@ mib_ipfroute(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 		break;
 	case 9: /* Proto */
 		switch (kr->priority) {
+		case RTP_CONNECTED:
