@@ -3401,3 +3401,4 @@ mib_ipfroute(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 			proto = 2;
 			break;
 		case RTP_STATIC:
+			proto = 3;
