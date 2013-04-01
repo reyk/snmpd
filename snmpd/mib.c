@@ -3407,3 +3407,4 @@ mib_ipfroute(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 			proto = 13;
 			break;
 		case RTP_ISIS:
+			proto = 9;
