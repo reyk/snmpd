@@ -3410,3 +3410,4 @@ mib_ipfroute(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 			proto = 9;
 			break;
 		case RTP_RIP:
+			proto = 8;
