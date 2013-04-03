@@ -3416,3 +3416,4 @@ mib_ipfroute(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 			proto = 14;
 			break;
 		default:
+			if (kr->flags & F_DYNAMIC)
