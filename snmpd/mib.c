@@ -3419,3 +3419,4 @@ mib_ipfroute(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 			if (kr->flags & F_DYNAMIC)
 				proto = 4;
 			else
+				proto = 1; /* not specified */
