@@ -3430,3 +3430,4 @@ mib_ipfroute(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 		break;
 	case 11: /* NextHopAS */
 		ber = ber_add_integer(ber, 0);	/* unknown */
+		ber_set_header(ber, BER_CLASS_APPLICATION, SNMP_T_GAUGE32);
