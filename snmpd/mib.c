@@ -3437,3 +3437,4 @@ mib_ipfroute(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 		break;
 	case 13: /* Metric2 */
 		ber = ber_add_integer(ber, -1);	/* XXX */
+		break;
