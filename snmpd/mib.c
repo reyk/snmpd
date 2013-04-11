@@ -3448,3 +3448,4 @@ mib_ipfroute(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 		ber = ber_add_integer(ber, -1);	/* XXX */
 		break;
 	case 17: /* Status */
+		ber = ber_add_integer(ber, 1);	/* XXX */
