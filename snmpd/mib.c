@@ -3462,3 +3462,4 @@ mib_ipfroute(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
  */
 
 int	mib_diskio(struct oid *oid, struct ber_oid *o, struct ber_element **elm);
+
