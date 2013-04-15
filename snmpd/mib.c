@@ -3464,3 +3464,4 @@ mib_ipfroute(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 int	mib_diskio(struct oid *oid, struct ber_oid *o, struct ber_element **elm);
 
 static struct oid diskio_mib[] = {
+	{ MIB(ucdDiskIOMIB),			OID_MIB },
