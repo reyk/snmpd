@@ -3465,3 +3465,4 @@ int	mib_diskio(struct oid *oid, struct ber_oid *o, struct ber_element **elm);
 
 static struct oid diskio_mib[] = {
 	{ MIB(ucdDiskIOMIB),			OID_MIB },
+	{ MIB(diskIOIndex),			OID_TRD, mib_diskio },
