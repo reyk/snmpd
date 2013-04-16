@@ -3468,3 +3468,4 @@ static struct oid diskio_mib[] = {
 	{ MIB(diskIOIndex),			OID_TRD, mib_diskio },
 	{ MIB(diskIODevice),			OID_TRD, mib_diskio },
 	{ MIB(diskIONRead),			OID_TRD, mib_diskio },
+	{ MIB(diskIONWritten),			OID_TRD, mib_diskio },
