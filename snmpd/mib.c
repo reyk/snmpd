@@ -3473,3 +3473,4 @@ static struct oid diskio_mib[] = {
 	{ MIB(diskIOWrites),			OID_TRD, mib_diskio },
 	{ MIB(diskIONReadX),			OID_TRD, mib_diskio },
 	{ MIB(diskIONWrittenX),			OID_TRD, mib_diskio },
+	{ MIBEND }
