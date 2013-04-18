@@ -3476,3 +3476,4 @@ static struct oid diskio_mib[] = {
 	{ MIBEND }
 };
 
+int
