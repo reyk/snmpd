@@ -3482,3 +3482,4 @@ mib_diskio(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 	struct ber_element	*ber = *elm;
 	u_int32_t		 idx;
 	int			 mib[] = { CTL_HW, 0 };
+	unsigned int		 diskcount;
