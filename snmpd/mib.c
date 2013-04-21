@@ -3486,3 +3486,4 @@ mib_diskio(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 	struct diskstats	*stats;
 	size_t			 len;
 
+	len = sizeof(diskcount);
