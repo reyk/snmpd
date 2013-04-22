@@ -3492,3 +3492,4 @@ mib_diskio(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 		return (-1);
 
 	/* Get and verify the current row index */
+	idx = o->bo_id[OIDIDX_diskIOEntry];
