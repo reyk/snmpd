@@ -3495,3 +3495,4 @@ mib_diskio(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 	idx = o->bo_id[OIDIDX_diskIOEntry];
 	if (idx > diskcount)
 		return (1);
+
