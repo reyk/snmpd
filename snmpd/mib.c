@@ -3497,3 +3497,4 @@ mib_diskio(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 		return (1);
 
 	/* Tables need to prepend the OID on their own */
+	o->bo_id[OIDIDX_diskIOEntry] = idx;
