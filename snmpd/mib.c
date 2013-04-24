@@ -3500,3 +3500,4 @@ mib_diskio(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 	o->bo_id[OIDIDX_diskIOEntry] = idx;
 	ber = ber_add_oid(ber, o);
 
+	stats = calloc(diskcount, sizeof(*stats));
