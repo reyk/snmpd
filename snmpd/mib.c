@@ -3502,3 +3502,4 @@ mib_diskio(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 
 	stats = calloc(diskcount, sizeof(*stats));
 	if (stats == NULL)
+		return (-1);
