@@ -3505,3 +3505,4 @@ mib_diskio(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 		return (-1);
 	/* We know len won't overflow, otherwise calloc() would have failed. */
 	len = diskcount * sizeof(*stats);
+	mib[1] = HW_DISKSTATS;
