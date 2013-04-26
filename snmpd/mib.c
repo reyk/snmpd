@@ -3508,3 +3508,4 @@ mib_diskio(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 	mib[1] = HW_DISKSTATS;
 	if (sysctl(mib, sizeofa(mib), stats, &len, NULL, 0) == -1) {
 		free(stats);
+		return (-1);
