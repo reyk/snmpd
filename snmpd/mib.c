@@ -3513,3 +3513,4 @@ mib_diskio(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 
 	switch (o->bo_id[OIDIDX_diskIO]) {
 	case 1: /* diskIOIndex */
+		ber = ber_add_integer(ber, idx);
