@@ -3519,3 +3519,4 @@ mib_diskio(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 		ber = ber_add_string(ber, stats[idx - 1].ds_name);
 		break;
 	case 3: /* diskIONRead */
+		ber = ber_add_integer(ber, (u_int32_t)stats[idx - 1].ds_rbytes);
