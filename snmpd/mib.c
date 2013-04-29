@@ -3517,3 +3517,4 @@ mib_diskio(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 		break;
 	case 2: /* diskIODevice */
 		ber = ber_add_string(ber, stats[idx - 1].ds_name);
+		break;
