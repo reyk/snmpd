@@ -3526,3 +3526,4 @@ mib_diskio(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 		ber = ber_add_integer(ber, (u_int32_t)stats[idx - 1].ds_wbytes);
 		ber_set_header(ber, BER_CLASS_APPLICATION, SNMP_T_COUNTER32);
 		break;
+	case 5: /* diskIOReads */
