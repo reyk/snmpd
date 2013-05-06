@@ -3546,3 +3546,4 @@ mib_diskio(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 		free(stats);
 		return (-1);
 	}
+
