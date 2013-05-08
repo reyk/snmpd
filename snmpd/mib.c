@@ -3555,3 +3555,4 @@ mib_diskio(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
  * Defined in BRIDGE-MIB.txt (rfc1493)
  *
  * This MIB is required by some NMS to accept the device because
+ * the RFC says that mostly any network device has to provide this MIB... :(
