@@ -3558,3 +3558,4 @@ mib_diskio(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
  * the RFC says that mostly any network device has to provide this MIB... :(
  */
 
+int	 mib_dot1dtable(struct oid *, struct ber_oid *, struct ber_element **);
