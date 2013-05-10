@@ -3563,3 +3563,4 @@ int	 mib_dot1dtable(struct oid *, struct ber_oid *, struct ber_element **);
 static struct oid bridge_mib[] = {
 	{ MIB(dot1dBridge),		OID_MIB },
 	{ MIB(dot1dBaseBridgeAddress) },
+	{ MIB(dot1dBaseNumPorts),	OID_RD, mib_ifnumber },
