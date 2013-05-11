@@ -3565,3 +3565,4 @@ static struct oid bridge_mib[] = {
 	{ MIB(dot1dBaseBridgeAddress) },
 	{ MIB(dot1dBaseNumPorts),	OID_RD, mib_ifnumber },
 	{ MIB(dot1dBaseType),		OID_RD, mps_getint, NULL,
+	    NULL, 4 /* srt (sourceroute + transparent) */ },
