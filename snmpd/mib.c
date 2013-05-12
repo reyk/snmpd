@@ -3569,3 +3569,4 @@ static struct oid bridge_mib[] = {
 	{ MIB(dot1dBasePort),		OID_TRD, mib_dot1dtable },
 	{ MIB(dot1dBasePortIfIndex),	OID_TRD, mib_dot1dtable },
 	{ MIB(dot1dBasePortCircuit),	OID_TRD, mib_dot1dtable},
+	{ MIB(dot1dBasePortDelayExceededDiscards), OID_TRD, mib_dot1dtable },
