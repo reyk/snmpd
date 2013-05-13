@@ -3574,3 +3574,4 @@ static struct oid bridge_mib[] = {
 	{ MIBEND }
 };
 
+int
