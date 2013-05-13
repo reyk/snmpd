@@ -3576,3 +3576,4 @@ static struct oid bridge_mib[] = {
 
 int
 mib_dot1dtable(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
+{
