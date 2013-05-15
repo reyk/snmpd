@@ -3583,3 +3583,4 @@ mib_dot1dtable(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 
 	/* Get and verify the current row index */
 	idx = o->bo_id[OIDIDX_dot1dEntry];
+	if ((kif = mib_ifget(idx)) == NULL)
