@@ -3589,3 +3589,4 @@ mib_dot1dtable(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 	/* Tables need to prepend the OID on their own */
 	o->bo_id[OIDIDX_dot1dEntry] = kif->if_index;
 	ber = ber_add_oid(ber, o);
+
