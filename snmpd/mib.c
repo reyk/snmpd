@@ -3592,3 +3592,4 @@ mib_dot1dtable(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 
 	switch (o->bo_id[OIDIDX_dot1d]) {
 	case 1:
+	case 2:
