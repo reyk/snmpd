@@ -3596,3 +3596,4 @@ mib_dot1dtable(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 		ber = ber_add_integer(ber, kif->if_index);
 		break;
 	case 3:
+		ber = ber_add_oid(ber, &zerodotzero);
