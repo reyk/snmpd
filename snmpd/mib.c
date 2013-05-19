@@ -3600,3 +3600,4 @@ mib_dot1dtable(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 		break;
 	case 4:
 	case 5:
+		ber = ber_add_integer(ber, 0);
