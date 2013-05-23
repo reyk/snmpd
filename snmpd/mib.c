@@ -3616,3 +3616,4 @@ void
 mib_init(void)
 {
 	/*
+	 * MIB declarations (to register the OID names)
