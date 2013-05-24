@@ -3620,3 +3620,4 @@ mib_init(void)
 	 */
 	smi_mibtree(mib_tree);
 
+	/*
