@@ -3624,3 +3624,4 @@ mib_init(void)
 	 * MIB definitions (the implementation)
 	 */
 
+	/* SNMPv2-MIB */
