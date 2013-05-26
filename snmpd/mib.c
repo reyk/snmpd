@@ -3627,3 +3627,4 @@ mib_init(void)
 	/* SNMPv2-MIB */
 	smi_mibtree(base_mib);
 
+	/* SNMP-USER-BASED-SM-MIB */
