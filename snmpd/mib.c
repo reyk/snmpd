@@ -3625,3 +3625,4 @@ mib_init(void)
 	 */
 
 	/* SNMPv2-MIB */
+	smi_mibtree(base_mib);
