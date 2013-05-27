@@ -3629,3 +3629,4 @@ mib_init(void)
 
 	/* SNMP-USER-BASED-SM-MIB */
 	smi_mibtree(usm_mib);
+
