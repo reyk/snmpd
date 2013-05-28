@@ -3633,3 +3633,4 @@ mib_init(void)
 	/* HOST-RESOURCES-MIB */
 	smi_mibtree(hr_mib);
 
+	/* IF-MIB */
