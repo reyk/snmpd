@@ -3634,3 +3634,4 @@ mib_init(void)
 	smi_mibtree(hr_mib);
 
 	/* IF-MIB */
+	smi_mibtree(if_mib);
