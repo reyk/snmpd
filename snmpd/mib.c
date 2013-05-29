@@ -3637,3 +3637,4 @@ mib_init(void)
 	smi_mibtree(if_mib);
 
 	/* IP-MIB */
+	smi_mibtree(ip_mib);
