@@ -3638,3 +3638,4 @@ mib_init(void)
 
 	/* IP-MIB */
 	smi_mibtree(ip_mib);
+
