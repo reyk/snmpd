@@ -3640,3 +3640,4 @@ mib_init(void)
 	smi_mibtree(ip_mib);
 
 	/* IP-FORWARD-MIB */
+	smi_mibtree(ipf_mib);
