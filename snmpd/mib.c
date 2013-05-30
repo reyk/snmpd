@@ -3644,3 +3644,4 @@ mib_init(void)
 
 	/* BRIDGE-MIB */
 	smi_mibtree(bridge_mib);
+
