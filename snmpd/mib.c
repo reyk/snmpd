@@ -3643,3 +3643,4 @@ mib_init(void)
 	smi_mibtree(ipf_mib);
 
 	/* BRIDGE-MIB */
+	smi_mibtree(bridge_mib);
