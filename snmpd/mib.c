@@ -3646,3 +3646,4 @@ mib_init(void)
 	smi_mibtree(bridge_mib);
 
 	/* UCD-DISKIO-MIB */
+	smi_mibtree(diskio_mib);
