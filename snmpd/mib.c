@@ -3650,3 +3650,4 @@ mib_init(void)
 
 	/* OPENBSD-MIB */
 	smi_mibtree(openbsd_mib);
+}
