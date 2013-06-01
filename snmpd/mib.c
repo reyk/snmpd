@@ -3649,3 +3649,4 @@ mib_init(void)
 	smi_mibtree(diskio_mib);
 
 	/* OPENBSD-MIB */
+	smi_mibtree(openbsd_mib);
