@@ -4,10 +4,11 @@ License
 snmpd is free software under OpenBSD's ISC-style license.
 
 * Most of the code has been written by Reyk Floeter <reyk@openbsd.org>
+* AgentX code has been written by Bret Lambert <blambert@openbsd.org>
 * The PF MIB has been written by Joel Knight and Cedric Berger.
 * The SNMPv3 and USM code has been contributed by GeNUA mbH
 
-> Copyright (c) 2008-2013 Reyk Floeter <reyk@openbsd.org>
+> Copyright (c) 2008-2014 Reyk Floeter <reyk@openbsd.org>
 > 
 > Permission to use, copy, modify, and distribute this software for any
 > purpose with or without fee is hereby granted, provided that the above
