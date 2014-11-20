@@ -1,4 +1,4 @@
-/*	$OpenBSD: pf.c,v 1.5 2013/03/04 14:00:31 bluhm Exp $	*/
+/*	$OpenBSD: pf.c,v 1.7 2014/10/08 05:24:42 deraadt Exp $	*/
 
 /*
  * Copyright (c) 2012 Joel Knight <joel@openbsd.org>
@@ -148,7 +148,7 @@ pfr_buf_grow(struct pfr_buffer *b, int minsize)
 			/* msize overflow */
 			return (-1);
 		}
-		p = realloc(b->pfrb_caddr, minsize * bs);
+		p = reallocarray(b->pfrb_caddr, minsize, bs);
 		if (p == NULL)
 			return (-1);
 		bzero(p + b->pfrb_msize * bs, (minsize - b->pfrb_msize) * bs);
@@ -431,6 +431,9 @@ pfta_get_nextaddr(struct pfr_astats *ras, int *tblidx)
 			    && (as->pfras_a.pfra_net == ras->pfras_a.pfra_net))
 				found = 1;
 		}
+
+		free(ba.pfrb_caddr);
+		ba.pfrb_caddr = NULL;
 	}
 
 

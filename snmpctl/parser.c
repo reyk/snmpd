@@ -1,4 +1,4 @@
-/*	$OpenBSD: parser.c,v 1.10 2012/09/17 16:43:59 reyk Exp $	*/
+/*	$OpenBSD: parser.c,v 1.15 2014/04/14 12:56:21 blambert Exp $	*/
 
 /*
  * Copyright (c) 2008 Reyk Floeter <reyk@openbsd.org>
@@ -52,7 +52,11 @@ enum token_type {
 	INT32VAL,
 	UINT32VAL,
 	INT64VAL,
-	STRINGVAL
+	STRINGVAL,
+	SNMPOID,
+	SNMPHOST,
+	SNMPCOMMUNITY,
+	SNMPVERSION
 };
 
 struct token {
@@ -74,16 +78,59 @@ static const struct token t_int32[];
 static const struct token t_uint32[];
 static const struct token t_int64[];
 static const struct token t_string[];
+static const struct token t_snmp[];
+static const struct token t_snmpclient[];
+static const struct token t_snmphost[];
+static const struct token t_snmpoid[];
+static const struct token t_snmpcommunity[];
+static const struct token t_snmpversion[];
 
 static const struct token t_main[] = {
 	{KEYWORD,	"monitor",	MONITOR,	NULL},
 	{KEYWORD,	"show",		NONE,		t_show},
+	{KEYWORD,	"snmp",		NONE,		t_snmp},
 	{KEYWORD,	"trap",		NONE,		t_trap},
+	{KEYWORD,	"walk",		WALK,		t_snmphost},
 	{ENDTOKEN,	"",		NONE,		NULL}
 };
 
 static const struct token t_show[] = {
 	{KEYWORD,	"mib",		SHOW_MIB,	NULL},
+	{ENDTOKEN,	"",		NONE,		NULL}
+};
+
+static const struct token t_snmp[] = {
+	{KEYWORD,	"bulkwalk",	BULKWALK,	t_snmphost},
+	{KEYWORD,	"get",		GET,		t_snmphost},
+	{KEYWORD,	"walk",		WALK,		t_snmphost},
+	{ENDTOKEN,	"",		NONE,		NULL}
+};
+
+static const struct token t_snmphost[] = {
+	{SNMPHOST,	"",		NONE,		t_snmpclient},
+	{ENDTOKEN,	"",		NONE,		NULL}
+};
+
+static const struct token t_snmpclient[] = {
+	{NOTOKEN,	"",		NONE,		NULL},
+	{KEYWORD,	"oid",		NONE,		t_snmpoid},
+	{KEYWORD,	"community",	NONE,		t_snmpcommunity},
+	{KEYWORD,	"version",	NONE,		t_snmpversion},
+	{ENDTOKEN,	"",		NONE,		NULL}
+};
+
+static const struct token t_snmpoid[] = {
+	{SNMPOID,	"",		NONE,		t_snmpclient},
+	{ENDTOKEN,	"",		NONE,		NULL}
+};
+
+static const struct token t_snmpcommunity[] = {
+	{SNMPCOMMUNITY,	"",		NONE,		t_snmpclient},
+	{ENDTOKEN,	"",		NONE,		NULL}
+};
+
+static const struct token t_snmpversion[] = {
+	{SNMPVERSION,	"",		NONE,		t_snmpclient},
 	{ENDTOKEN,	"",		NONE,		NULL}
 };
 
@@ -152,8 +199,6 @@ static const struct token t_string[] = {
 };
 
 static struct parse_result	 res;
-static struct imsgbuf		*ibuf;
-static struct snmp_imsg		 sm;
 
 const struct token		*match_token(char *, const struct token []);
 void				 show_valid_args(const struct token []);
@@ -165,6 +210,9 @@ parse(int argc, char *argv[])
 	const struct token	*match;
 
 	bzero(&res, sizeof(res));
+	res.version = -1;
+	TAILQ_INIT(&res.oids);
+	TAILQ_INIT(&res.varbinds);
 
 	while (argc >= 0) {
 		if ((match = match_token(argv[0], table)) == NULL) {
@@ -196,15 +244,9 @@ match_token(char *word, const struct token table[])
 	u_int			 i, match = 0;
 	const struct token	*t = NULL;
 	const char		*errs = NULL;
-	u_int32_t		 u;
-	int32_t			 d;
-	int64_t			 l;
-	struct iovec		 iov[2];
-	int			 iovcnt = 0;
-	struct in_addr		 in4;
-	struct in6_addr		 in6;
-
-	bzero(&iov, sizeof(iov));
+	int			 terminal = 0;
+	struct parse_val	*val;
+	struct parse_varbind	*vb = NULL;
 
 	for (i = 0; table[i].type != ENDTOKEN; i++) {
 		switch (table[i].type) {
@@ -223,114 +265,145 @@ match_token(char *word, const struct token table[])
 					res.action = t->value;
 			}
 			break;
+		case SNMPHOST:
+			if (!match && word != NULL && strlen(word) > 0 &&
+			    res.host == NULL) {
+				if ((res.host = strdup(word)) == NULL)
+					err(1, "strdup");
+				match++;
+				t = &table[i];
+			}
+			break;
+		case SNMPOID:
+			if (!match && word != NULL && strlen(word) > 0) {
+				if ((val = calloc(1, sizeof(*val))) == NULL ||
+				    (val->val = strdup(word)) == NULL)
+					err(1, "strdup");
+				TAILQ_INSERT_TAIL(&res.oids, val, val_entry);
+				match++;
+				t = &table[i];
+			}
+			break;
+		case SNMPCOMMUNITY:
+			if (!match && word != NULL && strlen(word) > 0 &&
+			    res.community == NULL) {
+				if ((res.community = strdup(word)) == NULL)
+					err(1, "strdup");
+				match++;
+				t = &table[i];
+			}
+			break;
+		case SNMPVERSION:
+			if (!match && word != NULL && strlen(word) > 0 &&
+			    res.version == -1) {
+				if (strcmp("1", word) == 0)
+					res.version = SNMP_V1;
+				else if (strcmp("2c", word) == 0)
+					res.version = SNMP_V2;
+				else
+					break;
+				match++;
+				t = &table[i];
+			}
+			break;
 		case VALTYPE:
 			if (word != NULL && strncmp(word, table[i].keyword,
 			    strlen(word)) == 0) {
 				match++;
 				t = &table[i];
-				sm.snmp_type = t->value;
+				vb = TAILQ_LAST(&res.varbinds, parse_varbinds);
+				if (vb == NULL)
+					errx(1, "inconsistent varbind list");
+				vb->sm.snmp_type = t->value;
 				if (t->value == SNMP_NULL)
-					iovcnt = 1;
+					terminal = 1;
 			}
 			break;
 		case TRAPOID:
 			if (word == NULL || strlen(word) == 0)
 				break;
-			if (ibuf == NULL &&
-			    (ibuf = malloc(sizeof(struct imsgbuf))) == NULL)
+			if ((res.trapoid = strdup(word)) == NULL)
 				err(1, "malloc");
-			res.ibuf = ibuf;
-			imsg_init(ibuf, -1);
-
-			/* Create a new trap */
-			imsg_compose(ibuf, IMSG_SNMP_TRAP,
-			    0, 0, -1, NULL, 0);
-
-			/* First element must be the trap OID. */
-			bzero(&sm, sizeof(sm));
-			sm.snmp_type = SNMP_NULL;
-			if (strlcpy(sm.snmp_oid, word,
-			    sizeof(sm.snmp_oid)) >= sizeof(sm.snmp_oid))
-				errx(1, "trap oid too long");
-			if (imsg_compose(ibuf, IMSG_SNMP_ELEMENT, 0, 0, -1,
-			    &sm, sizeof(sm)) == -1)
-				errx(1, "imsg");
-
 			match++;
 			t = &table[i];
 			break;
 		case ELEMENTOBJECT:
 			if (word == NULL || strlen(word) == 0)
 				break;
-			bzero(&sm, sizeof(sm));
-			if (strlcpy(sm.snmp_oid, word,
-			    sizeof(sm.snmp_oid)) >= sizeof(sm.snmp_oid))
+			if ((vb = calloc(1, sizeof(*vb))) == NULL)
+				errx(1, "calloc");
+			if (strlcpy(vb->sm.snmp_oid, word,
+			    sizeof(vb->sm.snmp_oid)) >= sizeof(vb->sm.snmp_oid))
 				errx(1, "oid too long");
+
+			TAILQ_INSERT_TAIL(&res.varbinds, vb, vb_entry);
 			match++;
 			t = &table[i];
 			break;
 		case IPADDRVAL:
 			if (word == NULL || strlen(word) == 0)
 				break;
-			if (inet_pton(AF_INET, word, &in4) == -1) {
+			vb = TAILQ_LAST(&res.varbinds, parse_varbinds);
+			if (vb == NULL)
+				errx(1, "inconsistent varbind list");
+			if (inet_pton(AF_INET, word, &vb->u.in4) == -1) {
 				/* XXX the SNMP_IPADDR type is IPv4-only? */
-				if (inet_pton(AF_INET6, word, &in6) == -1)
+				if (inet_pton(AF_INET6, word, &vb->u.in6) == -1)
 					errx(1, "invalid IP address");
-				iov[1].iov_len = sizeof(in6);
-				iov[1].iov_base = &in6;
+				vb->sm.snmp_len = sizeof(vb->u.in6);
 			} else {
-				iov[1].iov_len = sizeof(in4);
-				iov[1].iov_base = &in4;
+				vb->sm.snmp_len = sizeof(vb->u.in4);
 			}
-			iovcnt = 2;
+			terminal = 1;
 			break;
 		case INT32VAL:
 			if (word == NULL || strlen(word) == 0)
 				break;
-			d = strtonum(word, INT_MIN, INT_MAX, &errs);
-			iov[1].iov_len = sizeof(d);
-			iov[1].iov_base = &d;
-			iovcnt = 2;
+			vb = TAILQ_LAST(&res.varbinds, parse_varbinds);
+			if (vb == NULL)
+				errx(1, "inconsistent varbind list");
+			vb->u.d = strtonum(word, INT_MIN, INT_MAX, &errs);
+			vb->sm.snmp_len = sizeof(vb->u.d);
+			terminal = 1;
 			break;
 		case UINT32VAL:
 			if (word == NULL || strlen(word) == 0)
 				break;
-			u = strtonum(word, 0, UINT_MAX, &errs);
-			iov[1].iov_len = sizeof(u);
-			iov[1].iov_base = &u;
-			iovcnt = 2;
+			vb = TAILQ_LAST(&res.varbinds, parse_varbinds);
+			if (vb == NULL)
+				errx(1, "inconsistent varbind list");
+			vb->u.u = strtonum(word, 0, UINT_MAX, &errs);
+			vb->sm.snmp_len = sizeof(vb->u.u);
+			terminal = 1;
 			break;
 		case INT64VAL:
 			if (word == NULL || strlen(word) == 0)
 				break;
-			l = strtonum(word, INT64_MIN, INT64_MAX, &errs);
-			iov[1].iov_len = sizeof(l);
-			iov[1].iov_base = &l;
-			iovcnt = 2;
+			vb = TAILQ_LAST(&res.varbinds, parse_varbinds);
+			if (vb == NULL)
+				errx(1, "inconsistent varbind list");
+			vb->u.l = strtonum(word, INT64_MIN, INT64_MAX, &errs);
+			vb->sm.snmp_len = sizeof(vb->u.l);
+			terminal = 1;
 			break;
 		case STRINGVAL:
 			if (word == NULL || strlen(word) == 0)
 				break;
-			iov[1].iov_len = strlen(word);
-			iov[1].iov_base = word;
-			iovcnt = 2;
+			vb = TAILQ_LAST(&res.varbinds, parse_varbinds);
+			if (vb == NULL)
+				errx(1, "inconsistent varbind list");
+			vb->u.str = word;
+			vb->sm.snmp_len = strlen(word);
+			terminal = 1;
 			break;
 		case ENDTOKEN:
 			break;
 		}
-		if (iovcnt)
+		if (terminal)
 			break;
 	}
 
-	if (iovcnt) {
-		/* Write trap varbind element */
-		sm.snmp_len = iov[1].iov_len;
-		iov[0].iov_len = sizeof(sm);
-		iov[0].iov_base = &sm;
-		if (imsg_composev(ibuf, IMSG_SNMP_ELEMENT, 0, 0, -1,
-		    iov, iovcnt) == -1)
-			err(1, "imsg");
-
+	if (terminal) {
 		t = &table[i];
 	} else if (match != 1) {
 		if (word == NULL)
@@ -361,6 +434,10 @@ show_valid_args(const struct token table[])
 		case VALTYPE:
 			fprintf(stderr, "  %s <value>\n", table[i].keyword);
 			break;
+		case SNMPHOST:
+			fprintf(stderr, "  <hostname>\n");
+			break;
+		case SNMPOID:
 		case TRAPOID:
 		case ELEMENTOBJECT:
 			fprintf(stderr, "  <oid-string>\n");
@@ -378,7 +455,11 @@ show_valid_args(const struct token table[])
 			fprintf(stderr, "  <int64>\n");
 			break;
 		case STRINGVAL:
+		case SNMPCOMMUNITY:
 			fprintf(stderr, "  <string>\n");
+			break;
+		case SNMPVERSION:
+			fprintf(stderr, "  [1|2c]\n");
 			break;
 		case ENDTOKEN:
 			break;

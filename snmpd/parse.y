@@ -1,4 +1,4 @@
-/*	$OpenBSD: parse.y,v 1.25 2013/03/29 12:53:41 gerhard Exp $	*/
+/*	$OpenBSD: parse.y,v 1.36 2014/11/20 05:51:21 jsg Exp $	*/
 
 /*
  * Copyright (c) 2007, 2008, 2012 Reyk Floeter <reyk@openbsd.org>
@@ -51,6 +51,11 @@
 #include "snmpd.h"
 #include "mib.h"
 
+enum socktype {
+	SOCK_TYPE_RESTRICTED = 1,
+	SOCK_TYPE_AGENTX = 2
+};
+
 TAILQ_HEAD(files, file)		 files = TAILQ_HEAD_INITIALIZER(files);
 static struct file {
 	TAILQ_ENTRY(file)	 entry;
@@ -64,7 +69,9 @@ int		 popfile(void);
 int		 check_file_secrecy(int, const char *);
 int		 yyparse(void);
 int		 yylex(void);
-int		 yyerror(const char *, ...);
+int		 yyerror(const char *, ...)
+    __attribute__((__format__ (printf, 1, 2)))
+    __attribute__((__nonnull__ (1)));
 int		 kw_cmp(const void *, const void *);
 int		 lookup(char *);
 int		 lgetc(int);
@@ -86,6 +93,7 @@ struct snmpd			*conf = NULL;
 static int			 errors = 0;
 static struct addresslist	*hlist;
 static struct usmuser		*user = NULL;
+static int			 nctlsocks = 0;
 
 struct address	*host_v4(const char *);
 struct address	*host_v6(const char *);
@@ -119,12 +127,13 @@ typedef struct {
 %token	SYSTEM CONTACT DESCR LOCATION NAME OBJECTID SERVICES RTFILTER
 %token	READONLY READWRITE OCTETSTRING INTEGER COMMUNITY TRAP RECEIVER
 %token	SECLEVEL NONE AUTH ENC USER AUTHKEY ENCKEY ERROR DISABLED
+%token	SOCKET RESTRICTED AGENTX HANDLE DEFAULT
 %token	<v.string>	STRING
 %token  <v.number>	NUMBER
 %type	<v.string>	hostcmn
-%type	<v.number>	optwrite yesno seclevel
-%type	<v.data>	objtype
-%type	<v.oid>		oid hostoid
+%type	<v.number>	optwrite yesno seclevel socktype
+%type	<v.data>	objtype cmd
+%type	<v.oid>		oid hostoid trapoid
 %type	<v.auth>	auth
 %type	<v.enc>		enc
 
@@ -225,7 +234,7 @@ main		: LISTEN ON STRING		{
 			if (strlcpy(conf->sc_trcommunity, $3,
 			    sizeof(conf->sc_trcommunity)) >=
 			    sizeof(conf->sc_trcommunity)) {
-				yyerror("r/w community name too long");
+				yyerror("trap community name too long");
 				free($3);
 				YYERROR;
 			}
@@ -235,6 +244,19 @@ main		: LISTEN ON STRING		{
 			hlist = &conf->sc_trapreceivers;
 		} host				{
 			hlist = NULL;
+		}
+		| TRAP HANDLE hostcmn trapoid cmd {
+			struct trapcmd *cmd = $5.data;
+
+			cmd->cmd_oid = $4;
+
+			if (trapcmd_add(cmd) != 0) {
+				free($4);
+				free(cmd);
+				yyerror("duplicate oid");
+				YYERROR;
+			}
+			conf->sc_traphandler = 1;
 		}
 		| RTFILTER yesno		{
 			if ($2 == 1)
@@ -263,6 +285,31 @@ main		: LISTEN ON STRING		{
 				YYERROR;
 			}
 			user = NULL;
+		}
+		| SOCKET STRING socktype {
+			if ($3) {
+				struct control_sock *rcsock;
+
+				rcsock = calloc(1, sizeof(*rcsock));
+				if (rcsock == NULL) {
+					yyerror("calloc");
+					YYERROR;
+				}
+				rcsock->cs_name = $2;
+				if ($3 == SOCK_TYPE_RESTRICTED)
+					rcsock->cs_restricted = 1;
+				else if ($3 == SOCK_TYPE_AGENTX)
+					rcsock->cs_agentx = 1;
+				TAILQ_INSERT_TAIL(&conf->sc_ps.ps_rcsocks,
+				    rcsock, cs_entry);
+			} else {
+				if (++nctlsocks > 1) {
+					yyerror("multiple control "
+					    "sockets specified");
+					YYERROR;
+				}
+				conf->sc_ps.ps_csock.cs_name = $2;
+			}
 		}
 		;
 
@@ -325,7 +372,12 @@ mib		: OBJECTID oid NAME STRING optwrite objtype	{
 			if ($5)
 				oid->o_flags |= OID_WR;
 
-			smi_insert(oid);
+			if (smi_insert(oid) == -1) {
+				yyerror("duplicate oid");
+				free(oid->o_name);
+				free(oid->o_data);
+				YYERROR;
+			}
 		}
 		;
 
@@ -360,6 +412,19 @@ oid		: STRING				{
 				YYERROR;
 			}
 			free($1);
+			$$ = sysoid;
+		}
+		;
+
+trapoid		: oid					{ $$ = $1; }
+		| DEFAULT				{
+			struct ber_oid	*sysoid;
+			if ((sysoid =
+			    calloc(1, sizeof(*sysoid))) == NULL) {
+				yyerror("calloc");
+				YYERROR;
+			}
+			ber_string2oid("1.3", sysoid);
 			$$ = sysoid;
 		}
 		;
@@ -451,6 +516,57 @@ enc		: STRING			{
 		}
 		;
 
+socktype	: RESTRICTED		{ $$ = SOCK_TYPE_RESTRICTED; }
+		| AGENTX		{ $$ = SOCK_TYPE_AGENTX; }
+		| /* nothing */		{ $$ = 0; }
+		;
+
+cmd		: STRING		{
+			struct		 trapcmd *cmd;
+			size_t		 span, limit;
+			char		*pos, **args, **args2;
+			int		 nargs = 32;		/* XXX */
+
+			if ((cmd = calloc(1, sizeof(*cmd))) == NULL ||
+			    (args = calloc(nargs, sizeof(char *))) == NULL) {
+				free(cmd);
+				free($1);
+				YYERROR;
+			}
+
+			pos = $1;
+			limit = strlen($1);
+
+			while ((span = strcspn(pos, " \t")) != 0 &&
+			    pos < $1 + limit) {
+				pos[span] = '\0';
+				args[cmd->cmd_argc] = strdup(pos);
+				if (args[cmd->cmd_argc] == NULL) {
+					trapcmd_free(cmd);
+					free(args);
+					free($1);
+					YYERROR;
+				}
+				cmd->cmd_argc++;
+				if (cmd->cmd_argc >= nargs - 1) {
+					nargs *= 2;
+					args2 = calloc(nargs, sizeof(char *));
+					if (args2 == NULL) {
+						trapcmd_free(cmd);
+						free(args);
+						free($1);
+						YYERROR;
+					}
+					args = args2;
+				}
+				pos += span + 1;
+			}
+			free($1);
+			cmd->cmd_argv = args;
+			$$.data = cmd;
+		}
+		;
+
 %%
 
 struct keywords {
@@ -462,15 +578,15 @@ int
 yyerror(const char *fmt, ...)
 {
 	va_list		 ap;
-	char		*nfmt;
+	char		*msg;
 
 	file->errors++;
 	va_start(ap, fmt);
-	if (asprintf(&nfmt, "%s:%d: %s", file->name, yylval.lineno, fmt) == -1)
-		fatalx("yyerror asprintf");
-	vlog(LOG_CRIT, nfmt, ap);
+	if (vasprintf(&msg, fmt, ap) == -1)
+		fatalx("yyerror vasprintf");
 	va_end(ap);
-	free(nfmt);
+	logit(LOG_CRIT, "%s:%d: %s", file->name, yylval.lineno, msg);
+	free(msg);
 	return (0);
 }
 
@@ -485,15 +601,18 @@ lookup(char *s)
 {
 	/* this has to be sorted always */
 	static const struct keywords keywords[] = {
+		{ "agentx",		AGENTX },
 		{ "auth",		AUTH },
 		{ "authkey",		AUTHKEY },
 		{ "community",		COMMUNITY },
 		{ "contact",		CONTACT },
+		{ "default",		DEFAULT },
 		{ "description",	DESCR },
 		{ "disabled",		DISABLED},
 		{ "enc",		ENC },
 		{ "enckey",		ENCKEY },
 		{ "filter-routes",	RTFILTER },
+		{ "handle",		HANDLE },
 		{ "include",		INCLUDE },
 		{ "integer",		INTEGER },
 		{ "listen",		LISTEN },
@@ -505,8 +624,10 @@ lookup(char *s)
 		{ "read-only",		READONLY },
 		{ "read-write",		READWRITE },
 		{ "receiver",		RECEIVER },
+		{ "restricted",		RESTRICTED },
 		{ "seclevel",		SECLEVEL },
 		{ "services",		SERVICES },
+		{ "socket",		SOCKET },
 		{ "string",		OCTETSTRING },
 		{ "system",		SYSTEM },
 		{ "trap",		TRAP },
@@ -525,9 +646,9 @@ lookup(char *s)
 
 #define MAXPUSHBACK	128
 
-char	*parsebuf;
+u_char	*parsebuf;
 int	 parseindex;
-char	 pushback_buffer[MAXPUSHBACK];
+u_char	 pushback_buffer[MAXPUSHBACK];
 int	 pushback_index = 0;
 
 int
@@ -627,8 +748,8 @@ findeol(void)
 int
 yylex(void)
 {
-	char	 buf[8096];
-	char	*p, *val;
+	u_char	 buf[8096];
+	u_char	*p, *val;
 	int	 quotec, next, c;
 	int	 token;
 
@@ -651,7 +772,7 @@ top:
 				return (findeol());
 			}
 			if (isalnum(c) || c == '_') {
-				*p++ = (char)c;
+				*p++ = c;
 				continue;
 			}
 			*p = '\0';
@@ -691,12 +812,15 @@ top:
 			} else if (c == quotec) {
 				*p = '\0';
 				break;
+			} else if (c == '\0') {
+				yyerror("syntax error");
+				return (findeol());
 			}
 			if (p + 1 >= buf + sizeof(buf) - 1) {
 				yyerror("string too long");
 				return (findeol());
 			}
-			*p++ = (char)c;
+			*p++ = c;
 		}
 		yylval.v.string = strdup(buf);
 		if (yylval.v.string == NULL)
@@ -783,8 +907,8 @@ check_file_secrecy(int fd, const char *fname)
 		log_warnx("%s: owner not root or current user", fname);
 		return (-1);
 	}
-	if (st.st_mode & (S_IRWXG | S_IRWXO)) {
-		log_warnx("%s: group/world readable/writeable", fname);
+	if (st.st_mode & (S_IWGRP | S_IXGRP | S_IRWXO)) {
+		log_warnx("%s: group writable or world read/writable", fname);
 		return (-1);
 	}
 	return (0);
@@ -851,6 +975,8 @@ parse_config(const char *filename, u_int flags)
 	conf->sc_confpath = filename;
 	conf->sc_address.ss.ss_family = AF_INET;
 	conf->sc_address.port = SNMPD_PORT;
+	conf->sc_ps.ps_csock.cs_name = SNMPD_SOCKET;
+	TAILQ_INIT(&conf->sc_ps.ps_rcsocks);
 	strlcpy(conf->sc_rdcommunity, "public", SNMPD_MAXCOMMUNITYLEN);
 	strlcpy(conf->sc_rwcommunity, "private", SNMPD_MAXCOMMUNITYLEN);
 	strlcpy(conf->sc_trcommunity, "public", SNMPD_MAXCOMMUNITYLEN);

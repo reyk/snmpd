@@ -1,4 +1,4 @@
-/*	$OpenBSD: ber.c,v 1.24 2012/09/17 16:30:34 reyk Exp $ */
+/*	$OpenBSD: ber.c,v 1.27 2014/04/25 06:57:11 blambert Exp $ */
 
 /*
  * Copyright (c) 2007, 2012 Reyk Floeter <reyk@openbsd.org>
@@ -614,7 +614,7 @@ ber_scanf_elements(struct ber_element *ber, char *fmt, ...)
 	va_list			 ap;
 	int			*d, level = -1;
 	unsigned long		*t;
-	long long		*i;
+	long long		*i, l;
 	void			**ptr;
 	size_t			*len, ret = 0, n = strlen(fmt);
 	char			**s;
@@ -638,6 +638,13 @@ ber_scanf_elements(struct ber_element *ber, char *fmt, ...)
 			d = va_arg(ap, int *);
 			if (ber_get_boolean(ber, d) == -1)
 				goto fail;
+			ret++;
+			break;
+		case 'd':
+			d = va_arg(ap, int *);
+			if (ber_get_integer(ber, &l) == -1)
+				goto fail;
+			*d = l;
 			ret++;
 			break;
 		case 'e':
@@ -1272,4 +1279,30 @@ ber_read(struct ber *ber, void *buf, size_t len)
 	r = b - (u_char *)buf;
 	ber->br_offs += r;
 	return r;
+}
+
+int
+ber_oid_cmp(struct ber_oid *a, struct ber_oid *b)
+{
+	size_t	 i;
+	for (i = 0; i < BER_MAX_OID_LEN; i++) {
+		if (a->bo_id[i] != 0) {
+			if (a->bo_id[i] == b->bo_id[i])
+				continue;
+			else if (a->bo_id[i] < b->bo_id[i]) {
+				/* b is a successor of a */
+				return (1);
+			} else {
+				/* b is a predecessor of a */
+				return (-1);
+			}		
+		} else if (b->bo_id[i] != 0) {
+			/* b is larger, but a child of a */
+			return (2);
+		} else
+			break;
+	}
+
+	/* b and a are identical */
+	return (0);
 }

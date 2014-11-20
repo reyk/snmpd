@@ -1,4 +1,4 @@
-/*	$OpenBSD: mib.c,v 1.64 2013/03/11 19:49:37 sthen Exp $	*/
+/*	$OpenBSD: mib.c,v 1.73 2014/11/18 20:54:29 krw Exp $	*/
 
 /*
  * Copyright (c) 2012 Joel Knight <joel@openbsd.org>
@@ -30,7 +30,6 @@
 #include <sys/sysctl.h>
 #include <sys/sensors.h>
 #include <sys/sched.h>
-#include <sys/socket.h>
 #include <sys/mount.h>
 #include <sys/ioctl.h>
 #include <sys/disk.h>
@@ -40,7 +39,6 @@
 #include <net/pfvar.h>
 #include <net/if_pfsync.h>
 #include <netinet/in.h>
-#include <netinet/in_systm.h>
 #include <netinet/ip.h>
 #include <netinet/ip_carp.h>
 #include <netinet/ip_var.h>
@@ -235,7 +233,7 @@ mib_sysor(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 		 * But we use the symbolic OID string for now, it may
 		 * help to display names of internal OIDs.
 		 */
-		smi_oidstring(&miboid->o_id, buf, sizeof(buf));
+		smi_oid2string(&miboid->o_id, buf, sizeof(buf), 0);
 		ber = ber_add_string(ber, buf);
 		break;
 	case 4:
@@ -573,7 +571,6 @@ mib_hrstorage(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 	int			 mib[] = { CTL_HW, 0 };
 	u_int64_t		 physmem, realmem;
 	struct uvmexp		 uvm;
-	struct vmtotal		 vm;
 	size_t			 len;
 	static struct ber_oid	*sop, so[] = {
 		{ { MIB_hrStorageOther } },
@@ -595,10 +592,6 @@ mib_hrstorage(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 	mib[1] = VM_UVMEXP;
 	len = sizeof(uvm);
 	if (sysctl(mib, sizeofa(mib), &uvm, &len, NULL, 0) == -1)
-		return (-1);
-	mib[1] = VM_METER;
-	len = sizeof(vm);
-	if (sysctl(mib, sizeofa(mib), &vm, &len, NULL, 0) == -1)
 		return (-1);
 	maxsize = 10;
 
@@ -628,7 +621,7 @@ mib_hrstorage(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 		descr = "Physical memory";
 		units = uvm.pagesize;
 		size = physmem / uvm.pagesize;
-		used = size - vm.t_free;
+		used = size - uvm.free;
 		sop = &so[1];
 		break;
 	case 2:
@@ -848,7 +841,6 @@ mib_hrswrun(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 			/* notRunnable(3) */
 			ber = ber_add_integer(ber, 3);
 			break;
-		case SZOMB:
 		case SDEAD:
 		default:
 			/* invalid(4) */
@@ -1087,7 +1079,7 @@ mib_iftable(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 	long long		 i;
 	size_t			 len;
 	int			 ifq;
-	int			 mib[] = { CTL_NET, AF_INET, IPPROTO_IP, 0, 0 };
+	int			 mib[] = { CTL_NET, PF_INET, IPPROTO_IP, 0, 0 };
 
 	/* Get and verify the current row index */
 	idx = o->bo_id[OIDIDX_ifEntry];
@@ -1548,6 +1540,10 @@ static struct oid openbsd_mib[] = {
 	{ MIB(pfTblOutXPassPkts),	OID_TRD, mib_pftables },
 	{ MIB(pfTblOutXPassBytes),	OID_TRD, mib_pftables },
 	{ MIB(pfTblStatsCleared),	OID_TRD, mib_pftables },
+	{ MIB(pfTblInMatchPkts),	OID_TRD, mib_pftables },
+	{ MIB(pfTblInMatchBytes),	OID_TRD, mib_pftables },
+	{ MIB(pfTblOutMatchPkts),	OID_TRD, mib_pftables },
+	{ MIB(pfTblOutMatchBytes),	OID_TRD, mib_pftables },
 	{ MIB(pfTblAddrTblIndex),	OID_TRD, mib_pftableaddrs,
 	    NULL, mib_pftableaddrstable },
 	{ MIB(pfTblAddrNet),		OID_TRD, mib_pftableaddrs,
@@ -1571,6 +1567,14 @@ static struct oid openbsd_mib[] = {
 	{ MIB(pfTblAddrOutPassPkts),	OID_TRD, mib_pftableaddrs,
 	    NULL, mib_pftableaddrstable },
 	{ MIB(pfTblAddrOutPassBytes),	OID_TRD, mib_pftableaddrs,
+	    NULL, mib_pftableaddrstable },
+	{ MIB(pfTblAddrInMatchPkts),	OID_TRD, mib_pftableaddrs,
+	    NULL, mib_pftableaddrstable },
+	{ MIB(pfTblAddrInMatchBytes),	OID_TRD, mib_pftableaddrs,
+	    NULL, mib_pftableaddrstable },
+	{ MIB(pfTblAddrOutMatchPkts),	OID_TRD, mib_pftableaddrs,
+	    NULL, mib_pftableaddrstable },
+	{ MIB(pfTblAddrOutMatchBytes),	OID_TRD, mib_pftableaddrs,
 	    NULL, mib_pftableaddrstable },
 	{ MIB(pfLabelNumber),		OID_RD, mib_pflabelnum },
 	{ MIB(pfLabelIndex),		OID_TRD, mib_pflabels },
@@ -2166,6 +2170,22 @@ mib_pftables(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 		ber = ber_add_integer(ber, tzero);
 		ber_set_header(ber, BER_CLASS_APPLICATION, SNMP_T_TIMETICKS);
 		break;
+	case 21:
+		ber = ber_add_integer(ber, ts.pfrts_packets[IN][PFR_OP_MATCH]);
+		ber_set_header(ber, BER_CLASS_APPLICATION, SNMP_T_COUNTER64);
+		break;
+	case 22:
+		ber = ber_add_integer(ber, ts.pfrts_bytes[IN][PFR_OP_MATCH]);
+		ber_set_header(ber, BER_CLASS_APPLICATION, SNMP_T_COUNTER64);
+		break;
+	case 23:
+		ber = ber_add_integer(ber, ts.pfrts_packets[OUT][PFR_OP_MATCH]);
+		ber_set_header(ber, BER_CLASS_APPLICATION, SNMP_T_COUNTER64);
+		break;
+	case 24:
+		ber = ber_add_integer(ber, ts.pfrts_bytes[OUT][PFR_OP_MATCH]);
+		ber_set_header(ber, BER_CLASS_APPLICATION, SNMP_T_COUNTER64);
+		break;
 	default:
 		return (1);
 	}
@@ -2236,6 +2256,22 @@ mib_pftableaddrs(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 		break;
 	case 12:
 		ber = ber_add_integer(ber, as.pfras_bytes[OUT][PFR_OP_PASS]);
+		ber_set_header(ber, BER_CLASS_APPLICATION, SNMP_T_COUNTER64);
+		break;
+	case 13:
+		ber = ber_add_integer(ber, as.pfras_packets[IN][PFR_OP_MATCH]);
+		ber_set_header(ber, BER_CLASS_APPLICATION, SNMP_T_COUNTER64);
+		break;
+	case 14:
+		ber = ber_add_integer(ber, as.pfras_bytes[IN][PFR_OP_MATCH]);
+		ber_set_header(ber, BER_CLASS_APPLICATION, SNMP_T_COUNTER64);
+		break;
+	case 15:
+		ber = ber_add_integer(ber, as.pfras_packets[OUT][PFR_OP_MATCH]);
+		ber_set_header(ber, BER_CLASS_APPLICATION, SNMP_T_COUNTER64);
+		break;
+	case 16:
+		ber = ber_add_integer(ber, as.pfras_bytes[OUT][PFR_OP_MATCH]);
 		ber_set_header(ber, BER_CLASS_APPLICATION, SNMP_T_COUNTER64);
 		break;
 	default:
@@ -2422,7 +2458,7 @@ int
 mib_pfsyncstats(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 {
 	int			 i;
-	int			 mib[] = { CTL_NET, AF_INET, IPPROTO_PFSYNC,
+	int			 mib[] = { CTL_NET, PF_INET, IPPROTO_PFSYNC,
 				    PFSYNCCTL_STATS };
 	size_t			 len = sizeof(struct pfsyncstats);
 	struct pfsyncstats	 s;
@@ -2779,9 +2815,8 @@ mib_carpifget(u_int idx)
 		return (NULL);
 	}
 
-	cif = malloc(sizeof(struct carpif));
+	cif = calloc(1, sizeof(struct carpif));
 	if (cif != NULL) {
-		memset(cif, 0, sizeof(struct carpif));
 		memcpy(&cif->carpr, &carpr, sizeof(struct carpreq));
 		memcpy(&cif->kif, kif, sizeof(struct kif));
 	}
@@ -2886,6 +2921,9 @@ int mib_iproutingdiscards(struct oid *, struct ber_oid *,
 int mib_ipaddr(struct oid *, struct ber_oid *, struct ber_element **);
 struct ber_oid *
     mib_ipaddrtable(struct oid *, struct ber_oid *, struct ber_oid *);
+int mib_physaddr(struct oid *, struct ber_oid *, struct ber_element **);
+struct ber_oid *
+    mib_physaddrtable(struct oid *, struct ber_oid *, struct ber_oid *);
 
 static struct oid ip_mib[] = {
 	{ MIB(ipMIB),			OID_MIB },
@@ -2921,11 +2959,15 @@ static struct oid ip_mib[] = {
 	    mib_ipaddrtable },
 	{ MIB(ipAdEntReasmMaxSize),	OID_TRD, mib_ipaddr, NULL,
 	    mib_ipaddrtable },
+	{ MIB(ipNetToMediaIfIndex),	OID_TRD, mib_physaddr, NULL,
+	    mib_physaddrtable },
+	{ MIB(ipNetToMediaPhysAddress),	OID_TRD, mib_physaddr, NULL,
+	    mib_physaddrtable },
+	{ MIB(ipNetToMediaNetAddress),	OID_TRD, mib_physaddr, NULL,
+	    mib_physaddrtable },
+	{ MIB(ipNetToMediaType),	OID_TRD, mib_physaddr, NULL,
+	    mib_physaddrtable },
 #ifdef notyet
-	{ MIB(ipNetToMediaIfIndex) },
-	{ MIB(ipNetToMediaPhysAddress) },
-	{ MIB(ipNetToMediaNetAddress) },
-	{ MIB(ipNetToMediaType) },
 	{ MIB(ipRoutingDiscards) },
 #endif
 	{ MIBEND }
@@ -2934,7 +2976,7 @@ static struct oid ip_mib[] = {
 int
 mib_ipforwarding(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 {
-	int	mib[] = { CTL_NET, AF_INET, IPPROTO_IP, IPCTL_FORWARDING };
+	int	mib[] = { CTL_NET, PF_INET, IPPROTO_IP, IPCTL_FORWARDING };
 	int	v;
 	size_t	len = sizeof(v);
 
@@ -2949,7 +2991,7 @@ mib_ipforwarding(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 int
 mib_ipdefaultttl(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 {
-	int	mib[] = { CTL_NET, AF_INET, IPPROTO_IP, IPCTL_DEFTTL };
+	int	mib[] = { CTL_NET, PF_INET, IPPROTO_IP, IPCTL_DEFTTL };
 	int	v;
 	size_t	len = sizeof(v);
 
@@ -2964,7 +3006,7 @@ mib_ipdefaultttl(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 int
 mib_getipstat(struct ipstat *ipstat)
 {
-	int	 mib[] = { CTL_NET, AF_INET, IPPROTO_IP, IPCTL_STATS };
+	int	 mib[] = { CTL_NET, PF_INET, IPPROTO_IP, IPCTL_STATS };
 	size_t	 len = sizeof(*ipstat);
 
 	return (sysctl(mib, sizeofa(mib), ipstat, &len, NULL, 0));
@@ -3211,6 +3253,149 @@ mib_ipaddr(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 		return (-1);
 	}
 
+	return (0);
+}
+
+struct ber_oid *
+mib_physaddrtable(struct oid *oid, struct ber_oid *o, struct ber_oid *no)
+{
+	struct sockaddr_in	 addr;
+	struct oid		 a, b;
+	struct kif		*kif;
+	struct kif_arp		*ka;
+	u_int32_t		 id, idx = 0;
+
+	bcopy(&oid->o_id, no, sizeof(*no));
+	id = oid->o_oidlen - 1;
+
+	if (o->bo_n >= oid->o_oidlen) {
+		/*
+		 * Compare the requested and the matched OID to see
+		 * if we have to iterate to the next element.
+		 */
+		bzero(&a, sizeof(a));
+		bcopy(o, &a.o_id, sizeof(struct ber_oid));
+		bzero(&b, sizeof(b));
+		bcopy(&oid->o_id, &b.o_id, sizeof(struct ber_oid));
+		b.o_oidlen--;
+		b.o_flags |= OID_TABLE;
+		if (smi_oid_cmp(&a, &b) == 0) {
+			o->bo_id[id] = oid->o_oid[id];
+			bcopy(o, no, sizeof(*no));
+		}
+	}
+
+	if (o->bo_n > OIDIDX_ipNetToMedia + 1)
+		idx = o->bo_id[OIDIDX_ipNetToMedia + 1];
+
+	bzero(&addr, sizeof(addr));
+	addr.sin_family = AF_INET;
+	addr.sin_len = sizeof(addr);
+	if (o->bo_n > OIDIDX_ipNetToMedia + 2)
+		mps_decodeinaddr(no, &addr.sin_addr, OIDIDX_ipNetToMedia + 2);
+
+	if ((kif = kr_getif(idx)) == NULL) {
+		/* No configured interfaces */
+		if (idx == 0)
+			return (NULL);
+		/*
+		 * It may happen that an interface with a specific index
+		 * does not exist or has been removed.  Jump to the next
+		 * available interface.
+		 */
+		kif = kr_getif(0);
+ nextif:
+		for (; kif != NULL; kif = kr_getnextif(kif->if_index))
+			if (kif->if_index > idx &&
+			    (ka = karp_first(kif->if_index)) != NULL)
+				break;
+		if (kif == NULL) {
+			/* No more interfaces with addresses on them */
+			o->bo_id[OIDIDX_ipNetToMedia + 1] = 0;
+			mps_encodeinaddr(no, NULL, OIDIDX_ipNetToMedia + 2);
+			smi_oidlen(o);
+			return (NULL);
+		}
+	} else {
+		if (idx == 0 || addr.sin_addr.s_addr == 0)
+			ka = karp_first(kif->if_index);
+		else
+			ka = karp_getaddr((struct sockaddr *)&addr, idx, 1);
+		if (ka == NULL) {
+			/* Try next interface */
+			goto nextif;
+		}
+	}
+	idx = kif->if_index;
+
+	no->bo_id[OIDIDX_ipNetToMedia + 1] = idx;
+	/* Encode real IPv4 address */
+	memcpy(&addr, &ka->addr.sin, ka->addr.sin.sin_len);
+	mps_encodeinaddr(no, &addr.sin_addr, OIDIDX_ipNetToMedia + 2);
+
+	smi_oidlen(o);
+	return (no);
+}
+
+int
+mib_physaddr(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
+{
+	struct ber_element	*ber = *elm;
+	struct sockaddr_in	 addr;
+	struct kif_arp		*ka;
+	u_int32_t		 val, idx = 0;
+
+	idx = o->bo_id[OIDIDX_ipNetToMedia + 1];
+	if (idx == 0) {
+		/* Strip invalid interface index and fail */
+		o->bo_n = OIDIDX_ipNetToMedia + 1;
+		return (1);
+	}
+
+	/* Get the IP address */
+	bzero(&addr, sizeof(addr));
+	addr.sin_family = AF_INET;
+	addr.sin_len = sizeof(addr);
+
+	if (mps_decodeinaddr(o, &addr.sin_addr,
+	    OIDIDX_ipNetToMedia + 2) == -1) {
+		/* Strip invalid address and fail */
+		o->bo_n = OIDIDX_ipNetToMedia + 2;
+		return (1);
+	}
+	if ((ka = karp_getaddr((struct sockaddr *)&addr, idx, 0)) == NULL)
+		return (1);
+
+	/* write OID */
+	ber = ber_add_oid(ber, o);
+
+	switch (o->bo_id[OIDIDX_ipNetToMedia]) {
+	case 1: /* ipNetToMediaIfIndex */
+		ber = ber_add_integer(ber, ka->if_index);
+		break;
+	case 2: /* ipNetToMediaPhysAddress */
+		if (bcmp(LLADDR(&ka->target.sdl), ether_zeroaddr,
+		    sizeof(ether_zeroaddr)) == 0)
+			ber = ber_add_nstring(ber, ether_zeroaddr,
+			    sizeof(ether_zeroaddr));
+		else
+			ber = ber_add_nstring(ber, LLADDR(&ka->target.sdl),
+			    ka->target.sdl.sdl_alen);
+		break;
+	case 3:	/* ipNetToMediaNetAddress */
+		val = addr.sin_addr.s_addr;
+		ber = ber_add_nstring(ber, (char *)&val, sizeof(u_int32_t));
+		ber_set_header(ber, BER_CLASS_APPLICATION, SNMP_T_IPADDR);
+		break;
+	case 4: /* ipNetToMediaType */
+		if (ka->flags & F_STATIC)
+			ber = ber_add_integer(ber, 4); /* static */
+		else
+			ber = ber_add_integer(ber, 3); /* dynamic */
+		break;
+	default:
+		return (-1);
+	}
 	return (0);
 }
 

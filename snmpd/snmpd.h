@@ -1,4 +1,4 @@
-/*	$OpenBSD: snmpd.h,v 1.43 2013/03/29 12:53:41 gerhard Exp $	*/
+/*	$OpenBSD: snmpd.h,v 1.58 2014/11/19 10:19:00 blambert Exp $	*/
 
 /*
  * Copyright (c) 2007, 2008, 2012 Reyk Floeter <reyk@openbsd.org>
@@ -22,6 +22,7 @@
 
 #include <netinet/in.h>
 #include <netinet/if_ether.h>
+#include <net/if_dl.h>
 #include <net/pfvar.h>
 #include <net/route.h>
 
@@ -73,13 +74,27 @@ enum imsg_type {
 	IMSG_CTL_OK,		/* answer to snmpctl requests */
 	IMSG_CTL_FAIL,
 	IMSG_CTL_END,
-	IMSG_CTL_NOTIFY
+	IMSG_CTL_NOTIFY,
+	IMSG_CTL_VERBOSE,
+	IMSG_CTL_RELOAD,
+	IMSG_ALERT
 };
 
-enum {
-	PROC_PARENT,	/* Parent process and application interface */
-	PROC_SNMPE	/* SNMP engine */
-} snmpd_process;
+struct imsgev {
+	struct imsgbuf		 ibuf;
+	void			(*handler)(int, short, void *);
+	struct event		 ev;
+	struct privsep_proc	*proc;
+	void			*data;
+	short			 events;
+	const char		*name;
+};
+
+#define IMSG_SIZE_CHECK(imsg, p) do {				\
+	if (IMSG_DATA_SIZE(imsg) < sizeof(*p))			\
+		fatalx("bad length imsg received");		\
+} while (0)
+#define IMSG_DATA_SIZE(imsg)	((imsg)->hdr.len - IMSG_HEADER_SIZE)
 
 /* initially control.h */
 struct control_sock {
@@ -88,6 +103,69 @@ struct control_sock {
 	struct event	 cs_evt;
 	int		 cs_fd;
 	int		 cs_restricted;
+	int		 cs_agentx;
+	void		*cs_env;
+
+	TAILQ_ENTRY(control_sock) cs_entry;
+};
+TAILQ_HEAD(control_socks, control_sock);
+
+enum privsep_procid {
+	PROC_PARENT,	/* Parent process and application interface */
+	PROC_SNMPE,	/* SNMP engine */
+	PROC_TRAP,	/* SNMP trap receiver */
+	PROC_MAX
+};
+
+enum privsep_procid privsep_process;
+
+/* Attach the control socket to the following process */
+#define PROC_CONTROL	PROC_SNMPE
+
+struct privsep_pipes {
+	int			*pp_pipes[PROC_MAX];
+};
+
+struct privsep {
+	struct privsep_pipes	*ps_pipes[PROC_MAX];
+	struct privsep_pipes	*ps_pp;
+
+	struct imsgev		*ps_ievs[PROC_MAX];
+	const char		*ps_title[PROC_MAX];
+	pid_t			 ps_pid[PROC_MAX];
+	struct passwd		*ps_pw;
+
+	u_int			 ps_instances[PROC_MAX];
+	u_int			 ps_ninstances;
+	u_int			 ps_instance;
+	int			 ps_noaction;
+
+	struct control_sock	 ps_csock;
+	struct control_socks	 ps_rcsocks;
+
+	/* Event and signal handlers */
+	struct event		 ps_evsigint;
+	struct event		 ps_evsigterm;
+	struct event		 ps_evsigchld;
+	struct event		 ps_evsighup;
+	struct event		 ps_evsigpipe;
+	struct event		 ps_evsigusr1;
+
+	void			*ps_env;
+};
+
+struct privsep_proc {
+	const char		*p_title;
+	enum privsep_procid	 p_id;
+	int			(*p_cb)(int, struct privsep_proc *,
+				    struct imsg *);
+	pid_t			(*p_init)(struct privsep *,
+				    struct privsep_proc *);
+	void			(*p_shutdown)(void);
+	const char		*p_chroot;
+	struct privsep		*p_ps;
+	void 			*p_env;
+	u_int			 p_instance;
 };
 
 enum blockmodes {
@@ -95,33 +173,27 @@ enum blockmodes {
 	BM_NONBLOCK
 };
 
-struct imsgev {
-	struct imsgbuf		 ibuf;
-	void			(*handler)(int, short, void *);
-	struct event		 ev;
-	void			*data;
-	short			 events;
-};
-
-struct ctl_conn {
-	TAILQ_ENTRY(ctl_conn)	 entry;
-	u_int8_t		 flags;
-#define CTL_CONN_NOTIFY		 0x01
-#define CTL_CONN_LOCKED		 0x02	/* restricted mode */
-	struct imsgev		 iev;
-
-};
-TAILQ_HEAD(ctl_connlist, ctl_conn);
-extern  struct ctl_connlist ctl_conns;
-
 /*
  * kroute
  */
+
+struct kroute_node;
+struct kroute6_node;
+RB_HEAD(kroute_tree, kroute_node);
+RB_HEAD(kroute6_tree, kroute6_node);
+
+struct ktable {
+	struct kroute_tree	 krt;
+	struct kroute6_tree	 krt6;
+	u_int			 rtableid;
+	u_int			 rdomain;
+};
 
 union kaddr {
 	struct sockaddr		sa;
 	struct sockaddr_in	sin;
 	struct sockaddr_in6	sin6;
+	struct sockaddr_dl	sdl;
 	char			pad[32];
 };
 
@@ -155,6 +227,15 @@ struct kif_addr {
 	RB_ENTRY(kif_addr)	 node;
 };
 
+struct kif_arp {
+	u_short			 flags;
+	u_short			 if_index;
+	union kaddr		 addr;
+	union kaddr		 target;
+
+	TAILQ_ENTRY(kif_arp)	 entry;
+};
+
 struct kif {
 	char			 if_name[IF_NAMESIZE];
 	char			 if_descr[IFDESCRSIZE];
@@ -164,6 +245,26 @@ struct kif {
 	int			 if_flags;
 	u_short			 if_index;
 };
+#define	if_mtu		if_data.ifi_mtu
+#define	if_type		if_data.ifi_type
+#define	if_addrlen	if_data.ifi_addrlen
+#define	if_hdrlen	if_data.ifi_hdrlen
+#define	if_metric	if_data.ifi_metric
+#define	if_link_state	if_data.ifi_link_state
+#define	if_baudrate	if_data.ifi_baudrate
+#define	if_ipackets	if_data.ifi_ipackets
+#define	if_ierrors	if_data.ifi_ierrors
+#define	if_opackets	if_data.ifi_opackets
+#define	if_oerrors	if_data.ifi_oerrors
+#define	if_collisions	if_data.ifi_collisions
+#define	if_ibytes	if_data.ifi_ibytes
+#define	if_obytes	if_data.ifi_obytes
+#define	if_imcasts	if_data.ifi_imcasts
+#define	if_omcasts	if_data.ifi_omcasts
+#define	if_iqdrops	if_data.ifi_iqdrops
+#define	if_noproto	if_data.ifi_noproto
+#define	if_lastchange	if_data.ifi_lastchange
+#define	if_capabilities	if_data.ifi_capabilities
 
 #define F_CONNECTED		0x0001
 #define F_STATIC		0x0002
@@ -194,8 +295,13 @@ struct oid {
 	long long		 o_val;
 	void			*o_data;
 
+	struct ctl_conn		*o_session;
+
 	RB_ENTRY(oid)		 o_element;
+	RB_ENTRY(oid)		 o_keyword;
+	TAILQ_ENTRY(oid)	 o_list;
 };
+TAILQ_HEAD(oidlist, oid);
 
 #define OID_ROOT		0x00
 #define OID_RD			0x01
@@ -205,6 +311,7 @@ struct oid {
 #define OID_TABLE		0x10	/* dynamic sub-elements */
 #define OID_MIB			0x20	/* root-OID of a supported MIB */
 #define OID_KEY			0x40	/* lookup tables */
+#define	OID_REGISTERED		0x80	/* OID registered by subagent */
 
 #define OID_RS			(OID_RD|OID_IFSET)
 #define OID_WS			(OID_WR|OID_IFSET)
@@ -226,6 +333,19 @@ struct oid {
 #define MIBDECL(...)		{ { MIB_##__VA_ARGS__ } }, #__VA_ARGS__
 #define MIB(...)		{ { MIB_##__VA_ARGS__ } }, NULL
 #define MIBEND			{ { 0 } }, NULL
+
+struct ctl_conn {
+	TAILQ_ENTRY(ctl_conn)	 entry;
+	u_int8_t		 flags;
+#define CTL_CONN_NOTIFY		 0x01
+#define CTL_CONN_LOCKED		 0x02	/* restricted mode */
+	struct imsgev		 iev;
+	struct control_sock	*cs;
+	struct agentx_handle	*handle;
+	struct oidlist		 oids;
+};
+TAILQ_HEAD(ctl_connlist, ctl_conn);
+extern  struct ctl_connlist ctl_conns;
 
 /*
  * pf
@@ -262,11 +382,26 @@ struct pfr_buffer {
 #define MSG_REPORT(m)		(((m)->sm_flags & SNMP_MSGFLAG_REPORT) != 0)
 
 struct snmp_message {
+	struct sockaddr_storage	 sm_ss;
+	socklen_t		 sm_slen;
+	char			 sm_host[MAXHOSTNAMELEN];
+
+	struct ber		 sm_ber;
+	struct ber_element	*sm_req;
 	struct ber_element	*sm_resp;
+
+	int			 sm_i;
+	struct ber_element	*sm_a;
+	struct ber_element	*sm_b;
+	struct ber_element	*sm_c;
+	struct ber_element	*sm_next;
+	struct ber_element	*sm_last;
+
 	u_int8_t		 sm_data[READ_BUF_SIZE];
 	size_t			 sm_datalen;
 
 	u_int			 sm_version;
+	u_int			 sm_state;
 
 	/* V1, V2c */
 	char			 sm_community[SNMPD_MAXCOMMUNITYLEN];
@@ -292,6 +427,7 @@ struct snmp_message {
 
 	long long		 sm_request;
 
+	const char		*sm_errstr;
 	long long		 sm_error;
 #define sm_nonrepeaters		 sm_error
 	long long		 sm_errorindex;
@@ -402,9 +538,6 @@ struct snmpd {
 	struct timeval		 sc_starttime;
 	u_int32_t		 sc_engine_boots;
 
-	struct control_sock	 sc_csock;
-	struct control_sock	 sc_rcsock;
-
 	char			 sc_rdcommunity[SNMPD_MAXCOMMUNITYLEN];
 	char			 sc_rwcommunity[SNMPD_MAXCOMMUNITYLEN];
 	char			 sc_trcommunity[SNMPD_MAXCOMMUNITYLEN];
@@ -422,17 +555,30 @@ struct snmpd {
 
 	int			 sc_min_seclevel;
 	int			 sc_readonly;
+	int			 sc_traphandler;
+
+	struct privsep		 sc_ps;
 };
 
+struct trapcmd {
+	struct ber_oid		*cmd_oid;
+		/* sideways return for intermediate lookups */
+	struct trapcmd		*cmd_maybe;
+
+	int			 cmd_argc;
+	char			**cmd_argv;
+
+	RB_ENTRY(trapcmd)	 cmd_entry;
+};
+RB_HEAD(trapcmd_tree, trapcmd);
+extern	struct trapcmd_tree trapcmd_tree;
+
 /* control.c */
-int		 control_init(struct control_sock *);
+int		 control_init(struct privsep *, struct control_sock *);
 int		 control_listen(struct control_sock *);
-void		 control_accept(int, short, void *);
-void		 control_dispatch_imsg(int, short, void *);
-void		 control_imsg_forward(struct imsg *);
 void		 control_cleanup(struct control_sock *);
 
-void		 session_socket_blockmode(int, enum blockmodes);
+void		 socket_set_blockmode(int, enum blockmodes);
 
 /* parse.y */
 struct snmpd	*parse_config(const char *, u_int);
@@ -440,19 +586,19 @@ int		 cmdline_symset(char *);
 
 /* log.c */
 void		 log_init(int);
+void		 log_verbose(int);
 void		 log_warn(const char *, ...);
 void		 log_warnx(const char *, ...);
 void		 log_info(const char *, ...);
 void		 log_debug(const char *, ...);
+void		 print_debug(const char *, ...);
+void		 print_verbose(const char *, ...);
 __dead void	 fatal(const char *);
 __dead void	 fatalx(const char *);
+void		 logit(int, const char *, ...);
 void		 vlog(int, const char *, va_list);
 const char	*log_in6addr(const struct in6_addr *);
 const char	*print_host(struct sockaddr_storage *, char *, size_t);
-
-void		 imsg_event_add(struct imsgev *);
-int		 imsg_compose_event(struct imsgev *, enum imsg_type, u_int32_t,
-		    pid_t, int, void *, u_int16_t);
 
 /* kroute.c */
 void		 kr_init(void);
@@ -471,21 +617,30 @@ struct kif_addr *kr_getnextaddr(struct sockaddr *);
 struct kroute	*kroute_first(void);
 struct kroute	*kroute_getaddr(in_addr_t, u_int8_t, u_int8_t, int);
 
+struct kif_arp	*karp_first(u_short);
+struct kif_arp	*karp_getaddr(struct sockaddr *, u_short, int);
+
 /* snmpe.c */
-pid_t		 snmpe(struct snmpd *, int [2]);
-void		 snmpe_debug_elements(struct ber_element *);
+pid_t		 snmpe(struct privsep *, struct privsep_proc *);
+void		 snmpe_shutdown(void);
+void		 snmpe_dispatchmsg(struct snmp_message *);
 
 /* trap.c */
 void		 trap_init(void);
 int		 trap_imsg(struct imsgev *, pid_t);
+int		 trap_agentx(struct agentx_handle *, struct agentx_pdu *,
+		    int *, char **, int *);
 int		 trap_send(struct ber_oid *, struct ber_element *);
 
 /* mps.c */
-struct ber_element *
-		 mps_getreq(struct ber_element *, struct ber_oid *, u_int);
-struct ber_element *
-		 mps_getnextreq(struct ber_element *, struct ber_oid *);
-int		 mps_setreq(struct ber_element *, struct ber_oid *);
+int		 mps_getreq(struct snmp_message *, struct ber_element *,
+		    struct ber_oid *, u_int);
+int		 mps_getnextreq(struct snmp_message *, struct ber_element *,
+		    struct ber_oid *);
+int		 mps_getbulkreq(struct snmp_message *, struct ber_element **,
+		    struct ber_oid *, int);
+int		 mps_setreq(struct snmp_message *, struct ber_element *,
+		    struct ber_oid *);
 int		 mps_set(struct ber_oid *, void *, long long);
 int		 mps_getstr(struct oid *, struct ber_oid *,
 		    struct ber_element **);
@@ -527,14 +682,20 @@ int		 smi_init(void);
 u_long		 smi_getticks(void);
 void		 smi_mibtree(struct oid *);
 struct oid	*smi_find(struct oid *);
+struct oid	*smi_findkey(char *);
 struct oid	*smi_next(struct oid *);
 struct oid	*smi_foreach(struct oid *, u_int);
 void		 smi_oidlen(struct ber_oid *);
 void		 smi_scalar_oidlen(struct ber_oid *);
-char		*smi_oidstring(struct ber_oid *, char *, size_t);
+char		*smi_oid2string(struct ber_oid *, char *, size_t, size_t);
+int		 smi_string2oid(const char *, struct ber_oid *);
 void		 smi_delete(struct oid *);
-void		 smi_insert(struct oid *);
+int		 smi_insert(struct oid *);
 int		 smi_oid_cmp(struct oid *, struct oid *);
+int		 smi_key_cmp(struct oid *, struct oid *);
+unsigned long	 smi_application(struct ber_element *);
+void		 smi_debug_elements(struct ber_element *);
+char		*smi_print_element(struct ber_element *);
 
 /* timer.c */
 void		 timer_init(void);
@@ -555,4 +716,43 @@ struct ber_element *usm_encode(struct snmp_message *, struct ber_element *);
 struct ber_element *usm_encrypt(struct snmp_message *, struct ber_element *);
 void		 usm_finalize_digest(struct snmp_message *, char *, ssize_t);
 void		 usm_make_report(struct snmp_message *);
+
+/* proc.c */
+void	 proc_init(struct privsep *, struct privsep_proc *, u_int);
+void	 proc_kill(struct privsep *);
+void	 proc_listen(struct privsep *, struct privsep_proc *, size_t);
+void	 proc_dispatch(int, short event, void *);
+pid_t	 proc_run(struct privsep *, struct privsep_proc *,
+	    struct privsep_proc *, u_int,
+	    void (*)(struct privsep *, struct privsep_proc *, void *), void *);
+void	 imsg_event_add(struct imsgev *);
+int	 imsg_compose_event(struct imsgev *, u_int16_t, u_int32_t,
+	    pid_t, int, void *, u_int16_t);
+int	 imsg_composev_event(struct imsgev *, u_int16_t, u_int32_t,
+	    pid_t, int, const struct iovec *, int);
+void	 proc_range(struct privsep *, enum privsep_procid, int *, int *);
+int	 proc_compose_imsg(struct privsep *, enum privsep_procid, int,
+	    u_int16_t, int, void *, u_int16_t);
+int	 proc_composev_imsg(struct privsep *, enum privsep_procid, int,
+	    u_int16_t, int, const struct iovec *, int);
+int	 proc_forward_imsg(struct privsep *, struct imsg *,
+	    enum privsep_procid, int);
+struct imsgbuf *
+	 proc_ibuf(struct privsep *, enum privsep_procid, int);
+struct imsgev *
+	 proc_iev(struct privsep *, enum privsep_procid, int);
+
+/* traphandler.c */
+pid_t	 traphandler(struct privsep *, struct privsep_proc *);
+void	 traphandler_shutdown(void);
+int	 snmpd_dispatch_traphandler(int, struct privsep_proc *, struct imsg *);
+void	 trapcmd_free(struct trapcmd *);
+int	 trapcmd_add(struct trapcmd *);
+struct trapcmd *
+	 trapcmd_lookup(struct ber_oid *);
+
+/* util.c */
+int	 varbind_convert(struct agentx_pdu *, struct agentx_varbind_hdr *,
+	    struct ber_element **, struct ber_element **);
+
 #endif /* _SNMPD_H */

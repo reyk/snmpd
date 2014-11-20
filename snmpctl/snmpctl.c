@@ -1,4 +1,4 @@
-/*	$OpenBSD: snmpctl.c,v 1.14 2012/09/17 16:43:59 reyk Exp $	*/
+/*	$OpenBSD: snmpctl.c,v 1.20 2014/04/14 12:56:21 blambert Exp $	*/
 
 /*
  * Copyright (c) 2007, 2008 Reyk Floeter <reyk@openbsd.org>
@@ -24,6 +24,7 @@
 #include <sys/queue.h>
 #include <sys/un.h>
 #include <sys/tree.h>
+#include <sys/uio.h>
 
 #include <netinet/in.h>
 #include <arpa/inet.h>
@@ -64,7 +65,9 @@ struct imsgname imsgunknown = {
 	-1,				"<unknown>",		NULL
 };
 
-struct imsgbuf	*ibuf;
+void snmpctl_trap(int, struct parse_result *);
+
+struct imsgbuf	 ibuf;
 struct snmpd	*env;
 struct oid	 mib_tree[] = MIB_TREE;
 
@@ -89,7 +92,7 @@ main(int argc, char *argv[])
 	int			 ch;
 	const char		*sock = SNMPD_SOCKET;
 
-	if ((env = calloc(1, sizeof(struct snmpd *))) == NULL)
+	if ((env = calloc(1, sizeof(struct snmpd))) == NULL)
 		err(1, "calloc");
 	gettimeofday(&env->sc_starttime, NULL);
 
@@ -122,6 +125,11 @@ main(int argc, char *argv[])
 	case SHOW_MIB:
 		show_mib();
 		break;
+	case WALK:
+	case GET:
+	case BULKWALK:
+		snmpclient(res);
+		break;
 	default:
 		goto connect;
 	}
@@ -148,42 +156,38 @@ main(int argc, char *argv[])
 		err(1, "connect: %s", sock);
 	}
 
-	if (res->ibuf != NULL) {
-		ibuf = res->ibuf;
-		ibuf->fd = ibuf->w.fd = ctl_sock;
-	} else {
-		if ((ibuf = malloc(sizeof(struct imsgbuf))) == NULL)
-			err(1, "malloc");
-		imsg_init(ibuf, ctl_sock);
-	}
+	imsg_init(&ibuf, ctl_sock);
 	done = 0;
 
 	/* process user request */
 	switch (res->action) {
 	case MONITOR:
-		imsg_compose(ibuf, IMSG_CTL_NOTIFY, 0, 0, -1, NULL, 0);
+		imsg_compose(&ibuf, IMSG_CTL_NOTIFY, 0, 0, -1, NULL, 0);
 		break;
 	case NONE:
 	case SHOW_MIB:
+	case WALK:
+	case GET:
+	case BULKWALK:
 		break;
 	case TRAP:
-		imsg_compose(ibuf, IMSG_SNMP_END, 0, 0, -1, NULL, 0);
-		done = 1;
+		/* explicitly downgrade the socket */
+		imsg_compose(&ibuf, IMSG_SNMP_AGENTX, 0, 0, -1, NULL, 0);
 		break;
 	}
 
-	while (ibuf->w.queued)
-		if (msgbuf_write(&ibuf->w) < 0)
+	while (ibuf.w.queued)
+		if (msgbuf_write(&ibuf.w) <= 0 && errno != EAGAIN)
 			err(1, "write error");
 
 	while (!done) {
-		if ((n = imsg_read(ibuf)) == -1)
+		if ((n = imsg_read(&ibuf)) == -1)
 			errx(1, "imsg_read error");
 		if (n == 0)
 			errx(1, "pipe closed");
 
 		while (!done) {
-			if ((n = imsg_get(ibuf, &imsg)) == -1)
+			if ((n = imsg_get(&ibuf, &imsg)) == -1)
 				errx(1, "imsg_get error");
 			if (n == 0)
 				break;
@@ -192,16 +196,23 @@ main(int argc, char *argv[])
 				done = monitor(&imsg);
 				break;
 			case TRAP:
+				if (imsg.hdr.type == IMSG_CTL_OK) {
+					snmpctl_trap(ctl_sock, res);
+					done = 1;
+				} else
+					errx(1, "snmpd refused connection");
 				break;
 			case NONE:
 			case SHOW_MIB:
+			case WALK:
+			case GET:
+			case BULKWALK:
 				break;
 			}
 			imsg_free(&imsg);
 		}
 	}
 	close(ctl_sock);
-	free(ibuf);
 
 	return (0);
 }
@@ -222,7 +233,7 @@ show_mib(void)
 
 	for (oid = NULL; (oid = smi_foreach(oid, 0)) != NULL;) {
 		char	 buf[BUFSIZ];
-		smi_oidstring(&oid->o_id, buf, sizeof(buf));
+		smi_oid2string(&oid->o_id, buf, sizeof(buf), 0);
 		printf("%s\n", buf);
 	}
 }
@@ -250,11 +261,126 @@ monitor(struct imsg *imsg)
 	imn = monitor_lookup(imsg->hdr.type);
 	printf("%s: imsg type %u len %u peerid %u pid %d\n", imn->name,
 	    imsg->hdr.type, imsg->hdr.len, imsg->hdr.peerid, imsg->hdr.pid);
-	printf("\ttimestamp: %u, %s", now, ctime(&now));
+	printf("\ttimestamp: %lld, %s", (long long)now, ctime(&now));
 	if (imn->type == -1)
 		done = 1;
 	if (imn->func != NULL)
 		(*imn->func)(imsg);
 
 	return (done);
+}
+
+void
+snmpctl_trap(int ctl_sock, struct parse_result *res)
+{
+	struct snmp_oid		 oid, oid1;
+	struct parse_varbind	*vb;
+	struct agentx_handle	*h;
+	struct agentx_pdu	*pdu;
+	void			*ptr;
+
+	if ((h = snmp_agentx_fdopen(ctl_sock, "snmpctl", NULL)) == NULL)
+		err(1, "agentx socket");
+
+	if (ber_string2oid(res->trapoid, (struct ber_oid *)&oid) == -1)
+		errx(1, "bad trap oid %s", res->trapoid);
+
+	if ((pdu = snmp_agentx_notify_pdu(&oid)) == NULL)
+		errx(1, "notify start");
+
+	while ((vb = TAILQ_FIRST(&res->varbinds)) != NULL) {
+
+		if (ber_string2oid(vb->sm.snmp_oid,
+		    (struct ber_oid *)&oid) == -1)
+			errx(1, "bad oid %s", vb->sm.snmp_oid);
+
+		switch (vb->sm.snmp_type) {
+
+		/* SNMP_GAUGE32 is handled here */
+		case SNMP_INTEGER32:
+		case SNMP_NSAPADDR:
+			if (snmp_agentx_varbind(pdu, &oid, AGENTX_INTEGER,
+			    &vb->u.d, vb->sm.snmp_len) == -1)
+				errx(1, "varbind");
+			break;
+
+		case SNMP_OPAQUE:
+			if (snmp_agentx_varbind(pdu, &oid, AGENTX_OPAQUE,
+			    &vb->u.d, vb->sm.snmp_len) == -1)
+				errx(1, "varbind");
+			break;
+
+		case SNMP_COUNTER32:
+			if (snmp_agentx_varbind(pdu, &oid, AGENTX_COUNTER32,
+			    &vb->u.d, vb->sm.snmp_len) == -1)
+				errx(1, "varbind");
+			break;
+
+		case SNMP_TIMETICKS:
+			if (snmp_agentx_varbind(pdu, &oid, AGENTX_TIME_TICKS,
+			    &vb->u.d, vb->sm.snmp_len) == -1)
+				errx(1, "varbind");
+			break;
+
+		case SNMP_UINTEGER32:
+		case SNMP_UNSIGNED32:
+			if (snmp_agentx_varbind(pdu, &oid, AGENTX_INTEGER,
+			    &vb->u.u, vb->sm.snmp_len) == -1)
+				errx(1, "varbind");
+			break;
+
+		case SNMP_COUNTER64:
+			if (snmp_agentx_varbind(pdu, &oid, AGENTX_COUNTER64,
+			    &vb->u.l, vb->sm.snmp_len) == -1)
+				errx(1, "varbind");
+			break;
+
+		case SNMP_IPADDR:
+			if (vb->sm.snmp_len == sizeof(struct in6_addr))
+				ptr = &vb->u.in6;
+			else
+				ptr = &vb->u.in4;
+
+			if (snmp_agentx_varbind(pdu, &oid, AGENTX_OPAQUE,
+			    ptr, vb->sm.snmp_len) == -1)
+				errx(1, "varbind");
+			break;
+
+		case SNMP_OBJECT:
+			if (ber_string2oid(vb->u.str,
+			    (struct ber_oid *)&oid1) == -1)
+				errx(1, "invalid OID %s", vb->u.str);
+
+			if (snmp_agentx_varbind(pdu, &oid,
+			    AGENTX_OBJECT_IDENTIFIER, &oid1,
+			    sizeof(oid1)) == -1)
+				errx(1, "varbind");
+			break;
+
+		case SNMP_BITSTRING:
+		case SNMP_OCTETSTRING:
+			if (snmp_agentx_varbind(pdu, &oid, AGENTX_OCTET_STRING,
+			    vb->u.str, vb->sm.snmp_len) == -1)
+				errx(1, "varbind");
+			break;
+
+		case SNMP_NULL:
+			/* no data beyond the OID itself */
+			if (snmp_agentx_varbind(pdu, &oid, AGENTX_NULL,
+			    NULL, 0) == -1)
+				errx(1, "varbind");
+			break;
+		}
+
+		TAILQ_REMOVE(&res->varbinds, vb, vb_entry);
+		free(vb);
+	}
+
+	if ((pdu = snmp_agentx_request(h, pdu)) == NULL)
+		err(1, "request: %i", h->error);
+	if (snmp_agentx_response(h, pdu) == -1)
+		errx(1, "response: %i", h->error);
+	snmp_agentx_pdu_free(pdu);
+	if (snmp_agentx_close(h, AGENTX_CLOSE_SHUTDOWN) == -1)
+		err(1, "close");
 }

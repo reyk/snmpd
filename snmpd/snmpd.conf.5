@@ -1,4 +1,4 @@
-.\" $OpenBSD: snmpd.conf.5,v 1.23 2013/03/30 08:44:48 jmc Exp $
+.\" $OpenBSD: snmpd.conf.5,v 1.32 2014/04/25 14:54:45 jmc Exp $
 .\"
 .\" Copyright (c) 2007, 2008, 2012 Reyk Floeter <reyk@openbsd.org>
 .\"
@@ -14,7 +14,7 @@
 .\" ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF
 .\" OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
 .\"
-.Dd $Mdocdate: March 30 2013 $
+.Dd $Mdocdate: April 25 2014 $
 .Dt SNMPD.CONF 5
 .Os
 .Sh NAME
@@ -77,30 +77,8 @@ listen on $ext_addr
 .Ed
 .Sh GLOBAL CONFIGURATION
 The following options can be set globally:
-.Pp
-.Bl -tag -width Ds -compact
-.It Ic listen on Ar address
-Specify the local address
-.Xr snmpd 8
-should listen on for incoming SNMP messages.
-.Pp
-.It Ic read-only community Ar string
-Specify the name of the read-only community.
-The default value is
-.Ar public .
-.Pp
-.It Xo
-.Ic read-write
-.Pq Ic community Ar string Ic \*(Ba disabled
-.Xc
-Specify the name of the read-write community, or disallow writes completely.
-The default value is
-.Ar private .
-.Pp
-.It Xo
-.Ic filter-routes
-.Pq Ic yes \*(Ba\ no
-.Xc
+.Bl -tag -width Ds
+.It Ic filter-routes Pq Ic yes | no
 If set to
 .Ic yes ,
 ask the kernel to filter route update messages on the routing socket.
@@ -108,11 +86,19 @@ Routing table information will not be available, but CPU use will be
 reduced during bulk updates.
 The default is
 .Ic no .
-.Pp
-.It Xo
-.Ic seclevel
-.Pq Ic none \*(Ba\ auth \*(Ba\ enc
-.Xc
+.It Ic listen on Ar address
+Specify the local address
+.Xr snmpd 8
+should listen on for incoming SNMP messages.
+.It Ic read-only community Ar string
+Specify the name of the read-only community.
+The default value is
+.Ar public .
+.It Ic read-write Pq Ic community Ar string Ic | disabled
+Specify the name of the read-write community, or disallow writes completely.
+The default value is
+.Ar private .
+.It Ic seclevel Pq Ic none | auth | enc
 Specify the lowest security level that
 .Xr snmpd 8
 accepts:
@@ -135,14 +121,29 @@ If the chosen value is different from
 .Xr snmpd 8
 will accept only SNMPv3 requests since older versions neither support
 authentication nor encryption.
-.Pp
+.It Ic socket Qo Ar path Qc Op Ic restricted | agentx
+Create a control socket at
+.Ar path .
+If
+.Ic restricted
+is specified, a restricted control socket will be created.
+If
+.Ic agentx
+is specified, a socket which speaks the AgentX protocol will be created.
+Multiple
+.Ic restricted
+and
+.Ic agentx
+sockets may be created.
+By default
+.Pa /var/run/snmpd.sock
+is created and no other sockets are created.
 .It Ic system contact Ar string
 Specify the name or description of the system contact, typically a
 name or an e-mail address.
 The default value is
 .Ar root@hostname
 using the hostname of the local machine.
-.Pp
 .It Ic system description Ar string
 Specify a description of the local system.
 The default value is the operating system identification as printed by the
@@ -153,17 +154,14 @@ flag:
 .Bd -literal -offset indent
 OpenBSD myhost.example.com 4.2 GENERIC#595 i386
 .Ed
-.Pp
 .It Ic system location Ar string
 Specify the string describing the location of the local system,
 typically a physical location.
 The default value is an empty string.
-.Pp
 .It Ic system name Ar string
 Specify the name of the local system, typically a fully-qualified
 domain name.
 The default value is the hostname of the local system.
-.Pp
 .It Ic system oid Ar oid-string
 Specify the authoritative identification of the local system.
 The default value is
@@ -172,7 +170,6 @@ The default value is
 identifying a common
 .Ox
 system.
-.Pp
 .It Ic system services Ar number
 Specify a magic value which indicates the set of services that the local
 system may provide.
@@ -180,12 +177,27 @@ Refer to the
 .Ar sysServices
 description in the SNMP MIB for details.
 .\"XXX describe the complicated services alg here
-.Pp
 .It Ic trap community Ar string
 Specify the name of the trap community.
 The default value is
 .Ar public .
-.Pp
+.It Ic trap handle Ar oid Qq Ar command
+Execute
+.Ic command
+upon receipt of an SNMP trap that begins with a prefix of
+.Ic oid .
+Alternately, the string
+.Qq Ic default
+may be used, in which case the prefix used is
+.Ic 1.3 .
+The invoked
+.Ar command
+will receive the following information about the trap on standard input,
+one per line, in this order:
+the resolved hostname of the host sending the trap,
+the IP address of the host sending the trap,
+and any variable bindings contained in the trap
+(the OID followed by the value, separated by a single space).
 .It Xo
 .Ic trap receiver Ar string
 .Op Ic oid Ar oid-string
@@ -201,7 +213,7 @@ The default community is specified by the global
 .Ic trap community
 option.
 .El
-.Sh User Configuration
+.Sh USER CONFIGURATION
 Users for the SNMP User-based Security Model (USM, RFC 3414) must be
 defined in the configuration file:
 .Bl -tag -width xxxx
@@ -247,12 +259,11 @@ be enabled too.
 .El
 .Sh OID CONFIGURATION
 It is possible to specify user-defined OIDs in the configuration file:
-.Pp
-.Bl -tag -width Ds -compact
+.Bl -tag -width Ds
 .It Xo
 .Ic oid Ar oid-string
 .Ic name Ar name
-.Op Ic read-only \*(Ba\ read-write
+.Op Ic read-only | read-write
 .Op Ar type
 .Ar value
 .Xc
@@ -266,7 +277,7 @@ or
 .Ic integer .
 .El
 .Sh FILES
-.Bl -tag -width "/etc/snmpd.conf" -compact
+.Bl -tag -width "/etc/snmpd.conf"
 .It Pa /etc/snmpd.conf
 Default location of the configuration file.
 .El
@@ -311,4 +322,4 @@ file format first appeared in
 The
 .Xr snmpd 8
 program was written by
-.An Reyk Floeter Aq reyk@openbsd.org .
+.An Reyk Floeter Aq Mt reyk@openbsd.org .

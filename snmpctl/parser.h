@@ -1,4 +1,4 @@
-/*	$OpenBSD: parser.h,v 1.5 2012/09/17 16:43:59 reyk Exp $	*/
+/*	$OpenBSD: parser.h,v 1.9 2014/04/14 12:56:21 blambert Exp $	*/
 
 /*
  * Copyright (c) 2007, 2008 Reyk Floeter <reyk@openbsd.org>
@@ -20,12 +20,43 @@ enum actions {
 	NONE,
 	MONITOR,
 	SHOW_MIB,
-	TRAP
+	TRAP,
+	GET,
+	WALK,
+	BULKWALK
 };
 
+struct parse_val {
+	char			*val;
+	TAILQ_ENTRY(parse_val)	 val_entry;
+};
+TAILQ_HEAD(parse_vals, parse_val);
+
+struct parse_varbind {
+	struct snmp_imsg		 sm;
+	union {
+		uint32_t	 	 u;
+		int32_t	 	 	 d;
+		uint64_t	 	 l;
+		struct in_addr	 	 in4;
+		struct in6_addr	 	 in6;
+		char			*str;
+	} u;
+
+	TAILQ_ENTRY(parse_varbind)	 vb_entry;
+};
+TAILQ_HEAD(parse_varbinds, parse_varbind);
+
 struct parse_result {
-	enum actions	 action;
-	struct imsgbuf	*ibuf;
+	enum actions		 action;
+	struct imsgbuf		*ibuf;
+	char			*host;
+	char			*trapoid;
+	struct parse_vals	 oids;
+	struct parse_varbinds	 varbinds;
+	char			*community;
+	int			 version;
 };
 
 struct parse_result	*parse(int, char *[]);
+void			 snmpclient(struct parse_result *);

@@ -1,9 +1,9 @@
-#	$Id: Makefile,v 1.3 2010/05/26 16:44:32 nicm Exp $
+#	$Id: Makefile,v 1.7 2014/04/14 12:56:21 blambert Exp $
 
 .PATH:		${.CURDIR}/../snmpd
 
 PROG=		snmpctl
-SRCS=		log.c smi.c snmpctl.c parser.c
+SRCS=		log.c ber.c smi.c snmpclient.c snmpctl.c parser.c agentx.c
 
 MAN=		snmpctl.8
 
@@ -13,6 +13,6 @@ CFLAGS+=	-Wall -I${.CURDIR} -I${.CURDIR}/../snmpd
 CFLAGS+=	-Wstrict-prototypes -Wmissing-prototypes
 CFLAGS+=	-Wmissing-declarations
 CFLAGS+=	-Wshadow -Wpointer-arith -Wcast-qual
-CFLAGS+=	-Wsign-compare -Wbounded
+CFLAGS+=	-Wsign-compare
 
 .include <bsd.prog.mk>
