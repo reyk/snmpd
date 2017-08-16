@@ -1,4 +1,4 @@
-/*	$OpenBSD: snmpd.c,v 1.24 2014/08/18 13:13:42 reyk Exp $	*/
+/*	$OpenBSD: snmpd.c,v 1.37 2017/08/12 04:29:57 rob Exp $	*/
 
 /*
  * Copyright (c) 2007, 2008, 2012 Reyk Floeter <reyk@openbsd.org>
@@ -19,7 +19,6 @@
 #include <sys/types.h>
 #include <sys/queue.h>
 #include <sys/socket.h>
-#include <sys/param.h>
 #include <sys/wait.h>
 #include <sys/tree.h>
 
@@ -33,6 +32,7 @@
 #include <errno.h>
 #include <event.h>
 #include <signal.h>
+#include <syslog.h>
 #include <unistd.h>
 #include <fcntl.h>
 #include <pwd.h>
@@ -72,6 +72,8 @@ snmpd_sig_handler(int sig, short event, void *arg)
 		/* FALLTHROUGH */
 	case SIGCHLD:
 		do {
+			int len;
+
 			pid = waitpid(WAIT_ANY, &status, WNOHANG);
 			if (pid <= 0)
 				continue;
@@ -79,16 +81,20 @@ snmpd_sig_handler(int sig, short event, void *arg)
 			fail = 0;
 			if (WIFSIGNALED(status)) {
 				fail = 1;
-				asprintf(&cause, "terminated; signal %d",
+				len = asprintf(&cause, "terminated; signal %d",
 				    WTERMSIG(status));
 			} else if (WIFEXITED(status)) {
 				if (WEXITSTATUS(status) != 0) {
 					fail = 1;
-					asprintf(&cause, "exited abnormally");
+					len = asprintf(&cause,
+					    "exited abnormally");
 				} else
-					asprintf(&cause, "exited okay");
+					len = asprintf(&cause, "exited okay");
 			} else
 				fatalx("unexpected cause of SIGCHLD");
+
+			if (len == -1)
+				fatal("asprintf");
 			
 			for (id = 0; id < PROC_MAX; id++) {
 				if (pid == ps->ps_pid[id] &&
@@ -138,14 +144,21 @@ main(int argc, char *argv[])
 	int		 noaction = 0;
 	const char	*conffile = CONF_FILE;
 	struct privsep	*ps;
+	int		 proc_id = PROC_PARENT, proc_instance = 0;
+	int		 argc0 = argc;
+	char		**argv0 = argv;
+	const char	*errp, *title = NULL;
 
 	smi_init();
-	log_init(1);	/* log to stderr until daemonized */
 
-	while ((c = getopt(argc, argv, "dD:nNf:v")) != -1) {
+	/* log to stderr until daemonized */
+	log_init(1, LOG_DAEMON);
+
+	while ((c = getopt(argc, argv, "dD:nNf:I:P:v")) != -1) {
 		switch (c) {
 		case 'd':
 			debug++;
+			flags |= SNMPD_F_DEBUG;
 			break;
 		case 'D':
 			if (cmdline_symset(optarg) < 0)
@@ -153,13 +166,25 @@ main(int argc, char *argv[])
 				    optarg);
 			break;
 		case 'n':
-			noaction++;
+			noaction = 1;
 			break;
 		case 'N':
 			flags |= SNMPD_F_NONAMES;
 			break;
 		case 'f':
 			conffile = optarg;
+			break;
+		case 'I':
+			proc_instance = strtonum(optarg, 0,
+			    PROC_MAX_INSTANCES, &errp);
+			if (errp)
+				fatalx("invalid process instance");
+			break;
+		case 'P':
+			title = optarg;
+			proc_id = proc_getid(procs, nitems(procs), title);
+			if (proc_id == PROC_MAX)
+				fatalx("invalid process name");
 			break;
 		case 'v':
 			verbose++;
@@ -181,6 +206,9 @@ main(int argc, char *argv[])
 	ps = &env->sc_ps;
 	ps->ps_env = env;
 	snmpd_env = env;
+	ps->ps_instance = proc_instance;
+	if (title)
+		ps->ps_title[proc_id] = title;
 
 	if (noaction) {
 		fprintf(stderr, "configuration ok\n");
@@ -193,11 +221,8 @@ main(int argc, char *argv[])
 	if ((ps->ps_pw = getpwnam(SNMPD_USER)) == NULL)
 		errx(1, "unknown user %s", SNMPD_USER);
 
-	log_init(debug);
-	log_verbose(verbose);
-
-	if (!debug && daemon(0, 0) == -1)
-		err(1, "failed to daemonize");
+	log_init(debug, LOG_DAEMON);
+	log_setverbose(verbose);
 
 	gettimeofday(&env->sc_starttime, NULL);
 	env->sc_engine_boots = 0;
@@ -205,10 +230,11 @@ main(int argc, char *argv[])
 	pf_init();
 	snmpd_generate_engineid(env);
 
-	ps->ps_ninstances = 1;
-	proc_init(ps, procs, nitems(procs));
+	proc_init(ps, procs, nitems(procs), argc0, argv0, proc_id);
+	if (!debug && daemon(0, 0) == -1)
+		err(1, "failed to daemonize");
 
-	setproctitle("parent");
+	log_procinit("parent");
 	log_info("startup");
 
 	event_init();
@@ -227,7 +253,10 @@ main(int argc, char *argv[])
 	signal_add(&ps->ps_evsigpipe, NULL);
 	signal_add(&ps->ps_evsigusr1, NULL);
 
-	proc_listen(ps, procs, nitems(procs));
+	proc_connect(ps);
+
+	if (pledge("stdio rpath cpath dns id proc sendfd exec", NULL) == -1)
+		fatal("pledge");
 
 	event_dispatch();
 
@@ -240,6 +269,9 @@ void
 snmpd_shutdown(struct snmpd *env)
 {
 	proc_kill(&env->sc_ps);
+
+	if (env->sc_ps.ps_csock.cs_name != NULL)
+		(void)unlink(env->sc_ps.ps_csock.cs_name);
 
 	free(env);
 
@@ -346,33 +378,19 @@ snmpd_engine_time(void)
 }
 
 char *
-tohexstr(u_int8_t *str, int len)
+tohexstr(u_int8_t *bstr, int len)
 {
 #define MAXHEXSTRLEN		256
 	static char hstr[2 * MAXHEXSTRLEN + 1];
-	char *r = hstr;
+	static const char hex[] = "0123456789abcdef";
+	int i;
 
 	if (len > MAXHEXSTRLEN)
 		len = MAXHEXSTRLEN;	/* truncate */
-	while (len-- > 0)
-		r += snprintf(r, len * 2, "%0*x", 2, *str++);
-	*r = '\0';
+	for (i = 0; i < len; i++) {
+		hstr[i + i] = hex[bstr[i] >> 4];
+		hstr[i + i + 1] = hex[bstr[i] & 0x0f];
+	}
+	hstr[i + i] = '\0';
 	return hstr;
-}
-
-void
-socket_set_blockmode(int fd, enum blockmodes bm)
-{
-	int	flags;
-
-	if ((flags = fcntl(fd, F_GETFL, 0)) == -1)
-		fatal("fcntl F_GETFL");
-
-	if (bm == BM_NONBLOCK)
-		flags |= O_NONBLOCK;
-	else
-		flags &= ~O_NONBLOCK;
-
-	if ((flags = fcntl(fd, F_SETFL, flags)) == -1)
-		fatal("fcntl F_SETFL");
 }

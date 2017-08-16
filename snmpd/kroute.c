@@ -1,4 +1,4 @@
-/*	$OpenBSD: kroute.c,v 1.29 2014/10/16 04:05:02 deraadt Exp $	*/
+/*	$OpenBSD: kroute.c,v 1.35 2017/07/24 11:00:01 friehm Exp $	*/
 
 /*
  * Copyright (c) 2007, 2008 Reyk Floeter <reyk@openbsd.org>
@@ -18,7 +18,6 @@
  * OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
  */
 
-#include <sys/param.h>
 #include <sys/types.h>
 #include <sys/socket.h>
 #include <sys/sysctl.h>
@@ -44,8 +43,6 @@
 #include <event.h>
 
 #include "snmpd.h"
-
-extern struct snmpd	*env;
 
 struct ktable		**krt;
 u_int			  krt_size;
@@ -174,8 +171,9 @@ kr_init(void)
 	    &opt, sizeof(opt)) == -1)
 		log_warn("%s: SO_USELOOPBACK", __func__);	/* not fatal */
 
-	if (env->sc_rtfilter && setsockopt(kr_state.ks_fd, PF_ROUTE,
-	    ROUTE_MSGFILTER, &env->sc_rtfilter, sizeof(env->sc_rtfilter)) == -1)
+	if (snmpd_env->sc_rtfilter && setsockopt(kr_state.ks_fd, PF_ROUTE,
+	    ROUTE_MSGFILTER, &snmpd_env->sc_rtfilter,
+	    sizeof(snmpd_env->sc_rtfilter)) == -1)
 		log_warn("%s: ROUTE_MSGFILTER", __func__);
 
 	/* grow receive buffer, don't wanna miss messages */
@@ -366,12 +364,6 @@ kr_iflastchange(void)
 int
 kr_updateif(u_int if_index)
 {
-	struct kif_node	*kn;
-
-	if ((kn = kif_find(if_index)) != NULL)
-		kif_remove(kn);
-
-	/* Do not update the interface address list */
 	return (fetchifs(if_index));
 }
 
@@ -1078,8 +1070,8 @@ prefixlen2mask6(u_int8_t prefixlen)
 	return (&mask);
 }
 
-#define	ROUNDUP(a)	\
-    (((a) & (sizeof(long) - 1)) ? (1 + ((a) | (sizeof(long) - 1))) : (a))
+#define ROUNDUP(a) \
+	((a) > 0 ? (1 + (((a) - 1) | (sizeof(long) - 1))) : sizeof(long))
 
 void
 get_rtaddrs(int addrs, struct sockaddr *sa, struct sockaddr **rti_info)
@@ -1134,8 +1126,7 @@ if_newaddr(u_short if_index, struct sockaddr *ifa, struct sockaddr *mask,
 	if (brd)
 		bcopy(brd, &ka->dstbrd.sa, brd->sa_len);
 	else
-		bzero(&ka->mask, sizeof(ka->mask));
-
+		bzero(&ka->dstbrd, sizeof(ka->dstbrd));
 }
 
 void
@@ -1382,6 +1373,12 @@ rtmsg_process(char *buf, int len)
 		case RTM_IFANNOUNCE:
 			if_announce(next);
 			break;
+		case RTM_DESYNC:
+			kr_shutdown();
+			if (fetchifs(0) == -1)
+				fatalx("rtmsg_process: fetchifs");
+			ktable_init();
+			break;
 		default:
 			/* ignore for now */
 			break;
@@ -1459,7 +1456,19 @@ dispatch_rtmsg_addr(struct ktable *kt, struct rt_msghdr *rtm,
 
 	if ((sa = rti_info[RTAX_GATEWAY]) != NULL)
 		switch (sa->sa_family) {
+		case AF_INET:
+		case AF_INET6:
+			if (rtm->rtm_flags & RTF_CONNECTED) {
+				flags |= F_CONNECTED;
+				ifindex = rtm->rtm_index;
+			}
+			mpath = 0;	/* link local stuff can't be mpath */
+			break;
 		case AF_LINK:
+			/*
+			 * Traditional BSD connected routes have
+			 * a gateway of type AF_LINK.
+			 */
 			flags |= F_CONNECTED;
 			ifindex = rtm->rtm_index;
 			mpath = 0;	/* link local stuff can't be mpath */

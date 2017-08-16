@@ -1,4 +1,4 @@
-/*	$OpenBSD: ber.c,v 1.27 2014/04/25 06:57:11 blambert Exp $ */
+/*	$OpenBSD: ber.c,v 1.31 2016/03/05 03:31:36 deraadt Exp $ */
 
 /*
  * Copyright (c) 2007, 2012 Reyk Floeter <reyk@openbsd.org>
@@ -19,19 +19,19 @@
  */
 
 #include <sys/types.h>
-#include <sys/param.h>
 
 #include <errno.h>
 #include <limits.h>
 #include <stdlib.h>
 #include <err.h>	/* XXX for debug output */
 #include <stdio.h>	/* XXX for debug output */
-#include <strings.h>
+#include <string.h>
 #include <unistd.h>
 #include <stdarg.h>
 
 #include "ber.h"
 
+#define MINIMUM(a, b)	(((a) < (b)) ? (a) : (b))
 
 #define BER_TYPE_CONSTRUCTED	0x20	/* otherwise primitive */
 #define BER_TYPE_SINGLE_MAX	30
@@ -420,7 +420,7 @@ ber_string2oid(const char *oidstr, struct ber_oid *o)
 
 	if (strlcpy(str, oidstr, sizeof(str)) >= sizeof(str))
 		return (-1);
-	bzero(o, sizeof(*o));
+	memset(o, 0, sizeof(*o));
 
 	/* Parse OID strings in the common forms n.n.n, n_n_n_n, or n-n-n */
 	for (p = sp = str; p != NULL; sp = p) {
@@ -505,7 +505,7 @@ ber_get_oid(struct ber_element *elm, struct ber_oid *o)
 	if (!buf[i])
 		return (-1);
 
-	bzero(o, sizeof(*o));
+	memset(o, 0, sizeof(*o));
 	o->bo_id[j++] = buf[i] / 40;
 	o->bo_id[j++] = buf[i++] % 40;
 	for (; i < len && j < BER_MAX_OID_LEN; i++) {
@@ -538,15 +538,18 @@ ber_printf_elements(struct ber_element *ber, char *fmt, ...)
 		case 'B':
 			p = va_arg(ap, void *);
 			len = va_arg(ap, size_t);
-			ber = ber_add_bitstring(ber, p, len);
+			if ((ber = ber_add_bitstring(ber, p, len)) == NULL)
+				goto fail;
 			break;
 		case 'b':
 			d = va_arg(ap, int);
-			ber = ber_add_boolean(ber, d);
+			if ((ber = ber_add_boolean(ber, d)) == NULL)
+				goto fail;
 			break;
 		case 'd':
 			d = va_arg(ap, int);
-			ber = ber_add_integer(ber, d);
+			if ((ber = ber_add_integer(ber, d)) == NULL)
+				goto fail;
 			break;
 		case 'e':
 			e = va_arg(ap, struct ber_element *);
@@ -554,23 +557,28 @@ ber_printf_elements(struct ber_element *ber, char *fmt, ...)
 			break;
 		case 'E':
 			i = va_arg(ap, long long);
-			ber = ber_add_enumerated(ber, i);
+			if ((ber = ber_add_enumerated(ber, i)) == NULL)
+				goto fail;
 			break;
 		case 'i':
 			i = va_arg(ap, long long);
-			ber = ber_add_integer(ber, i);
+			if ((ber = ber_add_integer(ber, i)) == NULL)
+				goto fail;
 			break;
 		case 'O':
 			o = va_arg(ap, struct ber_oid *);
-			ber = ber_add_oid(ber, o);
+			if ((ber = ber_add_oid(ber, o)) == NULL)
+				goto fail;
 			break;
 		case 'o':
 			s = va_arg(ap, char *);
-			ber = ber_add_oidstring(ber, s);
+			if ((ber = ber_add_oidstring(ber, s)) == NULL)
+				goto fail;
 			break;
 		case 's':
 			s = va_arg(ap, char *);
-			ber = ber_add_string(ber, s);
+			if ((ber = ber_add_string(ber, s)) == NULL)
+				goto fail;
 			break;
 		case 't':
 			class = va_arg(ap, int);
@@ -580,23 +588,29 @@ ber_printf_elements(struct ber_element *ber, char *fmt, ...)
 		case 'x':
 			s = va_arg(ap, char *);
 			len = va_arg(ap, size_t);
-			ber = ber_add_nstring(ber, s, len);
+			if ((ber = ber_add_nstring(ber, s, len)) == NULL)
+				goto fail;
 			break;
 		case '0':
-			ber = ber_add_null(ber);
+			if ((ber = ber_add_null(ber)) == NULL)
+				goto fail;
 			break;
 		case '{':
-			ber = sub = ber_add_sequence(ber);
+			if ((ber = sub = ber_add_sequence(ber)) == NULL)
+				goto fail;
 			break;
 		case '(':
-			ber = sub = ber_add_set(ber);
+			if ((ber = sub = ber_add_set(ber)) == NULL)
+				goto fail;
 			break;
 		case '}':
 		case ')':
 			ber = sub;
 			break;
 		case '.':
-			ber = ber_add_eoc(ber);
+			if ((e = ber_add_eoc(ber)) == NULL)
+				goto fail;
+			ber = e;
 			break;
 		default:
 			break;
@@ -605,6 +619,9 @@ ber_printf_elements(struct ber_element *ber, char *fmt, ...)
 	va_end(ap);
 
 	return (ber);
+ fail:
+	ber_free_elements(ber);
+	return (NULL);
 }
 
 int
@@ -622,7 +639,7 @@ ber_scanf_elements(struct ber_element *ber, char *fmt, ...)
 	struct ber_oid		*o;
 	struct ber_element	*parent[_MAX_SEQ], **e;
 
-	bzero(parent, sizeof(struct ber_element *) * _MAX_SEQ);
+	memset(parent, 0, sizeof(struct ber_element *) * _MAX_SEQ);
 
 	va_start(ap, fmt);
 	while (*fmt) {
@@ -1193,7 +1210,7 @@ ber_readbuf(struct ber *b, void *buf, size_t nbytes)
 		return -1;
 
 	sz = b->br_rend - b->br_rptr;
-	len = MIN(nbytes, sz);
+	len = MINIMUM(nbytes, sz);
 	if (len == 0) {
 		errno = ECANCELED;
 		return (-1);	/* end of buffer and parser wants more data */
@@ -1239,8 +1256,7 @@ ber_set_writecallback(struct ber_element *elm, void (*cb)(void *, size_t),
 void
 ber_free(struct ber *b)
 {
-	if (b->br_wbuf != NULL)
-		free (b->br_wbuf);
+	free(b->br_wbuf);
 }
 
 static ssize_t

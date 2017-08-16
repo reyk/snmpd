@@ -1,4 +1,4 @@
-/*	$OpenBSD: mib.h,v 1.35 2014/11/19 10:24:40 blambert Exp $	*/
+/*	$OpenBSD: mib.h,v 1.38 2016/03/07 19:33:26 mmcc Exp $	*/
 
 /*
  * Copyright (c) 2007, 2008 Reyk Floeter <reyk@openbsd.org>
@@ -16,8 +16,8 @@
  * OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
  */
 
-#ifndef _SNMPD_MIB_H
-#define _SNMPD_MIB_H
+#ifndef SNMPD_MIB_H
+#define SNMPD_MIB_H
 
 /*
  * Adding new MIBs:
@@ -380,7 +380,7 @@
 
 /*
  * PRIVATE ENTERPRISE NUMBERS from
- * http://www.iana.org/assignments/enterprise-numbers
+ * https://www.iana.org/assignments/enterprise-numbers
  *
  * This is not the complete list of private enterprise numbers, it only
  * includes some well-known companies and especially network companies
@@ -490,6 +490,7 @@
 #define MIB_pfCntSrcLimit		MIB_pfCounters, 14
 #define MIB_pfCntSynproxy		MIB_pfCounters, 15
 #define MIB_pfCntTranslate		MIB_pfCounters, 16
+#define MIB_pfCntNoRoute		MIB_pfCounters, 17
 #define MIB_pfStateTable		MIB_pfMIBObjects, 3
 #define MIB_pfStateCount		MIB_pfStateTable, 1
 #define MIB_pfStateSearches		MIB_pfStateTable, 2
@@ -1057,6 +1058,7 @@
 	{ MIBDECL(pfCntSrcLimit) },			\
 	{ MIBDECL(pfCntSynproxy) },			\
 	{ MIBDECL(pfCntTranslate) },			\
+	{ MIBDECL(pfCntNoRoute) },			\
 	{ MIBDECL(pfStateTable) },			\
 	{ MIBDECL(pfStateCount) },			\
 	{ MIBDECL(pfStateSearches) },			\
@@ -1328,4 +1330,4 @@
 
  void	 mib_init(void);
 
-#endif /* _SNMPD_MIB_H */
+#endif /* SNMPD_MIB_H */

@@ -1,4 +1,4 @@
-/*	$OpenBSD: log.c,v 1.5 2014/10/25 03:23:49 lteo Exp $	*/
+/*	$OpenBSD: log.c,v 1.16 2017/03/21 12:06:56 bluhm Exp $	*/
 
 /*
  * Copyright (c) 2003, 2004 Henning Brauer <henning@openbsd.org>
@@ -11,60 +11,76 @@
  * WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF
  * MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR
  * ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES
- * WHATSOEVER RESULTING FROM LOSS OF MIND, USE, DATA OR PROFITS, WHETHER
- * IN AN ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING
- * OUT OF OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
+ * WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN
+ * ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF
+ * OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
  */
 
-#include <sys/types.h>
-#include <sys/param.h>
-#include <sys/queue.h>
-#include <sys/socket.h>
-#include <sys/tree.h>
-
-#include <netinet/in.h>
-#include <netinet/ip.h>
-#include <net/if.h>
-
-#include <arpa/inet.h>
-
-#include <errno.h>
-#include <stdarg.h>
 #include <stdio.h>
 #include <stdlib.h>
+#include <stdarg.h>
 #include <string.h>
 #include <syslog.h>
-#include <event.h>
-#include <netdb.h>
+#include <errno.h>
+#include <time.h>
 
-#include <openssl/ssl.h>
+static int	 debug;
+static int	 verbose;
+const char	*log_procname;
 
-#include "snmpd.h"
-
-int	 debug;
-int	 verbose;
-
-void	 vlog(int, const char *, va_list);
-void	 logit(int, const char *, ...);
+void	log_init(int, int);
+void	log_procinit(const char *);
+void	log_setverbose(int);
+int	log_getverbose(void);
+void	log_warn(const char *, ...)
+	    __attribute__((__format__ (printf, 1, 2)));
+void	log_warnx(const char *, ...)
+	    __attribute__((__format__ (printf, 1, 2)));
+void	log_info(const char *, ...)
+	    __attribute__((__format__ (printf, 1, 2)));
+void	log_debug(const char *, ...)
+	    __attribute__((__format__ (printf, 1, 2)));
+void	logit(int, const char *, ...)
+	    __attribute__((__format__ (printf, 2, 3)));
+void	vlog(int, const char *, va_list)
+	    __attribute__((__format__ (printf, 2, 0)));
+__dead void fatal(const char *, ...)
+	    __attribute__((__format__ (printf, 1, 2)));
+__dead void fatalx(const char *, ...)
+	    __attribute__((__format__ (printf, 1, 2)));
 
 void
-log_init(int n_debug)
+log_init(int n_debug, int facility)
 {
 	extern char	*__progname;
 
 	debug = n_debug;
 	verbose = n_debug;
+	log_procinit(__progname);
 
 	if (!debug)
-		openlog(__progname, LOG_PID | LOG_NDELAY, LOG_DAEMON);
+		openlog(__progname, LOG_PID | LOG_NDELAY, facility);
 
 	tzset();
 }
 
 void
-log_verbose(int v)
+log_procinit(const char *procname)
+{
+	if (procname != NULL)
+		log_procname = procname;
+}
+
+void
+log_setverbose(int v)
 {
 	verbose = v;
+}
+
+int
+log_getverbose(void)
+{
+	return (verbose);
 }
 
 void
@@ -81,6 +97,7 @@ void
 vlog(int pri, const char *fmt, va_list ap)
 {
 	char	*nfmt;
+	int	 saved_errno = errno;
 
 	if (debug) {
 		/* best effort in out of mem situations */
@@ -94,31 +111,36 @@ vlog(int pri, const char *fmt, va_list ap)
 		fflush(stderr);
 	} else
 		vsyslog(pri, fmt, ap);
-}
 
+	errno = saved_errno;
+}
 
 void
 log_warn(const char *emsg, ...)
 {
-	char	*nfmt;
-	va_list	 ap;
+	char		*nfmt;
+	va_list		 ap;
+	int		 saved_errno = errno;
 
 	/* best effort to even work in out of memory situations */
 	if (emsg == NULL)
-		logit(LOG_CRIT, "%s", strerror(errno));
+		logit(LOG_ERR, "%s", strerror(saved_errno));
 	else {
 		va_start(ap, emsg);
 
-		if (asprintf(&nfmt, "%s: %s", emsg, strerror(errno)) == -1) {
+		if (asprintf(&nfmt, "%s: %s", emsg,
+		    strerror(saved_errno)) == -1) {
 			/* we tried it... */
-			vlog(LOG_CRIT, emsg, ap);
-			logit(LOG_CRIT, "%s", strerror(errno));
+			vlog(LOG_ERR, emsg, ap);
+			logit(LOG_ERR, "%s", strerror(saved_errno));
 		} else {
-			vlog(LOG_CRIT, nfmt, ap);
+			vlog(LOG_ERR, nfmt, ap);
 			free(nfmt);
 		}
 		va_end(ap);
 	}
+
+	errno = saved_errno;
 }
 
 void
@@ -127,7 +149,7 @@ log_warnx(const char *emsg, ...)
 	va_list	 ap;
 
 	va_start(ap, emsg);
-	vlog(LOG_CRIT, emsg, ap);
+	vlog(LOG_ERR, emsg, ap);
 	va_end(ap);
 }
 
@@ -153,85 +175,44 @@ log_debug(const char *emsg, ...)
 	}
 }
 
-void
-print_debug(const char *emsg, ...)
+static void
+vfatalc(int code, const char *emsg, va_list ap)
 {
-	va_list	 ap;
+	static char	s[BUFSIZ];
+	const char	*sep;
 
-	if (debug && verbose > 2) {
-		va_start(ap, emsg);
-		vfprintf(stderr, emsg, ap);
-		va_end(ap);
+	if (emsg != NULL) {
+		(void)vsnprintf(s, sizeof(s), emsg, ap);
+		sep = ": ";
+	} else {
+		s[0] = '\0';
+		sep = "";
 	}
+	if (code)
+		logit(LOG_CRIT, "%s: %s%s%s",
+		    log_procname, s, sep, strerror(code));
+	else
+		logit(LOG_CRIT, "%s%s%s", log_procname, sep, s);
 }
 
 void
-print_verbose(const char *emsg, ...)
+fatal(const char *emsg, ...)
 {
-	va_list	 ap;
+	va_list	ap;
 
-	if (verbose) {
-		va_start(ap, emsg);
-		vfprintf(stderr, emsg, ap);
-		va_end(ap);
-	}
-}
-
-void
-fatal(const char *emsg)
-{
-	if (emsg == NULL)
-		logit(LOG_CRIT, "fatal: %s", strerror(errno));
-	else {
-		if (errno)
-			logit(LOG_CRIT, "fatal: %s: %s",
-			    emsg, strerror(errno));
-		else
-			logit(LOG_CRIT, "fatal: %s", emsg);
-	}
-
+	va_start(ap, emsg);
+	vfatalc(errno, emsg, ap);
+	va_end(ap);
 	exit(1);
 }
 
 void
-fatalx(const char *emsg)
+fatalx(const char *emsg, ...)
 {
-	errno = 0;
-	fatal(emsg);
-}
+	va_list	ap;
 
-const char *
-log_in6addr(const struct in6_addr *addr)
-{
-	static char		buf[NI_MAXHOST];
-	struct sockaddr_in6	sa_in6;
-	u_int16_t		tmp16;
-
-	bzero(&sa_in6, sizeof(sa_in6));
-	sa_in6.sin6_len = sizeof(sa_in6);
-	sa_in6.sin6_family = AF_INET6;
-	memcpy(&sa_in6.sin6_addr, addr, sizeof(sa_in6.sin6_addr));
-
-	/* XXX thanks, KAME, for this ugliness... adopted from route/show.c */
-	if (IN6_IS_ADDR_LINKLOCAL(&sa_in6.sin6_addr) ||
-	    IN6_IS_ADDR_MC_LINKLOCAL(&sa_in6.sin6_addr)) {
-		memcpy(&tmp16, &sa_in6.sin6_addr.s6_addr[2], sizeof(tmp16));
-		sa_in6.sin6_scope_id = ntohs(tmp16);
-		sa_in6.sin6_addr.s6_addr[2] = 0;
-		sa_in6.sin6_addr.s6_addr[3] = 0;
-	}
-
-	return (print_host((struct sockaddr_storage *)&sa_in6, buf,
-	    NI_MAXHOST));
-}
-
-const char *
-print_host(struct sockaddr_storage *ss, char *buf, size_t len)
-{
-	if (getnameinfo((struct sockaddr *)ss, ss->ss_len,
-	    buf, len, NULL, 0, NI_NUMERICHOST) != 0) {
-		buf[0] = '\0';
-		return (NULL);
-	}
-	return (buf);
+	va_start(ap, emsg);
+	vfatalc(0, emsg, ap);
+	va_end(ap);
+	exit(1);
 }

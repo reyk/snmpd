@@ -1,4 +1,4 @@
-/*	$OpenBSD: trap.c,v 1.23 2014/11/19 10:19:00 blambert Exp $	*/
+/*	$OpenBSD: trap.c,v 1.29 2017/04/21 13:46:15 jca Exp $	*/
 
 /*
  * Copyright (c) 2008 Reyk Floeter <reyk@openbsd.org>
@@ -17,7 +17,6 @@
  */
 
 #include <sys/queue.h>
-#include <sys/param.h>
 #include <sys/types.h>
 #include <sys/stat.h>
 #include <sys/socket.h>
@@ -39,8 +38,6 @@
 
 #include "snmpd.h"
 #include "mib.h"
-
-extern struct snmpd	*env;
 
 void
 trap_init(void)
@@ -73,6 +70,7 @@ trap_agentx(struct agentx_handle *h, struct agentx_pdu *pdu, int *idx,
 
 	*varcpy = NULL;
 	varbind = NULL;
+	iter = NULL;
 	seensysuptime = seentrapoid = 0;
 
 	if (pdu->hdr->flags & AGENTX_NON_DEFAULT_CONTEXT) {
@@ -127,7 +125,7 @@ trap_agentx(struct agentx_handle *h, struct agentx_pdu *pdu, int *idx,
 
 	if (varbind != NULL)
 		len = ber_calc_len(varbind);
-	log_debug("trap_agentx: from pid %u len %d elements %d",
+	log_debug("trap_agentx: from pid %u len %zd elements %d",
 	    pid, len, x);
 
 	trap_send(&o, varbind);
@@ -139,8 +137,7 @@ trap_agentx(struct agentx_handle *h, struct agentx_pdu *pdu, int *idx,
  done:
 	if (varbind != NULL)
 		ber_free_elements(varbind);
-	if (v)
-		free(v);
+	free(v);
 	*idx = x;
 	return (ret);
 }
@@ -160,7 +157,7 @@ trap_send(struct ber_oid *oid, struct ber_element *elm)
 	char			 ostr[SNMP_MAX_OID_STRLEN];
 	struct oid		 oa, ob;
 
-	if (TAILQ_EMPTY(&env->sc_trapreceivers))
+	if (TAILQ_EMPTY(&snmpd_env->sc_trapreceivers))
 		return (0);
 
 	smi_scalar_oidlen(&uptime);
@@ -189,7 +186,7 @@ trap_send(struct ber_oid *oid, struct ber_element *elm)
 	bzero(&ber, sizeof(ber));
 	ber.fd = -1;
 
-	TAILQ_FOREACH(tr, &env->sc_trapreceivers, entry) {
+	TAILQ_FOREACH(tr, &snmpd_env->sc_trapreceivers, entry) {
 		if (tr->sa_oid != NULL && tr->sa_oid->bo_n) {
 			/* The trap receiver may want only a specified MIB */
 			bcopy(&tr->sa_oid->bo_id, &ob.o_oid,
@@ -203,9 +200,16 @@ trap_send(struct ber_oid *oid, struct ber_element *elm)
 			ret = -1;
 			goto done;
 		}
+		if (tr->sa_srcaddr != NULL) {
+			if (bind(s, (struct sockaddr *)&tr->sa_srcaddr->ss,
+			    tr->sa_srcaddr->ss.ss_len) == -1) {
+				ret = -1;
+				goto done;
+			}
+		}
 
 		cmn = tr->sa_community != NULL ?
-		    tr->sa_community : env->sc_trcommunity;
+		    tr->sa_community : snmpd_env->sc_trcommunity;
 
 		/* SNMP header */
 		root = ber_add_sequence(NULL);
@@ -221,7 +225,7 @@ trap_send(struct ber_oid *oid, struct ber_element *elm)
 		if (ber_get_writebuf(&ber, (void *)&ptr) > 0 &&
 		    sendto(s, ptr, len, 0, (struct sockaddr *)&tr->ss,
 		    tr->ss.ss_len) != -1) {
-			env->sc_stats.snmp_outpkts++;
+			snmpd_env->sc_stats.snmp_outpkts++;
 			ret++;
 		}
 

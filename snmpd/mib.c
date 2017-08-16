@@ -1,4 +1,4 @@
-/*	$OpenBSD: mib.c,v 1.73 2014/11/18 20:54:29 krw Exp $	*/
+/*	$OpenBSD: mib.c,v 1.84 2017/06/01 14:38:28 patrick Exp $	*/
 
 /*
  * Copyright (c) 2012 Joel Knight <joel@openbsd.org>
@@ -17,10 +17,9 @@
  * OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
  */
 
+#include <sys/param.h>	/* MAXCOMLEN */
 #include <sys/queue.h>
-#include <sys/param.h>
 #include <sys/proc.h>
-#include <sys/types.h>
 #include <sys/stat.h>
 #include <sys/socket.h>
 #include <sys/un.h>
@@ -34,15 +33,16 @@
 #include <sys/ioctl.h>
 #include <sys/disk.h>
 
-#include <net/if.h>
-#include <net/if_types.h>
-#include <net/pfvar.h>
-#include <net/if_pfsync.h>
 #include <netinet/in.h>
 #include <netinet/ip.h>
 #include <netinet/ip_carp.h>
 #include <netinet/ip_var.h>
 #include <arpa/inet.h>
+#include <net/if.h>
+#include <net/if_types.h>
+#include <net/pfvar.h>
+#include <netinet/ip_ipsp.h>
+#include <net/if_pfsync.h>
 
 #include <stdlib.h>
 #include <stdio.h>
@@ -58,8 +58,6 @@
 
 #include "snmpd.h"
 #include "mib.h"
-
-extern struct snmpd	*env;
 
 /*
  * Defined in SNMPv2-MIB.txt (RFC 3418)
@@ -256,7 +254,7 @@ mib_sysor(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 int
 mib_getsnmp(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 {
-	struct snmp_stats	*stats = &env->sc_stats;
+	struct snmp_stats	*stats = &snmpd_env->sc_stats;
 	long long		 i;
 	struct statsmap {
 		u_int8_t	 m_id;
@@ -317,7 +315,7 @@ mib_getsnmp(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 int
 mib_setsnmp(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 {
-	struct snmp_stats	*stats = &env->sc_stats;
+	struct snmp_stats	*stats = &snmpd_env->sc_stats;
 	long long		 i;
 
 	if (ber_get_integer(*elm, &i) == -1)
@@ -355,11 +353,11 @@ mib_engine(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 {
 	switch (oid->o_oid[OIDIDX_snmpEngine]) {
 	case 1:
-		*elm = ber_add_nstring(*elm, env->sc_engineid,
-		    env->sc_engineid_len);
+		*elm = ber_add_nstring(*elm, snmpd_env->sc_engineid,
+		    snmpd_env->sc_engineid_len);
 		break;
 	case 2:
-		*elm = ber_add_integer(*elm, env->sc_engine_boots);
+		*elm = ber_add_integer(*elm, snmpd_env->sc_engine_boots);
 		break;
 	case 3:
 		*elm = ber_add_integer(*elm, snmpd_engine_time());
@@ -376,7 +374,7 @@ mib_engine(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 int
 mib_usmstats(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 {
-	struct snmp_stats	*stats = &env->sc_stats;
+	struct snmp_stats	*stats = &snmpd_env->sc_stats;
 	long long		 i;
 	struct statsmap {
 		u_int8_t	 m_id;
@@ -698,7 +696,7 @@ mib_hrdevice(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 
 	/* Get and verify the current row index */
 	idx = o->bo_id[OIDIDX_hrDeviceEntry];
-	if (idx > (u_int)env->sc_ncpu)
+	if (idx > (u_int)snmpd_env->sc_ncpu)
 		return (1);
 
 	/* Tables need to prepend the OID on their own */
@@ -749,7 +747,7 @@ mib_hrprocessor(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 
 	/* Get and verify the current row index */
 	idx = o->bo_id[OIDIDX_hrDeviceEntry];
-	if (idx > (u_int)env->sc_ncpu)
+	if (idx > (u_int)snmpd_env->sc_ncpu)
 		return (1);
 	else if (idx < 1)
 		idx = 1;
@@ -767,9 +765,9 @@ mib_hrprocessor(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 		 * The percentage of time that the system was not
 		 * idle during the last minute.
 		 */
-		if (env->sc_cpustates == NULL)
+		if (snmpd_env->sc_cpustates == NULL)
 			return (-1);
-		cptime2 = env->sc_cpustates + (CPUSTATES * (idx - 1));
+		cptime2 = snmpd_env->sc_cpustates + (CPUSTATES * (idx - 1));
 		val = 100 -
 		    (cptime2[CP_IDLE] > 1000 ? 1000 : (cptime2[CP_IDLE] / 10));
 		ber = ber_add_integer(ber, val);
@@ -1194,7 +1192,7 @@ mib_iftable(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 		ber_set_header(ber, BER_CLASS_APPLICATION, SNMP_T_COUNTER32);
 		break;
 	case 19:
-		ber = ber_add_integer(ber, 0);
+		ber = ber_add_integer(ber, (u_int32_t)kif->if_oqdrops);
 		ber_set_header(ber, BER_CLASS_APPLICATION, SNMP_T_COUNTER32);
 		break;
 	case 20:
@@ -1452,6 +1450,7 @@ static struct oid openbsd_mib[] = {
 	{ MIB(pfCntSrcLimit),		OID_RD, mib_pfcounters },
 	{ MIB(pfCntSynproxy),		OID_RD, mib_pfcounters },
 	{ MIB(pfCntTranslate),		OID_RD, mib_pfcounters },
+	{ MIB(pfCntNoRoute),		OID_RD, mib_pfcounters },
 	{ MIB(pfStateCount),		OID_RD, mib_pfscounters },
 	{ MIB(pfStateSearches),		OID_RD, mib_pfscounters },
 	{ MIB(pfStateInserts),		OID_RD, mib_pfscounters },
@@ -1651,7 +1650,8 @@ int
 mib_pfinfo(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 {
 	struct pf_status	 s;
-	time_t			 runtime;
+	time_t			 runtime = 0;
+	struct timespec		 uptime;
 	char			 str[11];
 
 	if (pf_get_stats(&s))
@@ -1662,10 +1662,8 @@ mib_pfinfo(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 		*elm = ber_add_integer(*elm, s.running);
 		break;
 	case 2:
-		if (s.since > 0)
-			runtime = time(NULL) - s.since;
-		else
-			runtime = 0;
+		if (!clock_gettime(CLOCK_UPTIME, &uptime))
+			runtime = uptime.tv_sec - s.since;
 		runtime *= 100;
 		*elm = ber_add_integer(*elm, runtime);
 		ber_set_header(*elm, BER_CLASS_APPLICATION, SNMP_T_TIMETICKS);
@@ -1708,7 +1706,8 @@ mib_pfcounters(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 		{ 13, &s.counters[PFRES_MAXSTATES] },
 		{ 14, &s.counters[PFRES_SRCLIMIT] },
 		{ 15, &s.counters[PFRES_SYNPROXY] },
-		{ 16, &s.counters[PFRES_TRANSLATE] }
+		{ 16, &s.counters[PFRES_TRANSLATE] },
+		{ 17, &s.counters[PFRES_NOROUTE] }
 	};
 
 	if (pf_get_stats(&s))
@@ -2555,7 +2554,7 @@ mib_sensors(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 		}
 		for (j = 0; j < SENSOR_MAX_TYPES; j++) {
 			mib[3] = j;
-			for (k = 0; k < sensordev.maxnumt[j]; k++, n++) {
+			for (k = 0; k < sensordev.maxnumt[j]; k++) {
 				mib[4] = k;
 				if (sysctl(mib, 5,
 				    &sensor, &slen, NULL, 0) == -1) {
@@ -2565,8 +2564,11 @@ mib_sensors(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 						break;
 					return (-1);
 				}
+				if (sensor.flags & SENSOR_FINVALID)
+					continue;
 				if (n == idx)
 					goto found;
+				n++;
 			}
 		}
 	}
@@ -2659,7 +2661,7 @@ mib_sensorvalue(struct sensor *s)
 		break;
 	case SENSOR_PERCENT:
 	case SENSOR_HUMIDITY:
-		ret = asprintf(&v, "%.2f%%", s->value / 1000.0);
+		ret = asprintf(&v, "%.2f", s->value / 1000.0);
 		break;
 	case SENSOR_DISTANCE:
 	case SENSOR_PRESSURE:
@@ -2983,7 +2985,8 @@ mib_ipforwarding(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 	if (sysctl(mib, sizeofa(mib), &v, &len, NULL, 0) == -1)
 		return (-1);
 
-	*elm = ber_add_integer(*elm, v);
+	/* ipForwarding: forwarding(1), notForwarding(2) */
+	*elm = ber_add_integer(*elm, (v == 0) ? 2 : 1);
 
 	return (0);
 }

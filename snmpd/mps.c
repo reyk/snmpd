@@ -1,4 +1,4 @@
-/*	$OpenBSD: mps.c,v 1.19 2014/11/19 10:19:00 blambert Exp $	*/
+/*	$OpenBSD: mps.c,v 1.24 2016/10/28 08:01:53 rzalamena Exp $	*/
 
 /*
  * Copyright (c) 2007, 2008, 2012 Reyk Floeter <reyk@openbsd.org>
@@ -17,7 +17,6 @@
  */
 
 #include <sys/queue.h>
-#include <sys/param.h>
 #include <sys/types.h>
 #include <sys/stat.h>
 #include <sys/socket.h>
@@ -45,8 +44,6 @@
 
 #include "snmpd.h"
 #include "mib.h"
-
-extern struct snmpd *env;
 
 struct ber_oid *
 	 mps_table(struct oid *, struct ber_oid *, struct ber_oid *);
@@ -80,8 +77,7 @@ mps_setstr(struct oid *oid, struct ber_oid *o, struct ber_element **elm)
 		return (-1);
 	if ((v = (void *)strdup(s)) == NULL)
 		return (-1);
-	if (oid->o_data != NULL)
-		free(oid->o_data);
+	free(oid->o_data);
 	oid->o_data = v;
 	oid->o_val = strlen(v);
 
@@ -133,7 +129,7 @@ mps_getreq(struct snmp_message *msg, struct ber_element *root,
 		goto fail;
 
 	if (OID_NOTSET(value))
-		return (-1);
+		goto fail;
 
 	if (value->o_flags & OID_REGISTERED) {
 		struct agentx_pdu	*pdu;
@@ -161,7 +157,7 @@ mps_getreq(struct snmp_message *msg, struct ber_element *root,
 	if ((value->o_flags & OID_TABLE) == 0)
 		elm = ber_add_oid(elm, o);
 	if (value->o_get(value, o, &elm) != 0)
-		return (-1);
+		goto fail;
 
 	return (0);
 
@@ -205,6 +201,7 @@ mps_getnextreq(struct snmp_message *msg, struct ber_element *root,
 	struct oid		 key, *value;
 	int			 ret;
 	struct ber_oid		 no;
+	unsigned long		 error_type = 0; 	/* noSuchObject */
 
 	if (o->bo_n > BER_MAX_OID_LEN)
 		return (-1);
@@ -213,7 +210,7 @@ mps_getnextreq(struct snmp_message *msg, struct ber_element *root,
 	smi_oidlen(&key.o_id);	/* Strip off any trailing .0. */
 	value = smi_find(&key);
 	if (value == NULL)
-		return (-1);
+		goto fail;
 
 	if (value->o_flags & OID_REGISTERED) {
 		struct agentx_pdu	*pdu;
@@ -240,7 +237,7 @@ mps_getnextreq(struct snmp_message *msg, struct ber_element *root,
 		case 0:
 			return (0);
 		case -1:
-			return (-1);
+			goto fail;
 		case 1:	/* end-of-rows */
 			break;
 		}
@@ -258,7 +255,7 @@ mps_getnextreq(struct snmp_message *msg, struct ber_element *root,
 			break;
 	}
 	if (next == NULL || next->o_get == NULL)
-		return (-1);
+		goto fail;
 
 	if (next->o_flags & OID_TABLE) {
 		/* Get the next table row for this column */
@@ -272,25 +269,35 @@ mps_getnextreq(struct snmp_message *msg, struct ber_element *root,
 				value = next;
 				goto getnext;
 			}
-			return (-1);
+			goto fail;
 		}
 	} else {
 		bcopy(&next->o_id, o, sizeof(*o));
  appendzero:
 		/* No instance identifier specified. Append .0. */
 		if (o->bo_n + 1 > BER_MAX_OID_LEN)
-			return (-1);
+			goto fail;
 		ber = ber_add_noid(ber, o, ++o->bo_n);
 		if ((ret = next->o_get(next, o, &ber)) != 0)
-			return (-1);
+			goto fail;
 	}
 
+	return (0);
+
+fail:
+	if (msg->sm_version == 0)
+		return (-1);
+
+	/* Set SNMPv2 extended error response. */
+	ber = ber_add_oid(ber, o);
+	ber = ber_add_null(ber);
+	ber_set_header(ber, BER_CLASS_CONTEXT, error_type);
 	return (0);
 }
 
 int
 mps_getbulkreq(struct snmp_message *msg, struct ber_element **root,
-    struct ber_oid *o, int max)
+    struct ber_element **end, struct ber_oid *o, int max)
 {
 	struct ber_element *c, *d, *e;
 	size_t len;
@@ -298,14 +305,17 @@ mps_getbulkreq(struct snmp_message *msg, struct ber_element **root,
 
 	j = max;
 	c = *root;
+	*end = NULL;
 
 	for (d = NULL, len = 0; j > 0; j--) {
 		e = ber_add_sequence(NULL);
 		if (c == NULL)
 			c = e;
 		ret = mps_getnextreq(msg, e, o);
-		if (ret == 1)
+		if (ret == 1) {
+			*root = c;
 			return (1);
+		}
 		if (ret == -1) {
 			ber_free_elements(e);
 			if (d == NULL)
@@ -320,6 +330,7 @@ mps_getbulkreq(struct snmp_message *msg, struct ber_element **root,
 		if (d != NULL)
 			ber_link_elements(d, e);
 		d = e;
+		*end = d;
 	}
 
 	*root = c;
@@ -339,8 +350,7 @@ mps_set(struct ber_oid *o, void *p, long long len)
 	value = smi_find(&key);
 	if (value == NULL)
 		return (-1);
-	if (value->o_data != NULL)
-		free(value->o_data);
+	free(value->o_data);
 	value->o_data = p;
 	value->o_val = len;
 

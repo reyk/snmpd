@@ -1,4 +1,4 @@
-/*	$OpenBSD: snmpctl.c,v 1.20 2014/04/14 12:56:21 blambert Exp $	*/
+/*	$OpenBSD: snmpctl.c,v 1.23 2017/08/10 16:03:10 rob Exp $	*/
 
 /*
  * Copyright (c) 2007, 2008 Reyk Floeter <reyk@openbsd.org>
@@ -68,7 +68,7 @@ struct imsgname imsgunknown = {
 void snmpctl_trap(int, struct parse_result *);
 
 struct imsgbuf	 ibuf;
-struct snmpd	*env;
+struct snmpd	*snmpd_env;
 struct oid	 mib_tree[] = MIB_TREE;
 
 __dead void
@@ -92,14 +92,14 @@ main(int argc, char *argv[])
 	int			 ch;
 	const char		*sock = SNMPD_SOCKET;
 
-	if ((env = calloc(1, sizeof(struct snmpd))) == NULL)
+	if ((snmpd_env = calloc(1, sizeof(struct snmpd))) == NULL)
 		err(1, "calloc");
-	gettimeofday(&env->sc_starttime, NULL);
+	gettimeofday(&snmpd_env->sc_starttime, NULL);
 
 	while ((ch = getopt(argc, argv, "ns:")) != -1) {
 		switch (ch) {
 		case 'n':
-			env->sc_flags |= SNMPD_F_NONAMES;
+			snmpd_env->sc_flags |= SNMPD_F_NONAMES;
 			break;
 		case 's':
 			sock = optarg;
@@ -123,6 +123,8 @@ main(int argc, char *argv[])
 		usage();
 		break;
 	case SHOW_MIB:
+		if (pledge("stdio", NULL) == -1)
+			fatal("pledge");
 		show_mib();
 		break;
 	case WALK:
@@ -134,10 +136,13 @@ main(int argc, char *argv[])
 		goto connect;
 	}
 
-	free(env);
+	free(snmpd_env);
 	return (0);
 
  connect:
+	if (pledge("stdio unix", NULL) == -1)
+		fatal("pledge");
+
 	/* connect to snmpd control socket */
 	if ((ctl_sock = socket(AF_UNIX, SOCK_STREAM, 0)) == -1)
 		err(1, "socket");
@@ -155,6 +160,9 @@ main(int argc, char *argv[])
 		}
 		err(1, "connect: %s", sock);
 	}
+
+	if (pledge("stdio", NULL) == -1)
+		fatal("pledge");
 
 	imsg_init(&ibuf, ctl_sock);
 	done = 0;
@@ -181,7 +189,7 @@ main(int argc, char *argv[])
 			err(1, "write error");
 
 	while (!done) {
-		if ((n = imsg_read(&ibuf)) == -1)
+		if ((n = imsg_read(&ibuf)) == -1 && errno != EAGAIN)
 			errx(1, "imsg_read error");
 		if (n == 0)
 			errx(1, "pipe closed");

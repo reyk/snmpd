@@ -1,4 +1,4 @@
-/*	$OpenBSD: snmpclient.c,v 1.12 2014/11/18 20:54:29 krw Exp $	*/
+/*	$OpenBSD: snmpclient.c,v 1.14 2017/08/10 16:03:10 rob Exp $	*/
 
 /*
  * Copyright (c) 2013 Reyk Floeter <reyk@openbsd.org>
@@ -17,7 +17,6 @@
  */
 
 #include <sys/queue.h>
-#include <sys/param.h>
 #include <sys/types.h>
 #include <sys/stat.h>
 #include <sys/socket.h>
@@ -160,6 +159,9 @@ snmpclient(struct parse_result *res)
 			err(1, "snmpctl: cannot drop privileges");
 #endif
 	}
+
+	if (pledge("stdio dns", NULL) == -1)
+		fatal("pledge");
 
 	sc.sc_fd = s;
 	sc.sc_community = res->community;

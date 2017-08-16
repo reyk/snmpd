@@ -1,4 +1,4 @@
-/*	$OpenBSD: smi.c,v 1.16 2014/11/19 10:19:00 blambert Exp $	*/
+
 
 /*
  * Copyright (c) 2007, 2008 Reyk Floeter <reyk@openbsd.org>
@@ -17,7 +17,6 @@
  */
 
 #include <sys/queue.h>
-#include <sys/param.h>
 #include <sys/types.h>
 #include <sys/stat.h>
 #include <sys/socket.h>
@@ -41,13 +40,14 @@
 #include <fcntl.h>
 #include <string.h>
 #include <unistd.h>
+#include <limits.h>
 #include <pwd.h>
 #include <vis.h>
 
 #include "snmpd.h"
 #include "mib.h"
 
-extern struct snmpd *env;
+#define MINIMUM(a, b)	(((a) < (b)) ? (a) : (b))
 
 RB_HEAD(oidtree, oid);
 RB_PROTOTYPE(oidtree, oid, o_element, smi_oid_cmp);
@@ -64,9 +64,9 @@ smi_getticks(void)
 	u_long		 ticks;
 
 	gettimeofday(&now, NULL);
-	if (timercmp(&now, &env->sc_starttime, <=))
+	if (timercmp(&now, &snmpd_env->sc_starttime, <=))
 		return (0);
-	timersub(&now, &env->sc_starttime, &run);
+	timersub(&now, &snmpd_env->sc_starttime, &run);
 	ticks = run.tv_sec * 100;
 	if (run.tv_usec)
 		ticks += run.tv_usec / 10000;
@@ -106,7 +106,7 @@ smi_oid2string(struct ber_oid *o, char *buf, size_t len, size_t skip)
 	bcopy(o, &key.o_id, sizeof(struct ber_oid));
 	key.o_flags |= OID_KEY;		/* do not match wildcards */
 
-	if (env->sc_flags & SNMPD_F_NONAMES)
+	if (snmpd_env->sc_flags & SNMPD_F_NONAMES)
 		lookup = 0;
 
 	for (i = 0; i < o->bo_n; i++) {
@@ -173,8 +173,7 @@ smi_delete(struct oid *oid)
 	    value == oid)
 		RB_REMOVE(oidtree, &smi_oidtree, value);
 
-	if (oid->o_data != NULL)
-		free(oid->o_data);
+	free(oid->o_data);
 	if (oid->o_flags & OID_DYNAMIC) {
 		free(oid->o_name);
 		free(oid);
@@ -512,7 +511,7 @@ smi_print_element(struct ber_element *root)
 			    inet_ntoa(*(struct in_addr *)buf)) == -1)
 				goto fail;
 		} else {
-			if ((p = malloc(root->be_len * 4 + 1)) == NULL)
+			if ((p = reallocarray(NULL, 4, root->be_len + 1)) == NULL)
 				goto fail;
 			strvisx(p, buf, root->be_len, VIS_NL);
 			if (asprintf(&str, "\"%s\"", p) == -1) {
@@ -534,8 +533,7 @@ smi_print_element(struct ber_element *root)
 	return (str);
 
  fail:
-	if (str != NULL)
-		free(str);
+	free(str);
 	return (NULL);
 }
 
@@ -565,7 +563,7 @@ smi_oid_cmp(struct oid *a, struct oid *b)
 {
 	size_t	 i;
 
-	for (i = 0; i < MIN(a->o_oidlen, b->o_oidlen); i++)
+	for (i = 0; i < MINIMUM(a->o_oidlen, b->o_oidlen); i++)
 		if (a->o_oid[i] != b->o_oid[i])
 			return (a->o_oid[i] - b->o_oid[i]);
 

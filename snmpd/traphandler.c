@@ -1,4 +1,5 @@
-/*	$OpenBSD: traphandler.c,v 1.1 2014/04/25 06:57:11 blambert Exp $	*/
+/*	$OpenBSD: traphandler.c,v 1.9 2017/08/12 04:29:57 rob Exp $	*/
+
 /*
  * Copyright (c) 2014 Bret Stephen Lambert <blambert@openbsd.org>
  *
@@ -16,7 +17,6 @@
  */
 
 #include <sys/queue.h>
-#include <sys/param.h>
 #include <sys/socket.h>
 #include <sys/socketvar.h>
 #include <sys/stat.h>
@@ -35,6 +35,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <syslog.h>
 #include <unistd.h>
 #include <pwd.h>
 
@@ -42,8 +43,6 @@
 #include "snmpd.h"
 #include "mib.h"
 
-int	 trapsock;
-struct event trapev;
 char	 trap_path[PATH_MAX];
 
 void	 traphandler_init(struct privsep *, struct privsep_proc *, void *arg);
@@ -71,37 +70,51 @@ static struct privsep_proc procs[] = {
 	{ "parent",	PROC_PARENT,	traphandler_dispatch_parent }
 };
 
-pid_t
+void
 traphandler(struct privsep *ps, struct privsep_proc *p)
 {
 	struct snmpd		*env = ps->ps_env;
+	struct address		*h;
+	struct listen_sock	*so;
 
-	if (env->sc_traphandler &&
-	    (trapsock = traphandler_bind(&env->sc_address)) == -1)
-		fatal("could not create trap listener socket");
+	if (env->sc_traphandler) {
+		TAILQ_FOREACH(h, &env->sc_addresses, entry) {
+			if ((so = calloc(1, sizeof(*so))) == NULL)
+				fatal("%s", __func__);
+			if ((so->s_fd = traphandler_bind(h)) == -1)
+				fatal("could not create trap listener socket");
+			TAILQ_INSERT_TAIL(&env->sc_sockets, so, entry);
+		}
+	}
 
-	return (proc_run(ps, p, procs, nitems(procs), traphandler_init,
-	    NULL));
+	proc_run(ps, p, procs, nitems(procs), traphandler_init, NULL);
 }
 
 void
 traphandler_init(struct privsep *ps, struct privsep_proc *p, void *arg)
 {
 	struct snmpd		*env = ps->ps_env;
+	struct listen_sock	*so;
+
+	if (pledge("stdio id proc recvfd exec", NULL) == -1)
+		fatal("pledge");
 
 	if (!env->sc_traphandler)
 		return;
 
 	/* listen for SNMP trap messages */
-	event_set(&trapev, trapsock, EV_READ|EV_PERSIST, traphandler_recvmsg,
-	    ps);
-	event_add(&trapev, NULL);
+	TAILQ_FOREACH(so, &env->sc_sockets, entry) {
+		event_set(&so->s_ev, so->s_fd, EV_READ|EV_PERSIST,
+		    traphandler_recvmsg, ps);
+		event_add(&so->s_ev, NULL);
+	}
 }
 
 int
 traphandler_bind(struct address *addr)
 {
 	int			 s;
+	char			 buf[512];
 
 	if ((s = snmpd_socket_af(&addr->ss, htons(SNMPD_TRAPPORT))) == -1)
 		return (-1);
@@ -112,6 +125,11 @@ traphandler_bind(struct address *addr)
 	if (bind(s, (struct sockaddr *)&addr->ss, addr->ss.ss_len) == -1)
 		goto bad;
 
+	if (print_host(&addr->ss, buf, sizeof(buf)) == NULL)
+		goto bad;
+
+	log_info("traphandler: listening on %s:%d", buf, SNMPD_TRAPPORT);
+
 	return (s);
  bad:
 	close (s);
@@ -121,8 +139,12 @@ traphandler_bind(struct address *addr)
 void
 traphandler_shutdown(void)
 {
-	event_del(&trapev);
-	close(trapsock);
+	struct listen_sock	*so;
+
+	TAILQ_FOREACH(so, &snmpd_env->sc_sockets, entry) {
+		event_del(&so->s_ev);
+		close(so->s_fd);
+	}
 }
 
 int
@@ -176,8 +198,7 @@ traphandler_recvmsg(int fd, short events, void *arg)
 	iov[1].iov_len = n;
 
 	/* Forward it to the parent process */
-	if (proc_composev_imsg(ps, PROC_PARENT, -1, IMSG_ALERT,
-	    -1, iov, 2) == -1)
+	if (proc_composev(ps, PROC_PARENT, IMSG_ALERT, iov, 2) == -1)
 		goto done;
 
  done:
@@ -276,6 +297,8 @@ traphandler_priv_recvmsg(struct privsep_proc *p, struct imsg *imsg)
 int
 traphandler_fork_handler(struct privsep_proc *p, struct imsg *imsg)
 {
+	struct privsep		*ps = p->p_ps;
+	struct snmpd		*env = ps->ps_env;
 	char			 oidbuf[SNMP_MAX_OID_STRLEN];
 	struct sockaddr		*sa;
 	char			*buf;
@@ -285,9 +308,10 @@ traphandler_fork_handler(struct privsep_proc *p, struct imsg *imsg)
 	struct ber_oid		 trapoid;
 	u_int			 uptime;
 	struct passwd		*pw;
-	extern int		 debug;
+	int			 verbose;
 
-	pw = p->p_ps->ps_pw;
+	pw = ps->ps_pw;
+	verbose = log_getverbose();
 
 	if (setgroups(1, &pw->pw_gid) ||
 	    setresgid(pw->pw_gid, pw->pw_gid, pw->pw_gid) ||
@@ -295,7 +319,10 @@ traphandler_fork_handler(struct privsep_proc *p, struct imsg *imsg)
 		fatal("traphandler_fork_handler: cannot drop privileges");
 
 	closefrom(STDERR_FILENO + 1);
-	log_init(debug);
+
+	log_init((env->sc_flags & SNMPD_F_DEBUG) ? 1 : 0, LOG_DAEMON);
+	log_setverbose(verbose);
+	log_procinit(p->p_title);
 
 	n = IMSG_DATA_SIZE(imsg);
 

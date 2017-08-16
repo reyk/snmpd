@@ -1,4 +1,4 @@
-/*	$OpenBSD: control.c,v 1.27 2014/11/19 10:19:00 blambert Exp $	*/
+/*	$OpenBSD: control.c,v 1.42 2017/04/21 13:50:23 jca Exp $	*/
 
 /*
  * Copyright (c) 2010-2013 Reyk Floeter <reyk@openbsd.org>
@@ -18,7 +18,6 @@
  */
 
 #include <sys/queue.h>
-#include <sys/param.h>
 #include <sys/stat.h>
 #include <sys/socket.h>
 #include <sys/un.h>
@@ -43,11 +42,12 @@ struct ctl_connlist ctl_conns;
 static int agentx_sessionid = 1;
 
 void	 control_accept(int, short, void *);
-void	 control_close(struct ctl_conn *);
+void	 control_close(struct ctl_conn *, const char *, struct imsg *);
 void	 control_dispatch_imsg(int, short, void *);
 void	 control_dispatch_agentx(int, short, void *);
 void	 control_imsg_forward(struct imsg *);
 void	 control_event_add(struct ctl_conn *, int, int, struct timeval *);
+ssize_t	 imsg_read_nofd(struct imsgbuf *);
 
 int
 control_init(struct privsep *ps, struct control_sock *cs)
@@ -60,7 +60,7 @@ control_init(struct privsep *ps, struct control_sock *cs)
 	if (cs->cs_name == NULL)
 		return (0);
 
-	if ((fd = socket(AF_UNIX, SOCK_STREAM, 0)) == -1) {
+	if ((fd = socket(AF_UNIX, SOCK_STREAM | SOCK_NONBLOCK, 0)) == -1) {
 		log_warn("%s: socket", __func__);
 		return (-1);
 	}
@@ -103,7 +103,6 @@ control_init(struct privsep *ps, struct control_sock *cs)
 		return (-1);
 	}
 
-	socket_set_blockmode(fd, BM_NONBLOCK);
 	cs->cs_fd = fd;
 	cs->cs_env = env;
 
@@ -136,7 +135,6 @@ control_cleanup(struct control_sock *cs)
 		return;
 	event_del(&cs->cs_ev);
 	event_del(&cs->cs_evt);
-	(void)unlink(cs->cs_name);
 }
 
 /* ARGSUSED */
@@ -154,8 +152,8 @@ control_accept(int listenfd, short event, void *arg)
 		return;
 
 	len = sizeof(sun);
-	if ((connfd = accept(listenfd,
-	    (struct sockaddr *)&sun, &len)) == -1) {
+	if ((connfd = accept4(listenfd,
+	    (struct sockaddr *)&sun, &len, SOCK_NONBLOCK)) == -1) {
 		/*
 		 * Pause accept if we are out of file descriptors, or
 		 * libevent will haunt us here too.
@@ -171,11 +169,9 @@ control_accept(int listenfd, short event, void *arg)
 		return;
 	}
 
-	socket_set_blockmode(connfd, BM_NONBLOCK);
-
 	if ((c = calloc(1, sizeof(struct ctl_conn))) == NULL) {
-		log_warn("%s", __func__);
 		close(connfd);
+		log_warn("%s: calloc", __func__);
 		return;
 	}
 
@@ -203,9 +199,16 @@ control_accept(int listenfd, short event, void *arg)
 }
 
 void
-control_close(struct ctl_conn *c)
+control_close(struct ctl_conn *c, const char *msg, struct imsg *imsg)
 {
 	struct control_sock *cs = c->cs;
+
+	if (imsg) {
+		log_debug("%s: fd %d: %s, imsg %d datalen %zu", __func__,
+		    c->iev.ibuf.fd, msg, imsg->hdr.type, IMSG_DATA_SIZE(imsg));
+		imsg_free(imsg);
+	} else
+		log_debug("%s: fd %d: %s", __func__, c->iev.ibuf.fd, msg);
 
 	msgbuf_clear(&c->iev.ibuf.w);
 	TAILQ_REMOVE(&ctl_conns, c, entry);
@@ -233,21 +236,22 @@ control_dispatch_imsg(int fd, short event, void *arg)
 	int			 n, v, i;
 
 	if (event & EV_READ) {
-		if ((n = imsg_read(&c->iev.ibuf)) == -1 || n == 0) {
-			control_close(c);
+		if (((n = imsg_read_nofd(&c->iev.ibuf)) == -1 &&
+		    errno != EAGAIN) || n == 0) {
+			control_close(c, "could not read imsg", NULL);
 			return;
 		}
 	}
 	if (event & EV_WRITE) {
 		if (msgbuf_write(&c->iev.ibuf.w) <= 0 && errno != EAGAIN) {
-			control_close(c);
+			control_close(c, "could not write imsg", NULL);
 			return;
 		}
 	}
 
 	for (;;) {
 		if ((n = imsg_get(&c->iev.ibuf, &imsg)) == -1) {
-			control_close(c);
+			control_close(c, "could not get imsg", NULL);
 			return;
 		}
 
@@ -262,10 +266,9 @@ control_dispatch_imsg(int fd, short event, void *arg)
 			case IMSG_SNMP_LOCK:
 				break;
 			default:
-				log_debug("control_dispatch_imsg: "
-				    "client requested restricted command");
-				imsg_free(&imsg);
-				control_close(c);
+				control_close(c,
+				    "client requested restricted command",
+				    &imsg);
 				return;
 			}
 		}
@@ -274,6 +277,9 @@ control_dispatch_imsg(int fd, short event, void *arg)
 
 		switch (imsg.hdr.type) {
 		case IMSG_CTL_NOTIFY:
+			if (IMSG_DATA_SIZE(&imsg))
+				return control_close(c, "invalid size", &imsg);
+
 			if (c->flags & CTL_CONN_NOTIFY) {
 				log_debug("%s: "
 				    "client requested notify more than once",
@@ -286,29 +292,32 @@ control_dispatch_imsg(int fd, short event, void *arg)
 			break;
 
 		case IMSG_SNMP_LOCK:
+			if (IMSG_DATA_SIZE(&imsg))
+				return control_close(c, "invalid size", &imsg);
+
 			/* enable restricted control mode */
 			c->flags |= CTL_CONN_LOCKED;
 			break;
 
 		case IMSG_SNMP_AGENTX:
+			if (IMSG_DATA_SIZE(&imsg))
+				return control_close(c, "invalid size", &imsg);
 
 			/* rendezvous with the client */
 			imsg_compose_event(&c->iev, IMSG_CTL_OK, 0, 0, -1, NULL, 0);
 			if (imsg_flush(&c->iev.ibuf) == -1) {
-				log_debug("control_dispatch_imsg: "
-				    "could not rendezvous with client");
-				imsg_free(&imsg);
-				control_close(c);
+				control_close(c,
+				    "could not rendezvous with agentx client",
+				    &imsg);
 				return;
 			}
 
 			/* enable AgentX socket */
 			c->handle = snmp_agentx_alloc(c->iev.ibuf.fd);
 			if (c->handle == NULL) {
-				log_debug("control_dispatch_imsg: "
-				    "could not allocate restricted socket");
-				imsg_free(&imsg);
-				control_close(c);
+				control_close(c,
+				    "could not allocate agentx socket",
+				    &imsg);
 				return;
 			}
 			/* disable IMSG notifications */
@@ -318,10 +327,11 @@ control_dispatch_imsg(int fd, short event, void *arg)
 			break;
 
 		case IMSG_CTL_VERBOSE:
-			IMSG_SIZE_CHECK(&imsg, &v);
+			if (IMSG_DATA_SIZE(&imsg) != sizeof(v))
+				return control_close(c, "invalid size", &imsg);
 
 			memcpy(&v, imsg.data, sizeof(v));
-			log_verbose(v);
+			log_setverbose(v);
 
 			for (i = 0; i < PROC_MAX; i++) {
 				if (privsep_process == PROC_CONTROL)
@@ -330,13 +340,15 @@ control_dispatch_imsg(int fd, short event, void *arg)
 			}
 			break;
 		case IMSG_CTL_RELOAD:
+			if (IMSG_DATA_SIZE(&imsg))
+				return control_close(c, "invalid size", &imsg);
 			proc_forward_imsg(&env->sc_ps, &imsg, PROC_PARENT, -1);
 			break;
 		default:
-			log_debug("%s: error handling imsg %d",
-			    __func__, imsg.hdr.type);
-			break;
+			control_close(c, "invalid type", &imsg);
+			return;
 		}
+
 		imsg_free(&imsg);
 	}
 
@@ -615,8 +627,7 @@ control_dispatch_agentx(int fd, short event, void *arg)
 		uptime = smi_getticks();
 		if ((pdu = snmp_agentx_response_pdu(uptime, error, idx)) == NULL) {
 			log_debug("failed to generate response");
-			if (varcpy)
-				free(varcpy);
+			free(varcpy);
 			control_event_add(c, fd, EV_WRITE, NULL);	/* XXX -- EV_WRITE? */
 			return;
 		}
@@ -624,6 +635,7 @@ control_dispatch_agentx(int fd, short event, void *arg)
 		if (varcpy) {
 			snmp_agentx_raw(pdu, varcpy, vcpylen); /* XXX */
 			free(varcpy);
+			varcpy = NULL;
 		}
 		snmp_agentx_send(h, pdu);
 
@@ -641,9 +653,8 @@ control_dispatch_agentx(int fd, short event, void *arg)
 	log_debug("subagent session '%i' destroyed", h->sessionid);
 	snmp_agentx_free(h);
 	purge_registered_oids(&c->oids);
-	if (varcpy)
-		free(varcpy);
-	control_close(c);
+	free(varcpy);
+	control_close(c, "agentx teardown", NULL);
 }
 
 void
@@ -653,7 +664,7 @@ control_imsg_forward(struct imsg *imsg)
 
 	TAILQ_FOREACH(c, &ctl_conns, entry)
 		if (c->flags & CTL_CONN_NOTIFY)
-			imsg_compose(&c->iev.ibuf, imsg->hdr.type,
+			imsg_compose_event(&c->iev, imsg->hdr.type,
 			    0, imsg->hdr.pid, -1, imsg->data,
 			    imsg->hdr.len - IMSG_HEADER_SIZE);
 }
@@ -664,4 +675,24 @@ control_event_add(struct ctl_conn *c, int fd, int wflag, struct timeval *tv)
 	event_del(&c->iev.ev);
 	event_set(&c->iev.ev, fd, EV_READ|wflag, control_dispatch_agentx, c);
 	event_add(&c->iev.ev, tv);
+}
+
+/* This should go into libutil, from smtpd/mproc.c */
+ssize_t
+imsg_read_nofd(struct imsgbuf *ibuf)
+{
+	ssize_t	 n;
+	char	*buf;
+	size_t	 len;
+
+	buf = ibuf->r.buf + ibuf->r.wpos;
+	len = sizeof(ibuf->r.buf) - ibuf->r.wpos;
+
+	while ((n = recv(ibuf->fd, buf, len, 0)) == -1) {
+		if (errno != EINTR)
+			return (n);
+	}
+
+        ibuf->r.wpos += n;
+        return (n);
 }

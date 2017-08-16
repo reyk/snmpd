@@ -1,4 +1,4 @@
-/*      $OpenBSD: agentx.c,v 1.8 2014/11/19 10:19:00 blambert Exp $    */
+/*      $OpenBSD: agentx.c,v 1.10 2015/12/05 06:42:18 mmcc Exp $    */
 /*
  * Copyright (c) 2013,2014 Bret Stephen Lambert <blambert@openbsd.org>
  *
@@ -259,8 +259,7 @@ void
 snmp_agentx_pdu_free(struct agentx_pdu *pdu)
 {
 	free(pdu->buffer);
-	if (pdu->request)
-		free(pdu->request);
+	free(pdu->request);
 	free(pdu);
 }
 
@@ -374,21 +373,21 @@ snmp_agentx_recv(struct agentx_handle *h)
 	}
 
 	/* read body */
-	n = recv(h->fd, pdu->ioptr, pdu->hdr->length, 0);
+	if (pdu->hdr->length > 0) {
+		n = recv(h->fd, pdu->ioptr, pdu->hdr->length, 0);
 
-	if (n == 0 || n == -1)
-		return (NULL);
+		if (n == 0 || n == -1)
+			return (NULL);
 
-	pdu->datalen += n;
-	pdu->ioptr += n;
+		pdu->datalen += n;
+		pdu->ioptr += n;
+	}
 
 	if (pdu->datalen < pdu->hdr->length + sizeof(struct agentx_hdr)) {
 		errno = EAGAIN;
 		return (NULL);
 	}
-#ifdef DEBUG
-	snmp_agentx_dump_hdr(pdu->hdr);
-#endif
+
 	if (pdu->hdr->version != AGENTX_VERSION) {
 		h->error = AGENTX_ERR_PARSE_ERROR;
 		goto fail;
@@ -437,11 +436,20 @@ snmp_agentx_recv(struct agentx_handle *h)
 		}
 	}
 
+#ifdef DEBUG
+	snmp_agentx_dump_hdr(pdu->hdr);
+#endif
 	h->r = NULL;
+
 	return (pdu);
+
  fail:
+#ifdef DEBUG
+	snmp_agentx_dump_hdr(pdu->hdr);
+#endif
 	snmp_agentx_pdu_free(pdu);
 	h->r = NULL;
+
 	return (NULL);
 }
 
